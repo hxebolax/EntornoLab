@@ -1,0 +1,25 @@
+Muestra real de OpenStreetMap: Plaza Mayor de Valladolid (España)
+==================================================================
+
+© colaboradores de OpenStreetMap, datos disponibles bajo la licencia ODbL (https://www.openstreetmap.org/copyright)
+
+Ficheros:
+- osm_real_valladolid_nominatim.json: respuesta de Nominatim, tal cual (2300 bytes).
+- osm_real_valladolid_overpass.json: respuesta de Overpass, tal cual (377 679 bytes, 2488 elementos).
+
+Fecha de descarga: 2026-11-26T16:44:49Z
+Fecha de los datos (timestamp_osm_base de Overpass): 2026-11-26T16:43:51Z
+Cliente: el de la propia aplicación (app.importar.osm con app.core.red), User-Agent «EntornoLab/0.1.0».
+Una sola petición a cada servicio.
+
+Búsqueda en Nominatim (https://nominatim.openstreetmap.org/search):
+  q=Plaza Mayor, Valladolid & format=jsonv2 & limit=5 & addressdetails=0 & accept-language=es
+  Primer resultado: Plaza Mayor (way/24432960), lat 41.6520609, lon -4.7285484.
+
+Descarga de Overpass (https://overpass-api.de/api/interpreter), radio 150 m alrededor de ese punto:
+  Recuadro (sur, oeste, norte, este): 41.650712, -4.730354, 41.653410, -4.726743
+  Consulta:
+  [out:json][timeout:60][maxsize:67108864];(node(41.650712,-4.730354,41.653410,-4.726743);way(41.650712,-4.730354,41.653410,-4.726743);)->.b;rel(bw.b)[type=multipolygon]->.r;(.b;way(r.r);)->.c;(.c;node(w.c);.r;);out body;
+
+Uso: solo como muestra para las pruebas sin red (tests/test_importar_osm_real.py).
+Quien reparta estos ficheros, o algo derivado de ellos, tiene que conservar esta atribución.

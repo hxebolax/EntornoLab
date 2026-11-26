@@ -1,0 +1,27 @@
+# Dependencias de la aplicación. Versión mínima con ">=" para recibir
+# correcciones; las exactas probadas se guardan con "entorno.bat congelar".
+
+# Interfaz del estudio del profesional (controles nativos accesibles).
+wxPython>=4.3.2
+# Reproductor del alumno, modo recorrido y mandos (SDL).
+pygame-ce>=2.5.8
+# Voz por lector de pantalla (NVDA, JAWS) o SAPI, y braille.
+accessible_output2>=0.17
+# Motor de sonido 3D con BASS: basskit recortado (solo bass.dll y la API nativa), rueda propia que
+# viaja en __pip__. BASS es gratuita solo para uso no comercial (ver data/docs/licencias/BASS.txt).
+__pip__/basskit-0.8.12+reconocedor-py3-none-win_amd64.whl
+# Mezcla y síntesis de sonido.
+numpy>=2.4
+# Salida de audio del motor clásico y lectura de ficheros de sonido.
+sounddevice>=0.5.5
+soundfile>=0.13
+# Acceso a Windows (SAPI por COM, cifrado DPAPI).
+pywin32>=306
+comtypes>=1.4
+# Cifrado por contraseña de las fichas de alumnos (AES-GCM; la clave se deriva con hashlib.scrypt).
+cryptography>=44.0
+# Manual y ayuda en HTML navegable por encabezados (F1).
+markdown>=3.6
+# Certificados de confianza para las conexiones https (actualizaciones y catálogo de complementos);
+# se suman a los de Windows. La firma Ed25519 de las versiones usa cryptography, ya listada arriba.
+certifi>=2024.8.30

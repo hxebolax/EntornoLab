@@ -1,0 +1,215 @@
+{
+	"version": 0.6,
+	"generator": "EntornoLab: datos FICTICIOS de prueba; no proceden de OpenStreetMap",
+	"recuadro": [
+		39.9998651,
+		-3.7005283,
+		40.0002698,
+		-3.6994717
+	],
+	"elements": [
+		{
+			"type": "node",
+			"id": 1,
+			"lat": 40.0,
+			"lon": -3.7004696
+		},
+		{
+			"type": "node",
+			"id": 2,
+			"lat": 40.0,
+			"lon": -3.6995304
+		},
+		{
+			"type": "node",
+			"id": 10,
+			"lat": 40.000045,
+			"lon": -3.7
+		},
+		{
+			"type": "node",
+			"id": 11,
+			"lat": 40.000045,
+			"lon": -3.6997652
+		},
+		{
+			"type": "node",
+			"id": 12,
+			"lat": 40.0001529,
+			"lon": -3.6997652
+		},
+		{
+			"type": "node",
+			"id": 13,
+			"lat": 40.0001529,
+			"lon": -3.7
+		},
+		{
+			"type": "node",
+			"id": 20,
+			"lat": 40.0000719,
+			"lon": -3.7
+		},
+		{
+			"type": "node",
+			"id": 21,
+			"lat": 40.0000719,
+			"lon": -3.6997652
+		},
+		{
+			"type": "node",
+			"id": 22,
+			"lat": 40.0000719,
+			"lon": -3.6998826
+		},
+		{
+			"type": "node",
+			"id": 23,
+			"lat": 40.0001529,
+			"lon": -3.6998826
+		},
+		{
+			"type": "node",
+			"id": 30,
+			"lat": 40.000045,
+			"lon": -3.6998826,
+			"tags": {
+				"entrance": "main",
+				"door": "sliding",
+				"automatic_door": "yes",
+				"level": "0"
+			}
+		},
+		{
+			"type": "node",
+			"id": 31,
+			"lat": 40.0000719,
+			"lon": -3.6999413,
+			"tags": {
+				"door": "hinged",
+				"level": "0"
+			}
+		},
+		{
+			"type": "node",
+			"id": 32,
+			"lat": 40.0000719,
+			"lon": -3.6998239,
+			"tags": {
+				"door": "no",
+				"level": "0"
+			}
+		},
+		{
+			"type": "node",
+			"id": 40,
+			"lat": 40.0000585,
+			"lon": -3.6997887,
+			"tags": {
+				"highway": "elevator",
+				"level": "0;1"
+			}
+		},
+		{
+			"type": "way",
+			"id": 100,
+			"nodes": [
+				1,
+				2
+			],
+			"tags": {
+				"highway": "residential",
+				"name": "Calle de la Estación",
+				"sidewalk": "both"
+			}
+		},
+		{
+			"type": "way",
+			"id": 200,
+			"nodes": [
+				10,
+				30,
+				11,
+				21,
+				12,
+				23,
+				13,
+				20,
+				10
+			],
+			"tags": {
+				"building": "public",
+				"name": "Centro cívico"
+			}
+		},
+		{
+			"type": "way",
+			"id": 210,
+			"nodes": [
+				10,
+				30,
+				11,
+				21,
+				32,
+				22,
+				31,
+				20,
+				10
+			],
+			"tags": {
+				"indoor": "corridor",
+				"level": "0",
+				"name": "Pasillo de entrada"
+			}
+		},
+		{
+			"type": "way",
+			"id": 211,
+			"nodes": [
+				20,
+				31,
+				22,
+				23,
+				13,
+				20
+			],
+			"tags": {
+				"indoor": "room",
+				"level": "0",
+				"name": "Sala de lectura"
+			}
+		},
+		{
+			"type": "way",
+			"id": 212,
+			"nodes": [
+				22,
+				32,
+				21,
+				12,
+				23,
+				22
+			],
+			"tags": {
+				"indoor": "room",
+				"level": "0"
+			}
+		},
+		{
+			"type": "way",
+			"id": 213,
+			"nodes": [
+				10,
+				11,
+				12,
+				13,
+				10
+			],
+			"tags": {
+				"indoor": "room",
+				"level": "1",
+				"name": "Aula"
+			}
+		}
+	]
+}

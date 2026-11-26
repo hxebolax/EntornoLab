@@ -1,0 +1,5987 @@
+{
+	"formato": 1,
+	"id": "estaciones_y_aeropuerto",
+	"nombre": "Estaciones, aeropuerto y puerto",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Grandes estaciones de tren y de autobuses, andenes con el tren parado, metro, tranvía, aeropuerto (facturación, control, embarque y recogida de equipajes) y puerto, con sus referencias, sus sonidos y sus avisos.",
+	"depende_de": ["comun", "hogar", "colegio", "oficina_y_comercio", "transporte", "juego"],
+	"categorias": {
+		"vestibulo_gran": "Vestíbulo de gran estación",
+		"andenes": "Andenes de tren",
+		"metro": "Metro",
+		"tranvia_bus": "Tranvía y estación de autobuses",
+		"facturacion": "Aeropuerto: facturación y controles",
+		"embarque": "Aeropuerto: embarque y llegadas",
+		"puerto": "Puerto"
+	},
+	"subcategorias": {
+		"informacion_asistencia": "Información y asistencia",
+		"venta_billetes": "Venta de billetes",
+		"espera_estacion": "Espera y servicios",
+		"control_alta_velocidad": "Control de alta velocidad",
+		"suelo_anden": "Bordes, huecos y marcas del andén",
+		"mobiliario_anden": "Mobiliario y cubiertas de andén",
+		"tren_parado": "Tren parado",
+		"embarque_asistido": "Embarque asistido y carros de servicio",
+		"vias_cruces": "Vías y pasos entre andenes",
+		"acceso_metro": "Bocas y accesos de metro",
+		"anden_metro": "Andén de metro",
+		"informacion_metro": "Información y recarga",
+		"parada_tranvia": "Parada y vía de tranvía",
+		"estacion_autobuses": "Dársenas de autobuses",
+		"mostradores_facturacion": "Facturación",
+		"colas_asistencia": "Colas y asistencia",
+		"control_seguridad": "Control de seguridad",
+		"control_fronteras": "Pasaportes y aduana",
+		"sala_embarque": "Sala de embarque",
+		"puerta_embarque": "Puerta de embarque y pasarela",
+		"recogida_equipajes": "Recogida de equipajes",
+		"llegadas_exterior": "Llegadas y exterior",
+		"muelle": "Muelle y amarres",
+		"embarque_maritimo": "Embarque y pantalanes",
+		"estacion_maritima": "Estación marítima",
+		"pesca_lonja": "Pesca y lonja"
+	},
+	"estados": {
+		"en_espera": "En espera",
+		"llamando": "Llamando",
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"rojo": "Rojo: no cruces",
+		"verde": "Verde: puedes cruzar",
+		"bloqueado": "Bloqueado",
+		"girando": "Girando",
+		"parado": "Parado",
+		"funcionando": "Funcionando",
+		"apagado": "Apagado",
+		"encendido": "Encendido"
+	},
+	"objetos": [
+		{
+			"id": "mostrador_info_estacion",
+			"nombre": "Mostrador de información de estación con tramo bajo",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "informacion_asistencia",
+			"etiquetas": ["mostrador de información", "atención al viajero", "atención al cliente", "mostrador con bucle magnético"],
+			"descripcion": "Mostrador largo de atención al viajero. A la derecha tiene un tramo bajo, con hueco para las rodillas y bucle magnético: ahí se atiende sentado o en silla de ruedas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.7], [0.68, 0.7], [0.68, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.4, 3.6, 6.0],
+				"fondo": [0.8, 0.9, 1.2],
+				"alto": [0.8, 1.1, 1.15]
+			},
+			"variantes": [
+				{
+					"id": "dos_puestos",
+					"nombre": "De dos puestos",
+					"ancho": 2.4,
+					"fondo": 0.9,
+					"alto": 1.1
+				},
+				{
+					"id": "tres_puestos",
+					"nombre": "De tres puestos",
+					"ancho": 3.6,
+					"fondo": 0.9,
+					"alto": 1.1
+				},
+				{
+					"id": "cinco_puestos",
+					"nombre": "De cinco puestos",
+					"ancho": 6.0,
+					"fondo": 0.9,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["estacion"],
+			"estancias": ["vestibulo", "ventanilla"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["panel_salidas_colgado", "totem_info_audio"],
+			"simbolo": {
+				"letra": "Mi",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_info_estacion.png",
+				"descripcion": "Huella en planta de «Mostrador de información de estación con tramo bajo»: un rectángulo con el tramo de la derecha menos saliente: es el tramo bajo, con hueco para las rodillas de 3,60 por 0,90 metros, con la letra «Mi»."
+			}
+		},
+		{
+			"id": "punto_asistencia_estacion",
+			"nombre": "Punto de encuentro de asistencia al viajero",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "informacion_asistencia",
+			"etiquetas": ["punto de asistencia", "punto de encuentro de asistencia", "atendo", "sin barreras", "asistencia pmr"],
+			"descripcion": "Tótem del servicio de asistencia a personas con discapacidad: una columna ancha con un botón de llamada a la altura de la mano y el rótulo en braille. Aquí te recoge el personal para acompañarte al tren.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.4, 0.5, 0.8],
+				"alto": [1.2, 1.5, 2.0]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:interfono.flac"
+			},
+			"estados": ["en_espera", "llamando"],
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"de": "en_espera",
+					"a": "llamando",
+					"sonido": "transporte:interfono.flac"
+				},
+				{
+					"id": "colgar",
+					"nombre": "Colgar",
+					"de": "llamando",
+					"a": "en_espera"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["estacion", "aeropuerto", "puerto"],
+			"estancias": ["vestibulo", "sala_espera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["zona_espera_asistencia", "asiento_reservado_estacion"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/punto_asistencia_estacion.png",
+				"descripcion": "Huella en planta de «Punto de encuentro de asistencia al viajero»: un rectángulo de 0,80 por 0,50 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "zona_espera_asistencia",
+			"nombre": "Zona de espera de asistencia señalizada en el suelo",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "informacion_asistencia",
+			"etiquetas": ["zona de espera de asistencia", "recuadro de espera", "pavimento de espera"],
+			"descripcion": "Recuadro de pavimento distinto junto al punto de asistencia: se nota con el pie y con el bastón. Es el sitio donde hay que esperar para que te vean.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 4.0],
+				"fondo": [1.5, 2.0, 3.0],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "tactil_botones",
+			"aviso": "Zona de espera de asistencia: espera aquí.",
+			"funcion": "referencia",
+			"lugares": ["estacion", "aeropuerto", "puerto"],
+			"estancias": ["vestibulo", "sala_espera"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["punto_asistencia_estacion"],
+			"simbolo": {
+				"letra": "Ze",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/zona_espera_asistencia.png",
+				"descripcion": "Huella en planta de «Zona de espera de asistencia señalizada en el suelo»: un rectángulo de 2,50 por 2,00 metros, con la letra «Ze»."
+			}
+		},
+		{
+			"id": "interfono_asistencia_pared",
+			"nombre": "Interfono de asistencia de pared",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "informacion_asistencia",
+			"etiquetas": ["interfono de pared", "interfono de asistencia", "llamada de asistencia"],
+			"descripcion": "Caja con altavoz y un botón grande, atornillada a la pared a la altura del pecho. Sobresale un palmo y el bastón pasa por debajo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.35],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:interfono.flac"
+			},
+			"estados": ["en_espera", "llamando"],
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"de": "en_espera",
+					"a": "llamando",
+					"sonido": "transporte:interfono.flac"
+				},
+				{
+					"id": "colgar",
+					"nombre": "Colgar",
+					"de": "llamando",
+					"a": "en_espera"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["estacion", "aeropuerto", "puerto"],
+			"estancias": ["vestibulo", "anden", "pasillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ia",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/interfono_asistencia_pared.png",
+				"descripcion": "Huella en planta de «Interfono de asistencia de pared»: un rectángulo de 0,25 por 0,10 metros, colgado a 0,90 metros del suelo, con la letra «Ia»."
+			}
+		},
+		{
+			"id": "totem_info_audio",
+			"nombre": "Tótem de información accesible con audio",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "informacion_asistencia",
+			"etiquetas": ["tótem de información", "punto de información con voz", "pantalla accesible"],
+			"descripcion": "Columna con pantalla táctil, teclas en relieve y un botón con braille: al pulsarlo, lee en voz alta las salidas y las vías.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.12], [1.0, 0.88], [0.88, 1.0], [0.12, 1.0], [0.0, 0.88], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.9],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.6, 1.9, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:megafonia.flac"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				},
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["panel_salidas_colgado"],
+			"simbolo": {
+				"letra": "Ti",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/totem_info_audio.png",
+				"descripcion": "Huella en planta de «Tótem de información accesible con audio»: un rectángulo con las esquinas cortadas de 0,60 por 0,40 metros, con la letra «Ti»."
+			}
+		},
+		{
+			"id": "panel_salidas_colgado",
+			"nombre": "Panel de salidas y llegadas colgado",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "informacion_asistencia",
+			"etiquetas": ["panel de salidas", "panel de llegadas", "teleindicador", "pantalla de salidas"],
+			"descripcion": "Panel enorme colgado del techo en mitad del vestíbulo. Queda muy por encima de la cabeza y no estorba; debajo se para la gente a mirarlo, y hay corrillos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [3.0, 5.0, 8.0],
+				"fondo": [0.2, 0.3, 0.5],
+				"alto": [1.0, 1.5, 2.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 2.6,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:megafonia.flac"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "aereo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ps",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_salidas_colgado.png",
+				"descripcion": "Huella en planta de «Panel de salidas y llegadas colgado»: un rectángulo de 5,00 por 0,30 metros, colgado a 2,60 metros del suelo, con la letra «Ps»."
+			}
+		},
+		{
+			"id": "ventanillas_bateria",
+			"nombre": "Ventanillas de venta en batería con separadores",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "venta_billetes",
+			"etiquetas": ["ventanillas de venta", "taquillas de venta", "venta de billetes en ventanilla"],
+			"descripcion": "Varias ventanillas seguidas en una pared. Entre una y otra sale un separador a la altura del pecho; cada ventanilla tiene su repisa y su cristal.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.97, 1.0], [0.97, 0.45], [0.758, 0.45], [0.758, 1.0], [0.728, 1.0], [0.728, 0.45], [0.515, 0.45], [0.515, 1.0], [0.485, 1.0], [0.485, 0.45], [0.272, 0.45], [0.272, 1.0], [0.242, 1.0], [0.242, 0.45], [0.03, 0.45], [0.03, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 4.8, 6.0],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "tres_ventanillas",
+					"nombre": "De tres ventanillas",
+					"ancho": 3.6,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "cuatro_ventanillas",
+					"nombre": "De cuatro ventanillas",
+					"ancho": 4.8,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "cinco_ventanillas",
+					"nombre": "De cinco ventanillas",
+					"ancho": 6.0,
+					"fondo": 0.8,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "sacar_billete",
+					"nombre": "Sacar un billete",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mostrador",
+			"lugares": ["estacion"],
+			"estancias": ["taquilla", "ventanilla"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["autoventa_bateria"],
+			"simbolo": {
+				"letra": "Vb",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/ventanillas_bateria.png",
+				"descripcion": "Huella en planta de «Ventanillas de venta en batería con separadores»: un peine: una barra con cuerpos que salen hacia delante de 4,80 por 0,80 metros, con la letra «Vb»."
+			}
+		},
+		{
+			"id": "autoventa_bateria",
+			"nombre": "Máquinas de autoventa en batería con voz",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "venta_billetes",
+			"etiquetas": ["máquinas de autoventa", "batería de máquinas de billetes", "autoventa con voz"],
+			"descripcion": "Varias máquinas de billetes pegadas una a otra contra la pared. Cada una tiene un botón de voz que lee la pantalla; las teclas pitan.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.6, 2.4, 4.0],
+				"fondo": [0.5, 0.7, 0.9],
+				"alto": [1.6, 1.8, 2.0]
+			},
+			"variantes": [
+				{
+					"id": "dos_maquinas",
+					"nombre": "Dos máquinas",
+					"ancho": 1.6,
+					"fondo": 0.7,
+					"alto": 1.8
+				},
+				{
+					"id": "tres_maquinas",
+					"nombre": "Tres máquinas",
+					"ancho": 2.4,
+					"fondo": 0.7,
+					"alto": 1.8
+				},
+				{
+					"id": "cinco_maquinas",
+					"nombre": "Cinco máquinas",
+					"ancho": 4.0,
+					"fondo": 0.7,
+					"alto": 1.8
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:teclas_cajero.flac"
+			},
+			"acciones": [
+				{
+					"id": "sacar_billete",
+					"nombre": "Sacar un billete",
+					"sonido": "transporte:teclas_cajero.flac"
+				},
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["estacion"],
+			"estancias": ["vestibulo", "taquilla"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["ventanillas_bateria"],
+			"simbolo": {
+				"letra": "Ab",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/autoventa_bateria.png",
+				"descripcion": "Huella en planta de «Máquinas de autoventa en batería con voz»: un rectángulo de 2,40 por 0,70 metros, con la letra «Ab»."
+			}
+		},
+		{
+			"id": "consigna_automatica",
+			"nombre": "Consigna automática con terminal de pago",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "espera_estacion",
+			"etiquetas": ["consigna automática", "taquillas de equipaje electrónicas", "consigna con pago"],
+			"descripcion": "Módulo de taquillas grandes con un terminal en el centro. Se paga en el terminal, pita y salta la puerta de una taquilla: hay que buscarla con la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.8, 2.7, 5.4],
+				"fondo": [0.6, 0.85, 0.95],
+				"alto": [1.8, 1.95, 2.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/consigna_bip.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/consigna_bip.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["estacion", "aeropuerto", "puerto"],
+			"estancias": ["vestibulo", "pasillo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/consigna_automatica.png",
+				"descripcion": "Huella en planta de «Consigna automática con terminal de pago»: un rectángulo de 2,70 por 0,85 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "asiento_reservado_estacion",
+			"nombre": "Asiento reservado de estación",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "espera_estacion",
+			"etiquetas": ["asiento reservado", "asiento prioritario", "asiento para personas con movilidad reducida"],
+			"descripcion": "Asiento ancho al final de una bancada, con reposabrazos altos para levantarse y un hueco libre al lado para una silla de ruedas o un perro guía.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.6, 0.65, 0.75],
+				"alto": [0.8, 0.85, 0.95]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["estacion", "aeropuerto", "puerto"],
+			"estancias": ["vestibulo", "sala_espera", "puerta_embarque"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["punto_asistencia_estacion"],
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/asiento_reservado_estacion.png",
+				"descripcion": "Huella en planta de «Asiento reservado de estación»: un rectángulo de 0,70 por 0,65 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "banco_circular_columna",
+			"nombre": "Banco circular alrededor de una columna",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "espera_estacion",
+			"etiquetas": ["banco circular", "banco de columna", "banco redondo de estación"],
+			"descripcion": "Banco corrido que rodea una columna del vestíbulo. Se rodea entero; sentado quedas de espaldas a la columna y de cara a la gente que pasa.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.6, 2.0, 2.8],
+				"fondo": [1.6, 2.0, 2.8],
+				"alto": [0.42, 0.45, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_circular_columna.png",
+				"descripcion": "Huella en planta de «Banco circular alrededor de una columna»: un círculo de 2,00 por 2,00 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "columna_carga_moviles",
+			"nombre": "Columna de carga de móviles",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "espera_estacion",
+			"etiquetas": ["columna de carga", "tótem de carga", "punto de carga de móviles", "cargador de teléfonos"],
+			"descripcion": "Columna con enchufes y una repisa redonda a la altura del codo para dejar el teléfono. Suele tener gente alrededor, de pie.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 0.9],
+				"fondo": [0.4, 0.6, 0.9],
+				"alto": [1.05, 1.15, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "recargar",
+					"nombre": "Enchufar",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "desenchufar",
+					"nombre": "Desenchufar",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["vestibulo", "sala_espera", "puerta_embarque"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna_carga_moviles.png",
+				"descripcion": "Huella en planta de «Columna de carga de móviles»: un círculo de 0,60 por 0,60 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "carros_encajados_monedero",
+			"nombre": "Carros portaequipajes encajados con monedero",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "espera_estacion",
+			"etiquetas": ["carros encajados", "fila de carros de maletas", "carros con moneda", "carros apilados de equipaje"],
+			"descripcion": "Hilera de carros de maletas metidos unos en otros y sujetos con cadena. Para soltar uno se echa una moneda en el monedero del manillar.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.65, 0.7, 0.8],
+				"fondo": [2.0, 3.5, 6.0],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "cinco_carros",
+					"nombre": "Cinco carros",
+					"ancho": 0.7,
+					"fondo": 2.0,
+					"alto": 1.05
+				},
+				{
+					"id": "diez_carros",
+					"nombre": "Diez carros",
+					"ancho": 0.7,
+					"fondo": 3.5,
+					"alto": 1.05
+				},
+				{
+					"id": "veinte_carros",
+					"nombre": "Veinte carros",
+					"ancho": 0.7,
+					"fondo": 6.0,
+					"alto": 1.05
+				}
+			],
+			"colocacion": ["suelo", "pared", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "juego:monedas.flac"
+				},
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "carga",
+			"lugares": ["estacion", "aeropuerto", "puerto"],
+			"estancias": ["vestibulo", "recogida_equipajes", "acera"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/carros_encajados_monedero.png",
+				"descripcion": "Huella en planta de «Carros portaequipajes encajados con monedero»: un rectángulo de 0,70 por 3,50 metros, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "quiosco_isla_vestibulo",
+			"nombre": "Quiosco isla de vestíbulo",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "espera_estacion",
+			"etiquetas": ["quiosco de estación", "quiosco de prensa del vestíbulo", "isla de prensa"],
+			"descripcion": "Quiosco de prensa y golosinas en mitad del vestíbulo, abierto por todos los lados. En las esquinas tiene expositores que sobresalen: se rodea con cuidado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.75, 1.0], [0.25, 1.0], [0.0, 0.5], [0.25, 0.0], [0.75, 0.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.0],
+				"fondo": [2.0, 2.6, 3.5],
+				"alto": [2.2, 2.5, 2.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Qi",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/quiosco_isla_vestibulo.png",
+				"descripcion": "Huella en planta de «Quiosco isla de vestíbulo»: un hexágono de 3,00 por 2,60 metros, con la letra «Qi»."
+			}
+		},
+		{
+			"id": "tienda_conveniencia_abierta",
+			"nombre": "Tienda de conveniencia abierta al vestíbulo",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "espera_estacion",
+			"etiquetas": ["tienda de conveniencia", "tienda de estación", "tienda abierta"],
+			"descripcion": "Tienda sin puerta ni escaparate: tres paredes de estantes y el frente abierto del todo. Se entra sin notarlo; dentro suena el frigorífico de bebidas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.9, 1.0], [0.9, 0.12], [0.1, 0.12], [0.1, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 4.5, 6.0],
+				"fondo": [2.5, 3.5, 5.0],
+				"alto": [2.2, 2.5, 3.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.35,
+					"radio": 6
+				}
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["vestibulo", "sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Tc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/tienda_conveniencia_abierta.png",
+				"descripcion": "Huella en planta de «Tienda de conveniencia abierta al vestíbulo»: una U abierta por delante de 4,50 por 3,50 metros, con la letra «Tc»."
+			}
+		},
+		{
+			"id": "reloj_punto_encuentro",
+			"nombre": "Reloj monumental de estación",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "espera_estacion",
+			"etiquetas": ["reloj monumental", "reloj punto de encuentro", "punto de encuentro de la estación"],
+			"descripcion": "Reloj grande sobre un pedestal en el centro del vestíbulo: el punto de encuentro de toda la vida. Su tictac fuerte se oye desde lejos y sirve para situarse.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.8, 1.2, 2.0],
+				"alto": [3.0, 4.0, 6.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/reloj",
+					"volumen": 0.6,
+					"radio": 14
+				}
+			},
+			"contenedor": false,
+			"funcion": "referencia",
+			"lugares": ["estacion"],
+			"estancias": ["vestibulo", "plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Rp",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/reloj_punto_encuentro.png",
+				"descripcion": "Huella en planta de «Reloj monumental de estación»: un octógono de 1,20 por 1,20 metros, con la letra «Rp»."
+			}
+		},
+		{
+			"id": "escaner_equipajes_estacion",
+			"nombre": "Escáner de equipajes de acceso a alta velocidad",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "control_alta_velocidad",
+			"etiquetas": ["escáner de equipajes", "control de equipajes", "control de acceso de alta velocidad"],
+			"descripcion": "Máquina compacta con una cinta que se traga la maleta por un lado y la devuelve por el otro. Zumba todo el rato. Se camina por su lado y se recoge la maleta al final.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.2],
+				"fondo": [2.5, 3.2, 4.5],
+				"alto": [1.3, 1.4, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/rayos_x_equipajes.flac",
+					"volumen": 0.4,
+					"radio": 10
+				}
+			},
+			"acciones": [
+				{
+					"id": "dejar_bandeja",
+					"nombre": "Dejar tus cosas en una bandeja",
+					"sonido": "comun:bandeja_seguridad.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["estacion"],
+			"estancias": ["vestibulo", "control_seguridad"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["atril_control_billetes"],
+			"simbolo": {
+				"letra": "Ee",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/escaner_equipajes_estacion.png",
+				"descripcion": "Huella en planta de «Escáner de equipajes de acceso a alta velocidad»: un rectángulo de 1,00 por 3,20 metros, con la letra «Ee»."
+			}
+		},
+		{
+			"id": "atril_control_billetes",
+			"nombre": "Atril de control de billetes de embarque",
+			"categoria": "vestibulo_gran",
+			"subcategoria": "control_alta_velocidad",
+			"etiquetas": ["control de billetes", "atril de embarque", "lector de billetes"],
+			"descripcion": "Atril estrecho donde una persona lee tu billete con un lector que pita. Está justo delante del acceso al andén, con una cola delante.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.05, 1.1, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "validar",
+					"nombre": "Validar el billete",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["estacion", "puerto"],
+			"estancias": ["vestibulo", "control_seguridad"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["escaner_equipajes_estacion"],
+			"simbolo": {
+				"letra": "Ac",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/atril_control_billetes.png",
+				"descripcion": "Huella en planta de «Atril de control de billetes de embarque»: un trapecio, más estrecho por detrás de 0,60 por 0,50 metros, con la letra «Ac»."
+			}
+		},
+		{
+			"id": "borde_anden_antiguo",
+			"nombre": "Borde de andén antiguo sin franja táctil",
+			"categoria": "andenes",
+			"subcategoria": "suelo_anden",
+			"etiquetas": ["borde de andén sin franja", "andén antiguo", "bordillo de andén"],
+			"descripcion": "Borde de andén de piedra, sin botones que avisen: solo una hilera de losas más lisas. Más allá, el suelo se acaba y están las vías.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 10.0, 40.0],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.005, 0.01, 0.02]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "adoquin",
+			"aviso": "Borde del andén sin franja de aviso: detente. Más allá están las vías.",
+			"funcion": "referencia",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"relacionados": ["caja_via"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/borde_anden_antiguo.png",
+				"descripcion": "Huella en planta de «Borde de andén antiguo sin franja táctil»: un rectángulo de 10,00 por 0,40 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "hueco_coche_anden",
+			"nombre": "Hueco entre coche y andén",
+			"categoria": "andenes",
+			"subcategoria": "suelo_anden",
+			"etiquetas": ["hueco entre coche y andén", "hueco del andén", "separación entre tren y andén"],
+			"descripcion": "Hueco estrecho y hondo entre el borde del andén y el estribo del tren. Cabe un pie o la punta del bastón: hay que dar un paso largo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.3, 2.0],
+				"fondo": [0.05, 0.15, 0.35],
+				"alto": [0.005, 0.01, 0.02]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Cuidado con el hueco entre el coche y el andén.",
+			"funcion": "referencia",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["anden"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_tren_abierta"],
+			"simbolo": {
+				"letra": "Hc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/hueco_coche_anden.png",
+				"descripcion": "Huella en planta de «Hueco entre coche y andén»: un rectángulo de 1,30 por 0,15 metros, con la letra «Hc»."
+			}
+		},
+		{
+			"id": "marca_puerta_anden",
+			"nombre": "Marca táctil de posición de puerta",
+			"categoria": "andenes",
+			"subcategoria": "suelo_anden",
+			"etiquetas": ["marca de puerta", "posición de puerta accesible", "punto de embarque"],
+			"descripcion": "Recuadro de rayas en relieve en el suelo del andén: marca dónde se para la puerta accesible del tren. Espera encima.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [0.8, 1.2, 1.5],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "tactil_rayas",
+			"funcion": "referencia",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["anden"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_tren_abierta"],
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/marca_puerta_anden.png",
+				"descripcion": "Huella en planta de «Marca táctil de posición de puerta»: un rectángulo de 1,50 por 1,20 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "manguera_aguada_anden",
+			"nombre": "Manguera tendida en el andén",
+			"categoria": "andenes",
+			"subcategoria": "suelo_anden",
+			"etiquetas": ["manguera en el andén", "manguera de aguada", "manguera en el suelo"],
+			"descripcion": "Manguera gruesa que cruza el andén hasta el tren para cargar agua. Es baja y blanda: se engancha el pie o el bastón rueda por encima.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.05, 0.08, 0.12],
+				"fondo": [2.0, 4.0, 8.0],
+				"alto": [0.05, 0.06, 0.08]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Manguera en el suelo: levanta los pies.",
+			"funcion": "trasto",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/manguera_aguada_anden.png",
+				"descripcion": "Huella en planta de «Manguera tendida en el andén»: un rectángulo de 0,08 por 4,00 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "refugio_acristalado_anden",
+			"nombre": "Refugio acristalado de andén",
+			"categoria": "andenes",
+			"subcategoria": "mobiliario_anden",
+			"etiquetas": ["refugio de andén", "sala de espera de andén", "caseta de cristal"],
+			"descripcion": "Caseta de cristal en mitad del andén, con un banco dentro y la entrada por delante. Dentro no hay viento y se oye menos el tren.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.97, 1.0], [0.97, 0.25], [0.03, 0.25], [0.03, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 5.0, 8.0],
+				"fondo": [1.8, 2.4, 3.0],
+				"alto": [2.4, 2.7, 3.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "estructura",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/refugio_acristalado_anden.png",
+				"descripcion": "Huella en planta de «Refugio acristalado de andén»: una U abierta por delante de 5,00 por 2,40 metros, con la letra «Ra»."
+			}
+		},
+		{
+			"id": "marquesina_anden_columnas",
+			"nombre": "Marquesina de andén sobre columnas",
+			"categoria": "andenes",
+			"subcategoria": "mobiliario_anden",
+			"etiquetas": ["marquesina de andén", "cubierta de andén", "techado del andén"],
+			"descripcion": "Cubierta alta a lo largo del andén. No estorba, pero se nota: debajo no llueve y los sonidos resuenan. Sus columnas, en fila, sí son obstáculos.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [4.0, 10.0, 15.0],
+				"fondo": [2.5, 4.0, 6.0],
+				"alto": [0.3, 0.4, 0.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 3.5,
+			"detectable_baston": false,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "aereo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/marquesina_anden_columnas.png",
+				"descripcion": "Huella en planta de «Marquesina de andén sobre columnas»: un rectángulo de 10,00 por 4,00 metros, colgado a 3,50 metros del suelo, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "tablon_horario_voladizo",
+			"nombre": "Vitrina de horarios de andén en voladizo",
+			"categoria": "andenes",
+			"subcategoria": "mobiliario_anden",
+			"etiquetas": ["tablón horario", "vitrina de horarios", "cuadro de horarios"],
+			"descripcion": "Vitrina con los horarios, colgada de la pared a la altura del pecho. Sobresale un palmo y no llega al suelo: el bastón pasa por debajo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.5],
+				"fondo": [0.08, 0.12, 0.2],
+				"alto": [0.9, 1.2, 1.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["anden"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Th",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/tablon_horario_voladizo.png",
+				"descripcion": "Huella en planta de «Vitrina de horarios de andén en voladizo»: un rectángulo de 1,50 por 0,12 metros, colgado a 0,90 metros del suelo, con la letra «Th»."
+			}
+		},
+		{
+			"id": "cartel_nombre_estacion",
+			"nombre": "Cartel del nombre de la estación sobre dos postes",
+			"categoria": "andenes",
+			"subcategoria": "mobiliario_anden",
+			"etiquetas": ["cartel de estación", "rótulo del nombre de la estación", "tablero entre postes"],
+			"descripcion": "Tablero largo con el nombre de la estación, sujeto entre dos postes finos. Los postes se encuentran con el bastón; el tablero queda entre ellos, a la altura de la cara.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.8, 2.5, 3.5],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.5, 0.6, 0.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "cabeza",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cn",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cartel_nombre_estacion.png",
+				"descripcion": "Huella en planta de «Cartel del nombre de la estación sobre dos postes»: un rectángulo de 2,50 por 0,10 metros, colgado a 1,50 metros del suelo, con la letra «Cn»."
+			}
+		},
+		{
+			"id": "coche_tren_tramo",
+			"nombre": "Coche de tren parado (tramo)",
+			"categoria": "andenes",
+			"subcategoria": "tren_parado",
+			"etiquetas": ["coche de tren", "vagón de tren", "tren parado", "vagón de metro"],
+			"descripcion": "Costado de un coche de tren parado junto al andén: una pared larga de chapa que zumba. Se sigue con la mano hasta encontrar una puerta. Pon varios tramos seguidos para hacer el tren.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [3.0, 6.0, 6.0],
+				"fondo": [2.8, 2.9, 3.0],
+				"alto": [3.6, 4.0, 4.3]
+			},
+			"variantes": [
+				{
+					"id": "tramo_corto",
+					"nombre": "Tramo corto",
+					"ancho": 3.0,
+					"fondo": 2.9,
+					"alto": 4.0
+				},
+				{
+					"id": "tramo_medio",
+					"nombre": "Tramo medio",
+					"ancho": 4.5,
+					"fondo": 2.9,
+					"alto": 4.0
+				},
+				{
+					"id": "tramo_largo",
+					"nombre": "Tramo largo",
+					"ancho": 6.0,
+					"fondo": 2.9,
+					"alto": 4.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/tren_parado.flac",
+					"volumen": 0.4,
+					"radio": 14
+				}
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["anden"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_tren_abierta", "fuelle_tren", "cabeza_tren"],
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/coche_tren_tramo.png",
+				"descripcion": "Huella en planta de «Coche de tren parado (tramo)»: un rectángulo de 6,00 por 2,90 metros, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "cabeza_tren",
+			"nombre": "Cabeza de tren o locomotora parada",
+			"categoria": "andenes",
+			"subcategoria": "tren_parado",
+			"etiquetas": ["cabeza de tren", "locomotora", "cabina del maquinista", "morro del tren"],
+			"descripcion": "El extremo del tren: el costado se curva y se acaba en un morro. Suena más fuerte que los coches. Más allá de la cabeza no hay tren, hay vía.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.3], [0.2, 0.05], [0.4, 0.0], [1.0, 0.0], [1.0, 1.0], [0.4, 1.0], [0.2, 0.95], [0.0, 0.7]]
+			},
+			"medidas": {
+				"ancho": [4.0, 6.0, 6.0],
+				"fondo": [2.8, 2.9, 3.0],
+				"alto": [3.6, 4.2, 4.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/tren_parado.flac",
+					"volumen": 0.55,
+					"radio": 18
+				}
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["coche_tren_tramo"],
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabeza_tren.png",
+				"descripcion": "Huella en planta de «Cabeza de tren o locomotora parada»: un cuerpo largo con el morro afilado a la izquierda de 6,00 por 2,90 metros, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "puerta_tren_abierta",
+			"nombre": "Puerta de tren con escalón",
+			"categoria": "andenes",
+			"subcategoria": "tren_parado",
+			"etiquetas": ["puerta de tren", "puerta del coche", "puerta del vagón"],
+			"descripcion": "Hueco de la puerta en el costado del tren. Tiene un botón a la altura de la mano: al pulsarlo pita y las hojas se abren. Hay un escalón y un hueco con el andén.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.3, 1.9],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [2.0, 2.1, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "una_hoja",
+					"nombre": "De una hoja",
+					"ancho": 0.9,
+					"fondo": 0.4,
+					"alto": 2.1
+				},
+				{
+					"id": "dos_hojas",
+					"nombre": "De dos hojas",
+					"ancho": 1.3,
+					"fondo": 0.4,
+					"alto": 2.1
+				},
+				{
+					"id": "accesible",
+					"nombre": "Accesible, ancha",
+					"ancho": 1.9,
+					"fondo": 0.4,
+					"alto": 2.1
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puertas_anden_aviso.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puertas_anden_aviso.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"aviso": "Puerta del tren: hay un escalón y un hueco con el andén.",
+			"funcion": "vehiculo",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["anden"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel", "temporal"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["coche_tren_tramo", "hueco_coche_anden", "marca_puerta_anden"],
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_tren_abierta.png",
+				"descripcion": "Huella en planta de «Puerta de tren con escalón»: un rectángulo de 1,30 por 0,40 metros, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "fuelle_tren",
+			"nombre": "Fuelle entre dos coches",
+			"categoria": "andenes",
+			"subcategoria": "tren_parado",
+			"etiquetas": ["fuelle del tren", "unión entre coches", "enganche entre vagones"],
+			"descripcion": "La unión entre dos coches: un fuelle de goma más estrecho que el tren, con huecos a los lados que dan a la vía. Al tacto parece una puerta y NO lo es: sigue hasta notar chapa lisa.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.125, 0.0], [0.875, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.0],
+				"fondo": [2.2, 2.5, 2.8],
+				"alto": [2.2, 2.5, 3.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Unión entre dos coches: no es una puerta, hay hueco a la vía.",
+			"funcion": "vehiculo",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["coche_tren_tramo"],
+			"simbolo": {
+				"letra": "Ft",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/fuelle_tren.png",
+				"descripcion": "Huella en planta de «Fuelle entre dos coches»: un trapecio, más estrecho por detrás de 0,80 por 2,50 metros, con la letra «Ft»."
+			}
+		},
+		{
+			"id": "rampa_embarque_movil",
+			"nombre": "Rampa de embarque móvil",
+			"categoria": "andenes",
+			"subcategoria": "embarque_asistido",
+			"etiquetas": ["rampa de embarque", "rampa portátil", "rampa para silla de ruedas"],
+			"descripcion": "Rampa de metal que el personal apoya entre el andén y la puerta del tren. Suena hueca al pisarla y tiene un reborde a cada lado.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [1.2, 1.8, 2.5],
+				"alto": [0.1, 0.2, 0.35]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Rampa de embarque: sube hacia la puerta del tren.",
+			"funcion": "ayuda_tecnica",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["puerta_tren_abierta", "plataforma_elevadora_embarque"],
+			"simbolo": {
+				"letra": "Re",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/rampa_embarque_movil.png",
+				"descripcion": "Huella en planta de «Rampa de embarque móvil»: un rectángulo de 0,90 por 1,80 metros, con la letra «Re»."
+			}
+		},
+		{
+			"id": "plataforma_elevadora_embarque",
+			"nombre": "Plataforma elevadora de embarque para sillas de ruedas",
+			"categoria": "andenes",
+			"subcategoria": "embarque_asistido",
+			"etiquetas": ["plataforma elevadora de andén", "elevador de embarque", "elevador para sillas de ruedas"],
+			"descripcion": "Carro de metal con una jaula y una manivela, aparcado en el andén y atado a una columna. Sirve para subir una silla de ruedas al tren. Es duro y tiene esquinas.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.2],
+				"fondo": [1.4, 1.6, 2.0],
+				"alto": [1.0, 1.2, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "ascensor/viaje"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["rampa_embarque_movil"],
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/plataforma_elevadora_embarque.png",
+				"descripcion": "Huella en planta de «Plataforma elevadora de embarque para sillas de ruedas»: un rectángulo de 1,00 por 1,60 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "carro_restauracion_anden",
+			"nombre": "Carro de restauración en el andén",
+			"categoria": "andenes",
+			"subcategoria": "embarque_asistido",
+			"etiquetas": ["carro de catering", "carro de restauración", "contenedor de catering"],
+			"descripcion": "Contenedor alto con ruedas, lleno de bandejas, esperando junto al tren para cargarlo. Hoy está y mañana no; tintinea si lo tocas.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [0.9, 1.1, 1.4],
+				"alto": [1.3, 1.5, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["anden"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_restauracion_anden.png",
+				"descripcion": "Huella en planta de «Carro de restauración en el andén»: un rectángulo de 0,70 por 1,10 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "carro_limpieza_trenes",
+			"nombre": "Carro de limpieza de trenes",
+			"categoria": "andenes",
+			"subcategoria": "embarque_asistido",
+			"etiquetas": ["carro de limpieza", "carro de la limpieza del tren", "carro con fregona"],
+			"descripcion": "Carro con cubos, bolsas y el palo de una fregona que sobresale hacia arriba. Lo dejan en el andén mientras limpian el tren; alrededor el suelo puede estar mojado.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.9, 1.1, 1.3],
+				"alto": [0.95, 1.05, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["anden"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal", "resbaladizo"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_limpieza_trenes.png",
+				"descripcion": "Huella en planta de «Carro de limpieza de trenes»: un rectángulo de 0,60 por 1,10 metros, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "tope_via",
+			"nombre": "Tope de vía",
+			"categoria": "andenes",
+			"subcategoria": "vias_cruces",
+			"etiquetas": ["tope de vía", "topera", "final de vía", "parachoques"],
+			"descripcion": "Bloque macizo con dos parachoques al final de la vía, en una estación término. Marca la cabecera del andén: por detrás de él se pasa de un andén a otro.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.6], [0.75, 0.6], [0.75, 1.0], [0.25, 1.0], [0.25, 0.6], [0.0, 0.6]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 3.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [1.0, 1.2, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["caja_via"],
+			"simbolo": {
+				"letra": "Tv",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/tope_via.png",
+				"descripcion": "Huella en planta de «Tope de vía»: una te de 2,50 por 1,50 metros, con la letra «Tv»."
+			}
+		},
+		{
+			"id": "caja_via",
+			"nombre": "Vía del tren: zona prohibida",
+			"categoria": "andenes",
+			"subcategoria": "vias_cruces",
+			"etiquetas": ["vía del tren", "caja de la vía", "vías", "balasto"],
+			"descripcion": "La caja de la vía: un foso con piedras sueltas, traviesas y raíles, más de un metro por debajo del andén. No se pisa nunca. Sirve para marcar dónde está el peligro.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [4.0, 10.0, 40.0],
+				"fondo": [1.5, 2.8, 3.5],
+				"alto": [0.01, 0.02, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "grava",
+			"aviso": "¡Estás en la vía! Zona prohibida: vuelve al andén.",
+			"funcion": "referencia",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["anden", "calzada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["borde_anden_antiguo", "tope_via"],
+			"simbolo": {
+				"letra": "Cv",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/caja_via.png",
+				"descripcion": "Huella en planta de «Vía del tren: zona prohibida»: un rectángulo de 10,00 por 2,80 metros, con la letra «Cv»."
+			}
+		},
+		{
+			"id": "paso_entre_andenes",
+			"nombre": "Paso a nivel entre andenes",
+			"categoria": "andenes",
+			"subcategoria": "vias_cruces",
+			"etiquetas": ["paso entre andenes", "paso a nivel de andén", "cruce de vías"],
+			"descripcion": "Tablero de goma o de madera que cruza las vías a ras de los raíles, en estaciones pequeñas. Suena distinto al pisarlo. Se cruza recto y solo si la señal no suena.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 4.0],
+				"fondo": [2.8, 5.0, 12.0],
+				"alto": [0.01, 0.03, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "madera",
+			"aviso": "Paso entre andenes: cruza recto y solo si no suena la campana.",
+			"funcion": "referencia",
+			"lugares": ["estacion"],
+			"estancias": ["anden", "cruce"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "ocasional",
+			"relacionados": ["barrera_paso_andenes"],
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/paso_entre_andenes.png",
+				"descripcion": "Huella en planta de «Paso a nivel entre andenes»: un rectángulo de 2,50 por 5,00 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "barrera_paso_andenes",
+			"nombre": "Barrera con señal sonora de paso entre andenes",
+			"categoria": "andenes",
+			"subcategoria": "vias_cruces",
+			"etiquetas": ["barrera de paso entre andenes", "semáforo sonoro del paso", "señal del paso a nivel"],
+			"descripcion": "Barrera a la altura de la cintura al principio del paso entre andenes. Cuando viene un tren baja y repica una campana; cuando calla y se levanta, se puede cruzar.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 4.0],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["rojo", "verde"],
+			"paso_libre": ["verde"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "semaforo",
+				"para": "peatones",
+				"fases": [
+					{
+						"estado": "rojo",
+						"segundos": 30,
+						"sonido": "sonidos/paso_nivel_campana.flac"
+					},
+					{
+						"estado": "verde",
+						"segundos": 50
+					}
+				],
+				"sonoro": true,
+				"pulsador": false,
+				"radio": 16,
+				"volumen": 0.6
+			},
+			"funcion": "barrera",
+			"lugares": ["estacion"],
+			"estancias": ["anden", "cruce"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["paso_entre_andenes"],
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/barrera_paso_andenes.png",
+				"descripcion": "Huella en planta de «Barrera con señal sonora de paso entre andenes»: un rectángulo de 2,50 por 0,20 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "cancela_fin_anden",
+			"nombre": "Cancela de fin de andén",
+			"categoria": "andenes",
+			"subcategoria": "vias_cruces",
+			"etiquetas": ["fin de andén", "cancela del andén", "final del andén"],
+			"descripcion": "Cancela de barrotes que cierra el extremo del andén. Detrás hay una rampa que baja a las vías, solo para el personal: aquí se da la vuelta.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 4.0],
+				"fondo": [0.05, 0.08, 0.15],
+				"alto": [1.0, 1.1, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"aviso": "Fin del andén: no sigas, da la vuelta.",
+			"funcion": "barrera",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cf",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cancela_fin_anden.png",
+				"descripcion": "Huella en planta de «Cancela de fin de andén»: un rectángulo de 2,50 por 0,08 metros, con la letra «Cf»."
+			}
+		},
+		{
+			"id": "cancela_boca_metro",
+			"nombre": "Cancela de boca de metro",
+			"categoria": "metro",
+			"subcategoria": "acceso_metro",
+			"etiquetas": ["cancela del metro", "portón de acceso", "reja de la boca de metro"],
+			"descripcion": "Reja que cierra la boca del metro cuando no hay servicio. Cerrada, es una pared de barrotes en lo alto de la escalera; abierta, queda recogida a un lado.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 4.0],
+				"fondo": [0.06, 0.1, 0.2],
+				"alto": [2.0, 2.3, 2.8]
+			},
+			"colocacion": ["suelo", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:valla_obra.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:valla_obra.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["estacion", "calle"],
+			"estancias": ["vestibulo", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["barandilla_boca_metro"],
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cancela_boca_metro.png",
+				"descripcion": "Huella en planta de «Cancela de boca de metro»: un rectángulo de 2,50 por 0,10 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "barandilla_boca_metro",
+			"nombre": "Barandilla de boca de metro",
+			"categoria": "metro",
+			"subcategoria": "acceso_metro",
+			"etiquetas": ["boca de metro", "barandilla del metro", "entrada del metro"],
+			"descripcion": "Barandilla en U que rodea el hueco de la escalera del metro en la acera. Por tres lados corta el paso; por el lado abierto empieza la escalera, que baja.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.96, 1.0], [0.96, 0.03], [0.04, 0.03], [0.04, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.8, 2.5, 4.0],
+				"fondo": [3.0, 5.0, 8.0],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["estacion", "calle"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["poste_boca_metro", "cancela_boca_metro"],
+			"simbolo": {
+				"letra": "Bb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/barandilla_boca_metro.png",
+				"descripcion": "Huella en planta de «Barandilla de boca de metro»: una U abierta por delante de 2,50 por 5,00 metros, con la letra «Bb»."
+			}
+		},
+		{
+			"id": "templete_boca_metro",
+			"nombre": "Templete acristalado de boca de metro",
+			"categoria": "metro",
+			"subcategoria": "acceso_metro",
+			"etiquetas": ["templete de metro", "boca de metro cubierta", "marquesina de boca de metro"],
+			"descripcion": "Caseta de cristal con tejado que cubre la escalera del metro. Tres paredes lisas de cristal y un lado abierto por donde se baja.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.97, 1.0], [0.97, 0.02], [0.03, 0.02], [0.03, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.5, 3.0, 4.0],
+				"fondo": [4.0, 6.0, 8.0],
+				"alto": [2.5, 3.0, 3.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["estacion", "calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente", "desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["poste_boca_metro"],
+			"simbolo": {
+				"letra": "Tb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/templete_boca_metro.png",
+				"descripcion": "Huella en planta de «Templete acristalado de boca de metro»: una U abierta por delante de 3,00 por 6,00 metros, con la letra «Tb»."
+			}
+		},
+		{
+			"id": "poste_boca_metro",
+			"nombre": "Poste de boca de metro",
+			"categoria": "metro",
+			"subcategoria": "acceso_metro",
+			"etiquetas": ["poste del metro", "tótem del metro", "rombo del metro"],
+			"descripcion": "Poste alto junto a la boca del metro, con el rombo de la red arriba. Es más grueso que una señal; sirve para saber que la escalera está al lado.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.75, 1.0], [0.25, 1.0], [0.0, 0.5], [0.25, 0.0], [0.75, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.15, 0.2, 0.3],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [3.0, 4.0, 5.0]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["estacion", "calle"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["barandilla_boca_metro"],
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_boca_metro.png",
+				"descripcion": "Huella en planta de «Poste de boca de metro»: un hexágono de 0,20 por 0,20 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "puertas_cortavientos_metro",
+			"nombre": "Puertas batientes cortavientos de metro",
+			"categoria": "metro",
+			"subcategoria": "acceso_metro",
+			"etiquetas": ["puertas batientes del metro", "puertas de vaivén", "puertas cortavientos"],
+			"descripcion": "Pareja de hojas pesadas de vaivén en un pasillo del metro. Se empujan con el cuerpo y vuelven solas con fuerza: cuidado con quien viene detrás y con la hoja que regresa.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.6, 1.8, 2.4],
+				"fondo": [0.06, 0.08, 0.12],
+				"alto": [2.0, 2.1, 2.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["estacion"],
+			"estancias": ["pasillo", "vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/puertas_cortavientos_metro.png",
+				"descripcion": "Huella en planta de «Puertas batientes cortavientos de metro»: un rectángulo de 1,80 por 0,08 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "paso_hojas_cristal",
+			"nombre": "Paso de validación de hojas de cristal",
+			"categoria": "metro",
+			"subcategoria": "acceso_metro",
+			"etiquetas": ["paso de hojas de cristal", "validadora de puertas", "torno de cristal"],
+			"descripcion": "Paso estrecho entre dos cuerpos de metal, cerrado por dos hojas de cristal a la altura del pecho. Al validar pita y las hojas se apartan un momento: pasa sin pararte.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.16, 0.0], [0.16, 0.45], [0.84, 0.45], [0.84, 0.0], [1.0, 0.0], [1.0, 1.0], [0.84, 1.0], [0.84, 0.55], [0.16, 0.55], [0.16, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.75, 0.85, 0.95],
+				"fondo": [1.4, 1.8, 2.0],
+				"alto": [1.0, 1.1, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "validar",
+					"nombre": "Validar el billete",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:bip_validacion.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["estacion"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "transparente"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["torno_salida_jaula"],
+			"simbolo": {
+				"letra": "Ph",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/paso_hojas_cristal.png",
+				"descripcion": "Huella en planta de «Paso de validación de hojas de cristal»: dos cuerpos estrechos a los lados y, entre ellos, unas hojas finas que cierran el paso de 0,85 por 1,80 metros, con la letra «Ph»."
+			}
+		},
+		{
+			"id": "torno_salida_jaula",
+			"nombre": "Torno de salida de cuerpo entero",
+			"categoria": "metro",
+			"subcategoria": "acceso_metro",
+			"etiquetas": ["torno de cuerpo entero", "molinete de jaula", "torno de salida"],
+			"descripcion": "Molinete de barrotes del suelo a por encima de la cabeza, en forma de jaula. Solo gira hacia fuera: se empuja con el cuerpo y carraquea. No caben maletas grandes.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.44, 0.0], [0.56, 0.0], [0.56, 0.44], [1.0, 0.44], [1.0, 0.56], [0.56, 0.56], [0.56, 1.0], [0.44, 1.0], [0.44, 0.56], [0.0, 0.56], [0.0, 0.44], [0.44, 0.44]]
+			},
+			"medidas": {
+				"ancho": [1.3, 1.5, 1.6],
+				"fondo": [1.3, 1.5, 1.6],
+				"alto": [2.2, 2.3, 2.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["bloqueado", "girando"],
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"de": "bloqueado",
+					"a": "girando",
+					"sonido": "transporte:torno.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "girando",
+					"a": "bloqueado"
+				}
+			],
+			"paso_libre": ["girando"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["estacion"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["paso_hojas_cristal"],
+			"simbolo": {
+				"letra": "Ts",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/torno_salida_jaula.png",
+				"descripcion": "Huella en planta de «Torno de salida de cuerpo entero»: una cruz de 1,50 por 1,50 metros, con la letra «Ts»."
+			}
+		},
+		{
+			"id": "cabina_agente_metro",
+			"nombre": "Cabina del agente de estación",
+			"categoria": "metro",
+			"subcategoria": "acceso_metro",
+			"etiquetas": ["cabina del agente", "cabina del jefe de estación", "garita del metro"],
+			"descripcion": "Cabina de cristal junto a los tornos, con una persona dentro. Tiene una ventanilla con rejilla para hablar a la altura de la cara; se rodea por los lados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 0.15], [1.0, 0.85], [0.85, 1.0], [0.15, 1.0], [0.0, 0.85], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [1.5, 2.0, 2.5],
+				"alto": [2.2, 2.4, 2.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "transporte:interfono.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["estacion"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"relacionados": ["paso_hojas_cristal"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabina_agente_metro.png",
+				"descripcion": "Huella en planta de «Cabina del agente de estación»: un rectángulo con las esquinas cortadas de 2,00 por 2,00 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "puertas_anden_cristal",
+			"nombre": "Puertas de andén automáticas de cristal (tramo)",
+			"categoria": "metro",
+			"subcategoria": "anden_metro",
+			"etiquetas": ["puertas de andén", "mamparas de andén", "puertas automáticas de andén"],
+			"descripcion": "Pared de cristal a lo largo del borde del andén, con puertas que solo se abren cuando el tren está parado detrás. Pita antes de abrir y de cerrar. Cerrada, no deja llegar a la vía.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 6.0],
+				"fondo": [0.15, 0.25, 0.4],
+				"alto": [1.5, 2.3, 2.6]
+			},
+			"variantes": [
+				{
+					"id": "media_altura",
+					"nombre": "De media altura",
+					"ancho": 4.0,
+					"fondo": 0.25,
+					"alto": 1.5
+				},
+				{
+					"id": "altura_completa",
+					"nombre": "De altura completa",
+					"ancho": 4.0,
+					"fondo": 0.25,
+					"alto": 2.3
+				},
+				{
+					"id": "tramo_largo",
+					"nombre": "Tramo largo",
+					"ancho": 6.0,
+					"fondo": 0.25,
+					"alto": 2.3
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puertas_anden_aviso.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puertas_anden_aviso.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["estacion", "aeropuerto"],
+			"estancias": ["anden"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente", "movil"],
+			"frecuencia": "comun",
+			"relacionados": ["panel_proximo_tren"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/puertas_anden_cristal.png",
+				"descripcion": "Huella en planta de «Puertas de andén automáticas de cristal (tramo)»: un rectángulo de 4,00 por 0,25 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "panel_proximo_tren",
+			"nombre": "Panel de próximo tren con voz",
+			"categoria": "metro",
+			"subcategoria": "informacion_metro",
+			"etiquetas": ["panel de próximo tren", "teleindicador de andén", "panel con voz"],
+			"descripcion": "Panel colgado del techo del andén, por encima de la cabeza. Cada poco dice por megafonía cuánto falta para el próximo tren y hacia dónde va.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 2.0],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 2.3,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:megafonia.flac"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["anden", "parada"],
+			"obstaculo": "aereo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_proximo_tren.png",
+				"descripcion": "Huella en planta de «Panel de próximo tren con voz»: un rectángulo de 1,40 por 0,20 metros, colgado a 2,30 metros del suelo, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "espejo_anden",
+			"nombre": "Espejo de andén",
+			"categoria": "metro",
+			"subcategoria": "anden_metro",
+			"etiquetas": ["espejo de andén", "espejo del conductor", "espejo convexo"],
+			"descripcion": "Espejo grande y abombado en un brazo que sale de la pared, en la cabecera del andén, para que el conductor vea las puertas. Queda a la altura de la cabeza.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.3, 0.5, 0.8],
+				"alto": [0.6, 0.8, 1.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.6,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ea",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/espejo_anden.png",
+				"descripcion": "Huella en planta de «Espejo de andén»: un óvalo de 0,80 por 0,50 metros, colgado a 1,60 metros del suelo, con la letra «Ea»."
+			}
+		},
+		{
+			"id": "asiento_abatible_anden",
+			"nombre": "Asiento abatible de pared de andén",
+			"categoria": "metro",
+			"subcategoria": "anden_metro",
+			"etiquetas": ["asiento abatible", "asientos de pared", "asiento en voladizo"],
+			"descripcion": "Fila de asientos estrechos atornillados a la pared, sin patas. El bastón pasa por debajo y no los avisa: se encuentran con la rodilla.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.4, 2.4],
+				"fondo": [0.3, 0.4, 0.45],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.5,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["anden"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/asiento_abatible_anden.png",
+				"descripcion": "Huella en planta de «Asiento abatible de pared de andén»: un rectángulo de 1,40 por 0,40 metros, colgado a 0,50 metros del suelo, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "plano_red_relieve",
+			"nombre": "Plano de la red en relieve",
+			"categoria": "metro",
+			"subcategoria": "informacion_metro",
+			"etiquetas": ["plano de la red", "plano de metro en relieve", "plano de líneas en braille"],
+			"descripcion": "Panel en la pared con las líneas de la red en relieve y las estaciones en braille. Se lee con las dos manos, de pie; sobresale poco.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.0],
+				"fondo": [0.04, 0.06, 0.1],
+				"alto": [0.8, 1.0, 1.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["estacion", "parada"],
+			"estancias": ["vestibulo", "anden"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/plano_red_relieve.png",
+				"descripcion": "Huella en planta de «Plano de la red en relieve»: un rectángulo de 1,50 por 0,06 metros, colgado a 0,90 metros del suelo, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "recarga_tarjetas_pared",
+			"nombre": "Máquina de recarga de tarjetas de pared",
+			"categoria": "metro",
+			"subcategoria": "informacion_metro",
+			"etiquetas": ["recarga de tarjetas", "máquina de recarga", "terminal de recarga"],
+			"descripcion": "Terminal pequeño colgado de la pared a la altura del pecho, para recargar la tarjeta de transporte. No llega al suelo: el bastón no lo encuentra.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.6, 0.7, 0.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.8,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:teclas_cajero.flac"
+			},
+			"acciones": [
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "transporte:teclas_cajero.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["estacion", "parada", "tienda"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rt",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/recarga_tarjetas_pared.png",
+				"descripcion": "Huella en planta de «Máquina de recarga de tarjetas de pared»: un rectángulo de 0,50 por 0,30 metros, colgado a 0,80 metros del suelo, con la letra «Rt»."
+			}
+		},
+		{
+			"id": "anden_tranvia_bajo",
+			"nombre": "Andén bajo de parada de tranvía",
+			"categoria": "tranvia_bus",
+			"subcategoria": "parada_tranvia",
+			"etiquetas": ["andén de tranvía", "parada de tranvía", "plataforma del tranvía"],
+			"descripcion": "Plataforma un palmo más alta que la calle, larga y estrecha. Se sube por una rampa en cada punta; el borde del lado de la vía tiene bordillo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [10.0, 20.0, 40.0],
+				"fondo": [2.5, 3.0, 4.0],
+				"alto": [0.2, 0.28, 0.35]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "hormigon",
+			"aviso": "Andén del tranvía: hay bordillo en el lado de la vía.",
+			"funcion": "estructura",
+			"lugares": ["parada", "calle"],
+			"estancias": ["parada", "anden"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["rail_tranvia_embebido"],
+			"simbolo": {
+				"letra": "At",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/anden_tranvia_bajo.png",
+				"descripcion": "Huella en planta de «Andén bajo de parada de tranvía»: un rectángulo de 20,00 por 3,00 metros, con la letra «At»."
+			}
+		},
+		{
+			"id": "rail_tranvia_embebido",
+			"nombre": "Raíl de tranvía embebido en el suelo",
+			"categoria": "tranvia_bus",
+			"subcategoria": "parada_tranvia",
+			"etiquetas": ["raíl de tranvía", "vía del tranvía", "carril del tranvía"],
+			"descripcion": "Raíl de acero a ras del suelo, con una ranura. Mojado resbala, y la ranura atrapa la punta del bastón y las ruedas pequeñas: crúzalo de frente.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.06, 0.1, 0.15],
+				"fondo": [2.0, 10.0, 40.0],
+				"alto": [0.005, 0.01, 0.02]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Raíl de tranvía: resbala y atrapa el bastón.",
+			"funcion": "referencia",
+			"lugares": ["calle", "parada"],
+			"estancias": ["calzada", "cruce"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["anden_tranvia_bajo", "chicane_paso_tranvia"],
+			"simbolo": {
+				"letra": "Rt",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/rail_tranvia_embebido.png",
+				"descripcion": "Huella en planta de «Raíl de tranvía embebido en el suelo»: un rectángulo de 0,10 por 10,00 metros, con la letra «Rt»."
+			}
+		},
+		{
+			"id": "poste_catenaria",
+			"nombre": "Poste de catenaria",
+			"categoria": "tranvia_bus",
+			"subcategoria": "parada_tranvia",
+			"etiquetas": ["poste de catenaria", "poste del tranvía", "mástil de catenaria"],
+			"descripcion": "Poste de acero grueso, de cantos vivos, que sostiene los cables del tranvía o del tren. Hay uno cada treinta pasos, siempre a la misma distancia de la vía.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.45],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [7.0, 8.0, 10.0]
+			},
+			"colocacion": ["acera", "suelo", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle", "parada", "estacion"],
+			"estancias": ["acera", "anden"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_catenaria.png",
+				"descripcion": "Huella en planta de «Poste de catenaria»: un rectángulo de 0,30 por 0,30 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "chicane_paso_tranvia",
+			"nombre": "Barandillas en zigzag de paso de tranvía",
+			"categoria": "tranvia_bus",
+			"subcategoria": "parada_tranvia",
+			"etiquetas": ["barandillas en zigzag", "chicane", "paso de tranvía", "paso en laberinto"],
+			"descripcion": "Dos barandillas cruzadas antes de las vías del tranvía: obligan a girar dos veces para que nadie cruce sin mirar. Se sigue la primera con la mano, se gira y se sigue la segunda.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.6, 0.0], [0.6, 0.9], [1.0, 0.9], [1.0, 1.0], [0.4, 1.0], [0.4, 0.1], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 3.5],
+				"fondo": [1.5, 2.0, 2.5],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle", "parada"],
+			"estancias": ["cruce", "acera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["rail_tranvia_embebido"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/chicane_paso_tranvia.png",
+				"descripcion": "Huella en planta de «Barandillas en zigzag de paso de tranvía»: una zeta: dos barandillas cruzadas que obligan a girar dos veces de 2,50 por 2,00 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "darsena_autobuses",
+			"nombre": "Dársena de estación de autobuses",
+			"categoria": "tranvia_bus",
+			"subcategoria": "estacion_autobuses",
+			"etiquetas": ["dársena", "plaza de autobús", "andén de autobuses"],
+			"descripcion": "La plaza donde aparca el autocar, en diagonal y más baja que la acera de espera. Aquí maniobran los autobuses marcha atrás: no se pisa si no es para subir.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [1.0, 0.0], [0.65, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 3.5, 4.0],
+				"fondo": [8.0, 12.0, 15.0],
+				"alto": [0.01, 0.02, 0.05]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "asfalto",
+			"aviso": "Dársena: aquí maniobran los autobuses. Vuelve a la acera.",
+			"funcion": "referencia",
+			"lugares": ["estacion"],
+			"estancias": ["anden", "calzada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["poste_darsena_braille", "pilonas_cadena_darsena"],
+			"simbolo": {
+				"letra": "Da",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/darsena_autobuses.png",
+				"descripcion": "Huella en planta de «Dársena de estación de autobuses»: un romboide: la plaza del autobús en diagonal, en diente de sierra de 3,50 por 12,00 metros, con la letra «Da»."
+			}
+		},
+		{
+			"id": "pilonas_cadena_darsena",
+			"nombre": "Pilonas de dársena unidas por cadena",
+			"categoria": "tranvia_bus",
+			"subcategoria": "estacion_autobuses",
+			"etiquetas": ["pilonas con cadena", "postes con cadena", "cadena de dársena"],
+			"descripcion": "Fila de postes cortos y gruesos en la cabecera de la dársena, con una cadena tendida de uno a otro a la altura de la rodilla. La cadena es lo que hace tropezar.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 6.0],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [0.6, 0.8, 1.0]
+			},
+			"colocacion": ["suelo", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "juego:llaves.flac"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["estacion", "puerto", "aparcamiento"],
+			"estancias": ["anden", "acera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["darsena_autobuses"],
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/pilonas_cadena_darsena.png",
+				"descripcion": "Huella en planta de «Pilonas de dársena unidas por cadena»: un rectángulo de 3,00 por 0,20 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "poste_darsena_braille",
+			"nombre": "Poste de dársena con número en relieve y braille",
+			"categoria": "tranvia_bus",
+			"subcategoria": "estacion_autobuses",
+			"etiquetas": ["poste de dársena", "número de dársena", "panel de dársena"],
+			"descripcion": "Poste cuadrado en la cabecera de cada dársena. A la altura de la mano tiene una placa con el número de la dársena en relieve y en braille.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.12, 0.2],
+				"fondo": [0.1, 0.12, 0.2],
+				"alto": [1.8, 2.2, 2.6]
+			},
+			"colocacion": ["suelo", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["estacion"],
+			"estancias": ["anden"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["darsena_autobuses"],
+			"simbolo": {
+				"letra": "Pd",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_darsena_braille.png",
+				"descripcion": "Huella en planta de «Poste de dársena con número en relieve y braille»: un rectángulo de 0,12 por 0,12 metros, con la letra «Pd»."
+			}
+		},
+		{
+			"id": "mostrador_facturacion",
+			"nombre": "Mostrador de facturación",
+			"categoria": "facturacion",
+			"subcategoria": "mostradores_facturacion",
+			"etiquetas": ["mostrador de facturación", "facturación de equipaje", "mostrador de la aerolínea"],
+			"descripcion": "Mostrador alto con una persona detrás. A su lado, casi a ras de suelo, queda la báscula donde se pone la maleta. Hay muchos iguales en fila.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 1.8],
+				"fondo": [0.8, 1.0, 1.2],
+				"alto": [1.0, 1.05, 1.15]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["facturacion"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["bascula_cinta_facturacion", "cola_zigzag_cintas"],
+			"simbolo": {
+				"letra": "Mf",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_facturacion.png",
+				"descripcion": "Huella en planta de «Mostrador de facturación»: un rectángulo de 1,50 por 1,00 metros, con la letra «Mf»."
+			}
+		},
+		{
+			"id": "bascula_cinta_facturacion",
+			"nombre": "Báscula con cinta de facturación",
+			"categoria": "facturacion",
+			"subcategoria": "mostradores_facturacion",
+			"etiquetas": ["báscula de facturación", "cinta de facturación", "cinta de equipajes del mostrador"],
+			"descripcion": "Cinta baja de goma entre dos mostradores, a la altura del tobillo: se tropieza con ella. Encima se pone la maleta; pita el peso y la cinta se la lleva.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [1.2, 1.8, 2.5],
+				"alto": [0.25, 0.35, 0.45]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/cinta_facturacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "facturar_maleta",
+					"nombre": "Poner la maleta en la báscula",
+					"sonido": "sonidos/cinta_facturacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["facturacion"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["mostrador_facturacion"],
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/bascula_cinta_facturacion.png",
+				"descripcion": "Huella en planta de «Báscula con cinta de facturación»: un rectángulo de 0,80 por 1,80 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "quiosco_autofacturacion",
+			"nombre": "Quiosco de autofacturación",
+			"categoria": "facturacion",
+			"subcategoria": "mostradores_facturacion",
+			"etiquetas": ["quiosco de autofacturación", "máquina de facturación", "autofacturación"],
+			"descripcion": "Columna con una pantalla inclinada a la altura del pecho y una ranura por donde sale la tarjeta de embarque. Suele haber varios juntos, en corro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.4, 0.5, 0.7],
+				"alto": [1.4, 1.6, 1.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:teclas_cajero.flac"
+			},
+			"acciones": [
+				{
+					"id": "imprimir",
+					"nombre": "Imprimir",
+					"sonido": "transporte:teclas_cajero.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["aeropuerto"],
+			"estancias": ["facturacion"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["entrega_automatica_equipaje"],
+			"simbolo": {
+				"letra": "Qa",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/quiosco_autofacturacion.png",
+				"descripcion": "Huella en planta de «Quiosco de autofacturación»: un trapecio, más estrecho por detrás de 0,60 por 0,50 metros, con la letra «Qa»."
+			}
+		},
+		{
+			"id": "entrega_automatica_equipaje",
+			"nombre": "Punto de entrega automática de equipaje",
+			"categoria": "facturacion",
+			"subcategoria": "mostradores_facturacion",
+			"etiquetas": ["entrega automática de equipaje", "autoentrega de maletas", "entrega de equipaje sin mostrador"],
+			"descripcion": "Un poste con lector y, pegada a él, una cinta baja dentro de un cajón abierto por delante. Se deja la maleta, se pasa la etiqueta por el lector y la cinta se la traga.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.3], [0.4, 0.3], [0.4, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [1.8, 2.2, 3.0],
+				"alto": [1.2, 1.6, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/cinta_facturacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "facturar_maleta",
+					"nombre": "Poner la maleta en la báscula",
+					"sonido": "sonidos/cinta_facturacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["aeropuerto"],
+			"estancias": ["facturacion"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["quiosco_autofacturacion"],
+			"simbolo": {
+				"letra": "Ea",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/entrega_automatica_equipaje.png",
+				"descripcion": "Huella en planta de «Punto de entrega automática de equipaje»: una ele de 1,50 por 2,20 metros, con la letra «Ea»."
+			}
+		},
+		{
+			"id": "medidor_equipaje_mano",
+			"nombre": "Medidor de equipaje de mano",
+			"categoria": "facturacion",
+			"subcategoria": "mostradores_facturacion",
+			"etiquetas": ["medidor de equipaje de mano", "comprobador de maletas", "jaula de equipaje de cabina"],
+			"descripcion": "Jaula de tubos de metal a la altura de la cadera, abierta por arriba: se mete la maleta para ver si cabe. Está suelta, en mitad del paso hacia la cola.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [0.9, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": true,
+			"funcion": "herramienta",
+			"lugares": ["aeropuerto"],
+			"estancias": ["facturacion", "puerta_embarque"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Me",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/medidor_equipaje_mano.png",
+				"descripcion": "Huella en planta de «Medidor de equipaje de mano»: un rectángulo de 0,50 por 0,40 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "embaladora_maletas",
+			"nombre": "Máquina de embalar maletas",
+			"categoria": "facturacion",
+			"subcategoria": "mostradores_facturacion",
+			"etiquetas": ["embaladora de maletas", "plastificadora de maletas", "máquina de envolver equipaje"],
+			"descripcion": "Plataforma giratoria baja con una columna al lado que envuelve la maleta en plástico. La plataforma está a la altura del tobillo y gira cuando funciona.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [1.2, 1.5, 2.0],
+				"alto": [1.2, 1.5, 1.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["parado", "girando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "parado",
+					"a": "girando",
+					"sonido": "roce/plastico"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "girando",
+					"a": "parado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["aeropuerto"],
+			"estancias": ["facturacion"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Em",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/embaladora_maletas.png",
+				"descripcion": "Huella en planta de «Máquina de embalar maletas»: un octógono de 1,50 por 1,50 metros, con la letra «Em»."
+			}
+		},
+		{
+			"id": "cola_zigzag_cintas",
+			"nombre": "Cola en zigzag de postes con cinta",
+			"categoria": "facturacion",
+			"subcategoria": "colas_asistencia",
+			"etiquetas": ["cola en zigzag", "laberinto de cintas", "cola de facturación", "cola con catenarias"],
+			"descripcion": "Laberinto de calles hecho con postes bajos unidos por cinta de tela. La cinta queda a la altura de la cintura, cede al tocarla y el bastón pasa por debajo: se sigue con la mano, girando en cada extremo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.53], [0.06, 0.53], [0.06, 0.94], [1.0, 0.94], [1.0, 1.0], [0.0, 1.0], [0.0, 0.47], [0.94, 0.47], [0.94, 0.06], [0.0, 0.06]]
+			},
+			"medidas": {
+				"ancho": [3.0, 4.0, 6.0],
+				"fondo": [2.4, 3.6, 6.0],
+				"alto": [0.9, 0.95, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "tres_calles",
+					"nombre": "De tres calles",
+					"ancho": 4.0,
+					"fondo": 2.4,
+					"alto": 0.95
+				},
+				{
+					"id": "cuatro_calles",
+					"nombre": "De cuatro calles",
+					"ancho": 4.0,
+					"fondo": 3.6,
+					"alto": 0.95
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 6.0,
+					"fondo": 6.0,
+					"alto": 0.95
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["aeropuerto", "estacion", "puerto"],
+			"estancias": ["facturacion", "control_seguridad"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["mostrador_facturacion"],
+			"simbolo": {
+				"letra": "Cz",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cola_zigzag_cintas.png",
+				"descripcion": "Huella en planta de «Cola en zigzag de postes con cinta»: una ese de calles paralelas: tres líneas de cinta unidas por los extremos alternos de 4,00 por 3,60 metros, con la letra «Cz»."
+			}
+		},
+		{
+			"id": "mostrador_asistencia_pmr",
+			"nombre": "Mostrador de asistencia a personas con movilidad reducida",
+			"categoria": "facturacion",
+			"subcategoria": "colas_asistencia",
+			"etiquetas": ["mostrador de asistencia", "asistencia pmr", "punto sin barreras del aeropuerto"],
+			"descripcion": "Mostrador bajo y curvo, a la altura de una mesa, con sitio para acercarse sentado. Aquí se pide el acompañamiento hasta el avión; al lado hay asientos para esperar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.19], [0.059, 0.457], [0.144, 0.684], [0.25, 0.856], [0.371, 0.963], [0.5, 1.0], [0.629, 0.963], [0.75, 0.856], [0.856, 0.684], [0.941, 0.457], [1.0, 0.19], [0.775, 0.0], [0.743, 0.147], [0.696, 0.272], [0.637, 0.366], [0.571, 0.426], [0.5, 0.446], [0.429, 0.426], [0.363, 0.366], [0.304, 0.272], [0.257, 0.147], [0.225, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [0.9, 1.1, 1.5],
+				"alto": [0.78, 0.82, 0.85]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["en_espera", "llamando"],
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"de": "en_espera",
+					"a": "llamando",
+					"sonido": "transporte:interfono.flac"
+				},
+				{
+					"id": "colgar",
+					"nombre": "Colgar",
+					"de": "llamando",
+					"a": "en_espera"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["aeropuerto", "puerto", "estacion"],
+			"estancias": ["facturacion", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["buggy_asistencia"],
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_asistencia_pmr.png",
+				"descripcion": "Huella en planta de «Mostrador de asistencia a personas con movilidad reducida»: una banda curva que abomba hacia delante de 2,00 por 1,10 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "contenedor_liquidos_control",
+			"nombre": "Contenedor de líquidos del control",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["contenedor de líquidos", "bidón del control", "contenedor de objetos prohibidos"],
+			"descripcion": "Bidón grande con una boca ancha arriba, justo antes del control: ahí se tiran las botellas y lo que no puede pasar. Suena a plástico hueco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["aeropuerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_liquidos_control.png",
+				"descripcion": "Huella en planta de «Contenedor de líquidos del control»: un círculo de 0,60 por 0,60 metros, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "pila_bandejas_control",
+			"nombre": "Pila de bandejas del control",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["bandejas del control", "pila de bandejas", "bandejas de seguridad"],
+			"descripcion": "Bandejas de plástico apiladas sobre un carrito bajo, al principio de la cinta. Se coge la de arriba. La pila crece y mengua, y el carrito rueda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.6, 0.65, 0.8],
+				"alto": [0.4, 0.9, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "comun:bandeja_seguridad.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["aeropuerto", "estacion"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["cinta_rodillos_control"],
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/pila_bandejas_control.png",
+				"descripcion": "Huella en planta de «Pila de bandejas del control»: un rectángulo de 0,50 por 0,65 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "cinta_rodillos_control",
+			"nombre": "Cinta de rodillos del control de seguridad (tramo)",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["cinta de rodillos", "mesa de rodillos", "cinta del control de seguridad"],
+			"descripcion": "Mesa larga de rodillos de metal a la altura de la cadera. Se pone la bandeja encima y se empuja: rueda sola hacia el escáner. Se sigue con la mano hasta el arco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [2.0, 3.0, 6.0],
+				"alto": [0.75, 0.8, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "tramo_corto",
+					"nombre": "Tramo corto",
+					"ancho": 0.7,
+					"fondo": 2.0,
+					"alto": 0.8
+				},
+				{
+					"id": "tramo_medio",
+					"nombre": "Tramo medio",
+					"ancho": 0.7,
+					"fondo": 3.0,
+					"alto": 0.8
+				},
+				{
+					"id": "tramo_largo",
+					"nombre": "Tramo largo",
+					"ancho": 0.7,
+					"fondo": 6.0,
+					"alto": 0.8
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "comun:bandeja_seguridad.flac"
+			},
+			"acciones": [
+				{
+					"id": "dejar_bandeja",
+					"nombre": "Dejar tus cosas en una bandeja",
+					"sonido": "comun:bandeja_seguridad.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["aeropuerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["pila_bandejas_control", "tunel_rayos_x", "arco_detector_metales"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cinta_rodillos_control.png",
+				"descripcion": "Huella en planta de «Cinta de rodillos del control de seguridad (tramo)»: un rectángulo de 0,70 por 3,00 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "tunel_rayos_x",
+			"nombre": "Escáner de rayos X con cortinillas",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["escáner de rayos x", "túnel de rayos x", "máquina de rayos del control"],
+			"descripcion": "Cajón grande de metal atravesado por la cinta. Las bandejas entran y salen apartando unas cortinillas de tiras de goma. Zumba todo el rato: sirve para situar el control.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.1], [1.0, 0.9], [0.9, 1.0], [0.1, 1.0], [0.0, 0.9], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.3],
+				"fondo": [1.8, 2.2, 2.8],
+				"alto": [1.3, 1.45, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/rayos_x_equipajes.flac",
+					"volumen": 0.45,
+					"radio": 12
+				}
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["aeropuerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cinta_rodillos_control", "mesa_recogida_control"],
+			"simbolo": {
+				"letra": "Tr",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/tunel_rayos_x.png",
+				"descripcion": "Huella en planta de «Escáner de rayos X con cortinillas»: un rectángulo con las esquinas cortadas de 1,00 por 2,20 metros, con la letra «Tr»."
+			}
+		},
+		{
+			"id": "arco_detector_metales",
+			"nombre": "Arco detector de metales",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["arco detector de metales", "arco de seguridad del aeropuerto", "detector de metales"],
+			"descripcion": "Marco estrecho del tamaño de una puerta, con dos paneles a los lados. Se pasa por dentro despacio y sin tocar; si llevas algo de metal, pita.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.85, 0.9, 1.0],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [2.1, 2.2, 2.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/arco_detector_pitido.flac"
+			},
+			"acciones": [
+				{
+					"id": "pasar",
+					"nombre": "Pasar",
+					"sonido": "sonidos/arco_detector_pitido.flac"
+				}
+			],
+			"contenedor": false,
+			"aviso": "Arco detector: pasa despacio y sin tocar los lados.",
+			"funcion": "seguridad",
+			"lugares": ["aeropuerto", "estacion", "administracion"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cinta_rodillos_control", "escaner_corporal"],
+			"simbolo": {
+				"letra": "Ad",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/arco_detector_metales.png",
+				"descripcion": "Huella en planta de «Arco detector de metales»: un rectángulo de 0,90 por 0,60 metros, con la letra «Ad»."
+			}
+		},
+		{
+			"id": "escaner_corporal",
+			"nombre": "Escáner corporal",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["escáner corporal", "cabina de escáner", "escáner de cuerpo entero"],
+			"descripcion": "Cabina redonda de paneles curvos de cristal, con una abertura. Se entra, se ponen los pies en las marcas del suelo y los brazos en alto, y se espera el pitido.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.213, 1.0], [0.1, 0.88], [0.027, 0.726], [0.0, 0.556], [0.023, 0.384], [0.094, 0.23], [0.204, 0.106], [0.344, 0.027], [0.5, 0.0], [0.656, 0.027], [0.796, 0.106], [0.906, 0.23], [0.977, 0.384], [1.0, 0.556], [0.973, 0.726], [0.9, 0.88], [0.787, 1.0], [0.752, 0.946], [0.852, 0.84], [0.917, 0.705], [0.94, 0.555], [0.92, 0.404], [0.858, 0.268], [0.76, 0.16], [0.637, 0.09], [0.5, 0.066], [0.363, 0.09], [0.24, 0.16], [0.142, 0.268], [0.08, 0.404], [0.06, 0.555], [0.083, 0.705], [0.148, 0.84], [0.248, 0.946]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.7, 2.0],
+				"fondo": [1.5, 1.7, 2.0],
+				"alto": [2.3, 2.5, 2.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "pasar",
+					"nombre": "Pasar",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["aeropuerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"relacionados": ["arco_detector_metales"],
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/escaner_corporal.png",
+				"descripcion": "Huella en planta de «Escáner corporal»: un anillo con una entrada por delante de 1,70 por 1,70 metros, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "mesa_recogida_control",
+			"nombre": "Mesa de recogida tras el control",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["mesa de recogida", "mesa del control", "mesa de bandejas"],
+			"descripcion": "Mesa lisa de metal después del escáner, donde se recogen las cosas de la bandeja con calma. Tiene un reborde y, debajo, un estante para las bandejas vacías.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [0.8, 0.85, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["aeropuerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["banco_calzarse_control", "tunel_rayos_x"],
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_recogida_control.png",
+				"descripcion": "Huella en planta de «Mesa de recogida tras el control»: un rectángulo de 2,00 por 0,80 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "banco_calzarse_control",
+			"nombre": "Banco para calzarse del control",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["banco para calzarse", "banco del control", "banco de zapatos"],
+			"descripcion": "Banco bajo y sin respaldo al final del control, para sentarse a ponerse los zapatos y el cinturón. Es de metal y está frío.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.984, 0.84], [0.935, 0.935], [0.84, 0.984], [0.5, 1.0], [0.16, 0.984], [0.065, 0.935], [0.016, 0.84], [0.0, 0.5], [0.016, 0.16], [0.065, 0.065], [0.16, 0.016], [0.5, 0.0], [0.84, 0.016], [0.935, 0.065], [0.984, 0.16]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.0],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [0.42, 0.45, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["aeropuerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["mesa_recogida_control"],
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_calzarse_control.png",
+				"descripcion": "Huella en planta de «Banco para calzarse del control»: un rectángulo de esquinas redondeadas de 1,50 por 0,40 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "cabina_registro_control",
+			"nombre": "Cabina de registro con cortina",
+			"categoria": "facturacion",
+			"subcategoria": "control_seguridad",
+			"etiquetas": ["cabina de registro", "cabina de cacheo", "cabina con cortina"],
+			"descripcion": "Cabina de paneles junto al control, cerrada por delante con una cortina. Dentro se hace el registro en privado; hay una silla y una mesita.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.95, 1.0], [0.95, 0.05], [0.05, 0.05], [0.05, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [1.2, 1.5, 2.0],
+				"alto": [2.0, 2.1, 2.3]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "seguridad",
+			"lugares": ["aeropuerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabina_registro_control.png",
+				"descripcion": "Huella en planta de «Cabina de registro con cortina»: una U abierta por delante de 1,50 por 1,50 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "cabina_pasaportes",
+			"nombre": "Cabina de control de pasaportes",
+			"categoria": "facturacion",
+			"subcategoria": "control_fronteras",
+			"etiquetas": ["control de pasaportes", "cabina de policía", "cabina de fronteras"],
+			"descripcion": "Cabina alta de cristal con un policía dentro, sentado más alto que tú. Tiene una repisa a la altura del pecho donde se deja el pasaporte. Se pasa por su lado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.12], [1.0, 0.88], [0.88, 1.0], [0.12, 1.0], [0.0, 0.88], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 1.8],
+				"fondo": [1.8, 2.2, 2.6],
+				"alto": [2.0, 2.3, 2.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"relacionados": ["puerta_fronteras_automatica"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabina_pasaportes.png",
+				"descripcion": "Huella en planta de «Cabina de control de pasaportes»: un rectángulo con las esquinas cortadas de 1,50 por 2,20 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "puerta_fronteras_automatica",
+			"nombre": "Puerta automática de control de fronteras",
+			"categoria": "facturacion",
+			"subcategoria": "control_fronteras",
+			"etiquetas": ["puerta automática de fronteras", "control automático de pasaportes", "puerta de control biométrico"],
+			"descripcion": "Pasillo estrecho entre dos cuerpos, con unas hojas de cristal al fondo. Se pone el pasaporte en el lector, se mira al frente y, cuando pita, las hojas se abren.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.16, 0.0], [0.16, 0.45], [0.84, 0.45], [0.84, 0.0], [1.0, 0.0], [1.0, 1.0], [0.84, 1.0], [0.84, 0.55], [0.16, 0.55], [0.16, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.2],
+				"fondo": [1.8, 2.2, 2.6],
+				"alto": [1.2, 1.4, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "validar",
+					"nombre": "Validar el billete",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:bip_validacion.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["control_seguridad"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente", "movil"],
+			"frecuencia": "comun",
+			"relacionados": ["cabina_pasaportes"],
+			"simbolo": {
+				"letra": "Pf",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_fronteras_automatica.png",
+				"descripcion": "Huella en planta de «Puerta automática de control de fronteras»: dos cuerpos estrechos a los lados y, entre ellos, unas hojas finas que cierran el paso de 1,00 por 2,20 metros, con la letra «Pf»."
+			}
+		},
+		{
+			"id": "canal_aduana",
+			"nombre": "Canal de aduana con mesa de inspección",
+			"categoria": "facturacion",
+			"subcategoria": "control_fronteras",
+			"etiquetas": ["canal de aduana", "arco de aduana", "nada que declarar", "mesa de inspección de aduana"],
+			"descripcion": "Pasillo de salida de la aduana: una mampara larga a un lado y, pegada a ella, una mesa de metal donde pueden pedirte que abras la maleta. Se pasa siguiendo la mampara.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.25], [0.12, 0.25], [0.12, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.0],
+				"fondo": [3.0, 4.0, 6.0],
+				"alto": [0.85, 0.9, 2.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "control_acceso",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["recogida_equipajes", "control_seguridad"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["puertas_antirretorno_llegadas"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/canal_aduana.png",
+				"descripcion": "Huella en planta de «Canal de aduana con mesa de inspección»: una ele de 3,00 por 4,00 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "bancada_embarque",
+			"nombre": "Bancada de puerta de embarque",
+			"categoria": "embarque",
+			"subcategoria": "sala_embarque",
+			"etiquetas": ["bancada de embarque", "asientos de sala de embarque", "bancada de aeropuerto"],
+			"descripcion": "Fila de asientos acolchados unidos, con una mesita con enchufes cada dos o tres plazas. Se colocan en filas enfrentadas, con un pasillo estrecho lleno de maletas y de pies.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.8, 3.0, 4.8],
+				"fondo": [0.65, 0.7, 0.8],
+				"alto": [0.8, 0.85, 0.95]
+			},
+			"variantes": [
+				{
+					"id": "tres_plazas",
+					"nombre": "De tres plazas",
+					"ancho": 1.8,
+					"fondo": 0.7,
+					"alto": 0.85
+				},
+				{
+					"id": "cinco_plazas",
+					"nombre": "De cinco plazas",
+					"ancho": 3.0,
+					"fondo": 0.7,
+					"alto": 0.85
+				},
+				{
+					"id": "ocho_plazas",
+					"nombre": "De ocho plazas",
+					"ancho": 4.8,
+					"fondo": 0.7,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["puerta_embarque", "sala_espera"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mostrador_puerta_embarque", "columna_carga_moviles"],
+			"simbolo": {
+				"letra": "Be",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/bancada_embarque.png",
+				"descripcion": "Huella en planta de «Bancada de puerta de embarque»: un rectángulo de 3,00 por 0,70 metros, con la letra «Be»."
+			}
+		},
+		{
+			"id": "tumbona_aeropuerto",
+			"nombre": "Tumbona de descanso de aeropuerto",
+			"categoria": "embarque",
+			"subcategoria": "sala_embarque",
+			"etiquetas": ["tumbona de aeropuerto", "silla de relax", "asiento reclinado"],
+			"descripcion": "Asiento largo y ondulado para tumbarse a esperar, con los pies en alto. Es más largo de lo que parece: los pies sobresalen hacia el pasillo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.65, 0.7, 0.8],
+				"fondo": [1.5, 1.7, 1.9],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"sonido": "hogar:sentarse.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "descanso",
+			"lugares": ["aeropuerto"],
+			"estancias": ["puerta_embarque"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/tumbona_aeropuerto.png",
+				"descripcion": "Huella en planta de «Tumbona de descanso de aeropuerto»: un rectángulo de esquinas redondeadas de 0,70 por 1,70 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "barra_trabajo_enchufes",
+			"nombre": "Barra de trabajo con enchufes",
+			"categoria": "embarque",
+			"subcategoria": "sala_embarque",
+			"etiquetas": ["barra de trabajo", "mesa alta con enchufes", "barra de carga"],
+			"descripcion": "Tablero alto y estrecho, a la altura del codo, con enchufes cada poco y banquetas fijas al suelo. La gente trabaja de pie o encaramada, con cables colgando.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.8, 2.4, 4.0],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "recargar",
+					"nombre": "Enchufar",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "desenchufar",
+					"nombre": "Desenchufar",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["aeropuerto", "estacion"],
+			"estancias": ["puerta_embarque", "sala_espera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bt",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/barra_trabajo_enchufes.png",
+				"descripcion": "Huella en planta de «Barra de trabajo con enchufes»: un rectángulo de 2,40 por 0,50 metros, con la letra «Bt»."
+			}
+		},
+		{
+			"id": "zona_juegos_aeropuerto",
+			"nombre": "Zona de juegos infantil de aeropuerto",
+			"categoria": "embarque",
+			"subcategoria": "sala_embarque",
+			"etiquetas": ["zona de juegos del aeropuerto", "zona infantil", "parque infantil de interior"],
+			"descripcion": "Corro cerrado por un murete blando y bajo, con una entrada. Dentro el suelo es de goma y hay niños corriendo y gritando: se oye desde lejos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.326, 1.0], [0.174, 0.91], [0.06, 0.773], [0.0, 0.605], [0.0, 0.426], [0.06, 0.258], [0.174, 0.121], [0.326, 0.031], [0.5, 0.0], [0.674, 0.031], [0.826, 0.121], [0.94, 0.258], [1.0, 0.426], [1.0, 0.605], [0.94, 0.773], [0.826, 0.91], [0.674, 1.0], [0.656, 0.952], [0.794, 0.871], [0.896, 0.748], [0.95, 0.596], [0.95, 0.435], [0.896, 0.284], [0.794, 0.16], [0.656, 0.08], [0.5, 0.052], [0.344, 0.08], [0.206, 0.16], [0.104, 0.284], [0.05, 0.435], [0.05, 0.596], [0.104, 0.748], [0.206, 0.871], [0.344, 0.952]]
+			},
+			"medidas": {
+				"ancho": [3.0, 4.0, 6.0],
+				"fondo": [3.0, 4.0, 6.0],
+				"alto": [0.4, 0.5, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["aeropuerto", "centro_comercial"],
+			"estancias": ["puerta_embarque", "zona_juegos"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Zj",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/zona_juegos_aeropuerto.png",
+				"descripcion": "Huella en planta de «Zona de juegos infantil de aeropuerto»: un anillo con una entrada por delante de 4,00 por 4,00 metros, con la letra «Zj»."
+			}
+		},
+		{
+			"id": "papelera_reciclaje_aeropuerto",
+			"nombre": "Papelera de reciclaje de aeropuerto con tres bocas",
+			"categoria": "embarque",
+			"subcategoria": "sala_embarque",
+			"etiquetas": ["papelera de reciclaje", "papelera de tres bocas", "papelera de aeropuerto"],
+			"descripcion": "Mueble alargado de metal con tres bocas arriba, cada una de una forma: redonda, ranura y cuadrada. Se distinguen al tacto.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["aeropuerto", "estacion"],
+			"estancias": ["puerta_embarque", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/papelera_reciclaje_aeropuerto.png",
+				"descripcion": "Huella en planta de «Papelera de reciclaje de aeropuerto con tres bocas»: un rectángulo de 1,20 por 0,40 metros, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "pasillo_rodante",
+			"nombre": "Pasillo rodante (tramo)",
+			"categoria": "embarque",
+			"subcategoria": "sala_embarque",
+			"etiquetas": ["pasillo rodante", "tapiz rodante", "cinta transportadora de personas"],
+			"descripcion": "Cinta de metal en el suelo que te lleva sin andar, entre dos pasamanos que también se mueven. Al entrar y al salir el suelo cambia de golpe: da un paso decidido.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 1.6],
+				"fondo": [3.0, 6.0, 6.0],
+				"alto": [0.05, 0.1, 0.15]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.3,
+					"radio": 8
+				}
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Pasillo rodante: el suelo se mueve. Agárrate al pasamanos.",
+			"funcion": "estructura",
+			"lugares": ["aeropuerto", "estacion"],
+			"estancias": ["pasillo", "puerta_embarque"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/pasillo_rodante.png",
+				"descripcion": "Huella en planta de «Pasillo rodante (tramo)»: un rectángulo de 1,40 por 6,00 metros, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "buggy_asistencia",
+			"nombre": "Buggy eléctrico de asistencia",
+			"categoria": "embarque",
+			"subcategoria": "sala_embarque",
+			"etiquetas": ["buggy de asistencia", "cochecito eléctrico del aeropuerto", "carrito de pasajeros"],
+			"descripcion": "Cochecito eléctrico abierto que lleva a pasajeros por la terminal. Casi no hace ruido de motor, pero pita al circular: si oyes el pitido, párate y deja que pase.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.07], [1.0, 0.85], [0.9, 0.96], [0.72, 1.0], [0.28, 1.0], [0.1, 0.96], [0.0, 0.85], [0.0, 0.07]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.3, 1.4],
+				"fondo": [2.4, 3.0, 3.6],
+				"alto": [1.8, 1.9, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/buggy_aeropuerto.flac",
+					"volumen": 0.5,
+					"radio": 15
+				}
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "hogar:sentarse.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["aeropuerto", "estacion"],
+			"estancias": ["pasillo", "puerta_embarque"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["mostrador_asistencia_pmr"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/buggy_asistencia.png",
+				"descripcion": "Huella en planta de «Buggy eléctrico de asistencia»: la silueta de un vehículo, con el morro delante de 1,30 por 3,00 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "mostrador_puerta_embarque",
+			"nombre": "Mostrador de puerta de embarque",
+			"categoria": "embarque",
+			"subcategoria": "puerta_embarque",
+			"etiquetas": ["mostrador de embarque", "mostrador de la puerta", "lector de tarjetas de embarque"],
+			"descripcion": "Mostrador pequeño junto a la puerta, con un lector que pita al pasar la tarjeta de embarque. Delante se forman dos colas; la megafonía de esa puerta sale de aquí.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.4],
+				"fondo": [0.6, 0.7, 0.9],
+				"alto": [1.05, 1.1, 1.15]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "validar",
+					"nombre": "Validar el billete",
+					"sonido": "transporte:bip_validacion.flac"
+				},
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["puerta_embarque"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_pasarela_embarque", "bancada_embarque"],
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_puerta_embarque.png",
+				"descripcion": "Huella en planta de «Mostrador de puerta de embarque»: un rectángulo de 1,60 por 0,70 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "puerta_pasarela_embarque",
+			"nombre": "Puerta de la pasarela de embarque",
+			"categoria": "embarque",
+			"subcategoria": "puerta_embarque",
+			"etiquetas": ["puerta de embarque", "puerta de la pasarela", "puerta del finger"],
+			"descripcion": "Puerta de chapa detrás del mostrador de embarque. Está cerrada hasta que empieza el embarque; al otro lado empieza la pasarela, que baja hacia el avión.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.8],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [2.05, 2.1, 2.3]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["aeropuerto"],
+			"estancias": ["puerta_embarque"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mostrador_puerta_embarque", "pasarela_avion_tramo"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_pasarela_embarque.png",
+				"descripcion": "Huella en planta de «Puerta de la pasarela de embarque»: un rectángulo de 1,20 por 0,10 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "pasarela_avion_tramo",
+			"nombre": "Pasarela de embarque de avión (tramo)",
+			"categoria": "embarque",
+			"subcategoria": "puerta_embarque",
+			"etiquetas": ["pasarela de embarque", "finger", "túnel de embarque", "manga del avión"],
+			"descripcion": "Túnel estrecho que lleva de la puerta al avión. El suelo baja en pendiente, suena hueco y vibra con los pasos; en las uniones hay un resalte.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 2.5],
+				"fondo": [4.0, 6.0, 6.0],
+				"alto": [0.03, 0.05, 0.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Pasarela de embarque: el suelo baja en pendiente.",
+			"funcion": "estructura",
+			"lugares": ["aeropuerto"],
+			"estancias": ["puerta_embarque"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_pasarela_embarque"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/pasarela_avion_tramo.png",
+				"descripcion": "Huella en planta de «Pasarela de embarque de avión (tramo)»: un rectángulo de 2,00 por 6,00 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "escalerilla_avion",
+			"nombre": "Escalerilla de avión",
+			"categoria": "embarque",
+			"subcategoria": "puerta_embarque",
+			"etiquetas": ["escalerilla del avión", "escalera de embarque", "escalera de pista"],
+			"descripcion": "Escalera de metal con ruedas arrimada al avión, en la pista. Tiene barandilla a los dos lados y peldaños que suenan huecos; arriba hay un rellano.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 2.5],
+				"fondo": [4.0, 6.0, 8.0],
+				"alto": [3.0, 3.5, 4.5]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "escalera/subir"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "escalera/subir"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["aeropuerto"],
+			"estancias": ["puerta_embarque", "calzada"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal", "desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ea",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalerilla_avion.png",
+				"descripcion": "Huella en planta de «Escalerilla de avión»: un trapecio, más estrecho por detrás de 2,00 por 6,00 metros, con la letra «Ea»."
+			}
+		},
+		{
+			"id": "cinta_recogida_ovalada",
+			"nombre": "Cinta de recogida de equipajes ovalada",
+			"categoria": "embarque",
+			"subcategoria": "recogida_equipajes",
+			"etiquetas": ["cinta de recogida de equipajes", "carrusel de maletas", "cinta de equipajes", "hipódromo"],
+			"descripcion": "Isla alargada, baja, rodeada por una cinta de láminas que gira sin parar con las maletas encima. Está a la altura de la rodilla. Rueda y hace clac: se oye desde toda la sala.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.75, 0.0], [0.875, 0.067], [0.967, 0.25], [1.0, 0.5], [0.967, 0.75], [0.875, 0.933], [0.75, 1.0], [0.25, 1.0], [0.125, 0.933], [0.033, 0.75], [0.0, 0.5], [0.033, 0.25], [0.125, 0.067], [0.25, 0.0]]
+			},
+			"medidas": {
+				"ancho": [4.0, 6.0, 6.0],
+				"fondo": [2.0, 2.5, 3.0],
+				"alto": [0.4, 0.45, 0.6]
+			},
+			"variantes": [
+				{
+					"id": "corta",
+					"nombre": "Corta",
+					"ancho": 4.0,
+					"fondo": 2.0,
+					"alto": 0.45
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 6.0,
+					"fondo": 2.5,
+					"alto": 0.45
+				},
+				{
+					"id": "ancha",
+					"nombre": "Ancha",
+					"ancho": 6.0,
+					"fondo": 3.0,
+					"alto": 0.45
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/cinta_equipajes.flac",
+					"volumen": 0.5,
+					"radio": 18,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["parado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "parado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "parado"
+				},
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["aeropuerto"],
+			"estancias": ["recogida_equipajes"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["cinta_recogida_tramo", "carros_encajados_monedero"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/cinta_recogida_ovalada.png",
+				"descripcion": "Huella en planta de «Cinta de recogida de equipajes ovalada»: un óvalo alargado, de lados rectos y extremos redondos de 6,00 por 2,50 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "cinta_recogida_tramo",
+			"nombre": "Cinta de recogida de equipajes (tramo recto)",
+			"categoria": "embarque",
+			"subcategoria": "recogida_equipajes",
+			"etiquetas": ["tramo de cinta de equipajes", "cinta de maletas recta", "cinta de recogida"],
+			"descripcion": "Tramo recto de cinta de equipajes, baja, a la altura de la rodilla. Sirve para componer una cinta larga uniendo varios tramos y curvas. Rueda y hace clac.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 6.0],
+				"fondo": [1.0, 1.2, 1.6],
+				"alto": [0.4, 0.45, 0.6]
+			},
+			"variantes": [
+				{
+					"id": "dos_metros",
+					"nombre": "De dos metros",
+					"ancho": 2.0,
+					"fondo": 1.2,
+					"alto": 0.45
+				},
+				{
+					"id": "cuatro_metros",
+					"nombre": "De cuatro metros",
+					"ancho": 4.0,
+					"fondo": 1.2,
+					"alto": 0.45
+				},
+				{
+					"id": "seis_metros",
+					"nombre": "De seis metros",
+					"ancho": 6.0,
+					"fondo": 1.2,
+					"alto": 0.45
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/cinta_equipajes.flac",
+					"volumen": 0.45,
+					"radio": 14,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["parado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "parado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "parado"
+				},
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["recogida_equipajes"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["cinta_recogida_curva", "cinta_recogida_ovalada"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/cinta_recogida_tramo.png",
+				"descripcion": "Huella en planta de «Cinta de recogida de equipajes (tramo recto)»: un rectángulo de 4,00 por 1,20 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "cinta_recogida_curva",
+			"nombre": "Cinta de recogida de equipajes (curva)",
+			"categoria": "embarque",
+			"subcategoria": "recogida_equipajes",
+			"etiquetas": ["curva de cinta de equipajes", "media vuelta de la cinta", "cabecera de la cinta"],
+			"descripcion": "Media vuelta de cinta de equipajes: une dos tramos rectos. En la curva las láminas se abren en abanico y hacen más ruido; las maletas se asoman hacia fuera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.017, 0.259], [0.067, 0.5], [0.146, 0.707], [0.25, 0.866], [0.371, 0.966], [0.5, 1.0], [0.629, 0.966], [0.75, 0.866], [0.854, 0.707], [0.933, 0.5], [0.983, 0.259], [1.0, 0.0], [0.75, 0.0], [0.741, 0.129], [0.717, 0.25], [0.677, 0.354], [0.625, 0.433], [0.565, 0.483], [0.5, 0.5], [0.435, 0.483], [0.375, 0.433], [0.323, 0.354], [0.283, 0.25], [0.259, 0.129], [0.25, 0.0]]
+			},
+			"medidas": {
+				"ancho": [2.5, 3.2, 4.5],
+				"fondo": [1.6, 2.0, 2.8],
+				"alto": [0.4, 0.45, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/cinta_equipajes.flac",
+					"volumen": 0.5,
+					"radio": 14,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["parado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "parado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "parado"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["aeropuerto"],
+			"estancias": ["recogida_equipajes"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["cinta_recogida_tramo"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/cinta_recogida_curva.png",
+				"descripcion": "Huella en planta de «Cinta de recogida de equipajes (curva)»: una banda curva que abomba hacia delante de 3,20 por 2,00 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "mostrador_equipajes_perdidos",
+			"nombre": "Mostrador de equipajes perdidos",
+			"categoria": "embarque",
+			"subcategoria": "recogida_equipajes",
+			"etiquetas": ["equipajes perdidos", "reclamación de equipajes", "mostrador de incidencias de equipaje"],
+			"descripcion": "Mostrador en un rincón de la sala de recogida, con un tramo bajo a la derecha. Detrás hay maletas amontonadas; delante, gente con prisa y enfadada.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.7], [0.68, 0.7], [0.68, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.8, 2.4, 3.6],
+				"fondo": [0.7, 0.8, 1.0],
+				"alto": [1.05, 1.1, 1.15]
+			},
+			"colocacion": ["pared", "suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["aeropuerto", "puerto", "estacion"],
+			"estancias": ["recogida_equipajes", "ventanilla"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["cinta_recogida_ovalada"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_equipajes_perdidos.png",
+				"descripcion": "Huella en planta de «Mostrador de equipajes perdidos»: un rectángulo con el tramo de la derecha menos saliente: es el tramo bajo, con hueco para las rodillas de 2,40 por 0,80 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "puertas_antirretorno_llegadas",
+			"nombre": "Puertas antirretorno de salida de llegadas",
+			"categoria": "embarque",
+			"subcategoria": "llegadas_exterior",
+			"etiquetas": ["puertas de salida de llegadas", "puertas antirretorno", "salida de la sala de equipajes"],
+			"descripcion": "Puertas automáticas de cristal por las que se sale de la recogida de equipajes. Solo se abren en un sentido: una vez fuera no se puede volver a entrar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.6, 2.0, 3.0],
+				"fondo": [0.1, 0.15, 0.3],
+				"alto": [2.1, 2.3, 2.5]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "pasar",
+					"nombre": "Pasar",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/automatica"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["aeropuerto", "puerto"],
+			"estancias": ["recogida_equipajes", "vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente", "movil"],
+			"frecuencia": "comun",
+			"relacionados": ["barandilla_espera_llegadas", "canal_aduana"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/puertas_antirretorno_llegadas.png",
+				"descripcion": "Huella en planta de «Puertas antirretorno de salida de llegadas»: un rectángulo de 2,00 por 0,15 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "barandilla_espera_llegadas",
+			"nombre": "Barandilla de espera de llegadas",
+			"categoria": "embarque",
+			"subcategoria": "llegadas_exterior",
+			"etiquetas": ["barandilla de llegadas", "barrera de espera de llegadas", "valla de llegadas"],
+			"descripcion": "Barandilla curva frente a la puerta de llegadas. Detrás se agolpa la gente que espera, con carteles y voces; los que llegan salen por los lados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.021], [0.041, 0.289], [0.103, 0.528], [0.185, 0.727], [0.281, 0.876], [0.388, 0.969], [0.5, 1.0], [0.612, 0.969], [0.719, 0.876], [0.815, 0.727], [0.897, 0.528], [0.959, 0.289], [1.0, 0.021], [0.97, 0.0], [0.932, 0.252], [0.873, 0.477], [0.796, 0.664], [0.706, 0.804], [0.605, 0.891], [0.5, 0.921], [0.395, 0.891], [0.294, 0.804], [0.204, 0.664], [0.127, 0.477], [0.068, 0.252], [0.03, 0.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 5.0, 6.0],
+				"fondo": [1.2, 2.0, 3.0],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["aeropuerto", "puerto", "estacion"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["puertas_antirretorno_llegadas", "totem_punto_encuentro"],
+			"simbolo": {
+				"letra": "Be",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/barandilla_espera_llegadas.png",
+				"descripcion": "Huella en planta de «Barandilla de espera de llegadas»: una banda curva que abomba hacia delante de 5,00 por 2,00 metros, con la letra «Be»."
+			}
+		},
+		{
+			"id": "totem_punto_encuentro",
+			"nombre": "Tótem de punto de encuentro con baliza sonora",
+			"categoria": "embarque",
+			"subcategoria": "llegadas_exterior",
+			"etiquetas": ["punto de encuentro", "tótem de punto de encuentro", "meeting point"],
+			"descripcion": "Columna alta y plana que marca el punto de encuentro. Emite un pulso sonoro suave para encontrarla; a la altura de la mano lleva el rótulo en braille.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.8],
+				"fondo": [0.2, 0.3, 0.4],
+				"alto": [2.2, 2.5, 3.0]
+			},
+			"colocacion": ["suelo", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "baliza/pulso",
+					"volumen": 0.45,
+					"radio": 14,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado"
+				},
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "referencia",
+			"lugares": ["aeropuerto", "estacion", "puerto"],
+			"estancias": ["vestibulo", "acera", "plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["barandilla_espera_llegadas"],
+			"simbolo": {
+				"letra": "Tp",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/totem_punto_encuentro.png",
+				"descripcion": "Huella en planta de «Tótem de punto de encuentro con baliza sonora»: un rectángulo de 0,50 por 0,30 metros, con la letra «Tp»."
+			}
+		},
+		{
+			"id": "fila_taxis_barandillas",
+			"nombre": "Fila de espera de taxis entre barandillas",
+			"categoria": "embarque",
+			"subcategoria": "llegadas_exterior",
+			"etiquetas": ["fila de taxis", "cola de taxis", "parada de taxis del aeropuerto"],
+			"descripcion": "Calle estrecha entre dos barandillas largas, en la acera de llegadas. Se entra por un extremo y se avanza hasta el otro, donde paran los taxis de uno en uno.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.95, 1.0], [0.95, 0.02], [0.05, 0.02], [0.05, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.4, 1.8],
+				"fondo": [3.0, 6.0, 12.0],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["aeropuerto", "estacion", "puerto"],
+			"estancias": ["acera", "parada"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["bordillo_llegadas"],
+			"simbolo": {
+				"letra": "Ft",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/fila_taxis_barandillas.png",
+				"descripcion": "Huella en planta de «Fila de espera de taxis entre barandillas»: una U abierta por delante de 1,40 por 6,00 metros, con la letra «Ft»."
+			}
+		},
+		{
+			"id": "bordillo_llegadas",
+			"nombre": "Bordillo de la acera de llegadas",
+			"categoria": "embarque",
+			"subcategoria": "llegadas_exterior",
+			"etiquetas": ["bordillo de llegadas", "acera de llegadas", "parada del autobús lanzadera"],
+			"descripcion": "El borde de la acera de llegadas. Al otro lado paran taxis y autobuses lanzadera con el motor en marcha, y se abren maleteros: no se baja hasta tener el vehículo delante.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [4.0, 10.0, 40.0],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.1, 0.12, 0.18]
+			},
+			"colocacion": ["acera", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "exterior/bordillo",
+				"propio": {
+					"sonido": "trafico/coche",
+					"volumen": 0.25,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"suelo": "acera",
+			"aviso": "Bordillo de llegadas: al otro lado paran taxis y autobuses.",
+			"funcion": "referencia",
+			"lugares": ["aeropuerto", "estacion", "puerto"],
+			"estancias": ["acera", "calzada", "parada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["fila_taxis_barandillas"],
+			"simbolo": {
+				"letra": "Bl",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/bordillo_llegadas.png",
+				"descripcion": "Huella en planta de «Bordillo de la acera de llegadas»: un rectángulo de 10,00 por 0,40 metros, con la letra «Bl»."
+			}
+		},
+		{
+			"id": "borde_muelle",
+			"nombre": "Borde del muelle sin barandilla",
+			"categoria": "puerto",
+			"subcategoria": "muelle",
+			"etiquetas": ["borde del muelle", "cantil del muelle", "orilla del muelle"],
+			"descripcion": "El canto del muelle: una hilera de piedras grandes y, después, nada. Abajo está el agua, que chapotea. No hay barandilla ni franja que avise.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [3.0, 10.0, 40.0],
+				"fondo": [0.3, 0.5, 0.8],
+				"alto": [0.01, 0.02, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "comun:amarras_crujido.flac",
+					"volumen": 0.35,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"suelo": "adoquin",
+			"aviso": "Borde del muelle: detente. Más allá está el agua.",
+			"funcion": "referencia",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel", "resbaladizo"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["noray", "escala_muelle"],
+			"simbolo": {
+				"letra": "Bm",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/borde_muelle.png",
+				"descripcion": "Huella en planta de «Borde del muelle sin barandilla»: un rectángulo de 10,00 por 0,50 metros, con la letra «Bm»."
+			}
+		},
+		{
+			"id": "noray",
+			"nombre": "Noray",
+			"categoria": "puerto",
+			"subcategoria": "muelle",
+			"etiquetas": ["noray", "bolardo de amarre", "bita", "amarre"],
+			"descripcion": "Seta maciza de hierro al borde del muelle, a la altura de la espinilla, donde se amarran los barcos. Baja y durísima: se tropieza con ella.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.3, 0.4, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "bajo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cabo_amarre_tendido", "borde_muelle"],
+			"simbolo": {
+				"letra": "No",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/noray.png",
+				"descripcion": "Huella en planta de «Noray»: un círculo de 0,40 por 0,40 metros, con la letra «No»."
+			}
+		},
+		{
+			"id": "cabo_amarre_tendido",
+			"nombre": "Cabo de amarre tendido",
+			"categoria": "puerto",
+			"subcategoria": "muelle",
+			"etiquetas": ["cabo de amarre", "amarra", "estacha", "cuerda del barco"],
+			"descripcion": "Cuerda gruesa y tensa que va del noray al barco, cruzando el muelle a la altura de la espinilla. Cruje al tensarse y sube y baja con el barco.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.05, 0.08, 0.15],
+				"fondo": [1.5, 3.0, 6.0],
+				"alto": [0.2, 0.4, 0.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"propio": {
+					"sonido": "comun:amarras_crujido.flac",
+					"volumen": 0.3,
+					"radio": 6
+				}
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["noray"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabo_amarre_tendido.png",
+				"descripcion": "Huella en planta de «Cabo de amarre tendido»: un rectángulo de 0,08 por 3,00 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "argolla_amarre",
+			"nombre": "Argolla de amarre en el suelo",
+			"categoria": "puerto",
+			"subcategoria": "muelle",
+			"etiquetas": ["argolla de amarre", "anilla del muelle", "argolla del suelo"],
+			"descripcion": "Anilla de hierro del tamaño de un plato, tumbada en el suelo del muelle. Levanta poco, pero lo justo para enganchar la punta del pie o del bastón.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.35],
+				"fondo": [0.2, 0.25, 0.35],
+				"alto": [0.03, 0.05, 0.08]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["noray"],
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/argolla_amarre.png",
+				"descripcion": "Huella en planta de «Argolla de amarre en el suelo»: un círculo de 0,25 por 0,25 metros, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "defensas_muelle",
+			"nombre": "Defensas amontonadas en el muelle",
+			"categoria": "puerto",
+			"subcategoria": "muelle",
+			"etiquetas": ["defensas", "defensas de barco", "neumáticos del muelle"],
+			"descripcion": "Montón de defensas de barco: balones alargados de goma y neumáticos viejos. Blando y elástico al tocarlo; rueda un poco si lo empujas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.6, 0.8, 1.2],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": true,
+			"funcion": "trasto",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Dm",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/defensas_muelle.png",
+				"descripcion": "Huella en planta de «Defensas amontonadas en el muelle»: un óvalo de 1,20 por 0,80 metros, con la letra «Dm»."
+			}
+		},
+		{
+			"id": "escala_muelle",
+			"nombre": "Escala del muelle",
+			"categoria": "puerto",
+			"subcategoria": "muelle",
+			"etiquetas": ["escala del muelle", "escalera de gato del muelle", "escala de hierro"],
+			"descripcion": "Dos barandillas curvas de tubo que asoman en el borde del muelle: son los pasamanos de una escala de hierro que baja al agua. Entre ellas hay hueco.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.85, 1.0], [0.85, 0.15], [0.15, 0.15], [0.15, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.3, 0.5, 0.7],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["borde_muelle"],
+			"simbolo": {
+				"letra": "Em",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/escala_muelle.png",
+				"descripcion": "Huella en planta de «Escala del muelle»: una U abierta por delante de 0,50 por 0,50 metros, con la letra «Em»."
+			}
+		},
+		{
+			"id": "base_grua_puerto",
+			"nombre": "Base de grúa de puerto",
+			"categoria": "puerto",
+			"subcategoria": "muelle",
+			"etiquetas": ["grúa de puerto", "base de la grúa", "grúa del muelle"],
+			"descripcion": "Pedestal enorme de acero de una grúa del muelle, del tamaño de una habitación. Arriba gira la pluma y a veces suena una sirena: no se pasa por debajo de la carga.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.5],
+				"fondo": [2.0, 3.0, 4.5],
+				"alto": [4.0, 8.0, 12.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bg",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/base_grua_puerto.png",
+				"descripcion": "Huella en planta de «Base de grúa de puerto»: un octógono de 3,00 por 3,00 metros, con la letra «Bg»."
+			}
+		},
+		{
+			"id": "pasarela_embarque_barco",
+			"nombre": "Pasarela de embarque de barco",
+			"categoria": "puerto",
+			"subcategoria": "embarque_maritimo",
+			"etiquetas": ["pasarela del barco", "pasarela de embarque", "plancha del barco"],
+			"descripcion": "Puente estrecho con barandillas de cuerda o de tubo, del muelle al barco. La pendiente cambia con la marea y todo se mueve un poco: agárrate con las dos manos.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.5],
+				"fondo": [3.0, 6.0, 12.0],
+				"alto": [0.1, 0.2, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Pasarela del barco: tiene pendiente y se mueve. Agárrate.",
+			"funcion": "estructura",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["movil", "desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["borde_muelle"],
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/pasarela_embarque_barco.png",
+				"descripcion": "Huella en planta de «Pasarela de embarque de barco»: un rectángulo de 1,00 por 6,00 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "pantalan_flotante",
+			"nombre": "Pantalán flotante (tramo)",
+			"categoria": "puerto",
+			"subcategoria": "embarque_maritimo",
+			"etiquetas": ["pantalán", "pantalán flotante", "embarcadero"],
+			"descripcion": "Pasillo de tablas que flota sobre el agua. Se hunde un poco al pisar, se balancea y tiene agua a los dos lados, sin barandilla. Las amarras crujen.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [4.0, 8.0, 12.0],
+				"alto": [0.2, 0.3, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "comun:amarras_crujido.flac",
+					"volumen": 0.4,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"suelo": "madera",
+			"aviso": "Pantalán flotante: se mueve y hay agua a los dos lados.",
+			"funcion": "estructura",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["movil", "desnivel", "resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["torreta_pantalan"],
+			"simbolo": {
+				"letra": "Pf",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/pantalan_flotante.png",
+				"descripcion": "Huella en planta de «Pantalán flotante (tramo)»: un rectángulo de 2,00 por 8,00 metros, con la letra «Pf»."
+			}
+		},
+		{
+			"id": "torreta_pantalan",
+			"nombre": "Torreta de agua y luz de pantalán",
+			"categoria": "puerto",
+			"subcategoria": "embarque_maritimo",
+			"etiquetas": ["torreta de pantalán", "torreta de servicios", "toma de agua y luz"],
+			"descripcion": "Columna baja de plástico con un grifo y enchufes, en el borde del pantalán. De ella salen mangueras y cables hacia los barcos, cruzando el paso.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.75, 1.0], [0.25, 1.0], [0.0, 0.5], [0.25, 0.0], [0.75, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.9, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "fuente/grifo"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["pantalan_flotante"],
+			"simbolo": {
+				"letra": "Tp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/torreta_pantalan.png",
+				"descripcion": "Huella en planta de «Torreta de agua y luz de pantalán»: un hexágono de 0,30 por 0,30 metros, con la letra «Tp»."
+			}
+		},
+		{
+			"id": "rampa_embarque_vehiculos",
+			"nombre": "Rampa de embarque de vehículos",
+			"categoria": "puerto",
+			"subcategoria": "embarque_maritimo",
+			"etiquetas": ["rampa del ferri", "rampa de vehículos", "portalón"],
+			"descripcion": "Plancha enorme de acero por la que los coches entran al ferri. Tiene resaltes, está mojada y retumba cuando pasa un camión. Los peatones no embarcan por aquí.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [4.0, 6.0, 10.0],
+				"fondo": [6.0, 10.0, 15.0],
+				"alto": [0.1, 0.2, 0.4]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Rampa de vehículos del ferri: por aquí pasan coches y camiones.",
+			"funcion": "estructura",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga", "calzada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo", "movil", "desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Re",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/rampa_embarque_vehiculos.png",
+				"descripcion": "Huella en planta de «Rampa de embarque de vehículos»: un trapecio, más estrecho por detrás de 6,00 por 10,00 metros, con la letra «Re»."
+			}
+		},
+		{
+			"id": "taquilla_ferris",
+			"nombre": "Caseta de taquilla de ferris",
+			"categoria": "puerto",
+			"subcategoria": "estacion_maritima",
+			"etiquetas": ["taquilla de ferris", "caseta de billetes del puerto", "taquilla de las golondrinas"],
+			"descripcion": "Caseta en el muelle con una ventanilla y una repisa a la altura del pecho. Tiene un alero que sobresale por delante para resguardar a quien compra.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.35], [0.5, 0.0], [1.0, 0.35], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 4.0],
+				"fondo": [1.8, 2.0, 3.0],
+				"alto": [2.4, 2.6, 3.0]
+			},
+			"colocacion": ["suelo", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "sacar_billete",
+					"nombre": "Sacar un billete",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "estructura",
+			"lugares": ["puerto"],
+			"estancias": ["taquilla", "muelle_carga"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tf",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/taquilla_ferris.png",
+				"descripcion": "Huella en planta de «Caseta de taquilla de ferris»: un pentágono con forma de casita de 2,50 por 2,00 metros, con la letra «Tf»."
+			}
+		},
+		{
+			"id": "carro_jaula_equipajes_ferri",
+			"nombre": "Carro jaula de equipajes del ferri",
+			"categoria": "puerto",
+			"subcategoria": "estacion_maritima",
+			"etiquetas": ["carro jaula", "jaula de equipajes", "carro de maletas del ferri"],
+			"descripcion": "Jaula grande de malla con ruedas donde los pasajeros de a pie dejan las maletas antes de embarcar. Suena a alambre al tocarla y se la llevan remolcada.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [0.8, 1.0, 1.2],
+				"alto": [1.6, 1.8, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:valla_obra.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:valla_obra.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["puerto"],
+			"estancias": ["sala_espera", "muelle_carga"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cj",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_jaula_equipajes_ferri.png",
+				"descripcion": "Huella en planta de «Carro jaula de equipajes del ferri»: un rectángulo de 1,50 por 1,00 metros, con la letra «Cj»."
+			}
+		},
+		{
+			"id": "redes_nasas_amontonadas",
+			"nombre": "Redes y nasas amontonadas",
+			"categoria": "puerto",
+			"subcategoria": "pesca_lonja",
+			"etiquetas": ["redes de pesca", "nasas", "aparejos amontonados"],
+			"descripcion": "Montón de redes de pesca con corchos y plomos, y jaulas de nasas encima. Blando, enredoso y con olor a mar: el bastón y los pies se enganchan.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 4.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [0.4, 0.8, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "red",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "trasto",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rn",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/redes_nasas_amontonadas.png",
+				"descripcion": "Huella en planta de «Redes y nasas amontonadas»: un óvalo de 2,50 por 1,50 metros, con la letra «Rn»."
+			}
+		},
+		{
+			"id": "cajas_pescado_lonja",
+			"nombre": "Cajas de pescado apiladas",
+			"categoria": "puerto",
+			"subcategoria": "pesca_lonja",
+			"etiquetas": ["cajas de pescado", "cajas de la lonja", "cajas con hielo"],
+			"descripcion": "Pila de cajas de plástico con hielo y pescado, o vacías. Alrededor el suelo está mojado y resbala; las pilas cambian de sitio a cada rato.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.6],
+				"fondo": [0.4, 0.6, 1.2],
+				"alto": [0.3, 0.9, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["puerto"],
+			"estancias": ["muelle_carga", "nave"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["bascula_lonja", "carretilla_mano_lonja"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/cajas_pescado_lonja.png",
+				"descripcion": "Huella en planta de «Cajas de pescado apiladas»: un rectángulo de 0,80 por 0,60 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "bascula_lonja",
+			"nombre": "Báscula de la lonja",
+			"categoria": "puerto",
+			"subcategoria": "pesca_lonja",
+			"etiquetas": ["báscula de la lonja", "báscula de plataforma", "peso del pescado"],
+			"descripcion": "Plataforma de metal a ras de suelo con una columna detrás que lleva la pantalla. Se pisa sin querer: suena hueca y se mueve un poco. Pita al pesar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.2], [0.65, 0.2], [0.65, 1.0], [0.35, 1.0], [0.35, 0.2], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.5],
+				"fondo": [0.8, 1.2, 1.5],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["puerto", "almacen"],
+			"estancias": ["nave", "muelle_carga"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["cajas_pescado_lonja"],
+			"simbolo": {
+				"letra": "Bl",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/bascula_lonja.png",
+				"descripcion": "Huella en planta de «Báscula de la lonja»: una te de 1,00 por 1,20 metros, con la letra «Bl»."
+			}
+		},
+		{
+			"id": "carretilla_mano_lonja",
+			"nombre": "Carretilla de mano de la lonja",
+			"categoria": "puerto",
+			"subcategoria": "pesca_lonja",
+			"etiquetas": ["carretilla de mano", "carro de mano", "carretilla de cajas"],
+			"descripcion": "Carretilla de dos ruedas con una pala abajo, apoyada de pie o cargada de cajas. Se cae con estrépito si se le da un golpe.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.5, 0.6, 1.3],
+				"alto": [1.1, 1.2, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "carga",
+			"lugares": ["puerto", "almacen"],
+			"estancias": ["muelle_carga", "nave"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["cajas_pescado_lonja"],
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/carretilla_mano_lonja.png",
+				"descripcion": "Huella en planta de «Carretilla de mano de la lonja»: un rectángulo de 0,60 por 0,60 metros, con la letra «Cm»."
+			}
+		}
+	]
+}

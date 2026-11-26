@@ -1,0 +1,1054 @@
+{
+	"nombre": "Block of flats and shared areas",
+	"descripcion": "The shared areas of a block of flats: entrance hall, stairs and landings, plant and bin rooms, car park without vehicles, storage room, roof terrace, light well and the leisure areas of a housing estate.",
+	"categorias": {
+		"portal": "Entrance hall and concierge",
+		"escalera": "Stairs, landings and lift",
+		"instalaciones": "Plant, bin and bike rooms",
+		"garaje": "Car park",
+		"trastero": "Storage room",
+		"azotea": "Roof terrace and light well",
+		"urbanizacion": "Estate pool and leisure areas"
+	},
+	"subcategorias": {
+		"buzones_y_llamada": "Letterboxes and entry phone",
+		"mobiliario_portal": "Entrance hall furniture",
+		"conserjeria": "Concierge desk",
+		"aparcado_en_portal": "Things left parked in the hall",
+		"entrada_portal": "Door, steps and ramp",
+		"escalera_y_barandilla": "Stairs and handrail",
+		"cosas_de_vecinos": "What neighbours leave on the landing",
+		"luz_y_registros": "Lighting, service cupboards and pipes",
+		"ascensor_por_fuera": "Lift from the outside",
+		"electricidad": "Electricity and telecoms",
+		"agua_y_calefaccion": "Water and heating",
+		"cuarto_basuras": "Bin room",
+		"cuarto_limpieza": "Cleaning cupboard",
+		"cuarto_bicis": "Bike room",
+		"columnas_y_suelo": "Columns, ramps and floor",
+		"plazas": "Parking bays",
+		"puertas_garaje": "Car park doors and access",
+		"techo_y_ventilacion": "Ceiling, ventilation and fire safety",
+		"guardado": "Shelving, boxes and bundles",
+		"apoyado_y_colgado": "Things propped up and hung",
+		"tendederos": "Washing lines",
+		"cubierta": "Roof elements",
+		"maquinas_azotea": "Machines and tanks",
+		"patio_de_luces": "Light well",
+		"piscina_comunitaria": "Shared pool",
+		"estar_en_el_jardin": "Pergola, barbecue and benches",
+		"petanca_y_caminos": "Boules and paths",
+		"accesos_urbanizacion": "Estate access and services"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"apagado": "Off",
+		"encendido": "On",
+		"funcionando": "Running"
+	},
+	"objetos": {
+		"casillero_buzones": {
+			"nombre": "Bank of residents' letterboxes",
+			"descripcion": "Block of letterboxes hung on the wall, from chest to head height. It sticks out a hand's width or more and the cane passes underneath without touching it. Each little door has its slot and its lock.",
+			"etiquetas": ["letterboxes", "mailboxes", "bank of letterboxes"],
+			"variantes": {
+				"seis": "Six flats",
+				"doce": "Twelve flats",
+				"veinticuatro": "Twenty-four flats",
+				"verticales": "Slim vertical boxes"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"echar_carta": "Post a letter"
+			},
+			"imagen": "Footprint of “Bank of residents' letterboxes”: a rectangle, 1.20 by 0.25 metres, hanging 0.75 metres above the floor, marked with the letters “Cb”."
+		},
+		"buzones_exentos": {
+			"nombre": "Free-standing letterbox unit",
+			"descripcion": "Letterbox unit standing on the floor on legs or a plinth. The cane finds the legs; the metal body starts at knee height.",
+			"etiquetas": ["free-standing letterboxes", "mailbox unit"],
+			"variantes": {
+				"de_portal": "Entrance hall unit",
+				"de_urbanizacion": "Estate unit, long"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"echar_carta": "Post a letter"
+			},
+			"imagen": "Footprint of “Free-standing letterbox unit”: a rectangle, 1.00 by 0.35 metres, marked with the letters “Be”."
+		},
+		"taquillas_paqueteria": {
+			"nombre": "Parcel lockers in the hall",
+			"descripcion": "Tall metal cabinet with doors of several sizes where couriers leave parcels. It has a keypad at chest height that beeps when the code is accepted.",
+			"etiquetas": ["parcel lockers", "parcel box", "smart lockers"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Parcel lockers in the hall”: a rectangle, 0.90 by 0.50 metres, marked with the letters “Tp”."
+		},
+		"portero_automatico": {
+			"nombre": "Entry phone panel",
+			"descripcion": "Metal plate on the wall by the door, with one button per flat in columns. It is at chest height and the cane does not touch it. Press and the bell rings upstairs.",
+			"etiquetas": ["entry phone", "door buzzer", "intercom panel"],
+			"variantes": {
+				"pocos_vecinos": "Six buttons",
+				"muchos_vecinos": "Twenty buttons in two columns"
+			},
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Entry phone panel”: a rectangle, 0.15 by 0.04 metres, hanging 1.10 metres above the floor, marked with the letters “Pa”."
+		},
+		"videoportero": {
+			"nombre": "Video entry phone with keypad",
+			"descripcion": "Panel with a number keypad instead of one button per flat: key in the flat and press the bell. The five key has a raised dot. It sticks out only a little from the wall.",
+			"etiquetas": ["video entry phone", "video intercom", "keypad door entry"],
+			"acciones": {
+				"pulsar": "Press the button",
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Video entry phone with keypad”: a rectangle, 0.18 by 0.05 metres, hanging 1.15 metres above the floor, marked with the letters “Vi”."
+		},
+		"tablon_comunidad": {
+			"nombre": "Residents' notice board with glazed case",
+			"descripcion": "Flat box with a glass door hung on the wall, where the managing agent posts notices. It sticks out at shoulder height and has sharp corners.",
+			"etiquetas": ["notice board", "residents' noticeboard", "glazed notice case"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Residents' notice board with glazed case”: a rectangle, 0.80 by 0.08 metres, hanging 1.10 metres above the floor, marked with the letters “Tc”."
+		},
+		"felpudo_encastrado": {
+			"nombre": "Recessed entrance mat",
+			"descripcion": "Large mat of aluminium and rubber strips set in a pit, flush with the floor, just inside the door. It sounds different underfoot and feels rough: it tells you that you are inside.",
+			"etiquetas": ["recessed mat", "entrance matting", "mat well"],
+			"imagen": "Footprint of “Recessed entrance mat”: a rectangle, 1.80 by 1.20 metres, marked with the letters “Fe”."
+		},
+		"alfombra_pasillera": {
+			"nombre": "Hall runner carpet",
+			"descripcion": "Long narrow carpet running from the door to the lift. It feels soft underfoot and muffles your steps: following it takes you to the back of the hall. The edge may be curled up.",
+			"etiquetas": ["runner", "hall runner", "strip of carpet"],
+			"imagen": "Footprint of “Hall runner carpet”: a rectangle, 1.00 by 4.00 metres, marked with the letters “Ap”."
+		},
+		"espejo_portal": {
+			"nombre": "Full-length hall mirror",
+			"descripcion": "Large mirror covering a stretch of wall almost from the floor. Smooth and cold to the touch; people with some sight think the hall carries on. It sounds like glass when struck.",
+			"etiquetas": ["hall mirror", "wall mirror", "full-length mirror"],
+			"imagen": "Footprint of “Full-length hall mirror”: a rectangle, 1.50 by 0.04 metres, hanging 0.20 metres above the floor, marked with the letters “Ep”."
+		},
+		"banco_portal": {
+			"nombre": "Marble hall bench",
+			"descripcion": "Built-in bench clad in marble, against the wall and with no backrest. Cold, hard and at knee height. Handy for putting bags down while you look for your key.",
+			"etiquetas": ["hall bench", "marble bench", "built-in bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Marble hall bench”: a rectangle, 1.50 by 0.40 metres, marked with the letters “Bp”."
+		},
+		"jardinera_portal": {
+			"nombre": "Built-in hall planter",
+			"descripcion": "Brick planter inside the hall, with large-leaved plants hanging into the way. You feel the leaves on your hand or face before the low wall.",
+			"etiquetas": ["hall planter", "built-in planter", "indoor planter"],
+			"imagen": "Footprint of “Built-in hall planter”: a rectangle, 2.00 by 0.50 metres, marked with the letters “Jp”."
+		},
+		"mostrador_conserjeria": {
+			"nombre": "Concierge desk",
+			"descripcion": "Tall wooden desk behind which the concierge sits. It comes up to chest height. There is usually a radio on low: you hear it as you come in.",
+			"etiquetas": ["concierge desk", "porter's desk", "caretaker's counter"],
+			"imagen": "Footprint of “Concierge desk”: a rectangle, 1.60 by 0.60 metres, marked with the letters “Mc”."
+		},
+		"garita_conserje": {
+			"nombre": "Glazed concierge booth",
+			"descripcion": "Small booth with glass walls from waist height up and a hatch. The lower part is wood; above, the glass is hard to see and sounds different when touched.",
+			"etiquetas": ["concierge booth", "porter's lodge", "caretaker's booth"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Glazed concierge booth”: a rectangle with cut corners, 1.50 by 1.50 metres, marked with the letters “Gc”."
+		},
+		"carrito_compra_tela": {
+			"nombre": "Parked shopping trolley bag",
+			"descripcion": "Fabric trolley bag with two wheels and a tall handle, left by the letterboxes. Soft at the top, metal frame below; push it and it rolls or tips over.",
+			"etiquetas": ["shopping trolley bag", "pull-along trolley", "wheeled shopping bag"],
+			"imagen": "Footprint of “Parked shopping trolley bag”: a rectangle, 0.40 by 0.40 metres, marked with the letters “Cc”."
+		},
+		"bici_pared_portal": {
+			"nombre": "Bike leaning against the hall wall",
+			"descripcion": "Bike leaning sideways against the wall. The handlebars and one pedal stick out into the way at hip and shin height. Brush against it and it may fall.",
+			"etiquetas": ["leaning bike", "bicycle against the wall"],
+			"imagen": "Footprint of “Bike leaning against the hall wall”: a long thin body against the wall, with the handlebars sticking out near one end and a pedal in the middle, 1.75 by 0.55 metres, marked with the letters “Bp”."
+		},
+		"peldanos_portal": {
+			"nombre": "Entrance hall steps",
+			"descripcion": "One, two or three marble steps across the full width, between the door and the lift. They do not block the way, but you must climb them; the edge is often slippery.",
+			"etiquetas": ["entrance steps", "hall steps", "front steps"],
+			"variantes": {
+				"un_peldano": "One step",
+				"dos_peldanos": "Two steps",
+				"tres_peldanos": "Three steps"
+			},
+			"aviso": "Entrance steps.",
+			"imagen": "Footprint of “Entrance hall steps”: a rectangle, 1.50 by 0.60 metres, marked with the letters “Pp”."
+		},
+		"rampa_portal": {
+			"nombre": "Entrance ramp with handrail",
+			"descripcion": "Narrow ramp bypassing the entrance steps, with a tubular handrail on one side. The floor slopes and is rough rubber; the handrail guides you to the top.",
+			"etiquetas": ["entrance ramp", "access ramp", "ramp with handrail"],
+			"variantes": {
+				"corta": "Short, one step",
+				"larga": "Long, three steps"
+			},
+			"aviso": "Entrance ramp: the handrail is on one side.",
+			"imagen": "Footprint of “Entrance ramp with handrail”: a rectangle, 1.20 by 3.00 metres, marked with the letters “Rp”."
+		},
+		"puerta_portal": {
+			"nombre": "Heavy sprung entrance door",
+			"descripcion": "Iron and glass door with a closer at the top that shuts it by itself. It is heavy: push with your body, and it swings back hard. The slam is heard all the way up the stairs.",
+			"etiquetas": ["entrance door", "front door", "door with closer"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Heavy sprung entrance door”: a rectangle, 0.95 by 0.08 metres, marked with the letters “Pp”."
+		},
+		"pulsador_abrepuertas": {
+			"nombre": "Door release button",
+			"descripcion": "Coin-sized button on the wall, one step from the door at elbow height. Press it and the lock buzzes: while it buzzes, the door opens with a push.",
+			"etiquetas": ["door release button", "exit button", "push to exit"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Door release button”: a rectangle, 0.08 by 0.03 metres, hanging 1.05 metres above the floor, marked with the letters “Pa”."
+		},
+		"arranque_barandilla": {
+			"nombre": "Stair handrail newel",
+			"descripcion": "First run of the banister, with its post and knob. It reaches further into the landing than the first step: it is what the hand looks for to find where the stairs begin.",
+			"etiquetas": ["newel post", "banister end", "start of the handrail"],
+			"imagen": "Footprint of “Stair handrail newel”: a rectangle, 0.10 by 0.60 metres, marked with the letters “Ab”."
+		},
+		"hueco_bajo_escalera": {
+			"nombre": "Space under the stairs",
+			"descripcion": "The low part of the sloping underside of the stairs. The floor is clear and the cane finds nothing, but the ceiling drops to forehead and then chest height. Walk round it.",
+			"etiquetas": ["under the stairs", "stair soffit", "overhead obstacle"],
+			"aviso": "Mind your head: you are under the stairs.",
+			"imagen": "Footprint of “Space under the stairs”: a rectangle, 1.10 by 1.50 metres, hanging 1.20 metres above the floor, marked with the letters “Hb”."
+		},
+		"ventana_rellano_abierta": {
+			"nombre": "Landing window open inwards",
+			"descripcion": "Window sash open into the landing. Its edge is at face height and the cane passes underneath. Closed, it is no trouble; you feel the draught and hear outside noise when it is open.",
+			"etiquetas": ["open window", "window sash", "overhead obstacle"],
+			"acciones": {
+				"cerrar": "Close",
+				"abrir": "Open"
+			},
+			"imagen": "Footprint of “Landing window open inwards”: a rectangle, 0.60 by 0.04 metres, hanging 1.00 metres above the floor, marked with the letters “Vr”."
+		},
+		"armario_contadores_rellano": {
+			"nombre": "Landing meter cupboard",
+			"descripcion": "Sheet-metal service cupboard in the landing wall, floor to ceiling, holding the meters for that floor. The door stands slightly proud and sounds hollow; sometimes it is left ajar.",
+			"etiquetas": ["meter cupboard", "riser cupboard", "service cupboard"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Landing meter cupboard”: a rectangle, 0.80 by 0.15 metres, marked with the letters “Ac”."
+		},
+		"pulsador_luz_escalera": {
+			"nombre": "Timed stair light switch",
+			"descripcion": "Round button by each door and each flight. It turns the stair light on for a minute and it goes off by itself. On old timers you hear ticking while it lasts.",
+			"etiquetas": ["stair light switch", "timer switch", "landing light button"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Timed stair light switch”: a circle, 0.08 by 0.04 metres, hanging 1.10 metres above the floor, marked with the letters “Pl”."
+		},
+		"bajante_vista": {
+			"nombre": "Exposed drainpipe",
+			"descripcion": "Thick vertical plastic or iron pipe, floor to ceiling, in a corner. Now and then you hear water falling inside: it helps you recognise that corner.",
+			"etiquetas": ["drainpipe", "downpipe", "soil stack"],
+			"imagen": "Footprint of “Exposed drainpipe”: a circle, 0.12 by 0.12 metres, marked with the letters “Bv”."
+		},
+		"macetas_vecino": {
+			"nombre": "Neighbour's plant pots on the landing",
+			"descripcion": "Cluster of clay pots of various sizes by a door. The leaves brush you first; small pots tip over under the cane.",
+			"etiquetas": ["plant pots", "neighbour's plants", "pots on the landing"],
+			"imagen": "Footprint of “Neighbour's plant pots on the landing”: an irregular patch against the wall: several pots of different sizes, 0.80 by 0.35 metres, marked with the letters “Mv”."
+		},
+		"zapatos_vecino": {
+			"nombre": "Neighbour's shoes by the door",
+			"descripcion": "Row of shoes and boots on the floor beside a flat's doormat. Low and soft: the cane pushes them along and the foot trips on them.",
+			"etiquetas": ["shoes by the door", "neighbour's shoes", "boots on the landing"],
+			"imagen": "Footprint of “Neighbour's shoes by the door”: a rectangle, 0.80 by 0.30 metres, marked with the letters “Zv”."
+		},
+		"bolsa_basura_rellano": {
+			"nombre": "Rubbish bag on the landing",
+			"descripcion": "Tied rubbish bag a neighbour has left by their door to take down later. Soft, it rustles when touched and it smells.",
+			"etiquetas": ["rubbish bag", "bin bag", "refuse sack"],
+			"imagen": "Footprint of “Rubbish bag on the landing”: a circle, 0.35 by 0.35 metres, marked with the letters “Bb”."
+		},
+		"bombona_rellano": {
+			"nombre": "Gas cylinder on the landing",
+			"descripcion": "Empty butane cylinder waiting for the delivery man. A steel cylinder at knee height with a handle on top; it rings like a bell when struck.",
+			"etiquetas": ["gas cylinder", "butane bottle", "gas bottle"],
+			"imagen": "Footprint of “Gas cylinder on the landing”: a circle, 0.30 by 0.30 metres, marked with the letters “Br”."
+		},
+		"triciclo_rellano": {
+			"nombre": "Child's trike and scooter on the landing",
+			"descripcion": "A child's tricycle and scooter left by the door. Low and on wheels: they roll away if pushed and the handlebars are at thigh height.",
+			"etiquetas": ["tricycle", "child's scooter", "ride-on toys"],
+			"imagen": "Footprint of “Child's trike and scooter on the landing”: a triangle pointing to the front, 0.60 by 0.60 metres, marked with the letters “Tr”."
+		},
+		"botonera_ascensor": {
+			"nombre": "Lift call panel",
+			"descripcion": "Small plate with one or two buttons on the lift door frame, at elbow height. The button is raised and sometimes has braille; press it and you hear the machinery start.",
+			"etiquetas": ["lift call button", "call panel", "elevator button"],
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Lift call panel”: a rectangle, 0.10 by 0.03 metres, hanging 0.95 metres above the floor, marked with the letters “Ba”."
+		},
+		"puerta_ascensor_batiente": {
+			"nombre": "Swing door of an old lift",
+			"descripcion": "Iron door of an old lift, which opens by pulling it out into the landing. It is heavy, swings back by itself and takes up half the landing when open; it has a narrow glass slit.",
+			"etiquetas": ["lift landing door", "swing lift door", "old lift door"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Swing door of an old lift”: a rectangle, 0.75 by 0.05 metres, marked with the letters “Pa”."
+		},
+		"banqueta_ascensor": {
+			"nombre": "Lift waiting bench",
+			"descripcion": "Short, narrow wooden bench facing the lift, with no backrest, for waiting seated. Light: it shifts if you lean on it sideways.",
+			"etiquetas": ["landing bench", "lift bench", "waiting bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Lift waiting bench”: a rectangle, 0.90 by 0.32 metres, marked with the letters “Ba”."
+		},
+		"contadores_luz": {
+			"nombre": "Bank of electricity meters",
+			"descripcion": "A whole wall of plastic modules with one meter per flat. Smooth, with sealed covers; it hums quietly all the time. Nothing here to touch.",
+			"etiquetas": ["electricity meters", "meter bank", "meter room"],
+			"imagen": "Footprint of “Bank of electricity meters”: a rectangle, 2.00 by 0.25 metres, marked with the letters “Cl”."
+		},
+		"cuadro_electrico_saliente": {
+			"nombre": "Protruding fuse box",
+			"descripcion": "Sheet-metal box screwed to the wall at chest height, with the breakers inside. It sticks out a hand's width, has sharp corners and the cane passes underneath.",
+			"etiquetas": ["fuse box", "distribution board", "consumer unit"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Protruding fuse box”: a rectangle, 0.60 by 0.18 metres, hanging 1.00 metres above the floor, marked with the letters “Ce”."
+		},
+		"armario_telecomunicaciones": {
+			"nombre": "Telecoms cabinet",
+			"descripcion": "Tall metal cabinet holding the aerial and fibre equipment. It has fans: it blows warm air through its grilles and you hear it from the door of the room.",
+			"etiquetas": ["telecoms cabinet", "comms rack", "equipment cabinet"],
+			"imagen": "Footprint of “Telecoms cabinet”: a rectangle, 0.60 by 0.60 metres, marked with the letters “At”."
+		},
+		"contadores_agua": {
+			"nombre": "Water meter manifold",
+			"descripcion": "A grid of iron pipes against the wall, with a row of meters and stopcocks sticking out at different heights. Cold and damp; you hear water running.",
+			"etiquetas": ["water meters", "meter manifold", "stopcocks"],
+			"imagen": "Footprint of “Water meter manifold”: a rectangle, 1.50 by 0.35 metres, marked with the letters “Ca”."
+		},
+		"grupo_presion": {
+			"nombre": "Water booster set",
+			"descripcion": "Two pumps and a pressure vessel on a low plinth, covered in pipes and handwheels. They hum loudly when they start: you recognise the room from the corridor.",
+			"etiquetas": ["booster set", "water pumps", "pressure set"],
+			"imagen": "Footprint of “Water booster set”: a rectangle, 1.20 by 0.70 metres, marked with the letters “Gp”."
+		},
+		"caldera_comunitaria": {
+			"nombre": "Communal boiler",
+			"descripcion": "Large central heating boiler. A sheet-metal block that roars when the burner is lit and is hot to the touch, as are the pipes leaving it.",
+			"etiquetas": ["boiler", "communal boiler", "central heating boiler"],
+			"variantes": {
+				"de_gas": "Gas, large",
+				"de_gasoleo": "Oil-fired",
+				"de_biomasa": "Biomass, with hopper"
+			},
+			"aviso": "Boiler: hot.",
+			"imagen": "Footprint of “Communal boiler”: a rectangle, 1.40 by 1.20 metres, marked with the letters “Cc”."
+		},
+		"deposito_gasoleo": {
+			"nombre": "Heating oil tank",
+			"descripcion": "Long sheet-metal tank lying on legs, with rounded ends. It sounds hollow or full depending on the level and smells of heating oil: the smell warns you before the cane does.",
+			"etiquetas": ["oil tank", "heating oil tank", "fuel tank"],
+			"imagen": "Footprint of “Heating oil tank”: an elongated oval with straight sides and round ends, 2.00 by 0.90 metres, marked with the letters “Dg”."
+		},
+		"acumulador_agua_caliente": {
+			"nombre": "Hot water cylinder",
+			"descripcion": "Tall cylinder wrapped in insulation, standing next to the boiler. Soft outside and lukewarm; the pipes going in and out at top and bottom are hot.",
+			"etiquetas": ["hot water cylinder", "storage tank", "calorifier"],
+			"imagen": "Footprint of “Hot water cylinder”: a circle, 0.90 by 0.90 metres, marked with the letters “Aa”."
+		},
+		"fila_cubos_comunidad": {
+			"nombre": "Row of residents' wheelie bins",
+			"descripcion": "Several wheelie bins lined up against the wall, one per kind of waste. You tell them apart by the lid: plain, with a round hole or with a slot. It smells, and the lid drops with a hollow bang.",
+			"etiquetas": ["wheelie bins", "residents' bins", "bin store"],
+			"variantes": {
+				"dos_cubos": "Two bins",
+				"cuatro_cubos": "Four bins",
+				"seis_cubos": "Six bins"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Row of residents' wheelie bins”: a comb: a bar with bodies sticking out to the front, 2.40 by 0.75 metres, marked with the letters “Fc”."
+		},
+		"cartones_plegados": {
+			"nombre": "Flattened cardboard against the wall",
+			"descripcion": "Stack of flattened cardboard boxes leaning on edge against the bin room wall. They slide and spill across the floor if you touch them.",
+			"etiquetas": ["flattened cardboard", "cardboard stack", "boxes for recycling"],
+			"imagen": "Footprint of “Flattened cardboard against the wall”: a rectangle, 1.00 by 0.40 metres, marked with the letters “Cp”."
+		},
+		"cubo_fregona": {
+			"nombre": "Mop and bucket",
+			"descripcion": "Plastic bucket with a wringer and the mop in it, handle upwards. The handle is at chest height and falls over; the floor around is usually wet.",
+			"etiquetas": ["mop and bucket", "mop bucket"],
+			"imagen": "Footprint of “Mop and bucket”: an oval, 0.38 by 0.30 metres, marked with the letters “Cf”."
+		},
+		"vertedero_limpieza": {
+			"nombre": "Cleaner's sink",
+			"descripcion": "Low ceramic sink at knee height, with a hinged grid to rest the bucket on and a tall tap above. The tap is at waist height.",
+			"etiquetas": ["cleaner's sink", "bucket sink", "slop sink"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Cleaner's sink”: a rectangle, 0.50 by 0.45 metres, marked with the letters “Vl”."
+		},
+		"escobas_apoyadas": {
+			"nombre": "Brooms and dustpan against the wall",
+			"descripcion": "Two or three brooms and a long-handled dustpan leaning in a corner. The handles slip and clatter to the floor as soon as they are brushed.",
+			"etiquetas": ["brooms", "dustpan", "cleaning tools"],
+			"imagen": "Footprint of “Brooms and dustpan against the wall”: a rectangle, 0.50 by 0.20 metres, marked with the letters “Ea”."
+		},
+		"ganchos_bicis": {
+			"nombre": "Wall hooks for bikes",
+			"descripcion": "Row of steel hooks screwed to the wall above head height, for hanging bikes by one wheel. When empty they stick out at forehead height and the cane gives no warning.",
+			"etiquetas": ["bike hooks", "wall hooks", "overhead obstacle"],
+			"aviso": "Hooks at head height.",
+			"imagen": "Footprint of “Wall hooks for bikes”: a rectangle, 1.50 by 0.25 metres, hanging 1.70 metres above the floor, marked with the letters “Gb”."
+		},
+		"bici_colgada_gancho": {
+			"nombre": "Bike hung by its wheel from a hook",
+			"descripcion": "Bike hung upright on the wall: the top wheel on the hook and the bottom one near the floor. It reaches a metre out from the wall; the handlebars are at face height.",
+			"etiquetas": ["hanging bike", "bike on a wall hook", "upright bike"],
+			"imagen": "Footprint of “Bike hung by its wheel from a hook”: a rectangle, 0.60 by 1.05 metres, hanging 0.20 metres above the floor, marked with the letters “Bc”."
+		},
+		"soporte_bicis_suelo": {
+			"nombre": "Floor wheel rack for bikes",
+			"descripcion": "Low rail with wire slots that take the front wheel. Empty, it rises barely a hand's width from the floor: the cane finds it, but the foot trips and catches.",
+			"etiquetas": ["floor bike rack", "wheel rack", "cycle stand"],
+			"variantes": {
+				"tres_ruedas": "Three bikes",
+				"cinco_ruedas": "Five bikes",
+				"diez_ruedas": "Ten bikes"
+			},
+			"imagen": "Footprint of “Floor wheel rack for bikes”: a comb: a bar with bodies sticking out to the front, 1.50 by 0.40 metres, marked with the letters “Sb”."
+		},
+		"columna_garaje_protegida": {
+			"nombre": "Car park column with corner guards",
+			"descripcion": "Square or oblong concrete pillar, wrapped up to waist height in foam rubber corner guards. Low down the knock is soft; above the waist, rough concrete.",
+			"etiquetas": ["car park column", "pillar with corner guards", "padded column"],
+			"variantes": {
+				"cuadrada": "40 cm square",
+				"pantalla": "Oblong 30 by 80"
+			},
+			"imagen": "Footprint of “Car park column with corner guards”: a rectangle, 0.40 by 0.40 metres, marked with the letters “Cg”."
+		},
+		"columna_garaje_redonda": {
+			"nombre": "Round car park column",
+			"descripcion": "Round, smooth concrete pillar from floor to ceiling. It has no corners: you can walk round it without losing contact with your hand.",
+			"etiquetas": ["round column", "circular pillar"],
+			"imagen": "Footprint of “Round car park column”: a circle, 0.45 by 0.45 metres, marked with the letters “Cg”."
+		},
+		"rampa_garaje": {
+			"nombre": "Car park ramp",
+			"descripcion": "Stretch of grooved concrete ramp where cars drive up and down. The slope is steep and the surface rough; there is no pavement. If you hear an engine, keep to the wall.",
+			"etiquetas": ["car park ramp", "garage ramp", "vehicle ramp"],
+			"aviso": "Car park ramp: steep slope and cars may come.",
+			"imagen": "Footprint of “Car park ramp”: a rectangle, 3.50 by 6.00 metres, marked with the letters “Rg”."
+		},
+		"rejilla_desague_garaje": {
+			"nombre": "Car park drain channel",
+			"descripcion": "Narrow channel with an iron grating crossing the floor from side to side, at the foot of the ramp or by the door. It rings underfoot and the cane tip slips between the bars.",
+			"etiquetas": ["drain channel", "drainage grating", "channel drain"],
+			"aviso": "Grating: the cane tip may slip in.",
+			"imagen": "Footprint of “Car park drain channel”: a rectangle, 3.00 by 0.20 metres, marked with the letters “Rd”."
+		},
+		"baden_garaje": {
+			"nombre": "Car park speed bump",
+			"descripcion": "Rubber hump bolted to the floor across the lane. It rises three fingers: the cane feels it and the foot trips unless lifted.",
+			"etiquetas": ["speed bump", "speed hump", "sleeping policeman"],
+			"aviso": "Speed bump.",
+			"imagen": "Footprint of “Car park speed bump”: a rectangle, 3.00 by 0.40 metres, marked with the letters “Bg”."
+		},
+		"mancha_aceite": {
+			"nombre": "Oil patch on the car park floor",
+			"descripcion": "Oil patch left by a car in its bay. The cane does not feel it: the foot suddenly slips. It smells like a workshop.",
+			"etiquetas": ["oil patch", "oil stain", "slippery floor"],
+			"aviso": "Slippery floor: oil patch.",
+			"imagen": "Footprint of “Oil patch on the car park floor”: an irregular patch on the floor, 0.80 by 0.60 metres, marked with the letters “Ma”."
+		},
+		"marca_plaza_garaje": {
+			"nombre": "Marked parking bay",
+			"descripcion": "Rectangle painted on the floor marking out a bay. Neither cane nor foot can feel the paint: when empty you cross it without noticing. Useful for laying out the car park.",
+			"etiquetas": ["parking bay", "parking space", "bay markings"],
+			"variantes": {
+				"normal": "Standard bay",
+				"accesible": "Accessible bay with transfer zone",
+				"de_moto": "Motorbike bay"
+			},
+			"imagen": "Footprint of “Marked parking bay”: a rectangle, 2.40 by 5.00 metres, marked with the letters “Mp”."
+		},
+		"tope_rueda_plaza": {
+			"nombre": "Parking bay wheel stop",
+			"descripcion": "Hard rubber bar bolted to the floor at the back of the bay, to stop the car hitting the wall. It rises barely a hand's width: with the bay empty it is a sure trip hazard.",
+			"etiquetas": ["wheel stop", "parking kerb", "parking block"],
+			"variantes": {
+				"corto": "Short, one wheel",
+				"largo": "Long, both wheels"
+			},
+			"imagen": "Footprint of “Parking bay wheel stop”: a rectangle, 1.65 by 0.15 metres, marked with the letters “Tr”."
+		},
+		"punto_recarga_pared": {
+			"nombre": "Wall-mounted car charger",
+			"descripcion": "Plastic box on the wall at the back of the bay, at chest height, with a thick coiled cable that hangs down and sometimes crosses the floor. It hums while charging.",
+			"etiquetas": ["wall charger", "wallbox", "EV charger"],
+			"acciones": {
+				"recargar": "Plug in",
+				"desenchufar": "Unplug"
+			},
+			"imagen": "Footprint of “Wall-mounted car charger”: a rectangle, 0.25 by 0.15 metres, hanging 1.00 metres above the floor, marked with the letters “Pr”."
+		},
+		"armario_sobre_capo": {
+			"nombre": "Over-bonnet storage cabinet",
+			"descripcion": "Sheet-metal cabinet at the back of the bay, raised on two side legs so the car's nose fits underneath. With the bay empty, the cane passes under it and the edge hits you in the chest.",
+			"etiquetas": ["over-bonnet cabinet", "parking bay locker", "garage storage box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Over-bonnet storage cabinet”: a rectangle, 2.00 by 0.80 metres, hanging 1.15 metres above the floor, marked with the letters “As”."
+		},
+		"trastero_jaula": {
+			"nombre": "Mesh storage cage in the car park",
+			"descripcion": "Wire mesh cage from floor to ceiling, with a door and padlock, where a neighbour keeps belongings. The mesh gives a little and jingles when touched; the cane pokes through the gaps.",
+			"etiquetas": ["storage cage", "mesh locker", "wire cage"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Mesh storage cage in the car park”: a rectangle, 2.00 by 1.50 metres, marked with the letters “Tj”."
+		},
+		"puerta_basculante_garaje": {
+			"nombre": "Up-and-over car park door",
+			"descripcion": "Large sheet-metal door opened upwards by a motor. As it opens, the leaf swings outwards at chest height before rising. It rattles, takes a few seconds and closes by itself.",
+			"etiquetas": ["car park door", "up-and-over door", "garage door"],
+			"variantes": {
+				"un_coche": "Single width",
+				"doble": "Double width"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"aviso": "Car park door: cars may come out.",
+			"imagen": "Footprint of “Up-and-over car park door”: a rectangle, 2.80 by 0.10 metres, marked with the letters “Pb”."
+		},
+		"poste_pulsador_salida": {
+			"nombre": "Car park exit button post",
+			"descripcion": "Slim metal post beside the lane, before the door, with a key switch and a button at car window height. Pressing it opens the big door.",
+			"etiquetas": ["exit button post", "key switch post", "door control post"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Car park exit button post”: a rectangle, 0.15 by 0.15 metres, marked with the letters “Pp”."
+		},
+		"aviso_salida_vehiculos": {
+			"nombre": "Vehicle exit warning light and sounder",
+			"descripcion": "Small box on the façade above the car park door, which beeps and flashes while the door moves. It is above head height: no obstacle, but it warns that a car is about to come out.",
+			"etiquetas": ["vehicle exit warning", "garage beacon", "warning sounder"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Vehicle exit warning light and sounder”: a rectangle, 0.20 by 0.15 metres, hanging 2.30 metres above the floor, marked with the letters “As”."
+		},
+		"puerta_cortafuegos": {
+			"nombre": "Fire door",
+			"descripcion": "Thick sheet-metal door, smooth and cold, with a stiff handle and a strong closer. You must pull or push hard and it slams shut by itself with a boom.",
+			"etiquetas": ["fire door", "steel door", "fire-rated door"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Fire door”: a rectangle, 0.90 by 0.06 metres, marked with the letters “Pc”."
+		},
+		"vestibulo_independencia": {
+			"nombre": "Fire lobby",
+			"descripcion": "Small empty room between two fire doors, between the car park and the stairs. It holds little more than one person and sounds boxed in: close the first door to open the second comfortably.",
+			"etiquetas": ["fire lobby", "protected lobby", "airlock between doors"],
+			"aviso": "Lobby between two heavy doors.",
+			"imagen": "Footprint of “Fire lobby”: a rectangle, 1.50 by 1.50 metres, marked with the letters “Vi”."
+		},
+		"tuberias_bajas_garaje": {
+			"nombre": "Low pipes hanging from the car park ceiling",
+			"descripcion": "A bundle of pipes crossing the way, hung from the ceiling lower than the rest. It is at a tall person's forehead height and the cane does not find it. It sometimes drips.",
+			"etiquetas": ["low pipes", "ceiling pipes", "overhead obstacle"],
+			"aviso": "Mind your head: low pipes.",
+			"imagen": "Footprint of “Low pipes hanging from the car park ceiling”: a rectangle, 3.00 by 0.30 metres, hanging 1.75 metres above the floor, marked with the letters “Tb”."
+		},
+		"conducto_ventilacion_bajo": {
+			"nombre": "Low sheet-metal ventilation duct",
+			"descripcion": "Wide sheet-metal duct hung from the ceiling, with grilles blowing or sucking air. Lower than the beams: it sounds hollow, like a drum, if touched with a raised hand.",
+			"etiquetas": ["ventilation duct", "sheet-metal duct", "overhead obstacle"],
+			"imagen": "Footprint of “Low sheet-metal ventilation duct”: a rectangle, 3.00 by 0.60 metres, hanging 1.85 metres above the floor, marked with the letters “Cv”."
+		},
+		"extractor_garaje": {
+			"nombre": "Car park extractor fan",
+			"descripcion": "Large sheet-metal box with a fan inside, in a corner or behind a grille. It roars so much that it drowns other sounds: a good landmark, but near it you cannot hear cars.",
+			"etiquetas": ["extractor fan", "exhaust fan", "ventilation unit"],
+			"imagen": "Footprint of “Car park extractor fan”: a rectangle, 1.00 by 1.00 metres, marked with the letters “Eg”."
+		},
+		"espejo_convexo_garaje": {
+			"nombre": "Convex car park mirror",
+			"descripcion": "Round, bulging mirror on an arm, fixed to the wall or a column at junctions. It is at head height and sticks out: the cane does not detect it.",
+			"etiquetas": ["convex mirror", "traffic mirror", "overhead obstacle"],
+			"imagen": "Footprint of “Convex car park mirror”: an oval, 0.60 by 0.30 metres, hanging 1.80 metres above the floor, marked with the letters “Ec”."
+		},
+		"boca_incendio_equipada": {
+			"nombre": "Fire hose reel cabinet",
+			"descripcion": "Sheet-metal cabinet with a glass door and a coiled hose inside, hung on the wall at waist height. It sticks out a hand's width and the cane does not touch it.",
+			"etiquetas": ["fire hose reel", "hose cabinet", "fire hose"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Fire hose reel cabinet”: a rectangle, 0.70 by 0.22 metres, hanging 0.90 metres above the floor, marked with the letters “Bi”."
+		},
+		"extintor_carro": {
+			"nombre": "Wheeled fire extinguisher",
+			"descripcion": "Large extinguisher on two wheels, with a hose and a handle for dragging it. Waist high, made of steel and sounding full; it stands by a column or the wall.",
+			"etiquetas": ["wheeled extinguisher", "trolley extinguisher"],
+			"imagen": "Footprint of “Wheeled fire extinguisher”: a circle, 0.45 by 0.50 metres, marked with the letters “Ec”."
+		},
+		"estanteria_metalica_trastero": {
+			"nombre": "Metal storage-room shelving",
+			"descripcion": "Bolted steel-angle shelving with sheet-metal shelves full of boxes. The edges are sharp and things stick out from the shelves at different heights.",
+			"etiquetas": ["metal shelving", "steel racking", "storage shelves"],
+			"imagen": "Footprint of “Metal storage-room shelving”: a rectangle, 0.90 by 0.40 metres, marked with the letters “Em”."
+		},
+		"cajas_carton_apiladas": {
+			"nombre": "Stacked cardboard boxes",
+			"descripcion": "Tower of removal boxes, one on another, not always neatly aligned. They sound hollow or full; push the bottom one and the tower wobbles.",
+			"etiquetas": ["stacked boxes", "removal boxes", "pile of boxes"],
+			"variantes": {
+				"dos_cajas": "Two boxes",
+				"torre": "Tower of four"
+			},
+			"imagen": "Footprint of “Stacked cardboard boxes”: a rectangle, 0.60 by 0.50 metres, marked with the letters “Cc”."
+		},
+		"maletas_apiladas": {
+			"nombre": "Stacked suitcases",
+			"descripcion": "Two or three hard suitcases lying flat on top of each other. Smooth, with wheels and handles sticking out on one side; they sound hollow.",
+			"etiquetas": ["stacked suitcases", "pile of luggage"],
+			"imagen": "Footprint of “Stacked suitcases”: a rectangle, 0.70 by 0.45 metres, marked with the letters “Ma”."
+		},
+		"bolsas_ropa_guardada": {
+			"nombre": "Bags of stored clothes",
+			"descripcion": "Large woven bags full of clothes and blankets, piled on the floor. Soft: they give when touched and the cane sinks in without a sound.",
+			"etiquetas": ["bags of clothes", "storage bags", "bundles"],
+			"imagen": "Footprint of “Bags of stored clothes”: a rectangle with rounded corners, 0.70 by 0.50 metres, marked with the letters “Br”."
+		},
+		"neumaticos_apilados": {
+			"nombre": "Stacked tyres",
+			"descripcion": "Column of four car tyres lying flat. Treaded rubber outside and a hole in the middle; it smells of rubber and makes no sound when struck.",
+			"etiquetas": ["tyres", "stacked tyres", "winter tyres"],
+			"imagen": "Footprint of “Stacked tyres”: a circle, 0.65 by 0.65 metres, marked with the letters “Na”."
+		},
+		"muebles_tapados_sabana": {
+			"nombre": "Old furniture under a dust sheet",
+			"descripcion": "A large, irregular mass covered with a cloth: underneath are stacked chairs, a chest of drawers, a bed base. Soft at first touch and hard beneath; you cannot guess its shape.",
+			"etiquetas": ["old furniture", "covered furniture", "dust sheet"],
+			"imagen": "Footprint of “Old furniture under a dust sheet”: a rectangle with cut corners, 1.50 by 0.80 metres, marked with the letters “Mt”."
+		},
+		"botes_pintura_suelo": {
+			"nombre": "Paint tins on the floor",
+			"descripcion": "Half a dozen tins and jerrycans on the floor by the wall. Low and made of tinplate: they clang under the cane and roll if knocked over.",
+			"etiquetas": ["paint tins", "paint cans", "jerrycans"],
+			"imagen": "Footprint of “Paint tins on the floor”: a rectangle, 0.60 by 0.30 metres, marked with the letters “Bp”."
+		},
+		"arbol_navidad_caja": {
+			"nombre": "Christmas tree in its box",
+			"descripcion": "Long cardboard box standing on end in a corner, with the dismantled Christmas tree inside. Light: it topples at the slightest push, and the decorations jingle inside.",
+			"etiquetas": ["Christmas tree box", "boxed Christmas tree", "decorations"],
+			"imagen": "Footprint of “Christmas tree in its box”: a rectangle, 0.30 by 0.30 metres, marked with the letters “An”."
+		},
+		"escalera_apoyada": {
+			"nombre": "Ladder leaning against the wall",
+			"descripcion": "Aluminium ladder leaning against the wall, with its feet one step out. The cane finds the feet; the rails rise at an angle and slide sideways if pushed.",
+			"etiquetas": ["leaning ladder", "aluminium ladder", "extension ladder"],
+			"imagen": "Footprint of “Ladder leaning against the wall”: a rectangle, 0.45 by 0.80 metres, marked with the letters “Ea”."
+		},
+		"colchon_de_pie": {
+			"nombre": "Mattress standing against the wall",
+			"descripcion": "Mattress stored on edge against the wall. As tall as a person and soft: it leans over onto you if you touch it near the top.",
+			"etiquetas": ["stored mattress", "mattress on edge"],
+			"imagen": "Footprint of “Mattress standing against the wall”: a rectangle, 1.35 by 0.25 metres, marked with the letters “Cd”."
+		},
+		"esquis_sombrilla_rincon": {
+			"nombre": "Skis and parasol propped in the corner",
+			"descripcion": "Long thin things standing in a corner: skis, a beach parasol, fishing rods. They slide and fall across the floor as soon as they are brushed.",
+			"etiquetas": ["skis", "beach parasol", "fishing rods"],
+			"imagen": "Footprint of “Skis and parasol propped in the corner”: a quarter circle with its corner at the back left, 0.30 by 0.30 metres, marked with the letters “Es”."
+		},
+		"bici_colgada_techo": {
+			"nombre": "Bike hung from the ceiling",
+			"descripcion": "Bike hung from two ceiling hooks, lying over the way. The wheels and pedals are at head height and the cane passes underneath.",
+			"etiquetas": ["ceiling-hung bike", "bike on ceiling hooks", "overhead obstacle"],
+			"aviso": "Mind your head: hanging bike.",
+			"imagen": "Footprint of “Bike hung from the ceiling”: a rectangle, 1.75 by 0.60 metres, hanging 1.50 metres above the floor, marked with the letters “Bc”."
+		},
+		"tirador_luz_trastero": {
+			"nombre": "Storage room light pull cord",
+			"descripcion": "Cord hanging from the ceiling bulb, with a little ball on the end. It brushes your face as you enter: find it with a raised hand and pull to switch on.",
+			"etiquetas": ["light pull cord", "pull switch", "light cord"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Storage room light pull cord”: a circle, 0.04 by 0.04 metres, hanging 1.50 metres above the floor, marked with the letters “Tl”."
+		},
+		"cuerdas_tender_azotea": {
+			"nombre": "Roof terrace washing lines",
+			"descripcion": "Several parallel lines stretched from post to post, at neck or face height. Empty, they make no sound and the cane misses them: you find them with your throat.",
+			"etiquetas": ["washing lines", "clothes lines", "overhead obstacle"],
+			"aviso": "Washing lines at neck height.",
+			"imagen": "Footprint of “Roof terrace washing lines”: a rectangle, 4.00 by 1.20 metres, hanging 1.50 metres above the floor, marked with the letters “Ct”."
+		},
+		"poste_tendedero": {
+			"nombre": "Washing line post",
+			"descripcion": "Iron tube post from which the washing lines run, with a crossbar on top. Finding it with the cane warns you that the lines start there.",
+			"etiquetas": ["washing line post", "clothes post", "line pole"],
+			"imagen": "Footprint of “Washing line post”: a circle, 0.06 by 0.06 metres, marked with the letters “Pt”."
+		},
+		"sabanas_tendidas": {
+			"nombre": "Sheets on the line",
+			"descripcion": "Sheets hanging from the line, from neck to knees. Damp and soft: push them aside with your hand and walk through, but they muffle sounds and snap in the wind.",
+			"etiquetas": ["washing on the line", "hanging sheets", "laundry"],
+			"aviso": "Washing on the line: push it aside with your hand.",
+			"imagen": "Footprint of “Sheets on the line”: a rectangle, 2.00 by 0.05 metres, hanging 0.60 metres above the floor, marked with the letters “St”."
+		},
+		"tendedero_aspa": {
+			"nombre": "Rotary clothes airer",
+			"descripcion": "An airer like an umbrella turned inside out: a mast set in the ground and four arms with lines at face height. It turns when pushed; the cane only finds the mast in the middle.",
+			"etiquetas": ["rotary airer", "rotary washing line", "overhead obstacle"],
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Rotary clothes airer”: a diamond, 1.80 by 1.80 metres, hanging 1.40 metres above the floor, marked with the letters “Ta”."
+		},
+		"tendedero_ventana_bajo": {
+			"nombre": "Ground-floor window clothes rack",
+			"descripcion": "Frame of iron rods jutting from a low window into the yard. It is at chest height, with the ends pointing outwards, and the cane passes underneath.",
+			"etiquetas": ["window clothes rack", "wall-mounted airer", "overhead obstacle"],
+			"imagen": "Footprint of “Ground-floor window clothes rack”: a rectangle, 1.50 by 0.60 metres, hanging 1.20 metres above the floor, marked with the letters “Tv”."
+		},
+		"cuerdas_poleas_patio": {
+			"nombre": "Pulley washing lines between windows",
+			"descripcion": "Lines crossing the light well from window to window, above head height. They are not in the way, but the washing drips and wets the floor below. The pulleys squeak when a neighbour hangs washing.",
+			"etiquetas": ["pulley washing line", "light well clothes lines"],
+			"acciones": {
+				"tirar_cuerda": "Pull the line"
+			},
+			"imagen": "Footprint of “Pulley washing lines between windows”: a rectangle, 3.00 by 0.60 metres, hanging 2.30 metres above the floor, marked with the letters “Cp”."
+		},
+		"sumidero_patio": {
+			"nombre": "Yard floor drain",
+			"descripcion": "Small iron grating at the lowest point of the yard. The floor slopes towards it from all sides: feeling that underfoot tells you where the middle is.",
+			"etiquetas": ["floor drain", "yard drain", "gully"],
+			"imagen": "Footprint of “Yard floor drain”: a rectangle, 0.20 by 0.20 metres, marked with the letters “Sp”."
+		},
+		"grifo_patio_manguera": {
+			"nombre": "Yard tap with coiled hose",
+			"descripcion": "Tap on the wall at knee height, with a hose coiled on a bracket or on the ground. There is usually a puddle beneath; with the tap on you hear the jet.",
+			"etiquetas": ["yard tap", "garden tap", "hose reel"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Yard tap with coiled hose”: a semicircle, straight at the back and round at the front, 0.50 by 0.40 metres, marked with the letters “Gp”."
+		},
+		"manguera_extendida": {
+			"nombre": "Hose lying across the ground",
+			"descripcion": "Rubber hose snaking across the ground from the tap. Two fingers thick: the cane skips over it, the foot catches and the ground around is wet.",
+			"etiquetas": ["garden hose", "hose on the ground", "hosepipe"],
+			"aviso": "Hose on the ground.",
+			"imagen": "Footprint of “Hose lying across the ground”: a band snaking from one side to the other, 4.00 by 0.80 metres, marked with the letters “Me”."
+		},
+		"pila_lavar_patio": {
+			"nombre": "Yard wash trough",
+			"descripcion": "Stone or cement trough with a sloping, ribbed front for scrubbing clothes, on two low walls. Hip high; there is a gap underneath.",
+			"etiquetas": ["wash trough", "laundry sink", "washing stone"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Yard wash trough”: a rectangle, 0.70 by 0.55 metres, marked with the letters “Pl”."
+		},
+		"murete_azotea": {
+			"nombre": "Roof terrace parapet",
+			"descripcion": "Brick parapet closing the edge of the roof or dividing one terrace from the neighbour's. Chest high, it protects; if only knee high, there may be a drop behind it.",
+			"etiquetas": ["parapet", "low wall", "roof edge wall"],
+			"variantes": {
+				"bajo": "Low, knee high",
+				"antepecho": "Chest-high parapet"
+			},
+			"aviso": "Edge of the roof.",
+			"imagen": "Footprint of “Roof terrace parapet”: a rectangle, 3.00 by 0.25 metres, marked with the letters “Ma”."
+		},
+		"claraboya_azotea": {
+			"nombre": "Raised skylight on the roof terrace",
+			"descripcion": "Plastic dome on a low kerb in the middle of the roof: it lights the stairwell. It rises a hand's width or two, sounds hollow and will not bear a person's weight.",
+			"etiquetas": ["skylight", "roof light", "dome light"],
+			"aviso": "Skylight: do not step on it.",
+			"imagen": "Footprint of “Raised skylight on the roof terrace”: a rectangle with rounded corners, 1.00 by 1.00 metres, marked with the letters “Ca”."
+		},
+		"caseton_azotea": {
+			"nombre": "Stair and lift roof housing",
+			"descripcion": "Brick housing where the stairs come out onto the roof, with the lift machine room above. It is the roof's main landmark: where you come out and where you go back.",
+			"etiquetas": ["roof housing", "stair penthouse", "lift motor room"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Stair and lift roof housing”: a rectangle, 3.00 by 3.50 metres, marked with the letters “Ca”."
+		},
+		"chimenea_ventilacion": {
+			"nombre": "Ventilation stack",
+			"descripcion": "Brick stack as tall as a person, with a metal cowl that spins in the wind and squeaks. Kitchen smells come out of it.",
+			"etiquetas": ["ventilation stack", "vent chimney", "roof vent"],
+			"imagen": "Footprint of “Ventilation stack”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Cv”."
+		},
+		"antena_con_vientos": {
+			"nombre": "Aerial mast with guy wires",
+			"descripcion": "Aerial mast held by three steel wires running down at an angle to anchors in the floor. The wires cross the way at any height, from feet to head.",
+			"etiquetas": ["aerial mast", "antenna", "guy wires"],
+			"aviso": "Aerial wires: they cross at any height.",
+			"imagen": "Footprint of “Aerial mast with guy wires”: a triangle pointing to the front, 3.00 by 3.00 metres, marked with the letters “Ac”."
+		},
+		"escalera_gato": {
+			"nombre": "Fixed wall ladder",
+			"descripcion": "Vertical ladder of iron rungs fixed to the wall, for climbing to the housing or a roof. It stands a hand's width proud; sometimes it starts halfway up and the cane misses it.",
+			"etiquetas": ["fixed ladder", "wall ladder", "cat ladder"],
+			"imagen": "Footprint of “Fixed wall ladder”: a rectangle, 0.45 by 0.20 metres, marked with the letters “Eg”."
+		},
+		"aire_acondicionado_suelo": {
+			"nombre": "Outdoor air conditioning unit on the floor",
+			"descripcion": "Sheet-metal box on rubber feet, with a grille blowing out hot air. It hums and vibrates when running; knee to hip high. It drips underneath.",
+			"etiquetas": ["air conditioning unit", "outdoor unit", "condenser"],
+			"variantes": {
+				"un_ventilador": "Single fan",
+				"dos_ventiladores": "Twin fan, tall"
+			},
+			"imagen": "Footprint of “Outdoor air conditioning unit on the floor”: a rectangle, 0.85 by 0.35 metres, marked with the letters “Aa”."
+		},
+		"aire_acondicionado_mensulas": {
+			"nombre": "Air conditioning unit on brackets at head height",
+			"descripcion": "Air conditioning unit bolted to the wall on two brackets, at face height. The cane passes underneath; only the hum and the drops falling on the ground warn you.",
+			"etiquetas": ["wall-mounted air conditioner", "unit on brackets", "overhead obstacle"],
+			"imagen": "Footprint of “Air conditioning unit on brackets at head height”: a rectangle, 0.80 by 0.32 metres, hanging 1.50 metres above the floor, marked with the letters “Aa”."
+		},
+		"deposito_agua_azotea": {
+			"nombre": "Roof water tank",
+			"descripcion": "Round fibre tank on a plinth, with a lid and pipes. It sounds hollow or full depending on the level; you hear the water coming in as it fills.",
+			"etiquetas": ["water tank", "roof tank", "cistern"],
+			"imagen": "Footprint of “Roof water tank”: a circle, 1.30 by 1.30 metres, marked with the letters “Da”."
+		},
+		"placas_solares_azotea": {
+			"nombre": "Solar panels on frames",
+			"descripcion": "Row of glass panels tilted on an aluminium frame. The low edge is at shin height and the high edge at chest height; in the sun they are hot.",
+			"etiquetas": ["solar panels", "photovoltaic panels", "solar collectors"],
+			"imagen": "Footprint of “Solar panels on frames”: a rectangle, 2.00 by 1.70 metres, marked with the letters “Ps”."
+		},
+		"piscina_comunidad": {
+			"nombre": "Residents' swimming pool",
+			"descripcion": "The estate's pool, level with the ground and kidney-shaped. The edge is a rounded, rough coping stone: when you step on it, stop. You hear water in the overflow.",
+			"etiquetas": ["swimming pool", "residents' pool", "estate pool"],
+			"variantes": {
+				"infantil": "Paddling pool",
+				"mediana": "Medium",
+				"grande": "Large"
+			},
+			"aviso": "Edge of the pool: stop.",
+			"imagen": "Footprint of “Residents' swimming pool”: a kidney: an oval with a dent in one of its long sides, 8.00 by 5.00 metres, marked with the letters “Pc”."
+		},
+		"valla_piscina": {
+			"nombre": "Pool fence",
+			"descripcion": "Fence of vertical bars round the pool, chest high, to keep unaccompanied children out. Follow it with your hand until you reach the gate.",
+			"etiquetas": ["pool fence", "pool barrier", "safety fence"],
+			"imagen": "Footprint of “Pool fence”: a rectangle, 2.00 by 0.05 metres, marked with the letters “Vp”."
+		},
+		"puerta_valla_piscina": {
+			"nombre": "Self-closing pool gate",
+			"descripcion": "Barred gate in the fence, with the latch right at the top, out of children's reach. It opens outwards and a spring shuts it with a clang.",
+			"etiquetas": ["pool gate", "self-closing gate", "safety gate"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Self-closing pool gate”: a rectangle, 0.90 by 0.05 metres, marked with the letters “Pv”."
+		},
+		"lavapies_piscina": {
+			"nombre": "Pool footbath",
+			"descripcion": "A built-in pool a hand's width deep, just inside the pool gate, which you must wade through. One step down, cold water underfoot and one step up.",
+			"etiquetas": ["footbath", "foot wash", "wading trough"],
+			"aviso": "Footbath: step down into water.",
+			"imagen": "Footprint of “Pool footbath”: a rectangle, 1.20 by 1.50 metres, marked with the letters “Lp”."
+		},
+		"ducha_jardin_piscina": {
+			"nombre": "Poolside garden shower",
+			"descripcion": "Steel post with a shower head on top and a push button at hand height, over a slatted tray. It gives cold water for a few seconds and stops by itself. The ground around is slippery.",
+			"etiquetas": ["garden shower", "pool shower", "outdoor shower"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Poolside garden shower”: a circle, 0.90 by 0.90 metres, marked with the letters “Dj”."
+		},
+		"aro_salvavidas_poste": {
+			"nombre": "Lifebuoy on its post",
+			"descripcion": "Wooden post with a lifebuoy hung at chest height and a coiled rope. The ring is hard hollow plastic and sticks out either side of the post.",
+			"etiquetas": ["lifebuoy", "life ring", "rescue ring"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Lifebuoy on its post”: a T shape, 0.70 by 0.20 metres, marked with the letters “As”."
+		},
+		"tumbona_comunidad": {
+			"nombre": "Estate poolside sun lounger",
+			"descripcion": "Low, long plastic sun lounger with the back raised. Residents move it: it is somewhere different each day. Light, it shifts under the cane.",
+			"etiquetas": ["sun lounger", "sunbed", "deckchair"],
+			"acciones": {
+				"tumbarse": "Lie down"
+			},
+			"imagen": "Footprint of “Estate poolside sun lounger”: a rectangle, 0.70 by 1.90 metres, marked with the letters “Tc”."
+		},
+		"caseta_depuradora": {
+			"nombre": "Pool filter housing",
+			"descripcion": "Low masonry housing half sunk beside the pool, with a sheet-metal lid or door. Inside the pump hums all summer and it smells of chlorine: you hear it from afar.",
+			"etiquetas": ["pool filter housing", "pump house", "filter room"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Pool filter housing”: a rectangle, 2.00 by 1.50 metres, marked with the letters “Cd”."
+		},
+		"pergola_urbanizacion": {
+			"nombre": "Timber pergola",
+			"descripcion": "Roof of timber beams and reed matting on four posts. Beneath it there is shade, it is cooler and the sound changes. The beams are above head height; the posts are placed separately.",
+			"etiquetas": ["pergola", "arbour", "shade structure"],
+			"imagen": "Footprint of “Timber pergola”: a rectangle, 3.00 by 3.00 metres, hanging 2.20 metres above the floor, marked with the letters “Pu”."
+		},
+		"poste_pergola": {
+			"nombre": "Pergola post",
+			"descripcion": "Square timber post, as thick as a leg, holding up the pergola or a porch. There are usually four; sometimes a climbing plant brushes you first.",
+			"etiquetas": ["pergola post", "timber post", "porch post"],
+			"imagen": "Footprint of “Pergola post”: a rectangle, 0.12 by 0.12 metres, marked with the letters “Pp”."
+		},
+		"barbacoa_obra": {
+			"nombre": "Brick barbecue",
+			"descripcion": "Brick barbecue with a shelf on each side, the grill at waist height and a hood with a chimney above. When lit, the embers crackle and it smells of smoke: it is hot.",
+			"etiquetas": ["barbecue", "brick barbecue", "grill"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"aviso": "Barbecue: hot when lit.",
+			"imagen": "Footprint of “Brick barbecue”: a rectangle, 1.40 by 0.70 metres, marked with the letters “Bo”."
+		},
+		"banco_obra_ele": {
+			"nombre": "Built-in L-shaped bench",
+			"descripcion": "Brick bench turning a corner, with no backrest or with the wall as one. Rough and at knee height; a table usually sits in the inner angle.",
+			"etiquetas": ["built-in bench", "brick bench", "L-shaped bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Built-in L-shaped bench”: an L shape, 3.00 by 2.50 metres, marked with the letters “Bo”."
+		},
+		"pista_petanca": {
+			"nombre": "Boules court with kerb",
+			"descripcion": "Long rectangle of fine gravel enclosed by a timber kerb a hand's width high. Step over it; inside, the ground crunches. You hear the steel boules clack together.",
+			"etiquetas": ["boules court", "petanque pitch", "boules pitch"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"aviso": "Kerb of the boules court.",
+			"imagen": "Footprint of “Boules court with kerb”: a rectangle, 3.00 by 12.00 metres, marked with the letters “Pp”."
+		},
+		"camino_losas_cesped": {
+			"nombre": "Stepping-stone path across the lawn",
+			"descripcion": "Line of stone slabs laid on the lawn, from the gate to the pool. It feels hard underfoot against the soft grass: following it gets you there without getting lost.",
+			"etiquetas": ["stepping stones", "garden path", "slab path"],
+			"imagen": "Footprint of “Stepping-stone path across the lawn”: a rectangle, 0.60 by 4.00 metres, marked with the letters “Cl”."
+		},
+		"caseta_jardinero": {
+			"nombre": "Gardener's shed",
+			"descripcion": "Board shed with a pitched roof where the lawnmower and tools are kept. The wood sounds hollow; the eaves are at a tall person's head height.",
+			"etiquetas": ["garden shed", "tool shed", "gardener's hut"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Gardener's shed”: a rectangle, 2.00 by 2.00 metres, marked with the letters “Cj”."
+		},
+		"garita_vigilante": {
+			"nombre": "Estate security booth",
+			"descripcion": "Small many-sided hut by the vehicle entrance, with windows all round. The guard usually has the radio on: you hear it before you get there.",
+			"etiquetas": ["security booth", "guard hut", "gatehouse"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Estate security booth”: an octagon, 2.00 by 2.00 metres, marked with the letters “Gv”."
+		},
+		"barrera_urbanizacion": {
+			"nombre": "Estate lifting barrier",
+			"descripcion": "Long aluminium arm across the vehicle lane at waist height; it comes out of a motor cabinet. The cane passes under the arm. It rises with a hum and comes down by itself.",
+			"etiquetas": ["lifting barrier", "boom gate", "vehicle barrier"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Estate lifting barrier”: a narrow cabinet on the left and a long thin arm reaching out of it to the right, 3.00 by 0.35 metres, hanging 0.90 metres above the floor, marked with the letters “Bu”."
+		},
+		"cancela_peatonal": {
+			"nombre": "Estate pedestrian gate",
+			"descripcion": "Barred iron gate in the street railings, with the entry phone on the pier beside it. It buzzes when someone opens from home and shuts by itself with a clang.",
+			"etiquetas": ["pedestrian gate", "garden gate", "entrance gate"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Estate pedestrian gate”: a rectangle, 1.00 by 0.06 metres, marked with the letters “Cp”."
+		}
+	}
+}

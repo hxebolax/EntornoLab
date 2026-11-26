@@ -1,0 +1,69 @@
+sounddevice 0.5.6. https://python-sounddevice.readthedocs.io
+Licencia: MIT.
+
+Incluye la biblioteca PortAudio (libportaudio64bit.dll), https://www.portaudio.com
+Copyright (c) 1999-2011 Ross Bencina and Phil Burk. Licencia MIT: el mismo texto de permiso
+que figura abajo, con ese aviso de copyright (https://www.portaudio.com/license.html).
+
+==============================================================================
+LICENSE de sounddevice
+==============================================================================
+
+Copyright (c) 2015-2025 Matthias Geier
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+==============================================================================
+README de los binarios de PortAudio
+==============================================================================
+
+PortAudio binaries
+==================
+
+This repository provides pre-compiled dynamic libraries for
+[PortAudio](http://www.portaudio.com/).
+
+DLLs for Windows (32-bit and 64-bit)
+------------------------------------
+
+There are two sets of DLL files,
+one including the default host APIs,
+namely MME, DirectSound, WDM/KS and WASAPI,
+and another one (`*-asio.dll`) where ASIO is enabled as well.
+For more information about the ASIO SDK see
+http://www.steinberg.net/en/company/developers.html.
+
+dylib for macOS (64-bit, "universal")
+----------------------------------------
+
+The file `libportaudio.dylib` is compatible both
+with Intel (`x86_64`) and with Apple Silicon (`arm64`) CPUs.
+
+Details
+-------
+
+All files were auto-created with Github Actions.
+For all the details, see [the config file](.github/workflows/build-libs.yml).
+
+Copyright
+---------
+
+* PortAudio by Ross Bencina and Phil Burk, MIT License.
+
+* Steinberg Audio Stream I/O API by Steinberg Media Technologies GmbH.

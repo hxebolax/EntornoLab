@@ -1,0 +1,5939 @@
+{
+	"formato": 1,
+	"id": "sanidad",
+	"nombre": "Sanidad",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Centro de salud, hospital, urgencias, farmacia, dentista y rehabilitación: salas de espera, consultas, habitaciones, pasillos con camillas, carros y sillas de ruedas, y los aparatos que suenan.",
+	"depende_de": ["comun", "hogar", "colegio", "oficina_y_comercio", "calle", "transporte", "juego"],
+	"categorias": {
+		"admision": "Admisión y sala de espera",
+		"consulta": "Consulta",
+		"hospitalizacion": "Hospitalización",
+		"pasillos": "Pasillos y equipos móviles",
+		"urgencias": "Urgencias, radiología y extracciones",
+		"farmacia": "Farmacia",
+		"dentista": "Dentista",
+		"rehabilitacion": "Rehabilitación y fisioterapia"
+	},
+	"subcategorias": {
+		"asientos_espera": "Asientos de espera",
+		"mostradores_admision": "Mostradores de admisión",
+		"turnos_avisos": "Turnos y avisos",
+		"higiene_manos": "Higiene de manos",
+		"para_la_espera": "Para pasar la espera",
+		"mesa_asientos_consulta": "Mesa y asientos de consulta",
+		"camillas_consulta": "Camillas de exploración",
+		"medida_diagnostico": "Aparatos de medida y diagnóstico",
+		"material_consulta": "Material y lavado",
+		"camas_hospital": "Camas y cunas",
+		"muebles_habitacion": "Muebles de la habitación",
+		"aparatos_cabecera": "Aparatos de cabecera",
+		"control_planta": "Control de planta",
+		"movilidad_personal": "Sillas de ruedas, andadores y muletas",
+		"camillas_carros": "Camillas y carros",
+		"pared_pasillo": "Paredes y puertas del pasillo",
+		"limpieza_residuos": "Limpieza y residuos",
+		"triaje_boxes": "Triaje y boxes",
+		"radiologia": "Radiología",
+		"extracciones_tratamiento": "Extracciones y tratamientos",
+		"mostradores_farmacia": "Mostradores de farmacia",
+		"expositores_rebotica": "Expositores y rebotica",
+		"servicios_farmacia": "Servicios al cliente",
+		"fachada_farmacia": "Fachada",
+		"equipo_dental": "Sillón y muebles",
+		"rayos_dental": "Rayos del dentista",
+		"marcha_equilibrio": "Marcha y equilibrio",
+		"camillas_fisioterapia": "Camillas de tratamiento",
+		"aparatos_ejercicio": "Aparatos de ejercicio",
+		"material_fisioterapia": "Material y aparatos sueltos"
+	},
+	"estados": {
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"apagado": "Apagado",
+		"encendido": "Encendido",
+		"san_recogido": "Recogido",
+		"san_reclinado": "Reclinado",
+		"funcionando": "Funcionando"
+	},
+	"objetos": [
+		{
+			"id": "bancada_espera",
+			"nombre": "Bancada de espera de centro de salud",
+			"categoria": "admision",
+			"subcategoria": "asientos_espera",
+			"etiquetas": ["bancada de espera", "asientos de sala de espera", "bancada de ambulatorio", "sillas en viga"],
+			"descripcion": "Asientos de chapa perforada unidos en una viga, contra la pared. Fríos y duros; los reposabrazos de los extremos sirven para contar plazas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.1, 1.7, 2.9],
+				"fondo": [0.6, 0.65, 0.7],
+				"alto": [0.78, 0.8, 0.85]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 1.15,
+					"fondo": 0.65,
+					"alto": 0.8
+				},
+				{
+					"id": "tres_plazas",
+					"nombre": "De tres plazas",
+					"ancho": 1.7,
+					"fondo": 0.65,
+					"alto": 0.8
+				},
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De cuatro plazas",
+					"ancho": 2.3,
+					"fondo": 0.65,
+					"alto": 0.8
+				},
+				{
+					"id": "cinco_plazas",
+					"nombre": "De cinco plazas",
+					"ancho": 2.85,
+					"fondo": 0.65,
+					"alto": 0.8
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["centro_salud", "hospital", "farmacia"],
+			"estancias": ["sala_espera", "pasillo", "urgencias"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["pantalla_turnos", "revistero_pared"],
+			"simbolo": {
+				"letra": "Be",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/bancada_espera.png",
+				"descripcion": "Huella en planta de «Bancada de espera de centro de salud»: un rectángulo de 1,70 por 0,65 metros, con la letra «Be»."
+			}
+		},
+		{
+			"id": "silla_alta_cadera",
+			"nombre": "Silla alta de cadera",
+			"categoria": "admision",
+			"subcategoria": "asientos_espera",
+			"etiquetas": ["silla alta de espera", "silla de cadera", "silla geriátrica alta"],
+			"descripcion": "Silla con el asiento más alto de lo normal y brazos firmes, para quien no puede doblar la cadera. Te sientas casi de pie.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [0.55, 0.6, 0.65],
+				"alto": [1.0, 1.05, 1.15]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_espera", "sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Sa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_alta_cadera.png",
+				"descripcion": "Huella en planta de «Silla alta de cadera»: un rectángulo de 0,60 por 0,60 metros, con la letra «Sa»."
+			}
+		},
+		{
+			"id": "mostrador_admision",
+			"nombre": "Mostrador de admisión",
+			"categoria": "admision",
+			"subcategoria": "mostradores_admision",
+			"etiquetas": ["admisión", "citaciones", "mostrador de citas", "ventanilla de admisión"],
+			"descripcion": "Mostrador largo de citas, alto para estar de pie y con un tramo bajo y retranqueado para silla de ruedas. Encima suele haber una mampara de cristal con hueco para hablar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.62, 1.0], [0.62, 0.7], [0.3, 0.7], [0.3, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.6, 2.4, 4.0],
+				"fondo": [0.7, 0.8, 1.0],
+				"alto": [1.05, 1.1, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "dos_puestos",
+					"nombre": "De dos puestos",
+					"ancho": 2.4,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "tres_puestos",
+					"nombre": "De tres puestos",
+					"ancho": 3.6,
+					"fondo": 0.8,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["recepcion", "ventanilla"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["linea_confidencialidad", "quiosco_citas"],
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_admision.png",
+				"descripcion": "Huella en planta de «Mostrador de admisión»: un rectángulo con una entrada en el frente: el tramo bajo, donde cabe una silla de ruedas de 2,40 por 0,80 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "linea_confidencialidad",
+			"nombre": "Línea de espera de confidencialidad",
+			"categoria": "admision",
+			"subcategoria": "mostradores_admision",
+			"etiquetas": ["línea de espera", "espere su turno aquí", "banda de confidencialidad"],
+			"descripcion": "Banda adhesiva con relieve en el suelo, a un par de pasos del mostrador: aquí se espera hasta que el de delante termina. Se nota con el pie y con el bastón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.05, 0.1, 0.15],
+				"alto": [0.002, 0.003, 0.005]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Línea de espera: aguarda aquí tu turno.",
+			"funcion": "referencia",
+			"lugares": ["centro_salud", "hospital", "farmacia"],
+			"estancias": ["recepcion", "ventanilla", "sala_ventas"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Lc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/linea_confidencialidad.png",
+				"descripcion": "Huella en planta de «Línea de espera de confidencialidad»: un rectángulo de 1,20 por 0,10 metros, con la letra «Lc»."
+			}
+		},
+		{
+			"id": "quiosco_citas",
+			"nombre": "Quiosco de citas con tarjeta sanitaria",
+			"categoria": "admision",
+			"subcategoria": "turnos_avisos",
+			"etiquetas": ["quiosco de citas", "máquina de turnos sanitaria", "autocita", "punto de admisión automática"],
+			"descripcion": "Máquina de pie junto a la entrada: se mete la tarjeta sanitaria en la ranura, a la altura de la cintura, pita y da un papel con el número de turno.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.45, 0.55, 0.7],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.3, 1.5, 1.7]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "san_pedir_cita",
+					"nombre": "Sacar el turno con la tarjeta sanitaria",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["recepcion", "sala_espera", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["pantalla_turnos"],
+			"simbolo": {
+				"letra": "Qc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/quiosco_citas.png",
+				"descripcion": "Huella en planta de «Quiosco de citas con tarjeta sanitaria»: un trapecio, más estrecho por detrás de 0,55 por 0,50 metros, con la letra «Qc»."
+			}
+		},
+		{
+			"id": "pantalla_turnos",
+			"nombre": "Pantalla de llamada de turnos",
+			"categoria": "admision",
+			"subcategoria": "turnos_avisos",
+			"etiquetas": ["pantalla de turnos", "llamada de pacientes", "monitor de turnos", "su turno"],
+			"descripcion": "Pantalla colgada del techo o de la pared, por encima de la cabeza. Cada poco suena din, don y dice un número y una consulta: sirve para situar la sala de espera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 1.0, 1.4],
+				"fondo": [0.08, 0.12, 0.2],
+				"alto": [0.4, 0.6, 0.8]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 1.9,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/sanidad_llamada_turno.flac",
+					"volumen": 0.5,
+					"radio": 12
+				}
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_espera", "urgencias"],
+			"obstaculo": "cabeza",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/pantalla_turnos.png",
+				"descripcion": "Huella en planta de «Pantalla de llamada de turnos»: un rectángulo de 1,00 por 0,12 metros, colgado a 1,90 metros del suelo, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "gel_pared",
+			"nombre": "Dispensador de gel en la pared",
+			"categoria": "admision",
+			"subcategoria": "higiene_manos",
+			"etiquetas": ["gel hidroalcohólico", "dispensador de gel", "desinfectante de manos", "dosificador"],
+			"descripcion": "Cajita de plástico atornillada a la pared a la altura del pecho, con una palanca debajo. Sobresale un palmo y el bastón no la encuentra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.12, 0.15],
+				"fondo": [0.1, 0.12, 0.2],
+				"alto": [0.2, 0.25, 0.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/sanidad_gel.flac"
+			},
+			"acciones": [
+				{
+					"id": "san_echar_gel",
+					"nombre": "Echarse gel en las manos",
+					"sonido": "sonidos/sanidad_gel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["centro_salud", "hospital", "farmacia", "residencia"],
+			"estancias": ["sala_espera", "pasillo", "consulta", "habitacion_hospital", "urgencias"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/gel_pared.png",
+				"descripcion": "Huella en planta de «Dispensador de gel en la pared»: un rectángulo de 0,12 por 0,12 metros, colgado a 1,00 metros del suelo, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "gel_pie",
+			"nombre": "Dispensador de gel de pie con pedal",
+			"categoria": "admision",
+			"subcategoria": "higiene_manos",
+			"etiquetas": ["gel de pedal", "columna de gel", "dispensador de pie", "tótem de gel"],
+			"descripcion": "Columna fina de metal sobre una base pesada, con el bote de gel arriba y un pedal abajo. Suele estar en mitad del paso, junto a la puerta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 0.2], [1.0, 0.8], [0.8, 1.0], [0.2, 1.0], [0.0, 0.8], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.4],
+				"fondo": [0.3, 0.35, 0.45],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "san_echar_gel",
+					"nombre": "Echarse gel en las manos",
+					"sonido": "sonidos/sanidad_gel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["centro_salud", "hospital", "farmacia"],
+			"estancias": ["vestibulo", "sala_espera", "entrada"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/gel_pie.png",
+				"descripcion": "Huella en planta de «Dispensador de gel de pie con pedal»: un rectángulo con las esquinas cortadas de 0,35 por 0,35 metros, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "revistero_pared",
+			"nombre": "Revistero de pared de sala de espera",
+			"categoria": "admision",
+			"subcategoria": "para_la_espera",
+			"etiquetas": ["revistero de pared", "portafolletos", "expositor de folletos"],
+			"descripcion": "Estante de varilla o metacrilato colgado de la pared, con folletos y revistas, de la cintura al pecho. Sobresale y el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.5, 0.9],
+				"fondo": [0.08, 0.12, 0.18],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_espera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rp",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/revistero_pared.png",
+				"descripcion": "Huella en planta de «Revistero de pared de sala de espera»: un rectángulo de 0,50 por 0,12 metros, colgado a 0,90 metros del suelo, con la letra «Rp»."
+			}
+		},
+		{
+			"id": "rincon_infantil",
+			"nombre": "Rincón infantil de sala de espera",
+			"categoria": "admision",
+			"subcategoria": "para_la_espera",
+			"etiquetas": ["rincón de juegos", "mesa infantil de pediatría", "laberinto de cuentas"],
+			"descripcion": "Mesita baja de plástico con sillitas pegadas y un juego de cuentas en alambres, en la espera de pediatría. Queda por debajo de la cadera: fácil de tropezar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.8],
+				"fondo": [0.9, 1.2, 1.5],
+				"alto": [0.45, 0.55, 0.7]
+			},
+			"colocacion": ["esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "hogar:juguetes.flac"
+			},
+			"acciones": [
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "hogar:juguetes.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_espera"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ri",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/rincon_infantil.png",
+				"descripcion": "Huella en planta de «Rincón infantil de sala de espera»: un rectángulo de esquinas redondeadas de 1,20 por 1,20 metros, con la letra «Ri»."
+			}
+		},
+		{
+			"id": "tensiometro_espera",
+			"nombre": "Tensiómetro de autoservicio con asiento",
+			"categoria": "admision",
+			"subcategoria": "para_la_espera",
+			"etiquetas": ["tensiómetro", "toma de tensión", "máquina de la tensión"],
+			"descripcion": "Puesto con un asiento y, a un lado, un tubo donde se mete el brazo. Al pulsar, el manguito aprieta, suelta el aire y pita tres veces.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [0.9, 1.0, 1.2],
+				"alto": [1.2, 1.4, 1.5]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/sanidad_tensiometro.flac"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "san_tomar_tension",
+					"nombre": "Tomarse la tensión",
+					"sonido": "sonidos/sanidad_tensiometro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "farmacia", "hospital"],
+			"estancias": ["sala_espera", "sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Te",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/tensiometro_espera.png",
+				"descripcion": "Huella en planta de «Tensiómetro de autoservicio con asiento»: un rectángulo de 0,70 por 1,00 metros, con la letra «Te»."
+			}
+		},
+		{
+			"id": "mesa_consulta",
+			"nombre": "Mesa de consulta médica",
+			"categoria": "consulta",
+			"subcategoria": "mesa_asientos_consulta",
+			"etiquetas": ["mesa de consulta", "mesa del médico", "mesa de despacho médico"],
+			"descripcion": "Mesa del médico, con el ordenador a un lado y cajones. El paciente se sienta enfrente; la camilla suele quedar a la espalda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.4, 1.8],
+				"fondo": [0.7, 0.8, 0.9],
+				"alto": [0.72, 0.75, 0.78]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "Pequeña",
+					"ancho": 1.2,
+					"fondo": 0.7,
+					"alto": 0.75
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 1.4,
+					"fondo": 0.8,
+					"alto": 0.75
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 1.6,
+					"fondo": 0.8,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["sillas_paciente", "taburete_medico", "camilla_exploracion"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_consulta.png",
+				"descripcion": "Huella en planta de «Mesa de consulta médica»: un rectángulo de 1,40 por 0,80 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "sillas_paciente",
+			"nombre": "Sillas del paciente y el acompañante",
+			"categoria": "consulta",
+			"subcategoria": "mesa_asientos_consulta",
+			"etiquetas": ["sillas de consulta", "sillas del paciente", "asientos de consulta"],
+			"descripcion": "Dos sillas iguales, una junto a otra, delante de la mesa del médico. Ligeras: se mueven al apartarlas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.15, 1.4],
+				"fondo": [0.5, 0.55, 0.6],
+				"alto": [0.8, 0.85, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_consulta"],
+			"simbolo": {
+				"letra": "Sp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillas_paciente.png",
+				"descripcion": "Huella en planta de «Sillas del paciente y el acompañante»: un rectángulo de 1,15 por 0,55 metros, con la letra «Sp»."
+			}
+		},
+		{
+			"id": "taburete_medico",
+			"nombre": "Taburete de médico con ruedas",
+			"categoria": "consulta",
+			"subcategoria": "mesa_asientos_consulta",
+			"etiquetas": ["taburete con ruedas", "taburete giratorio", "taburete clínico"],
+			"descripcion": "Taburete redondo, sin respaldo, sobre cinco ruedas: si lo empujas, se va rodando. Está junto a la camilla o al sillón del dentista.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.55],
+				"fondo": [0.35, 0.4, 0.55],
+				"alto": [0.45, 0.5, 0.65]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "oficina_y_comercio:silla_ruedas.flac"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias", "sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["camilla_exploracion"],
+			"simbolo": {
+				"letra": "Tm",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/taburete_medico.png",
+				"descripcion": "Huella en planta de «Taburete de médico con ruedas»: un círculo de 0,40 por 0,40 metros, con la letra «Tm»."
+			}
+		},
+		{
+			"id": "camilla_exploracion",
+			"nombre": "Camilla de exploración",
+			"categoria": "consulta",
+			"subcategoria": "camillas_consulta",
+			"etiquetas": ["camilla", "camilla de consulta", "mesa de exploración"],
+			"descripcion": "Camilla alta y estrecha, acolchada, sobre patas de metal y cubierta con papel que cruje. Se rodea por los lados; debajo queda hueco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.65, 0.75],
+				"fondo": [1.8, 1.9, 2.0],
+				"alto": [0.6, 0.75, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "fija",
+					"nombre": "Fija",
+					"ancho": 0.65,
+					"fondo": 1.9,
+					"alto": 0.75
+				},
+				{
+					"id": "electrica",
+					"nombre": "Eléctrica, regulable",
+					"ancho": 0.7,
+					"fondo": 2.0,
+					"alto": 0.8
+				},
+				{
+					"id": "pediatrica",
+					"nombre": "Pediátrica",
+					"ancho": 0.6,
+					"fondo": 1.8,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "calle:papel.flac"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["escalerilla_camilla", "biombo_clinico", "taburete_medico"],
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/camilla_exploracion.png",
+				"descripcion": "Huella en planta de «Camilla de exploración»: un rectángulo de 0,65 por 1,90 metros, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "camilla_ginecologica",
+			"nombre": "Sillón ginecológico",
+			"categoria": "consulta",
+			"subcategoria": "camillas_consulta",
+			"etiquetas": ["sillón ginecológico", "camilla ginecológica", "potro ginecológico"],
+			"descripcion": "Sillón de exploración con dos perneras de metal que se abren hacia delante a la altura de la cadera. Las perneras sobresalen y el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.25, 0.0], [0.75, 0.0], [0.75, 0.6], [1.0, 0.9], [0.85, 1.0], [0.6, 0.75], [0.4, 0.75], [0.15, 1.0], [0.0, 0.9], [0.25, 0.6]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.1],
+				"fondo": [1.3, 1.7, 2.0],
+				"alto": [0.8, 0.9, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"relacionados": ["taburete_medico", "lampara_exploracion"],
+			"simbolo": {
+				"letra": "Cg",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/camilla_ginecologica.png",
+				"descripcion": "Huella en planta de «Sillón ginecológico»: un cuerpo detrás y dos perneras que se abren hacia delante de 0,90 por 1,70 metros, con la letra «Cg»."
+			}
+		},
+		{
+			"id": "escalerilla_camilla",
+			"nombre": "Escalerilla de dos peldaños",
+			"categoria": "consulta",
+			"subcategoria": "camillas_consulta",
+			"etiquetas": ["escalerilla", "peldaños de camilla", "banqueta de dos peldaños"],
+			"descripcion": "Dos peldaños de metal con goma, al pie de la camilla, para subirse. Bajos y sueltos: se tropieza con ellos y se desplazan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.38, 0.45, 0.5],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.3, 0.38, 0.45]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias", "habitacion_hospital"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel", "movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["camilla_exploracion"],
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalerilla_camilla.png",
+				"descripcion": "Huella en planta de «Escalerilla de dos peldaños»: un rectángulo de 0,45 por 0,50 metros, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "biombo_clinico",
+			"nombre": "Biombo clínico con ruedas",
+			"categoria": "consulta",
+			"subcategoria": "camillas_consulta",
+			"etiquetas": ["biombo", "biombo de consulta", "biombo de tres hojas"],
+			"descripcion": "Biombo de hojas de tela en bastidor de tubo, en zigzag, que tapa la camilla. Ligero: cede y rueda si te apoyas en él.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.7], [0.33, 0.0], [0.67, 0.7], [1.0, 0.0], [1.0, 0.3], [0.67, 1.0], [0.33, 0.3], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.2],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [1.6, 1.7, 1.9]
+			},
+			"variantes": [
+				{
+					"id": "dos_hojas",
+					"nombre": "De dos hojas",
+					"ancho": 1.2,
+					"fondo": 0.4,
+					"alto": 1.7
+				},
+				{
+					"id": "tres_hojas",
+					"nombre": "De tres hojas",
+					"ancho": 1.6,
+					"fondo": 0.4,
+					"alto": 1.7
+				},
+				{
+					"id": "cuatro_hojas",
+					"nombre": "De cuatro hojas",
+					"ancho": 2.2,
+					"fondo": 0.45,
+					"alto": 1.7
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "oficina_y_comercio:cortina.flac"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias", "sala_rehabilitacion"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["camilla_exploracion"],
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/biombo_clinico.png",
+				"descripcion": "Huella en planta de «Biombo clínico con ruedas»: un zigzag de tres hojas de 1,60 por 0,40 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "bascula_tallimetro",
+			"nombre": "Báscula con tallímetro",
+			"categoria": "consulta",
+			"subcategoria": "medida_diagnostico",
+			"etiquetas": ["báscula", "peso", "tallímetro", "báscula de consulta"],
+			"descripcion": "Plataforma baja de metal con una columna y una regla que sube por encima de la cabeza. La plataforma baila un poco al pisarla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.55],
+				"fondo": [0.45, 0.55, 0.65],
+				"alto": [1.9, 2.1, 2.2]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "san_pesarse",
+					"nombre": "Pesarse",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Bt",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/bascula_tallimetro.png",
+				"descripcion": "Huella en planta de «Báscula con tallímetro»: un rectángulo de 0,35 por 0,55 metros, con la letra «Bt»."
+			}
+		},
+		{
+			"id": "pesabebes",
+			"nombre": "Pesabebés sobre su mueble",
+			"categoria": "consulta",
+			"subcategoria": "medida_diagnostico",
+			"etiquetas": ["pesabebés", "báscula de bebés", "mueble de pediatría"],
+			"descripcion": "Mueble a la altura de la cintura con una bandeja curva de plástico encima, donde se tumba al bebé para pesarlo. Debajo, cajones.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [0.95, 1.0, 1.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "san_pesarse",
+					"nombre": "Pesarse",
+					"sonido": "transporte:bip_validacion.flac"
+				},
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital", "farmacia"],
+			"estancias": ["consulta"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/pesabebes.png",
+				"descripcion": "Huella en planta de «Pesabebés sobre su mueble»: un rectángulo de 0,90 por 0,60 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "negatoscopio",
+			"nombre": "Negatoscopio de pared",
+			"categoria": "consulta",
+			"subcategoria": "medida_diagnostico",
+			"etiquetas": ["negatoscopio", "caja de luz", "visor de radiografías"],
+			"descripcion": "Caja de luz plana colgada de la pared a la altura de la cara, para mirar radiografías. Encendida, zumba bajito. El bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.8, 1.6],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.45, 0.5, 0.6]
+			},
+			"variantes": [
+				{
+					"id": "un_cuerpo",
+					"nombre": "De un cuerpo",
+					"ancho": 0.4,
+					"fondo": 0.1,
+					"alto": 0.5
+				},
+				{
+					"id": "dos_cuerpos",
+					"nombre": "De dos cuerpos",
+					"ancho": 0.8,
+					"fondo": 0.1,
+					"alto": 0.5
+				},
+				{
+					"id": "cuatro_cuerpos",
+					"nombre": "De cuatro cuerpos",
+					"ancho": 1.6,
+					"fondo": 0.1,
+					"alto": 0.5
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.3,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.15,
+					"radio": 2,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ne",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/negatoscopio.png",
+				"descripcion": "Huella en planta de «Negatoscopio de pared»: un rectángulo de 0,80 por 0,10 metros, colgado a 1,30 metros del suelo, con la letra «Ne»."
+			}
+		},
+		{
+			"id": "estacion_diagnostico",
+			"nombre": "Estación de diagnóstico de pared",
+			"categoria": "consulta",
+			"subcategoria": "medida_diagnostico",
+			"etiquetas": ["estación de diagnóstico", "tensiómetro de pared", "otoscopio de pared"],
+			"descripcion": "Panel en la pared, sobre la camilla, con el tensiómetro, el otoscopio y sus cables en espiral colgando. A la altura del hombro; el bastón no lo toca.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 0.9],
+				"fondo": [0.1, 0.12, 0.2],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "san_tomar_tension",
+					"nombre": "Tomarse la tensión",
+					"sonido": "sonidos/sanidad_tensiometro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"relacionados": ["camilla_exploracion"],
+			"simbolo": {
+				"letra": "Ed",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/estacion_diagnostico.png",
+				"descripcion": "Huella en planta de «Estación de diagnóstico de pared»: un rectángulo de 0,70 por 0,12 metros, colgado a 1,20 metros del suelo, con la letra «Ed»."
+			}
+		},
+		{
+			"id": "ecografo",
+			"nombre": "Ecógrafo con ruedas",
+			"categoria": "consulta",
+			"subcategoria": "medida_diagnostico",
+			"etiquetas": ["ecógrafo", "ecografía", "aparato de ecografías"],
+			"descripcion": "Aparato del tamaño de un carro alto, con teclado a la altura de la cintura y una pantalla arriba en un brazo. Encendido, sopla un ventilador.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.7, 0.9, 1.1],
+				"alto": [1.3, 1.5, 1.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.25,
+					"radio": 4,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["camilla_exploracion"],
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/ecografo.png",
+				"descripcion": "Huella en planta de «Ecógrafo con ruedas»: un rectángulo de 0,60 por 0,90 metros, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "lampara_exploracion",
+			"nombre": "Lámpara de exploración con brazo",
+			"categoria": "consulta",
+			"subcategoria": "medida_diagnostico",
+			"etiquetas": ["lámpara de exploración", "flexo de pie", "lámpara de reconocimiento"],
+			"descripcion": "Base con ruedas y un tubo del que sale un brazo flexible con la pantalla en la punta, a la altura de la cabeza. La base se detecta; el brazo, no.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.25, 0.0], [0.75, 0.0], [1.0, 0.15], [1.0, 0.4], [0.75, 0.55], [0.6, 0.55], [0.6, 0.8], [0.75, 0.8], [0.75, 1.0], [0.25, 1.0], [0.25, 0.8], [0.4, 0.8], [0.4, 0.55], [0.25, 0.55], [0.0, 0.4], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.6, 0.9, 1.1],
+				"alto": [1.5, 1.8, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["camilla_exploracion"],
+			"simbolo": {
+				"letra": "Le",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/lampara_exploracion.png",
+				"descripcion": "Huella en planta de «Lámpara de exploración con brazo»: una base redondeada detrás y un brazo que sale hacia delante y acaba en la pantalla de 0,60 por 0,90 metros, con la letra «Le»."
+			}
+		},
+		{
+			"id": "cabina_audiometria",
+			"nombre": "Cabina de audiometría",
+			"categoria": "consulta",
+			"subcategoria": "medida_diagnostico",
+			"etiquetas": ["cabina de audiometría", "cabina insonorizada", "prueba de oído"],
+			"descripcion": "Caja insonorizada del tamaño de un armario grande, con una puerta gruesa y un escalón al entrar. Dentro no se oye nada de fuera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 2.0],
+				"fondo": [1.0, 1.2, 2.0],
+				"alto": [2.0, 2.2, 2.4]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabina_audiometria.png",
+				"descripcion": "Huella en planta de «Cabina de audiometría»: un rectángulo de 1,20 por 1,20 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "lavamanos_clinico",
+			"nombre": "Lavamanos clínico de pared",
+			"categoria": "consulta",
+			"subcategoria": "material_consulta",
+			"etiquetas": ["lavamanos clínico", "lavabo de consulta", "pila de consulta", "grifo de codo"],
+			"descripcion": "Pila pequeña colgada de la pared, sin pie, con un grifo largo que se abre con el codo. Debajo queda hueco: el bastón no la avisa.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.35, 0.42, 0.5],
+				"alto": [0.2, 0.25, 0.35]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.65,
+			"detectable_baston": false,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.4,
+					"radio": 4,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias", "habitacion_hospital"],
+			"obstaculo": "voladizo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Lc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/lavamanos_clinico.png",
+				"descripcion": "Huella en planta de «Lavamanos clínico de pared»: un rectángulo de 0,50 por 0,42 metros, colgado a 0,65 metros del suelo, con la letra «Lc»."
+			}
+		},
+		{
+			"id": "vitrina_material",
+			"nombre": "Vitrina de material clínico",
+			"categoria": "consulta",
+			"subcategoria": "material_consulta",
+			"etiquetas": ["vitrina de consulta", "vitrina clínica", "botiquín de consulta"],
+			"descripcion": "Vitrina alta de metal con puertas de cristal y estantes con vendas y frascos. Lisa y fría; el cristal vibra al golpearla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.0],
+				"fondo": [0.35, 0.4, 0.45],
+				"alto": [1.5, 1.7, 1.9]
+			},
+			"variantes": [
+				{
+					"id": "una_puerta",
+					"nombre": "De una puerta",
+					"ancho": 0.5,
+					"fondo": 0.4,
+					"alto": 1.7
+				},
+				{
+					"id": "dos_puertas",
+					"nombre": "De dos puertas",
+					"ancho": 0.8,
+					"fondo": 0.4,
+					"alto": 1.7
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Vm",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/vitrina_material.png",
+				"descripcion": "Huella en planta de «Vitrina de material clínico»: un rectángulo de 0,80 por 0,40 metros, con la letra «Vm»."
+			}
+		},
+		{
+			"id": "carro_curas",
+			"nombre": "Carro de curas",
+			"categoria": "consulta",
+			"subcategoria": "material_consulta",
+			"etiquetas": ["carro de curas", "carrito de enfermería", "mesa de curas"],
+			"descripcion": "Carro de acero con dos bandejas y un cajón, a la altura de la cintura. Al chocar tintinea el instrumental y el carro rueda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.6, 0.9],
+				"fondo": [0.4, 0.45, 0.55],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "sonidos/sanidad_carro_clinico.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta", "urgencias", "pasillo"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_curas.png",
+				"descripcion": "Huella en planta de «Carro de curas»: un rectángulo de 0,60 por 0,45 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "frigorifico_vacunas",
+			"nombre": "Frigorífico de vacunas",
+			"categoria": "consulta",
+			"subcategoria": "material_consulta",
+			"etiquetas": ["frigorífico de vacunas", "nevera de medicamentos", "frigorífico de farmacia"],
+			"descripcion": "Frigorífico pequeño de chapa, con cerradura, donde se guardan vacunas e insulinas. Zumba todo el rato y a veces pita la alarma de temperatura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.55, 0.6, 0.7],
+				"alto": [0.8, 0.85, 1.9]
+			},
+			"variantes": [
+				{
+					"id": "bajo",
+					"nombre": "Bajo",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 0.85
+				},
+				{
+					"id": "columna",
+					"nombre": "De columna",
+					"ancho": 0.6,
+					"fondo": 0.65,
+					"alto": 1.85
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.4,
+					"radio": 5
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "electrodomestico",
+			"lugares": ["centro_salud", "hospital", "farmacia"],
+			"estancias": ["consulta", "trastienda"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Fv",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/frigorifico_vacunas.png",
+				"descripcion": "Huella en planta de «Frigorífico de vacunas»: un rectángulo de 0,60 por 0,60 metros, con la letra «Fv»."
+			}
+		},
+		{
+			"id": "cama_hospital",
+			"nombre": "Cama de hospital articulada",
+			"categoria": "hospitalizacion",
+			"subcategoria": "camas_hospital",
+			"etiquetas": ["cama de hospital", "cama articulada", "cama hospitalaria", "cama con barandillas"],
+			"descripcion": "Cama alta de metal con ruedas frenadas, barandillas abatibles a los lados y un mando que sube el cabecero zumbando. El cabecero va contra la pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.04], [0.95, 0.04], [0.95, 0.96], [1.0, 0.96], [1.0, 1.0], [0.0, 1.0], [0.0, 0.96], [0.05, 0.96], [0.05, 0.04], [0.0, 0.04]]
+			},
+			"medidas": {
+				"ancho": [0.95, 1.0, 1.25],
+				"fondo": [2.1, 2.2, 2.3],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 1.0,
+					"fondo": 2.2,
+					"alto": 1.0
+				},
+				{
+					"id": "bariatrica",
+					"nombre": "Bariátrica, ancha",
+					"ancho": 1.2,
+					"fondo": 2.2,
+					"alto": 1.0
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "san_subir_cabecero",
+					"nombre": "Subir el cabecero",
+					"sonido": "sonidos/sanidad_cama_motor.flac"
+				},
+				{
+					"id": "san_llamar_enfermera",
+					"nombre": "Llamar a enfermería",
+					"sonido": "sonidos/sanidad_timbre_enfermera.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["habitacion_hospital"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesilla_hospitalaria", "mesa_cama", "cabecero_tecnico", "portasueros", "sillon_acompanante"],
+			"simbolo": {
+				"letra": "Ch",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cama_hospital.png",
+				"descripcion": "Huella en planta de «Cama de hospital articulada»: un rectángulo largo con el cabecero y el piecero un poco más anchos de 1,00 por 2,20 metros, con la letra «Ch»."
+			}
+		},
+		{
+			"id": "cuna_hospital",
+			"nombre": "Cuna hospitalaria",
+			"categoria": "hospitalizacion",
+			"subcategoria": "camas_hospital",
+			"etiquetas": ["cuna de hospital", "cuna de pediatría", "cuna de barrotes altos"],
+			"descripcion": "Cuna de metal con ruedas y barrotes altos, hasta el pecho de un adulto. Un lateral baja con un chasquido.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.75, 0.85],
+				"fondo": [1.3, 1.5, 1.7],
+				"alto": [1.3, 1.45, 1.6]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["hospital"],
+			"estancias": ["habitacion_hospital"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ch",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuna_hospital.png",
+				"descripcion": "Huella en planta de «Cuna hospitalaria»: un rectángulo de 0,75 por 1,50 metros, con la letra «Ch»."
+			}
+		},
+		{
+			"id": "incubadora",
+			"nombre": "Incubadora",
+			"categoria": "hospitalizacion",
+			"subcategoria": "camas_hospital",
+			"etiquetas": ["incubadora", "cuna térmica", "neonatos"],
+			"descripcion": "Cúpula de plástico transparente sobre un mueble con ruedas, a la altura del pecho. Sopla aire templado y pita suave con el latido del bebé.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.984, 0.84], [0.935, 0.935], [0.84, 0.984], [0.5, 1.0], [0.16, 0.984], [0.065, 0.935], [0.016, 0.84], [0.0, 0.5], [0.016, 0.16], [0.065, 0.065], [0.16, 0.016], [0.5, 0.0], [0.84, 0.016], [0.935, 0.065], [0.984, 0.16]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.65, 0.8],
+				"fondo": [1.0, 1.1, 1.3],
+				"alto": [1.3, 1.4, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/sanidad_monitor_cardiaco.flac",
+					"volumen": 0.3,
+					"radio": 6
+				}
+			},
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital"],
+			"estancias": ["habitacion_hospital"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "In",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/incubadora.png",
+				"descripcion": "Huella en planta de «Incubadora»: un rectángulo de esquinas redondeadas de 0,65 por 1,10 metros, con la letra «In»."
+			}
+		},
+		{
+			"id": "mesilla_hospitalaria",
+			"nombre": "Mesilla hospitalaria con ruedas",
+			"categoria": "hospitalizacion",
+			"subcategoria": "muebles_habitacion",
+			"etiquetas": ["mesilla de hospital", "mesita hospitalaria", "mesilla con ruedas"],
+			"descripcion": "Mesilla de plástico con ruedas junto al cabecero, con un cajón, una puerta y un tablero abatible a un lado. Se mueve si te apoyas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.42, 0.45, 0.55],
+				"fondo": [0.42, 0.45, 0.5],
+				"alto": [0.8, 0.85, 0.95]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["habitacion_hospital"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama_hospital"],
+			"simbolo": {
+				"letra": "Mh",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesilla_hospitalaria.png",
+				"descripcion": "Huella en planta de «Mesilla hospitalaria con ruedas»: un rectángulo de 0,45 por 0,45 metros, con la letra «Mh»."
+			}
+		},
+		{
+			"id": "mesa_cama",
+			"nombre": "Mesa de cama con ruedas",
+			"categoria": "hospitalizacion",
+			"subcategoria": "muebles_habitacion",
+			"etiquetas": ["mesa de cama", "mesa atril de hospital", "mesa de comer en la cama"],
+			"descripcion": "Tablero estrecho sobre una columna lateral con patas en C: las patas se meten bajo la cama y el tablero vuela por encima. El bastón entra por debajo del tablero.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.25], [0.15, 0.25], [0.15, 0.75], [1.0, 0.75], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 0.9],
+				"fondo": [0.38, 0.42, 0.5],
+				"alto": [0.75, 0.9, 1.15]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["habitacion_hospital"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama_hospital"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_cama.png",
+				"descripcion": "Huella en planta de «Mesa de cama con ruedas»: una C: la columna a un lado y dos patas con ruedas que se meten bajo la cama de 0,80 por 0,42 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "sillon_acompanante",
+			"nombre": "Sillón de acompañante reclinable",
+			"categoria": "hospitalizacion",
+			"subcategoria": "muebles_habitacion",
+			"etiquetas": ["sillón de acompañante", "sillón reclinable de hospital", "sillón de paciente"],
+			"descripcion": "Sillón de escay con brazos, junto a la cama. Reclinado saca un reposapiés por delante y ocupa casi el doble: cambia de tamaño de un día a otro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.75, 0.85],
+				"fondo": [0.8, 0.85, 1.7],
+				"alto": [0.75, 1.1, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "recogido",
+					"nombre": "Recogido",
+					"ancho": 0.75,
+					"fondo": 0.85,
+					"alto": 1.1
+				},
+				{
+					"id": "reclinado",
+					"nombre": "Reclinado, con reposapiés",
+					"ancho": 0.75,
+					"fondo": 1.65,
+					"alto": 0.8
+				}
+			],
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["san_recogido", "san_reclinado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "san_reclinar",
+					"nombre": "Reclinar",
+					"de": "san_recogido",
+					"a": "san_reclinado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "san_incorporar",
+					"nombre": "Poner derecho",
+					"de": "san_reclinado",
+					"a": "san_recogido"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["habitacion_hospital"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama_hospital"],
+			"simbolo": {
+				"letra": "Sa",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon_acompanante.png",
+				"descripcion": "Huella en planta de «Sillón de acompañante reclinable»: un rectángulo de 0,75 por 0,85 metros, con la letra «Sa»."
+			}
+		},
+		{
+			"id": "armario_habitacion",
+			"nombre": "Armario de habitación de hospital",
+			"categoria": "hospitalizacion",
+			"subcategoria": "muebles_habitacion",
+			"etiquetas": ["armario de hospital", "taquilla del paciente", "armario de habitación"],
+			"descripcion": "Armario estrecho y alto, de una o dos puertas, junto a la entrada de la habitación: uno por cama. La puerta abre hacia el paso.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.9],
+				"fondo": [0.5, 0.55, 0.6],
+				"alto": [1.8, 1.95, 2.1]
+			},
+			"variantes": [
+				{
+					"id": "una_puerta",
+					"nombre": "De una puerta",
+					"ancho": 0.5,
+					"fondo": 0.55,
+					"alto": 1.95
+				},
+				{
+					"id": "dos_puertas",
+					"nombre": "De dos puertas",
+					"ancho": 0.9,
+					"fondo": 0.55,
+					"alto": 1.95
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["habitacion_hospital"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ah",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_habitacion.png",
+				"descripcion": "Huella en planta de «Armario de habitación de hospital»: un rectángulo de 0,50 por 0,55 metros, con la letra «Ah»."
+			}
+		},
+		{
+			"id": "cortina_cama",
+			"nombre": "Cortina separadora entre camas",
+			"categoria": "hospitalizacion",
+			"subcategoria": "muebles_habitacion",
+			"etiquetas": ["cortina de hospital", "cortina separadora", "cortina de cama"],
+			"descripcion": "Cortina que cuelga de un riel del techo y separa dos camas. Blanda: cede al tocarla y las anillas suenan al correrla. Corrida, deja pasar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [0.05, 0.08, 0.15],
+				"alto": [1.8, 2.0, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "oficina_y_comercio:cortina.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["hospital"],
+			"estancias": ["habitacion_hospital", "urgencias", "sala_rehabilitacion"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cortina_cama.png",
+				"descripcion": "Huella en planta de «Cortina separadora entre camas»: un rectángulo de 2,00 por 0,08 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "tv_hospital",
+			"nombre": "Televisor de habitación en brazo de pared",
+			"categoria": "hospitalizacion",
+			"subcategoria": "muebles_habitacion",
+			"etiquetas": ["televisor de hospital", "televisión de pago", "televisor de pared"],
+			"descripcion": "Televisor colgado de un brazo que sale de la pared, por encima de la cabeza, a los pies de la cama. Encendido se oye desde el pasillo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [0.35, 0.4, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.7,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/television",
+					"volumen": 0.4,
+					"radio": 7,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["habitacion_hospital", "sala_espera"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Th",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/tv_hospital.png",
+				"descripcion": "Huella en planta de «Televisor de habitación en brazo de pared»: un rectángulo de 0,60 por 0,40 metros, colgado a 1,70 metros del suelo, con la letra «Th»."
+			}
+		},
+		{
+			"id": "portasueros",
+			"nombre": "Gotero con ruedas",
+			"categoria": "hospitalizacion",
+			"subcategoria": "aparatos_cabecera",
+			"etiquetas": ["gotero", "portasueros", "palo de suero", "pie de gotero"],
+			"descripcion": "Palo fino de metal sobre cinco patas con ruedas, con las bolsas de suero colgando arriba. El bastón da en las patas antes que en el palo; rueda si lo empujas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 1.0], [0.392, 0.604], [0.0, 0.618], [0.325, 0.387], [0.191, 0.0], [0.5, 0.254], [0.809, 0.0], [0.675, 0.387], [1.0, 0.618], [0.608, 0.604]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.55, 0.65],
+				"fondo": [0.5, 0.55, 0.65],
+				"alto": [1.7, 2.0, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["habitacion_hospital", "pasillo", "urgencias"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama_hospital", "bomba_infusion"],
+			"simbolo": {
+				"letra": "Po",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/portasueros.png",
+				"descripcion": "Huella en planta de «Gotero con ruedas»: una estrella de 5 puntas de 0,55 por 0,55 metros, con la letra «Po»."
+			}
+		},
+		{
+			"id": "bomba_infusion",
+			"nombre": "Columna de bombas de infusión",
+			"categoria": "hospitalizacion",
+			"subcategoria": "aparatos_cabecera",
+			"etiquetas": ["bomba de infusión", "bomba de perfusión", "bomba de suero"],
+			"descripcion": "Gotero pesado con una o varias cajas a media altura que dosifican el suero. Hace un clic cada segundo y, cuando se acaba la bolsa, pita tres veces. Lleva un cable hasta el enchufe.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 1.0], [0.0, 0.618], [0.191, 0.0], [0.809, 0.0], [1.0, 0.618]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [0.55, 0.6, 0.7],
+				"alto": [1.6, 1.8, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/sanidad_bomba_infusion.flac",
+					"volumen": 0.35,
+					"radio": 7,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital"],
+			"estancias": ["habitacion_hospital", "urgencias"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["cama_hospital"],
+			"simbolo": {
+				"letra": "Bi",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/bomba_infusion.png",
+				"descripcion": "Huella en planta de «Columna de bombas de infusión»: un pentágono: cinco patas con ruedas de 0,60 por 0,60 metros, con la letra «Bi»."
+			}
+		},
+		{
+			"id": "monitor_constantes",
+			"nombre": "Monitor de constantes en su pie",
+			"categoria": "hospitalizacion",
+			"subcategoria": "aparatos_cabecera",
+			"etiquetas": ["monitor de constantes", "monitor cardíaco", "monitor de paciente"],
+			"descripcion": "Pantalla del tamaño de una caja de zapatos sobre un pie con ruedas, con cables hasta el paciente. Pita con cada latido: se oye desde la puerta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [1.2, 1.35, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/sanidad_monitor_cardiaco.flac",
+					"volumen": 0.4,
+					"radio": 8,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital"],
+			"estancias": ["habitacion_hospital", "urgencias"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["cama_hospital"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/monitor_constantes.png",
+				"descripcion": "Huella en planta de «Monitor de constantes en su pie»: un círculo de 0,50 por 0,50 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "cabecero_tecnico",
+			"nombre": "Cabecero técnico de pared",
+			"categoria": "hospitalizacion",
+			"subcategoria": "aparatos_cabecera",
+			"etiquetas": ["cabecero técnico", "cabecero de tomas", "tomas de oxígeno", "timbre de enfermería"],
+			"descripcion": "Canal de aluminio a lo ancho de la pared, sobre la cabecera, con enchufes, luz, tomas de oxígeno y el timbre de enfermería. Queda a la altura de la cabeza de quien está de pie.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 3.0],
+				"fondo": [0.08, 0.12, 0.2],
+				"alto": [0.2, 0.3, 0.45]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.45,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "san_llamar_enfermera",
+					"nombre": "Llamar a enfermería",
+					"sonido": "sonidos/sanidad_timbre_enfermera.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital"],
+			"estancias": ["habitacion_hospital", "urgencias"],
+			"obstaculo": "cabeza",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama_hospital"],
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabecero_tecnico.png",
+				"descripcion": "Huella en planta de «Cabecero técnico de pared»: un rectángulo de 1,80 por 0,12 metros, colgado a 1,45 metros del suelo, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "control_enfermeria",
+			"nombre": "Control de enfermería",
+			"categoria": "hospitalizacion",
+			"subcategoria": "control_planta",
+			"etiquetas": ["control de enfermería", "puesto de enfermería", "mostrador de planta"],
+			"descripcion": "Mostrador grande en U en mitad de la planta, alto por fuera, con el personal dentro. Suenan timbres y teléfonos: es la referencia para orientarse en el pasillo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.2, 0.0], [0.2, 0.7], [0.8, 0.7], [0.8, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.5, 3.5, 5.0],
+				"fondo": [1.5, 2.0, 3.0],
+				"alto": [1.05, 1.1, 1.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "sonidos/sanidad_timbre_enfermera.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["pasillo", "recepcion"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["carro_medicacion", "carro_paradas"],
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/control_enfermeria.png",
+				"descripcion": "Huella en planta de «Control de enfermería»: una U abierta por detrás, por donde entra el personal de 3,50 por 2,00 metros, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "silla_ruedas_abierta",
+			"nombre": "Silla de ruedas aparcada",
+			"categoria": "pasillos",
+			"subcategoria": "movilidad_personal",
+			"etiquetas": ["silla de ruedas", "silla de ruedas abierta", "carrito de inválido"],
+			"descripcion": "Silla de ruedas abierta y vacía, dejada en el pasillo. Los reposapiés sobresalen por delante, a ras de suelo, y los puños por detrás a la altura de la cintura. Si no está frenada, rueda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.05], [0.12, 0.0], [0.88, 0.0], [1.0, 0.05], [1.0, 0.6], [0.85, 0.65], [0.8, 1.0], [0.2, 1.0], [0.15, 0.65], [0.0, 0.6]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.65, 0.75],
+				"fondo": [1.0, 1.05, 1.2],
+				"alto": [0.9, 0.95, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["pasillo", "sala_espera", "vestibulo", "habitacion_hospital"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Sr",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_ruedas_abierta.png",
+				"descripcion": "Huella en planta de «Silla de ruedas aparcada»: un cuerpo ancho detrás, con las ruedas grandes, que se estrecha delante en los reposapiés de 0,65 por 1,05 metros, con la letra «Sr»."
+			}
+		},
+		{
+			"id": "silla_ruedas_plegada",
+			"nombre": "Silla de ruedas plegada",
+			"categoria": "pasillos",
+			"subcategoria": "movilidad_personal",
+			"etiquetas": ["silla de ruedas plegada", "silla de ruedas cerrada"],
+			"descripcion": "Silla de ruedas cerrada, apoyada contra la pared: un bulto estrecho y largo de tubos y dos ruedas grandes. Se vuelca si la enganchas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.28, 0.3, 0.38],
+				"fondo": [1.0, 1.05, 1.1],
+				"alto": [0.9, 0.95, 1.0]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["hospital", "centro_salud", "residencia", "vivienda"],
+			"estancias": ["pasillo", "entrada", "habitacion_hospital"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Sr",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_ruedas_plegada.png",
+				"descripcion": "Huella en planta de «Silla de ruedas plegada»: un rectángulo de 0,30 por 1,05 metros, con la letra «Sr»."
+			}
+		},
+		{
+			"id": "sillas_ruedas_prestamo",
+			"nombre": "Sillas de ruedas de préstamo en fila",
+			"categoria": "pasillos",
+			"subcategoria": "movilidad_personal",
+			"etiquetas": ["sillas de ruedas de préstamo", "sillas de cortesía", "sillas de ruedas con moneda"],
+			"descripcion": "Sillas de ruedas encajadas unas en otras junto a la entrada del hospital, como los carros de un supermercado, con cadena y moneda.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.65, 0.7, 0.8],
+				"fondo": [1.5, 2.5, 4.0],
+				"alto": [0.95, 1.0, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "tres_sillas",
+					"nombre": "Tres sillas",
+					"ancho": 0.7,
+					"fondo": 1.7,
+					"alto": 1.0
+				},
+				{
+					"id": "cinco_sillas",
+					"nombre": "Cinco sillas",
+					"ancho": 0.7,
+					"fondo": 2.5,
+					"alto": 1.0
+				},
+				{
+					"id": "ocho_sillas",
+					"nombre": "Ocho sillas",
+					"ancho": 0.7,
+					"fondo": 3.7,
+					"alto": 1.0
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "juego:monedas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["hospital"],
+			"estancias": ["vestibulo", "entrada"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Sr",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillas_ruedas_prestamo.png",
+				"descripcion": "Huella en planta de «Sillas de ruedas de préstamo en fila»: un rectángulo de 0,70 por 2,50 metros, con la letra «Sr»."
+			}
+		},
+		{
+			"id": "andador",
+			"nombre": "Andador",
+			"categoria": "pasillos",
+			"subcategoria": "movilidad_personal",
+			"etiquetas": ["andador", "caminador", "tacatá", "andador con ruedas"],
+			"descripcion": "Armazón ligero de tubo con cuatro patas, o con ruedas y freno, abierto por detrás. Dejado junto a una silla o una cama: se engancha con el bastón y se desplaza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.1, 0.0], [0.1, 0.88], [0.9, 0.88], [0.9, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.45, 0.6, 0.75],
+				"alto": [0.75, 0.9, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "fijo",
+					"nombre": "Fijo, de cuatro patas",
+					"ancho": 0.55,
+					"fondo": 0.45,
+					"alto": 0.85
+				},
+				{
+					"id": "con_ruedas",
+					"nombre": "Con ruedas y asiento",
+					"ancho": 0.6,
+					"fondo": 0.7,
+					"alto": 0.9
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["hospital", "centro_salud", "residencia", "vivienda"],
+			"estancias": ["pasillo", "habitacion_hospital", "sala_espera", "sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "An",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/andador.png",
+				"descripcion": "Huella en planta de «Andador»: una U fina abierta por detrás, donde se mete la persona de 0,60 por 0,60 metros, con la letra «An»."
+			}
+		},
+		{
+			"id": "muletas_pared",
+			"nombre": "Muletas apoyadas en la pared",
+			"categoria": "pasillos",
+			"subcategoria": "movilidad_personal",
+			"etiquetas": ["muletas", "bastones ingleses", "muletas apoyadas"],
+			"descripcion": "Un par de muletas de aluminio apoyadas en la pared o en una silla, con las conteras separadas del rodapié. Al rozarlas caen al suelo con estrépito.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.25, 0.0], [0.75, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.2, 0.3, 0.4],
+				"fondo": [0.15, 0.25, 0.4],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "hogar:valla_obra.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["hospital", "centro_salud", "residencia", "vivienda"],
+			"estancias": ["pasillo", "sala_espera", "consulta", "sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/muletas_pared.png",
+				"descripcion": "Huella en planta de «Muletas apoyadas en la pared»: un trapecio, más estrecho por detrás de 0,30 por 0,25 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "camilla_traslado",
+			"nombre": "Camilla de traslado en el pasillo",
+			"categoria": "pasillos",
+			"subcategoria": "camillas_carros",
+			"etiquetas": ["camilla de traslado", "camilla con ruedas", "camilla de pasillo"],
+			"descripcion": "Camilla alta con ruedas y barandillas bajadas, aparcada contra la pared del pasillo. Estrecha el paso y cada día está en un sitio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.992, 0.838], [0.966, 0.919], [0.919, 0.966], [0.838, 0.992], [0.5, 1.0], [0.162, 0.992], [0.081, 0.966], [0.034, 0.919], [0.008, 0.838], [0.0, 0.5], [0.008, 0.162], [0.034, 0.081], [0.081, 0.034], [0.162, 0.008], [0.5, 0.0], [0.838, 0.008], [0.919, 0.034], [0.966, 0.081], [0.992, 0.162]]
+			},
+			"medidas": {
+				"ancho": [0.65, 0.7, 0.8],
+				"fondo": [1.9, 2.1, 2.2],
+				"alto": [0.8, 0.9, 1.1]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital"],
+			"estancias": ["pasillo", "urgencias"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/camilla_traslado.png",
+				"descripcion": "Huella en planta de «Camilla de traslado en el pasillo»: un rectángulo de esquinas redondeadas de 0,70 por 2,10 metros, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "carro_medicacion",
+			"nombre": "Carro de medicación",
+			"categoria": "pasillos",
+			"subcategoria": "camillas_carros",
+			"etiquetas": ["carro de medicación", "carro de unidosis", "carro de medicamentos"],
+			"descripcion": "Carro cerrado de cajones pequeños, uno por paciente, con una encimera a la altura del pecho. Pesado; rueda con un traqueteo de cajones.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.75, 0.9],
+				"fondo": [0.5, 0.55, 0.6],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "sonidos/sanidad_carro_clinico.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["pasillo", "habitacion_hospital"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_medicacion.png",
+				"descripcion": "Huella en planta de «Carro de medicación»: un rectángulo de 0,75 por 0,55 metros, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "carro_lenceria",
+			"nombre": "Carro de lencería",
+			"categoria": "pasillos",
+			"subcategoria": "camillas_carros",
+			"etiquetas": ["carro de lencería", "carro de ropa limpia", "carro de sábanas"],
+			"descripcion": "Carro alto de estantes lleno de sábanas y toallas dobladas, tapado con una funda de tela. Blando por los lados y más alto que una persona sentada.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.5, 1.7, 1.8]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["hospital", "residencia", "hotel"],
+			"estancias": ["pasillo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_lenceria.png",
+				"descripcion": "Huella en planta de «Carro de lencería»: un rectángulo de 1,20 por 0,60 metros, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "carro_ropa_sucia",
+			"nombre": "Carro de ropa sucia con saco",
+			"categoria": "pasillos",
+			"subcategoria": "limpieza_residuos",
+			"etiquetas": ["carro de ropa sucia", "saco de ropa", "cubo de ropa de habitación"],
+			"descripcion": "Aro de metal con ruedas del que cuelga un saco de tela, con tapa de pedal. Ligero y a la altura de la cintura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [0.85, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["pasillo", "habitacion_hospital"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_ropa_sucia.png",
+				"descripcion": "Huella en planta de «Carro de ropa sucia con saco»: un círculo de 0,50 por 0,50 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "carro_comidas",
+			"nombre": "Carro de comidas de planta",
+			"categoria": "pasillos",
+			"subcategoria": "camillas_carros",
+			"etiquetas": ["carro de comidas", "carro de bandejas térmico", "carro de dietas"],
+			"descripcion": "Armario de acero con ruedas donde van las bandejas de la comida, calientes por un lado y frías por otro. Zumba, huele a comida y la chapa puede quemar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 1.5],
+				"fondo": [0.7, 0.75, 0.9],
+				"alto": [1.4, 1.5, 1.7]
+			},
+			"variantes": [
+				{
+					"id": "sencillo",
+					"nombre": "Sencillo",
+					"ancho": 0.8,
+					"fondo": 0.75,
+					"alto": 1.5
+				},
+				{
+					"id": "doble",
+					"nombre": "Doble",
+					"ancho": 1.45,
+					"fondo": 0.8,
+					"alto": 1.5
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.35,
+					"radio": 5
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["hospital", "residencia"],
+			"estancias": ["pasillo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal", "caliente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_comidas.png",
+				"descripcion": "Huella en planta de «Carro de comidas de planta»: un rectángulo de 0,80 por 0,75 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "carro_limpieza_hospital",
+			"nombre": "Carro de limpieza hospitalario",
+			"categoria": "pasillos",
+			"subcategoria": "limpieza_residuos",
+			"etiquetas": ["carro de limpieza", "carro de la limpiadora", "cubos y mopa"],
+			"descripcion": "Carro de plástico con dos cubos, bolsa de basura y los palos de las mopas sobresaliendo por arriba y por los lados. Alrededor el suelo suele estar mojado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [1.0, 1.2, 1.4],
+				"alto": [1.0, 1.1, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["pasillo", "sala_espera"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal", "resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_limpieza_hospital.png",
+				"descripcion": "Huella en planta de «Carro de limpieza hospitalario»: un rectángulo de 0,60 por 1,20 metros, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "carro_paradas",
+			"nombre": "Carro de paradas",
+			"categoria": "pasillos",
+			"subcategoria": "camillas_carros",
+			"etiquetas": ["carro de paradas", "carro de reanimación", "carro rojo"],
+			"descripcion": "Carro de cajones con el desfibrilador encima, una tabla dura detrás y una bombona pequeña al lado. Está siempre en el mismo sitio, junto al control, y no se toca.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.0, 1.2, 1.5]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "sonidos/sanidad_carro_clinico.flac"
+			},
+			"contenedor": true,
+			"funcion": "seguridad",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["pasillo", "urgencias"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_paradas.png",
+				"descripcion": "Huella en planta de «Carro de paradas»: un rectángulo de 0,70 por 0,60 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "bombona_oxigeno",
+			"nombre": "Bombona de oxígeno en su carro",
+			"categoria": "pasillos",
+			"subcategoria": "camillas_carros",
+			"etiquetas": ["bombona de oxígeno", "botella de oxígeno", "bala de oxígeno"],
+			"descripcion": "Cilindro de acero pesado y frío, de pie en un carrito de dos ruedas. Abierta, sisea y borbotea en el vaso del humidificador.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [1.0, 1.4, 1.7]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:sanidad_oxigeno_burbujeo.flac",
+					"volumen": 0.3,
+					"radio": 4,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "san_abrir_oxigeno",
+					"nombre": "Abrir el oxígeno",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "san_cerrar_oxigeno",
+					"nombre": "Cerrar el oxígeno",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["pasillo", "habitacion_hospital", "urgencias", "consulta"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bo",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/bombona_oxigeno.png",
+				"descripcion": "Huella en planta de «Bombona de oxígeno en su carro»: un círculo de 0,30 por 0,30 metros, con la letra «Bo»."
+			}
+		},
+		{
+			"id": "contenedor_sanitario",
+			"nombre": "Contenedor de residuos sanitarios",
+			"categoria": "pasillos",
+			"subcategoria": "limpieza_residuos",
+			"etiquetas": ["contenedor de residuos sanitarios", "cubo de biorresiduos", "contenedor amarillo de hospital"],
+			"descripcion": "Cubo de plástico rígido con tapa de pedal y cierre, para material contaminado. La tapa cae con un golpe hueco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.12], [1.0, 0.88], [0.88, 1.0], [0.12, 1.0], [0.0, 0.88], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.45, 0.65, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "de_30",
+					"nombre": "De 30 litros",
+					"ancho": 0.33,
+					"fondo": 0.33,
+					"alto": 0.5
+				},
+				{
+					"id": "de_60",
+					"nombre": "De 60 litros",
+					"ancho": 0.4,
+					"fondo": 0.4,
+					"alto": 0.65
+				},
+				{
+					"id": "con_ruedas",
+					"nombre": "De 120 litros, con ruedas",
+					"ancho": 0.5,
+					"fondo": 0.55,
+					"alto": 0.9
+				}
+			],
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["pasillo", "consulta", "urgencias"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_sanitario.png",
+				"descripcion": "Huella en planta de «Contenedor de residuos sanitarios»: un rectángulo con las esquinas cortadas de 0,40 por 0,40 metros, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "lavamanos_quirurgico",
+			"nombre": "Lavamanos quirúrgico de acero",
+			"categoria": "pasillos",
+			"subcategoria": "limpieza_residuos",
+			"etiquetas": ["lavamanos quirúrgico", "pila de quirófano", "lavado quirúrgico"],
+			"descripcion": "Pila larga y honda de acero, con dos o tres grifos altos que se abren con la rodilla o con un sensor. El agua golpea la chapa y resuena.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.6, 2.4],
+				"fondo": [0.5, 0.55, 0.6],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.5,
+					"radio": 6,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["hospital"],
+			"estancias": ["pasillo"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Lq",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/lavamanos_quirurgico.png",
+				"descripcion": "Huella en planta de «Lavamanos quirúrgico de acero»: un rectángulo de 1,60 por 0,55 metros, con la letra «Lq»."
+			}
+		},
+		{
+			"id": "desfibrilador_pared",
+			"nombre": "Desfibrilador en vitrina de pared",
+			"categoria": "pasillos",
+			"subcategoria": "pared_pasillo",
+			"etiquetas": ["desfibrilador", "DEA", "DESA", "vitrina de desfibrilador"],
+			"descripcion": "Vitrina pequeña colgada de la pared a la altura del pecho, con el desfibrilador dentro. Sobresale un palmo; al abrirla salta una alarma aguda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.45],
+				"fondo": [0.15, 0.2, 0.25],
+				"alto": [0.35, 0.4, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.1,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/sanidad_desfibrilador_alarma.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "seguridad",
+			"lugares": ["hospital", "centro_salud", "farmacia", "cualquiera"],
+			"estancias": ["pasillo", "vestibulo", "sala_espera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Dp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/desfibrilador_pared.png",
+				"descripcion": "Huella en planta de «Desfibrilador en vitrina de pared»: un rectángulo de 0,40 por 0,20 metros, colgado a 1,10 metros del suelo, con la letra «Dp»."
+			}
+		},
+		{
+			"id": "pasamanos_pasillo",
+			"nombre": "Pasamanos de pasillo de hospital",
+			"categoria": "pasillos",
+			"subcategoria": "pared_pasillo",
+			"etiquetas": ["pasamanos de pasillo", "pasamanos de hospital", "protector de pared"],
+			"descripcion": "Barra ancha de plástico a lo largo de la pared, a la altura de la cadera, que hace también de protector contra las camillas. Se sigue con la mano; se corta en cada puerta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 6.0],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.1, 0.15, 0.2]
+			},
+			"variantes": [
+				{
+					"id": "tramo_corto",
+					"nombre": "Tramo de 1,50 m",
+					"ancho": 1.5,
+					"fondo": 0.1,
+					"alto": 0.15
+				},
+				{
+					"id": "tramo_medio",
+					"nombre": "Tramo de 3 m",
+					"ancho": 3.0,
+					"fondo": 0.1,
+					"alto": 0.15
+				},
+				{
+					"id": "tramo_largo",
+					"nombre": "Tramo de 6 m",
+					"ancho": 6.0,
+					"fondo": 0.1,
+					"alto": 0.15
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.8,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["pasillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/pasamanos_pasillo.png",
+				"descripcion": "Huella en planta de «Pasamanos de pasillo de hospital»: un rectángulo de 3,00 por 0,10 metros, colgado a 0,80 metros del suelo, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "puerta_vaiven",
+			"nombre": "Puerta de vaivén de hospital",
+			"categoria": "pasillos",
+			"subcategoria": "pared_pasillo",
+			"etiquetas": ["puerta de vaivén", "puertas batientes", "puerta de quirófano", "puerta cortafuegos de pasillo"],
+			"descripcion": "Dos hojas anchas que se abren empujando en los dos sentidos, con una chapa de metal abajo para los golpes de las camillas. Vuelven solas: cuidado con quien viene detrás.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.4, 1.6, 2.0],
+				"fondo": [0.05, 0.08, 0.1],
+				"alto": [2.0, 2.1, 2.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["hospital"],
+			"estancias": ["pasillo", "urgencias"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pv",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_vaiven.png",
+				"descripcion": "Huella en planta de «Puerta de vaivén de hospital»: un rectángulo de 1,60 por 0,08 metros, con la letra «Pv»."
+			}
+		},
+		{
+			"id": "mostrador_triaje",
+			"nombre": "Mostrador de triaje",
+			"categoria": "urgencias",
+			"subcategoria": "triaje_boxes",
+			"etiquetas": ["triaje", "mostrador de urgencias", "clasificación de urgencias"],
+			"descripcion": "Mesa mostrador baja, para hablar sentado con la enfermera que decide el orden de entrada. Tiene el ordenador a un lado y una silla delante.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.4],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [0.8, 0.85, 1.1]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["hospital", "centro_salud"],
+			"estancias": ["urgencias", "recepcion"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla_triaje"],
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_triaje.png",
+				"descripcion": "Huella en planta de «Mostrador de triaje»: un rectángulo de 1,60 por 0,70 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "silla_triaje",
+			"nombre": "Sillón de triaje",
+			"categoria": "urgencias",
+			"subcategoria": "triaje_boxes",
+			"etiquetas": ["sillón de triaje", "silla de triaje", "silla de toma de constantes"],
+			"descripcion": "Sillón de plástico lavable con brazos anchos, donde te sientas para que te tomen la tensión y la temperatura nada más llegar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.65, 0.7],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.0, 1.1, 1.25]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "san_tomar_tension",
+					"nombre": "Tomarse la tensión",
+					"sonido": "sonidos/sanidad_tensiometro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["hospital", "centro_salud"],
+			"estancias": ["urgencias"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["mostrador_triaje"],
+			"simbolo": {
+				"letra": "St",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_triaje.png",
+				"descripcion": "Huella en planta de «Sillón de triaje»: un rectángulo de 0,65 por 0,70 metros, con la letra «St»."
+			}
+		},
+		{
+			"id": "box_cortina",
+			"nombre": "Box de urgencias con cortina",
+			"categoria": "urgencias",
+			"subcategoria": "triaje_boxes",
+			"etiquetas": ["box de urgencias", "box con cortina", "cubículo de urgencias"],
+			"descripcion": "Hueco cerrado por tres lados con cortinas que cuelgan del techo, abierto por delante. Dentro cabe una camilla. Las paredes son de tela: ceden y no sirven para apoyarse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.97, 1.0], [0.97, 0.03], [0.03, 0.03], [0.03, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 3.0],
+				"fondo": [2.2, 2.8, 3.2],
+				"alto": [1.9, 2.0, 2.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "oficina_y_comercio:cortina.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "barrera",
+			"lugares": ["hospital"],
+			"estancias": ["urgencias"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["camilla_observacion", "monitor_constantes"],
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/box_cortina.png",
+				"descripcion": "Huella en planta de «Box de urgencias con cortina»: una U abierta por delante de 2,50 por 2,80 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "camilla_observacion",
+			"nombre": "Camilla de observación",
+			"categoria": "urgencias",
+			"subcategoria": "triaje_boxes",
+			"etiquetas": ["camilla de observación", "camilla de urgencias", "cama de box"],
+			"descripcion": "Camilla ancha con el respaldo levantado, barandillas subidas a los lados y un palo de gotero en una esquina. Más alta que una cama: te subes con ayuda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.75, 0.8, 0.9],
+				"fondo": [2.0, 2.1, 2.2],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["hospital", "centro_salud"],
+			"estancias": ["urgencias"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["box_cortina"],
+			"simbolo": {
+				"letra": "Co",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/camilla_observacion.png",
+				"descripcion": "Huella en planta de «Camilla de observación»: un rectángulo de 0,80 por 2,10 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "sillon_extracciones",
+			"nombre": "Sillón de extracciones",
+			"categoria": "urgencias",
+			"subcategoria": "extracciones_tratamiento",
+			"etiquetas": ["sillón de extracciones", "silla de análisis", "sillón de sacar sangre"],
+			"descripcion": "Sillón con dos apoyabrazos anchos y acolchados que salen hacia los lados, para estirar el brazo mientras te sacan sangre.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [0.8, 0.45], [1.0, 0.45], [1.0, 1.0], [0.0, 1.0], [0.0, 0.45], [0.2, 0.45]]
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [0.7, 0.8, 0.9],
+				"alto": [1.0, 1.1, 1.25]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital", "laboratorio"],
+			"estancias": ["consulta", "urgencias"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["carro_curas"],
+			"simbolo": {
+				"letra": "Se",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon_extracciones.png",
+				"descripcion": "Huella en planta de «Sillón de extracciones»: un respaldo detrás y dos apoyabrazos anchos que salen a los lados por delante de 0,90 por 0,80 metros, con la letra «Se»."
+			}
+		},
+		{
+			"id": "puesto_dialisis",
+			"nombre": "Puesto de hemodiálisis",
+			"categoria": "urgencias",
+			"subcategoria": "extracciones_tratamiento",
+			"etiquetas": ["hemodiálisis", "puesto de diálisis", "máquina de diálisis", "sillón de diálisis"],
+			"descripcion": "Sillón reclinable largo y, junto a la cabecera, una máquina del alto del pecho con tubos hasta el brazo. La bomba gira con un clic regular y a veces pita.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.42], [0.55, 0.42], [0.55, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.3, 1.5, 1.7],
+				"fondo": [1.7, 1.9, 2.1],
+				"alto": [1.2, 1.4, 1.6]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/sanidad_bomba_infusion.flac",
+					"volumen": 0.3,
+					"radio": 6
+				}
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital"],
+			"estancias": ["sala_comun", "habitacion_hospital"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pd",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/puesto_dialisis.png",
+				"descripcion": "Huella en planta de «Puesto de hemodiálisis»: una ele de 1,50 por 1,90 metros, con la letra «Pd»."
+			}
+		},
+		{
+			"id": "mesa_rayos",
+			"nombre": "Mesa de rayos X",
+			"categoria": "urgencias",
+			"subcategoria": "radiologia",
+			"etiquetas": ["mesa de rayos", "mesa de radiografías", "mesa de radiología"],
+			"descripcion": "Mesa larga, dura y fría, a la altura de la cadera, en el centro de la sala de rayos. Encima cuelga el tubo. Al disparar se oye un zumbido que sube y un pitido.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 0.9],
+				"fondo": [2.0, 2.2, 2.4],
+				"alto": [0.7, 0.8, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "san_radiografia",
+					"nombre": "Hacer la radiografía",
+					"sonido": "sonidos/sanidad_rayos_disparo.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["urgencias"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["tubo_rayos_techo", "bucky_mural", "mampara_plomada"],
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_rayos.png",
+				"descripcion": "Huella en planta de «Mesa de rayos X»: un rectángulo de 0,80 por 2,20 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "tubo_rayos_techo",
+			"nombre": "Tubo de rayos colgado del techo",
+			"categoria": "urgencias",
+			"subcategoria": "radiologia",
+			"etiquetas": ["tubo de rayos", "columna de techo", "suspensión de rayos"],
+			"descripcion": "Cabezal pesado de metal que cuelga de una columna del techo y se mueve por carriles. Queda a la altura de la cabeza y el bastón no lo encuentra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.4, 0.5, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["urgencias"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["mesa_rayos"],
+			"simbolo": {
+				"letra": "Tr",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/tubo_rayos_techo.png",
+				"descripcion": "Huella en planta de «Tubo de rayos colgado del techo»: un rectángulo de 0,50 por 0,60 metros, colgado a 1,50 metros del suelo, con la letra «Tr»."
+			}
+		},
+		{
+			"id": "bucky_mural",
+			"nombre": "Soporte mural de rayos",
+			"categoria": "urgencias",
+			"subcategoria": "radiologia",
+			"etiquetas": ["bucky mural", "estativo de tórax", "placa de tórax"],
+			"descripcion": "Columna de metal contra la pared con un panel plano que sube y baja: te pones de pie con el pecho pegado a él. En la base tiene un pie que sobresale.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.65, 0.8],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [1.9, 2.1, 2.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "san_radiografia",
+					"nombre": "Hacer la radiografía",
+					"sonido": "sonidos/sanidad_rayos_disparo.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["urgencias"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["mesa_rayos"],
+			"simbolo": {
+				"letra": "Bm",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/bucky_mural.png",
+				"descripcion": "Huella en planta de «Soporte mural de rayos»: un rectángulo de 0,65 por 0,40 metros, con la letra «Bm»."
+			}
+		},
+		{
+			"id": "mampara_plomada",
+			"nombre": "Mampara plomada de rayos",
+			"categoria": "urgencias",
+			"subcategoria": "radiologia",
+			"etiquetas": ["mampara plomada", "biombo de plomo", "pantalla de rayos"],
+			"descripcion": "Panel grueso y muy pesado, con una ventana de cristal, tras el que se pone el técnico. No se mueve al empujarlo y suena macizo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 2.0],
+				"fondo": [0.05, 0.3, 0.5],
+				"alto": [1.9, 2.0, 2.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["urgencias"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mampara_plomada.png",
+				"descripcion": "Huella en planta de «Mampara plomada de rayos»: un rectángulo de 1,20 por 0,30 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "resonancia",
+			"nombre": "Tubo de resonancia magnética",
+			"categoria": "urgencias",
+			"subcategoria": "radiologia",
+			"etiquetas": ["resonancia", "resonancia magnética", "tubo de resonancia", "escáner", "TAC"],
+			"descripcion": "Máquina enorme con un túnel en el centro y una mesa estrecha que sale por delante. En marcha da un martilleo fuerte que se oye desde el pasillo. Nada de metal cerca.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.5], [0.65, 0.5], [0.65, 1.0], [0.35, 1.0], [0.35, 0.5], [0.0, 0.5]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.3, 2.5],
+				"fondo": [3.0, 3.8, 4.5],
+				"alto": [1.9, 2.2, 2.5]
+			},
+			"variantes": [
+				{
+					"id": "resonancia",
+					"nombre": "Resonancia, túnel largo",
+					"ancho": 2.3,
+					"fondo": 3.8,
+					"alto": 2.2
+				},
+				{
+					"id": "tac",
+					"nombre": "TAC, aro corto",
+					"ancho": 2.2,
+					"fondo": 3.2,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/sanidad_resonancia.flac",
+					"volumen": 0.55,
+					"radio": 14,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"sonido": "hogar:sentarse.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 120,
+				"al_terminar": "apagado"
+			},
+			"funcion": "equipo_medico",
+			"lugares": ["hospital"],
+			"estancias": ["urgencias"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Re",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/resonancia.png",
+				"descripcion": "Huella en planta de «Tubo de resonancia magnética»: una te de 2,30 por 3,80 metros, con la letra «Re»."
+			}
+		},
+		{
+			"id": "mamografo",
+			"nombre": "Mamógrafo",
+			"categoria": "urgencias",
+			"subcategoria": "radiologia",
+			"etiquetas": ["mamógrafo", "mamografía", "aparato de mamografías"],
+			"descripcion": "Columna alta con un brazo que gira y dos placas a la altura del pecho, una fija y otra que aprieta. El brazo sobresale hacia quien se acerca.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.325, 0.0], [0.675, 0.0], [0.675, 0.4], [1.0, 0.4], [1.0, 1.0], [0.0, 1.0], [0.0, 0.4], [0.325, 0.4]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [1.0, 1.2, 1.3],
+				"alto": [1.9, 2.0, 2.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "san_radiografia",
+					"nombre": "Hacer la radiografía",
+					"sonido": "sonidos/sanidad_rayos_disparo.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital"],
+			"estancias": ["urgencias"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mamografo.png",
+				"descripcion": "Huella en planta de «Mamógrafo»: una columna estrecha detrás y un brazo ancho delante de 0,70 por 1,20 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "mostrador_farmacia",
+			"nombre": "Mostrador de farmacia",
+			"categoria": "farmacia",
+			"subcategoria": "mostradores_farmacia",
+			"etiquetas": ["mostrador de farmacia", "mostrador de botica", "despacho de farmacia"],
+			"descripcion": "Mostrador corrido a la altura de la cintura, con expositores pequeños encima y la caja. Detrás, las cajoneras. Se llega a él cruzando toda la tienda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.9, 0.95, 1.05]
+			},
+			"variantes": [
+				{
+					"id": "un_puesto",
+					"nombre": "De un puesto",
+					"ancho": 1.0,
+					"fondo": 0.6,
+					"alto": 0.95
+				},
+				{
+					"id": "dos_puestos",
+					"nombre": "De dos puestos",
+					"ancho": 2.0,
+					"fondo": 0.6,
+					"alto": 0.95
+				},
+				{
+					"id": "tres_puestos",
+					"nombre": "De tres puestos",
+					"ancho": 3.0,
+					"fondo": 0.6,
+					"alto": 0.95
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["farmacia"],
+			"estancias": ["sala_ventas", "cajas"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cajoneras_medicamentos", "linea_confidencialidad", "punto_sigre"],
+			"simbolo": {
+				"letra": "Mf",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_farmacia.png",
+				"descripcion": "Huella en planta de «Mostrador de farmacia»: un rectángulo de 2,00 por 0,60 metros, con la letra «Mf»."
+			}
+		},
+		{
+			"id": "puesto_farmacia_isla",
+			"nombre": "Puesto de atención de farmacia en isla",
+			"categoria": "farmacia",
+			"subcategoria": "mostradores_farmacia",
+			"etiquetas": ["mostrador isla de farmacia", "puesto individual de farmacia", "isla de atención"],
+			"descripcion": "Mostrador individual suelto, de esquinas redondas, uno por farmacéutico. Hay varios separados entre sí y se pueden rodear.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [0.9, 0.95, 1.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["farmacia"],
+			"estancias": ["sala_ventas", "cajas"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pf",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/puesto_farmacia_isla.png",
+				"descripcion": "Huella en planta de «Puesto de atención de farmacia en isla»: un rectángulo de esquinas redondeadas de 0,70 por 0,60 metros, con la letra «Pf»."
+			}
+		},
+		{
+			"id": "cajoneras_medicamentos",
+			"nombre": "Cajoneras de medicamentos",
+			"categoria": "farmacia",
+			"subcategoria": "expositores_rebotica",
+			"etiquetas": ["cajoneras de farmacia", "cajones de medicamentos", "columnas de cajones de botica"],
+			"descripcion": "Columnas de metal con cajones largos y estrechos que salen enteros hacia fuera, detrás del mostrador. Un cajón abierto invade el paso a cualquier altura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.2, 3.0],
+				"fondo": [0.9, 1.0, 1.1],
+				"alto": [1.9, 2.0, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "una_columna",
+					"nombre": "Una columna",
+					"ancho": 0.6,
+					"fondo": 1.0,
+					"alto": 2.0
+				},
+				{
+					"id": "dos_columnas",
+					"nombre": "Dos columnas",
+					"ancho": 1.2,
+					"fondo": 1.0,
+					"alto": 2.0
+				},
+				{
+					"id": "cuatro_columnas",
+					"nombre": "Cuatro columnas",
+					"ancho": 2.4,
+					"fondo": 1.0,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["farmacia"],
+			"estancias": ["trastienda", "sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mostrador_farmacia"],
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/cajoneras_medicamentos.png",
+				"descripcion": "Huella en planta de «Cajoneras de medicamentos»: un rectángulo de 1,20 por 1,00 metros, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "gondola_parafarmacia",
+			"nombre": "Góndola de parafarmacia",
+			"categoria": "farmacia",
+			"subcategoria": "expositores_rebotica",
+			"etiquetas": ["góndola de parafarmacia", "expositor central de farmacia", "isla de cosmética"],
+			"descripcion": "Mueble bajo de estantes por las dos caras, en medio de la farmacia, con cremas y botes. Llega al pecho: se puede hablar por encima.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 2.4],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [1.3, 1.4, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["farmacia"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/gondola_parafarmacia.png",
+				"descripcion": "Huella en planta de «Góndola de parafarmacia»: un rectángulo de 1,20 por 0,60 metros, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "bascula_farmacia",
+			"nombre": "Báscula de farmacia con voz",
+			"categoria": "farmacia",
+			"subcategoria": "servicios_farmacia",
+			"etiquetas": ["báscula de farmacia", "peso de farmacia", "báscula de monedas", "báscula parlante"],
+			"descripcion": "Báscula de monedas con plataforma y una columna alta de la que baja el tallímetro hasta tocar la cabeza. Pita, zumba y da un tique; algunas dicen el peso en voz alta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [2.0, 2.2, 2.3]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/sanidad_bascula_farmacia.flac"
+			},
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "sonidos/sanidad_bascula_farmacia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["farmacia"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Bf",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/bascula_farmacia.png",
+				"descripcion": "Huella en planta de «Báscula de farmacia con voz»: un rectángulo de 0,50 por 0,60 metros, con la letra «Bf»."
+			}
+		},
+		{
+			"id": "punto_sigre",
+			"nombre": "Punto de recogida de medicamentos caducados",
+			"categoria": "farmacia",
+			"subcategoria": "servicios_farmacia",
+			"etiquetas": ["punto SIGRE", "contenedor de medicamentos", "medicamentos caducados"],
+			"descripcion": "Contenedor de cartón o chapa del alto de la cintura, con una boca arriba por la que se echan las cajas de medicinas viejas. Suele estar junto al mostrador.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.5],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [1.0, 1.2, 1.3]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "san_tirar_medicamentos",
+					"nombre": "Echar medicamentos caducados",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["farmacia"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ps",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/punto_sigre.png",
+				"descripcion": "Huella en planta de «Punto de recogida de medicamentos caducados»: un rectángulo de 0,45 por 0,45 metros, con la letra «Ps»."
+			}
+		},
+		{
+			"id": "cruz_farmacia",
+			"nombre": "Cruz de farmacia en la fachada",
+			"categoria": "farmacia",
+			"subcategoria": "fachada_farmacia",
+			"etiquetas": ["cruz de farmacia", "cruz verde", "rótulo en banderola", "luminoso de farmacia"],
+			"descripcion": "Cruz luminosa que sale de la fachada en banderola, sobre la acera. Zumba un poco. Las bajas quedan a la altura de la cabeza de una persona alta.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.15, 0.25],
+				"fondo": [0.6, 0.9, 1.3],
+				"alto": [0.6, 0.9, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "De 60 cm",
+					"ancho": 0.12,
+					"fondo": 0.6,
+					"alto": 0.6
+				},
+				{
+					"id": "normal",
+					"nombre": "De 90 cm",
+					"ancho": 0.15,
+					"fondo": 0.9,
+					"alto": 0.9
+				},
+				{
+					"id": "grande",
+					"nombre": "De 1,20 m",
+					"ancho": 0.2,
+					"fondo": 1.2,
+					"alto": 1.2
+				}
+			],
+			"colocacion": ["pared", "acera"],
+			"bloquea": true,
+			"altura_base": 2.3,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.2,
+					"radio": 5
+				}
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["farmacia", "calle"],
+			"estancias": ["acera"],
+			"obstaculo": "aereo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cf",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/cruz_farmacia.png",
+				"descripcion": "Huella en planta de «Cruz de farmacia en la fachada»: un rectángulo de 0,15 por 0,90 metros, colgado a 2,30 metros del suelo, con la letra «Cf»."
+			}
+		},
+		{
+			"id": "dispensador_guardia",
+			"nombre": "Ventanilla de guardia de farmacia",
+			"categoria": "farmacia",
+			"subcategoria": "fachada_farmacia",
+			"etiquetas": ["ventanilla de guardia", "torno de farmacia", "dispensador nocturno", "cajón pasamedicamentos"],
+			"descripcion": "Cajón de metal en la fachada, a la altura de la cintura, por donde se despacha de noche con la puerta cerrada. Tiene un timbre al lado y sobresale un palmo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.15, 0.25, 0.35],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["pared", "acera"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "transporte:interfono.flac"
+				},
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "calle:trampilla_buzon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "calle:trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["farmacia"],
+			"estancias": ["acera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Dg",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/dispensador_guardia.png",
+				"descripcion": "Huella en planta de «Ventanilla de guardia de farmacia»: un rectángulo de 0,50 por 0,25 metros, colgado a 0,90 metros del suelo, con la letra «Dg»."
+			}
+		},
+		{
+			"id": "sillon_dental",
+			"nombre": "Sillón dental",
+			"categoria": "dentista",
+			"subcategoria": "equipo_dental",
+			"etiquetas": ["sillón dental", "sillón del dentista", "equipo dental", "unidad dental"],
+			"descripcion": "Sillón largo que se tumba, con un brazo de instrumentos a un lado, la lámpara arriba y la escupidera al otro lado. La turbina silba muy agudo cuando trabaja.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [0.7, 0.0], [0.7, 0.3], [1.0, 0.3], [1.0, 0.55], [0.7, 0.55], [0.68, 1.0], [0.32, 1.0], [0.3, 0.5], [0.0, 0.5], [0.0, 0.25], [0.3, 0.25]]
+			},
+			"medidas": {
+				"ancho": [1.3, 1.5, 1.8],
+				"fondo": [1.8, 2.0, 2.3],
+				"alto": [1.2, 1.4, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"propio": {
+					"sonido": "sonidos/sanidad_turbina_dental.flac",
+					"volumen": 0.4,
+					"radio": 8,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"sonido": "hogar:sentarse.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 40,
+				"al_terminar": "apagado"
+			},
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud"],
+			"estancias": ["consulta"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["escupidera_dental", "taburete_medico", "mueble_clinico_dental"],
+			"simbolo": {
+				"letra": "Sd",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon_dental.png",
+				"descripcion": "Huella en planta de «Sillón dental»: un sillón largo con un brazo de instrumentos a un lado y la lámpara y la escupidera al otro de 1,50 por 2,00 metros, con la letra «Sd»."
+			}
+		},
+		{
+			"id": "escupidera_dental",
+			"nombre": "Escupidera del dentista",
+			"categoria": "dentista",
+			"subcategoria": "equipo_dental",
+			"etiquetas": ["escupidera", "taza de enjuague", "columna de agua del dentista"],
+			"descripcion": "Taza pequeña de loza sobre una columna, junto al sillón, con un chorrito de agua que corre siempre y un grifo para llenar el vaso.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.45],
+				"fondo": [0.3, 0.35, 0.45],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.2,
+					"radio": 3
+				}
+			},
+			"acciones": [
+				{
+					"id": "san_enjuagarse",
+					"nombre": "Enjuagarse",
+					"sonido": "calle:chorro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["centro_salud"],
+			"estancias": ["consulta"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["sillon_dental"],
+			"simbolo": {
+				"letra": "Ed",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/escupidera_dental.png",
+				"descripcion": "Huella en planta de «Escupidera del dentista»: un círculo de 0,35 por 0,35 metros, con la letra «Ed»."
+			}
+		},
+		{
+			"id": "mueble_clinico_dental",
+			"nombre": "Mueble clínico de dentista",
+			"categoria": "dentista",
+			"subcategoria": "equipo_dental",
+			"etiquetas": ["mueble clínico", "mueble de gabinete dental", "encimera de dentista"],
+			"descripcion": "Tramo de muebles bajos con cajones de instrumental y una pila pequeña, a la altura de la cintura, pegado a la pared detrás del sillón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 2.0, 3.0],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [0.85, 0.9, 0.95]
+			},
+			"variantes": [
+				{
+					"id": "de_120",
+					"nombre": "De 1,20 m",
+					"ancho": 1.2,
+					"fondo": 0.5,
+					"alto": 0.9
+				},
+				{
+					"id": "de_200",
+					"nombre": "De 2 m",
+					"ancho": 2.0,
+					"fondo": 0.5,
+					"alto": 0.9
+				},
+				{
+					"id": "de_300",
+					"nombre": "De 3 m",
+					"ancho": 3.0,
+					"fondo": 0.5,
+					"alto": 0.9
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["centro_salud"],
+			"estancias": ["consulta"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["sillon_dental"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/mueble_clinico_dental.png",
+				"descripcion": "Huella en planta de «Mueble clínico de dentista»: un rectángulo de 2,00 por 0,50 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "rayos_pared_dental",
+			"nombre": "Aparato de rayos de pared del dentista",
+			"categoria": "dentista",
+			"subcategoria": "rayos_dental",
+			"etiquetas": ["rayos del dentista", "rayos intraoral", "brazo de rayos de pared"],
+			"descripcion": "Brazo articulado sujeto a la pared, con un tubo en la punta. Plegado sobresale poco; desplegado llega hasta el sillón a la altura de la cara.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.3, 0.5, 1.5],
+				"alto": [0.3, 0.4, 0.6]
+			},
+			"variantes": [
+				{
+					"id": "plegado",
+					"nombre": "Plegado",
+					"ancho": 0.3,
+					"fondo": 0.4,
+					"alto": 0.4
+				},
+				{
+					"id": "desplegado",
+					"nombre": "Desplegado",
+					"ancho": 0.3,
+					"fondo": 1.4,
+					"alto": 0.4
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "san_radiografia",
+					"nombre": "Hacer la radiografía",
+					"sonido": "sonidos/sanidad_rayos_disparo.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud"],
+			"estancias": ["consulta"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["sillon_dental"],
+			"simbolo": {
+				"letra": "Rp",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/rayos_pared_dental.png",
+				"descripcion": "Huella en planta de «Aparato de rayos de pared del dentista»: un rectángulo de 0,30 por 0,50 metros, colgado a 1,20 metros del suelo, con la letra «Rp»."
+			}
+		},
+		{
+			"id": "ortopantomografo",
+			"nombre": "Ortopantomógrafo",
+			"categoria": "dentista",
+			"subcategoria": "rayos_dental",
+			"etiquetas": ["ortopantomógrafo", "panorámica dental", "ortopantomografía"],
+			"descripcion": "Columna alta con un brazo que gira alrededor de la cabeza: te pones de pie, muerdes una pieza y agarras dos asas. El brazo queda a la altura de la cara.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.325, 0.0], [0.675, 0.0], [0.675, 0.4], [1.0, 0.4], [1.0, 1.0], [0.0, 1.0], [0.0, 0.4], [0.325, 0.4]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.2],
+				"fondo": [1.0, 1.2, 1.4],
+				"alto": [2.0, 2.2, 2.4]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "san_radiografia",
+					"nombre": "Hacer la radiografía",
+					"sonido": "sonidos/sanidad_rayos_disparo.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["consulta"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Or",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/ortopantomografo.png",
+				"descripcion": "Huella en planta de «Ortopantomógrafo»: una columna estrecha detrás y un brazo ancho delante de 1,00 por 1,20 metros, con la letra «Or»."
+			}
+		},
+		{
+			"id": "paralelas_marcha",
+			"nombre": "Paralelas de marcha",
+			"categoria": "rehabilitacion",
+			"subcategoria": "marcha_equilibrio",
+			"etiquetas": ["paralelas", "barras paralelas de marcha", "paralelas de rehabilitación"],
+			"descripcion": "Dos barras de metal a la altura de la cadera, paralelas, sobre una tarima larga. Se entra por un extremo y se camina entre ellas agarrado a las dos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.92, 1.0], [0.92, 0.03], [0.08, 0.03], [0.08, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 1.0],
+				"fondo": [2.0, 3.0, 4.0],
+				"alto": [0.8, 0.9, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "de_2",
+					"nombre": "De 2 m",
+					"ancho": 0.8,
+					"fondo": 2.0,
+					"alto": 0.9
+				},
+				{
+					"id": "de_3",
+					"nombre": "De 3 m",
+					"ancho": 0.8,
+					"fondo": 3.0,
+					"alto": 0.9
+				},
+				{
+					"id": "de_4",
+					"nombre": "De 4 m",
+					"ancho": 0.8,
+					"fondo": 4.0,
+					"alto": 0.9
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["espejo_postura"],
+			"simbolo": {
+				"letra": "Pm",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/paralelas_marcha.png",
+				"descripcion": "Huella en planta de «Paralelas de marcha»: una U abierta por delante de 0,80 por 3,00 metros, con la letra «Pm»."
+			}
+		},
+		{
+			"id": "escalera_rampa",
+			"nombre": "Escalera y rampa de ejercicios",
+			"categoria": "rehabilitacion",
+			"subcategoria": "marcha_equilibrio",
+			"etiquetas": ["escalera de rehabilitación", "escalera con rampa", "escalera de ejercicios"],
+			"descripcion": "Mueble de madera con tres o cuatro peldaños por un lado, un rellano arriba y una rampa por el otro, todo con pasamanos. Sirve para practicar subir y bajar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [2.6, 3.2, 4.0],
+				"alto": [1.2, 1.4, 1.6]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "escalera/subir"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse",
+					"sonido": "escalera/bajar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Er",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_rampa.png",
+				"descripcion": "Huella en planta de «Escalera y rampa de ejercicios»: un rectángulo de 0,90 por 3,20 metros, con la letra «Er»."
+			}
+		},
+		{
+			"id": "platos_equilibrio",
+			"nombre": "Plato de equilibrio en el suelo",
+			"categoria": "rehabilitacion",
+			"subcategoria": "marcha_equilibrio",
+			"etiquetas": ["plato de equilibrio", "plato de Freeman", "tabla de equilibrio"],
+			"descripcion": "Disco de madera del tamaño de una tapa de alcantarilla, con una media bola debajo: al pisarlo se inclina hacia cualquier lado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.5],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [0.06, 0.08, 0.12]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"suelo": "madera",
+			"aviso": "Plato de equilibrio: se inclina al pisarlo.",
+			"funcion": "deporte",
+			"lugares": ["hospital", "centro_salud", "gimnasio"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["movil", "desnivel", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/platos_equilibrio.png",
+				"descripcion": "Huella en planta de «Plato de equilibrio en el suelo»: un círculo de 0,40 por 0,40 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "pista_obstaculos_marcha",
+			"nombre": "Pista de marcha con vallas bajas",
+			"categoria": "rehabilitacion",
+			"subcategoria": "marcha_equilibrio",
+			"etiquetas": ["pista de marcha", "obstáculos de marcha", "vallas de rehabilitación"],
+			"descripcion": "Fila de listones y vallitas de plástico de un palmo de alto, puestos en el suelo para aprender a levantar los pies. Hay que pasar por encima de cada uno.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.94, 1.0], [0.94, 0.05], [0.765, 0.05], [0.765, 1.0], [0.705, 1.0], [0.705, 0.05], [0.53, 0.05], [0.53, 1.0], [0.47, 1.0], [0.47, 0.05], [0.295, 0.05], [0.295, 1.0], [0.235, 1.0], [0.235, 0.05], [0.06, 0.05], [0.06, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [2.0, 3.0, 4.0],
+				"alto": [0.1, 0.15, 0.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal", "desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Po",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/pista_obstaculos_marcha.png",
+				"descripcion": "Huella en planta de «Pista de marcha con vallas bajas»: un peine: una barra con cuerpos que salen hacia delante de 0,80 por 3,00 metros, con la letra «Po»."
+			}
+		},
+		{
+			"id": "camilla_fisioterapia",
+			"nombre": "Camilla de fisioterapia",
+			"categoria": "rehabilitacion",
+			"subcategoria": "camillas_fisioterapia",
+			"etiquetas": ["camilla de fisioterapia", "camilla de masaje", "camilla hidráulica"],
+			"descripcion": "Camilla ancha y mullida, con un agujero para la cara en un extremo, que sube y baja con un pedal. A veces está muy baja, a la altura de la rodilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.65, 0.7, 0.8],
+				"fondo": [1.9, 1.95, 2.05],
+				"alto": [0.5, 0.7, 0.95]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital", "centro_salud", "residencia", "gimnasio"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["taburete_medico", "carro_electroterapia"],
+			"simbolo": {
+				"letra": "Cf",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/camilla_fisioterapia.png",
+				"descripcion": "Huella en planta de «Camilla de fisioterapia»: un rectángulo de 0,70 por 1,95 metros, con la letra «Cf»."
+			}
+		},
+		{
+			"id": "camilla_bobath",
+			"nombre": "Camilla ancha de tratamiento neurológico",
+			"categoria": "rehabilitacion",
+			"subcategoria": "camillas_fisioterapia",
+			"etiquetas": ["camilla Bobath", "plataforma de tratamiento", "colchoneta elevada"],
+			"descripcion": "Plataforma acolchada grande, casi cuadrada y baja, donde caben el paciente tumbado y el fisioterapeuta de rodillas. Blanda por encima y dura por el canto.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 2.0, 2.0],
+				"fondo": [1.9, 2.0, 2.1],
+				"alto": [0.45, 0.5, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "de_120",
+					"nombre": "De 1,20 m de ancho",
+					"ancho": 1.2,
+					"fondo": 1.9,
+					"alto": 0.5
+				},
+				{
+					"id": "de_200",
+					"nombre": "De 2 m de ancho",
+					"ancho": 2.0,
+					"fondo": 2.0,
+					"alto": 0.5
+				}
+			],
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "colegio:colchoneta.flac"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/camilla_bobath.png",
+				"descripcion": "Huella en planta de «Camilla ancha de tratamiento neurológico»: un rectángulo de 2,00 por 2,00 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "jaula_poleoterapia",
+			"nombre": "Jaula de poleoterapia",
+			"categoria": "rehabilitacion",
+			"subcategoria": "camillas_fisioterapia",
+			"etiquetas": ["jaula de Rocher", "poleoterapia", "jaula de poleas"],
+			"descripcion": "Jaula de rejilla metálica por tres lados y por el techo, con una camilla dentro, de la que cuelgan poleas, cuerdas y pesas. La malla vibra al tocarla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.97, 1.0], [0.97, 0.03], [0.03, 0.03], [0.03, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.9, 2.0, 2.2],
+				"fondo": [1.9, 2.0, 2.2],
+				"alto": [1.9, 2.0, 2.1]
+			},
+			"colocacion": ["esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": true,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Jp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/jaula_poleoterapia.png",
+				"descripcion": "Huella en planta de «Jaula de poleoterapia»: una U abierta por delante de 2,00 por 2,00 metros, con la letra «Jp»."
+			}
+		},
+		{
+			"id": "bicicleta_clinica",
+			"nombre": "Bicicleta estática clínica",
+			"categoria": "rehabilitacion",
+			"subcategoria": "aparatos_ejercicio",
+			"etiquetas": ["bicicleta estática", "cicloergómetro", "bici de rehabilitación"],
+			"descripcion": "Bicicleta fija con un sillín ancho, un manillar alto y una base en cruz. Al pedalear se oye girar el volante con un soplo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [0.65, 0.1], [1.0, 0.1], [1.0, 0.2], [0.65, 0.2], [0.65, 0.7], [1.0, 0.75], [1.0, 0.85], [0.65, 0.9], [0.65, 1.0], [0.35, 1.0], [0.35, 0.9], [0.0, 0.85], [0.0, 0.75], [0.35, 0.7], [0.35, 0.2], [0.0, 0.2], [0.0, 0.1], [0.35, 0.1]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [1.0, 1.1, 1.3],
+				"alto": [1.2, 1.3, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.35,
+					"radio": 6,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "san_pedalear",
+					"nombre": "Pedalear",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/bicicleta_clinica.png",
+				"descripcion": "Huella en planta de «Bicicleta estática clínica»: un cuerpo estrecho con un pie atravesado detrás y el manillar atravesado delante de 0,60 por 1,10 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "pedalier",
+			"nombre": "Pedalier de rehabilitación",
+			"categoria": "rehabilitacion",
+			"subcategoria": "aparatos_ejercicio",
+			"etiquetas": ["pedalier", "pedales de rehabilitación", "pedaleador"],
+			"descripcion": "Unos pedales sobre un armazón pequeño de tubo, en el suelo delante de una silla. Bajo y suelto: se tropieza con él.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.5],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.25, 0.3, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "san_pedalear",
+					"nombre": "Pedalear"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["hospital", "centro_salud", "residencia", "vivienda"],
+			"estancias": ["sala_rehabilitacion", "sala_comun", "salon"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/pedalier.png",
+				"descripcion": "Huella en planta de «Pedalier de rehabilitación»: un rectángulo de 0,45 por 0,50 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "rueda_hombro",
+			"nombre": "Rueda de hombro en la pared",
+			"categoria": "rehabilitacion",
+			"subcategoria": "aparatos_ejercicio",
+			"etiquetas": ["rueda de hombro", "rueda de pared", "timón de rehabilitación"],
+			"descripcion": "Rueda grande de metal con una manivela, sujeta a la pared a la altura del hombro. Sobresale dos palmos y el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rh",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/rueda_hombro.png",
+				"descripcion": "Huella en planta de «Rueda de hombro en la pared»: un rectángulo de 0,90 por 0,30 metros, colgado a 0,90 metros del suelo, con la letra «Rh»."
+			}
+		},
+		{
+			"id": "banco_cuadriceps",
+			"nombre": "Banco de cuádriceps",
+			"categoria": "rehabilitacion",
+			"subcategoria": "aparatos_ejercicio",
+			"etiquetas": ["banco de cuádriceps", "banco de Colson", "mesa de cuádriceps"],
+			"descripcion": "Asiento alto con respaldo y dos brazos de palanca con pesas que cuelgan por delante, a la altura de la espinilla. Los brazos se balancean si los tocas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.55], [0.725, 0.55], [0.725, 1.0], [0.275, 1.0], [0.275, 0.55], [0.0, 0.55]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.2],
+				"fondo": [1.0, 1.2, 1.4],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_cuadriceps.png",
+				"descripcion": "Huella en planta de «Banco de cuádriceps»: una te de 1,00 por 1,20 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "mesa_manos",
+			"nombre": "Mesa de manos",
+			"categoria": "rehabilitacion",
+			"subcategoria": "aparatos_ejercicio",
+			"etiquetas": ["mesa de manos", "mesa de terapia ocupacional", "mesa de Kanavel"],
+			"descripcion": "Mesa con una escotadura redonda donde se mete el paciente, y encima tableros con pinzas, tornillos, muelles y plastilina para ejercitar los dedos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.72, 1.0], [0.66, 0.8], [0.5, 0.72], [0.34, 0.8], [0.28, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [0.6, 0.7, 0.9],
+				"alto": [0.7, 0.75, 0.85]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "juego:llaves.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["hospital", "centro_salud", "residencia"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mm",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_manos.png",
+				"descripcion": "Huella en planta de «Mesa de manos»: un rectángulo con una escotadura redonda en el frente, donde se sienta el paciente de 1,20 por 0,70 metros, con la letra «Mm»."
+			}
+		},
+		{
+			"id": "espejo_postura",
+			"nombre": "Espejo de postura con ruedas",
+			"categoria": "rehabilitacion",
+			"subcategoria": "material_fisioterapia",
+			"etiquetas": ["espejo de postura", "espejo cuadriculado", "espejo de rehabilitación"],
+			"descripcion": "Espejo de cuerpo entero en un bastidor con ruedas, al final de las paralelas. Liso y frío: para quien ve poco, parece que la sala sigue.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 1.0],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.7, 1.8, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "transparente"],
+			"frecuencia": "comun",
+			"relacionados": ["paralelas_marcha"],
+			"simbolo": {
+				"letra": "Ep",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/espejo_postura.png",
+				"descripcion": "Huella en planta de «Espejo de postura con ruedas»: un rectángulo de 0,70 por 0,50 metros, con la letra «Ep»."
+			}
+		},
+		{
+			"id": "cunas_rulos",
+			"nombre": "Cuñas y rulos de fisioterapia",
+			"categoria": "rehabilitacion",
+			"subcategoria": "material_fisioterapia",
+			"etiquetas": ["cuñas de espuma", "rulos de fisioterapia", "cojines posturales"],
+			"descripcion": "Cuñas, rulos y cojines de espuma forrada amontonados en el suelo. Blandos y ligeros: no hacen daño, pero el pie se hunde y se tuerce.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.05, 0.3], [0.35, 0.0], [0.75, 0.1], [1.0, 0.4], [0.9, 0.8], [0.55, 1.0], [0.3, 0.85], [0.0, 0.7]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 1.0],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.15, 0.3, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "colegio:colchoneta.flac"
+			},
+			"contenedor": true,
+			"funcion": "trasto",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cunas_rulos.png",
+				"descripcion": "Huella en planta de «Cuñas y rulos de fisioterapia»: un montón irregular de 0,60 por 0,60 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "pelota_fisioterapia",
+			"nombre": "Pelota grande de fisioterapia",
+			"categoria": "rehabilitacion",
+			"subcategoria": "material_fisioterapia",
+			"etiquetas": ["pelota de fisioterapia", "pelota suiza", "fitball", "balón de Bobath"],
+			"descripcion": "Pelota hinchada de goma que llega a la rodilla o al muslo. Al tocarla rueda y se aparta; bota con un sonido hueco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.65, 0.85],
+				"fondo": [0.45, 0.65, 0.85],
+				"alto": [0.45, 0.65, 0.85]
+			},
+			"variantes": [
+				{
+					"id": "de_55",
+					"nombre": "De 55 cm",
+					"ancho": 0.55,
+					"fondo": 0.55,
+					"alto": 0.55
+				},
+				{
+					"id": "de_65",
+					"nombre": "De 65 cm",
+					"ancho": 0.65,
+					"fondo": 0.65,
+					"alto": 0.65
+				},
+				{
+					"id": "de_75",
+					"nombre": "De 75 cm",
+					"ancho": 0.75,
+					"fondo": 0.75,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "colegio:balon.flac"
+			},
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"sonido": "colegio:balon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["hospital", "centro_salud", "gimnasio", "residencia"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pf",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/pelota_fisioterapia.png",
+				"descripcion": "Huella en planta de «Pelota grande de fisioterapia»: un círculo de 0,65 por 0,65 metros, con la letra «Pf»."
+			}
+		},
+		{
+			"id": "bano_parafina",
+			"nombre": "Baño de parafina",
+			"categoria": "rehabilitacion",
+			"subcategoria": "material_fisioterapia",
+			"etiquetas": ["baño de parafina", "parafina", "cubeta de cera"],
+			"descripcion": "Cubeta de metal con tapa sobre un carrito, llena de cera caliente para las manos. La chapa quema y huele a vela.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.3, 0.35, 0.45],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/bano_parafina.png",
+				"descripcion": "Huella en planta de «Baño de parafina»: un rectángulo de 0,50 por 0,35 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "carro_electroterapia",
+			"nombre": "Carro de electroterapia",
+			"categoria": "rehabilitacion",
+			"subcategoria": "material_fisioterapia",
+			"etiquetas": ["electroterapia", "aparato de corrientes", "ultrasonidos", "TENS"],
+			"descripcion": "Carrito con un aparato de corrientes o ultrasonidos encima y los cables colgando hasta la camilla. Zumba mientras trabaja y pita tres veces al acabar el tiempo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.1], [1.0, 0.9], [0.9, 1.0], [0.1, 1.0], [0.0, 0.9], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [0.9, 1.0, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.2,
+					"radio": 3,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 60,
+				"al_terminar": "apagado",
+				"sonido_al_terminar": "hogar:microondas_fin.flac"
+			},
+			"funcion": "equipo_medico",
+			"lugares": ["centro_salud", "hospital"],
+			"estancias": ["sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["camilla_fisioterapia"],
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_electroterapia.png",
+				"descripcion": "Huella en planta de «Carro de electroterapia»: un rectángulo con las esquinas cortadas de 0,50 por 0,50 metros, con la letra «Ce»."
+			}
+		}
+	]
+}

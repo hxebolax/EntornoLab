@@ -1,0 +1,1209 @@
+{
+	"nombre": "Culture and leisure",
+	"descripcion": "Museum and exhibition room, cinema, theatre and concert hall, library, music venue and nightclub, bowling alley and arcade, and community centre.",
+	"categorias": {
+		"museo": "Museum and exhibitions",
+		"cine": "Cinema",
+		"teatro": "Theatre and concert hall",
+		"biblioteca": "Library",
+		"conciertos": "Music venue and nightclub",
+		"recreativos": "Bowling alley and arcade",
+		"civico": "Community centre"
+	},
+	"subcategorias": {
+		"vitrinas": "Display cases and plinths",
+		"obras": "Works and installations",
+		"barreras_sala": "Barriers and stand-off lines",
+		"paneles_info": "Panels and information",
+		"guias_tactiles": "Guides and touch stations",
+		"servicios_museo": "Entrance, rest and shop",
+		"venta_cine": "Foyer and sales",
+		"butacas_cine": "Seats and aisles",
+		"proyeccion": "Screen, projection and sound",
+		"sala_teatro": "Auditorium and boxes",
+		"caja_escenica": "Stage and curtains",
+		"orquesta": "Orchestra and instruments",
+		"sonido_luces": "Sound, lights and cables",
+		"camerinos": "Dressing rooms and cloakroom",
+		"estantes_biblio": "Shelving and archive",
+		"puestos_biblio": "Reading and study places",
+		"prestamo": "Loans and returns",
+		"prensa_biblio": "Press and new titles",
+		"infantil_biblio": "Children's and lounge area",
+		"cabina_pista": "Booth and dance floor",
+		"equipo_sala": "Speakers and lights",
+		"bolera": "Bowling alley",
+		"maquinas_juego": "Arcade machines",
+		"juegos_mesa": "Game tables",
+		"polivalente": "Multi-purpose hall",
+		"talleres": "Workshops",
+		"participacion": "Participation and notices"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"apagado": "Off",
+		"encendido": "On",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"funcionando": "Running",
+		"desplegado": "Unfolded",
+		"plegado": "Folded"
+	},
+	"objetos": {
+		"vitrina_mesa": {
+			"nombre": "Table display case",
+			"descripcion": "Table with a glass lid at waist height. Your hand rests on the cold glass; the legs are underneath.",
+			"etiquetas": ["table case", "desk display case"],
+			"variantes": {
+				"pequena": "Small",
+				"mediana": "Medium",
+				"grande": "Large"
+			},
+			"imagen": "Footprint of “Table display case”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Vm”."
+		},
+		"vitrina_vertical": {
+			"nombre": "Tall glass display case",
+			"descripcion": "Glass column on all four sides, taller than a person. Smooth and cold; walk all the way round it.",
+			"etiquetas": ["tower display case", "freestanding glass case"],
+			"variantes": {
+				"columna": "Tower",
+				"exenta": "Wide freestanding"
+			},
+			"imagen": "Footprint of “Tall glass display case”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Vv”."
+		},
+		"vitrina_mural_volada": {
+			"nombre": "Cantilevered wall display case",
+			"descripcion": "Glass box hung on the wall at chest height. The cane passes underneath: your shoulder or hand finds it first.",
+			"etiquetas": ["wall case", "hanging display case"],
+			"imagen": "Footprint of “Cantilevered wall display case”: a rectangle, 1.20 by 0.30 metres, hanging 0.90 metres above the floor, marked with the letters “Vm”."
+		},
+		"peana_escultura": {
+			"nombre": "Plinth with sculpture",
+			"descripcion": "Smooth block up to waist height with a sculpture on top. Push the plinth and the piece may shift: walk round without touching.",
+			"etiquetas": ["plinth", "pedestal", "bust"],
+			"imagen": "Footprint of “Plinth with sculpture”: a rectangle, 0.50 by 0.50 metres, marked with the letters “Pe”."
+		},
+		"peana_urna": {
+			"nombre": "Plinth with glass dome",
+			"descripcion": "Round wooden stand topped by a glass dome protecting a small piece. Wood below, glass above.",
+			"etiquetas": ["glass dome", "bell jar case"],
+			"imagen": "Footprint of “Plinth with glass dome”: a circle, 0.50 by 0.50 metres, marked with the letters “Pu”."
+		},
+		"tarima_obras": {
+			"nombre": "Low display platform",
+			"descripcion": "Platform a hand's width high on which large pieces stand. The cane touches it low down: a trip hazard if unexpected.",
+			"etiquetas": ["display platform", "exhibition plinth"],
+			"imagen": "Footprint of “Low display platform”: a rectangle, 2.00 by 1.50 metres, marked with the letters “To”."
+		},
+		"escultura_exenta": {
+			"nombre": "Large freestanding sculpture",
+			"descripcion": "Irregular metal sculpture with arms sticking out at different heights. The cane finds the base, but a projection may be at face level.",
+			"etiquetas": ["sculpture", "freestanding sculpture"],
+			"imagen": "Footprint of “Large freestanding sculpture”: an irregular outline with projections, 2.00 by 1.50 metres, marked with the letters “Ee”."
+		},
+		"esqueleto_montado": {
+			"nombre": "Mounted skeleton on a platform",
+			"descripcion": "Skeleton of a large animal on a low platform. Tail and neck overhang the platform at head height: the cane finds the platform, not the bones.",
+			"etiquetas": ["skeleton", "fossil", "dinosaur"],
+			"imagen": "Footprint of “Mounted skeleton on a platform”: an elongated outline: thin tail on one side, wide body in the middle and neck on the other, 4.00 by 1.50 metres, marked with the letters “Em”."
+		},
+		"movil_colgante": {
+			"nombre": "Hanging mobile",
+			"descripcion": "Light pieces hanging from the ceiling, slowly turning in the air at head height. The cane cannot find it.",
+			"etiquetas": ["mobile", "hanging sculpture"],
+			"imagen": "Footprint of “Hanging mobile”: a circle, 2.00 by 2.00 metres, hanging 1.70 metres above the floor, marked with the letters “Mc”."
+		},
+		"instalacion_suelo": {
+			"nombre": "Floor installation",
+			"descripcion": "Artwork spread over the floor: stones, sand or small objects. No barrier, and it must not be stepped on: walk round it.",
+			"etiquetas": ["floor installation", "floor piece"],
+			"aviso": "Artwork on the floor: do not step on it, walk round.",
+			"imagen": "Footprint of “Floor installation”: a rounded, irregular patch, 2.50 by 2.00 metres, marked with the letters “Is”."
+		},
+		"maqueta_mesa": {
+			"nombre": "Scale model on a table",
+			"descripcion": "Large table with a scale model under a clear plastic cover. Walk round all four sides.",
+			"etiquetas": ["scale model", "model", "diorama"],
+			"imagen": "Footprint of “Scale model on a table”: a rectangle, 1.50 by 1.20 metres, marked with the letters “Mm”."
+		},
+		"cuadro_barrera": {
+			"nombre": "Large painting with low barrier",
+			"descripcion": "Large painting on the wall with a low rail in front at shin height marking the distance. The cane touches it; the hand does not.",
+			"etiquetas": ["stand-off barrier", "painting barrier"],
+			"imagen": "Footprint of “Large painting with low barrier”: a low rail in front with two thin sides reaching the wall, 2.50 by 0.80 metres, marked with the letters “Cb”."
+		},
+		"cordon_bajo": {
+			"nombre": "Low rope barrier",
+			"descripcion": "Thin elastic cord stretched between small posts at shin height. It gives when touched and is hard to detect: the cane may pass over it.",
+			"etiquetas": ["low rope", "stand-off cord"],
+			"imagen": "Footprint of “Low rope barrier”: a rectangle, 2.00 by 0.10 metres, marked with the letters “Cb”."
+		},
+		"catenaria_terciopelo": {
+			"nombre": "Velvet rope stanchions",
+			"descripcion": "Two metal posts on round bases joined by a thick velvet rope hanging in a curve. Between posts the cane may pass under the rope.",
+			"etiquetas": ["velvet rope", "rope stanchions"],
+			"imagen": "Footprint of “Velvet rope stanchions”: two posts joined by a rope, 1.50 by 0.32 metres, marked with the letters “Ct”."
+		},
+		"cortina_sala_oscura": {
+			"nombre": "Blackout curtain",
+			"descripcion": "Thick, heavy curtain closing the entrance to a projection room. Push it aside to go through; behind it there is darkness and sound.",
+			"etiquetas": ["blackout curtain", "heavy curtain"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Blackout curtain”: a rectangle, 1.40 by 0.15 metres, marked with the letters “Cs”."
+		},
+		"panel_expositor": {
+			"nombre": "Freestanding display panel",
+			"descripcion": "Tall, thin board standing on two cross feet. The feet stick out on each side: the cane touches them before the panel.",
+			"etiquetas": ["display panel", "exhibition board"],
+			"variantes": {
+				"de_100": "1 m",
+				"de_120": "1.20 m",
+				"de_240": "2.40 m"
+			},
+			"imagen": "Footprint of “Freestanding display panel”: a thin panel with a cross foot at each end, 1.20 by 0.40 metres, marked with the letters “Pe”."
+		},
+		"panel_zigzag": {
+			"nombre": "Zigzag display screen",
+			"descripcion": "Several tall panels joined in a zigzag, like a folding screen. Trailing it by hand, the surface goes in and out in points.",
+			"etiquetas": ["zigzag screen", "folding display panels"],
+			"imagen": "Footprint of “Zigzag display screen”: a zigzag band, like a folding screen, 3.00 by 0.80 metres, marked with the letters “Pz”."
+		},
+		"atril_informativo": {
+			"nombre": "Sloping information lectern",
+			"descripcion": "Sloping plate on a stand at waist height carrying the room text, sometimes in braille. The plate overhangs the stand at the front.",
+			"etiquetas": ["information lectern", "label stand"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Sloping information lectern”: a rectangle, 0.60 by 0.40 metres, marked with the letters “Ai”."
+		},
+		"totem_interactivo_museo": {
+			"nombre": "Museum interactive kiosk",
+			"descripcion": "Flat column with a touch screen at chest height. It answers with a beep when touched.",
+			"etiquetas": ["interactive kiosk", "touch screen"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Museum interactive kiosk”: a rectangle, 0.60 by 0.40 metres, marked with the letters “Ti”."
+		},
+		"proyector_tripode": {
+			"nombre": "Projector on a tripod",
+			"descripcion": "Projector on a tripod with three spread legs and a cable on the floor. When on, a fan blows. Catch a leg and it falls.",
+			"etiquetas": ["projector", "video projector"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Projector on a tripod”: a triangle pointing to the front, 0.80 by 0.80 metres, marked with the letters “Pt”."
+		},
+		"maqueta_tactil": {
+			"nombre": "Tactile model",
+			"descripcion": "Bronze model made to be touched: the building or the piece in miniature, with relief and braille on the rim. It is at hand height.",
+			"etiquetas": ["tactile model", "touch model"],
+			"acciones": {
+				"tocar": "Touch",
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Tactile model”: a rectangle with rounded corners, 1.20 by 0.80 metres, marked with the letters “Mt”."
+		},
+		"estacion_tactil_audio": {
+			"nombre": "Touch station with audio",
+			"descripcion": "Lectern with a relief reproduction to touch and a large button: press it and a voice describes the work.",
+			"etiquetas": ["touch station", "audio description point"],
+			"acciones": {
+				"tocar": "Touch",
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Touch station with audio”: a trapezoid, narrower at the back, 0.80 by 0.50 metres, marked with the letters “Et”."
+		},
+		"punto_audioguias": {
+			"nombre": "Audio guide collection point",
+			"descripcion": "Unit with pigeonholes where audio guides charge. Take one, hang it round your neck and it speaks when you key in a number.",
+			"etiquetas": ["audio guides", "audio guide desk"],
+			"acciones": {
+				"coger": "Take",
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Audio guide collection point”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Pa”."
+		},
+		"cargador_signoguias": {
+			"nombre": "Wall rack of sign-language guides",
+			"descripcion": "Tray hung on the wall one metre up holding sign guides, small screens with sign-language videos. The cane passes underneath.",
+			"etiquetas": ["sign guides", "sign-language guides"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Wall rack of sign-language guides”: a rectangle, 0.60 by 0.15 metres, hanging 1.00 metres above the floor, marked with the letters “Cs”."
+		},
+		"banco_museo": {
+			"nombre": "Museum gallery bench",
+			"descripcion": "Wide padded bench with no back or arms in the middle of the room. Sit down from either side.",
+			"etiquetas": ["gallery bench", "backless bench"],
+			"variantes": {
+				"dos_plazas": "Two-seater",
+				"tres_plazas": "Three-seater",
+				"doble": "Double-sided"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Museum gallery bench”: a rectangle with rounded corners, 1.80 by 0.55 metres, marked with the letters “Bm”."
+		},
+		"banco_circular_museo": {
+			"nombre": "Round bench with central backrest",
+			"descripcion": "Round upholstered seat with a cone-shaped backrest in the middle. You sit facing outwards.",
+			"etiquetas": ["borne settee", "round bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Round bench with central backrest”: a circle, 1.60 by 1.60 metres, marked with the letters “Bc”."
+		},
+		"carro_asientos_plegables": {
+			"nombre": "Trolley of folding stools",
+			"descripcion": "Wheeled trolley hung with light folding stools for visitors. Take one and carry it through the rooms.",
+			"etiquetas": ["folding stools", "portable seats trolley"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Trolley of folding stools”: a rectangle, 0.60 by 1.00 metres, marked with the letters “Ca”."
+		},
+		"mostrador_entradas_museo": {
+			"nombre": "Museum ticket desk",
+			"descripcion": "Long desk at the entrance, high for standing service, with a lower stretch at 80 centimetres at one end.",
+			"etiquetas": ["ticket desk", "admissions desk"],
+			"variantes": {
+				"corto": "Short",
+				"normal": "Standard",
+				"largo": "Long"
+			},
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Museum ticket desk”: a rectangle, 2.40 by 0.80 metres, marked with the letters “Me”."
+		},
+		"consigna_museo": {
+			"nombre": "Museum bag lockers",
+			"descripcion": "Block of small metal lockers for leaving your bag, rucksack and umbrella before going in. Each door locks with a key.",
+			"etiquetas": ["bag lockers", "visitor lockers"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Museum bag lockers”: a rectangle, 1.20 by 0.45 metres, marked with the letters “Cm”."
+		},
+		"arco_detector_museo": {
+			"nombre": "Entrance metal detector arch",
+			"descripcion": "Plastic frame you walk through one at a time, between two columns. It beeps if you carry metal. Go through slowly, in the middle.",
+			"etiquetas": ["metal detector", "security arch"],
+			"acciones": {
+				"pasar": "Go through"
+			},
+			"aviso": "Detector arch: walk slowly through the middle.",
+			"imagen": "Footprint of “Entrance metal detector arch”: a rectangle, 0.90 by 0.60 metres, marked with the letters “Ad”."
+		},
+		"mesa_tienda_museo": {
+			"nombre": "Museum shop island table",
+			"descripcion": "Wide table in the middle of the shop covered in stacked books, prints and souvenirs. The piles may fall if you brush the edge.",
+			"etiquetas": ["shop island", "souvenir table"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Museum shop island table”: a rectangle with cut corners, 1.40 by 1.00 metres, marked with the letters “Mt”."
+		},
+		"taquilla_cine": {
+			"nombre": "Cinema box office",
+			"descripcion": "Closed booth with a glass window and a slot for passing money and tickets. You speak through a microphone.",
+			"etiquetas": ["box office", "ticket booth"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Cinema box office”: a rectangle with cut corners, 1.80 by 1.20 metres, marked with the letters “Tc”."
+		},
+		"mostrador_palomitas": {
+			"nombre": "Popcorn counter",
+			"descripcion": "Counter with the popcorn machine on top: you hear the corn popping and smell it from afar. The machine's glass is hot.",
+			"etiquetas": ["popcorn counter", "concession stand"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Popcorn counter”: a rectangle, 3.00 by 0.80 metres, marked with the letters “Mp”."
+		},
+		"cartelera_luminosa": {
+			"nombre": "Wall poster light box",
+			"descripcion": "Flat box holding the film poster, hung on the wall from the waist up. It sticks out a hand's width and the cane gives no warning.",
+			"etiquetas": ["poster case", "light box"],
+			"imagen": "Footprint of “Wall poster light box”: a rectangle, 1.00 by 0.12 metres, hanging 0.70 metres above the floor, marked with the letters “Cl”."
+		},
+		"figura_carton_estreno": {
+			"nombre": "Cardboard film standee",
+			"descripcion": "Large cardboard figure advertising a film, standing in the middle of the foyer. Light: it tips over when bumped and moves every week.",
+			"etiquetas": ["standee", "cardboard cutout"],
+			"imagen": "Footprint of “Cardboard film standee”: a sheet at the back with a narrower foot towards the front, 1.50 by 0.50 metres, marked with the letters “Fc”."
+		},
+		"atril_control_entradas": {
+			"nombre": "Ticket check stand",
+			"descripcion": "Post with a reader where the usher checks your ticket before you go through to the screens. It beeps on reading.",
+			"etiquetas": ["ticket check", "usher stand"],
+			"acciones": {
+				"validar": "Validate your ticket"
+			},
+			"imagen": "Footprint of “Ticket check stand”: a rectangle, 0.50 by 0.40 metres, marked with the letters “Ac”."
+		},
+		"contenedor_gafas_3d": {
+			"nombre": "3D glasses return bin",
+			"descripcion": "Tall plastic bin at the screen exit with a wide opening on top for returning the glasses.",
+			"etiquetas": ["3D glasses bin", "glasses return"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “3D glasses return bin”: a rectangle, 0.50 by 0.50 metres, marked with the letters “Cg”."
+		},
+		"fila_butacas_cine": {
+			"nombre": "Row of cinema seats",
+			"descripcion": "Soft seats joined in a row with arms and cup holders, all facing the screen. You shuffle in sideways between the rows.",
+			"etiquetas": ["cinema seats", "row of seats"],
+			"variantes": {
+				"dos_plazas": "2 seats",
+				"cuatro_plazas": "4 seats",
+				"seis_plazas": "6 seats",
+				"ocho_plazas": "8 seats",
+				"diez_plazas": "10 seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Row of cinema seats”: a rectangle, 3.40 by 0.75 metres, marked with the letters “Fb”."
+		},
+		"butaca_cine_suelta": {
+			"nombre": "Single cinema seat",
+			"descripcion": "A single cinema seat, wide and soft, with arms. The seat is tipped up and drops when you sit.",
+			"etiquetas": ["cinema seat", "recliner seat"],
+			"variantes": {
+				"normal": "Standard",
+				"reclinable": "Wide recliner"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Single cinema seat”: a rectangle, 0.60 by 0.75 metres, marked with the letters “Bc”."
+		},
+		"espacio_silla_ruedas": {
+			"nombre": "Wheelchair space",
+			"descripcion": "Level gap among the seats, marked on the floor, for a wheelchair. There is no seat: it is an empty space in the row.",
+			"etiquetas": ["wheelchair space", "accessible space"],
+			"imagen": "Footprint of “Wheelchair space”: a rectangle, 0.90 by 1.30 metres, marked with the letters “Es”."
+		},
+		"escalon_iluminado": {
+			"nombre": "Lit aisle step",
+			"descripcion": "Wide, shallow step in the auditorium aisle, carpeted, with a rubber strip on the edge. There is one for each row.",
+			"etiquetas": ["aisle step", "lit step"],
+			"aviso": "Step in the auditorium aisle.",
+			"imagen": "Footprint of “Lit aisle step”: a rectangle, 1.20 by 0.30 metres, marked with the letters “Ei”."
+		},
+		"alzadores_apilados": {
+			"nombre": "Stacked booster seats",
+			"descripcion": "Stack of hard plastic cushions by the screen door so children can see. Take one; the stack wobbles.",
+			"etiquetas": ["booster seats", "booster cushions"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Stacked booster seats”: a rectangle, 0.50 by 0.45 metres, marked with the letters “Aa”."
+		},
+		"pantalla_cine": {
+			"nombre": "Cinema screen",
+			"descripcion": "Huge screen filling the end wall, raised a metre off the floor. The film sound comes from behind it: it shows which way the seats face.",
+			"etiquetas": ["cinema screen", "projection screen"],
+			"variantes": {
+				"pequena": "Small screen",
+				"mediana": "Medium screen",
+				"grande": "6 m section"
+			},
+			"imagen": "Footprint of “Cinema screen”: a rectangle, 5.00 by 0.30 metres, hanging 1.00 metres above the floor, marked with the letters “Pc”."
+		},
+		"proyector_cabina": {
+			"nombre": "Cinema booth projector",
+			"descripcion": "Large machine on a pedestal in the booth, aimed at the auditorium through a small window. When running it clatters and blows hot air.",
+			"etiquetas": ["cinema projector", "projection booth"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Cinema booth projector”: a rectangle, 0.90 by 1.50 metres, marked with the letters “Pc”."
+		},
+		"altavoz_envolvente": {
+			"nombre": "Wall surround speaker",
+			"descripcion": "Speaker box bolted to the side wall above head height, tilted towards the seats. It sticks out a long hand's width.",
+			"etiquetas": ["surround speaker", "wall speaker"],
+			"imagen": "Footprint of “Wall surround speaker”: a rectangle, 0.40 by 0.25 metres, hanging 1.80 metres above the floor, marked with the letters “Ae”."
+		},
+		"fila_butacas_patio": {
+			"nombre": "Row of stalls seats",
+			"descripcion": "Theatre seats of wood and velvet joined in a row with tip-up seats: the seat is up and you push it down by hand.",
+			"etiquetas": ["stalls seats", "theatre seats", "auditorium row"],
+			"variantes": {
+				"cuatro_plazas": "4 seats",
+				"seis_plazas": "6 seats",
+				"ocho_plazas": "8 seats",
+				"diez_plazas": "10 seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Row of stalls seats”: a rectangle, 3.00 by 0.65 metres, marked with the letters “Fb”."
+		},
+		"palco_teatro": {
+			"nombre": "Theatre box",
+			"descripcion": "Small enclosure with a padded parapet in front, waist high, and a partition on each side. You enter from behind. Beyond the parapet is a drop.",
+			"etiquetas": ["theatre box", "balcony box"],
+			"imagen": "Footprint of “Theatre box”: a parapet in front and a partition on each side, open at the back, 2.00 by 2.00 metres, marked with the letters “Pt”."
+		},
+		"mostrador_guardarropa": {
+			"nombre": "Cloakroom counter",
+			"descripcion": "Wide counter behind which coats hang on rails. Hand over your coat and you get a numbered token.",
+			"etiquetas": ["cloakroom", "coat check"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Cloakroom counter”: a rectangle, 2.00 by 0.70 metres, marked with the letters “Mg”."
+		},
+		"borde_escenario": {
+			"nombre": "Stage edge",
+			"descripcion": "The edge of the stage: beyond it there is a one-metre drop into the auditorium or the pit. There is no rail.",
+			"etiquetas": ["stage edge", "apron", "proscenium edge"],
+			"aviso": "Stage edge: stop, there is a drop.",
+			"imagen": "Footprint of “Stage edge”: a rectangle, 5.00 by 0.40 metres, marked with the letters “Be”."
+		},
+		"foso_orquesta": {
+			"nombre": "Orchestra pit",
+			"descripcion": "Deep pit between the stage and the front row where the musicians play. Straight on the stage side and curved towards the audience.",
+			"etiquetas": ["orchestra pit", "pit"],
+			"aviso": "Orchestra pit: no way through, there is a deep drop.",
+			"imagen": "Footprint of “Orchestra pit”: a semicircle, straight at the back and round at the front, 5.00 by 2.50 metres, marked with the letters “Fo”."
+		},
+		"telon_boca": {
+			"nombre": "Front curtain",
+			"descripcion": "Huge, heavy curtain closing off the stage. Closed, it is a soft wall of fabric; open, it gathers at the sides.",
+			"etiquetas": ["stage curtain", "house curtain"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Front curtain”: a rectangle, 5.00 by 0.30 metres, marked with the letters “Tb”."
+		},
+		"pata_bambalinas": {
+			"nombre": "Stage wing curtain",
+			"descripcion": "Tall, narrow black cloth hanging at the side of the stage to mask the wings. Actors enter and exit between one and the next.",
+			"etiquetas": ["wing curtain", "stage leg", "wings"],
+			"imagen": "Footprint of “Stage wing curtain”: a rectangle, 1.50 by 0.15 metres, marked with the letters “Pb”."
+		},
+		"concha_apuntador": {
+			"nombre": "Prompter's box",
+			"descripcion": "Low wooden hood at the centre of the stage edge, open towards the actors. It is at shin height.",
+			"etiquetas": ["prompt box", "prompter's hood"],
+			"imagen": "Footprint of “Prompter's box”: a semicircle, straight at the back and round at the front, 1.00 by 0.60 metres, marked with the letters “Ca”."
+		},
+		"escalera_escenario": {
+			"nombre": "Stage access steps",
+			"descripcion": "Short flight of four or five wooden steps set against the front of the stage. It does not always have a handrail.",
+			"etiquetas": ["stage steps", "access steps"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Stage access steps”: a rectangle, 1.20 by 1.00 metres, marked with the letters “Ee”."
+		},
+		"barra_tiros": {
+			"nombre": "Rope lock rail",
+			"descripcion": "Row of thick ropes running up to the ceiling by the side wall, tied off on an iron rail. They raise and lower the scenery.",
+			"etiquetas": ["rope lock rail", "fly ropes", "counterweights"],
+			"imagen": "Footprint of “Rope lock rail”: a rectangle, 3.00 by 0.50 metres, marked with the letters “Bt”."
+		},
+		"baul_gira": {
+			"nombre": "Flight case on castors",
+			"descripcion": "Reinforced case with metal edges and castors in which sound and lighting gear travels. It turns up backstage and gets moved about.",
+			"etiquetas": ["flight case", "road case"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Flight case on castors”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Bg”."
+		},
+		"tarima_director": {
+			"nombre": "Conductor's podium with stand",
+			"descripcion": "Square one-step platform with a rail behind and a wide music stand in front. The conductor stands on it facing the orchestra.",
+			"etiquetas": ["conductor's podium", "rostrum"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Conductor's podium with stand”: a rectangle, 1.10 by 1.10 metres, marked with the letters “Td”."
+		},
+		"corro_atriles": {
+			"nombre": "Arc of orchestra chairs and stands",
+			"descripcion": "Chairs in an arc, each with a thin metal music stand in front. The stands are light and tip over; the arc opens towards the conductor.",
+			"etiquetas": ["music stands", "orchestra chairs"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Arc of orchestra chairs and stands”: a curved band bulging towards the front, 4.00 by 1.80 metres, marked with the letters “Ca”."
+		},
+		"arpa": {
+			"nombre": "Harp",
+			"descripcion": "Concert harp: a tall wooden triangle with taut strings. Run your fingers across and a cascade of notes sounds.",
+			"etiquetas": ["harp", "concert harp"],
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Harp”: a triangle pointing to the front, 0.55 by 1.00 metres, marked with the letters “Ar”."
+		},
+		"timbales_orquesta": {
+			"nombre": "Orchestral timpani",
+			"descripcion": "Three or four large copper kettledrums set in an arc round the player. The drumhead is at waist height.",
+			"etiquetas": ["timpani", "kettledrums"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Orchestral timpani”: a curved band bulging towards the front, 2.50 by 1.20 metres, marked with the letters “To”."
+		},
+		"contrabajo_apoyado": {
+			"nombre": "Double bass on its stand",
+			"descripcion": "Double bass upright on a stand, as tall as a person. The hollow wooden body resonates when brushed; the neck is at face height.",
+			"etiquetas": ["double bass", "upright bass"],
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Double bass on its stand”: a teardrop, round at the back and pointed at the front, 0.70 by 0.55 metres, marked with the letters “Ca”."
+		},
+		"bateria": {
+			"nombre": "Drum kit",
+			"descripcion": "Ring of drums and cymbals on metal legs with a seat behind. The cymbals stick out at chest height and ring at the slightest touch.",
+			"etiquetas": ["drum kit", "drums"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Drum kit”: a rounded ring of drums and cymbals with the seat at the back, 1.60 by 1.40 metres, marked with the letters “Ba”."
+		},
+		"amplificador_guitarra": {
+			"nombre": "Guitar amplifier",
+			"descripcion": "Heavy box with a cloth grille at the front, on the stage floor. When on, it hums quietly all the time.",
+			"etiquetas": ["amplifier", "guitar amp"],
+			"variantes": {
+				"combo": "Combo",
+				"cabezal_pantalla": "Head and cabinet"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Guitar amplifier”: a rectangle, 0.60 by 0.30 metres, marked with the letters “Ag”."
+		},
+		"monitor_cuna": {
+			"nombre": "Stage wedge monitor",
+			"descripcion": "Low wedge-shaped speaker on the floor at the stage edge, pointing upwards. Below knee height: an easy thing to trip over.",
+			"etiquetas": ["wedge monitor", "floor monitor"],
+			"imagen": "Footprint of “Stage wedge monitor”: a trapezoid, narrower at the back, 0.60 by 0.40 metres, marked with the letters “Mc”."
+		},
+		"mesa_mezclas": {
+			"nombre": "Mixing desk",
+			"descripcion": "Desk covered in knobs and sliders from which the engineer controls the sound, at the back of the room. Bundles of cables come out behind.",
+			"etiquetas": ["mixing desk", "sound desk", "mixer"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Mixing desk”: a rectangle, 1.80 by 1.00 metres, marked with the letters “Mm”."
+		},
+		"tripode_foco": {
+			"nombre": "Lighting stand",
+			"descripcion": "Three widely spread legs on the floor and a pole rising to a spotlight. The legs get in the way; the lamp at the top is hot.",
+			"etiquetas": ["lighting stand", "spotlight tripod"],
+			"imagen": "Footprint of “Lighting stand”: a triangle of three spread legs, 1.20 by 1.20 metres, marked with the letters “Tf”."
+		},
+		"pie_microfono": {
+			"nombre": "Microphone stand",
+			"descripcion": "Heavy round base with a very thin pole. The cane may sweep past without touching it. A boom arm sticks out at face height.",
+			"etiquetas": ["mic stand", "microphone stand"],
+			"variantes": {
+				"recto": "Straight",
+				"jirafa": "Boom"
+			},
+			"imagen": "Footprint of “Microphone stand”: a circle, 0.30 by 0.30 metres, marked with the letters “Pm”."
+		},
+		"cables_sueltos": {
+			"nombre": "Loose cables on the floor",
+			"descripcion": "Unprotected sound cables, some coiled, lying across the stage floor. They tangle round your foot and the cane tip.",
+			"etiquetas": ["loose cables", "cable coil"],
+			"aviso": "Cables on the floor: mind your feet.",
+			"imagen": "Footprint of “Loose cables on the floor”: an irregular trail, 1.50 by 0.80 metres, marked with the letters “Cs”."
+		},
+		"tocador_camerino": {
+			"nombre": "Dressing room mirror table",
+			"descripcion": "Narrow table against the wall with a large mirror ringed with light bulbs. When on, the bulbs burn to the touch.",
+			"etiquetas": ["dressing table", "make-up mirror"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Dressing room mirror table”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Tc”."
+		},
+		"burro_vestuario": {
+			"nombre": "Theatre costume rail",
+			"descripcion": "Tall wheeled rail with two bars, loaded with long costumes. Soft at the sides; at the bottom only castors and a crossbar.",
+			"etiquetas": ["costume rail", "wardrobe rail"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Theatre costume rail”: a rectangle, 1.80 by 0.60 metres, marked with the letters “Bv”."
+		},
+		"estanteria_doble_cara": {
+			"nombre": "Double-sided library shelving",
+			"descripcion": "Freestanding metal shelving with books on both faces. Set in parallel they form narrow aisles; trail your hand along the book spines.",
+			"etiquetas": ["double-sided shelving", "library stack"],
+			"variantes": {
+				"un_modulo": "1 bay",
+				"dos_modulos": "2 bays",
+				"tres_modulos": "3 bays",
+				"cuatro_modulos": "4 bays",
+				"seis_modulos": "6 bays"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Double-sided library shelving”: a rectangle, 2.70 by 0.60 metres, marked with the letters “Ed”."
+		},
+		"armario_compacto": {
+			"nombre": "Mobile shelving on rails",
+			"descripcion": "Block of shelving units pressed together that travel on rails when you turn a wheel: one aisle opens as another closes. The rails stand proud of the floor.",
+			"etiquetas": ["mobile shelving", "compact shelving"],
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Mobile shelving on rails”: a rectangle, 3.00 by 3.00 metres, marked with the letters “Ac”."
+		},
+		"fichero_fichas": {
+			"nombre": "Library card catalogue",
+			"descripcion": "Wooden cabinet with many long, narrow little drawers, each with its pull and label. The cards stand in a row inside.",
+			"etiquetas": ["card catalogue", "card index cabinet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Library card catalogue”: a rectangle, 1.00 by 0.50 metres, marked with the letters “Ff”."
+		},
+		"planero": {
+			"nombre": "Map chest",
+			"descripcion": "Wide, deep metal cabinet with very shallow drawers for storing maps and prints flat. It comes up to the waist.",
+			"etiquetas": ["map chest", "plan chest"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Map chest”: a rectangle, 1.30 by 0.95 metres, marked with the letters “Pl”."
+		},
+		"taburete_rodante_biblioteca": {
+			"nombre": "Library kick stool",
+			"descripcion": "Low, round plastic stool on hidden castors: it rolls when pushed and locks when stood on. It gets left behind in the aisles.",
+			"etiquetas": ["kick stool", "step stool"],
+			"acciones": {
+				"subir": "Climb on",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Library kick stool”: a circle, 0.44 by 0.44 metres, marked with the letters “Tr”."
+		},
+		"escalera_rodante_biblioteca": {
+			"nombre": "Rolling library ladder",
+			"descripcion": "Ladder of three or four steps with handrails and castors for reaching the top shelves. Wider at the bottom than at the top.",
+			"etiquetas": ["rolling ladder", "library steps"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Rolling library ladder”: a trapezoid, narrower at the back, 0.65 by 1.00 metres, marked with the letters “Er”."
+		},
+		"mesa_lectura_lamparas": {
+			"nombre": "Long reading table with lamps",
+			"descripcion": "Very long table with a row of low lamps down the middle and chairs on both sides. The lamps are warm and have a pull-chain switch.",
+			"etiquetas": ["reading table", "long library table"],
+			"variantes": {
+				"seis_plazas": "For 6",
+				"ocho_plazas": "For 8",
+				"doce_plazas": "For 12"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Long reading table with lamps”: a rectangle, 3.60 by 1.20 metres, marked with the letters “Ml”."
+		},
+		"puesto_estudio": {
+			"nombre": "Study carrel",
+			"descripcion": "Single desk with panels at the front and sides screening you from your neighbour. Several in a row form a line of booths open at the back.",
+			"etiquetas": ["study carrel", "study booth"],
+			"variantes": {
+				"individual": "Single",
+				"doble": "2 places",
+				"cuatro_puestos": "4 places"
+			},
+			"imagen": "Footprint of “Study carrel”: a rectangle, 0.90 by 0.70 metres, marked with the letters “Pe”."
+		},
+		"puesto_consulta_catalogo": {
+			"nombre": "Catalogue search terminal",
+			"descripcion": "Tall stand with a screen and keyboard for looking up books standing. There is no seat; the keyboard is at elbow height.",
+			"etiquetas": ["catalogue terminal", "opac"],
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Catalogue search terminal”: a rectangle, 0.70 by 0.55 metres, marked with the letters “Pc”."
+		},
+		"globo_terraqueo": {
+			"nombre": "Floor-standing globe",
+			"descripcion": "Large sphere on a wooden stand at chest height. It spins when pushed and has the continents in relief.",
+			"etiquetas": ["globe", "floor globe"],
+			"acciones": {
+				"girar": "Spin",
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Floor-standing globe”: a circle, 0.60 by 0.60 metres, marked with the letters “Gt”."
+		},
+		"mostrador_prestamo": {
+			"nombre": "Library issue desk",
+			"descripcion": "L-shaped desk by the entrance: a high stretch for standing service and a low one, at 80 centimetres, for sitting or wheelchair users.",
+			"etiquetas": ["issue desk", "circulation desk", "loans desk"],
+			"acciones": {
+				"sacar_libro_prestamo": "Check a book out",
+				"devolver_libro": "Return a book"
+			},
+			"imagen": "Footprint of “Library issue desk”: an L shape, 3.00 by 1.60 metres, marked with the letters “Mp”."
+		},
+		"buzon_devolucion": {
+			"nombre": "Book return box",
+			"descripcion": "Metal box with a flap at chest height through which returned books are dropped; they land with a thud.",
+			"etiquetas": ["book drop", "book return"],
+			"acciones": {
+				"devolver_libro": "Return a book"
+			},
+			"imagen": "Footprint of “Book return box”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Bd”."
+		},
+		"maquina_autoprestamo": {
+			"nombre": "Self-checkout library kiosk",
+			"descripcion": "Unit with a tray where you place the books and a screen above. It beeps twice when the loan is recorded.",
+			"etiquetas": ["self-checkout", "self-issue kiosk"],
+			"acciones": {
+				"sacar_libro_prestamo": "Check a book out"
+			},
+			"imagen": "Footprint of “Self-checkout library kiosk”: a rectangle, 0.70 by 0.60 metres, marked with the letters “Ma”."
+		},
+		"expositor_novedades": {
+			"nombre": "New titles display",
+			"descripcion": "Four-sided stepped unit showing new books face-out near the entrance. Wider at the bottom than at the top.",
+			"etiquetas": ["new books display", "book display stand"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “New titles display”: a rectangle with cut corners, 0.90 by 0.90 metres, marked with the letters “En”."
+		},
+		"revistero_inclinado": {
+			"nombre": "Sloping magazine rack",
+			"descripcion": "Tall unit with sloping shelves on which magazines rest face-out. Each shelf lifts and back issues are stored behind.",
+			"etiquetas": ["magazine rack", "periodical display"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Sloping magazine rack”: a rectangle, 1.00 by 0.40 metres, marked with the letters “Ri”."
+		},
+		"hemeroteca_barras": {
+			"nombre": "Newspaper stick rack",
+			"descripcion": "Frame from which the day's newspapers hang, each clamped in a wooden stick. The paper rustles when brushed.",
+			"etiquetas": ["newspaper rack", "newspaper sticks"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Newspaper stick rack”: a rectangle, 1.00 by 0.50 metres, marked with the letters “Hb”."
+		},
+		"asiento_curvo_lectura": {
+			"nombre": "Curved modular reading seat",
+			"descripcion": "Long, curved upholstered seat without arms, made of joined modules. Trail your hand along the backrest as it bends round.",
+			"etiquetas": ["curved seating", "modular lounge seat"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Curved modular reading seat”: a curved band bulging towards the front, 2.40 by 1.20 metres, marked with the letters “Ac”."
+		},
+		"cubeta_cuentos": {
+			"nombre": "Children's picture book browser box",
+			"descripcion": "Low wheeled box, open at the top and divided into compartments, where picture books are browsed from above. At small-child height.",
+			"etiquetas": ["kinder box", "picture book box"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Children's picture book browser box”: a rectangle, 0.80 by 0.80 metres, marked with the letters “Cc”."
+		},
+		"rincon_cojines": {
+			"nombre": "Children's cushion corner",
+			"descripcion": "Corner with a mat and big cushions piled up for reading lying down. Soft and low: your foot sinks in.",
+			"etiquetas": ["reading corner", "cushion corner"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Children's cushion corner”: a quarter circle with its corner at the back left, 2.50 by 2.50 metres, marked with the letters “Rc”."
+		},
+		"grada_cuentacuentos": {
+			"nombre": "Storytelling steps",
+			"descripcion": "Two or three wide padded steps in a half-moon where children sit and listen. You can climb up anywhere along the front.",
+			"etiquetas": ["storytelling steps", "story tiers"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Storytelling steps”: a semicircle, straight at the back and round at the front, 2.40 by 1.20 metres, marked with the letters “Gc”."
+		},
+		"cabina_dj": {
+			"nombre": "DJ booth",
+			"descripcion": "High desk with the decks and mixer, closed at the front and with a wing on each side. The DJ stands inside. The music comes from here.",
+			"etiquetas": ["DJ booth", "DJ desk", "decks"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “DJ booth”: a wide desk in front with two wings going back, 2.00 by 1.20 metres, marked with the letters “Cd”."
+		},
+		"pista_baile": {
+			"nombre": "Dance floor",
+			"descripcion": "Clear area with a smooth wooden floor, different from the rest of the room. No furniture: what moves on it is people.",
+			"etiquetas": ["dance floor", "dancefloor"],
+			"imagen": "Footprint of “Dance floor”: a rectangle, 5.00 by 5.00 metres, marked with the letters “Pb”."
+		},
+		"podio_baile": {
+			"nombre": "Dance podium",
+			"descripcion": "Small, high eight-sided platform for dancing on. It reaches knee or hip height and has no rail.",
+			"etiquetas": ["dance podium", "go-go platform"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Dance podium”: an octagon, 1.20 by 1.20 metres, marked with the letters “Pb”."
+		},
+		"valla_antiavalancha": {
+			"nombre": "Crowd crush barrier",
+			"descripcion": "Solid metal barrier in front of the stage, chest high, with a floor plate on the audience side and a step on the other.",
+			"etiquetas": ["crowd barrier", "stage barrier", "mojo barrier"],
+			"variantes": {
+				"un_tramo": "1 section",
+				"dos_tramos": "2 sections",
+				"tres_tramos": "3 sections"
+			},
+			"imagen": "Footprint of “Crowd crush barrier”: a rectangle, 1.20 by 1.20 metres, marked with the letters “Va”."
+		},
+		"torre_altavoces": {
+			"nombre": "Speaker stack",
+			"descripcion": "Large speaker cabinets stacked at one side of the stage. With the music on, the air throbs in front: best not to stand right by it.",
+			"etiquetas": ["speaker stack", "PA stack"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Speaker stack”: a rectangle, 0.80 by 0.70 metres, marked with the letters “Ta”."
+		},
+		"bafle_tripode": {
+			"nombre": "Speaker on a tripod",
+			"descripcion": "Speaker raised on a tripod: three spread legs and a pole below; above, a box at head height.",
+			"etiquetas": ["speaker on stand", "PA speaker"],
+			"imagen": "Footprint of “Speaker on a tripod”: a triangle pointing to the front, 0.90 by 0.90 metres, marked with the letters “Bt”."
+		},
+		"torre_luces": {
+			"nombre": "Lighting truss tower",
+			"descripcion": "Lattice column of aluminium tubes carrying the lights, on a base with four arms in a cross spreading over the floor.",
+			"etiquetas": ["lighting tower", "truss tower"],
+			"imagen": "Footprint of “Lighting truss tower”: a cross, 1.50 by 1.50 metres, marked with the letters “Tl”."
+		},
+		"bola_espejos": {
+			"nombre": "Mirror ball",
+			"descripcion": "Sphere covered in tiny mirrors hanging from the ceiling over the dance floor, turning slowly above head height.",
+			"etiquetas": ["mirror ball", "disco ball"],
+			"imagen": "Footprint of “Mirror ball”: a circle, 0.50 by 0.50 metres, hanging 2.30 metres above the floor, marked with the letters “Be”."
+		},
+		"pista_bolos": {
+			"nombre": "Bowling lane",
+			"descripcion": "Long, narrow lane of oiled wood with a sunken gutter on each side. Very slippery: do not step beyond the foul line.",
+			"etiquetas": ["bowling lane", "lane"],
+			"variantes": {
+				"tramo": "6 m section",
+				"mini": "12 m mini lane",
+				"reglamentaria": "Regulation"
+			},
+			"acciones": {
+				"lanzar_bola_bolos": "Bowl the ball"
+			},
+			"aviso": "Bowling lane: slippery, step back.",
+			"imagen": "Footprint of “Bowling lane”: a rectangle, 1.70 by 18.30 metres, marked with the letters “Pb”."
+		},
+		"linea_falta_bolos": {
+			"nombre": "Bowling foul line",
+			"descripcion": "Line across the floor where the approach ends and the oiled lane begins. You may come this far with the ball.",
+			"etiquetas": ["foul line"],
+			"aviso": "Foul line: go no further, the lane is slippery.",
+			"imagen": "Footprint of “Bowling foul line”: a rectangle, 1.10 by 0.10 metres, marked with the letters “Lf”."
+		},
+		"retorno_bolas": {
+			"nombre": "Ball return",
+			"descripcion": "Long, low unit between two lanes: the balls come back under the floor, rise and line up. You hear them rolling and knocking together.",
+			"etiquetas": ["ball return"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Ball return”: a rectangle with rounded corners, 0.60 by 1.50 metres, marked with the letters “Rb”."
+		},
+		"estante_bolas": {
+			"nombre": "Bowling ball rack",
+			"descripcion": "Metal rack of bars holding the house balls sorted by weight. The balls are heavy: if one drops, it rolls far.",
+			"etiquetas": ["ball rack", "house balls"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Bowling ball rack”: a rectangle, 1.80 by 0.50 metres, marked with the letters “Eb”."
+		},
+		"consola_puntuacion": {
+			"nombre": "Scoring console",
+			"descripcion": "Pedestal with a keypad and a small screen at the head of the lane where the players' names are entered.",
+			"etiquetas": ["scoring console", "score keypad"],
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Scoring console”: a rectangle, 0.50 by 0.45 metres, marked with the letters “Cp”."
+		},
+		"banco_curvo_bolera": {
+			"nombre": "Curved bowling bench",
+			"descripcion": "Curved bench of hard plastic where players wait their turn. It wraps round a small table and opens towards the lane.",
+			"etiquetas": ["bowling bench", "players' seating"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Curved bowling bench”: a curved band bulging towards the front, 2.50 by 1.30 metres, marked with the letters “Bc”."
+		},
+		"mostrador_zapatos_bolera": {
+			"nombre": "Shoe rental counter",
+			"descripcion": "Bowling counter backed by pigeonholes of shoes sorted by size. Here you swap shoes and pay for the game.",
+			"etiquetas": ["shoe rental", "bowling desk"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Shoe rental counter”: a rectangle, 2.50 by 0.70 metres, marked with the letters “Mz”."
+		},
+		"maquina_recreativa": {
+			"nombre": "Arcade cabinet",
+			"descripcion": "Tall cabinet with a screen, a joystick and buttons at waist height. Even with no one playing it repeats its little tune.",
+			"etiquetas": ["arcade machine", "arcade cabinet"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Arcade cabinet”: a rectangle, 0.65 by 0.85 metres, marked with the letters “Mr”."
+		},
+		"pinball": {
+			"nombre": "Pinball machine",
+			"descripcion": "Sloping glass-topped table on four legs with a tall backbox at the far end. A button on each side; in play it clacks and bells ring.",
+			"etiquetas": ["pinball", "pinball table"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Pinball machine”: a rectangle, 0.75 by 1.40 metres, marked with the letters “Pi”."
+		},
+		"simulador_coche": {
+			"nombre": "Driving simulator",
+			"descripcion": "Low seat with a steering wheel and pedals in front of a large screen. Get in from one side and drop into the seat, as in a car.",
+			"etiquetas": ["driving simulator", "racing arcade"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Driving simulator”: a T shape, 1.00 by 1.80 metres, marked with the letters “Sc”."
+		},
+		"grua_peluches": {
+			"nombre": "Claw crane machine",
+			"descripcion": "Glass cabinet full of soft toys with a claw hanging inside and a joystick outside. The prize drops into a hatch at the bottom.",
+			"etiquetas": ["claw machine", "crane game"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Claw crane machine”: a rectangle, 0.80 by 0.85 metres, marked with the letters “Gp”."
+		},
+		"canasta_recreativa": {
+			"nombre": "Arcade basketball hoop",
+			"descripcion": "Long net cage with a hoop at the far end and balls rolling back down a ramp to your hands.",
+			"etiquetas": ["arcade basketball", "hoop game"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"encestar": "Shoot a basket"
+			},
+			"imagen": "Footprint of “Arcade basketball hoop”: a rectangle, 0.90 by 2.40 metres, marked with the letters “Cr”."
+		},
+		"maquina_baile": {
+			"nombre": "Dance machine",
+			"descripcion": "One-step metal platform with arrows to stamp on and a bar behind to hold, facing a cabinet with a screen and speakers.",
+			"etiquetas": ["dance machine", "dance game"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Dance machine”: a T shape, 1.80 by 2.20 metres, marked with the letters “Mb”."
+		},
+		"cambio_monedas": {
+			"nombre": "Change machine",
+			"descripcion": "Metal box on the wall with a slot for notes and a cup below where the coins drop.",
+			"etiquetas": ["change machine", "coin changer"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Change machine”: a rectangle, 0.50 by 0.35 metres, marked with the letters “Cm”."
+		},
+		"hockey_aire": {
+			"nombre": "Air hockey table",
+			"descripcion": "Large table with a high, rounded rim. When running, air blows through the surface with a hum and the puck clacks against the rails.",
+			"etiquetas": ["air hockey", "air hockey table"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Air hockey table”: a rectangle with rounded corners, 1.25 by 2.40 metres, marked with the letters “Ha”."
+		},
+		"mesa_ajedrez": {
+			"nombre": "Chess table",
+			"descripcion": "Small square table with the board marked in relief on the top and the pieces set up. A seat on each side.",
+			"etiquetas": ["chess table", "chessboard table"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Chess table”: a rectangle, 0.80 by 0.80 metres, marked with the letters “Ma”."
+		},
+		"ajedrez_gigante": {
+			"nombre": "Giant floor chess",
+			"descripcion": "Board painted on the floor with hollow plastic pieces reaching knee or hip height. The pieces are light and moved by hand.",
+			"etiquetas": ["giant chess", "garden chess"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Giant floor chess”: a rectangle, 3.00 by 3.00 metres, marked with the letters “Ag”."
+		},
+		"mesas_plegables_apiladas": {
+			"nombre": "Stacked folding tables",
+			"descripcion": "Folded tables stood on edge in a trolley or against the wall. Long, thin and heavy: if they slip they fall like a slab.",
+			"etiquetas": ["stacked folding tables", "table trolley"],
+			"imagen": "Footprint of “Stacked folding tables”: a rectangle, 1.85 by 0.60 metres, marked with the letters “Mp”."
+		},
+		"escenario_modular": {
+			"nombre": "Modular stage platforms",
+			"descripcion": "Two-metre by one-metre decks joined on metal legs, hollow underneath. The edge has no rail and no warning.",
+			"etiquetas": ["modular stage", "stage decks"],
+			"variantes": {
+				"bajo": "Low, 20 cm",
+				"medio": "40 cm",
+				"grande": "Large, 60 cm",
+				"alto": "High, 1 m"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Modular stage platforms”: a rectangle, 4.00 by 2.00 metres, marked with the letters “Em”."
+		},
+		"atril_orador": {
+			"nombre": "Speaker's lectern",
+			"descripcion": "Narrow wooden unit, closed at the front up to chest height, with a sloping top and a gooseneck microphone on it.",
+			"etiquetas": ["lectern", "speaker's stand"],
+			"imagen": "Footprint of “Speaker's lectern”: a trapezoid, narrower at the back, 0.60 by 0.50 metres, marked with the letters “Ao”."
+		},
+		"pantalla_portatil": {
+			"nombre": "Portable tripod projection screen",
+			"descripcion": "Wide sheet hanging from a mast on a tripod. Only the legs are at the bottom, in the middle; the sheet starts at waist height.",
+			"etiquetas": ["portable projection screen", "tripod screen"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Portable tripod projection screen”: a T shape, 1.80 by 0.80 metres, marked with the letters “Pp”."
+		},
+		"caballete_pintura": {
+			"nombre": "Painting easel",
+			"descripcion": "Three spread wooden legs holding a canvas at chest height. The back leg splays out a long way: easy to catch.",
+			"etiquetas": ["easel", "painting easel"],
+			"imagen": "Footprint of “Painting easel”: a trapezoid, narrower at the back, 0.60 by 0.70 metres, marked with the letters “Cp”."
+		},
+		"torno_alfarero": {
+			"nombre": "Potter's wheel",
+			"descripcion": "Round wheel head spinning inside a splash pan with a low seat attached. It hums when running; the floor around is wet with clay.",
+			"etiquetas": ["potter's wheel", "pottery wheel"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop",
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Potter's wheel”: a rectangle with rounded corners, 0.70 by 0.90 metres, marked with the letters “Ta”."
+		},
+		"horno_ceramica": {
+			"nombre": "Pottery kiln",
+			"descripcion": "Thick eight-sided cylinder clad in sheet metal with the lid on top. When firing it stays hot outside for hours.",
+			"etiquetas": ["kiln", "pottery kiln"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Pottery kiln”: an octagon, 0.90 by 0.90 metres, marked with the letters “Hc”."
+		},
+		"telar": {
+			"nombre": "Floor loom",
+			"descripcion": "Large wooden frame with taut threads, treadles below and a bench in front. It creaks and thumps when weaving.",
+			"etiquetas": ["floor loom", "weaving loom"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Floor loom”: a rectangle, 1.50 by 1.30 metres, marked with the letters “Te”."
+		},
+		"mesa_urna_votacion": {
+			"nombre": "Table with ballot box",
+			"descripcion": "Long table with a clear box on top that has a slot in the lid. Three people sit behind it; the vote goes in through the slot.",
+			"etiquetas": ["ballot box", "polling table"],
+			"acciones": {
+				"votar_urna": "Cast your vote"
+			},
+			"imagen": "Footprint of “Table with ballot box”: a rectangle, 1.60 by 0.70 metres, marked with the letters “Mu”."
+		},
+		"expositor_folletos_asociaciones": {
+			"nombre": "Community leaflet stand",
+			"descripcion": "Narrow tower of plastic pockets full of leaflets, on a foot. Light: it takes little to tip it over.",
+			"etiquetas": ["leaflet stand", "brochure rack"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Community leaflet stand”: a rectangle, 0.30 by 0.35 metres, marked with the letters “Ef”."
+		},
+		"cartel_enrollable": {
+			"nombre": "Roll-up banner",
+			"descripcion": "Tall, narrow sheet rising from a long base on the floor, held taut by a pole behind. Very light: a draught or a brush knocks it over.",
+			"etiquetas": ["roll-up banner", "pull-up banner"],
+			"imagen": "Footprint of “Roll-up banner”: a rectangle, 0.85 by 0.40 metres, marked with the letters “Ce”."
+		}
+	}
+}

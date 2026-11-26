@@ -1,0 +1,9 @@
+{
+	"id": "por_defecto",
+	"nombre": "Sintético (por defecto)",
+	"descripcion": "Los sonidos de serie de EntornoLab: limpios, cortos y muy distintos entre sí, sintetizados uno a uno.",
+	"autor": "EntornoLab",
+	"licencia": "GPL-3.0-or-later, como el programa",
+	"version": "1.0",
+	"generado": "Síntesis con numpy (app/audio/sintesis.py), con tools/sintetizar_sonidos.py. Sin grabaciones ni inteligencia artificial."
+}

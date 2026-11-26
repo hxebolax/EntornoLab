@@ -1,0 +1,1514 @@
+{
+	"nombre": "Work and workshop",
+	"descripcion": "Workplaces and training places with their real hazards: car workshop, joinery and metal workshop, warehouse and logistics, factory, laboratory, professional kitchen and the inside of a building site.",
+	"categorias": {
+		"taller_mecanico": "Car workshop",
+		"madera_metal": "Joinery and metal workshop",
+		"almacen": "Warehouse and logistics",
+		"fabrica": "Factory",
+		"laboratorio": "Laboratory",
+		"cocina_pro": "Professional kitchen",
+		"obra": "Inside the building site"
+	},
+	"subcategorias": {
+		"tm_bancos": "Benches and tools",
+		"tm_elevacion": "Vehicle lifting",
+		"tm_ruedas": "Tyres and wheels",
+		"tm_fluidos": "Air, oil and batteries",
+		"mm_maquinas_madera": "Woodworking machines",
+		"mm_carpinteria": "Joinery benches and timber",
+		"mm_maquinas_metal": "Metalworking machines",
+		"mm_forja": "Forging and welding",
+		"mm_perfiles": "Bars and sheet metal",
+		"al_estanterias": "Pallet racking",
+		"al_carga": "Pallets and goods",
+		"al_manutencion": "Pallet trucks, forklifts and trolleys",
+		"al_lineas": "Conveyors, packing and weighing",
+		"al_muelle": "Loading dock and doors",
+		"al_seguridad": "Guards and walkways",
+		"fa_maquinas": "Production machines",
+		"fa_puestos": "Line and workstations",
+		"fa_instalaciones": "Plant services",
+		"fa_seguridad": "Safety and staff",
+		"la_mesas": "Laboratory benches and seats",
+		"la_equipos": "Laboratory equipment",
+		"la_seguridad": "Storage and emergency",
+		"co_coccion": "Cooking",
+		"co_frio": "Refrigeration",
+		"co_lavado": "Washing-up",
+		"co_preparacion": "Tables and preparation",
+		"co_carros": "Trolleys and shelving",
+		"co_suelo": "Floor and waste",
+		"ob_materiales": "Stockpiled materials",
+		"ob_maquinas": "Site machinery",
+		"ob_auxiliares": "Temporary works",
+		"ob_instalaciones": "Cabins and services",
+		"ob_huecos": "Openings, trenches and nets"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"carga_abajo": "Lowered",
+		"carga_arriba": "Raised",
+		"apagado": "Off",
+		"girando": "Turning",
+		"funcionando": "Running",
+		"encendido": "On",
+		"desplegado": "Unfolded",
+		"plegado": "Folded",
+		"en_alarma": "Beeping: fault"
+	},
+	"objetos": {
+		"banco_trabajo_tornillo": {
+			"nombre": "Workbench with vice",
+			"descripcion": "Sheet-metal bench at hip height against the wall. An iron vice sticks out from the front edge: your hand or hip finds it before the cane does.",
+			"etiquetas": ["workbench", "bench vice", "garage bench"],
+			"variantes": {
+				"de_120": "1.20 m",
+				"de_180": "1.80 m",
+				"de_240": "2.40 m"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Workbench with vice”: a rectangle with a lug sticking out at the front left: the vice, 1.80 by 0.85 metres, marked with the letters “Bt”."
+		},
+		"carro_herramientas": {
+			"nombre": "Tool trolley with drawers",
+			"descripcion": "Wheeled sheet-metal trolley full of drawers, waist high. It is heavy, but push it and it rolls. Open drawers stick out.",
+			"etiquetas": ["tool trolley", "tool chest", "roller cabinet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Tool trolley with drawers”: a rectangle, 0.75 by 0.46 metres, marked with the letters “Ch”."
+		},
+		"panel_herramientas": {
+			"nombre": "Wall tool board",
+			"descripcion": "Pegboard on the wall, from waist to head, with spanners and hammers hanging and sticking out. The cane passes underneath.",
+			"etiquetas": ["tool board", "pegboard", "shadow board"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Wall tool board”: a rectangle, 1.20 by 0.10 metres, hanging 0.95 metres above the floor, marked with the letters “Ph”."
+		},
+		"camilla_mecanico": {
+			"nombre": "Mechanic's creeper",
+			"descripcion": "Low board on small castors for sliding under a car. It sits a hand's width off the floor and shoots away if you step on it.",
+			"etiquetas": ["creeper", "mechanic's creeper", "crawler board"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Mechanic's creeper”: a rectangle with rounded corners, 0.45 by 1.00 metres, marked with the letters “Cm”."
+		},
+		"elevador_dos_columnas": {
+			"nombre": "Two-post car lift",
+			"descripcion": "Two steel posts, one on each side, with four swinging arms at floor level: with the lift down you trip over them. A low plate crosses the floor between the posts.",
+			"etiquetas": ["two-post lift", "car lift", "vehicle hoist"],
+			"acciones": {
+				"subir_carga": "Raise the load",
+				"bajar_carga": "Lower the load"
+			},
+			"aviso": "Car lift: arms at floor level and, when raised, a car at head height.",
+			"imagen": "Footprint of “Two-post car lift”: two columns at the sides, joined by a floor plate, with four arms spread like an X, 3.40 by 2.40 metres, marked with the letters “Ed”."
+		},
+		"coche_en_elevador": {
+			"nombre": "Car raised on the lift",
+			"descripcion": "A whole car raised on the lift: its underside is at head height. The cane finds nothing below; oil drips and you hear the mechanic working.",
+			"etiquetas": ["raised car", "car on lift", "overhead obstacle"],
+			"imagen": "Footprint of “Car raised on the lift”: the outline of a vehicle, nose at the front, 1.80 by 4.30 metres, hanging 1.60 metres above the floor, marked with the letters “Ce”."
+		},
+		"foso_taller": {
+			"nombre": "Inspection pit",
+			"descripcion": "A long, narrow trench in the floor for working under cars, with a low iron rim. With no car over it, it is an open hole one and a half metres deep.",
+			"etiquetas": ["inspection pit", "service pit", "grease pit"],
+			"variantes": {
+				"turismos": "For cars",
+				"corto": "Short"
+			},
+			"aviso": "Inspection pit: a deep hole in the floor. Stop.",
+			"imagen": "Footprint of “Inspection pit”: a rectangle, 0.90 by 5.00 metres, marked with the letters “Ft”."
+		},
+		"gato_carretilla": {
+			"nombre": "Trolley jack",
+			"descripcion": "Low, heavy jack on wheels, left on the floor. Its body does not reach the ankle; the long handle stands up at hip height.",
+			"etiquetas": ["trolley jack", "floor jack", "hydraulic jack"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Trolley jack”: a T shape, 0.35 by 1.30 metres, marked with the letters “Gc”."
+		},
+		"caballete_coche": {
+			"nombre": "Axle stand",
+			"descripcion": "Low iron tripod, shin high, left under the car or loose on the floor. It is heavy and does not move aside.",
+			"etiquetas": ["axle stand", "jack stand"],
+			"imagen": "Footprint of “Axle stand”: a triangle, 0.25 by 0.25 metres, marked with the letters “Cc”."
+		},
+		"grua_pluma_motores": {
+			"nombre": "Engine crane",
+			"descripcion": "Wheeled workshop crane: two long, low legs spreading in a V along the floor and an arm above with a chain and a hanging hook.",
+			"etiquetas": ["engine crane", "engine hoist", "cherry picker"],
+			"imagen": "Footprint of “Engine crane”: a V: the mast at the back and two long legs spreading to the front, 1.00 by 1.60 metres, marked with the letters “Gp”."
+		},
+		"desmontadora_neumaticos": {
+			"nombre": "Tyre changer",
+			"descripcion": "Machine with a turntable at knee height and a column behind with an arm sticking out at the top. There are pedals on the floor.",
+			"etiquetas": ["tyre changer", "tire changer"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Tyre changer”: a T shape, 1.00 by 1.50 metres, marked with the letters “Dn”."
+		},
+		"equilibradora_ruedas": {
+			"nombre": "Wheel balancer",
+			"descripcion": "Sheet-metal cabinet at waist height with a shaft sticking out of one side where the wheel is fitted. It beeps when the spin ends.",
+			"etiquetas": ["wheel balancer", "balancing machine"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Wheel balancer”: an L shape, 1.10 by 0.75 metres, marked with the letters “Er”."
+		},
+		"pila_neumaticos": {
+			"nombre": "Stack of tyres",
+			"descripcion": "Tyres stacked on top of each other: a round rubber column, soft to the knock and strong-smelling. There is a hollow inside.",
+			"etiquetas": ["stack of tyres", "tyre pile", "tires"],
+			"variantes": {
+				"dos": "Two tyres",
+				"cuatro": "Four tyres",
+				"ocho": "Eight tyres"
+			},
+			"imagen": "Footprint of “Stack of tyres”: a circle, 0.65 by 0.65 metres, marked with the letters “Pn”."
+		},
+		"estante_neumaticos": {
+			"nombre": "Tyre rack",
+			"descripcion": "Tubular frame with two or three rows of tyres standing side by side. The tyres on the bottom row stick out beyond the tubes.",
+			"etiquetas": ["tyre rack", "tire rack"],
+			"imagen": "Footprint of “Tyre rack”: a rectangle, 2.00 by 0.50 metres, marked with the letters “En”."
+		},
+		"compresor_aire": {
+			"nombre": "Workshop air compressor",
+			"descripcion": "A rounded air tank lying on its side with the motor on top. Noisy: it starts on its own and chugs; you hear it all over the workshop, a good landmark.",
+			"etiquetas": ["air compressor", "compressor"],
+			"variantes": {
+				"portatil": "Portable, 50 litres",
+				"de_200": "200 litres",
+				"de_500": "500 litres"
+			},
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Workshop air compressor”: a rectangle with rounded corners, 0.50 by 1.20 metres, marked with the letters “Ca”."
+		},
+		"enrollador_manguera_aire": {
+			"nombre": "Hanging air hose reel",
+			"descripcion": "A reel fixed to the wall or ceiling with a rubber hose and its gun hanging at chest height. It swings when touched; the cane gives no warning.",
+			"etiquetas": ["air hose reel", "hanging hose", "retractable hose"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Hanging air hose reel”: a rectangle, 0.40 by 0.25 metres, hanging 1.20 metres above the floor, marked with the letters “Em”."
+		},
+		"bidon_aceite": {
+			"nombre": "200-litre oil drum",
+			"descripcion": "Round sheet-metal drum, waist high. Full, it sounds solid; empty, it booms like a drum.",
+			"etiquetas": ["oil drum", "steel drum", "barrel"],
+			"imagen": "Footprint of “200-litre oil drum”: a circle, 0.58 by 0.58 metres, marked with the letters “Ba”."
+		},
+		"recogedor_aceite": {
+			"nombre": "Waste oil drainer with funnel",
+			"descripcion": "Round wheeled tank with a thin tube rising to a wide funnel at face height. Narrow at the bottom; the funnel sticks out at the top.",
+			"etiquetas": ["oil drainer", "waste oil collector"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Waste oil drainer with funnel”: a circle, 0.50 by 0.50 metres, marked with the letters “Ra”."
+		},
+		"cargador_baterias": {
+			"nombre": "Battery charger on a trolley",
+			"descripcion": "Heavy box on wheels with two thick cables and clamps trailing on the floor. It hums while charging.",
+			"etiquetas": ["battery charger", "jump starter"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Battery charger on a trolley”: a rectangle, 0.40 by 0.35 metres, marked with the letters “Cb”."
+		},
+		"sierra_mesa": {
+			"nombre": "Table saw",
+			"descripcion": "Iron table at hip height with a saw blade poking up in the middle. When running it screams: keep away from the table.",
+			"etiquetas": ["table saw", "circular saw", "panel saw"],
+			"variantes": {
+				"de_obra": "Small",
+				"de_taller": "Workshop",
+				"escuadradora": "Sliding panel saw"
+			},
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Table saw”: a rectangle, 0.90 by 1.00 metres, marked with the letters “Sm”."
+		},
+		"sierra_cinta": {
+			"nombre": "Band saw",
+			"descripcion": "Tall, narrow machine, like a cabinet open at the front, with a small table at waist height where the blade comes down.",
+			"etiquetas": ["band saw", "bandsaw"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Band saw”: an upside-down T: the column at the back and a wide table at the front, 0.75 by 0.60 metres, marked with the letters “Sc”."
+		},
+		"cepilladora": {
+			"nombre": "Planer",
+			"descripcion": "Long, low machine with two smooth iron tables in a row at hip height. Timber comes out at one end: do not stand behind it.",
+			"etiquetas": ["planer", "jointer", "thicknesser"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Planer”: a rectangle, 0.60 by 2.20 metres, marked with the letters “Ce”."
+		},
+		"torno_madera": {
+			"nombre": "Wood lathe",
+			"descripcion": "Long, narrow bed at chest height with the workpiece spinning between two centres. Shavings fly to the front.",
+			"etiquetas": ["wood lathe", "woodturning lathe"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Wood lathe”: a rectangle, 1.50 by 0.50 metres, marked with the letters “Tm”."
+		},
+		"lijadora_banda": {
+			"nombre": "Floor-standing belt sander",
+			"descripcion": "Machine with a long sanding belt at waist height. When running it rasps with a loud hiss and raises dust.",
+			"etiquetas": ["belt sander", "sanding machine"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Floor-standing belt sander”: a rectangle, 0.60 by 1.30 metres, marked with the letters “Lb”."
+		},
+		"aspirador_virutas": {
+			"nombre": "Chip extractor with bag and hose",
+			"descripcion": "Wheeled motor with two cloth bags, one inflated above and one below. A wide flexible hose runs from it across the floor to the machine: a trip hazard.",
+			"etiquetas": ["chip extractor", "dust collector"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Chip extractor with bag and hose”: a teardrop, round at the back and pointed at the front, 0.60 by 1.20 metres, marked with the letters “Av”."
+		},
+		"banco_carpintero": {
+			"nombre": "Joiner's bench with vices",
+			"descripcion": "Solid wooden bench at hip height, with a wooden vice sticking out at one corner and a low shelf.",
+			"etiquetas": ["joiner's bench", "woodworking bench", "carpenter's bench"],
+			"imagen": "Footprint of “Joiner's bench with vices”: a rectangle with a lug sticking out at the front left: the vice, 2.00 by 0.70 metres, marked with the letters “Bc”."
+		},
+		"tablero_caballetes": {
+			"nombre": "Board on trestles",
+			"descripcion": "A big board resting on two trestles. The board overhangs at the sides: the cane goes underneath and your hip hits the edge.",
+			"etiquetas": ["trestle table", "board on trestles", "sawhorses"],
+			"variantes": {
+				"tablero_entero": "Full sheet",
+				"tablon": "Narrow plank"
+			},
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Board on trestles”: a rectangle, 2.44 by 1.22 metres, marked with the letters “Tc”."
+		},
+		"tablones_pared": {
+			"nombre": "Planks leaning against the wall",
+			"descripcion": "Long planks standing on end, leaning on the wall: the foot stands a couple of hand-widths out and the top touches it. Push them and they slide and fall.",
+			"etiquetas": ["leaning planks", "boards", "timber"],
+			"imagen": "Footprint of “Planks leaning against the wall”: a rectangle, 0.60 by 0.50 metres, marked with the letters “Tp”."
+		},
+		"carro_tableros": {
+			"nombre": "Board trolley",
+			"descripcion": "Long wheeled trolley carrying boards on edge, almost upright. The boards stick out beyond both ends of the trolley.",
+			"etiquetas": ["board trolley", "panel cart"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Board trolley”: a rectangle with cut corners, 0.80 by 2.00 metres, marked with the letters “Ct”."
+		},
+		"monton_serrin": {
+			"nombre": "Heap of sawdust and shavings",
+			"descripcion": "Sawdust piled on the floor by the machines. You walk on it: it is soft, muffles your steps and slides on a smooth floor.",
+			"etiquetas": ["sawdust", "wood shavings"],
+			"imagen": "Footprint of “Heap of sawdust and shavings”: an oval, 1.20 by 1.00 metres, marked with the letters “Ms”."
+		},
+		"sargentos_colgados": {
+			"nombre": "Clamps hanging from a rail",
+			"descripcion": "A row of iron clamps hanging from a rail on the wall, from chest to head. They stick out and clink when brushed; the cane passes underneath.",
+			"etiquetas": ["clamps", "bar clamps", "G-clamps"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Clamps hanging from a rail”: a rectangle, 1.00 by 0.20 metres, hanging 1.10 metres above the floor, marked with the letters “Sc”."
+		},
+		"taladro_columna": {
+			"nombre": "Pillar drill",
+			"descripcion": "Iron column on a heavy base, with a small table at waist height and the motor head at face height, sticking out to the front.",
+			"etiquetas": ["pillar drill", "drill press"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Pillar drill”: a rectangle, 0.45 by 0.70 metres, marked with the letters “Tc”."
+		},
+		"esmeril_banco": {
+			"nombre": "Bench grinder on a pedestal",
+			"descripcion": "Motor with two grinding wheels on an iron pedestal at waist height. When running it throws sparks to the front and the workpiece gets hot.",
+			"etiquetas": ["bench grinder", "pedestal grinder"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Bench grinder on a pedestal”: a T shape, 0.50 by 0.40 metres, marked with the letters “Eb”."
+		},
+		"torno_metal": {
+			"nombre": "Metal lathe",
+			"descripcion": "Long, heavy machine with its bed at waist height. Handwheels and levers stick out at the front; the chuck spins at one end.",
+			"etiquetas": ["metal lathe", "engine lathe", "centre lathe"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Metal lathe”: a rectangle, 2.20 by 0.90 metres, marked with the letters “Tm”."
+		},
+		"fresadora_columna": {
+			"nombre": "Milling machine",
+			"descripcion": "A thick column at the back and, in front, a wide table at waist height that travels sideways and sticks out beyond the machine body.",
+			"etiquetas": ["milling machine", "mill"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Milling machine”: an upside-down T: the column at the back and a wide table at the front, 1.50 by 1.50 metres, marked with the letters “Fc”."
+		},
+		"plegadora_chapa": {
+			"nombre": "Sheet metal folder",
+			"descripcion": "Long machine at waist height with a front bar that lifts to bend the sheet. Counterweights stick out at both ends.",
+			"etiquetas": ["sheet metal folder", "press brake", "bending machine"],
+			"imagen": "Footprint of “Sheet metal folder”: a rectangle, 2.50 by 1.00 metres, marked with the letters “Pc”."
+		},
+		"cizalla_chapa": {
+			"nombre": "Sheet metal guillotine",
+			"descripcion": "Wide machine with a table in front at waist height and a pedal bar at floor level across its whole width: your foot finds it before your hand.",
+			"etiquetas": ["guillotine shear", "sheet metal shear"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Sheet metal guillotine”: a rectangle, 2.60 by 1.80 metres, marked with the letters “Cc”."
+		},
+		"equipo_soldadura": {
+			"nombre": "Welding set on a trolley",
+			"descripcion": "Welding machine on wheels with its gas bottle behind and thick cables on the floor. While welding it buzzes and crackles, and the weld stays hot for a good while.",
+			"etiquetas": ["welder", "welding set", "welding machine"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Welding set on a trolley”: a rectangle, 0.50 by 0.90 metres, marked with the letters “Es”."
+		},
+		"pantalla_soldadura": {
+			"nombre": "Welding screen",
+			"descripcion": "A heavy canvas screen on a tubular frame with feet sticking out at the sides. It is light: push it and it moves. Someone is welding behind it.",
+			"etiquetas": ["welding screen", "welding curtain"],
+			"imagen": "Footprint of “Welding screen”: a rectangle, 2.00 by 0.50 metres, marked with the letters “Ps”."
+		},
+		"mesa_soldadura": {
+			"nombre": "Welding table",
+			"descripcion": "Table of thick steel plate, full of holes, at hip height. It is hot after welding: do not rest your hand on it.",
+			"etiquetas": ["welding table", "welding bench"],
+			"imagen": "Footprint of “Welding table”: a rectangle, 1.20 by 0.80 metres, marked with the letters “Ms”."
+		},
+		"yunque_tocon": {
+			"nombre": "Anvil on a stump",
+			"descripcion": "Solid iron anvil on a wooden stump, at hip height. At one end it tapers into a pointed horn that sticks out beyond the stump.",
+			"etiquetas": ["anvil", "blacksmith's anvil"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Anvil on a stump”: a round block (the stump) with a point on the right (the horn) and a lug on the left, 0.70 by 0.45 metres, marked with the letters “Yt”."
+		},
+		"fragua_forja": {
+			"nombre": "Forge hearth",
+			"descripcion": "Iron table with a hollow full of embers and a blower underneath. When lit you feel the heat a step away and hear the air feeding the fire.",
+			"etiquetas": ["forge", "forge hearth", "blacksmith's hearth"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Forge hearth”: a rectangle with cut corners, 1.00 by 1.00 metres, marked with the letters “Ff”."
+		},
+		"estante_perfiles": {
+			"nombre": "Cantilever rack for bars",
+			"descripcion": "Columns with iron arms reaching forwards at several heights, loaded with long bars and tubes. There is a gap between columns: the cane goes in and the arms are above it.",
+			"etiquetas": ["cantilever rack", "bar rack", "tube rack"],
+			"variantes": {
+				"dos_columnas": "Two columns",
+				"tres_columnas": "Three columns",
+				"cuatro_columnas": "Four columns"
+			},
+			"imagen": "Footprint of “Cantilever rack for bars”: a comb: a bar with bodies sticking out to the front, 4.00 by 1.20 metres, marked with the letters “Ep”."
+		},
+		"perfiles_sobresalen": {
+			"nombre": "Bars sticking out of the rack",
+			"descripcion": "Ends of long tubes and bars sticking out of the rack into the aisle at head height. The cane misses them: they are iron and sharp-edged.",
+			"etiquetas": ["protruding bars", "overhanging tubes", "overhead obstacle"],
+			"imagen": "Footprint of “Bars sticking out of the rack”: a rectangle, 0.60 by 0.80 metres, hanging 1.50 metres above the floor, marked with the letters “Ps”."
+		},
+		"chapas_apoyadas": {
+			"nombre": "Metal sheets on an A-frame",
+			"descripcion": "Iron A-frame shaped like a roof with large sheets leaning on both sides. The edges cut: explore it with the cane, not your hand.",
+			"etiquetas": ["sheet metal rack", "A-frame", "metal sheets"],
+			"imagen": "Footprint of “Metal sheets on an A-frame”: a trapezoid, narrower at the back, 1.00 by 2.50 metres, marked with the letters “Ca”."
+		},
+		"estanteria_pales": {
+			"nombre": "Pallet racking",
+			"descripcion": "Tall perforated-steel frames (the uprights) joined by beams, with pallets at several levels. Down low the cane finds the feet of the uprights and the floor pallet; the beams and upper pallets are above your head. Knock it and it booms.",
+			"etiquetas": ["pallet racking", "pallet rack", "warehouse racking"],
+			"variantes": {
+				"un_modulo": "One bay, three levels",
+				"tres_modulos": "Three bays",
+				"doble": "Double, back to back"
+			},
+			"imagen": "Footprint of “Pallet racking”: a rectangle, 2.70 by 1.10 metres, marked with the letters “Ep”."
+		},
+		"estanteria_picking": {
+			"nombre": "Medium-duty shelving with picking bins",
+			"descripcion": "Steel-shelved racking, the lowest shelf a hand's width off the floor, full of plastic bins open towards the aisle. The bins stick out beyond the shelves and your hand finds them before the cane does.",
+			"etiquetas": ["picking shelving", "bin shelving", "small parts storage"],
+			"imagen": "Footprint of “Medium-duty shelving with picking bins”: a rectangle, 2.00 by 0.60 metres, marked with the letters “Ep”."
+		},
+		"estanteria_dinamica": {
+			"nombre": "Carton flow rack",
+			"descripcion": "Shelving with roller shelves sloping down towards the aisle: the boxes roll forwards by themselves. Take one and you hear the next one roll and knock against the stop. The front is lower than the back.",
+			"etiquetas": ["carton flow rack", "roller shelving", "gravity flow rack"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Carton flow rack”: a rectangle, 1.80 by 2.00 metres, marked with the letters “Ed”."
+		},
+		"pale_sobresale_estante": {
+			"nombre": "Pallet overhanging the rack",
+			"descripcion": "A pallet badly placed on the first level of the rack, sticking out into the aisle at face height. The cane finds nothing below it: wooden boards and hard-cornered boxes.",
+			"etiquetas": ["overhanging pallet", "protruding load", "overhead obstacle"],
+			"imagen": "Footprint of “Pallet overhanging the rack”: a rectangle, 1.00 by 0.40 metres, hanging 1.60 metres above the floor, marked with the letters “Ps”."
+		},
+		"pales_vacios": {
+			"nombre": "Empty pallets",
+			"descripcion": "Empty wooden pallets, single or stacked. One alone on the floor is a hand-high step with gaps between the boards that catch your foot; stacked, they are a block that sounds hollow. The boards splinter.",
+			"etiquetas": ["empty pallets", "pallet stack", "wooden pallets"],
+			"variantes": {
+				"uno": "Single pallet",
+				"pila_cinco": "Stack of five",
+				"pila_quince": "Stack of fifteen",
+				"americano": "Single US pallet"
+			},
+			"imagen": "Footprint of “Empty pallets”: a rectangle, 0.80 by 1.20 metres, marked with the letters “Pv”."
+		},
+		"jaula_rejilla": {
+			"nombre": "Wire mesh pallet cage",
+			"descripcion": "Steel mesh cage on four feet, waist high, stackable. The cold mesh lets your fingers through; one side has a half door that folds outwards.",
+			"etiquetas": ["mesh pallet cage", "wire container", "stillage"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Wire mesh pallet cage”: a rectangle, 0.84 by 1.24 metres, marked with the letters “Jr”."
+		},
+		"contenedor_ibc": {
+			"nombre": "1000-litre IBC tank",
+			"descripcion": "Cube-shaped thick plastic tank inside a cage of steel bars, on a pallet, chest high. A tap sticks out low at the front at shin height; empty, it booms like a drum.",
+			"etiquetas": ["IBC tank", "intermediate bulk container", "tote tank"],
+			"variantes": {
+				"de_1000": "1000 litres",
+				"de_600": "600 litres"
+			},
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “1000-litre IBC tank”: a rectangle, 1.00 by 1.20 metres, marked with the letters “Ci”."
+		},
+		"bobina_chapa": {
+			"nombre": "Steel coil on a cradle",
+			"descripcion": "A coil of sheet steel lying on a wooden or iron cradle. It weighs several tonnes and does not move; the sheet edges cut. From one side you can feel the round hole in the middle.",
+			"etiquetas": ["steel coil", "sheet metal coil", "coil"],
+			"imagen": "Footprint of “Steel coil on a cradle”: a rectangle, 1.20 by 1.00 metres, marked with the letters “Bc”."
+		},
+		"transpaleta_manual": {
+			"nombre": "Hand pallet truck",
+			"descripcion": "Two low steel forks, a hand high, and a handle standing up at chest height. The floor-level forks trip you and the handle falls towards you if touched. Pumping the handle raises the forks.",
+			"etiquetas": ["pallet truck", "pallet jack", "hand pallet truck"],
+			"acciones": {
+				"subir_carga": "Raise the load",
+				"bajar_carga": "Lower the load",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Hand pallet truck”: a short head at the back and two long forks to the front with a gap between them, 0.54 by 1.55 metres, marked with the letters “Tm”."
+		},
+		"transpaleta_electrica": {
+			"nombre": "Electric pallet truck with platform",
+			"descripcion": "A large powered pallet truck: a sheet-metal body at waist height with the tiller and a folding platform where the driver stands. Running, it beeps, hums and moves by itself; the forks lead at floor level.",
+			"etiquetas": ["electric pallet truck", "powered pallet jack", "rider pallet truck"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Electric pallet truck with platform”: a short head at the back and two long forks to the front with a gap between them, 0.80 by 2.00 metres, marked with the letters “Te”."
+		},
+		"carretilla_elevadora": {
+			"nombre": "Forklift with forks lowered",
+			"descripcion": "Heavy four-wheeled machine with the seat under a roof of bars. At the front, the mast and two steel forks at floor level sticking out over a metre: you trip on them before you reach the machine. Running, it beeps and reverses with no further warning.",
+			"etiquetas": ["forklift", "forklift truck", "lift truck"],
+			"variantes": {
+				"contrapesada": "Counterbalance",
+				"retractil": "Reach truck"
+			},
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"aviso": "Forklift: the forks stick out at the front at floor level.",
+			"imagen": "Footprint of “Forklift with forks lowered”: a rectangular body at the back and two narrow forks sticking out to the front, 1.15 by 3.40 metres, marked with the letters “Ce”."
+		},
+		"horquillas_en_alto": {
+			"nombre": "Raised forklift forks",
+			"descripcion": "A forklift's forks raised, with or without a pallet, at head height. The cane finds nothing below: two thick steel bars with wedge-shaped tips.",
+			"etiquetas": ["raised forks", "lifted forks", "overhead obstacle"],
+			"aviso": "Raised forks at head height.",
+			"imagen": "Footprint of “Raised forklift forks”: two long forks sticking out to the front from a cross bar, 0.90 by 1.20 metres, hanging 1.50 metres above the floor, marked with the letters “He”."
+		},
+		"carro_plataforma": {
+			"nombre": "Platform hand truck",
+			"descripcion": "Low sheet-metal platform on four castors, shin high, with a tubular handle at one end at hip height. Empty, the platform trips you; loaded, the goods stick out at the sides.",
+			"etiquetas": ["platform trolley", "flatbed trolley", "hand truck"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Platform hand truck”: a rectangle, 0.60 by 0.90 metres, marked with the letters “Cp”."
+		},
+		"carro_preparacion_pedidos": {
+			"nombre": "Order picking trolley",
+			"descripcion": "Tall multi-shelf trolley with boxes, sometimes with a folding step for reaching up. It is pushed by a handle at chest height; the step sticks out at the front at shin height.",
+			"etiquetas": ["picking trolley", "order picker cart", "shelf trolley"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Order picking trolley”: a rectangle, 0.70 by 1.20 metres, marked with the letters “Cp”."
+		},
+		"escalera_almacen_plataforma": {
+			"nombre": "Warehouse platform ladder",
+			"descripcion": "Ladder with wide treads, handrails and a platform at the top, on wheels that lock when you step on the first tread. At the back it is a sloping frame: the cane goes underneath and your head meets the upper treads.",
+			"etiquetas": ["platform ladder", "warehouse ladder", "mobile steps"],
+			"variantes": {
+				"cuatro": "Four steps",
+				"seis": "Six steps",
+				"diez": "Ten steps"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Warehouse platform ladder”: a rectangle, 0.80 by 1.50 metres, marked with the letters “Ea”."
+		},
+		"cinta_transportadora": {
+			"nombre": "Belt conveyor",
+			"descripcion": "A rubber belt running over rollers at hip height between two steel side rails. Running, it hums and carries off anything placed on it; underneath there are legs and open space. A stop at the end.",
+			"etiquetas": ["belt conveyor", "conveyor belt", "conveyor"],
+			"variantes": {
+				"corta": "3 m section",
+				"larga": "10 m section"
+			},
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Belt conveyor”: a rectangle, 0.60 by 5.00 metres, marked with the letters “Ct”."
+		},
+		"curva_transportadora": {
+			"nombre": "Conveyor curve",
+			"descripcion": "A section of conveyor that turns through a quarter circle at hip height. Following the outer edge with your hand you feel the bend; in the inner corner of the curve the cane goes in under the belt.",
+			"etiquetas": ["conveyor curve", "curved conveyor", "conveyor bend"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Conveyor curve”: a quarter-turn band, with the centre of the bend at the back left, 1.60 by 1.60 metres, marked with the letters “Ct”."
+		},
+		"enfardadora_pales": {
+			"nombre": "Pallet stretch wrapper",
+			"descripcion": "Round steel turntable a hand's width off the floor, with a tall column behind it where the film carriage travels up and down. Running, the turntable spins with the pallet on it and the film squeals as it stretches: the edge sweeps past your feet.",
+			"etiquetas": ["stretch wrapper", "pallet wrapper", "wrapping machine"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Pallet stretch wrapper”: a round turntable with a column attached at the back, 1.65 by 1.90 metres, marked with the letters “Ep”."
+		},
+		"bascula_plataforma": {
+			"nombre": "Pallet platform scale",
+			"descripcion": "A square steel plate a hand's width off the floor, with a short ramp for running the pallet truck on and a display on a post beside it at chest height. It sounds hollow underfoot and you feel the edge of the ramp.",
+			"etiquetas": ["platform scale", "floor scale", "pallet scale"],
+			"acciones": {
+				"pesar_carga": "Weigh the load"
+			},
+			"imagen": "Footprint of “Pallet platform scale”: a rectangle, 1.20 by 2.00 metres, marked with the letters “Bp”."
+		},
+		"borde_muelle_carga": {
+			"nombre": "Loading dock edge",
+			"descripcion": "The warehouse floor ends abruptly at the dock: over a metre below is the lorry yard. Sometimes there are rubber bumpers or a chain; with the door open and no lorry, it is a drop. The outside air warns you.",
+			"etiquetas": ["loading dock edge", "dock edge", "loading bay"],
+			"aviso": "Edge of the loading dock: over a metre's drop. Stop.",
+			"imagen": "Footprint of “Loading dock edge”: a rectangle, 3.00 by 0.30 metres, marked with the letters “Bm”."
+		},
+		"rampa_niveladora": {
+			"nombre": "Dock leveller",
+			"descripcion": "A ridged steel plate set into the floor at the dock edge. Lowered, it is floor and sounds hollow underfoot; raised, its lip lifts, the plate slopes and a step appears at the sides.",
+			"etiquetas": ["dock leveller", "dock leveler", "dock plate"],
+			"acciones": {
+				"subir_carga": "Raise the load",
+				"bajar_carga": "Lower the load"
+			},
+			"imagen": "Footprint of “Dock leveller”: a rectangle, 2.00 by 3.00 metres, marked with the letters “Rn”."
+		},
+		"puerta_seccional": {
+			"nombre": "Dock sectional door with shelter",
+			"descripcion": "Panelled door that runs up to the ceiling on side tracks, framed outside by a padded canvas shelter. Closed, it is a cold steel wall; opening, it rattles and the air and noise of the yard come in.",
+			"etiquetas": ["sectional door", "dock door", "loading bay door", "dock shelter"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Dock sectional door with shelter”: a rectangle, 3.00 by 0.50 metres, marked with the letters “Ps”."
+		},
+		"escalera_muelle_carga": {
+			"nombre": "Loading dock steps",
+			"descripcion": "A flight of four or five steps, concrete or metal grating, against one side of the dock for going down to the yard. It has a handrail on one side; the other may be open to the dock drop.",
+			"etiquetas": ["dock steps", "loading bay stairs"],
+			"aviso": "Steps down from the dock to the yard.",
+			"imagen": "Footprint of “Loading dock steps”: a rectangle, 1.00 by 1.50 metres, marked with the letters “Em”."
+		},
+		"protector_puntal": {
+			"nombre": "Rack upright protector",
+			"descripcion": "A thick U-shaped steel guard, shin high, bolted to the floor around the foot of each upright. The cane finds it early and tells you a rack begins; step on it and you trip.",
+			"etiquetas": ["upright protector", "rack guard", "column guard"],
+			"imagen": "Footprint of “Rack upright protector”: a U open at the back, hugging the foot of the upright, 0.20 by 0.20 metres, marked with the letters “Pp”."
+		},
+		"barrera_peatonal_almacen": {
+			"nombre": "Pedestrian walkway barrier",
+			"descripcion": "Thick tubular or polymer handrail at hip height with a low rail, bolted to the floor to separate the walkway from the forklift lanes. You can follow it by hand; it has gaps at the crossings.",
+			"etiquetas": ["pedestrian barrier", "walkway barrier", "safety railing"],
+			"imagen": "Footprint of “Pedestrian walkway barrier”: a rectangle, 3.00 by 0.20 metres, marked with the letters “Bp”."
+		},
+		"baliza_cruce_carretillas": {
+			"nombre": "Forklift crossing warning beacon",
+			"descripcion": "A post with a rotating light and a buzzer that beeps when a forklift approaches a crossing or a door. It is a sound landmark: if it beeps, wait.",
+			"etiquetas": ["warning beacon", "forklift alert", "crossing light"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Forklift crossing warning beacon”: a circle, 0.15 by 0.15 metres, marked with the letters “Bc”."
+		},
+		"cortina_lamas": {
+			"nombre": "PVC strip curtain",
+			"descripcion": "Strips of thick, soft plastic hanging from the lintel to the floor, overlapping. You go through by pushing: they brush your face and shoulders and close behind you. The cane slips between them almost unnoticed.",
+			"etiquetas": ["strip curtain", "PVC strip door", "plastic curtain"],
+			"imagen": "Footprint of “PVC strip curtain”: a rectangle, 1.50 by 0.05 metres, marked with the letters “Cl”."
+		},
+		"prensa_hidraulica": {
+			"nombre": "Production hydraulic press",
+			"descripcion": "Tall, massive machine like an iron cabinet open at the front, with its bed at waist height. Each cycle gives a dull thud and a hiss of air; in front there is a light curtain you cannot feel that stops it if you put your hand in.",
+			"etiquetas": ["hydraulic press", "power press", "stamping press"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Production hydraulic press”: a rectangle, 1.80 by 1.60 metres, marked with the letters “Ph”."
+		},
+		"inyectora_plastico": {
+			"nombre": "Plastic injection moulding machine",
+			"descripcion": "Very long machine at chest height, closed with sliding guards. At one end, up high, the hopper where the plastic goes in; at the other, the parts drop into a box. The oil hisses, the mould thumps and the hopper area is hot.",
+			"etiquetas": ["injection moulding machine", "injection molder", "moulding press"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Plastic injection moulding machine”: a rectangle, 1.50 by 6.00 metres, marked with the letters “Ip”."
+		},
+		"telar_industrial": {
+			"nombre": "Industrial loom",
+			"descripcion": "Wide iron machine at chest height with the cloth roller at the front and hundreds of taut threads behind. It makes a very fast clack-clack that fills the hall: you have to shout, and each loom is told apart by where its sound comes from.",
+			"etiquetas": ["industrial loom", "power loom", "weaving machine"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Industrial loom”: a rectangle, 3.00 by 1.80 metres, marked with the letters “Ti”."
+		},
+		"celda_robot": {
+			"nombre": "Fenced robot cell",
+			"descripcion": "An enclosure of steel mesh panels taller than you, with a door that stops the robot when opened. Inside, an arm that swings and welds: it buzzes, crackles and moves without warning. From outside you can follow the mesh by hand.",
+			"etiquetas": ["robot cell", "robotic welding cell", "robot enclosure"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Fenced robot cell”: a rectangle, 4.00 by 4.00 metres, marked with the letters “Cr”."
+		},
+		"centro_mecanizado": {
+			"nombre": "CNC machining centre",
+			"descripcion": "A machine like a person-high sheet-metal booth, with a glass sliding door at the front and a button panel on an arm sticking out at one side. Inside, the tool spins with a whine and sprays coolant: the floor in front is slippery.",
+			"etiquetas": ["CNC machine", "machining centre", "CNC mill"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “CNC machining centre”: a rectangle, 2.60 by 2.40 metres, marked with the letters “Cm”."
+		},
+		"horno_industrial": {
+			"nombre": "Industrial drying oven",
+			"descripcion": "Huge sheet-metal cabinet with two thick doors; walking past you feel the heat and the front panel is hot. Inside you hear the fan. Opening it releases a blast of hot air.",
+			"etiquetas": ["industrial oven", "drying oven", "curing oven"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Industrial drying oven”: a rectangle, 2.00 by 1.50 metres, marked with the letters “Hi”."
+		},
+		"maquina_coser_industrial": {
+			"nombre": "Industrial sewing machine table",
+			"descripcion": "A one-metre table with the sewing machine on top, a pedal on the floor and the motor hanging under the top, where your knees hit it. They usually stand in rows, one behind another, each rattling as it sews.",
+			"etiquetas": ["industrial sewing machine", "sewing table", "overlocker"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Industrial sewing machine table”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Mc”."
+		},
+		"linea_montaje": {
+			"nombre": "Assembly line with workstations",
+			"descripcion": "A long conveyor at the back and, in front, work tables separated by gaps, one per person. Following the table edges you can count the stations; in the gaps the cane reaches the moving belt.",
+			"etiquetas": ["assembly line", "production line", "workstations"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Assembly line with workstations”: a comb: a bar with bodies sticking out to the front, 8.00 by 2.00 metres, marked with the letters “Lm”."
+		},
+		"puesto_montaje": {
+			"nombre": "Assembly workstation with bin shelf",
+			"descripcion": "Work table at waist height with a frame behind: sloping shelves of parts bins overhanging the table at face height, and a tool hanging from a spring balancer down to hand height.",
+			"etiquetas": ["workstation", "assembly bench", "work bench"],
+			"imagen": "Footprint of “Assembly workstation with bin shelf”: a rectangle, 1.50 by 0.90 metres, marked with the letters “Pm”."
+		},
+		"taburete_puesto": {
+			"nombre": "Tall workstation stool",
+			"descripcion": "Tall stool with a hard, adjustable seat, a small backrest and a foot ring halfway up. If it has castors it rolls away when you lean on it; the ring trips you.",
+			"etiquetas": ["workstation stool", "lab stool", "tall stool"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Tall workstation stool”: a circle, 0.50 by 0.50 metres, marked with the letters “Tp”."
+		},
+		"contenedor_virutas": {
+			"nombre": "Self-dumping chip hopper",
+			"descripcion": "Wedge-shaped steel hopper, hip high, on feet with slots for the forks. Its mouth is wide at the front; inside there are metal chips that cut and smell of coolant.",
+			"etiquetas": ["chip hopper", "self-dumping hopper", "tipping skip"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Self-dumping chip hopper”: a rectangle, 1.00 by 1.20 metres, marked with the letters “Cv”."
+		},
+		"tuberia_aerea": {
+			"nombre": "Low pipe crossing overhead",
+			"descripcion": "A pipe, duct or cable tray crossing the way, hung from the ceiling at forehead height. The cane misses it and it makes no sound until you walk into it; sometimes it is padded with foam.",
+			"etiquetas": ["low pipe", "overhead duct", "cable tray", "overhead obstacle"],
+			"variantes": {
+				"tubo": "Thin pipe",
+				"bandeja": "Cable tray",
+				"conducto": "Air duct"
+			},
+			"aviso": "Pipe at head height.",
+			"imagen": "Footprint of “Low pipe crossing overhead”: a rectangle, 3.00 by 0.20 metres, hanging 1.80 metres above the floor, marked with the letters “Ta”."
+		},
+		"puente_grua_gancho": {
+			"nombre": "Overhead crane hook",
+			"descripcion": "A steel hook hanging on chains or cables from the overhead crane that runs along the hall roof. It can hang at face height and it swings; when the crane moves a bell rings and the trolley rolls overhead.",
+			"etiquetas": ["overhead crane", "crane hook", "hoist"],
+			"acciones": {
+				"subir_carga": "Raise the load",
+				"bajar_carga": "Lower the load"
+			},
+			"aviso": "Crane hook hanging at face height.",
+			"imagen": "Footprint of “Overhead crane hook”: a circle, 0.30 by 0.30 metres, hanging 1.60 metres above the floor, marked with the letters “Pg”."
+		},
+		"brazo_aspiracion_humos": {
+			"nombre": "Fume extraction arm",
+			"descripcion": "An articulated tube coming out of the wall or a column and ending in a small hood at face height, over the welding table or the lab bench. It moves if you push it and, when on, it sucks with a low rumble.",
+			"etiquetas": ["fume extraction arm", "extraction arm", "local exhaust"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Fume extraction arm”: a rectangle, 0.40 by 2.00 metres, hanging 1.50 metres above the floor, marked with the letters “Ba”."
+		},
+		"armario_electrico_fabrica": {
+			"nombre": "Electrical control cabinet",
+			"descripcion": "Tall sheet-metal cabinet against a wall or a machine, with a beacon on top and a buzzer that beeps when something fails. Its open door sticks out at face height; inside it hums.",
+			"etiquetas": ["control cabinet", "electrical panel", "switch cabinet"],
+			"acciones": {
+				"probar_alarma": "Test the alarm",
+				"rearmar": "Reset"
+			},
+			"imagen": "Footprint of “Electrical control cabinet”: a rectangle, 0.80 by 0.40 metres, marked with the letters “Ae”."
+		},
+		"ventilador_industrial": {
+			"nombre": "Industrial pedestal fan",
+			"descripcion": "A huge caged fan on a splayed-leg stand or castors, at head height. You feel its air stream from afar and its rumble is a good landmark; the legs spread out to the sides.",
+			"etiquetas": ["industrial fan", "pedestal fan", "drum fan"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Industrial pedestal fan”: a circle, 0.90 by 0.80 metres, marked with the letters “Vi”."
+		},
+		"puerta_rapida": {
+			"nombre": "High-speed roll-up door",
+			"descripcion": "Thick, flexible canvas that rolls up and down in a few seconds between two steel guides when a forklift approaches or a cord is pulled. If it comes down on you it pushes and goes back up; the guides stick out a hand's width from the wall.",
+			"etiquetas": ["high-speed door", "rapid roll door", "fabric roll-up door"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “High-speed roll-up door”: a rectangle, 3.00 by 0.30 metres, marked with the letters “Pr”."
+		},
+		"reloj_fichar": {
+			"nombre": "Time clock",
+			"descripcion": "A box on the wall at chest height with a reader for your card; it beeps when you clock in. It is usually at the entrance to the hall, next to a notice board: a good landmark for the door.",
+			"etiquetas": ["time clock", "clocking-in machine", "attendance terminal"],
+			"acciones": {
+				"fichar": "Clock in"
+			},
+			"imagen": "Footprint of “Time clock”: a rectangle, 0.25 by 0.10 metres, hanging 1.20 metres above the floor, marked with the letters “Rf”."
+		},
+		"pulsador_seta_emergencia": {
+			"nombre": "Emergency stop button on a post",
+			"descripcion": "A slim post at waist height with a big round button on top, like a mushroom: pressing it stops the machine or the line. The wide, smooth mushroom is easy to find without looking.",
+			"etiquetas": ["emergency stop", "e-stop", "mushroom button"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Emergency stop button on a post”: a circle, 0.12 by 0.12 metres, marked with the letters “Ps”."
+		},
+		"armario_epis": {
+			"nombre": "PPE cabinet",
+			"descripcion": "A person-high sheet-metal cabinet by the entrance to the hall, holding helmets, goggles, earplugs and gloves. When open, its doors stick out at face height.",
+			"etiquetas": ["PPE cabinet", "safety equipment locker"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “PPE cabinet”: a rectangle, 1.00 by 0.50 metres, marked with the letters “Ae”."
+		},
+		"poyata_mural": {
+			"nombre": "Wall laboratory bench",
+			"descripcion": "A continuous lab bench against the wall with a cold, smooth top and cupboards underneath. Above it, a shelf of reagent bottles at face height overhanging the bench; on the upstand, gas and vacuum taps sticking out.",
+			"etiquetas": ["wall lab bench", "laboratory bench", "wall bench"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Wall laboratory bench”: a rectangle, 3.00 by 0.75 metres, marked with the letters “Pm”."
+		},
+		"mesa_antivibratoria": {
+			"nombre": "Anti-vibration balance table",
+			"descripcion": "A low, very heavy table with a polished stone slab resting on its frame: push it and nothing moves. On it, the balance in its glass draught shield; here people speak quietly and lean on nothing.",
+			"etiquetas": ["anti-vibration table", "balance table", "weighing table"],
+			"imagen": "Footprint of “Anti-vibration balance table”: a rectangle, 1.00 by 0.70 metres, marked with the letters “Ma”."
+		},
+		"fregadero_laboratorio": {
+			"nombre": "Lab sink with pegboard drainer",
+			"descripcion": "A deep sink in the bench with a tall swan-neck tap and, on the wall above, a pegboard where glassware drains at face height: the pegs and glass stick out and break easily.",
+			"etiquetas": ["lab sink", "laboratory sink", "pegboard drainer"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Lab sink with pegboard drainer”: a rectangle, 1.00 by 0.70 metres, marked with the letters “Fl”."
+		},
+		"cabina_seguridad_biologica": {
+			"nombre": "Biological safety cabinet",
+			"descripcion": "Tall steel unit with a sloping glass front leaving a slot at chest height to put your arms in. Its fan blows with a constant rumble; you work seated and the stand has feet that stick out.",
+			"etiquetas": ["biosafety cabinet", "laminar flow cabinet", "microbiological safety cabinet"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Biological safety cabinet”: a rectangle, 1.50 by 0.80 metres, marked with the letters “Cs”."
+		},
+		"centrifuga_laboratorio": {
+			"nombre": "Laboratory centrifuge",
+			"descripcion": "A rounded machine with its lid on top: small ones on the bench, large ones on the floor at hip height. Starting up, its whine rises until it is high and steady; when it finishes it beeps and winds down slowly. While spinning, the lid stays locked.",
+			"etiquetas": ["centrifuge", "lab centrifuge", "ultracentrifuge"],
+			"variantes": {
+				"sobremesa": "Benchtop",
+				"de_pie": "Floor-standing"
+			},
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Laboratory centrifuge”: a rectangle with rounded corners, 0.70 by 0.80 metres, marked with the letters “Cl”."
+		},
+		"autoclave_laboratorio": {
+			"nombre": "Laboratory autoclave",
+			"descripcion": "A huge steel pressure vessel: the upright kind has a lid on top with a handwheel; the horizontal kind, a round door at the front. It hisses and vents steam at the end of the cycle; the casing and door are hot.",
+			"etiquetas": ["autoclave", "steriliser", "sterilizer"],
+			"variantes": {
+				"vertical": "Upright",
+				"horizontal": "Horizontal"
+			},
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Laboratory autoclave”: a rectangle with rounded corners, 0.70 by 0.70 metres, marked with the letters “Al”."
+		},
+		"congelador_ultra": {
+			"nombre": "Ultra-low freezer",
+			"descripcion": "A tall, wide freezer cabinet with a thick lever-handled door. It hums loudly and blows warm air out at the bottom; what is inside burns with cold and is not touched without gloves.",
+			"etiquetas": ["ultra-low freezer", "minus eighty freezer", "ULT freezer"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Ultra-low freezer”: a rectangle, 0.90 by 0.90 metres, marked with the letters “Cu”."
+		},
+		"tanque_nitrogeno": {
+			"nombre": "Liquid nitrogen dewar on wheels",
+			"descripcion": "A thick, round steel vessel on a wheeled base, hip or chest high. It hisses softly and, when opened, a very cold mist spills out onto the floor. It burns with cold.",
+			"etiquetas": ["liquid nitrogen dewar", "cryogenic tank", "LN2 vessel"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Liquid nitrogen dewar on wheels”: a circle, 0.60 by 0.60 metres, marked with the letters “Tn”."
+		},
+		"estufa_cultivo": {
+			"nombre": "Laboratory incubator",
+			"descripcion": "Chest-high steel cabinet with an inner glass door; it is warm inside and hums quietly. There are often two stacked one on top of the other, and the open door ends up at face height.",
+			"etiquetas": ["incubator", "laboratory incubator", "culture oven"],
+			"variantes": {
+				"una": "Single",
+				"dos": "Two stacked"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Laboratory incubator”: a rectangle, 0.70 by 0.70 metres, marked with the letters “Ec”."
+		},
+		"destilador_pared": {
+			"nombre": "Wall-mounted water still",
+			"descripcion": "A glass and steel apparatus hung on the wall above the bench at face height: glass tubes and coils that stick out, boil and drip. It is hot and fragile; the cane misses it.",
+			"etiquetas": ["water still", "laboratory still", "water distiller"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Wall-mounted water still”: a rectangle, 0.50 by 0.25 metres, hanging 1.20 metres above the floor, marked with the letters “Dp”."
+		},
+		"lavadora_material_vidrio": {
+			"nombre": "Laboratory glassware washer",
+			"descripcion": "A steel machine under the bench or freestanding, like a large dishwasher. Its door drops down at knee height into the walkway, with the glassware racks pulled out. It washes with jets and lets out steam when opened.",
+			"etiquetas": ["glassware washer", "laboratory washer", "lab dishwasher"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Laboratory glassware washer”: a rectangle, 0.65 by 0.65 metres, marked with the letters “Lm”."
+		},
+		"armario_seguridad_quimicos": {
+			"nombre": "Chemical safety cabinet",
+			"descripcion": "A very heavy thick-steel cabinet with self-closing doors and a ventilation pipe coming out of the top. Inside, bottles and cans in sumps. The doors do not stay open: they push back when released.",
+			"etiquetas": ["safety cabinet", "flammables cabinet", "acid cabinet"],
+			"variantes": {
+				"alto": "Tall, two doors",
+				"estrecho": "Tall, one door",
+				"bajo_poyata": "Under-bench"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Chemical safety cabinet”: a rectangle, 1.20 by 0.60 metres, marked with the letters “As”."
+		},
+		"ducha_emergencia": {
+			"nombre": "Emergency shower with eyewash",
+			"descripcion": "A tubular post over two metres high with a big shower head above your head and an eyewash bowl sticking out at waist height. It works by pulling a hanging rod: it releases a huge flow and the floor floods.",
+			"etiquetas": ["emergency shower", "safety shower", "eyewash station"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Emergency shower with eyewash”: a rectangle, 0.70 by 0.60 metres, marked with the letters “De”."
+		},
+		"botellas_gas_cadena": {
+			"nombre": "Gas cylinders chained to the wall",
+			"descripcion": "A row of gas cylinders nearly as tall as a person, standing against the wall and chained at chest height. Round and cold; knock one and it rings like a bell. The valves at the top stick out.",
+			"etiquetas": ["gas cylinders", "gas bottles", "compressed gas"],
+			"variantes": {
+				"dos": "Two cylinders",
+				"cuatro": "Four cylinders"
+			},
+			"imagen": "Footprint of “Gas cylinders chained to the wall”: a rectangle, 0.90 by 0.30 metres, marked with the letters “Bg”."
+		},
+		"residuos_quimicos_cubeto": {
+			"nombre": "Chemical waste drums in a spill tray",
+			"descripcion": "Plastic jerrycans and drums with screw caps standing in a low tray with a grating. The tray rim, a hand's width off the floor, trips you; the drums reach from knee to waist.",
+			"etiquetas": ["chemical waste", "waste drums", "spill tray", "bunded pallet"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Chemical waste drums in a spill tray”: a rectangle, 1.20 by 0.80 metres, marked with the letters “Rq”."
+		},
+		"cocina_fogones_industrial": {
+			"nombre": "Commercial range with oven",
+			"descripcion": "A steel block at hip height with four or six gas burners and iron grids on top, and the oven door below. When lit the gas roars and you feel the heat a step away; pan handles stick out over the edge.",
+			"etiquetas": ["commercial range", "gas range", "burners", "cooking line"],
+			"variantes": {
+				"cuatro_fuegos": "Four burners",
+				"seis_fuegos": "Six burners"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Commercial range with oven”: a rectangle, 1.20 by 0.90 metres, marked with the letters “Cf”."
+		},
+		"freidora_industrial": {
+			"nombre": "Commercial deep fryer",
+			"descripcion": "A narrow steel unit at hip height with one or two oil wells and the baskets hanging above. It sizzles when frying; the oil and the rim burn and the floor around it is slippery.",
+			"etiquetas": ["deep fryer", "commercial fryer", "fryer"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Commercial deep fryer”: a rectangle, 0.60 by 0.90 metres, marked with the letters “Fi”."
+		},
+		"plancha_cocina": {
+			"nombre": "Commercial griddle",
+			"descripcion": "A thick steel griddle on a cabinet at hip height, with a grease channel at the front. When food goes on it sizzles and smokes; it burns without your noticing from a distance.",
+			"etiquetas": ["griddle", "fry top", "flat top grill"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Commercial griddle”: a rectangle, 0.80 by 0.90 metres, marked with the letters “Pc”."
+		},
+		"marmita_industrial": {
+			"nombre": "Boiling pan",
+			"descripcion": "A giant round double-walled steel pot on legs, its rim at waist height, with a hinged lid. Tilting ones have a handwheel sticking out at one side. It boils with a deep bubbling and gives off steam.",
+			"etiquetas": ["boiling pan", "tilting kettle", "steam kettle"],
+			"variantes": {
+				"de_100": "100 litres",
+				"de_300": "300 litres"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Boiling pan”: a circle, 1.00 by 1.00 metres, marked with the letters “Mi”."
+		},
+		"horno_mixto": {
+			"nombre": "Combi steam oven",
+			"descripcion": "A chest-high steel cabinet on a stand, with a thick glass door that opens towards you and releases a cloud of hot steam. The fan hums inside; it beeps when done.",
+			"etiquetas": ["combi oven", "combination oven", "convection steamer"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Combi steam oven”: a rectangle, 0.90 by 0.85 metres, marked with the letters “Hm”."
+		},
+		"campana_extractora_cocina": {
+			"nombre": "Commercial kitchen extractor hood",
+			"descripcion": "A big steel box hanging over the burners, its lower edge at forehead height: it sticks out in front of the cooking line and your head hits its edge. Its fan roars and masks other sounds.",
+			"etiquetas": ["extractor hood", "kitchen canopy", "exhaust hood"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"aviso": "Extractor hood: its edge is at forehead height.",
+			"imagen": "Footprint of “Commercial kitchen extractor hood”: a rectangle, 3.00 by 1.10 metres, hanging 1.95 metres above the floor, marked with the letters “Ce”."
+		},
+		"fogon_bajo": {
+			"nombre": "Low stock-pot range",
+			"descripcion": "A very low iron burner at knee height for huge pots that do not fit on top. When lit the flame roars and the heat rises to your face; the cane knocks against its iron legs.",
+			"etiquetas": ["stock-pot range", "low burner", "stock pot stove"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Low stock-pot range”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Fb”."
+		},
+		"salamandra_gratinador": {
+			"nombre": "Wall-mounted salamander grill",
+			"descripcion": "A steel grill hung on the wall above the range at face height. The elements inside radiate heat; its front edge sticks out and burns.",
+			"etiquetas": ["salamander", "salamander grill", "wall grill"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Wall-mounted salamander grill”: a rectangle, 0.80 by 0.50 metres, hanging 1.40 metres above the floor, marked with the letters “Sg”."
+		},
+		"mesa_refrigerada": {
+			"nombre": "Under-counter refrigerated table",
+			"descripcion": "A steel table at hip height with fridge doors underneath. It hums, blows warm air out at the bottom and its doors block the way when opened.",
+			"etiquetas": ["refrigerated counter", "under-counter fridge", "prep fridge"],
+			"variantes": {
+				"dos_puertas": "Two doors",
+				"tres_puertas": "Three doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Under-counter refrigerated table”: a rectangle, 1.50 by 0.70 metres, marked with the letters “Mr”."
+		},
+		"armario_refrigerado": {
+			"nombre": "Commercial upright refrigerator",
+			"descripcion": "A person-high steel cabinet with one or two thick doors that close by themselves on their seals. You hear the compressor and, when opened, cold air hits your face.",
+			"etiquetas": ["upright fridge", "reach-in refrigerator", "commercial fridge"],
+			"variantes": {
+				"una_puerta": "One door",
+				"dos_puertas": "Two doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Commercial upright refrigerator”: a rectangle, 1.40 by 0.85 metres, marked with the letters “Ar”."
+		},
+		"abatidor_temperatura": {
+			"nombre": "Blast chiller",
+			"descripcion": "A steel cabinet that chills food very fast: its fan roars louder than a fridge's and the door is thick and heavy. Inside, runners with trays.",
+			"etiquetas": ["blast chiller", "blast freezer", "rapid chiller"],
+			"variantes": {
+				"bajo": "Under-counter",
+				"de_pie": "Upright"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Blast chiller”: a rectangle, 0.80 by 0.80 metres, marked with the letters “At”."
+		},
+		"lavavajillas_capota": {
+			"nombre": "Hood dishwasher with tables",
+			"descripcion": "A steel table leading to a box with a hood you pull down by a handle: inside, the rack is washed in a minute with jets. Lifting the hood lets hot steam into your face and the floor around is wet.",
+			"etiquetas": ["hood dishwasher", "pass-through dishwasher", "dishwashing station"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Hood dishwasher with tables”: an L: the inlet table along the wall and the machine with the outlet table in the corner, coming forwards, 2.80 by 2.00 metres, marked with the letters “Lc”."
+		},
+		"tren_lavado": {
+			"nombre": "Conveyor dishwasher",
+			"descripcion": "A very long steel machine at chest height through which the racks travel on a conveyor between rubber curtains. It roars, splashes and steams at both ends: the sound landmark of the washing area.",
+			"etiquetas": ["conveyor dishwasher", "flight dishwasher", "rack conveyor"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Conveyor dishwasher”: a rectangle, 5.00 by 0.90 metres, marked with the letters “Tl”."
+		},
+		"fregadero_industrial": {
+			"nombre": "Commercial sink with pre-rinse spray",
+			"descripcion": "A steel sink with one or two very deep bowls at hip height and a tall spring tap with a spray head hanging at face height: it swings and drips. Underneath, the cane reaches in as far as the legs.",
+			"etiquetas": ["commercial sink", "pre-rinse sink", "pot sink"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Commercial sink with pre-rinse spray”: a rectangle, 1.60 by 0.70 metres, marked with the letters “Fi”."
+		},
+		"mesa_trabajo_inox": {
+			"nombre": "Stainless-steel work table",
+			"descripcion": "A steel table at hip height with a low shelf and, if against the wall, an upstand at the back. Cold and smooth with sharp corners; the bottom shelf sticks out a little and the cane hits it.",
+			"etiquetas": ["stainless work table", "prep table", "steel table"],
+			"variantes": {
+				"mural": "Wall table with upstand",
+				"central": "Centre table"
+			},
+			"imagen": "Footprint of “Stainless-steel work table”: a rectangle, 1.60 by 0.70 metres, marked with the letters “Mt”."
+		},
+		"estante_mural_inox": {
+			"nombre": "Wall shelf above the work table",
+			"descripcion": "A steel shelf bolted to the wall above the work table at face height, full of containers. Leaning over the table you bump your head on it; the cane misses it.",
+			"etiquetas": ["wall shelf", "steel shelf", "overshelf"],
+			"imagen": "Footprint of “Wall shelf above the work table”: a rectangle, 1.60 by 0.35 metres, hanging 1.45 metres above the floor, marked with the letters “Em”."
+		},
+		"amasadora_espiral": {
+			"nombre": "Spiral dough mixer",
+			"descripcion": "A floor-standing machine at waist height with a round steel bowl and a head above that drives the hook. Running, it growls and the dough thumps; the bowl turns and hands must stay out.",
+			"etiquetas": ["spiral mixer", "dough mixer", "bakery mixer"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Spiral dough mixer”: a rectangle with rounded corners, 0.60 by 0.90 metres, marked with the letters “Ae”."
+		},
+		"barra_utensilios_colgados": {
+			"nombre": "Hanging utensil rail",
+			"descripcion": "A steel rail over the table or the burners with ladles, skimmers and pans hanging at face height. They clink when brushed and some are hot; the cane passes underneath.",
+			"etiquetas": ["utensil rail", "hanging pans", "kitchen rail"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Hanging utensil rail”: a rectangle, 1.20 by 0.15 metres, hanging 1.40 metres above the floor, marked with the letters “Bu”."
+		},
+		"cubeta_ingredientes": {
+			"nombre": "Ingredient bin on castors",
+			"descripcion": "A knee-high plastic bin with a sliding lid and castors, kept under the table: flour, sugar or rice. It gets pulled out with a foot and left in the middle of the way.",
+			"etiquetas": ["ingredient bin", "flour bin", "mobile bin"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Ingredient bin on castors”: a rectangle, 0.40 by 0.65 metres, marked with the letters “Ci”."
+		},
+		"carro_cestas_lavavajillas": {
+			"nombre": "Dish rack dolly",
+			"descripcion": "A very low square platform, a hand's width off the floor, on castors, for stacking dishwasher racks. Empty, the cane barely finds it and it rolls away when you trip on it.",
+			"etiquetas": ["dish rack dolly", "rack dolly", "dishwasher dolly"],
+			"variantes": {
+				"vacio": "Empty",
+				"con_cestas": "With racks"
+			},
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Dish rack dolly”: a rectangle, 0.55 by 0.55 metres, marked with the letters “Cc”."
+		},
+		"estanteria_cocina_ranurada": {
+			"nombre": "Kitchen shelving with slotted shelves",
+			"descripcion": "Steel or polymer shelving with slotted shelves, the lowest a hand's width off the floor, loaded with boxes, sacks and tins. In the cold room or kitchen store it forms narrow aisles.",
+			"etiquetas": ["kitchen shelving", "cold room shelving", "slotted shelving"],
+			"imagen": "Footprint of “Kitchen shelving with slotted shelves”: a rectangle, 1.50 by 0.50 metres, marked with the letters “Ec”."
+		},
+		"canal_desague_cocina": {
+			"nombre": "Floor drain channel with grating",
+			"descripcion": "A long, narrow steel grating set into the floor from side to side, where the sloping floor drains the water. It sounds metallic underfoot; around it the floor is often wet or greasy.",
+			"etiquetas": ["drain channel", "floor grating", "trench drain"],
+			"imagen": "Footprint of “Floor drain channel with grating”: a rectangle, 3.00 by 0.20 metres, marked with the letters “Cd”."
+		},
+		"alfombra_goma_drenante": {
+			"nombre": "Drainage rubber mat",
+			"descripcion": "A thick rubber mat full of holes in front of the sink or the burners, to stop you slipping. Its bevelled edges form a small step and your foot sinks in slightly.",
+			"etiquetas": ["drainage mat", "anti-slip mat", "rubber kitchen mat"],
+			"imagen": "Footprint of “Drainage rubber mat”: a rectangle, 0.90 by 1.50 metres, marked with the letters “Ag”."
+		},
+		"cubo_pedal_industrial": {
+			"nombre": "Wheeled pedal bin",
+			"descripcion": "A large hip-high bin with a lid that opens when you step on a pedal sticking out at the front at floor level: your foot trips on it. It smells of scraps and the lid bangs as it drops.",
+			"etiquetas": ["pedal bin", "kitchen bin", "waste bin"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Wheeled pedal bin”: a rectangle, 0.55 by 0.60 metres, marked with the letters “Cp”."
+		},
+		"acopio_ferralla": {
+			"nombre": "Stockpile of rebar",
+			"descripcion": "Long, ribbed steel bars piled on the floor on timber blocks or tangled in a heap. The ends stick out in every direction at ankle and shin height: they catch your feet.",
+			"etiquetas": ["rebar", "reinforcing bars", "steel bars"],
+			"imagen": "Footprint of “Stockpile of rebar”: an irregular spiky patch, 2.00 by 6.00 metres, marked with the letters “Af”."
+		},
+		"esperas_ferralla": {
+			"nombre": "Rebar starter bars",
+			"descripcion": "Steel bars sticking straight up out of the concrete floor, in a cluster or a row, from knee to waist height, waiting for the column or wall. If protected they have a plastic cap on the tip; if not, they stab.",
+			"etiquetas": ["starter bars", "rebar starters", "protruding rebar"],
+			"variantes": {
+				"pilar": "Column starters",
+				"muro": "Wall starters"
+			},
+			"aviso": "Rebar starters: bars pointing upwards.",
+			"imagen": "Footprint of “Rebar starter bars”: a rectangle, 0.40 by 0.40 metres, marked with the letters “Ef”."
+		},
+		"mallazo_paneles": {
+			"nombre": "Stacked steel mesh panels",
+			"descripcion": "A pile of welded-wire mesh sheets lying flat on the floor, shin high or lower. If you step on them your foot goes into the squares and the loose ends scratch.",
+			"etiquetas": ["steel mesh", "welded wire mesh", "reinforcing mesh"],
+			"imagen": "Footprint of “Stacked steel mesh panels”: a rectangle, 2.15 by 6.00 metres, marked with the letters “Mp”."
+		},
+		"tableros_encofrado": {
+			"nombre": "Stack of formwork panels and beams",
+			"descripcion": "Large timber panels, smooth on one face, stacked next to long timber beams. Low and wide; the beams stick out of the pile and the splinters prick.",
+			"etiquetas": ["formwork panels", "shuttering", "timber beams"],
+			"imagen": "Footprint of “Stack of formwork panels and beams”: a rectangle, 1.20 by 2.50 metres, marked with the letters “Te”."
+		},
+		"artesa_mortero": {
+			"nombre": "Mortar tub",
+			"descripcion": "A low, wide rubber or steel tub at ankle height, full of mortar or dirty water. Step in and your foot sinks into the mix; around it the floor is splattered and slippery.",
+			"etiquetas": ["mortar tub", "mixing tub", "mortar trough"],
+			"imagen": "Footprint of “Mortar tub”: a rectangle with rounded corners, 0.90 by 0.60 metres, marked with the letters “Am”."
+		},
+		"hormigonera_electrica": {
+			"nombre": "Site cement mixer",
+			"descripcion": "A tilted steel drum on two wheels and legs, chest high, with a handwheel at one side for tipping it. Running, it growls and the gravel rumbles inside; the drum turns and splashes.",
+			"etiquetas": ["cement mixer", "concrete mixer", "site mixer"],
+			"variantes": {
+				"de_160": "160 litres",
+				"de_300": "300 litres"
+			},
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Site cement mixer”: a round drum with a towing bar sticking out at the back, 0.80 by 1.40 metres, marked with the letters “He”."
+		},
+		"cortadora_material_agua": {
+			"nombre": "Wet tile and brick saw",
+			"descripcion": "An iron table at waist height with a disc that cuts brick or tile and a water tray underneath. Running, it screeches very loudly and sprays slurry; the floor around stays wet.",
+			"etiquetas": ["wet saw", "masonry saw", "tile saw"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Wet tile and brick saw”: a rectangle, 0.70 by 1.30 metres, marked with the letters “Cm”."
+		},
+		"montacargas_obra": {
+			"nombre": "Construction material hoist",
+			"descripcion": "A steel lattice tower against the façade with a loading platform in front closed by a gate. When the platform is elsewhere, the gate on each floor opens onto a drop; it hums and a bell rings when it moves.",
+			"etiquetas": ["material hoist", "construction hoist", "goods lift"],
+			"acciones": {
+				"subir_carga": "Raise the load",
+				"bajar_carga": "Lower the load"
+			},
+			"aviso": "Material hoist: if the platform is not there, the gate opens onto a drop.",
+			"imagen": "Footprint of “Construction material hoist”: an upside-down T: the column at the back and a wide table at the front, 1.60 by 2.00 metres, marked with the letters “Mo”."
+		},
+		"base_grua_torre": {
+			"nombre": "Tower crane base",
+			"descripcion": "The foot of the crane: an iron lattice tower rising very high from a cross-shaped base with concrete counterweight blocks, fenced off. From below you hear the cables and the slewing motor high above.",
+			"etiquetas": ["tower crane", "crane base", "crane mast"],
+			"imagen": "Footprint of “Tower crane base”: a cross, 5.00 by 5.00 metres, marked with the letters “Bg”."
+		},
+		"carga_suspendida": {
+			"nombre": "Load hanging from the crane",
+			"descripcion": "A concrete skip, a pallet or a bundle of bars hanging from the crane hook, moving over the site. You hear the cable creak and people shouting warnings; never stay underneath.",
+			"etiquetas": ["suspended load", "crane load", "concrete skip"],
+			"aviso": "Suspended load overhead: move away.",
+			"imagen": "Footprint of “Load hanging from the crane”: a rectangle, 1.20 by 1.20 metres, hanging 2.50 metres above the floor, marked with the letters “Cs”."
+		},
+		"puntal_forjado": {
+			"nombre": "Steel prop",
+			"descripcion": "A vertical steel tube from floor to ceiling holding up a freshly poured slab. They usually stand in rows a metre apart, like a forest of bars: the cane finds them, but the base plate trips you.",
+			"etiquetas": ["steel prop", "acrow prop", "shoring"],
+			"imagen": "Footprint of “Steel prop”: a rectangle, 0.15 by 0.15 metres, marked with the letters “Pf”."
+		},
+		"andamio_borriquetas": {
+			"nombre": "Trestle scaffold",
+			"descripcion": "Two or three iron trestles with planks on top, at waist or chest height, for working inside a storey. The planks overhang at the ends and the cane goes underneath.",
+			"etiquetas": ["trestle scaffold", "trestle platform", "painter's trestles"],
+			"imagen": "Footprint of “Trestle scaffold”: a rectangle, 2.50 by 0.80 metres, marked with the letters “Ab”."
+		},
+		"barandilla_sargento": {
+			"nombre": "Temporary edge guardrail",
+			"descripcion": "A guardrail of tubes or planks clamped to the edge of the slab or stair, with a rail at hip height, another at knee height and a toe board. It is all that stands between you and the drop: do not lean on it hard.",
+			"etiquetas": ["edge protection", "guardrail", "temporary handrail"],
+			"imagen": "Footprint of “Temporary edge guardrail”: a rectangle, 2.50 by 0.15 metres, marked with the letters “Bs”."
+		},
+		"rampa_tablones": {
+			"nombre": "Plank ramp",
+			"descripcion": "Planks nailed together with cross battens to bridge a level change on site. No handrail; they flex and sound hollow underfoot, and the battens act as steps.",
+			"etiquetas": ["plank ramp", "site ramp", "duckboard"],
+			"aviso": "Plank ramp without a handrail.",
+			"imagen": "Footprint of “Plank ramp”: a rectangle, 0.80 by 3.00 metres, marked with the letters “Rt”."
+		},
+		"cuadro_electrico_obra": {
+			"nombre": "Site distribution board",
+			"descripcion": "A thick plastic box on a stand or hung on a column at chest height, with big sockets feeding cables across the floor. It hums slightly; you step on the cables.",
+			"etiquetas": ["site distribution board", "site power box", "temporary panel"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Site distribution board”: a rectangle, 0.50 by 0.40 metres, marked with the letters “Ce”."
+		},
+		"cable_colgado_obra": {
+			"nombre": "Hanging site cable",
+			"descripcion": "A thick cable strung from column to column at neck or face height to keep it off the floor. It gives a little when you hit it, but the cane misses it.",
+			"etiquetas": ["hanging cable", "overhead cable", "strung cable"],
+			"aviso": "Cable hanging at face height.",
+			"imagen": "Footprint of “Hanging site cable”: a rectangle, 5.00 by 0.03 metres, hanging 1.60 metres above the floor, marked with the letters “Cc”."
+		},
+		"cofre_herramientas_obra": {
+			"nombre": "Site tool vault",
+			"descripcion": "A large, very heavy steel box with a hinged lid and padlock, knee or hip high. Opened, the lid stands up at head height.",
+			"etiquetas": ["site vault", "tool chest", "jobsite box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Site tool vault”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Ch”."
+		},
+		"hueco_forjado": {
+			"nombre": "Floor opening",
+			"descripcion": "A hole in the floor of a storey under construction: a light well, a services shaft or an unbuilt stair. It should be covered with nailed boards or fenced; if not, the cane stops finding floor and there is a whole storey below.",
+			"etiquetas": ["floor opening", "slab opening", "unprotected hole"],
+			"variantes": {
+				"patinillo": "Services opening",
+				"escalera": "Stair opening",
+				"patio": "Light well"
+			},
+			"aviso": "Floor opening! A drop to the floor below. Stop.",
+			"imagen": "Footprint of “Floor opening”: a rectangle, 1.50 by 1.50 metres, marked with the letters “Hf”."
+		},
+		"borde_forjado": {
+			"nombre": "Open slab edge",
+			"descripcion": "The floor of the storey ends in a drop because the façade is not built yet. There is usually a net or a guardrail; you feel the air and hear the street. Beyond the edge there is nothing.",
+			"etiquetas": ["slab edge", "open edge", "unprotected edge"],
+			"aviso": "Slab edge: a drop to the outside. Stop.",
+			"imagen": "Footprint of “Open slab edge”: a rectangle, 5.00 by 0.50 metres, marked with the letters “Bf”."
+		},
+		"hueco_ascensor_obra": {
+			"nombre": "Lift shaft under construction",
+			"descripcion": "A vertical concrete shaft through every storey; on each floor there is a door-wide opening closed off with a rail or a plank. Inside, the void and the echo.",
+			"etiquetas": ["lift shaft", "elevator shaft", "open shaft"],
+			"aviso": "Lift shaft: a drop of several storeys. Stop.",
+			"imagen": "Footprint of “Lift shaft under construction”: a rectangle, 1.80 by 1.80 metres, marked with the letters “Ha”."
+		},
+		"escalera_obra_sin_barandilla": {
+			"nombre": "Unfinished stair without handrail",
+			"descripcion": "A flight of rough concrete stairs with uneven steps and no handrail on the open side, or just a temporary rope or tube. Each nosing is rough; on the open side you fall.",
+			"etiquetas": ["unfinished stair", "rough stair", "stair without handrail"],
+			"aviso": "Building-site stair with no handrail on the open side.",
+			"imagen": "Footprint of “Unfinished stair without handrail”: a rectangle, 1.20 by 3.50 metres, marked with the letters “Eo”."
+		},
+		"borde_vaciado": {
+			"nombre": "Excavation edge",
+			"descripcion": "The edge of the big basement excavation: the earth ground ends at a slope or a wall several metres deep. It is usually fenced, but not always; the loose earth at the edge crumbles underfoot.",
+			"etiquetas": ["excavation edge", "basement dig", "open excavation"],
+			"aviso": "Edge of the excavation: a drop of several metres. Stop.",
+			"imagen": "Footprint of “Excavation edge”: a rectangle, 10.00 by 1.00 metres, marked with the letters “Bv”."
+		}
+	}
+}

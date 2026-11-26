@@ -1,0 +1,1265 @@
+{
+	"nombre": "Hospitality",
+	"descripcion": "Bar and café, restaurant, terrace and hotel: bar counters with their stools, tables and chairs, pub games, buffet, terrace furniture, lobby, guest room, corridors and function room.",
+	"categorias": {
+		"barra": "Bar counter and café",
+		"sala_bar": "Bar room and games",
+		"restaurante": "Restaurant",
+		"terraza": "Terrace",
+		"vestibulo": "Hotel lobby and reception",
+		"habitacion": "Hotel room",
+		"pasillos": "Hotel corridors and breakfast",
+		"eventos": "Function room"
+	},
+	"subcategorias": {
+		"tramos_barra": "Bar counter sections",
+		"asientos_barra": "Bar stools",
+		"aparatos_barra": "Bar appliances",
+		"expositores_barra": "Display cases and bottle racks",
+		"colgados_barra": "Hanging above the bar",
+		"mesas_bar": "Bar tables",
+		"asientos_bar": "Bar chairs and benches",
+		"juegos_bar": "Pub games and machines",
+		"complementos_bar": "Bar room fittings",
+		"mesas_restaurante": "Restaurant tables",
+		"asientos_restaurante": "Restaurant seats",
+		"servicio_sala": "Waiting service",
+		"bufe": "Buffet",
+		"separadores_sala": "Dividers and doors",
+		"bodega_vivero": "Wine and seafood displays",
+		"mobiliario_terraza": "Terrace tables and seats",
+		"clima_terraza": "Shade, heating and cooling",
+		"cerramientos_terraza": "Terrace enclosures",
+		"acera_terraza": "On the pavement and the façade",
+		"recepcion_hotel": "Reception",
+		"estar_vestibulo": "Lobby seating area",
+		"equipajes_hotel": "Luggage",
+		"camas_hotel": "Hotel beds",
+		"muebles_habitacion": "Room furniture",
+		"aparatos_habitacion": "Room appliances",
+		"carros_hotel": "Hotel service trolleys",
+		"pasillo_hotel": "In the corridor",
+		"desayunos": "Breakfast buffet",
+		"montaje_eventos": "Function room set-up",
+		"mobiliario_eventos": "Event furniture"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"apagado": "Off",
+		"funcionando": "Running",
+		"encendido": "On",
+		"desplegado": "Unfolded",
+		"plegado": "Folded"
+	},
+	"objetos": {
+		"barra_recta": {
+			"nombre": "Straight bar counter",
+			"descripcion": "Bar counter at chest height, with a foot rail a hand's width above the floor that the cane touches first. Follow it by hand to its end.",
+			"etiquetas": ["bar", "bar counter", "foot rail"],
+			"variantes": {
+				"de_150": "1.50 m",
+				"de_240": "2.40 m",
+				"de_360": "3.60 m",
+				"de_500": "5 m"
+			},
+			"imagen": "Footprint of “Straight bar counter”: a rectangle, 2.40 by 0.65 metres, marked with the letters “Br”."
+		},
+		"barra_ele": {
+			"nombre": "L-shaped bar counter",
+			"descripcion": "Bar counter turning the corner in an L, closing the bartender in against the wall. Following it by hand you feel the turn; foot rail on the outside.",
+			"etiquetas": ["L-shaped bar", "corner bar"],
+			"variantes": {
+				"pequena": "Small",
+				"mediana": "Medium",
+				"grande": "Large"
+			},
+			"imagen": "Footprint of “L-shaped bar counter”: an L shape, 3.00 by 2.20 metres, marked with the letters “Be”."
+		},
+		"barra_curva": {
+			"nombre": "Curved bar counter",
+			"descripcion": "Bar counter bulging into the room in a half moon, with no corners. It has a foot rail; behind it, against the wall, is the bartender's space.",
+			"etiquetas": ["curved bar", "half-moon bar"],
+			"imagen": "Footprint of “Curved bar counter”: a curved band bulging towards the front, 3.20 by 1.40 metres, marked with the letters “Bc”."
+		},
+		"barra_paso_abatible": {
+			"nombre": "Lift-up flap of the bar",
+			"descripcion": "A section of the bar that lifts like a lid, with a small gate below: this is where the bartender goes in and out. Down, it blocks the way; lifted, you walk through.",
+			"etiquetas": ["bar flap", "lift-up hatch", "counter gate"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Lift-up flap of the bar”: a rectangle, 0.70 by 0.65 metres, marked with the letters “Bp”."
+		},
+		"barra_tramo_bajo": {
+			"nombre": "Low accessible bar section",
+			"descripcion": "A section of the bar lowered to table height, with knee space underneath. Following the bar by hand, it drops a step here.",
+			"etiquetas": ["accessible bar section", "low counter"],
+			"imagen": "Footprint of “Low accessible bar section”: a rectangle, 1.00 by 0.65 metres, marked with the letters “Bt”."
+		},
+		"contrabarra": {
+			"nombre": "Back bar unit",
+			"descripcion": "Long low unit against the wall, behind the bar, with doors and shelves. The coffee machine and the grinder stand on it.",
+			"etiquetas": ["back bar", "back counter"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Back bar unit”: a rectangle, 2.00 by 0.55 metres, marked with the letters “Co”."
+		},
+		"taburete_barra_fijo": {
+			"nombre": "Fixed tall bar stool",
+			"descripcion": "Tall stool bolted to the floor: a metal post and a round seat that swivels. It does not move if you bump it; there are usually several in a row.",
+			"etiquetas": ["fixed bar stool", "swivel stool"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Fixed tall bar stool”: a circle, 0.35 by 0.35 metres, marked with the letters “Tb”."
+		},
+		"taburete_barra_respaldo": {
+			"nombre": "Tall bar stool with backrest",
+			"descripcion": "Loose tall stool on four legs with a foot ring and a short backrest. It is light: push it and it scrapes along or tips over.",
+			"etiquetas": ["bar stool", "high stool", "bar chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Tall bar stool with backrest”: a rectangle, 0.42 by 0.45 metres, marked with the letters “Tb”."
+		},
+		"cafetera_expres": {
+			"nombre": "Bar espresso machine",
+			"descripcion": "Large metal coffee machine on the back counter, at chest height. Hot to the touch; the hiss of its steam carries across the bar and tells you where the counter is.",
+			"etiquetas": ["espresso machine", "coffee machine", "steam wand"],
+			"variantes": {
+				"un_grupo": "One group",
+				"dos_grupos": "Two groups",
+				"tres_grupos": "Three groups"
+			},
+			"acciones": {
+				"hacer_cafe": "Make a coffee"
+			},
+			"imagen": "Footprint of “Bar espresso machine”: a rectangle, 0.75 by 0.55 metres, hanging 0.90 metres above the floor, marked with the letters “Ce”."
+		},
+		"molinillo_cafe": {
+			"nombre": "Coffee grinder",
+			"descripcion": "Grinder next to the coffee machine: a plastic hopper on top and a lever that clacks as it doses. It whines for a few seconds while grinding.",
+			"etiquetas": ["coffee grinder", "grinder"],
+			"acciones": {
+				"moler_cafe": "Grind coffee"
+			},
+			"imagen": "Footprint of “Coffee grinder”: a rectangle, 0.22 by 0.35 metres, hanging 0.90 metres above the floor, marked with the letters “Mc”."
+		},
+		"grifo_cerveza": {
+			"nombre": "Beer tap tower",
+			"descripcion": "Cold, wet metal column rising from the bar, with the tap handles on top. Below it is a drip grille.",
+			"etiquetas": ["beer tap", "beer tower", "draught tap"],
+			"variantes": {
+				"un_grifo": "One tap",
+				"dos_grifos": "Two taps",
+				"cuatro_grifos": "Four taps"
+			},
+			"acciones": {
+				"tirar_cana": "Pull a beer"
+			},
+			"imagen": "Footprint of “Beer tap tower”: a rectangle, 0.20 by 0.20 metres, hanging 1.10 metres above the floor, marked with the letters “Gc”."
+		},
+		"camara_botellero": {
+			"nombre": "Under-counter bottle cooler",
+			"descripcion": "Low steel cooler with sliding lids on top or doors at the front. It hums all the time: it tells you which is the bartender's side.",
+			"etiquetas": ["bottle cooler", "back bar cooler"],
+			"variantes": {
+				"dos_puertas": "Two doors",
+				"tres_puertas": "Three doors",
+				"cuatro_puertas": "Four doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Under-counter bottle cooler”: a rectangle, 1.50 by 0.55 metres, marked with the letters “Cb”."
+		},
+		"lavavasos": {
+			"nombre": "Bar glasswasher",
+			"descripcion": "Small glasswasher under the bar. When running you hear pressurised water for a couple of minutes; hot steam comes out when it is opened.",
+			"etiquetas": ["glasswasher", "glass washer"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Bar glasswasher”: a rectangle, 0.45 by 0.50 metres, marked with the letters “La”."
+		},
+		"tpv_bar": {
+			"nombre": "Bar till",
+			"descripcion": "Till with a screen and cash drawer, at the end of the bar at chest height. It beeps when taking payment and the drawer springs open with a bell.",
+			"etiquetas": ["till", "cash register", "point of sale"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Bar till”: a rectangle, 0.38 by 0.40 metres, hanging 1.10 metres above the floor, marked with the letters “Tb”."
+		},
+		"cubitera_pie": {
+			"nombre": "Ice bucket on a stand",
+			"descripcion": "Metal bucket with ice and a bottle, on a thin waist-high stand. Cold and wet; knock it and it wobbles and the ice rattles.",
+			"etiquetas": ["ice bucket", "wine cooler", "champagne bucket"],
+			"acciones": {
+				"coger_hielo": "Take some ice"
+			},
+			"imagen": "Footprint of “Ice bucket on a stand”: a circle, 0.25 by 0.25 metres, marked with the letters “Cp”."
+		},
+		"vitrina_tapas": {
+			"nombre": "Tapas display case on the bar",
+			"descripcion": "Low glass case standing along the bar, cold to the touch. It takes up the space where you would rest your arm; the cane gives no warning.",
+			"etiquetas": ["tapas display", "counter display case"],
+			"variantes": {
+				"cuatro_bandejas": "Four trays",
+				"seis_bandejas": "Six trays",
+				"ocho_bandejas": "Eight trays"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Tapas display case on the bar”: a rectangle, 1.00 by 0.38 metres, hanging 1.10 metres above the floor, marked with the letters “Vt”."
+		},
+		"expositor_bolleria": {
+			"nombre": "Counter pastry display",
+			"descripcion": "Clear plastic case with a flip lid, on the counter, holding croissants and muffins. Light: it slides if you push it with your elbow.",
+			"etiquetas": ["pastry display", "bakery case", "cake dome"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Counter pastry display”: a rectangle with rounded corners, 0.50 by 0.40 metres, hanging 1.10 metres above the floor, marked with the letters “Eb”."
+		},
+		"vitrina_tartas": {
+			"nombre": "Rotating cake display",
+			"descripcion": "Round glass column as tall as a person, cold, with cakes on slowly turning shelves. It hums quietly.",
+			"etiquetas": ["cake display", "patisserie cabinet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Rotating cake display”: a circle, 0.60 by 0.60 metres, marked with the letters “Vt”."
+		},
+		"botellero_pared": {
+			"nombre": "Wall bottle shelves behind the bar",
+			"descripcion": "Glass shelves of bottles hung on the wall behind the bar, from chest height to above the head. The cane passes underneath.",
+			"etiquetas": ["bottle shelves", "back bar shelves", "spirits shelf"],
+			"imagen": "Footprint of “Wall bottle shelves behind the bar”: a rectangle, 1.50 by 0.20 metres, hanging 1.20 metres above the floor, marked with the letters “Bp”."
+		},
+		"copas_colgadas": {
+			"nombre": "Hanging glass rack above the bar",
+			"descripcion": "Metal rack hung from the ceiling above the bar, with glasses upside down at forehead height. The cane misses it; a raised hand does not.",
+			"etiquetas": ["glass rack", "hanging stemware rack"],
+			"imagen": "Footprint of “Hanging glass rack above the bar”: a rectangle, 1.20 by 0.35 metres, hanging 1.75 metres above the floor, marked with the letters “Cc”."
+		},
+		"jamones_colgados": {
+			"nombre": "Hams hanging above the bar",
+			"descripcion": "A row of hams hanging from a ceiling rail, their tips at head height. Soft and greasy to the touch; you can smell them from a distance.",
+			"etiquetas": ["hanging hams", "cured hams"],
+			"imagen": "Footprint of “Hams hanging above the bar”: a rectangle, 1.50 by 0.30 metres, hanging 1.65 metres above the floor, marked with the letters “Jc”."
+		},
+		"mesa_alta_bar": {
+			"nombre": "Tall bar table with foot rail",
+			"descripcion": "Tall, narrow table at chest height, with a ring or bar for the feet. Used standing or with tall stools; the top overhangs the legs.",
+			"etiquetas": ["tall bar table", "poseur table", "high table"],
+			"variantes": {
+				"cuadrada": "Square, 60 cm",
+				"de_70": "70 by 60 cm",
+				"alargada": "Long, 1.20 m"
+			},
+			"imagen": "Footprint of “Tall bar table with foot rail”: a rectangle, 0.70 by 0.60 metres, marked with the letters “Ma”."
+		},
+		"barril_mesa": {
+			"nombre": "Barrel used as a table",
+			"descripcion": "Upright wine barrel with iron hoops, used as a tall table. Pot-bellied: wider in the middle than at the top; it sounds hollow when struck.",
+			"etiquetas": ["barrel", "cask", "barrel table"],
+			"imagen": "Footprint of “Barrel used as a table”: a circle, 0.70 by 0.70 metres, marked with the letters “Bm”."
+		},
+		"velador_marmol": {
+			"nombre": "Marble café table",
+			"descripcion": "Small round café table: a cold marble top on a central iron leg with three feet at the bottom. Very heavy; it does not move.",
+			"etiquetas": ["café table", "bistro table", "marble table"],
+			"variantes": {
+				"de_50": "50 cm",
+				"de_60": "60 cm",
+				"de_70": "70 cm"
+			},
+			"imagen": "Footprint of “Marble café table”: a circle, 0.60 by 0.60 metres, marked with the letters “Vm”."
+		},
+		"mesa_bar_pie_central": {
+			"nombre": "Pedestal bar table",
+			"descripcion": "Bar table on a single central leg with a wide iron base on the floor: the cane hits the base before the top. The chairs go round it.",
+			"etiquetas": ["bar table", "café table", "pedestal table"],
+			"variantes": {
+				"de_dos": "For two, 60 by 60 cm",
+				"de_dos_grande": "For two, 70 by 70 cm",
+				"de_cuatro": "For four, 80 by 80 cm",
+				"de_cuatro_larga": "For four, 120 by 70 cm"
+			},
+			"imagen": "Footprint of “Pedestal bar table”: a rectangle, 0.70 by 0.70 metres, marked with the letters “Mb”."
+		},
+		"silla_apilable_bar": {
+			"nombre": "Stackable café chair",
+			"descripcion": "Light tubular metal chair without arms, the stacking kind. It scrapes and squeals when pushed; never in the same place twice.",
+			"etiquetas": ["café chair", "stacking chair", "bistro chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Stackable café chair”: a rectangle, 0.45 by 0.50 metres, marked with the letters “Sa”."
+		},
+		"sillas_apiladas": {
+			"nombre": "Stack of chairs",
+			"descripcion": "A tower of chairs nested into each other, pushed against a wall. Taller than a chair, with legs sticking out at several heights; here today, gone tomorrow.",
+			"etiquetas": ["stacked chairs", "chair stack"],
+			"imagen": "Footprint of “Stack of chairs”: a rectangle, 0.50 by 0.65 metres, marked with the letters “Sa”."
+		},
+		"banco_corrido_pared": {
+			"nombre": "Upholstered wall banquette",
+			"descripcion": "Long padded bench along the wall with a high back. Tables are lined up in front; to sit you slide in sideways between two of them.",
+			"etiquetas": ["banquette", "wall bench", "booth seating"],
+			"variantes": {
+				"de_120": "1.20 m",
+				"de_240": "2.40 m",
+				"de_360": "3.60 m",
+				"de_480": "4.80 m"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Upholstered wall banquette”: a rectangle, 2.40 by 0.55 metres, marked with the letters “Bc”."
+		},
+		"banco_corrido_rincon": {
+			"nombre": "Corner banquette",
+			"descripcion": "Padded bench turning the corner in an L, with the table tucked into the angle. Whoever sits at the far end is hemmed in by the others.",
+			"etiquetas": ["corner banquette", "corner bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Corner banquette”: an L shape, 2.20 by 2.20 metres, marked with the letters “Bc”."
+		},
+		"reservado_bar": {
+			"nombre": "Booth with two benches and table",
+			"descripcion": "Two high-backed benches facing each other, with a fixed table between them coming out from the wall. You slide in sideways from the aisle.",
+			"etiquetas": ["booth", "diner booth"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Booth with two benches and table”: two facing benches with the table between them, coming out from the wall, 1.60 by 1.20 metres, marked with the letters “Rb”."
+		},
+		"tragaperras": {
+			"nombre": "Slot machine",
+			"descripcion": "Tall sheet-metal cabinet against the wall, with buttons at waist height and a tray at the bottom. Its jingle never stops: the best landmark in the bar.",
+			"etiquetas": ["slot machine", "fruit machine"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Slot machine”: a rectangle, 0.55 by 0.55 metres, marked with the letters “Tr”."
+		},
+		"maquina_tabaco": {
+			"nombre": "Cigarette machine",
+			"descripcion": "Wide, shallow sheet-metal cabinet near the entrance, with rows of buttons and a drawer at the bottom where the pack drops.",
+			"etiquetas": ["cigarette machine", "tobacco vending machine"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Cigarette machine”: a rectangle, 0.65 by 0.45 metres, marked with the letters “Mt”."
+		},
+		"maquina_bolas": {
+			"nombre": "Gumball and nut machine",
+			"descripcion": "Plastic globe of gumballs or nuts on a metal stand, at chest height. It has a coin dial and a little flap below.",
+			"etiquetas": ["gumball machine", "nut vending machine"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Gumball and nut machine”: a circle, 0.30 by 0.30 metres, marked with the letters “Mb”."
+		},
+		"futbolin": {
+			"nombre": "Table football",
+			"descripcion": "Table football: a waist-high wooden box with metal rods running through it and sticking out on both long sides. The rods move by themselves if someone is playing.",
+			"etiquetas": ["table football", "foosball"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Table football”: a long box with four rods sticking out at the front and at the back, 1.50 by 1.15 metres, marked with the letters “Fu”."
+		},
+		"mesa_billar": {
+			"nombre": "Pool table",
+			"descripcion": "Large, heavy pool table, with a wooden rim at hip height and cloth inside. Room must be left all round for the cues.",
+			"etiquetas": ["pool table", "billiard table"],
+			"variantes": {
+				"siete_pies": "7 foot",
+				"ocho_pies": "8 foot",
+				"nueve_pies": "9 foot"
+			},
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Pool table”: a rectangle, 2.54 by 1.42 metres, marked with the letters “Mb”."
+		},
+		"taquera_billar": {
+			"nombre": "Wall cue rack",
+			"descripcion": "Wooden wall rack holding the cues upright, from hip height to above the head. It sticks out a hand's width and the cues fall if you brush them.",
+			"etiquetas": ["cue rack", "cue stand"],
+			"imagen": "Footprint of “Wall cue rack”: a rectangle, 0.60 by 0.12 metres, hanging 0.50 metres above the floor, marked with the letters “Tb”."
+		},
+		"diana_dardos": {
+			"nombre": "Wall electronic dartboard",
+			"descripcion": "Plastic cabinet hung on the wall with the board at face height. The throwing lane in front must be kept clear: do not cross while someone is throwing.",
+			"etiquetas": ["dartboard", "electronic darts"],
+			"variantes": {
+				"clasica": "Classic bristle board",
+				"electronica": "Electronic"
+			},
+			"acciones": {
+				"lanzar_dardo": "Throw a dart"
+			},
+			"aviso": "Darts area: do not cross while someone is throwing.",
+			"imagen": "Footprint of “Wall electronic dartboard”: a rectangle, 0.50 by 0.10 metres, hanging 1.30 metres above the floor, marked with the letters “Dd”."
+		},
+		"tv_brazo_bar": {
+			"nombre": "Bar television on a wall arm",
+			"descripcion": "Television hanging from an arm that comes out of the wall or the corner, at head height. The cane passes underneath; you hear it when it is on.",
+			"etiquetas": ["wall-mounted tv", "bar tv", "tv on a bracket"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Bar television on a wall arm”: a rectangle, 1.10 by 0.40 metres, hanging 1.70 metres above the floor, marked with the letters “Tb”."
+		},
+		"percha_pared_balda": {
+			"nombre": "Wall coat rack with hat shelf",
+			"descripcion": "A row of hooks with a shelf above, on the wall at head height. With coats on it bulges a good hand and a half and the cane does not find it.",
+			"etiquetas": ["wall coat rack", "coat hooks", "hat shelf"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Wall coat rack with hat shelf”: a rectangle, 1.00 by 0.30 metres, hanging 1.55 metres above the floor, marked with the letters “Pp”."
+		},
+		"paraguero_rejilla": {
+			"nombre": "Shop-entrance umbrella rack",
+			"descripcion": "Low metal box with a grid of holes for many umbrellas, by the door. The floor around it is usually wet.",
+			"etiquetas": ["umbrella rack", "umbrella stand"],
+			"imagen": "Footprint of “Shop-entrance umbrella rack”: a rectangle, 0.60 by 0.30 metres, marked with the letters “Pr”."
+		},
+		"mesa_banquete_redonda": {
+			"nombre": "Round banquet table",
+			"descripcion": "Large round table with a floor-length cloth: the cane meets soft fabric, not legs. The chairs crowd round it and it is hard to get between two tables.",
+			"etiquetas": ["banquet table", "round banquet table"],
+			"variantes": {
+				"seis": "For six",
+				"ocho": "For eight",
+				"diez": "For ten",
+				"doce": "For twelve"
+			},
+			"imagen": "Footprint of “Round banquet table”: a circle, 1.60 by 1.60 metres, marked with the letters “Mb”."
+		},
+		"mesa_restaurante_vestida": {
+			"nombre": "Restaurant table with cloth",
+			"descripcion": "Four-legged restaurant table with a cloth, glasses and cutlery on it: pull the cloth and everything falls. Set in rows with its chairs.",
+			"etiquetas": ["restaurant table", "dining table"],
+			"variantes": {
+				"de_dos": "For two",
+				"de_cuatro": "For four",
+				"de_seis": "For six"
+			},
+			"imagen": "Footprint of “Restaurant table with cloth”: a rectangle, 1.20 by 0.80 metres, marked with the letters “Mr”."
+		},
+		"mesa_corrida_restaurante": {
+			"nombre": "Long communal restaurant table",
+			"descripcion": "Long table for a group, made of several pushed together. Walk along its side with a hand on the chair backs until you find a gap.",
+			"etiquetas": ["long table", "communal table"],
+			"variantes": {
+				"ocho": "For eight",
+				"diez": "For ten",
+				"catorce": "For fourteen"
+			},
+			"imagen": "Footprint of “Long communal restaurant table”: a rectangle, 2.40 by 0.90 metres, marked with the letters “Mc”."
+		},
+		"silla_restaurante_tapizada": {
+			"nombre": "Upholstered restaurant chair",
+			"descripcion": "Heavy wooden chair with padded seat and back. It does not move aside when brushed; the tall back is good for counting chairs along the table.",
+			"etiquetas": ["restaurant chair", "dining chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Upholstered restaurant chair”: a rectangle, 0.48 by 0.55 metres, marked with the letters “Sr”."
+		},
+		"trona_restaurante": {
+			"nombre": "Restaurant high chair",
+			"descripcion": "Tall wooden baby chair with splayed legs: it takes up more room at the bottom than at the top, and it is easy to trip on a leg.",
+			"etiquetas": ["high chair", "baby chair"],
+			"imagen": "Footprint of “Restaurant high chair”: a trapezoid, narrower at the back, 0.55 by 0.55 metres, marked with the letters “Tr”."
+		},
+		"aparador_camareros": {
+			"nombre": "Waiters' station",
+			"descripcion": "Service unit on the restaurant floor, with cutlery drawers, linen and stacked plates on top. Waiters come and go to it: better not to stand in front.",
+			"etiquetas": ["waiters' station", "service station", "sideboard"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Waiters' station”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Ac”."
+		},
+		"mueble_cubiertos": {
+			"nombre": "Cutlery and napkin unit",
+			"descripcion": "Self-service unit with sloping bins for cutlery, napkins and bread, at waist height. Feel along it from left to right.",
+			"etiquetas": ["cutlery station", "cutlery dispenser"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Cutlery and napkin unit”: a rectangle, 0.70 by 0.45 metres, marked with the letters “Mc”."
+		},
+		"carro_servicio_sala": {
+			"nombre": "Waiter's service trolley",
+			"descripcion": "Three-shelf metal trolley on castors, loaded with plates. It rolls if pushed and the crockery rattles; it turns up in any aisle between tables.",
+			"etiquetas": ["service trolley", "clearing trolley"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Waiter's service trolley”: a rectangle, 0.50 by 0.85 metres, marked with the letters “Cs”."
+		},
+		"carro_postres": {
+			"nombre": "Dessert trolley",
+			"descripcion": "Wooden trolley on castors with a curved glass dome on top and cakes inside. The waiter wheels it from table to table.",
+			"etiquetas": ["dessert trolley", "sweet trolley"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Dessert trolley”: a rectangle with rounded corners, 0.50 by 0.90 metres, marked with the letters “Cp”."
+		},
+		"gueridon": {
+			"nombre": "Guéridon side table",
+			"descripcion": "Narrow wheeled side table the waiter brings up to your table for carving or flambéing. It may have a lit burner on top.",
+			"etiquetas": ["guéridon", "carving table", "side table"],
+			"imagen": "Footprint of “Guéridon side table”: a rectangle, 0.60 by 0.45 metres, marked with the letters “Gu”."
+		},
+		"atril_reservas": {
+			"nombre": "Maître d's reservation stand",
+			"descripcion": "Tall wooden stand by the entrance, with the reservations book and a small lamp. This is where you wait to be shown to your table.",
+			"etiquetas": ["host stand", "reservation desk", "maître d' stand"],
+			"imagen": "Footprint of “Maître d's reservation stand”: a trapezoid, narrower at the back, 0.55 by 0.45 metres, marked with the letters “Ar”."
+		},
+		"caja_restaurante": {
+			"nombre": "Restaurant cash desk",
+			"descripcion": "Short counter by the exit, at chest height, with the card reader and a bowl of sweets. You pay here when they do not take payment at the table.",
+			"etiquetas": ["cash desk", "pay point"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Restaurant cash desk”: a rectangle, 1.40 by 0.60 metres, marked with the letters “Cr”."
+		},
+		"bufe_caliente": {
+			"nombre": "Hot buffet with pans",
+			"descripcion": "Long steel unit with pans of food in hot water and a glass shelf above at face height. It burns: find the cold rail to slide your tray along.",
+			"etiquetas": ["hot buffet", "bain-marie", "steam table"],
+			"variantes": {
+				"tres_cubetas": "Three pans",
+				"cuatro_cubetas": "Four pans",
+				"seis_cubetas": "Six pans"
+			},
+			"acciones": {
+				"servirse_bufe": "Help yourself"
+			},
+			"imagen": "Footprint of “Hot buffet with pans”: a rectangle, 1.80 by 0.75 metres, marked with the letters “Bc”."
+		},
+		"bufe_frio_isla": {
+			"nombre": "Cold buffet island",
+			"descripcion": "Refrigerated island in the middle of the room, with salads in a cold well and a glass canopy above. You can walk all round it; it hums quietly.",
+			"etiquetas": ["cold buffet", "salad bar", "buffet island"],
+			"acciones": {
+				"servirse_bufe": "Help yourself"
+			},
+			"imagen": "Footprint of “Cold buffet island”: a rectangle with cut corners, 2.00 by 1.10 metres, marked with the letters “Bf”."
+		},
+		"mesa_bufe": {
+			"nombre": "Skirted buffet table",
+			"descripcion": "Long table covered with a cloth skirt down to the floor, with dishes, jugs and appliances on top. The cane feels only fabric; boxes are kept underneath.",
+			"etiquetas": ["buffet table", "skirted table", "catering table"],
+			"variantes": {
+				"de_120": "1.20 m",
+				"de_180": "1.80 m",
+				"de_240": "2.40 m"
+			},
+			"acciones": {
+				"servirse_bufe": "Help yourself"
+			},
+			"imagen": "Footprint of “Skirted buffet table”: a rectangle, 1.80 by 0.75 metres, marked with the letters “Mb”."
+		},
+		"separador_ambientes": {
+			"nombre": "Half-height room divider",
+			"descripcion": "Chest-high wooden partition separating two groups of tables, sometimes with plants on top. Follow it by hand to its end to get to the other side.",
+			"etiquetas": ["room divider", "partition", "half wall"],
+			"variantes": {
+				"de_120": "1.20 m",
+				"de_180": "1.80 m",
+				"de_240": "2.40 m"
+			},
+			"imagen": "Footprint of “Half-height room divider”: a rectangle, 1.20 by 0.35 metres, marked with the letters “Sa”."
+		},
+		"biombo_tres_hojas": {
+			"nombre": "Three-panel folding screen",
+			"descripcion": "Light zigzag screen, taller than a person, hiding a table or the service door. Lean on it and it folds up or falls over.",
+			"etiquetas": ["folding screen", "room screen"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Three-panel folding screen”: a zigzag of three panels, 1.40 by 0.40 metres, marked with the letters “Bt”."
+		},
+		"puerta_vaiven_cocina": {
+			"nombre": "Kitchen swing door",
+			"descripcion": "Handle-less swing door that opens when pushed either way and swings back by itself. Waiters burst out with trays: do not stand in front of it.",
+			"etiquetas": ["swing door", "kitchen door", "service door"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"aviso": "Kitchen door: waiters come out without warning.",
+			"imagen": "Footprint of “Kitchen swing door”: a rectangle, 0.90 by 0.06 metres, marked with the letters “Pv”."
+		},
+		"vivero_marisco": {
+			"nombre": "Live seafood tank",
+			"descripcion": "Large glass tank on a cabinet, with lobsters inside. Cold and damp to the touch; the constant bubbling gives it away from the entrance.",
+			"etiquetas": ["seafood tank", "lobster tank", "aquarium"],
+			"imagen": "Footprint of “Live seafood tank”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Vm”."
+		},
+		"bodega_climatizada": {
+			"nombre": "Wine cooler cabinet",
+			"descripcion": "Tall cabinet with a glass door and bottles lying inside, cool when opened. It hums like a fridge, only lower.",
+			"etiquetas": ["wine cooler", "wine cabinet", "wine fridge"],
+			"variantes": {
+				"una_puerta": "Single door",
+				"dos_puertas": "Two doors",
+				"tres_puertas": "Three doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Wine cooler cabinet”: a rectangle, 0.70 by 0.68 metres, marked with the letters “Bc”."
+		},
+		"botellero_vinos": {
+			"nombre": "Pigeonhole wine rack",
+			"descripcion": "Wooden unit against the wall made of diamond-shaped pigeonholes, with bottle ends poking out. By touch you feel the holes and the necks.",
+			"etiquetas": ["wine rack", "bottle rack"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Pigeonhole wine rack”: a rectangle, 1.00 by 0.33 metres, marked with the letters “Bv”."
+		},
+		"mesa_aluminio_terraza": {
+			"nombre": "Aluminium terrace table",
+			"descripcion": "Light aluminium table with a sheet-metal top and rounded corners. It sounds tinny when struck and wobbles on the pavement.",
+			"etiquetas": ["terrace table", "aluminium café table"],
+			"variantes": {
+				"de_60": "60 by 60 cm",
+				"de_70": "70 by 70 cm",
+				"de_80": "80 by 80 cm"
+			},
+			"imagen": "Footprint of “Aluminium terrace table”: a rectangle with rounded corners, 0.70 by 0.70 metres, marked with the letters “Ma”."
+		},
+		"silla_aluminio_terraza": {
+			"nombre": "Aluminium terrace armchair",
+			"descripcion": "Aluminium chair with arms and a strap seat. It weighs nothing: the wind or a nudge shifts it and it turns up in the middle of the way.",
+			"etiquetas": ["terrace chair", "aluminium chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Aluminium terrace armchair”: a rectangle, 0.56 by 0.58 metres, marked with the letters “Sa”."
+		},
+		"terraza_recogida": {
+			"nombre": "Terrace furniture stacked and chained",
+			"descripcion": "The terrace tables and chairs stacked against the façade and chained together when the bar is closed. An uneven bulk with legs sticking out.",
+			"etiquetas": ["stacked terrace furniture", "chained chairs"],
+			"imagen": "Footprint of “Terrace furniture stacked and chained”: a rectangle, 1.50 by 1.00 metres, marked with the letters “Tr”."
+		},
+		"sofa_pales_terraza": {
+			"nombre": "Pallet terrace sofa",
+			"descripcion": "Low seat made of wooden pallets and thick cushions. The pallet edges are at shin height and stick out beyond the cushion.",
+			"etiquetas": ["pallet sofa", "pallet bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Pallet terrace sofa”: a rectangle, 1.80 by 0.80 metres, marked with the letters “Sp”."
+		},
+		"barra_exterior_u": {
+			"nombre": "U-shaped outdoor bar",
+			"descripcion": "Terrace or beach bar closed on three sides, with the bartender inside. You can walk round the outside following the counter by hand.",
+			"etiquetas": ["outdoor bar", "beach bar", "terrace bar"],
+			"imagen": "Footprint of “U-shaped outdoor bar”: a U open at the back, where the bartender gets in, 2.50 by 2.00 metres, marked with the letters “Be”."
+		},
+		"sombrilla_brazo_lateral": {
+			"nombre": "Cantilever parasol",
+			"descripcion": "Large parasol whose mast stands to one side, on a cross-shaped base weighted with slabs. The base takes up a metre and its arms are easy to trip on.",
+			"etiquetas": ["cantilever parasol", "offset umbrella"],
+			"imagen": "Footprint of “Cantilever parasol”: a cross, 1.00 by 1.00 metres, marked with the letters “Sb”."
+		},
+		"base_sombrilla_suelta": {
+			"nombre": "Parasol base left without its parasol",
+			"descripcion": "Round concrete base with a short tube, left on the pavement when the parasols are put away. Low and solid: easy to trip over.",
+			"etiquetas": ["parasol base", "umbrella stand weight"],
+			"imagen": "Footprint of “Parasol base left without its parasol”: a circle, 0.50 by 0.50 metres, marked with the letters “Bs”."
+		},
+		"estufa_seta": {
+			"nombre": "Mushroom patio heater",
+			"descripcion": "Metal post with the gas bottle in its base and a wide hood on top. When lit it roars softly and you feel the heat on your face: the top burns.",
+			"etiquetas": ["patio heater", "mushroom heater"],
+			"variantes": {
+				"seta": "Mushroom",
+				"piramide": "Pyramid with flame tube"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Mushroom patio heater”: a circle, 0.50 by 0.50 metres, marked with the letters “Es”."
+		},
+		"calefactor_colgado": {
+			"nombre": "Hanging infrared heater",
+			"descripcion": "Heating bar hung from the awning or the wall, above head height. Silent; you feel the heat on the top of your head. A raised hand gets burnt.",
+			"etiquetas": ["infrared heater", "hanging heater"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Hanging infrared heater”: a rectangle, 0.80 by 0.15 metres, hanging 1.90 metres above the floor, marked with the letters “Cc”."
+		},
+		"nebulizadores_terraza": {
+			"nombre": "Misting line",
+			"descripcion": "Thin pipe with nozzles along the awning, spraying a fine mist in summer. It hisses and cools; the ground beneath stays damp.",
+			"etiquetas": ["misting system", "misters"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Misting line”: a rectangle, 4.00 by 0.05 metres, hanging 2.10 metres above the floor, marked with the letters “Nt”."
+		},
+		"mampara_cortavientos": {
+			"nombre": "Glass windbreak screen",
+			"descripcion": "Glass panel chest or head high, on two cross feet sticking out on either side. The cane hits the foot; the glass cannot be seen.",
+			"etiquetas": ["windbreak", "glass screen", "wind screen"],
+			"imagen": "Footprint of “Glass windbreak screen”: a thin panel with a foot across each end, 1.50 by 0.40 metres, marked with the letters “Mc”."
+		},
+		"valla_lona_terraza": {
+			"nombre": "Canvas café barrier",
+			"descripcion": "Low tubular frame with a stretched canvas, on cross feet. It marks the edge of the terrace; it gives a little when leaned on and sounds like taut cloth.",
+			"etiquetas": ["café barrier", "canvas banner barrier"],
+			"imagen": "Footprint of “Canvas café barrier”: a thin panel with a foot across each end, 1.50 by 0.40 metres, marked with the letters “Vl”."
+		},
+		"jardinera_celosia": {
+			"nombre": "Planter with trellis screen",
+			"descripcion": "Wooden box with plants and a tall trellis behind, closing off one side of the terrace. You brush the leaves before reaching the wood.",
+			"etiquetas": ["planter with trellis", "screen planter"],
+			"imagen": "Footprint of “Planter with trellis screen”: a rectangle, 1.00 by 0.40 metres, marked with the letters “Jc”."
+		},
+		"cortina_terraza_transparente": {
+			"nombre": "Clear terrace curtain",
+			"descripcion": "Clear plastic sheet hanging from the awning to the ground to close the terrace in winter. Soft and cold; it opens with a zip.",
+			"etiquetas": ["terrace curtain", "clear PVC blind"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Clear terrace curtain”: a rectangle, 2.50 by 0.05 metres, marked with the letters “Ct”."
+		},
+		"tarima_terraza": {
+			"nombre": "Terrace decking on the roadway",
+			"descripcion": "Wooden platform extending the pavement over the parking lane. Footsteps sound hollow; at the edges there is a step or a railing.",
+			"etiquetas": ["terrace decking", "parklet"],
+			"aviso": "Terrace decking: there is a step at the edge.",
+			"imagen": "Footprint of “Terrace decking on the roadway”: a rectangle, 5.00 by 2.00 metres, marked with the letters “Tt”."
+		},
+		"atril_menu_acera": {
+			"nombre": "Menu stand on the pavement",
+			"descripcion": "A post with a sloping box on top holding the menu, on a heavy square base. It stands in the middle of the pavement, in front of the door.",
+			"etiquetas": ["menu stand", "menu display"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Menu stand on the pavement”: a rectangle, 0.50 by 0.45 metres, marked with the letters “Am”."
+		},
+		"repisa_barra_ventana": {
+			"nombre": "Window ledge bar",
+			"descripcion": "Narrow board sticking out of the façade at chest height, under the bar window, to rest a glass on from the street. The cane passes underneath.",
+			"etiquetas": ["window ledge bar", "street-side shelf"],
+			"imagen": "Footprint of “Window ledge bar”: a rectangle, 1.80 by 0.30 metres, hanging 1.00 metres above the floor, marked with the letters “Rb”."
+		},
+		"cenicero_pared_exterior": {
+			"nombre": "Outdoor wall ashtray",
+			"descripcion": "Metal box screwed to the façade by the door, at chest height. It sticks out a hand's width and smells of cigarette ends.",
+			"etiquetas": ["wall ashtray", "cigarette bin"],
+			"imagen": "Footprint of “Outdoor wall ashtray”: a rectangle, 0.12 by 0.10 metres, hanging 1.00 metres above the floor, marked with the letters “Cp”."
+		},
+		"mostrador_recepcion_hotel": {
+			"nombre": "Hotel reception desk with low section",
+			"descripcion": "Long counter at chest height which, at its right-hand end, drops to table height and sticks out a little: the accessible section. A keyboard clicks behind it.",
+			"etiquetas": ["hotel reception", "front desk", "check-in desk"],
+			"variantes": {
+				"pequeno": "Guesthouse, 2 m",
+				"mediano": "3 m",
+				"grande": "4.50 m"
+			},
+			"acciones": {
+				"llamar": "Call",
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Hotel reception desk with low section”: a rectangle whose right-hand section, the low one, sticks out to the front, 3.00 by 0.80 metres, marked with the letters “Mr”."
+		},
+		"casillero_llaves": {
+			"nombre": "Key and mail pigeonholes",
+			"descripcion": "Unit of small pigeonholes hung on the wall behind reception, each holding a key with its heavy fob.",
+			"etiquetas": ["key rack", "key pigeonholes"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Key and mail pigeonholes”: a rectangle, 1.20 by 0.15 metres, hanging 1.10 metres above the floor, marked with the letters “Cl”."
+		},
+		"mostrador_conserje": {
+			"nombre": "Concierge desk",
+			"descripcion": "Small half-moon desk, separate from reception and near the door, where the concierge gives directions and keeps parcels.",
+			"etiquetas": ["concierge desk", "bell desk"],
+			"imagen": "Footprint of “Concierge desk”: a semicircle, straight at the back and round at the front, 1.20 by 0.60 metres, marked with the letters “Mc”."
+		},
+		"quiosco_registro_hotel": {
+			"nombre": "Hotel self check-in kiosk",
+			"descripcion": "Column with a sloping touch screen at chest height and a slot that issues the room card. It beeps when touched.",
+			"etiquetas": ["self check-in kiosk", "check-in terminal"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Hotel self check-in kiosk”: a rectangle, 0.55 by 0.50 metres, marked with the letters “Qr”."
+		},
+		"telefono_cortesia": {
+			"nombre": "House phone",
+			"descripcion": "Wall phone without a keypad, at chest height, that rings reception when lifted. It sticks out only a little, but the cane does not find it.",
+			"etiquetas": ["house phone", "courtesy phone"],
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “House phone”: a rectangle, 0.22 by 0.10 metres, hanging 1.20 metres above the floor, marked with the letters “Tc”."
+		},
+		"expositor_folletos": {
+			"nombre": "Tourist leaflet rack",
+			"descripcion": "Narrow wire unit with stepped pockets full of leaflets and maps. Light: it wobbles, and the leaflets stick out at the front.",
+			"etiquetas": ["leaflet rack", "brochure stand"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Tourist leaflet rack”: a rectangle, 0.50 by 0.35 metres, marked with the letters “Ef”."
+		},
+		"sofa_chester_vestibulo": {
+			"nombre": "Chesterfield lobby sofa",
+			"descripcion": "Low, firm leather sofa with sunk buttons and arms as high as the back. The leather creaks when you sit down.",
+			"etiquetas": ["lobby sofa", "chesterfield", "leather settee"],
+			"variantes": {
+				"dos_plazas": "Two-seater",
+				"tres_plazas": "Three-seater"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Chesterfield lobby sofa”: a rectangle, 2.00 by 0.90 metres, marked with the letters “Sc”."
+		},
+		"butaca_cubo_vestibulo": {
+			"nombre": "Lobby tub chair",
+			"descripcion": "Low chair whose round back wraps behind and to the sides, level with the arms. You can only get in from the front.",
+			"etiquetas": ["tub chair", "lobby armchair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Lobby tub chair”: a round back and a straight front, 0.75 by 0.75 metres, marked with the letters “Bc”."
+		},
+		"mesa_centro_vestibulo": {
+			"nombre": "Glass lobby coffee table",
+			"descripcion": "Low round glass table among the sofas, at knee height. Cold, with a thin edge: the cane finds it, and so does your shin.",
+			"etiquetas": ["lobby coffee table", "glass coffee table"],
+			"imagen": "Footprint of “Glass lobby coffee table”: a circle, 0.90 by 0.90 metres, marked with the letters “Mc”."
+		},
+		"borne_vestibulo": {
+			"nombre": "Circular lobby ottoman",
+			"descripcion": "Round padded seat in the middle of the lobby, with an upholstered column in the centre as a backrest. Walk all round it and sit on any side.",
+			"etiquetas": ["borne settee", "circular ottoman", "round banquette"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Circular lobby ottoman”: a circle, 1.60 by 1.60 metres, marked with the letters “Bv”."
+		},
+		"mesa_floral_vestibulo": {
+			"nombre": "Round table with flower arrangement",
+			"descripcion": "Round pedestal table standing in the middle of the lobby, with a large vase of flowers on top. It smells of flowers; the vase tips over if you knock the table.",
+			"etiquetas": ["flower table", "lobby centre table"],
+			"imagen": "Footprint of “Round table with flower arrangement”: a circle, 1.20 by 1.20 metres, marked with the letters “Mf”."
+		},
+		"carro_portamaletas_botones": {
+			"nombre": "Bellhop luggage cart",
+			"descripcion": "Brass cart with a carpeted platform, four tubes arching up above head height and a rail for hanging suits. It rolls with a low rumble.",
+			"etiquetas": ["bellhop cart", "luggage cart", "hotel trolley"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Bellhop luggage cart”: a rectangle with rounded corners, 0.65 by 1.10 metres, marked with the letters “Cp”."
+		},
+		"banco_equipajes": {
+			"nombre": "Luggage bench",
+			"descripcion": "Low, wide slatted bench with metal guards, near reception, for putting suitcases on. Not for sitting: it is usually loaded.",
+			"etiquetas": ["luggage bench", "luggage rack"],
+			"imagen": "Footprint of “Luggage bench”: a rectangle, 1.50 by 0.50 metres, marked with the letters “Be”."
+		},
+		"maletas_grupo": {
+			"nombre": "A group's suitcases in the lobby",
+			"descripcion": "A heap of suitcases and bags belonging to a group waiting for the coach, in the middle of the lobby. Bundles of several heights, handles and wheels sticking out.",
+			"etiquetas": ["suitcases", "group luggage", "pile of bags"],
+			"imagen": "Footprint of “A group's suitcases in the lobby”: an irregular heap, 2.00 by 1.20 metres, marked with the letters “Mg”."
+		},
+		"cama_hotel_cabecero_corrido": {
+			"nombre": "Hotel bed with full-width headboard",
+			"descripcion": "High hotel bed whose headboard runs the whole wall and carries a shelf on each side as a bedside table, with switches and sockets. Walk round the foot.",
+			"etiquetas": ["hotel bed", "king bed", "full-width headboard"],
+			"variantes": {
+				"individual": "Single",
+				"doble": "Double",
+				"grande": "King size"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Hotel bed with full-width headboard”: a T shape: the full-width headboard with its bedside shelves at the back and the bed coming out of the middle, 2.60 by 2.05 metres, marked with the letters “Ch”."
+		},
+		"camas_gemelas_hotel": {
+			"nombre": "Twin hotel beds with shared headboard",
+			"descripcion": "Two parallel single beds joined by one headboard, with a narrow gap between them just wide enough for one person.",
+			"etiquetas": ["twin beds", "twin room"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Twin hotel beds with shared headboard”: two parallel beds joined by the headboard, with a narrow gap between them, 2.40 by 2.05 metres, marked with the letters “Cg”."
+		},
+		"cama_supletoria": {
+			"nombre": "Folding extra bed",
+			"descripcion": "Narrow bed on a metal frame with castors, brought in when needed and left wherever it fits. Lower than the room's bed and easy to move.",
+			"etiquetas": ["extra bed", "rollaway bed", "folding bed"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Folding extra bed”: a rectangle, 0.90 by 1.95 metres, marked with the letters “Cs”."
+		},
+		"cuna_viaje_hotel": {
+			"nombre": "Hotel travel cot",
+			"descripcion": "Folding cot of fabric and mesh on a light frame, set up by the hotel next to the bed. Soft to the touch; a push shifts it.",
+			"etiquetas": ["travel cot", "portable crib"],
+			"imagen": "Footprint of “Hotel travel cot”: a rectangle, 0.70 by 1.25 metres, marked with the letters “Cv”."
+		},
+		"portamaletas_plegable": {
+			"nombre": "Folding luggage rack",
+			"descripcion": "Low scissor stand with straps, where the suitcase is opened. Light and knee high: the first thing you trip over when you walk in.",
+			"etiquetas": ["luggage rack", "suitcase stand"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Folding luggage rack”: a rectangle, 0.60 by 0.45 metres, marked with the letters “Pp”."
+		},
+		"escritorio_tocador_hotel": {
+			"nombre": "Hotel desk and dressing table",
+			"descripcion": "Long, narrow top against the wall serving as desk and dressing table, with a mirror on the wall above and a chair tucked under it.",
+			"etiquetas": ["hotel desk", "dressing table", "vanity desk"],
+			"variantes": {
+				"corto": "1 m",
+				"normal": "1.40 m",
+				"corrido": "Full length, 2.20 m"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Hotel desk and dressing table”: a rectangle, 1.40 by 0.50 metres, marked with the letters “Et”."
+		},
+		"armario_abierto_hotel": {
+			"nombre": "Open hotel wardrobe with hangers",
+			"descripcion": "Doorless wardrobe recess near the entrance: two sides, a rail of captive hangers and a top shelf holding the safe.",
+			"etiquetas": ["open wardrobe", "hotel closet"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Open hotel wardrobe with hangers”: a U open at the front, 0.90 by 0.58 metres, marked with the letters “Aa”."
+		},
+		"galan_noche": {
+			"nombre": "Valet stand",
+			"descripcion": "Low standing hanger, shoulder-shaped at the top, with a trouser bar and a small tray. It is light and tips over with a jacket on it.",
+			"etiquetas": ["valet stand", "clothes valet"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Valet stand”: a rectangle, 0.45 by 0.35 metres, marked with the letters “Gn”."
+		},
+		"butaca_lectura_reposapies": {
+			"nombre": "Reading chair with footstool",
+			"descripcion": "Upholstered chair by the window with a loose footstool in front. The footstool is low and soft: the cane touches it late and you trip on it.",
+			"etiquetas": ["reading chair", "armchair with footstool"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Reading chair with footstool”: the armchair at the back and the slightly narrower footstool in front, 0.75 by 1.35 metres, marked with the letters “Bl”."
+		},
+		"minibar": {
+			"nombre": "Minibar",
+			"descripcion": "Small fridge at knee height, built into a unit under the desk. It hums very quietly: at night you hear it and it helps you place the desk.",
+			"etiquetas": ["minibar", "mini fridge"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Minibar”: a rectangle, 0.45 by 0.45 metres, marked with the letters “Mi”."
+		},
+		"caja_fuerte_armario": {
+			"nombre": "Hotel wardrobe safe",
+			"descripcion": "Small steel box bolted to a wardrobe shelf at chest height, with a rubber keypad. It beeps as you key in the code.",
+			"etiquetas": ["room safe", "hotel safe"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Hotel wardrobe safe”: a rectangle, 0.40 by 0.35 metres, hanging 1.10 metres above the floor, marked with the letters “Cf”."
+		},
+		"tv_pared_habitacion": {
+			"nombre": "Wall-mounted room television",
+			"descripcion": "Flat screen fixed to the wall facing the bed, above the desk, at chest height. It sticks out only a little; you hear it when it is on.",
+			"etiquetas": ["room tv", "wall television"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Wall-mounted room television”: a rectangle, 0.95 by 0.08 metres, hanging 1.10 metres above the floor, marked with the letters “Tp”."
+		},
+		"bandeja_hervidor": {
+			"nombre": "Courtesy tray with kettle",
+			"descripcion": "Tray on the desk with a kettle, cups and sachets. The kettle is hot just after use; feel for it carefully from the handle.",
+			"etiquetas": ["kettle tray", "hospitality tray", "tea and coffee tray"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Courtesy tray with kettle”: a rectangle, 0.40 by 0.30 metres, hanging 0.75 metres above the floor, marked with the letters “Bh”."
+		},
+		"prensa_pantalones": {
+			"nombre": "Wall trouser press",
+			"descripcion": "Upright double board fixed to the wall, from knee to chest, that presses trousers between its two leaves. Warm when switched on.",
+			"etiquetas": ["trouser press", "pants press"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Wall trouser press”: a rectangle, 0.45 by 0.12 metres, hanging 0.10 metres above the floor, marked with the letters “Pp”."
+		},
+		"secador_pared_hotel": {
+			"nombre": "Wall hairdryer",
+			"descripcion": "Hairdryer fixed to the bathroom wall at face height, with a flexible hose or a hanging handle. When switched on it roars and blows hot air.",
+			"etiquetas": ["wall hairdryer", "hotel hairdryer"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Wall hairdryer”: a rectangle, 0.20 by 0.12 metres, hanging 1.30 metres above the floor, marked with the letters “Sp”."
+		},
+		"carro_camarera_pisos": {
+			"nombre": "Housekeeping trolley",
+			"descripcion": "Long trolley with shelves of towels and sheets and a cloth bag hanging at each end. In the morning it stands outside some door, taking up half the corridor.",
+			"etiquetas": ["housekeeping trolley", "maid's cart"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Housekeeping trolley”: a long body with a bulging bag at each end, 0.55 by 1.50 metres, marked with the letters “Cc”."
+		},
+		"carro_lenceria_hotel": {
+			"nombre": "Hotel linen cage",
+			"descripcion": "Tall cage of metal rods on castors, full of used bed linen. It rattles when moved and usually waits by the service lift.",
+			"etiquetas": ["linen cage", "laundry cage", "linen trolley"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Hotel linen cage”: a rectangle, 0.70 by 0.90 metres, marked with the letters “Cl”."
+		},
+		"carro_servicio_habitaciones": {
+			"nombre": "Room service trolley",
+			"descripcion": "Wheeled table with a cloth, plates covered by metal domes, left in the corridor beside a door after dinner.",
+			"etiquetas": ["room service trolley", "room service table"],
+			"imagen": "Footprint of “Room service trolley”: a rectangle with rounded corners, 1.00 by 0.60 metres, marked with the letters “Cs”."
+		},
+		"bandeja_pasillo": {
+			"nombre": "Tray left on the corridor floor",
+			"descripcion": "Tray of used plates and glasses a guest has left on the floor by their door. Very low: your foot finds it before the cane does, and the crockery clatters.",
+			"etiquetas": ["tray on the floor", "room service tray"],
+			"imagen": "Footprint of “Tray left on the corridor floor”: a rectangle, 0.50 by 0.35 metres, marked with the letters “Bp”."
+		},
+		"puerta_habitacion_tarjeta": {
+			"nombre": "Room door with card lock",
+			"descripcion": "Heavy room door with a handle and a reader above it. Hold the card to it and it beeps and unlocks; it closes by itself with a thud.",
+			"etiquetas": ["room door", "key card door"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Room door with card lock”: a rectangle, 0.90 by 0.06 metres, marked with the letters “Ph”."
+		},
+		"aplique_pasillo": {
+			"nombre": "Corridor wall light",
+			"descripcion": "Wall lamp between doors, at head height. It sticks out a hand's width and is warm; anyone walking close to the wall meets it with a shoulder or temple.",
+			"etiquetas": ["wall light", "sconce"],
+			"imagen": "Footprint of “Corridor wall light”: a rectangle, 0.20 by 0.15 metres, hanging 1.60 metres above the floor, marked with the letters “Ap”."
+		},
+		"maquina_hielo": {
+			"nombre": "Corridor ice machine",
+			"descripcion": "Tall steel machine in a corridor recess, with a bin of ice cubes at the bottom. It hums loudly and every so often ice crashes down: you can locate it from far off.",
+			"etiquetas": ["ice machine", "ice dispenser"],
+			"acciones": {
+				"coger_hielo": "Take some ice"
+			},
+			"imagen": "Footprint of “Corridor ice machine”: a rectangle, 0.60 by 0.70 metres, marked with the letters “Mh”."
+		},
+		"limpiazapatos": {
+			"nombre": "Shoe-shine machine",
+			"descripcion": "Low metal unit with two round brushes at the bottom and a grab bar on top. Bring your foot close and the brushes spin with a whirr.",
+			"etiquetas": ["shoe-shine machine", "shoe polisher"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Shoe-shine machine”: a rectangle, 0.45 by 0.35 metres, marked with the letters “Li”."
+		},
+		"tostadora_cinta": {
+			"nombre": "Conveyor toaster",
+			"descripcion": "Metal box on the buffet table: bread goes in at the top on a belt and drops out toasted at the bottom. Hot all over and it whirrs non-stop.",
+			"etiquetas": ["conveyor toaster", "buffet toaster"],
+			"imagen": "Footprint of “Conveyor toaster”: a rectangle, 0.45 by 0.50 metres, hanging 0.75 metres above the floor, marked with the letters “Tc”."
+		},
+		"dispensador_zumos": {
+			"nombre": "Juice dispenser",
+			"descripcion": "Machine with two or three cold plastic tanks and a lever under each: push it with your glass and the juice pours.",
+			"etiquetas": ["juice dispenser", "juice machine"],
+			"variantes": {
+				"dos_depositos": "Two tanks",
+				"tres_depositos": "Three tanks"
+			},
+			"acciones": {
+				"servirse_bufe": "Help yourself"
+			},
+			"imagen": "Footprint of “Juice dispenser”: a rectangle, 0.50 by 0.42 metres, hanging 0.75 metres above the floor, marked with the letters “Dz”."
+		},
+		"dispensador_cereales": {
+			"nombre": "Cereal dispenser",
+			"descripcion": "Upright plastic tubes full of cereal on a stand, each with a wheel at the bottom that drops a portion into your bowl when turned.",
+			"etiquetas": ["cereal dispenser"],
+			"variantes": {
+				"un_tubo": "Single tube",
+				"dos_tubos": "Two tubes",
+				"tres_tubos": "Three tubes"
+			},
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Cereal dispenser”: a rectangle, 0.45 by 0.25 metres, hanging 0.75 metres above the floor, marked with the letters “Dc”."
+		},
+		"calientaplatos": {
+			"nombre": "Heated plate dispenser",
+			"descripcion": "Waist-high steel cylinder on castors; a stack of hot plates shows through the hole in the top and rises by itself when you take one.",
+			"etiquetas": ["plate warmer", "plate dispenser"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Heated plate dispenser”: a circle, 0.45 by 0.45 metres, marked with the letters “Ca”."
+		},
+		"tabique_movil_salon": {
+			"nombre": "Sliding partition wall",
+			"descripcion": "Padded floor-to-ceiling panel running on a track to split the function room in two. Closed, it is a wall; open, it is stacked to one side and you walk through.",
+			"etiquetas": ["sliding partition", "movable wall", "folding partition"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Sliding partition wall”: a rectangle, 1.20 by 0.10 metres, marked with the letters “Tm”."
+		},
+		"photocall_eventos": {
+			"nombre": "Photocall backdrop",
+			"descripcion": "Large canvas stretched on a tubular frame, taller than a person, on feet sticking out front and back. Light: it shifts if you lean on it.",
+			"etiquetas": ["photocall", "backdrop", "step and repeat banner"],
+			"imagen": "Footprint of “Photocall backdrop”: a thin panel with a foot across each end, 2.50 by 0.60 metres, marked with the letters “Pe”."
+		},
+		"carro_mesas_plegadas": {
+			"nombre": "Trolley of folded banquet tables",
+			"descripcion": "Trolley holding several round table tops on edge, taller than a person, waiting at the side of the room. The edges of the tops stick out beyond the trolley.",
+			"etiquetas": ["table trolley", "folded tables"],
+			"imagen": "Footprint of “Trolley of folded banquet tables”: a rectangle, 0.90 by 1.90 metres, marked with the letters “Cm”."
+		},
+		"mesa_presidencial": {
+			"nombre": "Top table",
+			"descripcion": "Very long table with a cloth skirt down to the floor at the front, chairs only behind it, facing the room. At the front the cane feels only fabric.",
+			"etiquetas": ["top table", "head table", "speakers' table"],
+			"variantes": {
+				"cuatro": "For four",
+				"seis": "For six",
+				"ocho": "For eight"
+			},
+			"imagen": "Footprint of “Top table”: a rectangle, 3.60 by 0.80 metres, marked with the letters “Mp”."
+		},
+		"mesa_coctel_funda": {
+			"nombre": "Cocktail table with stretch cover",
+			"descripcion": "Tall round table dressed in a stretch cover that hugs it down to the floor. You stand at it with a drink; light, it shifts if you lean on it.",
+			"etiquetas": ["cocktail table", "poseur table with cover"],
+			"imagen": "Footprint of “Cocktail table with stretch cover”: a circle, 0.80 by 0.80 metres, marked with the letters “Mc”."
+		},
+		"sillas_banquete_enlazadas": {
+			"nombre": "Row of linked banquet chairs",
+			"descripcion": "Padded chairs hooked to each other in a straight row for a talk or a ceremony. Count the backs to find a seat.",
+			"etiquetas": ["linked chairs", "row of banquet chairs"],
+			"variantes": {
+				"tres": "Three chairs",
+				"cinco": "Five chairs",
+				"ocho": "Eight chairs",
+				"diez": "Ten chairs"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Row of linked banquet chairs”: a rectangle, 2.50 by 0.55 metres, marked with the letters “Sb”."
+		},
+		"barra_movil_eventos": {
+			"nombre": "Portable event bar",
+			"descripcion": "Folding plastic bar set up in a corner of the function room, wider at the front than at the back. Hollow: it sounds plastic and shifts if pushed.",
+			"etiquetas": ["portable bar", "mobile bar"],
+			"imagen": "Footprint of “Portable event bar”: a trapezoid, narrower at the back, 1.50 by 0.60 metres, marked with the letters “Bm”."
+		},
+		"guardarropa_mostrador": {
+			"nombre": "Cloakroom counter",
+			"descripcion": "Counter set in a doorway at waist height, with rails full of coats behind it. You hand over your coat and get a token.",
+			"etiquetas": ["cloakroom", "coat check"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Cloakroom counter”: a rectangle, 2.00 by 0.50 metres, marked with the letters “Gm”."
+		}
+	}
+}

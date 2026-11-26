@@ -1,0 +1,1260 @@
+{
+	"nombre": "Home",
+	"descripcion": "Furniture and objects of a home: living room, kitchen, bedroom, bathroom, hallway and the clutter usually left in the way.",
+	"categorias": {
+		"salon": "Living room",
+		"cocina": "Kitchen",
+		"dormitorio": "Bedroom",
+		"bano": "Bathroom",
+		"entrada": "Hallway",
+		"trastos": "Household clutter",
+		"lavadero": "Utility room, ironing and sewing",
+		"terraza": "Terrace, balcony and garden",
+		"infantil": "Children's room"
+	},
+	"subcategorias": {
+		"asientos_salon": "Sofas and armchairs",
+		"mesas_salon": "Living and dining tables",
+		"almacenaje_salon": "Storage furniture",
+		"luz_clima_salon": "Light, heating and air",
+		"decoracion_salon": "Rugs, plants, clocks and pets",
+		"musica_salon": "Pianos",
+		"muebles_cocina": "Kitchen units",
+		"electro_cocina": "Kitchen appliances",
+		"fregadero_basura": "Sink and bin",
+		"mesas_asientos_cocina": "Kitchen table and seats",
+		"camas": "Beds and cots",
+		"armarios_dormitorio": "Wardrobes, chests and bedside tables",
+		"estudio": "Study corner",
+		"sanitarios_bano": "Toilet, bath and shower",
+		"muebles_bano": "Bathroom furniture and accessories",
+		"colada": "Washing, drying and ironing",
+		"muebles_entrada": "Hall furniture",
+		"pared_entrada": "On the wall",
+		"suelo_escaleras": "Floor and stairs",
+		"sueltos": "Things left in the way",
+		"puertas": "Doors and doorway curtains",
+		"almacen_lavadero": "Cupboards and freezer",
+		"instalaciones": "Boiler and hot water",
+		"costura": "Sewing",
+		"descanso_terraza": "Hammocks and hanging chairs",
+		"barbacoa_lena": "Barbecue and firewood",
+		"jardin_terraza": "Garden, paddling pool and outdoor storage",
+		"camas_infantiles": "Children's beds and cots",
+		"cuidado_bebe": "Baby bathing and play"
+	},
+	"estados": {
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"apagado": "Off",
+		"encendido": "On",
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"funcionando": "Running",
+		"desplegado": "Unfolded",
+		"plegado": "Folded"
+	},
+	"objetos": {
+		"sofa": {
+			"nombre": "Sofa",
+			"descripcion": "Fabric sofa, soft and low. It gives when touched; walk around its sides.",
+			"etiquetas": ["sofa", "couch", "settee"],
+			"variantes": {
+				"dos_plazas": "Two-seater",
+				"tres_plazas": "Three-seater",
+				"cuatro_plazas": "Four-seater"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Sofa”: a rectangle, 2.00 by 0.90 metres, marked with the letters “So”."
+		},
+		"sofa_ele": {
+			"nombre": "Corner sofa",
+			"descripcion": "Sofa with a long arm sticking out to the front on one side, like an L. It fills the corner and leaves a gap in front.",
+			"etiquetas": ["corner sofa", "sectional", "chaise longue", "L-shaped sofa"],
+			"variantes": {
+				"chaise_longue": "With chaise longue",
+				"rinconera": "Large corner sofa"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Corner sofa”: an L shape, 2.60 by 1.70 metres, marked with the letters “Se”."
+		},
+		"sillon": {
+			"nombre": "Armchair",
+			"descripcion": "Single armchair with arms, soft.",
+			"etiquetas": ["armchair", "easy chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Armchair”: a rectangle, 0.85 by 0.85 metres, marked with the letters “Si”."
+		},
+		"mesa_centro": {
+			"nombre": "Coffee table",
+			"descripcion": "Low table in front of the sofa, at knee height: the cane finds it, the hand does not.",
+			"etiquetas": ["coffee table", "low table"],
+			"variantes": {
+				"pequena": "Small",
+				"cuadrada": "Square",
+				"rectangular": "Rectangular"
+			},
+			"imagen": "Footprint of “Coffee table”: a rectangle, 1.10 by 0.60 metres, marked with the letters “Mc”."
+		},
+		"mesa_redonda": {
+			"nombre": "Round table",
+			"descripcion": "Round dining table on a single central leg. No corners to walk around.",
+			"etiquetas": ["round table"],
+			"variantes": {
+				"dos_plazas": "For two",
+				"cuatro_plazas": "For four",
+				"seis_plazas": "For six"
+			},
+			"imagen": "Footprint of “Round table”: a circle, 1.10 by 1.10 metres, marked with the letters “Mr”."
+		},
+		"mesa_comedor": {
+			"nombre": "Dining table",
+			"descripcion": "Large, tall dining table with chairs around it.",
+			"etiquetas": ["dining table"],
+			"variantes": {
+				"cuatro_plazas": "For four",
+				"seis_plazas": "For six",
+				"ocho_plazas": "For eight"
+			},
+			"imagen": "Footprint of “Dining table”: a rectangle, 1.60 by 0.90 metres, marked with the letters “Mc”."
+		},
+		"mueble_tv": {
+			"nombre": "TV unit with television",
+			"descripcion": "Long, low unit with the television on top. When on, you hear voices and music: a good landmark.",
+			"etiquetas": ["television", "tv", "telly", "tv stand"],
+			"variantes": {
+				"pequeno": "Small",
+				"mediano": "Medium",
+				"grande": "Large"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “TV unit with television”: a rectangle, 1.60 by 0.42 metres, marked with the letters “Mt”."
+		},
+		"estanteria": {
+			"nombre": "Bookcase",
+			"descripcion": "Tall, shallow bookcase against the wall, full of books.",
+			"etiquetas": ["bookcase", "bookshelf", "shelves"],
+			"variantes": {
+				"estrecha": "Narrow",
+				"normal": "Standard",
+				"ancha": "Wide"
+			},
+			"imagen": "Footprint of “Bookcase”: a rectangle, 0.80 by 0.30 metres, marked with the letters “Es”."
+		},
+		"lampara_pie": {
+			"nombre": "Floor lamp",
+			"descripcion": "Floor lamp: a heavy round base with a thin pole. It wobbles if you push it.",
+			"etiquetas": ["floor lamp", "standing lamp", "light"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Floor lamp”: a circle, 0.35 by 0.35 metres, marked with the letters “Lp”."
+		},
+		"alfombra": {
+			"nombre": "Rug",
+			"descripcion": "Rug: it does not block your way, but your steps sound muffled on it. A landmark under your feet.",
+			"etiquetas": ["rug", "carpet", "mat"],
+			"variantes": {
+				"pasillo": "Runner",
+				"mediana": "Medium",
+				"grande": "Large"
+			},
+			"imagen": "Footprint of “Rug”: a rectangle, 2.00 by 1.40 metres, marked with the letters “Al”."
+		},
+		"piano": {
+			"nombre": "Upright piano",
+			"descripcion": "Upright piano: a tall wooden case with the keyboard at the front. Touch it and three notes sound.",
+			"etiquetas": ["piano", "upright piano"],
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Upright piano”: a rectangle, 1.50 by 0.60 metres, marked with the letters “Pi”."
+		},
+		"piano_cola": {
+			"nombre": "Grand piano",
+			"descripcion": "Grand piano: straight keyboard at the front and a long curved case behind. It takes up a lot of room.",
+			"etiquetas": ["grand piano", "baby grand"],
+			"variantes": {
+				"colin": "Baby grand",
+				"media_cola": "Parlour grand",
+				"gran_cola": "Concert grand"
+			},
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Grand piano”: the outline of a grand piano, keyboard at the front, 1.50 by 1.80 metres, marked with the letters “Pc”."
+		},
+		"planta_grande": {
+			"nombre": "Large plant",
+			"descripcion": "Large pot on the floor with a tall plant. You brush the leaves before reaching the pot.",
+			"etiquetas": ["plant", "pot plant", "houseplant"],
+			"imagen": "Footprint of “Large plant”: a circle, 0.50 by 0.50 metres, marked with the letters “Pg”."
+		},
+		"encimera": {
+			"nombre": "Worktop",
+			"descripcion": "Straight run of kitchen base units with a worktop, at hip height.",
+			"etiquetas": ["worktop", "counter", "countertop"],
+			"variantes": {
+				"un_modulo": "60 cm",
+				"dos_modulos": "1.20 m",
+				"tres_modulos": "1.80 m",
+				"cuatro_modulos": "2.40 m"
+			},
+			"imagen": "Footprint of “Worktop”: a rectangle, 1.80 by 0.62 metres, marked with the letters “En”."
+		},
+		"encimera_ele": {
+			"nombre": "L-shaped worktop",
+			"descripcion": "Kitchen base units turning the corner in an L.",
+			"etiquetas": ["L-shaped worktop", "corner counter"],
+			"imagen": "Footprint of “L-shaped worktop”: an L shape, 2.40 by 2.00 metres, marked with the letters “Ee”."
+		},
+		"isla": {
+			"nombre": "Kitchen island",
+			"descripcion": "Free-standing block of worktop in the middle of the kitchen: you can walk all the way round it.",
+			"etiquetas": ["kitchen island", "island unit"],
+			"imagen": "Footprint of “Kitchen island”: a rectangle with cut corners, 1.80 by 0.90 metres, marked with the letters “Is”."
+		},
+		"frigorifico": {
+			"nombre": "Fridge",
+			"descripcion": "Tall metal fridge. It hums quietly all the time: a good landmark in the kitchen.",
+			"etiquetas": ["fridge", "refrigerator", "freezer"],
+			"variantes": {
+				"pequeno": "Small",
+				"combi": "Fridge-freezer",
+				"americano": "American style, two doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Fridge”: a rectangle, 0.60 by 0.66 metres, marked with the letters “Fr”."
+		},
+		"cocina": {
+			"nombre": "Cooker",
+			"descripcion": "Cooker with a hob on top and an oven below. Hot when on: do not rest your hand on it.",
+			"etiquetas": ["cooker", "stove", "hob", "range"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Cooker”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Co”."
+		},
+		"horno": {
+			"nombre": "Oven tower",
+			"descripcion": "Tall unit with the oven at mid height. The door drops down and takes up room in front.",
+			"etiquetas": ["oven", "oven tower", "built-in oven"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Oven tower”: a rectangle, 0.60 by 0.58 metres, marked with the letters “Ho”."
+		},
+		"lavavajillas": {
+			"nombre": "Dishwasher",
+			"descripcion": "Dishwasher under the worktop. When running you hear water sweeping inside.",
+			"etiquetas": ["dishwasher"],
+			"variantes": {
+				"estrecho": "45 cm",
+				"normal": "60 cm"
+			},
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Dishwasher”: a rectangle, 0.60 by 0.60 metres, marked with the letters “La”."
+		},
+		"fregadero": {
+			"nombre": "Sink with tap",
+			"descripcion": "Steel sink with its tap. With the tap on you hear running water.",
+			"etiquetas": ["sink", "tap", "faucet"],
+			"variantes": {
+				"un_seno": "Single bowl",
+				"dos_senos": "Double bowl",
+				"con_escurridor": "With drainer"
+			},
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Sink with tap”: a rectangle, 0.80 by 0.60 metres, marked with the letters “Fr”."
+		},
+		"mesa_cocina": {
+			"nombre": "Kitchen table",
+			"descripcion": "Kitchen table with the chairs tucked under it.",
+			"etiquetas": ["kitchen table", "table"],
+			"variantes": {
+				"dos_plazas": "For two",
+				"cuatro_plazas": "For four",
+				"seis_plazas": "For six"
+			},
+			"imagen": "Footprint of “Kitchen table”: a rectangle, 1.10 by 0.70 metres, marked with the letters “Mc”."
+		},
+		"silla": {
+			"nombre": "Chair",
+			"descripcion": "Chair with a backrest. It is light: push it and it scrapes along.",
+			"etiquetas": ["chair", "dining chair", "seat"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Chair”: a rectangle, 0.45 by 0.48 metres, marked with the letters “Si”."
+		},
+		"taburete": {
+			"nombre": "Stool",
+			"descripcion": "Round stool without a back. Low and easy to knock over.",
+			"etiquetas": ["stool", "bar stool"],
+			"variantes": {
+				"bajo": "Low",
+				"de_barra": "Bar stool"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Stool”: a circle, 0.35 by 0.35 metres, marked with the letters “Ta”."
+		},
+		"cubo_basura": {
+			"nombre": "Kitchen bin",
+			"descripcion": "Rubbish bin with a lid, hollow plastic.",
+			"etiquetas": ["bin", "rubbish bin", "trash can"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Kitchen bin”: a circle, 0.30 by 0.30 metres, marked with the letters “Cb”."
+		},
+		"microondas": {
+			"nombre": "Microwave",
+			"descripcion": "Microwave standing on the worktop, at chest height. The cane misses it: your hand finds it.",
+			"etiquetas": ["microwave", "microwave oven"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Microwave”: a rectangle, 0.48 by 0.38 metres, hanging 0.90 metres above the floor, marked with the letters “Mi”."
+		},
+		"armarios_altos": {
+			"nombre": "Kitchen wall cupboards",
+			"descripcion": "Cupboards hung above the worktop, at head height. The cane passes underneath: mind your head when leaning in.",
+			"etiquetas": ["wall cupboards", "wall units", "cabinets"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Kitchen wall cupboards”: a rectangle, 1.20 by 0.35 metres, hanging 1.45 metres above the floor, marked with the letters “Aa”."
+		},
+		"cama": {
+			"nombre": "Bed",
+			"descripcion": "Bed with a mattress: low, soft and long. Headboard against the wall; walk round the foot.",
+			"etiquetas": ["bed", "mattress"],
+			"variantes": {
+				"ancho_80": "Small single (80 cm)",
+				"ancho_90": "Single (90 cm)",
+				"ancho_105": "Large single (105 cm)",
+				"ancho_135": "Double (135 cm)",
+				"ancho_150": "King (150 cm)",
+				"ancho_180": "Super king (180 cm)"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Bed”: a rectangle, 1.35 by 1.90 metres, marked with the letters “Ca”."
+		},
+		"cama_cabecero": {
+			"nombre": "Bed with headboard",
+			"descripcion": "Bed with a wooden headboard wider than the mattress: it sticks out a hand's width on each side.",
+			"etiquetas": ["bed with headboard", "double bed"],
+			"variantes": {
+				"ancho_90": "Single (90 cm)",
+				"ancho_135": "Double (135 cm)",
+				"ancho_150": "King (150 cm)"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Bed with headboard”: a rectangle with a wider headboard at the back, 1.60 by 2.00 metres, marked with the letters “Cc”."
+		},
+		"litera": {
+			"nombre": "Bunk bed",
+			"descripcion": "Bunk bed, one bed above the other, with a ladder. The top bunk is at head height.",
+			"etiquetas": ["bunk bed", "bunks"],
+			"imagen": "Footprint of “Bunk bed”: a rectangle, 1.00 by 2.00 metres, marked with the letters “Li”."
+		},
+		"cuna": {
+			"nombre": "Cot",
+			"descripcion": "Cot with wooden bars, waist high.",
+			"etiquetas": ["cot", "crib"],
+			"variantes": {
+				"de_60": "60 by 120 cm",
+				"de_70": "70 by 140 cm"
+			},
+			"imagen": "Footprint of “Cot”: a rectangle, 0.66 by 1.26 metres, marked with the letters “Cu”."
+		},
+		"mesilla": {
+			"nombre": "Bedside table",
+			"descripcion": "Low table with a drawer, beside the head of the bed.",
+			"etiquetas": ["bedside table", "nightstand"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Bedside table”: a rectangle, 0.45 by 0.40 metres, marked with the letters “Me”."
+		},
+		"armario": {
+			"nombre": "Wardrobe",
+			"descripcion": "Tall wardrobe, almost up to the ceiling. The doors open outwards and take up room in front.",
+			"etiquetas": ["wardrobe", "closet"],
+			"variantes": {
+				"dos_puertas": "Two doors",
+				"tres_puertas": "Three doors",
+				"cuatro_puertas": "Four doors",
+				"empotrado": "Fitted, wall to wall"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Wardrobe”: a rectangle, 1.50 by 0.60 metres, marked with the letters “Ar”."
+		},
+		"comoda": {
+			"nombre": "Chest of drawers",
+			"descripcion": "Chest of drawers at waist height.",
+			"etiquetas": ["chest of drawers", "dresser"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Chest of drawers”: a rectangle, 1.00 by 0.45 metres, marked with the letters “Co”."
+		},
+		"escritorio": {
+			"nombre": "Desk",
+			"descripcion": "Study desk with drawers, against the wall.",
+			"etiquetas": ["desk", "study desk"],
+			"variantes": {
+				"pequeno": "Small",
+				"normal": "Standard",
+				"grande": "Large"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Desk”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Es”."
+		},
+		"silla_escritorio": {
+			"nombre": "Wheeled desk chair",
+			"descripcion": "Swivel chair on five castors. Bump into it and it rolls away.",
+			"etiquetas": ["desk chair", "swivel chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Wheeled desk chair”: a circle, 0.60 by 0.60 metres, marked with the letters “Se”."
+		},
+		"perchero": {
+			"nombre": "Coat stand",
+			"descripcion": "Wooden pole with arms at the top for hanging clothes. Thin at the bottom; bulky at the top with coats on.",
+			"etiquetas": ["coat stand", "hat stand", "coat rack"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Coat stand”: a circle, 0.45 by 0.45 metres, marked with the letters “Pe”."
+		},
+		"baul": {
+			"nombre": "Trunk",
+			"descripcion": "Wooden trunk at the foot of the bed, with a lifting lid. Something may be kept inside.",
+			"etiquetas": ["trunk", "chest", "blanket box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Trunk”: a rectangle, 1.00 by 0.45 metres, marked with the letters “Ba”."
+		},
+		"inodoro": {
+			"nombre": "Toilet",
+			"descripcion": "Ceramic toilet with the cistern behind it, against the wall. Hard and cold to the touch.",
+			"etiquetas": ["toilet", "wc", "loo", "lavatory"],
+			"acciones": {
+				"tirar_cadena": "Flush",
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Toilet”: a rectangle at the back (the cistern) and a rounded bowl at the front, 0.38 by 0.68 metres, marked with the letters “In”."
+		},
+		"lavabo": {
+			"nombre": "Washbasin",
+			"descripcion": "Washbasin with its tap, at waist height. With the tap on you hear the water.",
+			"etiquetas": ["washbasin", "basin", "bathroom sink"],
+			"variantes": {
+				"pequeno": "Small",
+				"normal": "Standard",
+				"con_mueble": "With vanity unit",
+				"doble": "Double"
+			},
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Washbasin”: a rectangle, 0.60 by 0.46 metres, marked with the letters “La”."
+		},
+		"bide": {
+			"nombre": "Bidet",
+			"descripcion": "Low ceramic bidet next to the toilet.",
+			"etiquetas": ["bidet"],
+			"imagen": "Footprint of “Bidet”: a rectangle with rounded corners, 0.37 by 0.56 metres, marked with the letters “Bi”."
+		},
+		"banera": {
+			"nombre": "Bathtub",
+			"descripcion": "Long bathtub with its rim at knee height: you have to lift your leg to get in.",
+			"etiquetas": ["bath", "bathtub", "tub"],
+			"variantes": {
+				"de_140": "1.40 m",
+				"de_150": "1.50 m",
+				"de_160": "1.60 m",
+				"de_170": "1.70 m"
+			},
+			"imagen": "Footprint of “Bathtub”: a rectangle with rounded corners, 1.70 by 0.70 metres, marked with the letters “Ba”."
+		},
+		"ducha": {
+			"nombre": "Shower enclosure",
+			"descripcion": "Shower closed in by a glass screen. Open the screen to get in; closed, it blocks the way.",
+			"etiquetas": ["shower", "shower cubicle", "shower screen"],
+			"variantes": {
+				"de_70": "70 by 70 cm",
+				"de_80": "80 by 80 cm",
+				"de_120": "120 by 80 cm"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Shower enclosure”: a rectangle, 0.80 by 0.80 metres, marked with the letters “Du”."
+		},
+		"plato_ducha": {
+			"nombre": "Corner shower tray",
+			"descripcion": "Walk-in shower tray in the corner, no screen. You step on it: the floor changes and may be slippery.",
+			"etiquetas": ["shower tray", "walk-in shower"],
+			"aviso": "Shower tray: the floor is wet.",
+			"imagen": "Footprint of “Corner shower tray”: a quarter circle with its corner at the back left, 0.80 by 0.80 metres, marked with the letters “Pd”."
+		},
+		"lavadora": {
+			"nombre": "Washing machine",
+			"descripcion": "Front-loading washing machine. When running it hums and spins: you can hear it from the hallway.",
+			"etiquetas": ["washing machine", "washer"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Washing machine”: a rectangle, 0.60 by 0.58 metres, marked with the letters “La”."
+		},
+		"toallero": {
+			"nombre": "Wall towel rail",
+			"descripcion": "Towel rail fixed to the wall at waist height. The cane, sweeping the floor, misses it.",
+			"etiquetas": ["towel rail", "towel radiator"],
+			"imagen": "Footprint of “Wall towel rail”: a rectangle, 0.50 by 0.10 metres, hanging 0.60 metres above the floor, marked with the letters “To”."
+		},
+		"zapatero": {
+			"nombre": "Shoe cabinet",
+			"descripcion": "Tall, shallow shoe cabinet against the wall.",
+			"etiquetas": ["shoe cabinet", "shoe rack"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Shoe cabinet”: a rectangle, 0.70 by 0.25 metres, marked with the letters “Za”."
+		},
+		"paraguero": {
+			"nombre": "Umbrella stand",
+			"descripcion": "Narrow metal tub by the door with umbrellas in it.",
+			"etiquetas": ["umbrella stand"],
+			"imagen": "Footprint of “Umbrella stand”: a circle, 0.25 by 0.25 metres, marked with the letters “Pa”."
+		},
+		"consola": {
+			"nombre": "Half-moon console table",
+			"descripcion": "Narrow hall table, straight against the wall and round at the front: no corners.",
+			"etiquetas": ["console table", "hall table"],
+			"imagen": "Footprint of “Half-moon console table”: a semicircle, straight at the back and round at the front, 1.00 by 0.35 metres, marked with the letters “Co”."
+		},
+		"banco": {
+			"nombre": "Hall bench",
+			"descripcion": "Low bench to sit on while putting shoes on; the seat lifts and things are kept inside.",
+			"etiquetas": ["bench", "hall bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Hall bench”: a rectangle, 1.00 by 0.38 metres, marked with the letters “Ba”."
+		},
+		"espejo": {
+			"nombre": "Wall mirror",
+			"descripcion": "Framed mirror hung on the wall, from waist to head. It sticks out only a little, but the cane gives no warning.",
+			"etiquetas": ["mirror", "wall mirror", "picture"],
+			"imagen": "Footprint of “Wall mirror”: a rectangle, 0.60 by 0.05 metres, hanging 0.90 metres above the floor, marked with the letters “Es”."
+		},
+		"radiador": {
+			"nombre": "Radiator",
+			"descripcion": "Low metal radiator against the wall. Warm in winter.",
+			"etiquetas": ["radiator", "heater"],
+			"imagen": "Footprint of “Radiator”: a rectangle, 0.80 by 0.10 metres, hanging 0.12 metres above the floor, marked with the letters “Ra”."
+		},
+		"extintor": {
+			"nombre": "Wall fire extinguisher",
+			"descripcion": "Metal fire extinguisher hung on the wall one metre up. It sticks out and the cane passes under it.",
+			"etiquetas": ["fire extinguisher"],
+			"imagen": "Footprint of “Wall fire extinguisher”: a circle, 0.15 by 0.15 metres, hanging 1.00 metres above the floor, marked with the letters “Ex”."
+		},
+		"felpudo": {
+			"nombre": "Doormat",
+			"descripcion": "Rough mat in front of the door. You feel it underfoot: you are at the entrance.",
+			"etiquetas": ["doormat", "mat"],
+			"imagen": "Footprint of “Doormat”: a rectangle, 0.60 by 0.40 metres, marked with the letters “Fe”."
+		},
+		"tendedero": {
+			"nombre": "Clothes airer",
+			"descripcion": "Open metal clothes airer with washing on it. Light, with its wings at hip height.",
+			"etiquetas": ["clothes airer", "drying rack", "clothes horse"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Clothes airer”: a rectangle, 1.80 by 0.55 metres, marked with the letters “Te”."
+		},
+		"tabla_planchar": {
+			"nombre": "Ironing board",
+			"descripcion": "Open ironing board: narrow, waist high, ending in a point. The legs cross underneath.",
+			"etiquetas": ["ironing board"],
+			"imagen": "Footprint of “Ironing board”: a rectangle ending in a point on the right, 1.20 by 0.38 metres, marked with the letters “Tp”."
+		},
+		"aspiradora": {
+			"nombre": "Vacuum cleaner on the floor",
+			"descripcion": "Vacuum cleaner someone left in the way, hose trailing. Low: easy to trip over.",
+			"etiquetas": ["vacuum cleaner", "hoover"],
+			"imagen": "Footprint of “Vacuum cleaner on the floor”: a rectangle with rounded corners, 0.30 by 0.40 metres, marked with the letters “As”."
+		},
+		"juguetes": {
+			"nombre": "Toys on the floor",
+			"descripcion": "Toys scattered on the floor: bricks, a car, a ball. A low, uneven obstacle; they rattle when stepped on.",
+			"etiquetas": ["toys", "building bricks", "clutter"],
+			"imagen": "Footprint of “Toys on the floor”: an irregular patch, 0.80 by 0.60 metres, marked with the letters “Ju”."
+		},
+		"mesa_plegable": {
+			"nombre": "Folding table",
+			"descripcion": "Light folding table. Open here today; it may be gone another day.",
+			"etiquetas": ["folding table", "camping table"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Folding table”: a rectangle, 0.80 by 0.60 metres, marked with the letters “Mp”."
+		},
+		"escalera_mano": {
+			"nombre": "Open stepladder",
+			"descripcion": "Stepladder open in the way. The legs spread at the bottom: wider on the floor than at the top.",
+			"etiquetas": ["stepladder", "ladder"],
+			"imagen": "Footprint of “Open stepladder”: a trapezoid, narrower at the back, 0.50 by 1.00 metres, marked with the letters “Em”."
+		},
+		"puerta_terraza": {
+			"nombre": "Patio door",
+			"descripcion": "Sliding glass patio door. Closed, it is a full pane of glass blocking the way; open, you walk through.",
+			"etiquetas": ["patio door", "sliding door", "french window"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Patio door”: a rectangle, 0.80 by 0.08 metres, marked with the letters “Pt”."
+		},
+		"aparador": {
+			"nombre": "Sideboard",
+			"descripcion": "Long, low cabinet at hip height against the dining room wall: doors below, drawers above and the crockery inside. There is usually a fruit bowl or photos on top that fall over if you lean on it.",
+			"etiquetas": ["sideboard", "buffet", "dining room cabinet"],
+			"variantes": {
+				"pequeno": "1.20 m",
+				"normal": "1.60 m",
+				"grande": "2 m"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Sideboard”: a rectangle, 1.60 by 0.45 metres, marked with the letters “Ap”."
+		},
+		"chimenea": {
+			"nombre": "Wood-burning fireplace",
+			"descripcion": "Masonry or cast-iron fireplace against the wall, with a stone hearth sticking out in front at ankle height: you trip on it before you feel the heat. When lit it crackles and burns; the glass front, if it has one, is scorching.",
+			"etiquetas": ["fireplace", "hearth", "wood burner", "inset stove"],
+			"variantes": {
+				"insertable": "With glass door",
+				"abierta": "Open, masonry",
+				"rincon": "Corner"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"hog_echar_lena": "Put a log on"
+			},
+			"imagen": "Footprint of “Wood-burning fireplace”: a wide body against the wall and a hearth slab sticking out at the front, 1.20 by 0.90 metres, marked with the letters “Ch”."
+		},
+		"mesa_camilla_brasero": {
+			"nombre": "Skirted table with heater",
+			"descripcion": "Round table dressed in thick fabric skirts reaching the floor; underneath, an electric heater warms your legs. The cane meets soft cloth, not legs, and warmth comes out from below.",
+			"etiquetas": ["skirted table", "table with heater", "brasero table"],
+			"variantes": {
+				"de_80": "80 cm",
+				"de_90": "90 cm",
+				"de_100": "1 m"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Skirted table with heater”: a circle, 0.90 by 0.90 metres, marked with the letters “Mc”."
+		},
+		"puf_reposapies": {
+			"nombre": "Footstool pouffe",
+			"descripcion": "Upholstered stool with no visible legs, firm, at shin height. It stays wherever it was left and is easy to trip over; some open up to store blankets.",
+			"etiquetas": ["pouffe", "footstool", "ottoman"],
+			"variantes": {
+				"redondo": "Round",
+				"cuadrado": "Square",
+				"arcon": "Long, with storage"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Footstool pouffe”: a rectangle with rounded corners, 0.50 by 0.50 metres, marked with the letters “Pr”."
+		},
+		"mecedora": {
+			"nombre": "Rocking chair",
+			"descripcion": "Armchair on two curved rockers sticking out at the front and back. Touch it and it rocks and creaks; the back rocker catches the feet of anyone walking behind.",
+			"etiquetas": ["rocking chair", "rocker", "nursing chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"hog_mecerse": "Rock"
+			},
+			"imagen": "Footprint of “Rocking chair”: a seat between two curved rockers sticking out at the front and back, 0.60 by 0.95 metres, marked with the letters “Me”."
+		},
+		"sofa_cama": {
+			"nombre": "Sofa bed",
+			"descripcion": "Sofa that unfolds into a bed: closed it takes the room of a sofa; open, the mattress comes out almost two metres forward on metal legs and blocks the way. Its size changes from day to day.",
+			"etiquetas": ["sofa bed", "pull-out sofa", "futon sofa"],
+			"variantes": {
+				"cerrado": "Closed",
+				"abierto": "Opened as a bed"
+			},
+			"acciones": {
+				"desplegar": "Unfold",
+				"plegar": "Fold",
+				"sentarse": "Sit down"
+			},
+			"imagen": "Footprint of “Sofa bed”: a rectangle, 1.90 by 0.95 metres, marked with the letters “Sc”."
+		},
+		"mesas_nido": {
+			"nombre": "Nest of tables",
+			"descripcion": "Two or three small tables tucked inside each other, beside the sofa. Stacked they are one low table; when there are guests they turn up loose around the living room.",
+			"etiquetas": ["nest of tables", "nesting tables", "side tables"],
+			"imagen": "Footprint of “Nest of tables”: a rectangle, 0.50 by 0.40 metres, marked with the letters “Mn”."
+		},
+		"lampara_colgante": {
+			"nombre": "Low pendant lamp",
+			"descripcion": "Lamp hanging from the ceiling on a cord down to just over a metre and a half, over the dining table. With the table below it is harmless; if the table is moved, the shade is at face height and the cane misses it.",
+			"etiquetas": ["pendant lamp", "ceiling lamp", "hanging light"],
+			"variantes": {
+				"pantalla": "Single shade",
+				"barra": "Bar with several lights"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Low pendant lamp”: a circle, 0.45 by 0.45 metres, hanging 1.50 metres above the floor, marked with the letters “Lc”."
+		},
+		"reloj_pie": {
+			"nombre": "Grandfather clock",
+			"descripcion": "Tall, narrow wooden case, taller than a person, with a pendulum behind glass. Its tick-tock can be heard from the door and it strikes the hours: a good landmark.",
+			"etiquetas": ["grandfather clock", "longcase clock", "pendulum clock"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Grandfather clock”: a rectangle, 0.50 by 0.30 metres, marked with the letters “Rp”."
+		},
+		"rascador_gato": {
+			"nombre": "Cat tree",
+			"descripcion": "Tower of posts wrapped in rough rope with carpeted platforms at different heights sticking out to the sides. It sways if you lean on it and sometimes there is a cat on top.",
+			"etiquetas": ["cat tree", "scratching post", "cat tower"],
+			"variantes": {
+				"bajo": "Low",
+				"torre": "Tower",
+				"hasta_techo": "Tall"
+			},
+			"imagen": "Footprint of “Cat tree”: a base with platforms sticking out in several directions, 0.60 by 0.50 metres, marked with the letters “Rg”."
+		},
+		"ventilador_pie": {
+			"nombre": "Pedestal fan",
+			"descripcion": "Heavy round base, a thin pole and at the top the guard with the blades, at chest height. When on it blows and hums and turns its head from side to side; the cane only finds the base.",
+			"etiquetas": ["fan", "pedestal fan", "standing fan"],
+			"variantes": {
+				"pie": "Pedestal, with blades",
+				"torre": "Tower, bladeless"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Pedestal fan”: a circle, 0.45 by 0.45 metres, marked with the letters “Vp”."
+		},
+		"estufa_portatil": {
+			"nombre": "Portable heater",
+			"descripcion": "Heater carried from room to room: the butane one, a cabinet on wheels with the gas bottle inside, or the oil-filled radiator, a row of metal fins. When on you feel the heat from a distance; the front and the top burn.",
+			"etiquetas": ["heater", "gas heater", "butane heater", "oil-filled radiator"],
+			"variantes": {
+				"butano": "Butane",
+				"aceite": "Oil-filled radiator",
+				"calefactor": "Fan heater"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Portable heater”: a rectangle with rounded corners, 0.45 by 0.35 metres, marked with the letters “Ep”."
+		},
+		"aire_portatil": {
+			"nombre": "Portable air conditioner",
+			"descripcion": "Plastic box on wheels at waist height, with a fat corrugated hose running to the window across the floor. When on it roars and blows cold air from the top.",
+			"etiquetas": ["portable air conditioner", "portable AC", "mobile air conditioner"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Portable air conditioner”: a rectangle with rounded corners, 0.45 by 0.40 metres, marked with the letters “Ap”."
+		},
+		"columna_despensa": {
+			"nombre": "Larder unit",
+			"descripcion": "Tall kitchen unit, from the floor almost to the ceiling, with shelves or pull-out baskets for food. The door is tall and opens into the walkway; inside it smells of bread and spices.",
+			"etiquetas": ["larder unit", "pantry cupboard", "tall kitchen cupboard"],
+			"variantes": {
+				"estrecha": "Narrow, pull-out",
+				"normal": "60 cm",
+				"doble": "Two doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Larder unit”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Cd”."
+		},
+		"campana_extractora": {
+			"nombre": "Cooker hood",
+			"descripcion": "Metal hood hung above the hob, with its lower edge at forehead height. The cane gives no warning and leaning over the cooker you bump into it; when on it hums and sucks air upwards.",
+			"etiquetas": ["cooker hood", "extractor hood", "range hood"],
+			"variantes": {
+				"plana": "Flat, under the cupboard",
+				"decorativa": "Chimney hood",
+				"isla": "Island hood, hung from the ceiling"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Cooker hood”: a narrow flue at the back and the wide hood at the front, 0.90 by 0.50 metres, hanging 1.50 metres above the floor, marked with the letters “Ce”."
+		},
+		"mesa_abatible_pared": {
+			"nombre": "Fold-down wall table",
+			"descripcion": "Board fixed to the wall on hinges with a bracket that holds it up. Down, it is a flat panel against the wall; up, it sticks out at waist height and the cane passes underneath without touching legs.",
+			"etiquetas": ["drop-leaf wall table", "fold-down table", "wall-mounted table"],
+			"variantes": {
+				"plegada": "Folded against the wall",
+				"abierta": "Open"
+			},
+			"acciones": {
+				"desplegar": "Unfold",
+				"plegar": "Fold"
+			},
+			"imagen": "Footprint of “Fold-down wall table”: a rectangle, 0.80 by 0.50 metres, marked with the letters “Ma”."
+		},
+		"banco_rinconera": {
+			"nombre": "Kitchen corner bench",
+			"descripcion": "L-shaped wooden bench filling the corner, with a backrest against both walls and a seat that lifts to store things. The table usually stands in front.",
+			"etiquetas": ["corner bench", "kitchen nook bench", "banquette"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Kitchen corner bench”: an L shape, 1.60 by 1.20 metres, marked with the letters “Br”."
+		},
+		"cama_abatible": {
+			"nombre": "Fold-down wall bed",
+			"descripcion": "A cupboard that is really a bed: by day it is a flat front against the wall; at night the bed swings down and takes up two metres of floor. Whatever is in front by day gets in the way at night.",
+			"etiquetas": ["wall bed", "Murphy bed", "fold-down bed"],
+			"variantes": {
+				"plegada": "Folded into its cabinet",
+				"abierta": "Folded down",
+				"individual": "Single, folded down"
+			},
+			"acciones": {
+				"desplegar": "Unfold",
+				"plegar": "Fold",
+				"tumbarse": "Lie down"
+			},
+			"imagen": "Footprint of “Fold-down wall bed”: a rectangle, 1.45 by 0.45 metres, marked with the letters “Ca”."
+		},
+		"colchon_hinchable": {
+			"nombre": "Inflatable mattress",
+			"descripcion": "Thick plastic mattress blown up on the floor for a guest. Soft and slippery, it sinks when you step on it and squeaks like plastic when brushed. Here today; tomorrow, deflated in a cupboard.",
+			"etiquetas": ["air mattress", "inflatable mattress", "air bed"],
+			"variantes": {
+				"individual": "Single",
+				"doble": "Double",
+				"alto": "Raised double"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Inflatable mattress”: a rectangle with rounded corners, 1.40 by 1.95 metres, marked with the letters “Ch”."
+		},
+		"columna_bano": {
+			"nombre": "Bathroom tall cabinet",
+			"descripcion": "Tall, narrow cabinet beside the washbasin, with doors and shelves for towels and toiletries. It is deeper than the wall beside it and its corner juts into the way.",
+			"etiquetas": ["bathroom tall cabinet", "tallboy", "bathroom tower"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Bathroom tall cabinet”: a rectangle, 0.35 by 0.30 metres, marked with the letters “Cb”."
+		},
+		"armario_espejo_bano": {
+			"nombre": "Mirrored bathroom cabinet",
+			"descripcion": "Small cabinet hung above the washbasin with a mirrored door, at face height. It sticks out a hand's width and, when the door is open, the glass leaf ends up right in front of your head.",
+			"etiquetas": ["mirrored cabinet", "medicine cabinet", "bathroom mirror cabinet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Mirrored bathroom cabinet”: a rectangle, 0.60 by 0.15 metres, hanging 1.20 metres above the floor, marked with the letters “Ae”."
+		},
+		"alfombrilla_bano": {
+			"nombre": "Bath mat",
+			"descripcion": "Terry mat in front of the bath or shower. Soft and damp underfoot; without a rubber backing it slides on the tiles.",
+			"etiquetas": ["bath mat", "shower mat"],
+			"imagen": "Footprint of “Bath mat”: a rectangle with rounded corners, 0.50 by 0.60 metres, marked with the letters “Ab”."
+		},
+		"bascula_bano": {
+			"nombre": "Bathroom scales",
+			"descripcion": "Flat glass or plastic platform on the floor, a hand's width high. You stub your toe on it; when you step on it, it beeps and announces or shows your weight.",
+			"etiquetas": ["bathroom scales", "scales", "talking scales"],
+			"acciones": {
+				"hog_pesarse": "Weigh yourself"
+			},
+			"imagen": "Footprint of “Bathroom scales”: a rectangle with rounded corners, 0.32 by 0.32 metres, marked with the letters “Bb”."
+		},
+		"cesto_ropa": {
+			"nombre": "Laundry basket",
+			"descripcion": "Tall wicker or plastic basket with a lid, in a corner. Light: it tips over if you knock it and sounds hollow.",
+			"etiquetas": ["laundry basket", "laundry hamper", "linen basket"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Laundry basket”: an oval, 0.40 by 0.35 metres, marked with the letters “Cr”."
+		},
+		"portarrollos_pie": {
+			"nombre": "Toilet roll stand with brush",
+			"descripcion": "Metal rod on a heavy base next to the toilet, with paper rolls threaded on and the brush in its holder. Thin and easy to knock over with your foot.",
+			"etiquetas": ["toilet roll holder", "toilet brush", "toilet roll stand"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Toilet roll stand with brush”: a circle, 0.22 by 0.22 metres, marked with the letters “Pp”."
+		},
+		"escalera_caracol": {
+			"nombre": "Spiral staircase",
+			"descripcion": "Staircase climbing in turns around a central pole, inside a circle of just over a metre and a half. The steps are triangles: wide at the outside, almost nothing by the pole. Climb on the outside holding the handrail.",
+			"etiquetas": ["spiral staircase", "spiral stairs", "helical staircase"],
+			"variantes": {
+				"estrecha": "Narrow, 1.20 m",
+				"normal": "1.60 m",
+				"amplia": "Wide, 2 m"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Spiral staircase”: a circle, 1.60 by 1.60 metres, marked with the letters “Ec”."
+		},
+		"escalera_buhardilla": {
+			"nombre": "Loft ladder",
+			"descripcion": "Hatch in the hallway ceiling from which a very steep folding ladder comes down. Folded away you do not notice it; down, it fills the hallway from side to side and the open hole is above.",
+			"etiquetas": ["loft ladder", "attic ladder", "folding attic stairs"],
+			"acciones": {
+				"desplegar": "Unfold",
+				"plegar": "Fold",
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Loft ladder”: a rectangle, 0.65 by 1.50 metres, marked with the letters “Eb”."
+		},
+		"tendedero_techo": {
+			"nombre": "Ceiling clothes airer",
+			"descripcion": "Rails hung from the ceiling on ropes and pulleys: lowered to hang the washing and raised to dry it. When lowered, the wet clothes are at face height; the cane does not find it.",
+			"etiquetas": ["ceiling airer", "pulley clothes airer", "ceiling drying rack"],
+			"variantes": {
+				"subido": "Raised",
+				"bajado": "Lowered, with washing"
+			},
+			"acciones": {
+				"hog_tender": "Raise or lower the airer"
+			},
+			"imagen": "Footprint of “Ceiling clothes airer”: a rectangle, 1.20 by 0.50 metres, hanging 1.50 metres above the floor, marked with the letters “Tt”."
+		},
+		"congelador_arcon": {
+			"nombre": "Chest freezer",
+			"descripcion": "White metal box at hip height, with a full-width lid that lifts upwards. It hums constantly and, when opened, breathes out cold air.",
+			"etiquetas": ["chest freezer", "deep freezer", "box freezer"],
+			"variantes": {
+				"pequeno": "Small, 100 litres",
+				"mediano": "Medium, 200 litres",
+				"grande": "Large, 400 litres"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Chest freezer”: a rectangle, 1.00 by 0.65 metres, marked with the letters “Ca”."
+		},
+		"armario_escobero": {
+			"nombre": "Broom cupboard",
+			"descripcion": "Tall, narrow single-door cupboard holding the broom, the mop, the bucket and the ironing board. When you open it something may fall out towards you.",
+			"etiquetas": ["broom cupboard", "cleaning cupboard", "utility cupboard"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Broom cupboard”: a rectangle, 0.50 by 0.40 metres, marked with the letters “Ae”."
+		},
+		"caldera_mural": {
+			"nombre": "Wall-hung boiler or water heater",
+			"descripcion": "Appliance hung on the wall at head height, with pipes running down to the floor. When a hot tap is turned on it lights with a whoosh and roars quietly; the cane only finds the pipes.",
+			"etiquetas": ["boiler", "combi boiler", "water heater", "immersion heater"],
+			"variantes": {
+				"caldera": "Gas boiler",
+				"calentador": "Gas water heater",
+				"termo": "Electric water heater"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Wall-hung boiler or water heater”: a rectangle, 0.45 by 0.35 metres, hanging 1.40 metres above the floor, marked with the letters “Cm”."
+		},
+		"maquina_coser": {
+			"nombre": "Sewing machine cabinet",
+			"descripcion": "Wooden cabinet at table height with the machine on top or hidden under a lid, and a pedal on the floor. Sewing, it clatters fast; there are usually pins and scraps around it.",
+			"etiquetas": ["sewing machine", "sewing table", "sewing cabinet"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop",
+				"hog_coser": "Sew"
+			},
+			"imagen": "Footprint of “Sewing machine cabinet”: a rectangle, 0.90 by 0.45 metres, marked with the letters “Mc”."
+		},
+		"sillon_colgante": {
+			"nombre": "Hanging egg chair",
+			"descripcion": "Round wicker or rope basket with cushions, hung from a metal arch on a heavy foot. It sways and turns when touched; the arch passes above your head.",
+			"etiquetas": ["hanging chair", "egg chair", "swing chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"hog_balancearse": "Swing"
+			},
+			"imagen": "Footprint of “Hanging egg chair”: the stand's foot at the back and the round basket hanging in front, 1.05 by 1.10 metres, marked with the letters “Sc”."
+		},
+		"hamaca_soporte": {
+			"nombre": "Hammock on a stand",
+			"descripcion": "Fabric hammock hung between the two ends of a long wooden or metal stand. The stand's feet at either end trip you up; the fabric in the middle gives and sways.",
+			"etiquetas": ["hammock", "hammock stand", "garden hammock"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"hog_balancearse": "Swing"
+			},
+			"imagen": "Footprint of “Hammock on a stand”: two wide feet at the ends joined by a narrow strip of fabric, 3.00 by 1.10 metres, marked with the letters “Hs”."
+		},
+		"barbacoa_portatil": {
+			"nombre": "Kettle barbecue",
+			"descripcion": "Round metal bowl on three legs at waist height, with a domed lid. When lit, the coals crackle, it smells of smoke and it burns on every side.",
+			"etiquetas": ["barbecue", "kettle grill", "bbq", "grill"],
+			"variantes": {
+				"redonda": "Round charcoal",
+				"gas": "Gas, with side shelves"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Kettle barbecue”: a circle, 0.60 by 0.60 metres, marked with the letters “Bp”."
+		},
+		"lena_apilada": {
+			"nombre": "Stacked firewood",
+			"descripcion": "Pile of cut logs against a wall, sometimes inside an iron log store. Rough and splintery; the top logs roll off if you touch them.",
+			"etiquetas": ["firewood", "log pile", "log store", "logs"],
+			"variantes": {
+				"cesto": "In a basket by the fire",
+				"lenero": "In a log store",
+				"pila": "Pile against the wall"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Stacked firewood”: a rectangle, 1.20 by 0.40 metres, marked with the letters “La”."
+		},
+		"cortacesped": {
+			"nombre": "Lawn mower",
+			"descripcion": "Low wheeled deck with a long handle rising to waist height. Stopped on the lawn it is a low obstacle; running it roars and throws grass out, and you must keep your feet clear.",
+			"etiquetas": ["lawn mower", "lawnmower", "mower"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Lawn mower”: the handle at the back and the wide deck at the front, 0.50 by 1.50 metres, marked with the letters “Co”."
+		},
+		"armario_resina_terraza": {
+			"nombre": "Plastic outdoor storage cabinet",
+			"descripcion": "Hard plastic cabinet with grilled doors, against the terrace wall, storing tools, cushions and gas bottles. It sounds hollow when knocked.",
+			"etiquetas": ["outdoor storage cabinet", "garden cabinet", "plastic shed"],
+			"variantes": {
+				"bajo": "Low, chest type",
+				"alto": "Tall, two doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Plastic outdoor storage cabinet”: a rectangle, 0.70 by 0.45 metres, marked with the letters “Ar”."
+		},
+		"piscina_hinchable": {
+			"nombre": "Paddling pool",
+			"descripcion": "Plastic pool with an inflated rim at knee height, full of water. Around it the floor is wet and slippery; the rim gives if you lean on it.",
+			"etiquetas": ["paddling pool", "inflatable pool", "kiddie pool"],
+			"variantes": {
+				"infantil": "Children's, round",
+				"familiar": "Family, rectangular",
+				"desmontable": "Frame pool"
+			},
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Paddling pool”: a rectangle with rounded corners, 2.00 by 1.50 metres, marked with the letters “Ph”."
+		},
+		"cortina_tiras": {
+			"nombre": "Strip door curtain",
+			"descripcion": "Curtain of plastic strips or beads hung in the frame of the terrace or kitchen door, to keep flies out. It does not block the way: you walk through and the strips rattle over your shoulders.",
+			"etiquetas": ["strip curtain", "fly screen", "bead curtain"],
+			"acciones": {
+				"pasar": "Go through"
+			},
+			"aviso": "Strip curtain: you walk through it.",
+			"imagen": "Footprint of “Strip door curtain”: a rectangle, 0.85 by 0.03 metres, marked with the letters “Ct”."
+		},
+		"cama_nido": {
+			"nombre": "Trundle bed",
+			"descripcion": "Single bed, long side against the wall, with another bed hidden underneath that pulls out like a big drawer. Pulled out, the lower bed is at ankle height and fills the whole walkway beside the bed.",
+			"etiquetas": ["trundle bed", "pull-out bed", "guest bed"],
+			"variantes": {
+				"cerrada": "Lower bed stowed",
+				"abierta": "Lower bed pulled out"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tumbarse": "Lie down"
+			},
+			"imagen": "Footprint of “Trundle bed”: a rectangle, 1.00 by 2.00 metres, marked with the letters “Cn”."
+		},
+		"cama_montessori": {
+			"nombre": "Montessori house bed",
+			"descripcion": "Mattress almost at floor level inside a slatted frame shaped like a little house: four posts and a pitched roof above head height. The corner posts are found with the cane.",
+			"etiquetas": ["montessori bed", "house bed", "floor bed"],
+			"variantes": {
+				"de_70": "70 by 140 cm",
+				"de_90": "90 by 190 cm"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Montessori house bed”: a rectangle, 1.00 by 2.00 metres, marked with the letters “Cm”."
+		},
+		"cuna_colecho": {
+			"nombre": "Bedside co-sleeping cot",
+			"descripcion": "Small barred cot with one side open, pushed right up against the parents' bed at the same height as the mattress. There is no way through between the two beds.",
+			"etiquetas": ["co-sleeping cot", "bedside crib", "sidecar cot"],
+			"imagen": "Footprint of “Bedside co-sleeping cot”: a U of bars open on the side pushed against the big bed, 0.60 by 0.95 metres, marked with the letters “Cc”."
+		},
+		"banera_bebe_patas": {
+			"nombre": "Baby bath on a stand",
+			"descripcion": "Small plastic bath on a folding leg frame at waist height, sometimes with a changing top over it. Full, it is heavy and splashes; empty, it moves easily.",
+			"etiquetas": ["baby bath", "baby bath stand", "bath changer"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Baby bath on a stand”: a rectangle with rounded corners, 0.55 by 0.90 metres, marked with the letters “Bb”."
+		},
+		"gimnasio_bebe": {
+			"nombre": "Baby play gym",
+			"descripcion": "Padded mat on the floor with two crossed arches over it at knee height, hung with toys that jingle. Soft underfoot; the arches catch your feet.",
+			"etiquetas": ["baby play gym", "activity mat", "play mat"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Baby play gym”: a rectangle with rounded corners, 0.85 by 0.85 metres, marked with the letters “Gb”."
+		},
+		"taburete_escalon": {
+			"nombre": "Child's step stool",
+			"descripcion": "One- or two-step plastic stool in front of the washbasin or toilet, so a child can reach. Low and light: it trips you and slides.",
+			"etiquetas": ["step stool", "booster step", "kids' stool"],
+			"variantes": {
+				"un_peldano": "One step",
+				"dos_peldanos": "Two steps"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Child's step stool”: a trapezoid, narrower at the back, 0.40 by 0.30 metres, marked with the letters “Te”."
+		},
+		"robot_aspirador": {
+			"nombre": "Robot vacuum running",
+			"descripcion": "Low disc that roams the floor on its own, humming, bumps into furniture, turns and carries on. It slips under beds and turns up between your feet: a moving obstacle.",
+			"etiquetas": ["robot vacuum", "robotic vacuum cleaner", "roomba"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Robot vacuum running”: a circle, 0.35 by 0.35 metres, marked with the letters “Ra”."
+		}
+	}
+}

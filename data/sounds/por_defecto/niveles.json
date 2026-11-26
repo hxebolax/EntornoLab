@@ -1,0 +1,798 @@
+{
+	"formato": 1,
+	"explicacion": "Nivel (media cuadrática del tramo de 0,3 s más fuerte) y pico de cada sonido. Sirve de referencia para igualar los demás paquetes.",
+	"niveles": {
+		"baliza/pulso": [
+			0.094697,
+			0.600006
+		],
+		"baliza/alineado": [
+			0.072773,
+			0.600006
+		],
+		"baliza/detras": [
+			0.092623,
+			0.600006
+		],
+		"baliza/cerca": [
+			0.082646,
+			0.600006
+		],
+		"baliza/llegada": [
+			0.123495,
+			0.549988
+		],
+		"sonda/pared": [
+			0.051023,
+			0.549988
+		],
+		"sonda/puerta": [
+			0.065986,
+			0.549988
+		],
+		"sonda/objeto": [
+			0.097537,
+			0.549988
+		],
+		"sonda/libre": [
+			0.100826,
+			0.549988
+		],
+		"sonda/escalon": [
+			0.072173,
+			0.549988
+		],
+		"sonda/bordillo": [
+			0.066152,
+			0.549988
+		],
+		"sonda/cerca": [
+			0.067362,
+			0.5
+		],
+		"sonda/media": [
+			0.055838,
+			0.5
+		],
+		"sonda/lejos": [
+			0.052003,
+			0.5
+		],
+		"brujula/norte": [
+			0.061307,
+			0.5
+		],
+		"brujula/este": [
+			0.069557,
+			0.5
+		],
+		"brujula/sur": [
+			0.062311,
+			0.5
+		],
+		"brujula/oeste": [
+			0.101629,
+			0.5
+		],
+		"brujula/noreste": [
+			0.075695,
+			0.5
+		],
+		"brujula/sureste": [
+			0.076386,
+			0.5
+		],
+		"brujula/suroeste": [
+			0.084377,
+			0.5
+		],
+		"brujula/noroeste": [
+			0.072148,
+			0.5
+		],
+		"eco/chasquido": [
+			0.054386,
+			0.700012
+		],
+		"pasos/baldosa_izq_1": [
+			0.054294,
+			0.5
+		],
+		"pasos/baldosa_izq_2": [
+			0.055575,
+			0.5
+		],
+		"pasos/baldosa_izq_3": [
+			0.055553,
+			0.5
+		],
+		"pasos/baldosa_der_1": [
+			0.056385,
+			0.5
+		],
+		"pasos/baldosa_der_2": [
+			0.051842,
+			0.5
+		],
+		"pasos/baldosa_der_3": [
+			0.045481,
+			0.5
+		],
+		"pasos/madera_izq_1": [
+			0.068051,
+			0.549988
+		],
+		"pasos/madera_izq_2": [
+			0.079151,
+			0.549988
+		],
+		"pasos/madera_izq_3": [
+			0.085226,
+			0.549988
+		],
+		"pasos/madera_der_1": [
+			0.065248,
+			0.549988
+		],
+		"pasos/madera_der_2": [
+			0.068984,
+			0.549988
+		],
+		"pasos/madera_der_3": [
+			0.062828,
+			0.549988
+		],
+		"pasos/moqueta_izq_1": [
+			0.048686,
+			0.359985
+		],
+		"pasos/moqueta_izq_2": [
+			0.044777,
+			0.359985
+		],
+		"pasos/moqueta_izq_3": [
+			0.040852,
+			0.359985
+		],
+		"pasos/moqueta_der_1": [
+			0.037098,
+			0.359985
+		],
+		"pasos/moqueta_der_2": [
+			0.042473,
+			0.359985
+		],
+		"pasos/moqueta_der_3": [
+			0.044173,
+			0.359985
+		],
+		"pasos/alfombra_izq_1": [
+			0.038767,
+			0.339996
+		],
+		"pasos/alfombra_izq_2": [
+			0.033022,
+			0.339996
+		],
+		"pasos/alfombra_izq_3": [
+			0.035573,
+			0.339996
+		],
+		"pasos/alfombra_der_1": [
+			0.042775,
+			0.339996
+		],
+		"pasos/alfombra_der_2": [
+			0.033566,
+			0.339996
+		],
+		"pasos/alfombra_der_3": [
+			0.03065,
+			0.339996
+		],
+		"pasos/hormigon_izq_1": [
+			0.058569,
+			0.480011
+		],
+		"pasos/hormigon_izq_2": [
+			0.040691,
+			0.480011
+		],
+		"pasos/hormigon_izq_3": [
+			0.05582,
+			0.480011
+		],
+		"pasos/hormigon_der_1": [
+			0.065196,
+			0.480011
+		],
+		"pasos/hormigon_der_2": [
+			0.050589,
+			0.480011
+		],
+		"pasos/hormigon_der_3": [
+			0.053092,
+			0.480011
+		],
+		"pasos/asfalto_izq_1": [
+			0.0553,
+			0.480011
+		],
+		"pasos/asfalto_izq_2": [
+			0.046263,
+			0.480011
+		],
+		"pasos/asfalto_izq_3": [
+			0.061492,
+			0.480011
+		],
+		"pasos/asfalto_der_1": [
+			0.05513,
+			0.480011
+		],
+		"pasos/asfalto_der_2": [
+			0.059355,
+			0.480011
+		],
+		"pasos/asfalto_der_3": [
+			0.060888,
+			0.480011
+		],
+		"pasos/acera_izq_1": [
+			0.042918,
+			0.459991
+		],
+		"pasos/acera_izq_2": [
+			0.057435,
+			0.459991
+		],
+		"pasos/acera_izq_3": [
+			0.05286,
+			0.459991
+		],
+		"pasos/acera_der_1": [
+			0.050436,
+			0.459991
+		],
+		"pasos/acera_der_2": [
+			0.044983,
+			0.459991
+		],
+		"pasos/acera_der_3": [
+			0.051923,
+			0.459991
+		],
+		"pasos/adoquin_izq_1": [
+			0.055111,
+			0.480011
+		],
+		"pasos/adoquin_izq_2": [
+			0.051492,
+			0.480011
+		],
+		"pasos/adoquin_izq_3": [
+			0.059512,
+			0.480011
+		],
+		"pasos/adoquin_der_1": [
+			0.04382,
+			0.480011
+		],
+		"pasos/adoquin_der_2": [
+			0.054158,
+			0.480011
+		],
+		"pasos/adoquin_der_3": [
+			0.058359,
+			0.480011
+		],
+		"pasos/tierra_izq_1": [
+			0.050895,
+			0.420013
+		],
+		"pasos/tierra_izq_2": [
+			0.045128,
+			0.420013
+		],
+		"pasos/tierra_izq_3": [
+			0.054763,
+			0.420013
+		],
+		"pasos/tierra_der_1": [
+			0.045258,
+			0.420013
+		],
+		"pasos/tierra_der_2": [
+			0.043908,
+			0.420013
+		],
+		"pasos/tierra_der_3": [
+			0.046471,
+			0.420013
+		],
+		"pasos/hierba_izq_1": [
+			0.035991,
+			0.320007
+		],
+		"pasos/hierba_izq_2": [
+			0.041099,
+			0.320007
+		],
+		"pasos/hierba_izq_3": [
+			0.03964,
+			0.320007
+		],
+		"pasos/hierba_der_1": [
+			0.035771,
+			0.320007
+		],
+		"pasos/hierba_der_2": [
+			0.038207,
+			0.320007
+		],
+		"pasos/hierba_der_3": [
+			0.038434,
+			0.320007
+		],
+		"pasos/grava_izq_1": [
+			0.05717,
+			0.450012
+		],
+		"pasos/grava_izq_2": [
+			0.035638,
+			0.450012
+		],
+		"pasos/grava_izq_3": [
+			0.043643,
+			0.450012
+		],
+		"pasos/grava_der_1": [
+			0.047775,
+			0.450012
+		],
+		"pasos/grava_der_2": [
+			0.056383,
+			0.450012
+		],
+		"pasos/grava_der_3": [
+			0.047799,
+			0.450012
+		],
+		"pasos/metal_izq_1": [
+			0.062189,
+			0.5
+		],
+		"pasos/metal_izq_2": [
+			0.058475,
+			0.5
+		],
+		"pasos/metal_izq_3": [
+			0.06035,
+			0.5
+		],
+		"pasos/metal_der_1": [
+			0.052795,
+			0.5
+		],
+		"pasos/metal_der_2": [
+			0.057085,
+			0.5
+		],
+		"pasos/metal_der_3": [
+			0.059861,
+			0.5
+		],
+		"pasos/arena_izq_1": [
+			0.048677,
+			0.359985
+		],
+		"pasos/arena_izq_2": [
+			0.048494,
+			0.359985
+		],
+		"pasos/arena_izq_3": [
+			0.043938,
+			0.359985
+		],
+		"pasos/arena_der_1": [
+			0.040288,
+			0.359985
+		],
+		"pasos/arena_der_2": [
+			0.049856,
+			0.359985
+		],
+		"pasos/arena_der_3": [
+			0.043769,
+			0.359985
+		],
+		"pasos/agua_izq_1": [
+			0.048855,
+			0.450012
+		],
+		"pasos/agua_izq_2": [
+			0.056996,
+			0.450012
+		],
+		"pasos/agua_izq_3": [
+			0.04363,
+			0.450012
+		],
+		"pasos/agua_der_1": [
+			0.053214,
+			0.450012
+		],
+		"pasos/agua_der_2": [
+			0.055152,
+			0.450012
+		],
+		"pasos/agua_der_3": [
+			0.06003,
+			0.450012
+		],
+		"pasos/tactil_botones_izq_1": [
+			0.060621,
+			0.5
+		],
+		"pasos/tactil_botones_izq_2": [
+			0.061185,
+			0.5
+		],
+		"pasos/tactil_botones_izq_3": [
+			0.070411,
+			0.5
+		],
+		"pasos/tactil_botones_der_1": [
+			0.066548,
+			0.5
+		],
+		"pasos/tactil_botones_der_2": [
+			0.058834,
+			0.5
+		],
+		"pasos/tactil_botones_der_3": [
+			0.055429,
+			0.5
+		],
+		"pasos/tactil_rayas_izq_1": [
+			0.062836,
+			0.5
+		],
+		"pasos/tactil_rayas_izq_2": [
+			0.044332,
+			0.5
+		],
+		"pasos/tactil_rayas_izq_3": [
+			0.058611,
+			0.5
+		],
+		"pasos/tactil_rayas_der_1": [
+			0.045406,
+			0.5
+		],
+		"pasos/tactil_rayas_der_2": [
+			0.062624,
+			0.5
+		],
+		"pasos/tactil_rayas_der_3": [
+			0.063519,
+			0.5
+		],
+		"golpe/ladrillo": [
+			0.076108,
+			0.700012
+		],
+		"golpe/madera": [
+			0.073627,
+			0.700012
+		],
+		"golpe/metal": [
+			0.105965,
+			0.700012
+		],
+		"golpe/cristal": [
+			0.094626,
+			0.700012
+		],
+		"golpe/plastico": [
+			0.058356,
+			0.700012
+		],
+		"golpe/tela": [
+			0.118501,
+			0.700012
+		],
+		"golpe/piedra": [
+			0.053391,
+			0.700012
+		],
+		"roce/ladrillo": [
+			0.049578,
+			0.399994
+		],
+		"roce/madera": [
+			0.085552,
+			0.399994
+		],
+		"roce/metal": [
+			0.080685,
+			0.399994
+		],
+		"roce/cristal": [
+			0.090768,
+			0.399994
+		],
+		"roce/plastico": [
+			0.075864,
+			0.399994
+		],
+		"roce/tela": [
+			0.085011,
+			0.399994
+		],
+		"roce/piedra": [
+			0.042915,
+			0.399994
+		],
+		"puerta/abrir": [
+			0.099701,
+			0.600006
+		],
+		"puerta/cerrar": [
+			0.11209,
+			0.649994
+		],
+		"puerta/con_llave": [
+			0.06053,
+			0.600006
+		],
+		"puerta/automatica": [
+			0.123346,
+			0.5
+		],
+		"escalera/subir": [
+			0.08764,
+			0.600006
+		],
+		"escalera/bajar": [
+			0.075902,
+			0.600006
+		],
+		"escalera/rampa": [
+			0.144958,
+			0.5
+		],
+		"ascensor/llamada": [
+			0.080035,
+			0.5
+		],
+		"ascensor/puerta": [
+			0.115692,
+			0.5
+		],
+		"ascensor/viaje": [
+			0.098165,
+			0.350006
+		],
+		"ascensor/llegada": [
+			0.147849,
+			0.549988
+		],
+		"ascensor/planta_0": [
+			0.084446,
+			0.5
+		],
+		"ascensor/planta_1": [
+			0.072545,
+			0.5
+		],
+		"ascensor/planta_2": [
+			0.064294,
+			0.5
+		],
+		"ascensor/planta_3": [
+			0.062041,
+			0.5
+		],
+		"ascensor/planta_4": [
+			0.065613,
+			0.5
+		],
+		"ascensor/planta_5": [
+			0.069521,
+			0.5
+		],
+		"ascensor/planta_6": [
+			0.067155,
+			0.5
+		],
+		"ascensor/planta_7": [
+			0.050374,
+			0.5
+		],
+		"ascensor/planta_8": [
+			0.067664,
+			0.5
+		],
+		"ascensor/planta_9": [
+			0.06679,
+			0.5
+		],
+		"premio/aparece": [
+			0.09172,
+			0.5
+		],
+		"premio/cerca": [
+			0.069788,
+			0.399994
+		],
+		"premio/recogido": [
+			0.150508,
+			0.5
+		],
+		"premio/tesoro": [
+			0.192047,
+			0.600006
+		],
+		"logro/logro": [
+			0.154908,
+			0.5
+		],
+		"logro/estrella_1": [
+			0.118074,
+			0.5
+		],
+		"logro/estrella_2": [
+			0.13505,
+			0.5
+		],
+		"logro/estrella_3": [
+			0.132902,
+			0.5
+		],
+		"logro/medalla": [
+			0.18894,
+			0.600006
+		],
+		"logro/error": [
+			0.145167,
+			0.450012
+		],
+		"logro/pista": [
+			0.120426,
+			0.450012
+		],
+		"semaforo/verde": [
+			0.174494,
+			0.450012
+		],
+		"semaforo/intermitente": [
+			0.186355,
+			0.450012
+		],
+		"semaforo/rojo": [
+			0.026156,
+			0.399994
+		],
+		"semaforo/pulsador": [
+			0.088003,
+			0.5
+		],
+		"trafico/coche": [
+			0.152041,
+			0.600006
+		],
+		"trafico/moto": [
+			0.156465,
+			0.600006
+		],
+		"trafico/autobus": [
+			0.210846,
+			0.649994
+		],
+		"trafico/ambiente_leve": [
+			0.063424,
+			0.279999
+		],
+		"trafico/ambiente_medio": [
+			0.078099,
+			0.339996
+		],
+		"trafico/ambiente_intenso": [
+			0.078498,
+			0.399994
+		],
+		"exterior/bordillo": [
+			0.09212,
+			0.600006
+		],
+		"fuente/frigorifico": [
+			0.123045,
+			0.399994
+		],
+		"fuente/reloj": [
+			0.021517,
+			0.399994
+		],
+		"fuente/grifo": [
+			0.084663,
+			0.399994
+		],
+		"fuente/ventilador": [
+			0.083074,
+			0.399994
+		],
+		"fuente/television": [
+			0.06019,
+			0.399994
+		],
+		"fuente/fuente_agua": [
+			0.097077,
+			0.450012
+		],
+		"fuente/maquina_expendedora": [
+			0.135798,
+			0.399994
+		],
+		"fuente/campanas": [
+			0.107655,
+			0.5
+		],
+		"fuente/pajaros": [
+			0.110241,
+			0.399994
+		],
+		"ambiente/casa": [
+			0.018302,
+			0.119995
+		],
+		"ambiente/oficina": [
+			0.026218,
+			0.220001
+		],
+		"ambiente/pasillo": [
+			0.03312,
+			0.200012
+		],
+		"ambiente/calle": [
+			0.054803,
+			0.299988
+		],
+		"ambiente/parque": [
+			0.053651,
+			0.279999
+		],
+		"ambiente/cocina": [
+			0.031742,
+			0.23999
+		],
+		"interfaz/mover": [
+			0.095641,
+			0.299988
+		],
+		"interfaz/elegir": [
+			0.092683,
+			0.399994
+		],
+		"interfaz/atras": [
+			0.092056,
+			0.399994
+		],
+		"interfaz/borde": [
+			0.134599,
+			0.450012
+		],
+		"interfaz/abrir": [
+			0.099964,
+			0.399994
+		],
+		"interfaz/cerrar": [
+			0.100298,
+			0.399994
+		],
+		"interfaz/ajuste": [
+			0.102897,
+			0.299988
+		]
+	}
+}

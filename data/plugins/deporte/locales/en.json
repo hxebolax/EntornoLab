@@ -1,0 +1,1373 @@
+{
+	"nombre": "Sport",
+	"descripcion": "Sports hall and courts, athletics, gymnastics and combat sports, gym machine room, sports swimming pool, changing rooms and stands, with their nets, hanging apparatus and water edges.",
+	"categorias": {
+		"pistas": "Courts and sports hall",
+		"atletismo": "Athletics",
+		"gimnasia": "Gymnastics and combat",
+		"musculacion": "Gym machine room",
+		"piscina": "Sports pool",
+		"vestuario": "Changing rooms",
+		"gradas": "Stands and access"
+	},
+	"subcategorias": {
+		"porterias_canastas": "Goals and hoops",
+		"redes_postes": "Nets and posts",
+		"cerramientos": "Court enclosures",
+		"banquillos_anotacion": "Benches and scoring",
+		"material_entreno": "Training equipment",
+		"marcas_pista": "Court markings",
+		"carreras": "Running events",
+		"saltos": "Jumping events",
+		"lanzamientos": "Throwing events",
+		"aparatos_gimnasia": "Gymnastics apparatus",
+		"suelos_blandos": "Mats and soft floors",
+		"combate": "Combat sports",
+		"trepa_punteria": "Climbing and target sports",
+		"cardio": "Cardio machines",
+		"maquinas_fuerza": "Strength machines",
+		"peso_libre": "Free weights",
+		"suelo_funcional": "Floor and functional training",
+		"servicios_sala": "Gym floor services",
+		"vaso_bordes": "Pool tank and edges",
+		"salidas_saltos": "Starts and diving",
+		"calles_material": "Lanes and equipment",
+		"socorrismo_acceso": "Lifeguarding and water access",
+		"playa_piscina": "Pool surround",
+		"zona_termal": "Spa and leisure area",
+		"bancos_perchas": "Benches and hooks",
+		"taquillas_cabinas": "Lockers and cubicles",
+		"duchas_vestuario": "Showers",
+		"secado_aseo": "Drying and grooming",
+		"cuidados": "Massage and first aid",
+		"graderios": "Seating tiers",
+		"accesos_grada": "Access ways",
+		"protecciones_marcas": "Guards and markings"
+	},
+	"estados": {
+		"plegado": "Folded",
+		"desplegado": "Unfolded",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"apagado": "Off",
+		"funcionando": "Running"
+	},
+	"objetos": {
+		"canasta_minibasket": {
+			"nombre": "Adjustable mini-basketball hoop",
+			"descripcion": "Low hoop on a wheeled, weighted base. You meet the base first, at shin height; the backboard is further forward, above your head.",
+			"etiquetas": ["mini-basketball hoop", "portable hoop", "junior hoop"],
+			"variantes": {
+				"aro_260": "Rim at 2.60 m",
+				"aro_305": "Rim at 3.05 m"
+			},
+			"acciones": {
+				"encestar": "Shoot a basket"
+			},
+			"imagen": "Footprint of “Adjustable mini-basketball hoop”: a wide base at the back, a narrow arm to the front and the backboard across its tip, 1.20 by 1.60 metres, marked with the letters “Cm”."
+		},
+		"canasta_techo": {
+			"nombre": "Ceiling-hung hoop, folded up",
+			"descripcion": "Sports-hall hoop folded up against the ceiling: backboard, rim and arm hang well above your head. It does not get in the way; unfolded, it comes down to three metres.",
+			"etiquetas": ["ceiling-mounted hoop", "folding backstop", "suspended hoop"],
+			"acciones": {
+				"desplegar": "Unfold",
+				"plegar": "Fold"
+			},
+			"imagen": "Footprint of “Ceiling-hung hoop, folded up”: a T shape, 1.80 by 2.50 metres, hanging 3.20 metres above the floor, marked with the letters “Ct”."
+		},
+		"porteria_futbol_grande": {
+			"nombre": "Full-size football goal",
+			"descripcion": "Large pitch goal: two round metal posts far apart, the crossbar above your head and a slack net behind that tangles the cane.",
+			"etiquetas": ["football goal", "soccer goal", "seven-a-side goal"],
+			"variantes": {
+				"futbol_7": "Seven-a-side",
+				"futbol_11": "Eleven-a-side"
+			},
+			"acciones": {
+				"chutar": "Shoot at goal"
+			},
+			"imagen": "Footprint of “Full-size football goal”: a U open at the front, 7.32 by 2.00 metres, marked with the letters “Pf”."
+		},
+		"porteria_hockey": {
+			"nombre": "Hockey goal",
+			"descripcion": "Low hockey goal: a metal frame with a board at floor level inside that knocks like wood when the ball hits it. The roller-hockey one is only hip high.",
+			"etiquetas": ["hockey goal", "roller hockey goal", "field hockey goal"],
+			"variantes": {
+				"patines": "Roller hockey",
+				"hierba": "Field hockey"
+			},
+			"imagen": "Footprint of “Hockey goal”: a U open at the front, 1.70 by 0.92 metres, marked with the letters “Ph”."
+		},
+		"poste_voleibol": {
+			"nombre": "Volleyball post",
+			"descripcion": "Round metal post set into the floor, padded with foam up to chest height. The net runs from it, taut, at head height.",
+			"etiquetas": ["volleyball post", "net post", "volleyball upright"],
+			"imagen": "Footprint of “Volleyball post”: a circle, 0.25 by 0.25 metres, marked with the letters “Pv”."
+		},
+		"red_voleibol": {
+			"nombre": "Volleyball net, rigged",
+			"descripcion": "Taut net between two posts, from chest height to over two metres. The cane passes underneath without touching it: you meet it with your face or a raised hand.",
+			"etiquetas": ["volleyball net", "overhead obstacle"],
+			"imagen": "Footprint of “Volleyball net, rigged”: a rectangle, 9.50 by 0.05 metres, hanging 1.40 metres above the floor, marked with the letters “Rv”."
+		},
+		"poste_badminton": {
+			"nombre": "Badminton post on a base",
+			"descripcion": "Thin post on a heavy wheeled base that juts out towards the court. It is chest high and shifts if pushed.",
+			"etiquetas": ["badminton post", "badminton upright"],
+			"imagen": "Footprint of “Badminton post on a base”: a T shape, 0.40 by 0.50 metres, marked with the letters “Pb”."
+		},
+		"red_badminton": {
+			"nombre": "Badminton net, rigged",
+			"descripcion": "Narrow net between two posts, from waist to chest. There is a gap underneath: the cane goes in and your body meets the net.",
+			"etiquetas": ["badminton net", "mid-height net"],
+			"variantes": {
+				"individuales": "Singles",
+				"dobles": "Doubles"
+			},
+			"imagen": "Footprint of “Badminton net, rigged”: a rectangle, 6.10 by 0.04 metres, hanging 0.76 metres above the floor, marked with the letters “Rb”."
+		},
+		"red_tenis": {
+			"nombre": "Tennis net with posts",
+			"descripcion": "Long net across the whole court at hip height, with a metal post at each end. It reaches the ground: the cane finds it and it gives a little.",
+			"etiquetas": ["tennis net", "net posts"],
+			"variantes": {
+				"individuales": "Singles",
+				"dobles": "Doubles"
+			},
+			"imagen": "Footprint of “Tennis net with posts”: a rectangle, 12.80 by 0.10 metres, marked with the letters “Rt”."
+		},
+		"silla_juez_tenis": {
+			"nombre": "Tennis umpire's chair",
+			"descripcion": "High chair on a metal frame with steps, beside the net post. The seat is above head height; the frame spreads wider at the bottom.",
+			"etiquetas": ["umpire's chair", "high chair", "referee stand"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Tennis umpire's chair”: a trapezoid, narrower at the back, 0.80 by 1.10 metres, marked with the letters “Sj”."
+		},
+		"red_padel": {
+			"nombre": "Padel net with posts",
+			"descripcion": "Ten-metre net splitting the padel court from wall to wall, just below hip height. It reaches the floor and feels soft to the cane.",
+			"etiquetas": ["padel net", "paddle tennis net"],
+			"imagen": "Footprint of “Padel net with posts”: a rectangle, 10.00 by 0.08 metres, marked with the letters “Rp”."
+		},
+		"pared_cristal_padel": {
+			"nombre": "Padel court glass wall",
+			"descripcion": "Section of thick glass wall three metres high, smooth and cold. It cannot be seen: follow it with your hand; it rings like glass under the cane.",
+			"etiquetas": ["padel glass wall", "glass back wall"],
+			"variantes": {
+				"un_panel": "One panel",
+				"dos_paneles": "Two panels",
+				"tres_paneles": "Three panels"
+			},
+			"imagen": "Footprint of “Padel court glass wall”: a rectangle, 4.00 by 0.10 metres, marked with the letters “Pc”."
+		},
+		"valla_pista": {
+			"nombre": "Court mesh fence",
+			"descripcion": "Section of wire mesh on posts, taller than a person. It rattles and jingles when touched; you can trail your hand along it to the gate.",
+			"etiquetas": ["court fence", "mesh fence", "chain-link fence"],
+			"variantes": {
+				"baja": "Two metres high",
+				"alta": "Four metres high"
+			},
+			"imagen": "Footprint of “Court mesh fence”: a rectangle, 3.00 by 0.08 metres, marked with the letters “Vp”."
+		},
+		"puerta_pista": {
+			"nombre": "Court mesh gate",
+			"descripcion": "Mesh gate in the court fence, with a bolt at hand height. Closed, it blocks the way; open, you walk onto the court.",
+			"etiquetas": ["court gate", "mesh gate", "fence gate"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Court mesh gate”: a rectangle, 1.00 by 0.08 metres, marked with the letters “Pp”."
+		},
+		"red_parabalones": {
+			"nombre": "Ball-stop netting",
+			"descripcion": "Very tall net on posts behind the goal to stop stray balls. Soft: it gives when pushed and the cane catches in the mesh.",
+			"etiquetas": ["ball-stop net", "catch net", "safety netting"],
+			"imagen": "Footprint of “Ball-stop netting”: a rectangle, 10.00 by 0.10 metres, marked with the letters “Rp”."
+		},
+		"cortina_divisoria": {
+			"nombre": "Sports hall dividing curtain",
+			"descripcion": "Heavy sheet that comes down from the ceiling and splits the hall in two. Down, it is a soft wall that gives when pushed; rolled up, you walk underneath.",
+			"etiquetas": ["dividing curtain", "hall divider", "partition curtain"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Sports hall dividing curtain”: a rectangle, 6.00 by 0.05 metres, marked with the letters “Cd”."
+		},
+		"valla_publicitaria": {
+			"nombre": "Courtside advertising board",
+			"descripcion": "Low, sloping board along the edge of the court, at hip height, with a triangular foot behind. Hollow: it sounds like sheet metal.",
+			"etiquetas": ["advertising board", "perimeter board", "hoarding"],
+			"imagen": "Footprint of “Courtside advertising board”: a rectangle, 3.00 by 0.50 metres, marked with the letters “Vp”."
+		},
+		"banquillo_cubierto": {
+			"nombre": "Covered substitutes' bench",
+			"descripcion": "Long bench inside a plastic shelter open at the front. The roof is at head height: duck to get in and sit down.",
+			"etiquetas": ["dugout", "team shelter", "covered bench"],
+			"variantes": {
+				"cinco_plazas": "Five seats",
+				"ocho_plazas": "Eight seats",
+				"doce_plazas": "Twelve seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Covered substitutes' bench”: a U open at the front, 4.00 by 1.30 metres, marked with the letters “Bc”."
+		},
+		"banquillo_abierto": {
+			"nombre": "Open substitutes' bench",
+			"descripcion": "Long bench with a backrest at the edge of the court, with bags and bottles on the floor in front. Trail your hand along the backrest.",
+			"etiquetas": ["team bench", "substitutes' bench", "players' bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Open substitutes' bench”: a rectangle, 3.00 by 0.50 metres, marked with the letters “Ba”."
+		},
+		"mesa_anotadores": {
+			"nombre": "Scorers' table",
+			"descripcion": "Long table on the sideline between the two benches, with a front panel down to the floor and the scoreboard console on top.",
+			"etiquetas": ["scorers' table", "officials' table", "timekeepers' desk"],
+			"acciones": {
+				"dep_bocina": "Sound the horn"
+			},
+			"imagen": "Footprint of “Scorers' table”: a rectangle, 3.00 by 0.70 metres, marked with the letters “Ma”."
+		},
+		"marcador_electronico": {
+			"nombre": "Electronic scoreboard with horn",
+			"descripcion": "Large panel hung high on the end wall. It is not in the way; its horn sounds at the end of each period and tells you where the end of the court is.",
+			"etiquetas": ["scoreboard", "electronic scoreboard", "game clock"],
+			"acciones": {
+				"dep_bocina": "Sound the horn"
+			},
+			"imagen": "Footprint of “Electronic scoreboard with horn”: a rectangle, 3.00 by 0.12 metres, hanging 3.00 metres above the floor, marked with the letters “Me”."
+		},
+		"carro_balones": {
+			"nombre": "Ball trolley",
+			"descripcion": "Wheeled wire cage full of balls, waist high. Push it and it rolls; the balls bounce hollow inside.",
+			"etiquetas": ["ball trolley", "ball cart", "ball cage"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Ball trolley”: a rectangle, 0.90 by 0.60 metres, marked with the letters “Cb”."
+		},
+		"conos_fila": {
+			"nombre": "Row of training cones",
+			"descripcion": "Plastic cones and discs set out in a row for a drill. Low and light: they tip over or shoot away when kicked.",
+			"etiquetas": ["training cones", "marker discs", "cone drill"],
+			"variantes": {
+				"setas": "Flat marker discs",
+				"conos": "Medium cones"
+			},
+			"imagen": "Footprint of “Row of training cones”: a rectangle, 3.00 by 0.25 metres, marked with the letters “Cf”."
+		},
+		"pica_base": {
+			"nombre": "Slalom pole on a base",
+			"descripcion": "Thin plastic pole stuck in a rubber base, shoulder high. The cane barely touches it; knock it and it falls and rolls.",
+			"etiquetas": ["slalom pole", "agility pole", "training pole"],
+			"imagen": "Footprint of “Slalom pole on a base”: a circle, 0.25 by 0.25 metres, marked with the letters “Pb”."
+		},
+		"escalera_agilidad": {
+			"nombre": "Agility ladder on the floor",
+			"descripcion": "Plastic rungs joined by two straps, laid on the floor like a ladder lying flat. It does not block the way, but foot and cane get tangled in it.",
+			"etiquetas": ["agility ladder", "speed ladder"],
+			"aviso": "Agility ladder on the floor: lift your feet.",
+			"imagen": "Footprint of “Agility ladder on the floor”: a rectangle, 0.50 by 4.00 metres, marked with the letters “Ea”."
+		},
+		"banderin_corner": {
+			"nombre": "Corner flag",
+			"descripcion": "Flexible pole with a small flag on top, at the corner of the pitch. It bends when touched and springs back.",
+			"etiquetas": ["corner flag", "corner post"],
+			"imagen": "Footprint of “Corner flag”: a circle, 0.05 by 0.05 metres, marked with the letters “Bc”."
+		},
+		"linea_pista": {
+			"nombre": "Court line",
+			"descripcion": "Painted or taped line marking the edge of the court. Barely felt underfoot: useful with some sight and, if taped, to the sole of the shoe.",
+			"etiquetas": ["court line", "sideline", "boundary line"],
+			"imagen": "Footprint of “Court line”: a rectangle, 10.00 by 0.05 metres, marked with the letters “Lp”."
+		},
+		"circulo_central": {
+			"nombre": "Centre circle",
+			"descripcion": "Circle painted in the middle of the court. It does not block the way: it marks the centre of the playing area.",
+			"etiquetas": ["centre circle", "centre mark"],
+			"variantes": {
+				"baloncesto": "Basketball",
+				"futbol_sala": "Futsal",
+				"futbol_11": "Football"
+			},
+			"imagen": "Footprint of “Centre circle”: a circle, 3.60 by 3.60 metres, marked with the letters “Cc”."
+		},
+		"valla_atletismo": {
+			"nombre": "Athletics hurdle",
+			"descripcion": "Wooden bar on two metal feet pointing towards whoever approaches. Knock it and it tips forward with a clatter.",
+			"etiquetas": ["hurdle", "track hurdle"],
+			"variantes": {
+				"baja": "76 cm high",
+				"media": "91 cm high",
+				"alta": "1.07 m high"
+			},
+			"imagen": "Footprint of “Athletics hurdle”: a U open at the front, 1.20 by 0.70 metres, marked with the letters “Va”."
+		},
+		"minivallas": {
+			"nombre": "Mini training hurdles",
+			"descripcion": "Row of small plastic hurdles below knee height, a stride apart. Light: they tip over underfoot and the cane drags them along.",
+			"etiquetas": ["mini hurdles", "training hurdles", "speed hurdles"],
+			"imagen": "Footprint of “Mini training hurdles”: a comb: a bar with bodies sticking out to the front, 0.60 by 4.00 metres, marked with the letters “Mi”."
+		},
+		"taco_salida": {
+			"nombre": "Starting block",
+			"descripcion": "Metal rail pinned to the track with two sloping pedals. Very low: easy to trip over just behind the start line.",
+			"etiquetas": ["starting block", "starting blocks"],
+			"imagen": "Footprint of “Starting block”: a central rail with a pedal on each side, one further forward than the other, 0.40 by 0.85 metres, marked with the letters “Ts”."
+		},
+		"ria_obstaculos": {
+			"nombre": "Steeplechase water jump",
+			"descripcion": "Water pit on the bend of the track: the ground drops suddenly into knee-deep water. It does not block the way, but you fall in.",
+			"etiquetas": ["water jump", "steeplechase pit"],
+			"aviso": "Steeplechase water jump: there is a water pit ahead.",
+			"imagen": "Footprint of “Steeplechase water jump”: a rectangle, 3.66 by 3.66 metres, marked with the letters “Ro”."
+		},
+		"obstaculo_fijo": {
+			"nombre": "Steeplechase barrier",
+			"descripcion": "Thick wooden beam on two wide, heavy feet, at hip height. It neither moves nor tips: like walking into a railing.",
+			"etiquetas": ["steeplechase barrier", "steeplechase hurdle"],
+			"imagen": "Footprint of “Steeplechase barrier”: a long narrow beam with a foot across each end, 3.96 by 1.20 metres, marked with the letters “Of”."
+		},
+		"bordillo_pista_atletismo": {
+			"nombre": "Athletics track inner kerb",
+			"descripcion": "Aluminium strip four fingers high separating lane one from the grass. Step on or over it; the cane can follow it as a guide.",
+			"etiquetas": ["track kerb", "inside rail", "track curb"],
+			"imagen": "Footprint of “Athletics track inner kerb”: a rectangle, 5.00 by 0.05 metres, marked with the letters “Bp”."
+		},
+		"foso_longitud": {
+			"nombre": "Long jump pit",
+			"descripcion": "Rectangle of loose sand at the end of the runway, level with the ground. Your foot sinks in and your steps go quiet.",
+			"etiquetas": ["long jump pit", "sand pit", "landing pit"],
+			"acciones": {
+				"dep_saltar": "Jump"
+			},
+			"aviso": "Sand pit: the ground gives way.",
+			"imagen": "Footprint of “Long jump pit”: a rectangle, 2.75 by 9.00 metres, marked with the letters “Fl”."
+		},
+		"colchon_altura": {
+			"nombre": "High jump landing mat",
+			"descripcion": "Huge block of foam covered in canvas, hip high. Soft: the cane sinks into it without a sound.",
+			"etiquetas": ["high jump mat", "landing mat", "crash pad"],
+			"acciones": {
+				"dep_saltar": "Jump"
+			},
+			"imagen": "Footprint of “High jump landing mat”: a rectangle, 5.00 by 3.00 metres, marked with the letters “Ca”."
+		},
+		"saltometro": {
+			"nombre": "High jump stands with bar",
+			"descripcion": "Two thin posts on metal bases with a bar resting between them that falls at the slightest touch. The cane passes under the bar without touching it.",
+			"etiquetas": ["high jump stands", "uprights and crossbar"],
+			"imagen": "Footprint of “High jump stands with bar”: two bases at the ends and a thin bar between them, 4.20 by 0.50 metres, marked with the letters “Sa”."
+		},
+		"cajetin_pertiga": {
+			"nombre": "Pole vault box",
+			"descripcion": "Metal box sunk into the ground at the end of the runway, wedge-shaped. It does not block the way: your foot or the cane tip drops into it.",
+			"etiquetas": ["pole vault box", "planting box"],
+			"aviso": "Pole vault box: there is a hole in the ground.",
+			"imagen": "Footprint of “Pole vault box”: a trapezoid, narrower at the back, 0.60 by 1.00 metres, marked with the letters “Cp”."
+		},
+		"jaula_lanzamientos": {
+			"nombre": "Throwing cage",
+			"descripcion": "Very tall net hung from posts around the throwing circle, with an open mouth at the front. Trail your hand round the outside; inside, the floor is concrete.",
+			"etiquetas": ["throwing cage", "hammer cage", "discus cage"],
+			"imagen": "Footprint of “Throwing cage”: a ring with an opening at the front, 7.00 by 8.00 metres, marked with the letters “Jl”."
+		},
+		"circulo_lanzamiento": {
+			"nombre": "Throwing circle",
+			"descripcion": "Circle of smooth concrete ringed by an iron hoop that barely sticks up. You feel the change of surface and the hoop underfoot.",
+			"etiquetas": ["throwing circle", "shot put circle", "discus circle"],
+			"variantes": {
+				"peso_martillo": "Shot put and hammer",
+				"disco": "Discus"
+			},
+			"imagen": "Footprint of “Throwing circle”: a circle, 2.13 by 2.13 metres, marked with the letters “Cl”."
+		},
+		"contenedor_peso": {
+			"nombre": "Shot put stop board",
+			"descripcion": "Curved wooden board, a hand's width high, fixed to the front edge of the shot put circle. A low, solid trip hazard.",
+			"etiquetas": ["stop board", "toe board"],
+			"imagen": "Footprint of “Shot put stop board”: a curved band bulging towards the front, 1.21 by 0.30 metres, marked with the letters “Cp”."
+		},
+		"tapiz_gimnasia": {
+			"nombre": "Gymnastics floor",
+			"descripcion": "Sprung, carpeted floor one small step higher than the hall floor. It gives underfoot, bounces a little and muffles your steps.",
+			"etiquetas": ["gymnastics floor", "sprung floor", "floor exercise area"],
+			"variantes": {
+				"ritmica": "Rhythmic gymnastics",
+				"artistica": "Artistic, sprung"
+			},
+			"imagen": "Footprint of “Gymnastics floor”: a rectangle, 12.00 by 12.00 metres, marked with the letters “Tg”."
+		},
+		"tatami": {
+			"nombre": "Martial arts mat area",
+			"descripcion": "Floor of interlocking foam tiles, firm but soft. Walked on barefoot; its edge is a small step.",
+			"etiquetas": ["tatami", "judo mat", "martial arts mat"],
+			"variantes": {
+				"puzle": "Small jigsaw mat",
+				"karate": "Karate",
+				"judo": "Judo"
+			},
+			"imagen": "Footprint of “Martial arts mat area”: a rectangle, 8.00 by 8.00 metres, marked with the letters “Ta”."
+		},
+		"quitamiedos": {
+			"nombre": "Thick crash mat",
+			"descripcion": "Foam mattress two hand-widths thick, lying under an apparatus or standing against the wall. Soft: the cane sinks in silently.",
+			"etiquetas": ["crash mat", "safety mat", "landing mat"],
+			"acciones": {
+				"dep_saltar": "Jump"
+			},
+			"imagen": "Footprint of “Thick crash mat”: a rectangle, 3.00 by 2.00 metres, marked with the letters “Qu”."
+		},
+		"carro_colchonetas": {
+			"nombre": "Trolley of stacked mats",
+			"descripcion": "Wheeled platform loaded waist-high with thin mats. The edges are soft; the castors stick out underneath.",
+			"etiquetas": ["mat trolley", "stack of mats"],
+			"imagen": "Footprint of “Trolley of stacked mats”: a rectangle, 1.10 by 2.10 metres, marked with the letters “Cc”."
+		},
+		"caballo_arcos": {
+			"nombre": "Pommel horse",
+			"descripcion": "Long leather-covered body on a metal stand, chest high, with two handles on top. Hollow below: the cane only touches the stand.",
+			"etiquetas": ["pommel horse", "side horse"],
+			"imagen": "Footprint of “Pommel horse”: a rectangle with rounded corners, 1.60 by 0.60 metres, marked with the letters “Ca”."
+		},
+		"barra_equilibrio": {
+			"nombre": "Balance beam",
+			"descripcion": "Narrow five-metre padded beam on two feet. The beginners' one is a hand's width off the floor and easy to trip over; the competition one is chest high.",
+			"etiquetas": ["balance beam", "low beam"],
+			"variantes": {
+				"baja": "Low, for beginners",
+				"competicion": "Competition"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Balance beam”: a long narrow beam with a foot across each end, 5.00 by 0.60 metres, marked with the letters “Be”."
+		},
+		"paralelas": {
+			"nombre": "Parallel bars",
+			"descripcion": "Two wooden bars at the same height, above chest level, on four posts and a metal base at floor level that is easy to trip on.",
+			"etiquetas": ["parallel bars"],
+			"acciones": {
+				"dep_colgarse": "Hang from it"
+			},
+			"imagen": "Footprint of “Parallel bars”: a rectangle, 1.00 by 3.50 metres, marked with the letters “Pa”."
+		},
+		"paralelas_asimetricas": {
+			"nombre": "Uneven bars with guy wires",
+			"descripcion": "Two bars at different heights, the upper one out of reach, held to the floor by diagonal cables. The cables are the first thing the cane finds.",
+			"etiquetas": ["uneven bars", "asymmetric bars"],
+			"acciones": {
+				"dep_colgarse": "Hang from it"
+			},
+			"imagen": "Footprint of “Uneven bars with guy wires”: a rectangle with cut corners, 4.00 by 5.50 metres, marked with the letters “Pa”."
+		},
+		"barra_fija": {
+			"nombre": "Horizontal bar with guy wires",
+			"descripcion": "A very high steel bar between two posts, with four taut cables running diagonally down to the floor. The cables cross your path at leg and chest height.",
+			"etiquetas": ["horizontal bar", "high bar"],
+			"acciones": {
+				"dep_colgarse": "Hang from it"
+			},
+			"imagen": "Footprint of “Horizontal bar with guy wires”: a diamond, 4.00 by 5.50 metres, marked with the letters “Bf”."
+		},
+		"anillas": {
+			"nombre": "Hanging rings",
+			"descripcion": "Two wooden rings hung from the ceiling on straps, at face height. The cane misses them; they swing when brushed.",
+			"etiquetas": ["gymnastic rings", "still rings"],
+			"acciones": {
+				"dep_colgarse": "Hang from it"
+			},
+			"imagen": "Footprint of “Hanging rings”: a rectangle, 0.70 by 0.20 metres, hanging 1.70 metres above the floor, marked with the letters “An”."
+		},
+		"minitramp": {
+			"nombre": "Mini trampoline",
+			"descripcion": "Small, tilted trampette at knee height: a metal frame with a sheet stretched on springs.",
+			"etiquetas": ["mini trampoline", "trampette"],
+			"acciones": {
+				"dep_saltar": "Jump"
+			},
+			"imagen": "Footprint of “Mini trampoline”: a rectangle with cut corners, 1.10 by 1.10 metres, marked with the letters “Mi”."
+		},
+		"cama_elastica": {
+			"nombre": "Competition trampoline",
+			"descripcion": "Large metal frame at waist height with a taut bed in the middle and padded edges. Hollow underneath.",
+			"etiquetas": ["trampoline", "competition trampoline"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down",
+				"dep_saltar": "Jump"
+			},
+			"imagen": "Footprint of “Competition trampoline”: a rectangle with rounded corners, 2.91 by 5.05 metres, marked with the letters “Ce”."
+		},
+		"trampolin_batida": {
+			"nombre": "Springboard",
+			"descripcion": "Curved, carpeted wooden board, wedge-shaped, rising to shin height. Left in front of the vaulting box or horse: a low trip hazard.",
+			"etiquetas": ["springboard", "vaulting board", "beat board"],
+			"acciones": {
+				"dep_saltar": "Jump"
+			},
+			"imagen": "Footprint of “Springboard”: a trapezoid, narrower at the back, 0.60 by 1.20 metres, marked with the letters “Tb”."
+		},
+		"barra_ballet": {
+			"nombre": "Wall ballet barre",
+			"descripcion": "Round wooden rail running along the wall at hip height, a hand's width out. The cane passes underneath; it works as a handrail.",
+			"etiquetas": ["ballet barre", "dance barre"],
+			"imagen": "Footprint of “Wall ballet barre”: a rectangle, 3.00 by 0.20 metres, hanging 0.85 metres above the floor, marked with the letters “Bb”."
+		},
+		"ring_boxeo": {
+			"nombre": "Boxing ring",
+			"descripcion": "Square platform raised to hip height, with a padded post at each corner and four taut ropes all round. You climb in by a corner step.",
+			"etiquetas": ["boxing ring", "ring"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Boxing ring”: a rectangle with cut corners, 6.00 by 6.00 metres, marked with the letters “Rb”."
+		},
+		"saco_boxeo": {
+			"nombre": "Hanging punch bag",
+			"descripcion": "Heavy leather bag hung on a chain, from thigh to head. The cane passes under it; hit it and it swings away and comes back.",
+			"etiquetas": ["punch bag", "heavy bag"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Hanging punch bag”: a circle, 0.35 by 0.35 metres, hanging 0.80 metres above the floor, marked with the letters “Sb”."
+		},
+		"saco_pie": {
+			"nombre": "Free-standing punch bag",
+			"descripcion": "Padded column on a round water-filled base. Hit it and it tilts and rights itself; the base is wider than the bag.",
+			"etiquetas": ["free-standing bag", "standing punch bag"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Free-standing punch bag”: a circle, 0.60 by 0.60 metres, marked with the letters “Sp”."
+		},
+		"pera_boxeo": {
+			"nombre": "Speed bag with platform",
+			"descripcion": "Round board fixed to the wall at head height, with a leather speed bag hanging beneath. The cane does not detect it.",
+			"etiquetas": ["speed bag", "speed ball"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Speed bag with platform”: a semicircle, straight at the back and round at the front, 0.60 by 0.65 metres, hanging 1.50 metres above the floor, marked with the letters “Pb”."
+		},
+		"cuerda_trepar": {
+			"nombre": "Climbing rope",
+			"descripcion": "Thick rope hanging from the ceiling almost to the floor, sometimes knotted. It swings away when touched and comes back.",
+			"etiquetas": ["climbing rope", "gym rope"],
+			"acciones": {
+				"dep_trepar": "Climb"
+			},
+			"imagen": "Footprint of “Climbing rope”: a circle, 0.05 by 0.05 metres, marked with the letters “Ct”."
+		},
+		"rocodromo": {
+			"nombre": "Climbing wall with mat",
+			"descripcion": "Wall with resin holds and a thick mat at its foot. You step on the mat first; the wall may lean outwards at head height.",
+			"etiquetas": ["climbing wall", "bouldering wall"],
+			"variantes": {
+				"bulder": "Low boulder",
+				"via": "Roped route"
+			},
+			"acciones": {
+				"dep_trepar": "Climb"
+			},
+			"imagen": "Footprint of “Climbing wall with mat”: a rectangle, 4.00 by 2.50 metres, marked with the letters “Ro”."
+		},
+		"diana_arco": {
+			"nombre": "Archery target on a stand",
+			"descripcion": "Round block of pressed straw resting on a wooden easel, at chest height. The legs spread out behind.",
+			"etiquetas": ["archery target", "archery butt"],
+			"acciones": {
+				"dep_tirar_flecha": "Shoot an arrow"
+			},
+			"imagen": "Footprint of “Archery target on a stand”: a trapezoid, narrower at the back, 1.30 by 1.00 metres, marked with the letters “Da”."
+		},
+		"cinta_correr": {
+			"nombre": "Treadmill",
+			"descripcion": "Long, low deck with a moving belt and, at the front, a handrail with the console at chest height. Running, it hums and you hear the footfalls; the belt throws off anything stepping on it from behind.",
+			"etiquetas": ["treadmill", "running machine"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Treadmill”: a rectangle, 0.85 by 2.00 metres, marked with the letters “Cc”."
+		},
+		"eliptica": {
+			"nombre": "Cross trainer",
+			"descripcion": "Machine with two large pedals and two long arms swinging back and forth at chest height. In use, the arms strike anyone passing too close.",
+			"etiquetas": ["cross trainer", "elliptical"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Cross trainer”: a rectangle with rounded corners, 0.70 by 1.80 metres, marked with the letters “El”."
+		},
+		"bici_estatica": {
+			"nombre": "Exercise bike",
+			"descripcion": "Fixed bike with saddle, handlebars and a closed housing at the front. The pedals stick out at shin height on both sides.",
+			"etiquetas": ["exercise bike", "stationary bike", "recumbent bike"],
+			"variantes": {
+				"vertical": "Upright",
+				"reclinada": "Recumbent, with backrest"
+			},
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Exercise bike”: a narrow front-to-back body with the pedals sticking out on both sides halfway along, 0.55 by 1.10 metres, marked with the letters “Be”."
+		},
+		"bici_spinning": {
+			"nombre": "Indoor cycling bike",
+			"descripcion": "Fixed bike with a bare frame and a heavy iron flywheel at the front that keeps spinning by itself. The handlebars are low and point forward.",
+			"etiquetas": ["spin bike", "indoor cycle", "spinning bike"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Indoor cycling bike”: a narrow front-to-back body with the pedals sticking out on both sides halfway along, 0.55 by 1.20 metres, marked with the letters “Bs”."
+		},
+		"remo": {
+			"nombre": "Rowing machine",
+			"descripcion": "A long rail a hand's width off the floor with a sliding seat and a fan wheel at one end. Low and long: easy to trip over the rail.",
+			"etiquetas": ["rowing machine", "rower", "ergometer"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Rowing machine”: a T shape, 0.60 by 2.40 metres, marked with the letters “Re”."
+		},
+		"escaladora": {
+			"nombre": "Stair climber",
+			"descripcion": "Tall machine with a never-ending staircase and handrails at the sides. You get on from the back; the steps move by themselves.",
+			"etiquetas": ["stair climber", "step mill", "stepper"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Stair climber”: a rectangle, 0.85 by 1.40 metres, marked with the letters “Es”."
+		},
+		"banco_press": {
+			"nombre": "Bench press with rack and bar",
+			"descripcion": "Narrow bench to lie on with two uprights at its head and an iron bar across at hip height. The bar ends stick out well past each side and the cane passes under them.",
+			"etiquetas": ["bench press", "weight bench with rack"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Bench press with rack and bar”: a T shape, 2.20 by 1.70 metres, marked with the letters “Bp”."
+		},
+		"rack_sentadillas": {
+			"nombre": "Squat rack",
+			"descripcion": "Cage of four steel posts with a bar resting at shoulder height. The bar sticks out on both sides, right where your face goes.",
+			"etiquetas": ["squat rack", "power rack", "power cage"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Squat rack”: a frame in the middle and a thin bar crossing it and sticking out on both sides, 2.20 by 1.50 metres, marked with the letters “Rs”."
+		},
+		"multipower": {
+			"nombre": "Smith machine",
+			"descripcion": "Wide steel frame with a bar that slides up and down two rails. The bar stays where the last user left it: at knee, chest or forehead height.",
+			"etiquetas": ["Smith machine", "guided bar machine"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Smith machine”: a rectangle, 2.10 by 1.30 metres, marked with the letters “Mu”."
+		},
+		"cruce_poleas": {
+			"nombre": "Cable crossover machine",
+			"descripcion": "Two weight-stack towers more than three metres apart, joined by a beam at the top and a flat base below. A cable with a handle hangs from each tower at any height.",
+			"etiquetas": ["cable crossover", "cable machine", "dual pulley"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Cable crossover machine”: two towers at the ends joined by a beam, 3.60 by 0.90 metres, marked with the letters “Cp”."
+		},
+		"jalon_dorsal": {
+			"nombre": "Lat pulldown machine",
+			"descripcion": "Weight-stack tower with a seat in front and, hanging from a cable, a wide bar at head height for anyone walking up to it.",
+			"etiquetas": ["lat pulldown", "high pulley machine"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Lat pulldown machine”: a T shape, 1.20 by 1.60 metres, marked with the letters “Jd”."
+		},
+		"prensa_piernas": {
+			"nombre": "Leg press",
+			"descripcion": "Large sloping machine: a nearly reclined seat at the bottom and, above, a plate-loaded platform sliding down two rails.",
+			"etiquetas": ["leg press", "incline leg press"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Leg press”: a trapezoid, narrower at the back, 1.10 by 2.20 metres, marked with the letters “Pp”."
+		},
+		"extension_cuadriceps": {
+			"nombre": "Leg extension machine",
+			"descripcion": "Seat with a backrest and a padded roller in front of the shins; the weight stack stands to one side. The roller lifts and hangs at knee height.",
+			"etiquetas": ["leg extension machine", "quad machine"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Leg extension machine”: an L shape, 1.10 by 1.30 metres, marked with the letters “Ec”."
+		},
+		"contractora": {
+			"nombre": "Pec deck machine",
+			"descripcion": "Seat against a weight stack with two padded arms that open like doors at chest height. Open, they take up twice the width.",
+			"etiquetas": ["pec deck", "chest fly machine", "butterfly machine"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Pec deck machine”: a trapezoid, narrower at the back, 1.30 by 1.20 metres, marked with the letters “Co”."
+		},
+		"multiestacion": {
+			"nombre": "Multi-gym",
+			"descripcion": "Several machines in one: a central weight stack with seats, arms and pulleys sticking out on all four sides. Walk round it slowly, hand in front.",
+			"etiquetas": ["multi-gym", "multi-station machine"],
+			"acciones": {
+				"dep_entrenar": "Work out"
+			},
+			"imagen": "Footprint of “Multi-gym”: a cross, 1.90 by 2.00 metres, marked with the letters “Mu”."
+		},
+		"jaula_funcional": {
+			"nombre": "Functional training rig",
+			"descripcion": "Row of steel posts joined at the top by pull-up bars, with hooks sticking out at chest height. You walk between the posts; the bars are overhead.",
+			"etiquetas": ["functional rig", "cross-training rig", "pull-up rig"],
+			"acciones": {
+				"dep_colgarse": "Hang from it"
+			},
+			"imagen": "Footprint of “Functional training rig”: a comb: a bar with bodies sticking out to the front, 4.50 by 1.80 metres, marked with the letters “Jf”."
+		},
+		"banco_plano": {
+			"nombre": "Flat weight bench",
+			"descripcion": "Narrow, low padded bench with no back, on splayed metal legs. Left loose among the dumbbells, at knee height.",
+			"etiquetas": ["flat bench", "weight bench"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Flat weight bench”: a rectangle, 0.30 by 1.20 metres, marked with the letters “Bp”."
+		},
+		"banco_inclinado": {
+			"nombre": "Adjustable incline bench",
+			"descripcion": "Padded bench with its backrest raised like a ramp to chest height. Wider at the feet than at the seat.",
+			"etiquetas": ["incline bench", "adjustable bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Adjustable incline bench”: a trapezoid, narrower at the back, 0.65 by 1.40 metres, marked with the letters “Bi”."
+		},
+		"mancuernero": {
+			"nombre": "Dumbbell rack",
+			"descripcion": "Long steel rack with two or three sloping tiers loaded with pairs of dumbbells. The iron heads stick out at knee and hip height.",
+			"etiquetas": ["dumbbell rack", "dumbbell stand"],
+			"variantes": {
+				"dos_pisos": "Two tiers",
+				"tres_pisos": "Three tiers"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Dumbbell rack”: a rectangle, 2.00 by 0.60 metres, marked with the letters “Ma”."
+		},
+		"soporte_discos": {
+			"nombre": "Weight plate tree",
+			"descripcion": "Steel post with short arms at several heights, loaded with iron plates. The plates stick out like wheels on each side.",
+			"etiquetas": ["plate tree", "weight plate rack"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Weight plate tree”: a cross, 0.60 by 0.60 metres, marked with the letters “Sd”."
+		},
+		"barra_olimpica": {
+			"nombre": "Loaded Olympic bar on the floor",
+			"descripcion": "Iron bar over two metres long lying on the floor with large plates at its ends. Low, long and thin in the middle: easy to trip over; push it and it rolls.",
+			"etiquetas": ["Olympic bar", "barbell", "loaded barbell"],
+			"imagen": "Footprint of “Loaded Olympic bar on the floor”: a thin bar with a stack of plates at each end, 2.20 by 0.45 metres, marked with the letters “Bo”."
+		},
+		"plataforma_halterofilia": {
+			"nombre": "Weightlifting platform",
+			"descripcion": "Wood and rubber platform a finger's width above the floor, where bars are dropped. You feel the small step and the change of surface.",
+			"etiquetas": ["weightlifting platform", "lifting platform"],
+			"imagen": "Footprint of “Weightlifting platform”: a rectangle, 3.00 by 2.50 metres, marked with the letters “Ph”."
+		},
+		"kettlebells": {
+			"nombre": "Row of kettlebells",
+			"descripcion": "Iron balls with handles lined up on the floor by the wall. Below knee height and heavy: your foot hits them and they do not move.",
+			"etiquetas": ["kettlebells", "row of kettlebells"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Row of kettlebells”: a rectangle, 1.20 by 0.30 metres, marked with the letters “Ke”."
+		},
+		"estante_balones_medicinales": {
+			"nombre": "Medicine ball rack",
+			"descripcion": "Narrow metal tower with heavy balls on sloping shelves, up to chest height. Pull one out and another may roll to the floor.",
+			"etiquetas": ["medicine ball rack", "medicine balls"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Medicine ball rack”: a rectangle, 0.60 by 0.40 metres, marked with the letters “Eb”."
+		},
+		"cajon_pliometrico": {
+			"nombre": "Plyometric jump box",
+			"descripcion": "Hollow wooden box, knee to thigh high, left loose in the jumping area. It sounds like a drum.",
+			"etiquetas": ["plyo box", "jump box"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Plyometric jump box”: a rectangle, 0.50 by 0.60 metres, marked with the letters “Cp”."
+		},
+		"fitball": {
+			"nombre": "Exercise ball",
+			"descripcion": "Large inflated rubber ball, knee to thigh high. Touch it and it rolls away; the cane bounces off it.",
+			"etiquetas": ["exercise ball", "Swiss ball", "gym ball"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Exercise ball”: a circle, 0.65 by 0.65 metres, marked with the letters “Fi”."
+		},
+		"step": {
+			"nombre": "Aerobic step",
+			"descripcion": "Plastic platform a hand's width high with a rough top. Left around the room after class: a low trip hazard.",
+			"etiquetas": ["aerobic step", "step platform"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Aerobic step”: a rectangle with cut corners, 1.10 by 0.40 metres, marked with the letters “St”."
+		},
+		"esterillas_apiladas": {
+			"nombre": "Stack of exercise mats",
+			"descripcion": "Pile of foam mats on top of one another, by the wall. Soft and low: the cane sinks in slightly.",
+			"etiquetas": ["exercise mats", "stack of mats"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Stack of exercise mats”: a rectangle, 1.80 by 0.60 metres, marked with the letters “Ea”."
+		},
+		"esterilla_extendida": {
+			"nombre": "Exercise mat laid out",
+			"descripcion": "Foam mat someone has left laid out. It does not block the way: it feels soft underfoot and may slide.",
+			"etiquetas": ["yoga mat", "exercise mat"],
+			"imagen": "Footprint of “Exercise mat laid out”: a rectangle, 0.60 by 1.80 metres, marked with the letters “Ee”."
+		},
+		"cuerdas_batida": {
+			"nombre": "Battle ropes on the floor",
+			"descripcion": "Two ropes as thick as an arm, anchored to the wall and laid out on the floor. They do not block the way, but foot and cane trip on them.",
+			"etiquetas": ["battle ropes", "training ropes"],
+			"aviso": "Ropes on the floor: lift your feet.",
+			"imagen": "Footprint of “Battle ropes on the floor”: a rectangle, 0.60 by 5.00 metres, marked with the letters “Cb”."
+		},
+		"correas_suspension": {
+			"nombre": "Hanging suspension straps",
+			"descripcion": "Two straps with handles hanging from the ceiling or a bar, from hip to head. The cane passes underneath; they tangle round your arm.",
+			"etiquetas": ["suspension straps", "suspension trainer"],
+			"acciones": {
+				"dep_colgarse": "Hang from it"
+			},
+			"imagen": "Footprint of “Hanging suspension straps”: a circle, 0.30 by 0.30 metres, hanging 0.80 metres above the floor, marked with the letters “Cs”."
+		},
+		"espejo_sala": {
+			"nombre": "Gym wall mirror",
+			"descripcion": "Large mirror covering the wall almost from the floor. Smooth and cold; with some sight, the room seems to carry on.",
+			"etiquetas": ["gym mirror", "wall mirror", "mirrored wall"],
+			"imagen": "Footprint of “Gym wall mirror”: a rectangle, 2.00 by 0.04 metres, hanging 0.15 metres above the floor, marked with the letters “Es”."
+		},
+		"dispensador_papel": {
+			"nombre": "Paper and sanitiser dispenser",
+			"descripcion": "Plastic box screwed to the wall or a pillar at chest height, holding the paper roll and the spray. It sticks out and the cane gives no warning.",
+			"etiquetas": ["paper dispenser", "sanitiser station", "wipe dispenser"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Paper and sanitiser dispenser”: a rectangle, 0.30 by 0.25 metres, hanging 1.00 metres above the floor, marked with the letters “Dp”."
+		},
+		"bascula_columna": {
+			"nombre": "Column scale",
+			"descripcion": "Low platform to stand on and a column with the display at chest height. The platform sticks out at floor level in front.",
+			"etiquetas": ["column scale", "weighing scale"],
+			"acciones": {
+				"dep_pesarse": "Weigh yourself"
+			},
+			"imagen": "Footprint of “Column scale”: a rectangle, 0.35 by 0.55 metres, marked with the letters “Bc”."
+		},
+		"fuente_botellas": {
+			"nombre": "Wall-mounted bottle filler",
+			"descripcion": "Steel fountain hung on the wall at waist height, with a recess for a bottle. Nothing below it: the cane does not find it.",
+			"etiquetas": ["bottle filling station", "wall drinking fountain"],
+			"acciones": {
+				"beber": "Drink",
+				"dep_rellenar": "Refill your bottle"
+			},
+			"imagen": "Footprint of “Wall-mounted bottle filler”: a rectangle, 0.45 by 0.40 metres, hanging 0.75 metres above the floor, marked with the letters “Fb”."
+		},
+		"mostrador_gimnasio": {
+			"nombre": "Gym reception desk",
+			"descripcion": "L-shaped counter at chest height, with a lower section and the wristband reader on the corner, which beeps when a card is passed.",
+			"etiquetas": ["gym reception", "front desk"],
+			"acciones": {
+				"validar": "Validate your ticket"
+			},
+			"imagen": "Footprint of “Gym reception desk”: an L shape, 2.80 by 1.60 metres, marked with the letters “Mg”."
+		},
+		"vaso_piscina": {
+			"nombre": "Swimming pool tank",
+			"descripcion": "The pool water, level with the surround. There is no railing: one more step and you fall in. You hear the water lapping the edge and falling into the gutter.",
+			"etiquetas": ["swimming pool", "pool tank", "25-metre pool"],
+			"variantes": {
+				"ensenanza": "Teaching pool",
+				"seis_calles": "25 m, six lanes",
+				"ocho_calles": "25 m, eight lanes",
+				"olimpica": "Olympic, 50 m"
+			},
+			"acciones": {
+				"dep_zambullirse": "Dive in"
+			},
+			"aviso": "Pool edge: stop. There is deep water ahead.",
+			"imagen": "Footprint of “Swimming pool tank”: a rectangle, 12.50 by 25.00 metres, marked with the letters “Vp”."
+		},
+		"rebosadero": {
+			"nombre": "Overflow gutter with grating",
+			"descripcion": "Narrow channel covered with a plastic grating running round the pool. Felt under a bare foot and with the cane tip: the water is one step away.",
+			"etiquetas": ["overflow gutter", "deck-level grating", "overflow channel"],
+			"aviso": "Overflow gutter: the water's edge is one step away.",
+			"imagen": "Footprint of “Overflow gutter with grating”: a rectangle, 5.00 by 0.30 metres, marked with the letters “Re”."
+		},
+		"murete_vaso": {
+			"nombre": "Raised pool wall",
+			"descripcion": "Tiled edge rising to knee height round the pool. It blocks the way and warns of the water; you can sit on it and swing your legs in.",
+			"etiquetas": ["raised pool edge", "pool wall", "upstand"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Raised pool wall”: a rectangle, 3.00 by 0.30 metres, marked with the letters “Mv”."
+		},
+		"rampa_piscina": {
+			"nombre": "Pool access ramp",
+			"descripcion": "Gentle ramp with handrails on both sides going gradually into the water. The floor slopes down and the water rises up your legs.",
+			"etiquetas": ["pool ramp", "sloped entry", "access ramp"],
+			"aviso": "Pool ramp: the floor slopes down into the water.",
+			"imagen": "Footprint of “Pool access ramp”: a rectangle, 1.50 by 7.50 metres, marked with the letters “Rp”."
+		},
+		"poyete_salida": {
+			"nombre": "Starting block",
+			"descripcion": "Pedestal with its platform sloping towards the water, right on the edge, knee to thigh high. One per lane, in a row.",
+			"etiquetas": ["starting block", "starting platform", "dive block"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down",
+				"dep_zambullirse": "Dive in"
+			},
+			"imagen": "Footprint of “Starting block”: a trapezoid, narrower at the back, 0.50 by 0.70 metres, marked with the letters “Ps”."
+		},
+		"trampolin_piscina": {
+			"nombre": "Diving springboard",
+			"descripcion": "Long, springy board jutting out over the water, with a ladder and handrails at its base. The one-metre board is at hip height.",
+			"etiquetas": ["springboard", "diving board"],
+			"variantes": {
+				"un_metro": "One metre",
+				"tres_metros": "Three metres"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down",
+				"dep_zambullirse": "Dive in"
+			},
+			"imagen": "Footprint of “Diving springboard”: a T shape, 1.20 by 4.80 metres, marked with the letters “Tp”."
+		},
+		"torre_saltos": {
+			"nombre": "Diving tower",
+			"descripcion": "Concrete tower with stairs and platforms at several heights jutting out over the diving pit. At ground level it is a solid block to walk round.",
+			"etiquetas": ["diving tower", "diving platform"],
+			"imagen": "Footprint of “Diving tower”: a T shape, 4.00 by 5.00 metres, marked with the letters “Ts”."
+		},
+		"corchera_tendida": {
+			"nombre": "Lane rope, rigged",
+			"descripcion": "String of plastic floats separating two lanes from one end of the pool to the other. It is in the water: you touch it with your hand while swimming.",
+			"etiquetas": ["lane rope", "lane line", "lane divider"],
+			"imagen": "Footprint of “Lane rope, rigged”: a rectangle, 0.15 by 25.00 metres, marked with the letters “Ct”."
+		},
+		"corchera_carrete": {
+			"nombre": "Lane rope on its storage reel",
+			"descripcion": "Huge wheeled reel on which the lane ropes are wound, taller than waist height, parked on the pool surround.",
+			"etiquetas": ["lane rope reel", "storage reel"],
+			"imagen": "Footprint of “Lane rope on its storage reel”: a rectangle, 1.80 by 1.30 metres, marked with the letters “Cc”."
+		},
+		"jaula_material": {
+			"nombre": "Cage of kickboards, noodles and pull buoys",
+			"descripcion": "Wheeled mesh trolley full of foam equipment. The noodles stick out of the top, soft, at face height.",
+			"etiquetas": ["swim equipment cage", "kickboard trolley", "pool noodles"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Cage of kickboards, noodles and pull buoys”: a rectangle, 1.20 by 0.70 metres, marked with the letters “Jm”."
+		},
+		"flotadores_colgados": {
+			"nombre": "Hanging buoyancy vests and belts",
+			"descripcion": "Row of wall hooks with foam vests and belts hanging from hip to head height. Soft; the cane passes underneath.",
+			"etiquetas": ["buoyancy vests", "flotation belts", "float rack"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Hanging buoyancy vests and belts”: a rectangle, 1.50 by 0.30 metres, hanging 0.80 metres above the floor, marked with the letters “Fc”."
+		},
+		"escalerilla_piscina": {
+			"nombre": "Pool ladder",
+			"descripcion": "Two curved steel tubes rising from the edge to waist height; between them the rungs go down into the water. Cold and wet.",
+			"etiquetas": ["pool ladder", "pool steps", "grab rails"],
+			"acciones": {
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Pool ladder”: a U open at the front, 0.50 by 0.70 metres, marked with the letters “Ep”."
+		},
+		"silla_socorrista": {
+			"nombre": "Lifeguard high chair",
+			"descripcion": "Chair on a tower with steps, its seat above head height. At the bottom the legs spread wider than the seat.",
+			"etiquetas": ["lifeguard chair", "lifeguard tower"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Lifeguard high chair”: a trapezoid, narrower at the back, 0.90 by 1.20 metres, marked with the letters “Ss”."
+		},
+		"aro_salvavidas": {
+			"nombre": "Lifebuoy on the wall",
+			"descripcion": "Rigid ring hung on a hook at chest height, with a coiled rope. It sticks out a hand's width and the cane passes underneath.",
+			"etiquetas": ["lifebuoy", "life ring"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Lifebuoy on the wall”: a rectangle, 0.75 by 0.12 metres, hanging 1.00 metres above the floor, marked with the letters “As”."
+		},
+		"pertiga_rescate": {
+			"nombre": "Rescue pole on the wall",
+			"descripcion": "Long aluminium pole with a hook at its tip, resting horizontally on two brackets at head height.",
+			"etiquetas": ["rescue pole", "reaching pole", "shepherd's crook"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Rescue pole on the wall”: a rectangle, 3.50 by 0.08 metres, hanging 1.60 metres above the floor, marked with the letters “Pr”."
+		},
+		"grua_piscina": {
+			"nombre": "Hydraulic pool lift",
+			"descripcion": "Steel column at the edge with an arm from which a plastic chair hangs. The chair swings out over the water and lowers; at rest it sits over the surround.",
+			"etiquetas": ["pool lift", "pool hoist", "hydraulic chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Hydraulic pool lift”: an L shape, 0.70 by 1.30 metres, marked with the letters “Gp”."
+		},
+		"ducha_piscina": {
+			"nombre": "Poolside entry shower",
+			"descripcion": "Column with a push button at hand height and a shower head above. Press it and water falls for half a minute, leaving the floor around it wet.",
+			"etiquetas": ["pool shower", "pre-swim shower"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Poolside entry shower”: a circle, 0.30 by 0.30 metres, marked with the letters “Dp”."
+		},
+		"pediluvio": {
+			"nombre": "Footbath",
+			"descripcion": "Dip in the floor filled with a finger's depth of water that you must cross to reach the pool. You feel the step down and the water on your feet.",
+			"etiquetas": ["footbath", "foot wash"],
+			"aviso": "Footbath: the floor steps down and there is water.",
+			"imagen": "Footprint of “Footbath”: a rectangle, 1.50 by 2.00 metres, marked with the letters “Pe”."
+		},
+		"banco_piscina": {
+			"nombre": "Poolside bench",
+			"descripcion": "Backless plastic bench by the wall, with towels on top and flip-flops underneath. Smooth and sometimes wet.",
+			"etiquetas": ["poolside bench", "pool bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Poolside bench”: a rectangle, 1.80 by 0.40 metres, marked with the letters “Bp”."
+		},
+		"tobogan_acuatico": {
+			"nombre": "Water slide",
+			"descripcion": "Fibreglass chute with water running down it, a ladder behind and the exit over the pool. You hear the water running down.",
+			"etiquetas": ["water slide", "flume", "pool slide"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Water slide”: an L shape, 1.50 by 4.50 metres, marked with the letters “Ta”."
+		},
+		"jacuzzi": {
+			"nombre": "Whirlpool spa",
+			"descripcion": "Small tank of warm water sunk into the floor, with a bench inside. It bubbles constantly: you hear it before reaching the edge.",
+			"etiquetas": ["jacuzzi", "hot tub", "whirlpool"],
+			"aviso": "Edge of the whirlpool: there are steps down into the water.",
+			"imagen": "Footprint of “Whirlpool spa”: an octagon, 2.50 by 2.50 metres, marked with the letters “Ja”."
+		},
+		"sauna": {
+			"nombre": "Sauna cabin",
+			"descripcion": "Cabin of wooden boards with a self-closing door. Inside it is very hot, with tiered benches; the stone heater burns.",
+			"etiquetas": ["sauna", "sauna cabin"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Sauna cabin”: a rectangle, 2.00 by 2.00 metres, marked with the letters “Sa”."
+		},
+		"bano_turco": {
+			"nombre": "Steam room",
+			"descripcion": "Tiled cabin with a glass door, full of steam. You hear the nozzle hissing; the benches and the floor are wet and hot.",
+			"etiquetas": ["steam room", "Turkish bath", "hammam"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Steam room”: a rectangle with cut corners, 2.50 by 2.20 metres, marked with the letters “Bt”."
+		},
+		"banco_doble_vestuario": {
+			"nombre": "Double changing bench with central coat rail",
+			"descripcion": "Island bench with a seat on each side and, in the middle, a tall frame with hooks and a bag shelf at head height. You can walk all the way round it.",
+			"etiquetas": ["double changing bench", "island bench with hooks"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Double changing bench with central coat rail”: a rectangle, 1.50 by 0.80 metres, marked with the letters “Bd”."
+		},
+		"banco_simple_vestuario": {
+			"nombre": "Plain changing bench",
+			"descripcion": "Slatted bench with no back on metal legs, at knee height, with trainers and bags underneath.",
+			"etiquetas": ["changing bench", "slatted bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Plain changing bench”: a rectangle, 1.50 by 0.35 metres, marked with the letters “Bs”."
+		},
+		"percha_alta_vestuario": {
+			"nombre": "High changing-room hook rail with shelf",
+			"descripcion": "Mesh shelf with a row of hooks beneath, fixed to the wall at head height above the bench. It sticks out a good hand's width.",
+			"etiquetas": ["hook rail", "changing-room hooks", "coat rail with shelf"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “High changing-room hook rail with shelf”: a rectangle, 1.50 by 0.30 metres, hanging 1.60 metres above the floor, marked with the letters “Pa”."
+		},
+		"taquillas_con_banco": {
+			"nombre": "Changing-room locker block with bench",
+			"descripcion": "Tall sheet-metal lockers mounted on a continuous bench that sticks out in front at knee height. You meet the bench first; the doors clang.",
+			"etiquetas": ["changing-room lockers", "lockers with bench", "gym lockers"],
+			"variantes": {
+				"dos_puertas": "Two doors",
+				"cuatro_puertas": "Four doors",
+				"seis_puertas": "Six doors"
+			},
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Changing-room locker block with bench”: a rectangle, 1.20 by 0.80 metres, marked with the letters “Tc”."
+		},
+		"taquillas_bajas": {
+			"nombre": "Low changing-room locker block",
+			"descripcion": "Half-height sheet-metal lockers, waist high, with a flat top where bags are left.",
+			"etiquetas": ["low lockers", "half-height lockers"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Low changing-room locker block”: a rectangle, 0.90 by 0.50 metres, marked with the letters “Tb”."
+		},
+		"cabina_cambio": {
+			"nombre": "Changing cubicle",
+			"descripcion": "Cubicle of smooth panels with a door and a small bench inside. The panels stop short of the floor: the cane goes a hand's width underneath.",
+			"etiquetas": ["changing cubicle", "changing cabin"],
+			"variantes": {
+				"normal": "Standard",
+				"adaptada": "Accessible"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Changing cubicle”: a rectangle, 1.10 by 1.40 metres, marked with the letters “Cc”."
+		},
+		"duchas_colectivas": {
+			"nombre": "Open row of showers",
+			"descripcion": "Open area with several shower heads on the wall and the floor sloping to a drain. It does not block the way: the floor is wet and slippery.",
+			"etiquetas": ["communal showers", "open showers", "shower area"],
+			"variantes": {
+				"dos_duchas": "Two showers",
+				"cuatro_duchas": "Four showers",
+				"seis_duchas": "Six showers"
+			},
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"aviso": "Shower area: the floor is wet.",
+			"imagen": "Footprint of “Open row of showers”: a rectangle, 3.60 by 1.00 metres, marked with the letters “Dc”."
+		},
+		"duchas_separadores": {
+			"nombre": "Changing-room showers with partitions",
+			"descripcion": "Row of showers divided by panels sticking out from the wall like the teeth of a comb. You walk straight in between two panels.",
+			"etiquetas": ["shower stalls", "partitioned showers"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Changing-room showers with partitions”: a comb: a bar with bodies sticking out to the front, 2.70 by 1.10 metres, marked with the letters “Ds”."
+		},
+		"ducha_adaptada": {
+			"nombre": "Accessible changing-room shower with fold-down seat",
+			"descripcion": "Plastic seat folding down from the wall at knee height, with grab bars on either side. Folded, it barely sticks out.",
+			"etiquetas": ["accessible shower", "fold-down shower seat"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Accessible changing-room shower with fold-down seat”: a rectangle, 0.45 by 0.45 metres, hanging 0.45 metres above the floor, marked with the letters “Da”."
+		},
+		"tarima_rejilla": {
+			"nombre": "Changing-room duckboard",
+			"descripcion": "Plastic or slatted grating laid on the floor in front of the showers to keep feet out of the water. You feel the small step and it sounds hollow.",
+			"etiquetas": ["duckboard", "shower grating", "anti-slip mat"],
+			"imagen": "Footprint of “Changing-room duckboard”: a rectangle, 1.00 by 0.50 metres, marked with the letters “Tr”."
+		},
+		"secamanos_vestuario": {
+			"nombre": "Changing-room hand dryer",
+			"descripcion": "Metal box on the wall at chest height that blows air when you put your hands under it. The cane passes beneath without touching it.",
+			"etiquetas": ["hand dryer", "air hand dryer"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Changing-room hand dryer”: a rectangle, 0.28 by 0.22 metres, hanging 1.10 metres above the floor, marked with the letters “Sv”."
+		},
+		"centrifugadora": {
+			"nombre": "Swimsuit spin dryer",
+			"descripcion": "Steel tub fixed to the wall at waist height. Put your swimsuit in, press the lid down and it spins with a whine for a few seconds.",
+			"etiquetas": ["swimsuit dryer", "swimsuit spinner"],
+			"acciones": {
+				"dep_escurrir": "Spin your swimsuit dry"
+			},
+			"imagen": "Footprint of “Swimsuit spin dryer”: a circle, 0.30 by 0.35 metres, hanging 0.90 metres above the floor, marked with the letters “Ce”."
+		},
+		"tocador_vestuario": {
+			"nombre": "Changing-room vanity shelf with mirror",
+			"descripcion": "Long shelf cantilevered from the wall at waist height, with no legs and a mirror above. The cane goes underneath; your hip finds it.",
+			"etiquetas": ["vanity shelf", "grooming counter", "mirror shelf"],
+			"imagen": "Footprint of “Changing-room vanity shelf with mirror”: a rectangle, 1.50 by 0.40 metres, hanging 0.80 metres above the floor, marked with the letters “Tv”."
+		},
+		"camilla_masaje": {
+			"nombre": "Massage table",
+			"descripcion": "Padded table with a face hole at one end, on folding legs. Hollow underneath.",
+			"etiquetas": ["massage table", "treatment table"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Massage table”: a rectangle with rounded corners, 0.70 by 1.90 metres, marked with the letters “Cm”."
+		},
+		"botiquin_pared": {
+			"nombre": "Sports facility wall first-aid cabinet",
+			"descripcion": "Small sheet-metal cabinet hung on the wall at face height, with a door that clangs. The cane does not detect it.",
+			"etiquetas": ["first-aid cabinet", "first-aid box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Sports facility wall first-aid cabinet”: a rectangle, 0.45 by 0.18 metres, hanging 1.30 metres above the floor, marked with the letters “Bp”."
+		},
+		"grada_hormigon": {
+			"nombre": "Section of concrete terrace",
+			"descripcion": "Wide, high concrete steps where spectators sit: each row is a knee-high step. You climb it like a staircase with very long treads.",
+			"etiquetas": ["concrete terrace", "stand", "bleachers"],
+			"variantes": {
+				"dos_filas": "Two rows",
+				"tres_filas": "Three rows",
+				"seis_filas": "Six rows"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Section of concrete terrace”: a rectangle, 4.00 by 2.40 metres, marked with the letters “Gh”."
+		},
+		"grada_telescopica": {
+			"nombre": "Retractable seating",
+			"descripcion": "Seating that stores like a drawer: folded, it is a tall, flat cabinet against the wall; unfolded, stepped rows of seats reaching out onto the court.",
+			"etiquetas": ["retractable seating", "telescopic stand", "bleachers"],
+			"variantes": {
+				"plegada": "Folded",
+				"desplegada": "Unfolded"
+			},
+			"acciones": {
+				"desplegar": "Unfold",
+				"plegar": "Fold"
+			},
+			"imagen": "Footprint of “Retractable seating”: a rectangle, 6.00 by 4.00 metres, marked with the letters “Gt”."
+		},
+		"grada_portatil": {
+			"nombre": "Portable metal bleachers",
+			"descripcion": "Three or four rows of planks on a tubular frame, open underneath and behind. It rings like metal and shakes as you climb.",
+			"etiquetas": ["portable bleachers", "demountable stand"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Portable metal bleachers”: a rectangle, 3.00 by 2.00 metres, marked with the letters “Gp”."
+		},
+		"fila_asientos_grada": {
+			"nombre": "Row of stand seats",
+			"descripcion": "Hard plastic seats bolted in a row on the terrace, side by side. Tip-up ones spring up by themselves and leave more room to pass.",
+			"etiquetas": ["stand seats", "stadium seats", "bleacher seats"],
+			"variantes": {
+				"sin_respaldo": "Backless",
+				"abatibles": "Tip-up with backrest"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Row of stand seats”: a rectangle, 2.50 by 0.45 metres, marked with the letters “Fa”."
+		},
+		"antepecho_cristal": {
+			"nombre": "Stand glass balustrade",
+			"descripcion": "Glass panel at chest height along the edge of the stand, with a metal handrail on top. It cannot be seen; trail your hand along the handrail.",
+			"etiquetas": ["glass balustrade", "stand railing", "glass guard"],
+			"imagen": "Footprint of “Stand glass balustrade”: a rectangle, 2.00 by 0.05 metres, marked with the letters “Ac”."
+		},
+		"vomitorio": {
+			"nombre": "Vomitory",
+			"descripcion": "Passage cutting through the stand: a short corridor between two walls with a low ceiling, emerging halfway up the seating. There are steps on the far side.",
+			"etiquetas": ["vomitory", "stand entrance", "access tunnel"],
+			"aviso": "Vomitory: you are coming out onto the stand, there are steps.",
+			"imagen": "Footprint of “Vomitory”: a rectangle, 2.40 by 4.00 metres, marked with the letters “Vo”."
+		},
+		"tunel_vestuarios": {
+			"nombre": "Players' tunnel",
+			"descripcion": "Canvas corridor on hoops leading from the stand to the edge of the pitch. Inside, sound is deadened and the walls give when touched.",
+			"etiquetas": ["players' tunnel", "retractable tunnel"],
+			"aviso": "Players' tunnel: narrow passage between canvas walls.",
+			"imagen": "Footprint of “Players' tunnel”: a rectangle, 2.50 by 6.00 metres, marked with the letters “Tv”."
+		}
+	}
+}

@@ -1,0 +1,62 @@
+OpenAL Soft y perfiles de cabeza (HRTF) de EntornoLab
+======================================================
+
+Esta carpeta contiene bibliotecas y datos de terceros que EntornoLab carga en
+tiempo de ejecución para el sonido binaural (motor «openal»).
+
+soft_oal.dll
+------------
+OpenAL Soft 1.25.2, 64 bits (https://openal-soft.org, https://github.com/kcat/openal-soft).
+Licencia: GNU LGPL, versión 2 o posterior (LICENCIA_OpenAL_Soft_LGPL.txt).
+
+EntornoLab NO enlaza la biblioteca dentro de su ejecutable: la carga desde este
+fichero suelto con ctypes (app/audio/_openal.py). Puede sustituirla por otra
+compilación de OpenAL Soft compatible (misma API, 64 bits) copiándola aquí con
+el mismo nombre; es el derecho que le da la LGPL. El código fuente de OpenAL
+Soft está en la dirección de arriba.
+
+Procedencia de este fichero: es el mismo binario (SHA-256
+3963b06e319180700be0bcc0d027336664bb3a4975876b4a5442f10746fab5b4) que usan
+Puerto Bravo (terceros/openal_soft) y Reconocedor de Ciudades (rueda
+openal_soft-1.25.2+reconocedor); las dos copias del autor son idénticas.
+
+alsoft.ini
+----------
+Configuración de OpenAL Soft propia de EntornoLab. El programa apunta la
+variable ALSOFT_CONF a este fichero (solo dentro de su propio proceso) y
+ALSOFT_LOCAL_PATH a la carpeta hrtf. No se escribe nada fuera de la carpeta
+del programa.
+
+hrtf/*.mhr: perfiles de cabeza
+------------------------------
+Convertidos con «makemhr» de OpenAL Soft 1.25.2 a 44,1 kHz desde ficheros SOFA
+públicos (https://www.sofaconventions.org). Además está el perfil «Built-In
+HRTF», que va dentro de la DLL (en total, ocho cabezas).
+
+  kemar_oreja_normal.mhr  MIT KEMAR, oreja normal
+      https://sofacoustics.org/data/database/mit/mit_kemar_normal_pinna.sofa
+  kemar_oreja_grande.mhr  MIT KEMAR, oreja grande
+      https://sofacoustics.org/data/database/mit/mit_kemar_large_pinna.sofa
+  ku100.mhr               SADIE II, cabeza artificial Neumann KU100 (D1)
+      https://sofacoustics.org/data/database/sadie/D1_48K_24bit_256tap_FIR_SOFA.sofa
+  persona_1.mhr           SADIE II, persona H3
+      https://sofacoustics.org/data/database/sadie/H3_48K_24bit_256tap_FIR_SOFA.sofa
+  persona_2.mhr           SADIE II, persona H4
+      https://sofacoustics.org/data/database/sadie/H4_48K_24bit_256tap_FIR_SOFA.sofa
+  persona_3.mhr           SADIE II, persona H5
+      https://sofacoustics.org/data/database/sadie/H5_48K_24bit_256tap_FIR_SOFA.sofa
+  persona_4.mhr           SADIE II, persona H6
+      https://sofacoustics.org/data/database/sadie/H6_48K_24bit_256tap_FIR_SOFA.sofa
+
+Autores de las medidas:
+- MIT KEMAR: Bill Gardner y Keith Martin, MIT Media Lab (maniquí KEMAR), 1994.
+  Los autores permiten su uso sin restricciones citando la procedencia.
+- SADIE II: Universidad de York, AudioLab (https://www.york.ac.uk/sadie-project/).
+  Publicada con licencia Apache 2.0.
+
+Consulte las condiciones de uso vigentes de cada base de datos en su sitio
+antes de redistribuir estos perfiles fuera de EntornoLab.
+
+Para añadir otra cabeza: convierta un fichero SOFA con «makemhr» (viene con
+OpenAL Soft) y copie el .mhr en hrtf/. Aparecerá en las preferencias con el
+nombre del fichero.

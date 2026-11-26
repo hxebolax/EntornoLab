@@ -1,0 +1,112 @@
+Paquete de sonidos «Grabado» de EntornoLab: grabaciones de terceros
+===================================================================
+
+Ficheros de data/sounds/grabado. Son recortes de grabaciones de colecciones de
+sonidos libres, montados con tools/montar_paquete_grabado.py a partir de la
+tabla de tools/receta_grabado.py. A cada grabación solo se le ha hecho esto:
+paso a mono (los ambientes siguen en estéreo), remuestreo a 44,1 kHz, recorte
+de un tramo, fundidos y una ganancia. Los ficheros originales no viajan con el
+programa.
+
+El detalle sonido a sonido (fichero original, colección, autor, licencia,
+página de origen y tramo tomado) está en data/sounds/grabado/CREDITOS.txt y,
+en forma de datos, en data/sounds/grabado/receta.json. Este fichero es el
+resumen.
+
+Licencia de todas las grabaciones
+---------------------------------
+
+Creative Commons Zero, CC0 1.0 Universal (dedicación al dominio público):
+
+  https://creativecommons.org/publicdomain/zero/1.0/deed.es
+  https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Quien publica una obra con CC0 renuncia, hasta donde la ley lo permite, a
+todos sus derechos de autor y derechos conexos sobre ella. Cualquiera puede
+copiarla, modificarla, distribuirla y usarla, también con fines comerciales,
+sin pedir permiso y sin obligación de citar al autor. La obra se ofrece tal
+cual, sin garantía. CC0 no afecta a las marcas ni a las patentes, ni a los
+derechos que otras personas puedan tener sobre la obra o sobre su uso.
+
+CC0 es compatible con la GPL: estas grabaciones pueden viajar con EntornoLab
+sin condiciones añadidas. Los recortes del paquete se publican con la misma
+dedicación (CC0 1.0). No se usa ninguna grabación con cláusula «no comercial»
+o «sin obra derivada», ninguna «solo para uso personal», ninguna sacada de un
+juego comercial y ninguna de procedencia o licencia desconocida.
+
+Colecciones usadas
+------------------
+
+Con un fichero de licencia dentro de la propia colección, o con un inventario
+del autor de EntornoLab que da título, autor, licencia y página de cada una:
+
+  «42 snow and gravel footsteps», grabación de Corsica_S, recortes de Iwan
+      Gabovitch (qubodup). CC0 según el readme.txt de la colección.
+      https://opengameart.org/content/42-snow-and-gravel-footsteps
+  «50 RPG sound effects (RPG Audio)», de Kenney Vleugels (www.kenney.nl).
+      CC0 según el license.txt de la colección.
+      https://opengameart.org/content/50-rpg-sound-effects
+  «51 UI sound effects (UI Audio)», de Kenney Vleugels (www.kenney.nl).
+      El readme.txt de la colección permite el uso personal y comercial sin
+      obligación de citar; publicada como CC0.
+      https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks
+  «Ticking clock». CC0 según el LICENSE.txt de la colección.
+      https://opengameart.org/content/ticking-clock-0
+  BigSoundBank.com (Joseph SARDIN y colaboradores): «Petite rue parisienne»,
+      «Village centre ville #2», «Moteur de camion #1», «Refrigerator» y
+      «Church Bell». En la página de cada una figura «License: CC0 (public
+      domain)» (leído el 18 de noviembre de 2026). https://bigsoundbank.com
+  Freesound: «Day Traffic - City Life», de Liljendal; «Nõmme_Morning_June.wav»,
+      de Islabonita; «St_Stephen's_Green_Ambiance_Dublin_04», de
+      SignatureSoundsOrg. Las tres con «CC0 1.0 (Creative Commons 0)» en su
+      página. Se parte de la vista previa de alta calidad (OGG).
+      https://freesound.org
+
+Comprobadas en su página de OpenGameArt el 26 de noviembre de 2026
+(«License(s): CC0» y el autor que se indica):
+
+  «100 CC0 SFX #2», de rubberduck
+      https://opengameart.org/content/100-cc0-sfx-2
+  «100 CC0 metal and wood SFX», de rubberduck
+      https://opengameart.org/content/100-cc0-metal-and-wood-sfx
+  «40 CC0 water, splash, slime SFX», de rubberduck
+      https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+  «Fantozzi's Footsteps (Grass/Sand & Stone)», de Fantozzi (subida por
+      qubodup; tomas sacadas de un paquete que Fantozzi publicó en Freesound
+      con CC0): los pasos sobre arena y sobre acera.
+      https://opengameart.org/content/fantozzis-footsteps-grasssand-stone
+
+Descargadas de Freesound para este paquete (noviembre de 2026), todas con
+«Creative Commons 0» en su página, que se volvió a leer el 26 de noviembre de
+2026. Se parte de la vista previa de alta calidad (OGG), lo único que Freesound
+deja descargar sin iniciar sesión. La página de cada grabación va en su línea
+de CREDITOS.txt; aquí, autor y título:
+
+  Pasos: SpliceSound («Footsteps, Tile, Male Tennis Shoes, Medium Pace»,
+      «01-25 Footsteps, Rug, Slippers, Medium Pace»), vicleb («High heels on
+      wood»), florianreichelt («Footsteps on concrete»), Rimmer («Walking
+      asphalt»), kyles («footsteps shoes dirt walk»), Nox_Sound
+      («Footsteps_Mountain_Boots_Grass_Mono»), SoftDistortionFX («Metal
+      Footsteps») y patchytherat («puddle footsteps»).
+  Golpes y roces: Alexbuk («BRICK taps and hits», «Brick scrapes»),
+      dvandevorst («rubbed wood on wood»), ocramrudiger («Hitting and rubbing
+      a metallic railing»), trexlasso («SLIDING ON GLASS») y newagesoup
+      («VSH-53-plastic-hand-rub-squeak-short»).
+  Puertas, ascensor y chasquido: CastIronCarousel («Locked doorknob rattle
+      1»), Stroms («Automatic Door»), Rshai («Opening an elevator door
+      sample»), JoanCalsina («Subtle quiet elevator ride») y fleurescence
+      («tongue click»).
+  Tráfico, monedas y máquinas: Breviceps («Passing Car (Wet road)»), kyles
+      («scooter pass by medium speed echo off building»), LamaMakesMusic
+      («Coins_Table_Short») y Filmscore («Vending Machines in Hotel»).
+  Ambientes: leonelmail («Roomtone Bedroom Yew»), Chelly01 («Office
+      ambience»), Sheyvan («Ambience Empty Office Hallway (Stereo)») y
+      brunoboselli («Kitchen Ambience»).
+      https://freesound.org
+
+No se ha usado ninguna grabación con licencia CC BY (que obligaría a un texto
+de atribución), ni ninguna NC, ND o SA.
+
+Si alguna de estas licencias resultara no ser la que consta, basta con borrar
+los ficheros afectados de data/sounds/grabado: esos sonidos volverán a sonar
+con el paquete por defecto.

@@ -1,0 +1,1825 @@
+{
+	"formato": 1,
+	"grupos": [
+		{
+			"id": "orientacion",
+			"nombre": "Orientación: balizas, bastón sonoro, brújula y eco"
+		},
+		{
+			"id": "movimiento",
+			"nombre": "Tus pasos sobre cada suelo"
+		},
+		{
+			"id": "choques",
+			"nombre": "Choques y roces con paredes y objetos"
+		},
+		{
+			"id": "puertas",
+			"nombre": "Puertas, escaleras, rampas y ascensor"
+		},
+		{
+			"id": "premios",
+			"nombre": "Premios, logros y pistas"
+		},
+		{
+			"id": "calle",
+			"nombre": "La calle: semáforos, tráfico y bordillos"
+		},
+		{
+			"id": "fuentes",
+			"nombre": "Cosas que suenan en los lugares"
+		},
+		{
+			"id": "ambientes",
+			"nombre": "Ambientes de fondo"
+		},
+		{
+			"id": "interfaz",
+			"nombre": "Menús"
+		}
+	],
+	"sonidos": {
+		"baliza/pulso": {
+			"nombre": "Baliza",
+			"explicacion": "Un pulso suave que suena desde tu destino. Gírate hasta oírlo delante y camina hacia él.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "baliza/pulso.flac",
+			"duracion": 0.35
+		},
+		"baliza/alineado": {
+			"nombre": "Baliza, bien encaminado",
+			"explicacion": "El mismo pulso, más agudo y brillante: estás mirando hacia el destino.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "baliza/alineado.flac",
+			"duracion": 0.35
+		},
+		"baliza/detras": {
+			"nombre": "Baliza, destino a tu espalda",
+			"explicacion": "Dos notas graves que bajan: el destino queda detrás de ti. Date la vuelta.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "baliza/detras.flac",
+			"duracion": 0.4
+		},
+		"baliza/cerca": {
+			"nombre": "Baliza, destino cerca",
+			"explicacion": "Dos pulsos rápidos y agudos: estás a pocos pasos del destino.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "baliza/cerca.flac",
+			"duracion": 0.3
+		},
+		"baliza/llegada": {
+			"nombre": "Llegada",
+			"explicacion": "Cuatro notas que suben: has llegado al destino.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "baliza/llegada.flac",
+			"duracion": 1.0
+		},
+		"sonda/pared": {
+			"nombre": "Bastón sonoro, pared",
+			"explicacion": "Un tono lleno y corto: el bastón ha encontrado una pared. Más agudo cuanto más cerca.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/pared.flac",
+			"duracion": 0.3
+		},
+		"sonda/puerta": {
+			"nombre": "Bastón sonoro, puerta",
+			"explicacion": "Dos toques de madera, el segundo más agudo: en esa dirección hay una puerta o un hueco para pasar.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/puerta.flac",
+			"duracion": 0.3
+		},
+		"sonda/objeto": {
+			"nombre": "Bastón sonoro, objeto",
+			"explicacion": "Una nota hueca, como un xilófono: hay un mueble o un objeto en esa dirección.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/objeto.flac",
+			"duracion": 0.3
+		},
+		"sonda/libre": {
+			"nombre": "Bastón sonoro, paso libre",
+			"explicacion": "Un soplo de aire, sin nota: no hay nada en esa dirección hasta donde alcanza el bastón.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/libre.flac",
+			"duracion": 0.3
+		},
+		"sonda/escalon": {
+			"nombre": "Bastón sonoro, escalón",
+			"explicacion": "Tres toques rápidos que suben: hay una escalera o un escalón.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/escalon.flac",
+			"duracion": 0.3
+		},
+		"sonda/bordillo": {
+			"nombre": "Bastón sonoro, bordillo",
+			"explicacion": "Un golpe grave y dos chasquidos: hay un bordillo, el borde de la acera.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/bordillo.flac",
+			"duracion": 0.3
+		},
+		"sonda/cerca": {
+			"nombre": "Distancia: cerca",
+			"explicacion": "Tres pitidos agudos: lo que señalas está a menos de dos pasos.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/cerca.flac",
+			"duracion": 0.35
+		},
+		"sonda/media": {
+			"nombre": "Distancia: media",
+			"explicacion": "Dos pitidos medios: lo que señalas está a unos pocos metros.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/media.flac",
+			"duracion": 0.26
+		},
+		"sonda/lejos": {
+			"nombre": "Distancia: lejos",
+			"explicacion": "Un pitido grave: lo que señalas está lejos.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "sonda/lejos.flac",
+			"duracion": 0.17
+		},
+		"brujula/norte": {
+			"nombre": "Brújula, norte",
+			"explicacion": "Una nota aguda y sola, que suena desde el norte.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "brujula/norte.flac",
+			"duracion": 0.26
+		},
+		"brujula/este": {
+			"nombre": "Brújula, este",
+			"explicacion": "Dos notas iguales, que suenan desde el este.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "brujula/este.flac",
+			"duracion": 0.34
+		},
+		"brujula/sur": {
+			"nombre": "Brújula, sur",
+			"explicacion": "Una nota grave y sola, que suena desde el sur.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "brujula/sur.flac",
+			"duracion": 0.26
+		},
+		"brujula/oeste": {
+			"nombre": "Brújula, oeste",
+			"explicacion": "Tres notas iguales, que suenan desde el oeste.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "brujula/oeste.flac",
+			"duracion": 0.42
+		},
+		"brujula/noreste": {
+			"nombre": "Brújula, noreste",
+			"explicacion": "La nota del norte y luego la del este.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "brujula/noreste.flac",
+			"duracion": 0.34
+		},
+		"brujula/sureste": {
+			"nombre": "Brújula, sureste",
+			"explicacion": "La nota del sur y luego la del este.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "brujula/sureste.flac",
+			"duracion": 0.34
+		},
+		"brujula/suroeste": {
+			"nombre": "Brújula, suroeste",
+			"explicacion": "La nota del sur y luego la del oeste.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "brujula/suroeste.flac",
+			"duracion": 0.34
+		},
+		"brujula/noroeste": {
+			"nombre": "Brújula, noroeste",
+			"explicacion": "La nota del norte y luego la del oeste.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "brujula/noroeste.flac",
+			"duracion": 0.34
+		},
+		"eco/chasquido": {
+			"nombre": "Chasquido para el eco",
+			"explicacion": "Un chasquido de lengua. Escucha cómo responde el lugar: seco en una habitación pequeña, con cola en una sala grande o una escalera.",
+			"grupo": "orientacion",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "eco/chasquido.flac",
+			"duracion": 0.06
+		},
+		"pasos/baldosa_izq_1": {
+			"nombre": "Paso sobre baldosa, pie izquierdo, variante 1",
+			"explicacion": "Un toque seco y claro. Lo oyes a tus pies cada vez que das un paso sobre baldosa.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/baldosa_izq_1.flac",
+			"duracion": 0.14
+		},
+		"pasos/baldosa_izq_2": {
+			"nombre": "Paso sobre baldosa, pie izquierdo, variante 2",
+			"explicacion": "Un toque seco y claro. Lo oyes a tus pies cada vez que das un paso sobre baldosa.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/baldosa_izq_2.flac",
+			"duracion": 0.14
+		},
+		"pasos/baldosa_izq_3": {
+			"nombre": "Paso sobre baldosa, pie izquierdo, variante 3",
+			"explicacion": "Un toque seco y claro. Lo oyes a tus pies cada vez que das un paso sobre baldosa.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/baldosa_izq_3.flac",
+			"duracion": 0.14
+		},
+		"pasos/baldosa_der_1": {
+			"nombre": "Paso sobre baldosa, pie derecho, variante 1",
+			"explicacion": "Un toque seco y claro. Lo oyes a tus pies cada vez que das un paso sobre baldosa.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/baldosa_der_1.flac",
+			"duracion": 0.14
+		},
+		"pasos/baldosa_der_2": {
+			"nombre": "Paso sobre baldosa, pie derecho, variante 2",
+			"explicacion": "Un toque seco y claro. Lo oyes a tus pies cada vez que das un paso sobre baldosa.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/baldosa_der_2.flac",
+			"duracion": 0.14
+		},
+		"pasos/baldosa_der_3": {
+			"nombre": "Paso sobre baldosa, pie derecho, variante 3",
+			"explicacion": "Un toque seco y claro. Lo oyes a tus pies cada vez que das un paso sobre baldosa.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/baldosa_der_3.flac",
+			"duracion": 0.14
+		},
+		"pasos/madera_izq_1": {
+			"nombre": "Paso sobre madera, pie izquierdo, variante 1",
+			"explicacion": "Un golpe hueco, con algo de eco de tarima. Lo oyes a tus pies cada vez que das un paso sobre madera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/madera_izq_1.flac",
+			"duracion": 0.19
+		},
+		"pasos/madera_izq_2": {
+			"nombre": "Paso sobre madera, pie izquierdo, variante 2",
+			"explicacion": "Un golpe hueco, con algo de eco de tarima. Lo oyes a tus pies cada vez que das un paso sobre madera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/madera_izq_2.flac",
+			"duracion": 0.19
+		},
+		"pasos/madera_izq_3": {
+			"nombre": "Paso sobre madera, pie izquierdo, variante 3",
+			"explicacion": "Un golpe hueco, con algo de eco de tarima. Lo oyes a tus pies cada vez que das un paso sobre madera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/madera_izq_3.flac",
+			"duracion": 0.19
+		},
+		"pasos/madera_der_1": {
+			"nombre": "Paso sobre madera, pie derecho, variante 1",
+			"explicacion": "Un golpe hueco, con algo de eco de tarima. Lo oyes a tus pies cada vez que das un paso sobre madera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/madera_der_1.flac",
+			"duracion": 0.19
+		},
+		"pasos/madera_der_2": {
+			"nombre": "Paso sobre madera, pie derecho, variante 2",
+			"explicacion": "Un golpe hueco, con algo de eco de tarima. Lo oyes a tus pies cada vez que das un paso sobre madera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/madera_der_2.flac",
+			"duracion": 0.19
+		},
+		"pasos/madera_der_3": {
+			"nombre": "Paso sobre madera, pie derecho, variante 3",
+			"explicacion": "Un golpe hueco, con algo de eco de tarima. Lo oyes a tus pies cada vez que das un paso sobre madera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/madera_der_3.flac",
+			"duracion": 0.19
+		},
+		"pasos/moqueta_izq_1": {
+			"nombre": "Paso sobre moqueta, pie izquierdo, variante 1",
+			"explicacion": "Muy apagado y corto. Lo oyes a tus pies cada vez que das un paso sobre moqueta.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/moqueta_izq_1.flac",
+			"duracion": 0.18
+		},
+		"pasos/moqueta_izq_2": {
+			"nombre": "Paso sobre moqueta, pie izquierdo, variante 2",
+			"explicacion": "Muy apagado y corto. Lo oyes a tus pies cada vez que das un paso sobre moqueta.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/moqueta_izq_2.flac",
+			"duracion": 0.18
+		},
+		"pasos/moqueta_izq_3": {
+			"nombre": "Paso sobre moqueta, pie izquierdo, variante 3",
+			"explicacion": "Muy apagado y corto. Lo oyes a tus pies cada vez que das un paso sobre moqueta.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/moqueta_izq_3.flac",
+			"duracion": 0.18
+		},
+		"pasos/moqueta_der_1": {
+			"nombre": "Paso sobre moqueta, pie derecho, variante 1",
+			"explicacion": "Muy apagado y corto. Lo oyes a tus pies cada vez que das un paso sobre moqueta.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/moqueta_der_1.flac",
+			"duracion": 0.18
+		},
+		"pasos/moqueta_der_2": {
+			"nombre": "Paso sobre moqueta, pie derecho, variante 2",
+			"explicacion": "Muy apagado y corto. Lo oyes a tus pies cada vez que das un paso sobre moqueta.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/moqueta_der_2.flac",
+			"duracion": 0.18
+		},
+		"pasos/moqueta_der_3": {
+			"nombre": "Paso sobre moqueta, pie derecho, variante 3",
+			"explicacion": "Muy apagado y corto. Lo oyes a tus pies cada vez que das un paso sobre moqueta.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/moqueta_der_3.flac",
+			"duracion": 0.18
+		},
+		"pasos/alfombra_izq_1": {
+			"nombre": "Paso sobre alfombra, pie izquierdo, variante 1",
+			"explicacion": "Apagado y blando, más grave que la moqueta. Lo oyes a tus pies cada vez que das un paso sobre alfombra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/alfombra_izq_1.flac",
+			"duracion": 0.2
+		},
+		"pasos/alfombra_izq_2": {
+			"nombre": "Paso sobre alfombra, pie izquierdo, variante 2",
+			"explicacion": "Apagado y blando, más grave que la moqueta. Lo oyes a tus pies cada vez que das un paso sobre alfombra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/alfombra_izq_2.flac",
+			"duracion": 0.2
+		},
+		"pasos/alfombra_izq_3": {
+			"nombre": "Paso sobre alfombra, pie izquierdo, variante 3",
+			"explicacion": "Apagado y blando, más grave que la moqueta. Lo oyes a tus pies cada vez que das un paso sobre alfombra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/alfombra_izq_3.flac",
+			"duracion": 0.2
+		},
+		"pasos/alfombra_der_1": {
+			"nombre": "Paso sobre alfombra, pie derecho, variante 1",
+			"explicacion": "Apagado y blando, más grave que la moqueta. Lo oyes a tus pies cada vez que das un paso sobre alfombra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/alfombra_der_1.flac",
+			"duracion": 0.2
+		},
+		"pasos/alfombra_der_2": {
+			"nombre": "Paso sobre alfombra, pie derecho, variante 2",
+			"explicacion": "Apagado y blando, más grave que la moqueta. Lo oyes a tus pies cada vez que das un paso sobre alfombra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/alfombra_der_2.flac",
+			"duracion": 0.2
+		},
+		"pasos/alfombra_der_3": {
+			"nombre": "Paso sobre alfombra, pie derecho, variante 3",
+			"explicacion": "Apagado y blando, más grave que la moqueta. Lo oyes a tus pies cada vez que das un paso sobre alfombra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/alfombra_der_3.flac",
+			"duracion": 0.2
+		},
+		"pasos/hormigon_izq_1": {
+			"nombre": "Paso sobre hormigón, pie izquierdo, variante 1",
+			"explicacion": "Seco y algo sordo. Lo oyes a tus pies cada vez que das un paso sobre hormigón.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hormigon_izq_1.flac",
+			"duracion": 0.15
+		},
+		"pasos/hormigon_izq_2": {
+			"nombre": "Paso sobre hormigón, pie izquierdo, variante 2",
+			"explicacion": "Seco y algo sordo. Lo oyes a tus pies cada vez que das un paso sobre hormigón.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hormigon_izq_2.flac",
+			"duracion": 0.15
+		},
+		"pasos/hormigon_izq_3": {
+			"nombre": "Paso sobre hormigón, pie izquierdo, variante 3",
+			"explicacion": "Seco y algo sordo. Lo oyes a tus pies cada vez que das un paso sobre hormigón.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hormigon_izq_3.flac",
+			"duracion": 0.15
+		},
+		"pasos/hormigon_der_1": {
+			"nombre": "Paso sobre hormigón, pie derecho, variante 1",
+			"explicacion": "Seco y algo sordo. Lo oyes a tus pies cada vez que das un paso sobre hormigón.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hormigon_der_1.flac",
+			"duracion": 0.15
+		},
+		"pasos/hormigon_der_2": {
+			"nombre": "Paso sobre hormigón, pie derecho, variante 2",
+			"explicacion": "Seco y algo sordo. Lo oyes a tus pies cada vez que das un paso sobre hormigón.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hormigon_der_2.flac",
+			"duracion": 0.15
+		},
+		"pasos/hormigon_der_3": {
+			"nombre": "Paso sobre hormigón, pie derecho, variante 3",
+			"explicacion": "Seco y algo sordo. Lo oyes a tus pies cada vez que das un paso sobre hormigón.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hormigon_der_3.flac",
+			"duracion": 0.15
+		},
+		"pasos/asfalto_izq_1": {
+			"nombre": "Paso sobre asfalto, pie izquierdo, variante 1",
+			"explicacion": "Sordo, con un poco de arenilla. Estás en la calzada. Lo oyes a tus pies cada vez que das un paso sobre asfalto.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/asfalto_izq_1.flac",
+			"duracion": 0.16
+		},
+		"pasos/asfalto_izq_2": {
+			"nombre": "Paso sobre asfalto, pie izquierdo, variante 2",
+			"explicacion": "Sordo, con un poco de arenilla. Estás en la calzada. Lo oyes a tus pies cada vez que das un paso sobre asfalto.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/asfalto_izq_2.flac",
+			"duracion": 0.16
+		},
+		"pasos/asfalto_izq_3": {
+			"nombre": "Paso sobre asfalto, pie izquierdo, variante 3",
+			"explicacion": "Sordo, con un poco de arenilla. Estás en la calzada. Lo oyes a tus pies cada vez que das un paso sobre asfalto.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/asfalto_izq_3.flac",
+			"duracion": 0.16
+		},
+		"pasos/asfalto_der_1": {
+			"nombre": "Paso sobre asfalto, pie derecho, variante 1",
+			"explicacion": "Sordo, con un poco de arenilla. Estás en la calzada. Lo oyes a tus pies cada vez que das un paso sobre asfalto.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/asfalto_der_1.flac",
+			"duracion": 0.16
+		},
+		"pasos/asfalto_der_2": {
+			"nombre": "Paso sobre asfalto, pie derecho, variante 2",
+			"explicacion": "Sordo, con un poco de arenilla. Estás en la calzada. Lo oyes a tus pies cada vez que das un paso sobre asfalto.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/asfalto_der_2.flac",
+			"duracion": 0.16
+		},
+		"pasos/asfalto_der_3": {
+			"nombre": "Paso sobre asfalto, pie derecho, variante 3",
+			"explicacion": "Sordo, con un poco de arenilla. Estás en la calzada. Lo oyes a tus pies cada vez que das un paso sobre asfalto.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/asfalto_der_3.flac",
+			"duracion": 0.16
+		},
+		"pasos/acera_izq_1": {
+			"nombre": "Paso sobre acera, pie izquierdo, variante 1",
+			"explicacion": "Seco, de losa de calle. Lo oyes a tus pies cada vez que das un paso sobre acera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/acera_izq_1.flac",
+			"duracion": 0.14
+		},
+		"pasos/acera_izq_2": {
+			"nombre": "Paso sobre acera, pie izquierdo, variante 2",
+			"explicacion": "Seco, de losa de calle. Lo oyes a tus pies cada vez que das un paso sobre acera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/acera_izq_2.flac",
+			"duracion": 0.14
+		},
+		"pasos/acera_izq_3": {
+			"nombre": "Paso sobre acera, pie izquierdo, variante 3",
+			"explicacion": "Seco, de losa de calle. Lo oyes a tus pies cada vez que das un paso sobre acera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/acera_izq_3.flac",
+			"duracion": 0.14
+		},
+		"pasos/acera_der_1": {
+			"nombre": "Paso sobre acera, pie derecho, variante 1",
+			"explicacion": "Seco, de losa de calle. Lo oyes a tus pies cada vez que das un paso sobre acera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/acera_der_1.flac",
+			"duracion": 0.14
+		},
+		"pasos/acera_der_2": {
+			"nombre": "Paso sobre acera, pie derecho, variante 2",
+			"explicacion": "Seco, de losa de calle. Lo oyes a tus pies cada vez que das un paso sobre acera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/acera_der_2.flac",
+			"duracion": 0.14
+		},
+		"pasos/acera_der_3": {
+			"nombre": "Paso sobre acera, pie derecho, variante 3",
+			"explicacion": "Seco, de losa de calle. Lo oyes a tus pies cada vez que das un paso sobre acera.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/acera_der_3.flac",
+			"duracion": 0.14
+		},
+		"pasos/adoquin_izq_1": {
+			"nombre": "Paso sobre adoquín, pie izquierdo, variante 1",
+			"explicacion": "Dos toques irregulares, de piedra desigual. Lo oyes a tus pies cada vez que das un paso sobre adoquín.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/adoquin_izq_1.flac",
+			"duracion": 0.17
+		},
+		"pasos/adoquin_izq_2": {
+			"nombre": "Paso sobre adoquín, pie izquierdo, variante 2",
+			"explicacion": "Dos toques irregulares, de piedra desigual. Lo oyes a tus pies cada vez que das un paso sobre adoquín.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/adoquin_izq_2.flac",
+			"duracion": 0.17
+		},
+		"pasos/adoquin_izq_3": {
+			"nombre": "Paso sobre adoquín, pie izquierdo, variante 3",
+			"explicacion": "Dos toques irregulares, de piedra desigual. Lo oyes a tus pies cada vez que das un paso sobre adoquín.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/adoquin_izq_3.flac",
+			"duracion": 0.17
+		},
+		"pasos/adoquin_der_1": {
+			"nombre": "Paso sobre adoquín, pie derecho, variante 1",
+			"explicacion": "Dos toques irregulares, de piedra desigual. Lo oyes a tus pies cada vez que das un paso sobre adoquín.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/adoquin_der_1.flac",
+			"duracion": 0.17
+		},
+		"pasos/adoquin_der_2": {
+			"nombre": "Paso sobre adoquín, pie derecho, variante 2",
+			"explicacion": "Dos toques irregulares, de piedra desigual. Lo oyes a tus pies cada vez que das un paso sobre adoquín.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/adoquin_der_2.flac",
+			"duracion": 0.17
+		},
+		"pasos/adoquin_der_3": {
+			"nombre": "Paso sobre adoquín, pie derecho, variante 3",
+			"explicacion": "Dos toques irregulares, de piedra desigual. Lo oyes a tus pies cada vez que das un paso sobre adoquín.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/adoquin_der_3.flac",
+			"duracion": 0.17
+		},
+		"pasos/tierra_izq_1": {
+			"nombre": "Paso sobre tierra, pie izquierdo, variante 1",
+			"explicacion": "Blando, con un crujido leve. Lo oyes a tus pies cada vez que das un paso sobre tierra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tierra_izq_1.flac",
+			"duracion": 0.19
+		},
+		"pasos/tierra_izq_2": {
+			"nombre": "Paso sobre tierra, pie izquierdo, variante 2",
+			"explicacion": "Blando, con un crujido leve. Lo oyes a tus pies cada vez que das un paso sobre tierra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tierra_izq_2.flac",
+			"duracion": 0.19
+		},
+		"pasos/tierra_izq_3": {
+			"nombre": "Paso sobre tierra, pie izquierdo, variante 3",
+			"explicacion": "Blando, con un crujido leve. Lo oyes a tus pies cada vez que das un paso sobre tierra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tierra_izq_3.flac",
+			"duracion": 0.19
+		},
+		"pasos/tierra_der_1": {
+			"nombre": "Paso sobre tierra, pie derecho, variante 1",
+			"explicacion": "Blando, con un crujido leve. Lo oyes a tus pies cada vez que das un paso sobre tierra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tierra_der_1.flac",
+			"duracion": 0.19
+		},
+		"pasos/tierra_der_2": {
+			"nombre": "Paso sobre tierra, pie derecho, variante 2",
+			"explicacion": "Blando, con un crujido leve. Lo oyes a tus pies cada vez que das un paso sobre tierra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tierra_der_2.flac",
+			"duracion": 0.19
+		},
+		"pasos/tierra_der_3": {
+			"nombre": "Paso sobre tierra, pie derecho, variante 3",
+			"explicacion": "Blando, con un crujido leve. Lo oyes a tus pies cada vez que das un paso sobre tierra.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tierra_der_3.flac",
+			"duracion": 0.19
+		},
+		"pasos/hierba_izq_1": {
+			"nombre": "Paso sobre hierba, pie izquierdo, variante 1",
+			"explicacion": "Un roce suave y agudo. Lo oyes a tus pies cada vez que das un paso sobre hierba.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hierba_izq_1.flac",
+			"duracion": 0.22
+		},
+		"pasos/hierba_izq_2": {
+			"nombre": "Paso sobre hierba, pie izquierdo, variante 2",
+			"explicacion": "Un roce suave y agudo. Lo oyes a tus pies cada vez que das un paso sobre hierba.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hierba_izq_2.flac",
+			"duracion": 0.22
+		},
+		"pasos/hierba_izq_3": {
+			"nombre": "Paso sobre hierba, pie izquierdo, variante 3",
+			"explicacion": "Un roce suave y agudo. Lo oyes a tus pies cada vez que das un paso sobre hierba.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hierba_izq_3.flac",
+			"duracion": 0.22
+		},
+		"pasos/hierba_der_1": {
+			"nombre": "Paso sobre hierba, pie derecho, variante 1",
+			"explicacion": "Un roce suave y agudo. Lo oyes a tus pies cada vez que das un paso sobre hierba.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hierba_der_1.flac",
+			"duracion": 0.22
+		},
+		"pasos/hierba_der_2": {
+			"nombre": "Paso sobre hierba, pie derecho, variante 2",
+			"explicacion": "Un roce suave y agudo. Lo oyes a tus pies cada vez que das un paso sobre hierba.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hierba_der_2.flac",
+			"duracion": 0.22
+		},
+		"pasos/hierba_der_3": {
+			"nombre": "Paso sobre hierba, pie derecho, variante 3",
+			"explicacion": "Un roce suave y agudo. Lo oyes a tus pies cada vez que das un paso sobre hierba.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/hierba_der_3.flac",
+			"duracion": 0.22
+		},
+		"pasos/grava_izq_1": {
+			"nombre": "Paso sobre grava, pie izquierdo, variante 1",
+			"explicacion": "Varios crujidos de piedrecillas. Lo oyes a tus pies cada vez que das un paso sobre grava.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/grava_izq_1.flac",
+			"duracion": 0.27
+		},
+		"pasos/grava_izq_2": {
+			"nombre": "Paso sobre grava, pie izquierdo, variante 2",
+			"explicacion": "Varios crujidos de piedrecillas. Lo oyes a tus pies cada vez que das un paso sobre grava.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/grava_izq_2.flac",
+			"duracion": 0.27
+		},
+		"pasos/grava_izq_3": {
+			"nombre": "Paso sobre grava, pie izquierdo, variante 3",
+			"explicacion": "Varios crujidos de piedrecillas. Lo oyes a tus pies cada vez que das un paso sobre grava.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/grava_izq_3.flac",
+			"duracion": 0.27
+		},
+		"pasos/grava_der_1": {
+			"nombre": "Paso sobre grava, pie derecho, variante 1",
+			"explicacion": "Varios crujidos de piedrecillas. Lo oyes a tus pies cada vez que das un paso sobre grava.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/grava_der_1.flac",
+			"duracion": 0.27
+		},
+		"pasos/grava_der_2": {
+			"nombre": "Paso sobre grava, pie derecho, variante 2",
+			"explicacion": "Varios crujidos de piedrecillas. Lo oyes a tus pies cada vez que das un paso sobre grava.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/grava_der_2.flac",
+			"duracion": 0.27
+		},
+		"pasos/grava_der_3": {
+			"nombre": "Paso sobre grava, pie derecho, variante 3",
+			"explicacion": "Varios crujidos de piedrecillas. Lo oyes a tus pies cada vez que das un paso sobre grava.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/grava_der_3.flac",
+			"duracion": 0.27
+		},
+		"pasos/metal_izq_1": {
+			"nombre": "Paso sobre metal, pie izquierdo, variante 1",
+			"explicacion": "Un golpe que resuena, como en una pasarela o una rejilla. Lo oyes a tus pies cada vez que das un paso sobre metal.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/metal_izq_1.flac",
+			"duracion": 0.27
+		},
+		"pasos/metal_izq_2": {
+			"nombre": "Paso sobre metal, pie izquierdo, variante 2",
+			"explicacion": "Un golpe que resuena, como en una pasarela o una rejilla. Lo oyes a tus pies cada vez que das un paso sobre metal.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/metal_izq_2.flac",
+			"duracion": 0.27
+		},
+		"pasos/metal_izq_3": {
+			"nombre": "Paso sobre metal, pie izquierdo, variante 3",
+			"explicacion": "Un golpe que resuena, como en una pasarela o una rejilla. Lo oyes a tus pies cada vez que das un paso sobre metal.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/metal_izq_3.flac",
+			"duracion": 0.27
+		},
+		"pasos/metal_der_1": {
+			"nombre": "Paso sobre metal, pie derecho, variante 1",
+			"explicacion": "Un golpe que resuena, como en una pasarela o una rejilla. Lo oyes a tus pies cada vez que das un paso sobre metal.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/metal_der_1.flac",
+			"duracion": 0.27
+		},
+		"pasos/metal_der_2": {
+			"nombre": "Paso sobre metal, pie derecho, variante 2",
+			"explicacion": "Un golpe que resuena, como en una pasarela o una rejilla. Lo oyes a tus pies cada vez que das un paso sobre metal.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/metal_der_2.flac",
+			"duracion": 0.27
+		},
+		"pasos/metal_der_3": {
+			"nombre": "Paso sobre metal, pie derecho, variante 3",
+			"explicacion": "Un golpe que resuena, como en una pasarela o una rejilla. Lo oyes a tus pies cada vez que das un paso sobre metal.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/metal_der_3.flac",
+			"duracion": 0.27
+		},
+		"pasos/arena_izq_1": {
+			"nombre": "Paso sobre arena, pie izquierdo, variante 1",
+			"explicacion": "Un siseo blando que se hunde. Lo oyes a tus pies cada vez que das un paso sobre arena.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/arena_izq_1.flac",
+			"duracion": 0.25
+		},
+		"pasos/arena_izq_2": {
+			"nombre": "Paso sobre arena, pie izquierdo, variante 2",
+			"explicacion": "Un siseo blando que se hunde. Lo oyes a tus pies cada vez que das un paso sobre arena.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/arena_izq_2.flac",
+			"duracion": 0.25
+		},
+		"pasos/arena_izq_3": {
+			"nombre": "Paso sobre arena, pie izquierdo, variante 3",
+			"explicacion": "Un siseo blando que se hunde. Lo oyes a tus pies cada vez que das un paso sobre arena.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/arena_izq_3.flac",
+			"duracion": 0.25
+		},
+		"pasos/arena_der_1": {
+			"nombre": "Paso sobre arena, pie derecho, variante 1",
+			"explicacion": "Un siseo blando que se hunde. Lo oyes a tus pies cada vez que das un paso sobre arena.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/arena_der_1.flac",
+			"duracion": 0.25
+		},
+		"pasos/arena_der_2": {
+			"nombre": "Paso sobre arena, pie derecho, variante 2",
+			"explicacion": "Un siseo blando que se hunde. Lo oyes a tus pies cada vez que das un paso sobre arena.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/arena_der_2.flac",
+			"duracion": 0.25
+		},
+		"pasos/arena_der_3": {
+			"nombre": "Paso sobre arena, pie derecho, variante 3",
+			"explicacion": "Un siseo blando que se hunde. Lo oyes a tus pies cada vez que das un paso sobre arena.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/arena_der_3.flac",
+			"duracion": 0.25
+		},
+		"pasos/agua_izq_1": {
+			"nombre": "Paso sobre agua, pie izquierdo, variante 1",
+			"explicacion": "Un chapoteo: has pisado un charco. Lo oyes a tus pies cada vez que das un paso sobre agua.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/agua_izq_1.flac",
+			"duracion": 0.35
+		},
+		"pasos/agua_izq_2": {
+			"nombre": "Paso sobre agua, pie izquierdo, variante 2",
+			"explicacion": "Un chapoteo: has pisado un charco. Lo oyes a tus pies cada vez que das un paso sobre agua.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/agua_izq_2.flac",
+			"duracion": 0.35
+		},
+		"pasos/agua_izq_3": {
+			"nombre": "Paso sobre agua, pie izquierdo, variante 3",
+			"explicacion": "Un chapoteo: has pisado un charco. Lo oyes a tus pies cada vez que das un paso sobre agua.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/agua_izq_3.flac",
+			"duracion": 0.35
+		},
+		"pasos/agua_der_1": {
+			"nombre": "Paso sobre agua, pie derecho, variante 1",
+			"explicacion": "Un chapoteo: has pisado un charco. Lo oyes a tus pies cada vez que das un paso sobre agua.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/agua_der_1.flac",
+			"duracion": 0.35
+		},
+		"pasos/agua_der_2": {
+			"nombre": "Paso sobre agua, pie derecho, variante 2",
+			"explicacion": "Un chapoteo: has pisado un charco. Lo oyes a tus pies cada vez que das un paso sobre agua.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/agua_der_2.flac",
+			"duracion": 0.35
+		},
+		"pasos/agua_der_3": {
+			"nombre": "Paso sobre agua, pie derecho, variante 3",
+			"explicacion": "Un chapoteo: has pisado un charco. Lo oyes a tus pies cada vez que das un paso sobre agua.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/agua_der_3.flac",
+			"duracion": 0.35
+		},
+		"pasos/tactil_botones_izq_1": {
+			"nombre": "Paso sobre pavimento táctil de botones, pie izquierdo, variante 1",
+			"explicacion": "Baldosa con un repique doble: avisa de un peligro o de un cruce justo delante. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de botones.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_botones_izq_1.flac",
+			"duracion": 0.17
+		},
+		"pasos/tactil_botones_izq_2": {
+			"nombre": "Paso sobre pavimento táctil de botones, pie izquierdo, variante 2",
+			"explicacion": "Baldosa con un repique doble: avisa de un peligro o de un cruce justo delante. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de botones.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_botones_izq_2.flac",
+			"duracion": 0.17
+		},
+		"pasos/tactil_botones_izq_3": {
+			"nombre": "Paso sobre pavimento táctil de botones, pie izquierdo, variante 3",
+			"explicacion": "Baldosa con un repique doble: avisa de un peligro o de un cruce justo delante. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de botones.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_botones_izq_3.flac",
+			"duracion": 0.17
+		},
+		"pasos/tactil_botones_der_1": {
+			"nombre": "Paso sobre pavimento táctil de botones, pie derecho, variante 1",
+			"explicacion": "Baldosa con un repique doble: avisa de un peligro o de un cruce justo delante. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de botones.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_botones_der_1.flac",
+			"duracion": 0.17
+		},
+		"pasos/tactil_botones_der_2": {
+			"nombre": "Paso sobre pavimento táctil de botones, pie derecho, variante 2",
+			"explicacion": "Baldosa con un repique doble: avisa de un peligro o de un cruce justo delante. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de botones.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_botones_der_2.flac",
+			"duracion": 0.17
+		},
+		"pasos/tactil_botones_der_3": {
+			"nombre": "Paso sobre pavimento táctil de botones, pie derecho, variante 3",
+			"explicacion": "Baldosa con un repique doble: avisa de un peligro o de un cruce justo delante. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de botones.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_botones_der_3.flac",
+			"duracion": 0.17
+		},
+		"pasos/tactil_rayas_izq_1": {
+			"nombre": "Paso sobre pavimento táctil de rayas, pie izquierdo, variante 1",
+			"explicacion": "Baldosa con un raspado corto: marca un camino que puedes seguir. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de rayas.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_rayas_izq_1.flac",
+			"duracion": 0.19
+		},
+		"pasos/tactil_rayas_izq_2": {
+			"nombre": "Paso sobre pavimento táctil de rayas, pie izquierdo, variante 2",
+			"explicacion": "Baldosa con un raspado corto: marca un camino que puedes seguir. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de rayas.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_rayas_izq_2.flac",
+			"duracion": 0.19
+		},
+		"pasos/tactil_rayas_izq_3": {
+			"nombre": "Paso sobre pavimento táctil de rayas, pie izquierdo, variante 3",
+			"explicacion": "Baldosa con un raspado corto: marca un camino que puedes seguir. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de rayas.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_rayas_izq_3.flac",
+			"duracion": 0.19
+		},
+		"pasos/tactil_rayas_der_1": {
+			"nombre": "Paso sobre pavimento táctil de rayas, pie derecho, variante 1",
+			"explicacion": "Baldosa con un raspado corto: marca un camino que puedes seguir. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de rayas.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_rayas_der_1.flac",
+			"duracion": 0.19
+		},
+		"pasos/tactil_rayas_der_2": {
+			"nombre": "Paso sobre pavimento táctil de rayas, pie derecho, variante 2",
+			"explicacion": "Baldosa con un raspado corto: marca un camino que puedes seguir. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de rayas.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_rayas_der_2.flac",
+			"duracion": 0.19
+		},
+		"pasos/tactil_rayas_der_3": {
+			"nombre": "Paso sobre pavimento táctil de rayas, pie derecho, variante 3",
+			"explicacion": "Baldosa con un raspado corto: marca un camino que puedes seguir. Lo oyes a tus pies cada vez que das un paso sobre pavimento táctil de rayas.",
+			"grupo": "movimiento",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "pasos/tactil_rayas_der_3.flac",
+			"duracion": 0.19
+		},
+		"golpe/ladrillo": {
+			"nombre": "Choque con ladrillo",
+			"explicacion": "Un golpe sordo y corto, con algo de arenilla. Has chocado con una pared o un objeto de ladrillo; suena desde donde está.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "golpe/ladrillo.flac",
+			"duracion": 0.3
+		},
+		"golpe/madera": {
+			"nombre": "Choque con madera",
+			"explicacion": "Un toc hueco. Has chocado con una pared o un objeto de madera; suena desde donde está.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "golpe/madera.flac",
+			"duracion": 0.3
+		},
+		"golpe/metal": {
+			"nombre": "Choque con metal",
+			"explicacion": "Un golpe que se queda sonando, como una chapa. Has chocado con una pared o un objeto de metal; suena desde donde está.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "golpe/metal.flac",
+			"duracion": 0.7
+		},
+		"golpe/cristal": {
+			"nombre": "Choque con cristal",
+			"explicacion": "Un toque agudo que tintinea. Has chocado con una pared o un objeto de cristal; suena desde donde está.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "golpe/cristal.flac",
+			"duracion": 0.7
+		},
+		"golpe/plastico": {
+			"nombre": "Choque con plástico",
+			"explicacion": "Un clac hueco y ligero. Has chocado con una pared o un objeto de plástico; suena desde donde está.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "golpe/plastico.flac",
+			"duracion": 0.3
+		},
+		"golpe/tela": {
+			"nombre": "Choque con tela",
+			"explicacion": "Un golpe blando, casi sin sonido, con un roce. Has chocado con una pared o un objeto de tela; suena desde donde está.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "golpe/tela.flac",
+			"duracion": 0.3
+		},
+		"golpe/piedra": {
+			"nombre": "Choque con piedra",
+			"explicacion": "Un golpe duro y seco. Has chocado con una pared o un objeto de piedra; suena desde donde está.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "golpe/piedra.flac",
+			"duracion": 0.3
+		},
+		"roce/ladrillo": {
+			"nombre": "Roce con ladrillo",
+			"explicacion": "Un raspado áspero. Vas rozando una pared o un objeto de ladrillo, por el lado en que suena.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "roce/ladrillo.flac",
+			"duracion": 0.4
+		},
+		"roce/madera": {
+			"nombre": "Roce con madera",
+			"explicacion": "Un deslizar suave y algo grave. Vas rozando una pared o un objeto de madera, por el lado en que suena.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "roce/madera.flac",
+			"duracion": 0.4
+		},
+		"roce/metal": {
+			"nombre": "Roce con metal",
+			"explicacion": "Un roce agudo con un punto de chirrido. Vas rozando una pared o un objeto de metal, por el lado en que suena.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "roce/metal.flac",
+			"duracion": 0.4
+		},
+		"roce/cristal": {
+			"nombre": "Roce con cristal",
+			"explicacion": "Un roce liso y muy agudo. Vas rozando una pared o un objeto de cristal, por el lado en que suena.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "roce/cristal.flac",
+			"duracion": 0.4
+		},
+		"roce/plastico": {
+			"nombre": "Roce con plástico",
+			"explicacion": "Un roce hueco y ligero. Vas rozando una pared o un objeto de plástico, por el lado en que suena.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "roce/plastico.flac",
+			"duracion": 0.4
+		},
+		"roce/tela": {
+			"nombre": "Roce con tela",
+			"explicacion": "Un siseo blando. Vas rozando una pared o un objeto de tela, por el lado en que suena.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "roce/tela.flac",
+			"duracion": 0.4
+		},
+		"roce/piedra": {
+			"nombre": "Roce con piedra",
+			"explicacion": "Un raspado duro y granulado. Vas rozando una pared o un objeto de piedra, por el lado en que suena.",
+			"grupo": "choques",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "roce/piedra.flac",
+			"duracion": 0.4
+		},
+		"puerta/abrir": {
+			"nombre": "Puerta que se abre",
+			"explicacion": "Un clic de manilla y la bisagra que sube de tono: has abierto una puerta. Suena desde la puerta.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "puerta/abrir.flac",
+			"duracion": 0.75
+		},
+		"puerta/cerrar": {
+			"nombre": "Puerta que se cierra",
+			"explicacion": "La bisagra baja de tono y la puerta da un golpe: una puerta se ha cerrado.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "puerta/cerrar.flac",
+			"duracion": 0.7
+		},
+		"puerta/con_llave": {
+			"nombre": "Puerta cerrada con llave",
+			"explicacion": "La manilla traquetea dos veces y la puerta no cede: está cerrada con llave y no puedes pasar por ahí.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "puerta/con_llave.flac",
+			"duracion": 0.6
+		},
+		"puerta/automatica": {
+			"nombre": "Puerta automática",
+			"explicacion": "Un deslizamiento con zumbido de motor: una puerta corredera automática se abre o se cierra.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "puerta/automatica.flac",
+			"duracion": 1.1
+		},
+		"escalera/subir": {
+			"nombre": "Peldaño que sube",
+			"explicacion": "Una pisada y dos notas que suben: has subido un peldaño. Cada peldaño suena un poco más agudo que el anterior.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "escalera/subir.flac",
+			"duracion": 0.32
+		},
+		"escalera/bajar": {
+			"nombre": "Peldaño que baja",
+			"explicacion": "Una pisada y dos notas que bajan: has bajado un peldaño. Cada peldaño suena un poco más grave que el anterior.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "escalera/bajar.flac",
+			"duracion": 0.32
+		},
+		"escalera/rampa": {
+			"nombre": "Rampa",
+			"explicacion": "Un deslizamiento continuo, sin escalones: avanzas por una rampa. Más agudo si subes, más grave si bajas.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "escalera/rampa.flac",
+			"duracion": 0.45
+		},
+		"ascensor/llamada": {
+			"nombre": "Ascensor, botón de llamada",
+			"explicacion": "Un clic y un pitido: has llamado al ascensor o has elegido planta.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/llamada.flac",
+			"duracion": 0.45
+		},
+		"ascensor/puerta": {
+			"nombre": "Ascensor, puerta",
+			"explicacion": "Un deslizamiento grave que acaba en un tope: la puerta del ascensor se abre o se cierra.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/puerta.flac",
+			"duracion": 1.3
+		},
+		"ascensor/viaje": {
+			"nombre": "Ascensor en marcha",
+			"explicacion": "Un zumbido continuo a tu alrededor mientras el ascensor se mueve entre plantas.",
+			"grupo": "puertas",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "ascensor/viaje.flac",
+			"duracion": 3.25
+		},
+		"ascensor/llegada": {
+			"nombre": "Ascensor, llegada",
+			"explicacion": "Dos campanadas, la segunda más grave: el ascensor ha llegado a la planta.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/llegada.flac",
+			"duracion": 1.0
+		},
+		"ascensor/planta_0": {
+			"nombre": "Ascensor, tono de la planta 0",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_0.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_1": {
+			"nombre": "Ascensor, tono de la planta 1",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_1.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_2": {
+			"nombre": "Ascensor, tono de la planta 2",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_2.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_3": {
+			"nombre": "Ascensor, tono de la planta 3",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_3.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_4": {
+			"nombre": "Ascensor, tono de la planta 4",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_4.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_5": {
+			"nombre": "Ascensor, tono de la planta 5",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_5.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_6": {
+			"nombre": "Ascensor, tono de la planta 6",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_6.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_7": {
+			"nombre": "Ascensor, tono de la planta 7",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_7.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_8": {
+			"nombre": "Ascensor, tono de la planta 8",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_8.flac",
+			"duracion": 0.5
+		},
+		"ascensor/planta_9": {
+			"nombre": "Ascensor, tono de la planta 9",
+			"explicacion": "Una campanilla cuya nota dice la planta: cuanto más aguda, más arriba. La planta 0 es la más grave.",
+			"grupo": "puertas",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "ascensor/planta_9.flac",
+			"duracion": 0.5
+		},
+		"premio/aparece": {
+			"nombre": "Premio que aparece",
+			"explicacion": "Cinco tintineos que suben: hay un premio por aquí. Suena desde donde está.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "premio/aparece.flac",
+			"duracion": 0.6
+		},
+		"premio/cerca": {
+			"nombre": "Premio cerca",
+			"explicacion": "Un centelleo que se repite desde el premio. Acércate hasta tenerlo encima y recógelo.",
+			"grupo": "premios",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "premio/cerca.flac",
+			"duracion": 1.2
+		},
+		"premio/recogido": {
+			"nombre": "Premio recogido",
+			"explicacion": "Unas monedas rápidas: has recogido un premio.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "premio/recogido.flac",
+			"duracion": 0.55
+		},
+		"premio/tesoro": {
+			"nombre": "Tesoro",
+			"explicacion": "Una melodía que sube con una lluvia de tintineos: has encontrado un tesoro o el premio principal.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "premio/tesoro.flac",
+			"duracion": 1.6
+		},
+		"logro/logro": {
+			"nombre": "Logro",
+			"explicacion": "Tres notas que suben: has completado un objetivo.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "logro/logro.flac",
+			"duracion": 0.72
+		},
+		"logro/estrella_1": {
+			"nombre": "Una estrella",
+			"explicacion": "Una campanilla: has conseguido una estrella.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "logro/estrella_1.flac",
+			"duracion": 0.92
+		},
+		"logro/estrella_2": {
+			"nombre": "Dos estrellas",
+			"explicacion": "Dos campanillas que suben: has conseguido dos estrellas.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "logro/estrella_2.flac",
+			"duracion": 1.14
+		},
+		"logro/estrella_3": {
+			"nombre": "Tres estrellas",
+			"explicacion": "Tres campanillas que suben: has conseguido las tres estrellas.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "logro/estrella_3.flac",
+			"duracion": 1.36
+		},
+		"logro/medalla": {
+			"nombre": "Medalla",
+			"explicacion": "Una fanfarria de trompetas: has ganado una medalla.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "logro/medalla.flac",
+			"duracion": 1.9
+		},
+		"logro/error": {
+			"nombre": "Eso no es",
+			"explicacion": "Dos notas graves y suaves que bajan: no era eso, o por ahí no se puede. Prueba otra cosa.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "logro/error.flac",
+			"duracion": 0.42
+		},
+		"logro/pista": {
+			"nombre": "Pista",
+			"explicacion": "Dos campanillas que suben y se quedan en el aire: a continuación viene una pista.",
+			"grupo": "premios",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "logro/pista.flac",
+			"duracion": 0.6
+		},
+		"semaforo/verde": {
+			"nombre": "Semáforo en verde",
+			"explicacion": "Píos seguidos desde el poste del semáforo: los coches están parados y puedes cruzar. Camina hacia el que suena enfrente.",
+			"grupo": "calle",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "semaforo/verde.flac",
+			"duracion": 1.0
+		},
+		"semaforo/intermitente": {
+			"nombre": "Semáforo intermitente",
+			"explicacion": "Píos muy rápidos: el verde se acaba. Si no has empezado a cruzar, espera al siguiente.",
+			"grupo": "calle",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "semaforo/intermitente.flac",
+			"duracion": 0.5
+		},
+		"semaforo/rojo": {
+			"nombre": "Semáforo en rojo",
+			"explicacion": "Un toque lento desde el poste: está en rojo para ti. Sirve para encontrar el poste y esperar junto a él.",
+			"grupo": "calle",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "semaforo/rojo.flac",
+			"duracion": 1.5
+		},
+		"semaforo/pulsador": {
+			"nombre": "Pulsador del semáforo",
+			"explicacion": "Un clic y dos pitidos: has pulsado el botón para pedir el verde.",
+			"grupo": "calle",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "semaforo/pulsador.flac",
+			"duracion": 0.5
+		},
+		"trafico/coche": {
+			"nombre": "Coche que pasa",
+			"explicacion": "Un motor que se acerca, pasa y se aleja con ruido de ruedas: un coche circula por la calzada.",
+			"grupo": "calle",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "trafico/coche.flac",
+			"duracion": 3.2
+		},
+		"trafico/moto": {
+			"nombre": "Moto que pasa",
+			"explicacion": "Un motor agudo y zumbón que pasa deprisa: una moto.",
+			"grupo": "calle",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "trafico/moto.flac",
+			"duracion": 2.6
+		},
+		"trafico/autobus": {
+			"nombre": "Autobús que pasa",
+			"explicacion": "Un motor grave y largo, y al final el soplido de los frenos: un autobús.",
+			"grupo": "calle",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "trafico/autobus.flac",
+			"duracion": 4.5
+		},
+		"trafico/ambiente_leve": {
+			"nombre": "Tráfico leve",
+			"explicacion": "Un rumor lejano con algún coche suelto: una calle tranquila.",
+			"grupo": "calle",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "trafico/ambiente_leve.flac",
+			"duracion": 10.0
+		},
+		"trafico/ambiente_medio": {
+			"nombre": "Tráfico medio",
+			"explicacion": "Rumor continuo y coches frecuentes: una calle con bastante circulación.",
+			"grupo": "calle",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "trafico/ambiente_medio.flac",
+			"duracion": 10.0
+		},
+		"trafico/ambiente_intenso": {
+			"nombre": "Tráfico intenso",
+			"explicacion": "Rumor fuerte y coches sin parar: una avenida. Extrema el cuidado al cruzar.",
+			"grupo": "calle",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "trafico/ambiente_intenso.flac",
+			"duracion": 10.0
+		},
+		"exterior/bordillo": {
+			"nombre": "Bordillo",
+			"explicacion": "Un raspado y un golpe grave a tus pies: has bajado de la acera a la calzada, o has subido a la acera.",
+			"grupo": "calle",
+			"bucle": false,
+			"posicionable": true,
+			"fichero": "exterior/bordillo.flac",
+			"duracion": 0.3
+		},
+		"fuente/frigorifico": {
+			"nombre": "Frigorífico",
+			"explicacion": "Un zumbido grave y constante. Suele estar en la cocina y sirve de referencia fija.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/frigorifico.flac",
+			"duracion": 4.0
+		},
+		"fuente/reloj": {
+			"nombre": "Reloj de pared",
+			"explicacion": "Tic, tac, un golpe por segundo. Marca siempre el mismo punto de la habitación.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/reloj.flac",
+			"duracion": 2.0
+		},
+		"fuente/grifo": {
+			"nombre": "Grifo abierto",
+			"explicacion": "Un chorro de agua fino contra el fregadero o el lavabo.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/grifo.flac",
+			"duracion": 3.0
+		},
+		"fuente/ventilador": {
+			"nombre": "Ventilador",
+			"explicacion": "Un soplo continuo con el batir de las aspas.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/ventilador.flac",
+			"duracion": 3.0
+		},
+		"fuente/television": {
+			"nombre": "Televisión lejana",
+			"explicacion": "Voces apagadas que no se entienden: hay una tele encendida. Te dice hacia dónde queda el salón.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/television.flac",
+			"duracion": 5.0
+		},
+		"fuente/fuente_agua": {
+			"nombre": "Fuente de agua",
+			"explicacion": "Agua que cae y borbotea, más llena que un grifo: una fuente en una plaza, un parque o un vestíbulo.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/fuente_agua.flac",
+			"duracion": 4.0
+		},
+		"fuente/maquina_expendedora": {
+			"nombre": "Máquina expendedora",
+			"explicacion": "Un zumbido eléctrico con un pitido muy fino y, de vez en cuando, un clic. Suele estar en pasillos y vestíbulos.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/maquina_expendedora.flac",
+			"duracion": 4.0
+		},
+		"fuente/campanas": {
+			"nombre": "Campanas",
+			"explicacion": "Dos campanadas graves que se repiten: una iglesia o un reloj de torre, que se oye desde lejos.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/campanas.flac",
+			"duracion": 5.0
+		},
+		"fuente/pajaros": {
+			"nombre": "Pájaros",
+			"explicacion": "Trinos sueltos desde un árbol o un seto.",
+			"grupo": "fuentes",
+			"bucle": true,
+			"posicionable": true,
+			"fichero": "fuente/pajaros.flac",
+			"duracion": 6.0
+		},
+		"ambiente/casa": {
+			"nombre": "Casa silenciosa",
+			"explicacion": "Casi nada: el aire de una casa tranquila y algún crujido.",
+			"grupo": "ambientes",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "ambiente/casa.flac",
+			"duracion": 10.0
+		},
+		"ambiente/oficina": {
+			"nombre": "Oficina",
+			"explicacion": "Aire acondicionado, teclados y un murmullo lejano.",
+			"grupo": "ambientes",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "ambiente/oficina.flac",
+			"duracion": 10.0
+		},
+		"ambiente/pasillo": {
+			"nombre": "Pasillo",
+			"explicacion": "Un aire hueco, que resuena, con pasos lejanos.",
+			"grupo": "ambientes",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "ambiente/pasillo.flac",
+			"duracion": 10.0
+		},
+		"ambiente/calle": {
+			"nombre": "Calle",
+			"explicacion": "El rumor de la ciudad, coches lejanos y alguna voz.",
+			"grupo": "ambientes",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "ambiente/calle.flac",
+			"duracion": 10.0
+		},
+		"ambiente/parque": {
+			"nombre": "Parque",
+			"explicacion": "Viento en las hojas y pájaros alrededor.",
+			"grupo": "ambientes",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "ambiente/parque.flac",
+			"duracion": 10.0
+		},
+		"ambiente/cocina": {
+			"nombre": "Cocina",
+			"explicacion": "El frigorífico de fondo, algo que hierve y cacharros.",
+			"grupo": "ambientes",
+			"bucle": true,
+			"posicionable": false,
+			"fichero": "ambiente/cocina.flac",
+			"duracion": 10.0
+		},
+		"interfaz/mover": {
+			"nombre": "Menú, moverse",
+			"explicacion": "Un toque muy corto: has pasado a otra opción.",
+			"grupo": "interfaz",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "interfaz/mover.flac",
+			"duracion": 0.03
+		},
+		"interfaz/elegir": {
+			"nombre": "Menú, elegir",
+			"explicacion": "Dos notas que suben: has elegido la opción.",
+			"grupo": "interfaz",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "interfaz/elegir.flac",
+			"duracion": 0.27
+		},
+		"interfaz/atras": {
+			"nombre": "Menú, atrás",
+			"explicacion": "Dos notas que bajan: has vuelto atrás o has cancelado.",
+			"grupo": "interfaz",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "interfaz/atras.flac",
+			"duracion": 0.27
+		},
+		"interfaz/borde": {
+			"nombre": "Menú, borde",
+			"explicacion": "Un toque grave: no hay más opciones en esa dirección.",
+			"grupo": "interfaz",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "interfaz/borde.flac",
+			"duracion": 0.08
+		},
+		"interfaz/abrir": {
+			"nombre": "Menú, abrir",
+			"explicacion": "Tres notas rápidas que suben: se abre un menú.",
+			"grupo": "interfaz",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "interfaz/abrir.flac",
+			"duracion": 0.31
+		},
+		"interfaz/cerrar": {
+			"nombre": "Menú, cerrar",
+			"explicacion": "Tres notas rápidas que bajan: se cierra el menú.",
+			"grupo": "interfaz",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "interfaz/cerrar.flac",
+			"duracion": 0.31
+		},
+		"interfaz/ajuste": {
+			"nombre": "Menú, ajuste",
+			"explicacion": "Un toque agudo y muy corto: has cambiado el valor de un ajuste.",
+			"grupo": "interfaz",
+			"bucle": false,
+			"posicionable": false,
+			"fichero": "interfaz/ajuste.flac",
+			"duracion": 0.03
+		}
+	}
+}

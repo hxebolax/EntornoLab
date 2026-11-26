@@ -1,0 +1,4145 @@
+{
+	"formato": 1,
+	"id": "colegio",
+	"nombre": "Colegio",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Mobiliario de un centro escolar: aula, biblioteca, comedor, gimnasio, patio, música, informática y pasillos.",
+	"depende_de": ["comun", "hogar", "oficina_y_comercio", "calle", "transporte", "juego"],
+	"categorias": {
+		"aula": "Aula",
+		"biblioteca": "Biblioteca e informática",
+		"comedor": "Comedor",
+		"gimnasio": "Gimnasio y patio",
+		"musica": "Música",
+		"pasillo": "Pasillos y zonas comunes",
+		"talleres": "Aula de plástica",
+		"aseos": "Aseos de alumnos",
+		"apoyo": "Aula de apoyo y sala sensorial"
+	},
+	"subcategorias": {
+		"mesas_alumnos": "Mesas y sillas de alumnos",
+		"puesto_profesor": "Puesto del profesor",
+		"paredes_aula": "Pizarras y lo que cuelga en el aula",
+		"clima_aula": "Ventilación y aire",
+		"almacen_aula": "Armarios y estanterías de aula",
+		"residuos_aula": "Papeleras y reciclaje",
+		"suelo_aula": "Rincones y cosas por el suelo",
+		"libros_biblioteca": "Libros y lectura",
+		"informatica": "Ordenadores e impresora",
+		"mesas_comedor": "Mesas del comedor",
+		"servicio_comedor": "Servicio y agua",
+		"aparatos_gimnasia": "Aparatos de gimnasia",
+		"juegos_pelota": "Canastas, porterías y pelotas",
+		"vestuario_escolar": "Vestuario",
+		"juegos_patio": "Juegos del patio",
+		"huerto_escolar": "Huerto y naturaleza",
+		"instrumentos_musica": "Instrumentos",
+		"atriles_tarimas": "Atriles, tarimas y gradas",
+		"taquillas_bancos": "Taquillas, percheros y bancos",
+		"avisos_pasillo": "Avisos, vitrinas y seguridad",
+		"estructura_pasillo": "Columnas y pilares",
+		"plastica": "Aula de plástica",
+		"aseos_escolares": "Urinarios y cabinas",
+		"sala_sensorial": "Sala sensorial",
+		"ayudas_aula": "Ayudas técnicas de aula"
+	},
+	"estados": {
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"apagado": "Apagado",
+		"encendido": "Encendido",
+		"desplegado": "Desplegado",
+		"plegado": "Plegado"
+	},
+	"objetos": [
+		{
+			"id": "pupitre",
+			"nombre": "Pupitre",
+			"categoria": "aula",
+			"subcategoria": "mesas_alumnos",
+			"etiquetas": ["pupitre", "mesa de alumno", "mesa escolar"],
+			"descripcion": "Mesa de alumno con su silla detrás. En el aula hay muchas, en filas, con pasillos entre ellas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.7],
+				"fondo": [0.5, 0.5, 0.6],
+				"alto": [0.6, 0.72, 0.76]
+			},
+			"variantes": [
+				{
+					"id": "infantil",
+					"nombre": "De infantil",
+					"ancho": 0.6,
+					"fondo": 0.5,
+					"alto": 0.6
+				},
+				{
+					"id": "primaria",
+					"nombre": "De primaria",
+					"ancho": 0.7,
+					"fondo": 0.5,
+					"alto": 0.68
+				},
+				{
+					"id": "secundaria",
+					"nombre": "De secundaria",
+					"ancho": 0.7,
+					"fondo": 0.5,
+					"alto": 0.76
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["silla", "mochilas"],
+			"simbolo": {
+				"letra": "Pu",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/pupitre.png",
+				"descripcion": "Huella en planta de «Pupitre»: un rectángulo de 0,70 por 0,50 metros, con la letra «Pu»."
+			}
+		},
+		{
+			"id": "pupitre_doble",
+			"nombre": "Pupitre doble",
+			"categoria": "aula",
+			"subcategoria": "mesas_alumnos",
+			"etiquetas": ["mesa doble", "mesa de dos alumnos", "bipersonal"],
+			"descripcion": "Mesa para dos alumnos, con dos sillas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.1, 1.2, 1.4],
+				"fondo": [0.5, 0.5, 0.6],
+				"alto": [0.6, 0.72, 0.76]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla"],
+			"simbolo": {
+				"letra": "Pd",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/pupitre_doble.png",
+				"descripcion": "Huella en planta de «Pupitre doble»: un rectángulo de 1,20 por 0,50 metros, con la letra «Pd»."
+			}
+		},
+		{
+			"id": "mesa_del_profesor",
+			"nombre": "Mesa del profesor",
+			"categoria": "aula",
+			"subcategoria": "puesto_profesor",
+			"etiquetas": ["mesa de profesor", "mesa de la maestra", "mesa docente"],
+			"descripcion": "Mesa grande con cajones, delante de la pizarra y de cara a los pupitres.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.4, 1.6],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [0.72, 0.75, 0.78]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["pizarra", "panel_interactivo_ruedas"],
+			"simbolo": {
+				"letra": "Md",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_del_profesor.png",
+				"descripcion": "Huella en planta de «Mesa del profesor»: un rectángulo de 1,40 por 0,70 metros, con la letra «Md»."
+			}
+		},
+		{
+			"id": "silla",
+			"nombre": "Silla de alumno",
+			"categoria": "aula",
+			"subcategoria": "mesas_alumnos",
+			"etiquetas": ["silla escolar", "silla de pala"],
+			"descripcion": "Silla escolar ligera, de tubo y contrachapado. Arrastra y hace ruido al moverla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.38, 0.42, 0.46],
+				"fondo": [0.38, 0.42, 0.48],
+				"alto": [0.6, 0.78, 0.85]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "sala_lectura", "comedor_colectivo"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["pupitre", "pupitre_doble"],
+			"simbolo": {
+				"letra": "Si",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla.png",
+				"descripcion": "Huella en planta de «Silla de alumno»: un rectángulo de 0,42 por 0,42 metros, con la letra «Si»."
+			}
+		},
+		{
+			"id": "pizarra",
+			"nombre": "Pizarra",
+			"categoria": "aula",
+			"subcategoria": "paredes_aula",
+			"etiquetas": ["pizarra", "encerado", "pizarra digital", "pizarrón"],
+			"descripcion": "Pizarra colgada en la pared, de la cintura a por encima de la cabeza, con una repisa para las tizas que sobresale.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 2.4, 3.6],
+				"fondo": [0.05, 0.08, 0.12],
+				"alto": [1.0, 1.2, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "Pequeña",
+					"ancho": 1.2,
+					"fondo": 0.08,
+					"alto": 1.0
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 2.4,
+					"fondo": 0.08,
+					"alto": 1.2
+				},
+				{
+					"id": "doble",
+					"nombre": "Doble",
+					"ancho": 3.6,
+					"fondo": 0.1,
+					"alto": 1.2
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/tiza.flac"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "sonidos/tiza.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_del_profesor", "mapa_mural"],
+			"simbolo": {
+				"letra": "Pi",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/pizarra.png",
+				"descripcion": "Huella en planta de «Pizarra»: un rectángulo de 2,40 por 0,08 metros, colgado a 0,90 metros del suelo, con la letra «Pi»."
+			}
+		},
+		{
+			"id": "armario",
+			"nombre": "Armario de aula",
+			"categoria": "aula",
+			"subcategoria": "almacen_aula",
+			"etiquetas": ["armario", "armario de material"],
+			"descripcion": "Armario alto de dos puertas donde se guarda el material.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.2],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [1.4, 1.9, 2.0]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario.png",
+				"descripcion": "Huella en planta de «Armario de aula»: un rectángulo de 0,90 por 0,45 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "estanteria_baja",
+			"nombre": "Estantería baja de aula",
+			"categoria": "aula",
+			"subcategoria": "almacen_aula",
+			"etiquetas": ["casilleros", "mueble de bandejas", "estantería"],
+			"descripcion": "Estantería baja con casilleros para las bandejas de los alumnos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.3, 0.4, 0.45],
+				"alto": [0.7, 0.8, 1.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Eb",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/estanteria_baja.png",
+				"descripcion": "Huella en planta de «Estantería baja de aula»: un rectángulo de 1,00 por 0,40 metros, con la letra «Eb»."
+			}
+		},
+		{
+			"id": "papelera",
+			"nombre": "Papelera",
+			"categoria": "aula",
+			"subcategoria": "residuos_aula",
+			"etiquetas": ["papelera", "cubo"],
+			"descripcion": "Papelera pequeña de plástico. Se vuelca si la empujas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.35],
+				"fondo": [0.25, 0.3, 0.35],
+				"alto": [0.3, 0.35, 0.45]
+			},
+			"colocacion": ["suelo", "esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "pasillo", "sala_lectura"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["reciclaje"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/papelera.png",
+				"descripcion": "Huella en planta de «Papelera»: un círculo de 0,30 por 0,30 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "reciclaje",
+			"nombre": "Contenedores de reciclaje de aula",
+			"categoria": "aula",
+			"subcategoria": "residuos_aula",
+			"etiquetas": ["reciclaje", "cubos de reciclar", "punto limpio"],
+			"descripcion": "Tres cubos juntos para separar papel, envases y resto, con tapas basculantes.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.2],
+				"fondo": [0.3, 0.35, 0.4],
+				"alto": [0.6, 0.7, 0.9]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "pasillo", "comedor_colectivo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["papelera"],
+			"simbolo": {
+				"letra": "Re",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/reciclaje.png",
+				"descripcion": "Huella en planta de «Contenedores de reciclaje de aula»: un rectángulo de 0,90 por 0,35 metros, con la letra «Re»."
+			}
+		},
+		{
+			"id": "mesa_redonda",
+			"nombre": "Mesa redonda de trabajo",
+			"categoria": "aula",
+			"subcategoria": "mesas_alumnos",
+			"etiquetas": ["mesa de grupo", "mesa circular", "mesa de equipo"],
+			"descripcion": "Mesa redonda para trabajar en grupo, con sillas alrededor.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [0.9, 1.2, 1.5],
+				"alto": [0.5, 0.72, 0.76]
+			},
+			"variantes": [
+				{
+					"id": "infantil",
+					"nombre": "De infantil",
+					"ancho": 1.0,
+					"fondo": 1.0,
+					"alto": 0.52
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 1.2,
+					"fondo": 1.2,
+					"alto": 0.72
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla"],
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_redonda.png",
+				"descripcion": "Huella en planta de «Mesa redonda de trabajo»: un círculo de 1,20 por 1,20 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "mesa_hexagonal",
+			"nombre": "Mesa hexagonal de grupo",
+			"categoria": "aula",
+			"subcategoria": "mesas_alumnos",
+			"etiquetas": ["mesa hexagonal", "mesa de seis"],
+			"descripcion": "Mesa de seis lados, uno por alumno.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.75, 1.0], [0.25, 1.0], [0.0, 0.5], [0.25, 0.0], [0.75, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.1, 1.3, 1.5],
+				"fondo": [0.95, 1.13, 1.3],
+				"alto": [0.5, 0.72, 0.76]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["silla"],
+			"simbolo": {
+				"letra": "Mh",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_hexagonal.png",
+				"descripcion": "Huella en planta de «Mesa hexagonal de grupo»: un hexágono de 1,30 por 1,13 metros, con la letra «Mh»."
+			}
+		},
+		{
+			"id": "alfombra_asamblea",
+			"nombre": "Alfombra de la asamblea",
+			"categoria": "aula",
+			"subcategoria": "suelo_aula",
+			"etiquetas": ["alfombra", "asamblea", "rincón", "corro"],
+			"descripcion": "Alfombra grande y redonda del rincón de la asamblea de infantil. Se pisa: los pasos suenan apagados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 3.5],
+				"fondo": [1.5, 2.5, 3.5],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"suelo": "alfombra",
+			"funcion": "referencia",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["aula"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/alfombra_asamblea.png",
+				"descripcion": "Huella en planta de «Alfombra de la asamblea»: un círculo de 2,50 por 2,50 metros, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "mochilas",
+			"nombre": "Mochilas en el suelo",
+			"categoria": "aula",
+			"subcategoria": "suelo_aula",
+			"etiquetas": ["mochila", "cartera", "bolsa"],
+			"descripcion": "Mochilas dejadas en el pasillo entre pupitres. Obstáculo bajo y blando: hoy están, mañana no.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.966, 0.791], [0.865, 0.932], [0.684, 1.0], [0.316, 1.0], [0.135, 0.932], [0.034, 0.791], [0.0, 0.5], [0.034, 0.209], [0.135, 0.068], [0.316, 0.0], [0.684, 0.0], [0.865, 0.068], [0.966, 0.209]]
+			},
+			"medidas": {
+				"ancho": [0.35, 0.6, 1.2],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "trasto",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "pasillo"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["pupitre"],
+			"simbolo": {
+				"letra": "Mo",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mochilas.png",
+				"descripcion": "Huella en planta de «Mochilas en el suelo»: un rectángulo de esquinas redondeadas de 0,60 por 0,40 metros, con la letra «Mo»."
+			}
+		},
+		{
+			"id": "estanteria_biblioteca",
+			"nombre": "Estantería de biblioteca",
+			"categoria": "biblioteca",
+			"subcategoria": "libros_biblioteca",
+			"etiquetas": ["librería", "estantería de libros", "anaquel"],
+			"descripcion": "Estantería de doble cara, exenta, llena de libros. Entre dos de ellas queda un pasillo estrecho.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.8, 3.0],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.2, 1.8, 2.1]
+			},
+			"variantes": [
+				{
+					"id": "un_cuerpo",
+					"nombre": "De un cuerpo",
+					"ancho": 0.9,
+					"fondo": 0.5,
+					"alto": 1.8
+				},
+				{
+					"id": "dos_cuerpos",
+					"nombre": "De dos cuerpos",
+					"ancho": 1.8,
+					"fondo": 0.5,
+					"alto": 1.8
+				},
+				{
+					"id": "tres_cuerpos",
+					"nombre": "De tres cuerpos",
+					"ancho": 2.7,
+					"fondo": 0.5,
+					"alto": 1.8
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio", "biblioteca"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_lectura", "carrito"],
+			"simbolo": {
+				"letra": "Eb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/estanteria_biblioteca.png",
+				"descripcion": "Huella en planta de «Estantería de biblioteca»: un rectángulo de 1,80 por 0,50 metros, con la letra «Eb»."
+			}
+		},
+		{
+			"id": "mesa_lectura",
+			"nombre": "Mesa de lectura",
+			"categoria": "biblioteca",
+			"subcategoria": "libros_biblioteca",
+			"etiquetas": ["mesa de biblioteca", "mesa de estudio"],
+			"descripcion": "Mesa larga de biblioteca para varios lectores.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 2.4],
+				"fondo": [0.8, 0.9, 1.2],
+				"alto": [0.72, 0.75, 0.76]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["colegio"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["estanteria_biblioteca"],
+			"simbolo": {
+				"letra": "Ml",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_lectura.png",
+				"descripcion": "Huella en planta de «Mesa de lectura»: un rectángulo de 1,80 por 0,90 metros, con la letra «Ml»."
+			}
+		},
+		{
+			"id": "mesa_ordenador",
+			"nombre": "Mesa con ordenador",
+			"categoria": "biblioteca",
+			"subcategoria": "informatica",
+			"etiquetas": ["ordenador", "computadora", "pc", "puesto informático"],
+			"descripcion": "Mesa con pantalla, teclado y la torre debajo. El ordenador encendido sopla un zumbido suave.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.0, 1.15, 1.25]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.3,
+					"radio": 4,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "sonidos/teclado.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["colegio"],
+			"estancias": ["sala_lectura", "aula"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["impresora"],
+			"simbolo": {
+				"letra": "Mo",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_ordenador.png",
+				"descripcion": "Huella en planta de «Mesa con ordenador»: un rectángulo de 1,00 por 0,70 metros, con la letra «Mo»."
+			}
+		},
+		{
+			"id": "impresora",
+			"nombre": "Impresora",
+			"categoria": "biblioteca",
+			"subcategoria": "informatica",
+			"etiquetas": ["impresora", "multifunción", "escáner"],
+			"descripcion": "Impresora grande sobre su mueble, a la altura de la cintura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.55, 0.7],
+				"fondo": [0.45, 0.55, 0.65],
+				"alto": [0.7, 1.0, 1.2]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/impresora.flac"
+			},
+			"acciones": [
+				{
+					"id": "imprimir",
+					"nombre": "Imprimir",
+					"sonido": "sonidos/impresora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["colegio"],
+			"estancias": ["sala_lectura", "aula", "despacho"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Im",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/impresora.png",
+				"descripcion": "Huella en planta de «Impresora»: un rectángulo de 0,55 por 0,55 metros, con la letra «Im»."
+			}
+		},
+		{
+			"id": "carrito",
+			"nombre": "Carrito de libros",
+			"categoria": "biblioteca",
+			"subcategoria": "libros_biblioteca",
+			"etiquetas": ["carro", "carrito", "carro de portátiles"],
+			"descripcion": "Carro con ruedas cargado de libros o de portátiles. Aparece en cualquier pasillo y rueda si lo empujas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.7, 0.9, 1.1],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["colegio"],
+			"estancias": ["sala_lectura", "pasillo", "aula"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/carrito.png",
+				"descripcion": "Huella en planta de «Carrito de libros»: un rectángulo de 0,50 por 0,90 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "mesa_comedor",
+			"nombre": "Mesa de comedor con bancos",
+			"categoria": "comedor",
+			"subcategoria": "mesas_comedor",
+			"etiquetas": ["mesa de comedor", "mesa larga", "bancos corridos"],
+			"descripcion": "Mesa larga de comedor con un banco corrido a cada lado, todo en una pieza. Se entra pasando la pierna por encima del banco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.2], [0.97, 0.2], [0.97, 0.8], [1.0, 0.8], [1.0, 1.0], [0.0, 1.0], [0.0, 0.8], [0.03, 0.8], [0.03, 0.2], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [1.8, 2.4, 3.0],
+				"fondo": [1.4, 1.5, 1.7],
+				"alto": [0.6, 0.75, 0.78]
+			},
+			"variantes": [
+				{
+					"id": "seis_plazas",
+					"nombre": "De seis plazas",
+					"ancho": 1.8,
+					"fondo": 1.5,
+					"alto": 0.75
+				},
+				{
+					"id": "ocho_plazas",
+					"nombre": "De ocho plazas",
+					"ancho": 2.4,
+					"fondo": 1.5,
+					"alto": 0.75
+				},
+				{
+					"id": "diez_plazas",
+					"nombre": "De diez plazas",
+					"ancho": 3.0,
+					"fondo": 1.5,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["colegio"],
+			"estancias": ["comedor_colectivo"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["linea_bandejas"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_comedor.png",
+				"descripcion": "Huella en planta de «Mesa de comedor con bancos»: un rectángulo largo: la mesa en el centro y un banco corrido a cada lado de 2,40 por 1,50 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "linea_bandejas",
+			"nombre": "Línea de autoservicio",
+			"categoria": "comedor",
+			"subcategoria": "servicio_comedor",
+			"etiquetas": ["autoservicio", "mostrador de comedor", "self service"],
+			"descripcion": "Mostrador largo de acero con un raíl delante para deslizar la bandeja.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 5.0],
+				"fondo": [0.8, 0.9, 1.1],
+				"alto": [0.85, 0.9, 1.3]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "mostrador",
+			"lugares": ["colegio"],
+			"estancias": ["comedor_colectivo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["carro_bandejas"],
+			"simbolo": {
+				"letra": "Lb",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/linea_bandejas.png",
+				"descripcion": "Huella en planta de «Línea de autoservicio»: un rectángulo de 3,00 por 0,90 metros, con la letra «Lb»."
+			}
+		},
+		{
+			"id": "carro_bandejas",
+			"nombre": "Carro de bandejas",
+			"categoria": "comedor",
+			"subcategoria": "servicio_comedor",
+			"etiquetas": ["carro", "bandejas", "carro de platos"],
+			"descripcion": "Carro alto de metal con guías donde se dejan las bandejas usadas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.5, 1.7, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio"],
+			"estancias": ["comedor_colectivo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["linea_bandejas"],
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_bandejas.png",
+				"descripcion": "Huella en planta de «Carro de bandejas»: un rectángulo de 0,60 por 0,70 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "fuente_agua",
+			"nombre": "Fuente de agua para beber",
+			"categoria": "comedor",
+			"subcategoria": "servicio_comedor",
+			"etiquetas": ["fuente", "bebedero", "surtidor de agua"],
+			"descripcion": "Fuente de acero a la altura de la cintura. Al pulsar el botón sale un chorro para beber.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.45],
+				"fondo": [0.3, 0.35, 0.4],
+				"alto": [0.8, 0.95, 1.1]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "calle:chorro.flac"
+			},
+			"acciones": [
+				{
+					"id": "beber",
+					"nombre": "Beber",
+					"sonido": "calle:chorro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["colegio"],
+			"estancias": ["comedor_colectivo", "patio_recreo", "pasillo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Fa",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/fuente_agua.png",
+				"descripcion": "Huella en planta de «Fuente de agua para beber»: un rectángulo de 0,35 por 0,35 metros, con la letra «Fa»."
+			}
+		},
+		{
+			"id": "colchoneta",
+			"nombre": "Colchoneta",
+			"categoria": "gimnasio",
+			"subcategoria": "aparatos_gimnasia",
+			"etiquetas": ["colchoneta", "tatami", "quitamiedos"],
+			"descripcion": "Colchoneta gruesa en el suelo. Se pisa: el suelo se hunde y los pasos no suenan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 3.0],
+				"fondo": [1.0, 1.0, 2.0],
+				"alto": [0.04, 0.08, 0.3]
+			},
+			"variantes": [
+				{
+					"id": "fina",
+					"nombre": "Fina",
+					"ancho": 2.0,
+					"fondo": 1.0,
+					"alto": 0.05
+				},
+				{
+					"id": "gruesa",
+					"nombre": "Gruesa",
+					"ancho": 2.0,
+					"fondo": 1.0,
+					"alto": 0.1
+				},
+				{
+					"id": "quitamiedos",
+					"nombre": "Quitamiedos",
+					"ancho": 3.0,
+					"fondo": 2.0,
+					"alto": 0.3
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "sonidos/colchoneta.flac"
+			},
+			"contenedor": true,
+			"suelo": "alfombra",
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["pista"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["plinto", "potro"],
+			"simbolo": {
+				"letra": "Co",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/colchoneta.png",
+				"descripcion": "Huella en planta de «Colchoneta»: un rectángulo de 2,00 por 1,00 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "potro",
+			"nombre": "Potro",
+			"categoria": "gimnasio",
+			"subcategoria": "aparatos_gimnasia",
+			"etiquetas": ["potro", "plinto", "caballo de saltos"],
+			"descripcion": "Potro de gimnasia: un cuerpo acolchado sobre cuatro patas, a la altura del pecho.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.984, 0.84], [0.935, 0.935], [0.84, 0.984], [0.5, 1.0], [0.16, 0.984], [0.065, 0.935], [0.016, 0.84], [0.0, 0.5], [0.016, 0.16], [0.065, 0.065], [0.16, 0.016], [0.5, 0.0], [0.84, 0.016], [0.935, 0.065], [0.984, 0.16]]
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.5],
+				"fondo": [1.2, 1.6, 1.7],
+				"alto": [1.0, 1.1, 1.35]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["pista"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["colchoneta"],
+			"simbolo": {
+				"letra": "Po",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/potro.png",
+				"descripcion": "Huella en planta de «Potro»: un rectángulo de esquinas redondeadas de 0,40 por 1,60 metros, con la letra «Po»."
+			}
+		},
+		{
+			"id": "plinto",
+			"nombre": "Plinto",
+			"categoria": "gimnasio",
+			"subcategoria": "aparatos_gimnasia",
+			"etiquetas": ["plinto", "cajón de saltos"],
+			"descripcion": "Cajones de madera apilados, más anchos abajo que arriba, con la tapa acolchada.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.08, 0.0], [0.92, 0.0], [1.0, 0.08], [1.0, 0.92], [0.92, 1.0], [0.08, 1.0], [0.0, 0.92], [0.0, 0.08]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 0.9],
+				"fondo": [1.2, 1.4, 1.5],
+				"alto": [0.6, 1.0, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["pista"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["colchoneta"],
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/plinto.png",
+				"descripcion": "Huella en planta de «Plinto»: un rectángulo con las esquinas cortadas de 0,80 por 1,40 metros, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "espalderas",
+			"nombre": "Espalderas",
+			"categoria": "gimnasio",
+			"subcategoria": "aparatos_gimnasia",
+			"etiquetas": ["espalderas", "espaldera", "barras de pared"],
+			"descripcion": "Barras de madera horizontales sujetas a la pared, del suelo a más de dos metros. Sobresalen un palmo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 2.7],
+				"fondo": [0.12, 0.15, 0.2],
+				"alto": [2.2, 2.4, 2.6]
+			},
+			"variantes": [
+				{
+					"id": "simple",
+					"nombre": "Simple",
+					"ancho": 0.9,
+					"fondo": 0.15,
+					"alto": 2.4
+				},
+				{
+					"id": "doble",
+					"nombre": "Doble",
+					"ancho": 1.8,
+					"fondo": 0.15,
+					"alto": 2.4
+				},
+				{
+					"id": "triple",
+					"nombre": "Triple",
+					"ancho": 2.7,
+					"fondo": 0.15,
+					"alto": 2.4
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["pista"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Es",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/espalderas.png",
+				"descripcion": "Huella en planta de «Espalderas»: un rectángulo de 0,90 por 0,15 metros, con la letra «Es»."
+			}
+		},
+		{
+			"id": "banco_sueco",
+			"nombre": "Banco sueco",
+			"categoria": "gimnasio",
+			"subcategoria": "aparatos_gimnasia",
+			"etiquetas": ["banco sueco", "banco de gimnasia"],
+			"descripcion": "Banco de madera largo, bajo y estrecho. A la altura de la espinilla: se tropieza con él.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 4.0],
+				"fondo": [0.22, 0.25, 0.3],
+				"alto": [0.3, 0.32, 0.35]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["pista"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bs",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_sueco.png",
+				"descripcion": "Huella en planta de «Banco sueco»: un rectángulo de 2,50 por 0,25 metros, con la letra «Bs»."
+			}
+		},
+		{
+			"id": "canasta",
+			"nombre": "Canasta de baloncesto",
+			"categoria": "gimnasio",
+			"subcategoria": "juegos_pelota",
+			"etiquetas": ["canasta", "baloncesto", "aro", "tablero"],
+			"descripcion": "Canasta: una base ancha y pesada en el suelo y un poste que sube hasta el tablero, muy por encima de la cabeza.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.4], [0.65, 0.4], [0.65, 1.0], [0.35, 1.0], [0.35, 0.4], [0.0, 0.4]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.8],
+				"fondo": [1.2, 1.6, 2.3],
+				"alto": [2.6, 3.05, 3.95]
+			},
+			"variantes": [
+				{
+					"id": "minibasket",
+					"nombre": "De minibasket",
+					"ancho": 1.2,
+					"fondo": 1.4,
+					"alto": 2.6
+				},
+				{
+					"id": "reglamentaria",
+					"nombre": "Reglamentaria",
+					"ancho": 1.8,
+					"fondo": 2.3,
+					"alto": 3.95
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/balon.flac"
+			},
+			"acciones": [
+				{
+					"id": "encestar",
+					"nombre": "Lanzar a canasta",
+					"sonido": "sonidos/balon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["pista", "patio_recreo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["balones_sueltos"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/canasta.png",
+				"descripcion": "Huella en planta de «Canasta de baloncesto»: una te de 1,20 por 1,60 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "porteria",
+			"nombre": "Portería",
+			"categoria": "gimnasio",
+			"subcategoria": "juegos_pelota",
+			"etiquetas": ["portería", "porteria", "fútbol", "arco"],
+			"descripcion": "Portería de fútbol sala: dos postes y un larguero, con la red detrás. Se puede entrar por delante.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.15], [0.1, 0.0], [0.9, 0.0], [1.0, 0.15], [1.0, 1.0], [0.97, 1.0], [0.97, 0.2], [0.03, 0.2], [0.03, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 3.16],
+				"fondo": [0.8, 1.0, 1.3],
+				"alto": [1.6, 2.0, 2.08]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "Pequeña",
+					"ancho": 2.0,
+					"fondo": 0.8,
+					"alto": 1.6
+				},
+				{
+					"id": "futbol_sala",
+					"nombre": "De fútbol sala",
+					"ancho": 3.0,
+					"fondo": 1.0,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "chutar",
+					"nombre": "Chutar a puerta",
+					"sonido": "sonidos/balon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["pista", "patio_recreo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["balones_sueltos"],
+			"simbolo": {
+				"letra": "Po",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/porteria.png",
+				"descripcion": "Huella en planta de «Portería»: una U abierta por delante: los dos postes y la red detrás de 3,00 por 1,00 metros, con la letra «Po»."
+			}
+		},
+		{
+			"id": "mesa_pimpon",
+			"nombre": "Mesa de pimpón",
+			"categoria": "gimnasio",
+			"subcategoria": "juegos_pelota",
+			"etiquetas": ["pimpón", "ping pong", "tenis de mesa"],
+			"descripcion": "Mesa de pimpón con su red en medio. Grande y de bordes duros, a la altura de la cadera.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 1.525, 1.55],
+				"fondo": [2.7, 2.74, 2.76],
+				"alto": [0.74, 0.76, 0.78]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/pimpon.flac"
+			},
+			"acciones": [
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "sonidos/pimpon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["patio_recreo", "pista"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_pimpon.png",
+				"descripcion": "Huella en planta de «Mesa de pimpón»: un rectángulo de 1,52 por 2,74 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "banco_vestuario",
+			"nombre": "Banco de vestuario",
+			"categoria": "gimnasio",
+			"subcategoria": "vestuario_escolar",
+			"etiquetas": ["banco", "vestuario", "banco con perchas"],
+			"descripcion": "Banco de listones con una barra de perchas encima, a la altura de la cabeza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.0],
+				"fondo": [0.35, 0.4, 0.45],
+				"alto": [1.6, 1.7, 1.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["colegio"],
+			"estancias": ["vestuario"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bv",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_vestuario.png",
+				"descripcion": "Huella en planta de «Banco de vestuario»: un rectángulo de 1,50 por 0,40 metros, con la letra «Bv»."
+			}
+		},
+		{
+			"id": "tobogan",
+			"nombre": "Tobogán",
+			"categoria": "gimnasio",
+			"subcategoria": "juegos_patio",
+			"etiquetas": ["tobogán", "tobogan", "resbaladilla"],
+			"descripcion": "Tobogán del patio: la escalera por detrás y la rampa de chapa que baja hacia delante.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 1.0],
+				"fondo": [2.2, 3.0, 4.0],
+				"alto": [1.2, 1.8, 2.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["patio_recreo"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "To",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/tobogan.png",
+				"descripcion": "Huella en planta de «Tobogán»: un trapecio, más estrecho por detrás de 0,60 por 3,00 metros, con la letra «To»."
+			}
+		},
+		{
+			"id": "arenero",
+			"nombre": "Arenero",
+			"categoria": "gimnasio",
+			"subcategoria": "juegos_patio",
+			"etiquetas": ["arenero", "arena", "cajón de arena"],
+			"descripcion": "Recinto bajo lleno de arena. Se entra pisando el bordillo; dentro, los pasos se hunden.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.12], [1.0, 0.88], [0.88, 1.0], [0.12, 1.0], [0.0, 0.88], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 5.0],
+				"fondo": [1.5, 3.0, 5.0],
+				"alto": [0.15, 0.2, 0.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"suelo": "arena",
+			"funcion": "juego",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["patio_recreo"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/arenero.png",
+				"descripcion": "Huella en planta de «Arenero»: un rectángulo con las esquinas cortadas de 3,00 por 3,00 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "piano",
+			"nombre": "Piano vertical",
+			"categoria": "musica",
+			"subcategoria": "instrumentos_musica",
+			"etiquetas": ["piano", "teclado"],
+			"descripcion": "Piano de pared del aula de música. Al tocarlo suenan tres notas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.4, 1.5, 1.55],
+				"fondo": [0.55, 0.6, 0.65],
+				"alto": [1.1, 1.2, 1.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "hogar:piano.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar_nota",
+					"nombre": "Tocar una nota",
+					"sonido": "hogar:piano.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["atril"],
+			"simbolo": {
+				"letra": "Pi",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/piano.png",
+				"descripcion": "Huella en planta de «Piano vertical»: un rectángulo de 1,50 por 0,60 metros, con la letra «Pi»."
+			}
+		},
+		{
+			"id": "instrumentos",
+			"nombre": "Mueble de instrumentos",
+			"categoria": "musica",
+			"subcategoria": "instrumentos_musica",
+			"etiquetas": ["instrumentos", "pandereta", "percusión", "xilófono"],
+			"descripcion": "Estantería baja con panderetas, triángulos y tambores. Si la mueves, todo suena.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.6],
+				"fondo": [0.4, 0.45, 0.6],
+				"alto": [0.8, 1.0, 1.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "sonidos/pandereta.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/pandereta.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "instrumento",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "In",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/instrumentos.png",
+				"descripcion": "Huella en planta de «Mueble de instrumentos»: un rectángulo de 1,20 por 0,45 metros, con la letra «In»."
+			}
+		},
+		{
+			"id": "atril",
+			"nombre": "Atril",
+			"categoria": "musica",
+			"subcategoria": "atriles_tarimas",
+			"etiquetas": ["atril", "partitura"],
+			"descripcion": "Atril de metal: un trípode abajo y la bandeja a la altura del pecho. Ligero, se cae con facilidad.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 1.0], [0.0, 0.0], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.55],
+				"fondo": [0.4, 0.5, 0.55],
+				"alto": [0.8, 1.2, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["piano"],
+			"simbolo": {
+				"letra": "At",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/atril.png",
+				"descripcion": "Huella en planta de «Atril»: un triángulo (las tres patas) de 0,50 por 0,50 metros, con la letra «At»."
+			}
+		},
+		{
+			"id": "tarima",
+			"nombre": "Tarima",
+			"categoria": "musica",
+			"subcategoria": "atriles_tarimas",
+			"etiquetas": ["tarima", "escenario", "estrado"],
+			"descripcion": "Tarima de madera de un palmo de alto. Se sube a ella: es un escalón, y encima los pasos suenan huecos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 6.0],
+				"fondo": [1.0, 1.5, 3.0],
+				"alto": [0.15, 0.2, 0.4]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"suelo": "madera",
+			"aviso": "Tarima: hay un escalón.",
+			"funcion": "estructura",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "salon_actos"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/tarima.png",
+				"descripcion": "Huella en planta de «Tarima»: un rectángulo de 3,00 por 1,50 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "taquillas",
+			"nombre": "Taquillas",
+			"categoria": "pasillo",
+			"subcategoria": "taquillas_bancos",
+			"etiquetas": ["taquilla", "taquillas", "casillero"],
+			"descripcion": "Fila de taquillas de chapa, altas, pegadas a la pared. Al golpearlas suenan a lata.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.9, 2.7],
+				"fondo": [0.45, 0.5, 0.55],
+				"alto": [1.7, 1.8, 1.95]
+			},
+			"variantes": [
+				{
+					"id": "una",
+					"nombre": "Una columna",
+					"ancho": 0.3,
+					"fondo": 0.5,
+					"alto": 1.8
+				},
+				{
+					"id": "tres",
+					"nombre": "Tres columnas",
+					"ancho": 0.9,
+					"fondo": 0.5,
+					"alto": 1.8
+				},
+				{
+					"id": "seis",
+					"nombre": "Seis columnas",
+					"ancho": 1.8,
+					"fondo": 0.5,
+					"alto": 1.8
+				},
+				{
+					"id": "nueve",
+					"nombre": "Nueve columnas",
+					"ancho": 2.7,
+					"fondo": 0.5,
+					"alto": 1.8
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "vestuario"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/taquillas.png",
+				"descripcion": "Huella en planta de «Taquillas»: un rectángulo de 0,90 por 0,50 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "percheros",
+			"nombre": "Percheros de pared",
+			"categoria": "pasillo",
+			"subcategoria": "taquillas_bancos",
+			"etiquetas": ["percheros", "perchas", "colgadores"],
+			"descripcion": "Barra de perchas en la pared del pasillo, a la altura del hombro, con abrigos y mochilas que abultan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.5, 3.0],
+				"fondo": [0.1, 0.25, 0.35],
+				"alto": [0.3, 0.6, 0.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.1,
+			"detectable_baston": false,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "colgar_ropa",
+					"nombre": "Colgar el abrigo"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "aula"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mochilas"],
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/percheros.png",
+				"descripcion": "Huella en planta de «Percheros de pared»: un rectángulo de 1,50 por 0,25 metros, colgado a 1,10 metros del suelo, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "banco_pasillo",
+			"nombre": "Banco de pasillo",
+			"categoria": "pasillo",
+			"subcategoria": "taquillas_bancos",
+			"etiquetas": ["banco", "asiento"],
+			"descripcion": "Banco de madera contra la pared del pasillo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.0],
+				"fondo": [0.35, 0.4, 0.45],
+				"alto": [0.4, 0.45, 0.85]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_pasillo.png",
+				"descripcion": "Huella en planta de «Banco de pasillo»: un rectángulo de 1,50 por 0,40 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "tablon",
+			"nombre": "Tablón de anuncios",
+			"categoria": "pasillo",
+			"subcategoria": "avisos_pasillo",
+			"etiquetas": ["tablón", "tablon", "corcho", "cartelera"],
+			"descripcion": "Tablón de corcho con marco, colgado a media altura. Sobresale poco de la pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.2, 2.0],
+				"fondo": [0.03, 0.04, 0.06],
+				"alto": [0.6, 0.9, 1.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "aula", "vestibulo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/tablon.png",
+				"descripcion": "Huella en planta de «Tablón de anuncios»: un rectángulo de 1,20 por 0,04 metros, colgado a 1,00 metros del suelo, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "columna",
+			"nombre": "Columna",
+			"categoria": "pasillo",
+			"subcategoria": "estructura_pasillo",
+			"etiquetas": ["columna", "pilar", "poste"],
+			"descripcion": "Columna de hormigón en medio del paso. Dura y fría; no avisa hasta que se toca.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.8],
+				"fondo": [0.3, 0.4, 0.8],
+				"alto": [2.4, 3.0, 4.5]
+			},
+			"variantes": [
+				{
+					"id": "redonda_fina",
+					"nombre": "Fina",
+					"ancho": 0.3,
+					"fondo": 0.3,
+					"alto": 3.0
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 0.4,
+					"fondo": 0.4,
+					"alto": 3.0
+				},
+				{
+					"id": "gruesa",
+					"nombre": "Gruesa",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 3.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "patio_recreo", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Co",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna.png",
+				"descripcion": "Huella en planta de «Columna»: un círculo de 0,40 por 0,40 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "pilar_cuadrado",
+			"nombre": "Pilar cuadrado",
+			"categoria": "pasillo",
+			"subcategoria": "estructura_pasillo",
+			"etiquetas": ["pilar", "columna cuadrada", "machón"],
+			"descripcion": "Pilar cuadrado de ladrillo, con cuatro esquinas vivas.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.8],
+				"fondo": [0.3, 0.4, 0.8],
+				"alto": [2.4, 3.0, 4.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ladrillo",
+			"sonidos": {
+				"golpe": "golpe/ladrillo"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "patio_recreo", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/pilar_cuadrado.png",
+				"descripcion": "Huella en planta de «Pilar cuadrado»: un rectángulo de 0,40 por 0,40 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "extintor",
+			"nombre": "Extintor colgado",
+			"categoria": "pasillo",
+			"subcategoria": "avisos_pasillo",
+			"etiquetas": ["extintor", "matafuegos", "incendios"],
+			"descripcion": "Extintor colgado de la pared a un metro del suelo. El bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.13, 0.15, 0.18],
+				"fondo": [0.13, 0.15, 0.2],
+				"alto": [0.45, 0.5, 0.6]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ex",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/extintor.png",
+				"descripcion": "Huella en planta de «Extintor colgado»: un círculo de 0,15 por 0,15 metros, colgado a 1,00 metros del suelo, con la letra «Ex»."
+			}
+		},
+		{
+			"id": "vitrina_trofeos",
+			"nombre": "Vitrina de trofeos",
+			"categoria": "pasillo",
+			"subcategoria": "avisos_pasillo",
+			"etiquetas": ["vitrina", "trofeos", "copas"],
+			"descripcion": "Vitrina de cristal con copas y medallas dentro. Al tocarla, el cristal tintinea.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.6, 1.8, 2.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Vt",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/vitrina_trofeos.png",
+				"descripcion": "Huella en planta de «Vitrina de trofeos»: un rectángulo de 1,20 por 0,40 metros, con la letra «Vt»."
+			}
+		},
+		{
+			"id": "mapa_mural",
+			"nombre": "Mapa mural enrollable",
+			"categoria": "aula",
+			"subcategoria": "paredes_aula",
+			"etiquetas": ["mapa mural", "mapa enrollable", "mapamundi", "mapa de España", "lámina mural"],
+			"descripcion": "Mapa de lona colgado de un rodillo sobre la pizarra; bajado, su borde inferior con una varilla de madera queda a la altura del pecho y se balancea al rozarlo. El bastón no lo encuentra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 2.0],
+				"fondo": [0.03, 0.05, 0.08],
+				"alto": [0.9, 1.2, 1.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "papel",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["colegio"],
+			"estancias": ["aula"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"relacionados": ["pizarra"],
+			"simbolo": {
+				"letra": "Mm",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mapa_mural.png",
+				"descripcion": "Huella en planta de «Mapa mural enrollable»: un rectángulo de 1,40 por 0,05 metros, colgado a 1,00 metros del suelo, con la letra «Mm»."
+			}
+		},
+		{
+			"id": "reloj_aula",
+			"nombre": "Reloj de pared del aula",
+			"categoria": "aula",
+			"subcategoria": "paredes_aula",
+			"etiquetas": ["reloj", "reloj de pared", "reloj del aula"],
+			"descripcion": "Reloj redondo colgado sobre la puerta o la pizarra, muy por encima de la cabeza. No se toca, pero en silencio se oye su tictac y ayuda a saber en qué pared está la puerta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.04, 0.05, 0.06],
+				"alto": [0.25, 0.3, 0.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 2.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/reloj",
+					"volumen": 0.2,
+					"radio": 5
+				}
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "pasillo", "comedor_colectivo"],
+			"obstaculo": "aereo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/reloj_aula.png",
+				"descripcion": "Huella en planta de «Reloj de pared del aula»: un círculo de 0,30 por 0,05 metros, colgado a 2,20 metros del suelo, con la letra «Ra»."
+			}
+		},
+		{
+			"id": "panel_interactivo_ruedas",
+			"nombre": "Panel interactivo en soporte con ruedas",
+			"categoria": "aula",
+			"subcategoria": "puesto_profesor",
+			"etiquetas": ["panel interactivo", "pizarra digital", "monitor interactivo", "pantalla táctil"],
+			"descripcion": "Pantalla táctil enorme sobre un pie de metal con dos patas largas hacia delante. Las patas, a ras de suelo, sobresalen más que la pantalla; encendida sopla un ventilador.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.94, 1.0], [0.94, 0.15], [0.06, 0.15], [0.06, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.95, 2.3],
+				"fondo": [0.6, 0.8, 0.9],
+				"alto": [1.6, 1.8, 2.1]
+			},
+			"variantes": [
+				{
+					"id": "de_65",
+					"nombre": "De 65 pulgadas",
+					"ancho": 1.5,
+					"fondo": 0.7,
+					"alto": 1.7
+				},
+				{
+					"id": "de_75",
+					"nombre": "De 75 pulgadas",
+					"ancho": 1.75,
+					"fondo": 0.8,
+					"alto": 1.8
+				},
+				{
+					"id": "de_86",
+					"nombre": "De 86 pulgadas",
+					"ancho": 1.95,
+					"fondo": 0.8,
+					"alto": 1.85
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.15,
+					"radio": 3,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/teclado.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "sala_reuniones"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["mesa_del_profesor"],
+			"simbolo": {
+				"letra": "Pi",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_interactivo_ruedas.png",
+				"descripcion": "Huella en planta de «Panel interactivo en soporte con ruedas»: una U abierta por delante de 1,95 por 0,80 metros, con la letra «Pi»."
+			}
+		},
+		{
+			"id": "ventilador_techo",
+			"nombre": "Ventilador de techo",
+			"categoria": "aula",
+			"subcategoria": "clima_aula",
+			"etiquetas": ["ventilador de techo", "aspas", "ventilador"],
+			"descripcion": "Aspas que giran colgadas del techo, muy por encima de la cabeza. No se tocan, pero se oyen girar y se nota el aire en la cara: indican el centro del aula.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 1.0], [0.429, 0.571], [0.0, 0.5], [0.429, 0.429], [0.5, 0.0], [0.571, 0.429], [1.0, 0.5], [0.571, 0.571]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.3, 1.5],
+				"fondo": [1.0, 1.3, 1.5],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 2.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.35,
+					"radio": 6,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "comedor_colectivo", "pista"],
+			"obstaculo": "aereo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Vt",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/ventilador_techo.png",
+				"descripcion": "Huella en planta de «Ventilador de techo»: una estrella de 4 puntas de 1,30 por 1,30 metros, colgado a 2,50 metros del suelo, con la letra «Vt»."
+			}
+		},
+		{
+			"id": "purificador_aire",
+			"nombre": "Purificador de aire",
+			"categoria": "aula",
+			"subcategoria": "clima_aula",
+			"etiquetas": ["purificador", "purificador de aire", "filtro HEPA", "medidor de CO2"],
+			"descripcion": "Columna de plástico a la altura de la cadera en un rincón del aula, con una rejilla arriba que sopla. Zumba constante y suave; si lo apagan, el aula suena distinta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [0.6, 0.8, 1.1]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.25,
+					"radio": 4,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "comedor_colectivo", "sala_lectura"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/purificador_aire.png",
+				"descripcion": "Huella en planta de «Purificador de aire»: un rectángulo de esquinas redondeadas de 0,40 por 0,30 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "mesa_trapecio",
+			"nombre": "Mesa trapezoidal",
+			"categoria": "aula",
+			"subcategoria": "mesas_alumnos",
+			"etiquetas": ["mesa trapezoidal", "mesa de trapecio", "mesa modular"],
+			"descripcion": "Mesa de alumnos en forma de trapecio: un lado largo, otro corto y dos inclinados. Juntando dos se forma un hexágono; las esquinas inclinadas engañan al seguir el borde con la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.25, 0.0], [0.75, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.4],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [0.52, 0.64, 0.76]
+			},
+			"variantes": [
+				{
+					"id": "infantil",
+					"nombre": "De infantil",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 0.52
+				},
+				{
+					"id": "primaria",
+					"nombre": "De primaria",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 0.64
+				},
+				{
+					"id": "secundaria",
+					"nombre": "De secundaria",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 0.76
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla"],
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_trapecio.png",
+				"descripcion": "Huella en planta de «Mesa trapezoidal»: un trapecio, más estrecho por detrás de 1,20 por 0,60 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "cordel_dibujos",
+			"nombre": "Cordel de dibujos colgados",
+			"categoria": "aula",
+			"subcategoria": "paredes_aula",
+			"etiquetas": ["cordel", "tendedero de dibujos", "trabajos colgados", "guirnalda de dibujos"],
+			"descripcion": "Cuerda tendida de pared a pared, de lado a lado del aula, con dibujos sujetos con pinzas. Queda a la altura de la cara y los papeles rozan la cabeza; el bastón pasa por debajo sin avisar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 7.0],
+				"fondo": [0.05, 0.1, 0.2],
+				"alto": [0.2, 0.3, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.6,
+			"detectable_baston": false,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "calle:papel.flac"
+			},
+			"acciones": [
+				{
+					"id": "col_tender_dibujo",
+					"nombre": "Colgar un dibujo",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["aula", "pasillo"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cd",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cordel_dibujos.png",
+				"descripcion": "Huella en planta de «Cordel de dibujos colgados»: un rectángulo de 4,00 por 0,10 metros, colgado a 1,60 metros del suelo, con la letra «Cd»."
+			}
+		},
+		{
+			"id": "triangulo_pikler",
+			"nombre": "Triángulo de Pikler",
+			"categoria": "aula",
+			"subcategoria": "suelo_aula",
+			"etiquetas": ["triángulo de Pikler", "triángulo de escalada", "Pikler", "trepador de madera"],
+			"descripcion": "Dos escaleras de listones de madera unidas arriba en forma de tienda, a la altura del pecho de un niño. Los niños trepan por un lado y bajan por el otro; las patas abiertas se tropiezan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.08, 0.0], [0.5, 0.82], [0.92, 0.0], [1.0, 0.0], [1.0, 0.18], [0.55, 1.0], [0.45, 1.0], [0.0, 0.18]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.6, 0.75, 1.0],
+				"alto": [0.6, 0.75, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["aula", "aula_infantil"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Tp",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/triangulo_pikler.png",
+				"descripcion": "Huella en planta de «Triángulo de Pikler»: una uve abierta: dos escaleras de listones que se juntan arriba de 0,80 por 0,75 metros, con la letra «Tp»."
+			}
+		},
+		{
+			"id": "teclado_soporte",
+			"nombre": "Teclado electrónico en soporte de tijera",
+			"categoria": "musica",
+			"subcategoria": "instrumentos_musica",
+			"etiquetas": ["teclado", "teclado electrónico", "órgano eléctrico", "piano digital", "soporte en equis"],
+			"descripcion": "Teclado eléctrico apoyado en un soporte de tubo en forma de equis. El soporte es ligero y se cierra si lo empujas; las patas de la equis sobresalen por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.95, 1.2, 1.45],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [0.75, 0.85, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "cinco_octavas",
+					"nombre": "De cinco octavas",
+					"ancho": 1.0,
+					"fondo": 0.4,
+					"alto": 0.85
+				},
+				{
+					"id": "piano_digital",
+					"nombre": "Piano digital de 88 teclas",
+					"ancho": 1.35,
+					"fondo": 0.4,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "hogar:piano.flac"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "tocar_nota",
+					"nombre": "Tocar una nota",
+					"sonido": "hogar:piano.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "salon_actos"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["atril"],
+			"simbolo": {
+				"letra": "Ts",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/teclado_soporte.png",
+				"descripcion": "Huella en planta de «Teclado electrónico en soporte de tijera»: un rectángulo de 1,20 por 0,40 metros, con la letra «Ts»."
+			}
+		},
+		{
+			"id": "gradas_coro",
+			"nombre": "Gradas de coro",
+			"categoria": "musica",
+			"subcategoria": "atriles_tarimas",
+			"etiquetas": ["gradas de coro", "tarima de coro", "escalones de coro", "gradería"],
+			"descripcion": "Tres escalones anchos de madera en forma de abanico, donde el coro canta de pie. Cada escalón sube un palmo y suena hueco al pisarlo; el borde de arriba no tiene barandilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.161], [0.052, 0.434], [0.134, 0.668], [0.241, 0.848], [0.366, 0.961], [0.5, 1.0], [0.634, 0.961], [0.759, 0.848], [0.866, 0.668], [0.948, 0.434], [1.0, 0.161], [0.725, 0.0], [0.702, 0.123], [0.665, 0.228], [0.616, 0.309], [0.56, 0.36], [0.5, 0.377], [0.44, 0.36], [0.384, 0.309], [0.335, 0.228], [0.298, 0.123], [0.275, 0.0]]
+			},
+			"medidas": {
+				"ancho": [2.5, 3.5, 5.0],
+				"fondo": [1.0, 1.5, 2.0],
+				"alto": [0.35, 0.6, 0.8]
+			},
+			"variantes": [
+				{
+					"id": "dos_alturas",
+					"nombre": "De dos alturas",
+					"ancho": 3.0,
+					"fondo": 1.1,
+					"alto": 0.4
+				},
+				{
+					"id": "tres_alturas",
+					"nombre": "De tres alturas",
+					"ancho": 3.5,
+					"fondo": 1.5,
+					"alto": 0.6
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "escalera/subir"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse",
+					"sonido": "escalera/bajar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "salon_actos"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"relacionados": ["tarima", "piano"],
+			"simbolo": {
+				"letra": "Gc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/gradas_coro.png",
+				"descripcion": "Huella en planta de «Gradas de coro»: una banda curva que abomba hacia delante de 3,50 por 1,50 metros, con la letra «Gc»."
+			}
+		},
+		{
+			"id": "mesa_plegable_taburetes",
+			"nombre": "Mesa plegable con taburetes",
+			"categoria": "comedor",
+			"subcategoria": "mesas_comedor",
+			"etiquetas": ["mesa plegable de comedor", "mesa con taburetes", "mesa móvil de comedor"],
+			"descripcion": "Mesa de comedor con los taburetes redondos unidos al armazón, sobre ruedas: se pliega en vertical para dejar libre la sala. Abierta, los taburetes sobresalen por los dos lados a la altura de la rodilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.25], [0.1, 0.25], [0.1, 0.0], [0.25, 0.0], [0.25, 0.25], [0.75, 0.25], [0.75, 0.0], [0.9, 0.0], [0.9, 0.25], [1.0, 0.25], [1.0, 0.75], [0.9, 0.75], [0.9, 1.0], [0.75, 1.0], [0.75, 0.75], [0.25, 0.75], [0.25, 1.0], [0.1, 1.0], [0.1, 0.75], [0.0, 0.75]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.4, 3.6],
+				"fondo": [0.4, 1.6, 1.7],
+				"alto": [0.65, 0.72, 1.8]
+			},
+			"variantes": [
+				{
+					"id": "abierta",
+					"nombre": "Abierta",
+					"ancho": 2.4,
+					"fondo": 1.6,
+					"alto": 0.72
+				},
+				{
+					"id": "plegada",
+					"nombre": "Plegada en vertical",
+					"ancho": 2.4,
+					"fondo": 0.5,
+					"alto": 1.75
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["desplegado", "plegado"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "transporte:carrito.flac"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "transporte:carrito.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["colegio"],
+			"estancias": ["comedor_colectivo", "pista", "salon_actos"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"relacionados": ["linea_bandejas"],
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_plegable_taburetes.png",
+				"descripcion": "Huella en planta de «Mesa plegable con taburetes»: un tablero con taburetes redondos que asoman por los dos lados de 2,40 por 1,60 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "balones_sueltos",
+			"nombre": "Balones sueltos por el suelo",
+			"categoria": "gimnasio",
+			"subcategoria": "juegos_pelota",
+			"etiquetas": ["balones", "pelotas", "pelotas sueltas", "balón"],
+			"descripcion": "Pelotas y balones que han quedado rodando por la pista o el patio. Se pisan y se escapan, y al darles con el bastón ruedan lejos: hoy aquí, mañana en otro sitio.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.053, 0.263], [0.316, 0.0], [0.579, 0.158], [0.947, 0.105], [0.842, 0.526], [1.0, 0.895], [0.526, 0.789], [0.263, 1.0], [0.0, 0.737]]
+			},
+			"medidas": {
+				"ancho": [0.3, 1.0, 3.0],
+				"fondo": [0.3, 1.0, 3.0],
+				"alto": [0.15, 0.22, 0.25]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "sonidos/balon.flac"
+			},
+			"acciones": [
+				{
+					"id": "chutar",
+					"nombre": "Chutar a puerta",
+					"sonido": "sonidos/balon.flac"
+				},
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "sonidos/balon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["colegio"],
+			"estancias": ["pista", "patio_recreo"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["canasta", "porteria"],
+			"simbolo": {
+				"letra": "Bs",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/balones_sueltos.png",
+				"descripcion": "Huella en planta de «Balones sueltos por el suelo»: unas manchas sueltas de 1,00 por 1,00 metros, con la letra «Bs»."
+			}
+		},
+		{
+			"id": "baul_recreo",
+			"nombre": "Baúl de juegos del recreo",
+			"categoria": "gimnasio",
+			"subcategoria": "juegos_patio",
+			"etiquetas": ["baúl del recreo", "arcón de juegos", "caja de juegos de patio", "cofre del patio"],
+			"descripcion": "Arcón grande de plástico duro o de madera junto a la pared del patio, con combas, aros, pelotas y tizas dentro. La tapa pesa y se cierra de golpe.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.6],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.5, 0.6, 0.8]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "juego:cofre_abrir.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "juego:cofre_cerrar.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["patio_recreo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Br",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/baul_recreo.png",
+				"descripcion": "Huella en planta de «Baúl de juegos del recreo»: un rectángulo de 1,20 por 0,60 metros, con la letra «Br»."
+			}
+		},
+		{
+			"id": "bancal_huerto",
+			"nombre": "Bancal del huerto escolar",
+			"categoria": "gimnasio",
+			"subcategoria": "huerto_escolar",
+			"etiquetas": ["bancal", "huerto escolar", "jardinera de huerto", "cajón de cultivo"],
+			"descripcion": "Cajón de tablas sin fondo, a la altura de la rodilla, lleno de tierra con plantas. El borde de madera se nota con el bastón; dentro la tierra está blanda y a veces mojada.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 3.0],
+				"fondo": [0.6, 1.0, 1.2],
+				"alto": [0.25, 0.4, 0.6]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "De 1 por 1 m",
+					"ancho": 1.0,
+					"fondo": 1.0,
+					"alto": 0.4
+				},
+				{
+					"id": "largo",
+					"nombre": "De 2 por 1 m",
+					"ancho": 2.0,
+					"fondo": 1.0,
+					"alto": 0.4
+				},
+				{
+					"id": "alto",
+					"nombre": "Alto, de 3 m",
+					"ancho": 3.0,
+					"fondo": 1.0,
+					"alto": 0.6
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "col_regar",
+					"nombre": "Regar",
+					"sonido": "calle:chorro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vegetacion",
+			"lugares": ["colegio"],
+			"estancias": ["huerto", "patio_recreo"],
+			"obstaculo": "bajo",
+			"frecuencia": "ocasional",
+			"relacionados": ["compostera", "deposito_lluvia"],
+			"simbolo": {
+				"letra": "Bh",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/bancal_huerto.png",
+				"descripcion": "Huella en planta de «Bancal del huerto escolar»: un rectángulo de 2,00 por 1,00 metros, con la letra «Bh»."
+			}
+		},
+		{
+			"id": "compostera",
+			"nombre": "Compostera",
+			"categoria": "gimnasio",
+			"subcategoria": "huerto_escolar",
+			"etiquetas": ["compostera", "compostador", "compost", "vermicompostera"],
+			"descripcion": "Caja de plástico o de listones del tamaño de un cubo grande, con tapa arriba y una trampilla abajo. Huele a tierra húmeda y la tapa suena hueca.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 0.15], [1.0, 0.85], [0.85, 1.0], [0.15, 1.0], [0.0, 0.85], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [0.7, 0.85, 1.0]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "col_echar_restos",
+					"nombre": "Echar restos de fruta",
+					"sonido": "calle:hojas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["colegio", "jardin"],
+			"estancias": ["huerto", "patio_recreo"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["bancal_huerto"],
+			"simbolo": {
+				"letra": "Co",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/compostera.png",
+				"descripcion": "Huella en planta de «Compostera»: un rectángulo con las esquinas cortadas de 0,80 por 0,80 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "estacion_meteorologica",
+			"nombre": "Estación meteorológica escolar",
+			"categoria": "gimnasio",
+			"subcategoria": "huerto_escolar",
+			"etiquetas": ["estación meteorológica", "anemómetro", "pluviómetro", "veleta"],
+			"descripcion": "Mástil de metal sobre patas abiertas, con el pluviómetro a media altura y arriba las cazoletas del anemómetro, que giran y chasquean cuando hace viento.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.4, 0.0], [0.6, 0.0], [0.6, 0.4], [1.0, 0.4], [1.0, 0.6], [0.6, 0.6], [0.6, 1.0], [0.4, 1.0], [0.4, 0.6], [0.0, 0.6], [0.0, 0.4], [0.4, 0.4]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [1.8, 2.2, 3.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/colegio_anemometro.flac",
+					"volumen": 0.3,
+					"radio": 8
+				}
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["colegio"],
+			"estancias": ["patio_recreo", "huerto"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Em",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/estacion_meteorologica.png",
+				"descripcion": "Huella en planta de «Estación meteorológica escolar»: una cruz: el mástil en el centro y las patas abiertas a los cuatro lados de 0,80 por 0,80 metros, con la letra «Em»."
+			}
+		},
+		{
+			"id": "deposito_lluvia",
+			"nombre": "Depósito de agua de lluvia",
+			"categoria": "gimnasio",
+			"subcategoria": "huerto_escolar",
+			"etiquetas": ["depósito de lluvia", "aljibe", "bidón de agua", "recogida de pluviales"],
+			"descripcion": "Bidón grande bajo el canalón, con un grifo abajo para llenar las regaderas. Al golpearlo suena según lo lleno que esté; alrededor el suelo suele estar mojado.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 1.2],
+				"fondo": [0.5, 0.6, 1.0],
+				"alto": [0.8, 1.0, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "bidon",
+					"nombre": "Bidón redondo",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 0.95
+				},
+				{
+					"id": "cubo_ibc",
+					"nombre": "Contenedor cúbico de 1000 litros",
+					"ancho": 1.2,
+					"fondo": 1.0,
+					"alto": 1.15
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.3,
+					"radio": 4,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["colegio", "jardin"],
+			"estancias": ["huerto", "patio_recreo"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "ocasional",
+			"relacionados": ["bancal_huerto"],
+			"simbolo": {
+				"letra": "Dl",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/deposito_lluvia.png",
+				"descripcion": "Huella en planta de «Depósito de agua de lluvia»: un círculo de 0,60 por 0,60 metros, con la letra «Dl»."
+			}
+		},
+		{
+			"id": "comedero_pajaros",
+			"nombre": "Comedero de pájaros colgado",
+			"categoria": "gimnasio",
+			"subcategoria": "huerto_escolar",
+			"etiquetas": ["comedero de pájaros", "comedero de aves", "casita de pájaros", "nido"],
+			"descripcion": "Casita o tubo con semillas colgado de una rama o de un gancho, a la altura de la cabeza. Se balancea al rozarlo; cerca se oyen pájaros que vienen a comer.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.35], [0.5, 0.0], [1.0, 0.35], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.15, 0.25, 0.35],
+				"fondo": [0.15, 0.25, 0.35],
+				"alto": [0.25, 0.35, 0.5]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "fuente/pajaros",
+					"volumen": 0.25,
+					"radio": 8
+				}
+			},
+			"contenedor": false,
+			"funcion": "animal",
+			"lugares": ["colegio", "jardin", "parque"],
+			"estancias": ["huerto", "patio_recreo"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/comedero_pajaros.png",
+				"descripcion": "Huella en planta de «Comedero de pájaros colgado»: un pentágono con forma de casita de 0,25 por 0,25 metros, colgado a 1,50 metros del suelo, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "timbre_escolar",
+			"nombre": "Timbre del colegio",
+			"categoria": "pasillo",
+			"subcategoria": "avisos_pasillo",
+			"etiquetas": ["timbre", "sirena escolar", "campana del colegio", "timbre del recreo"],
+			"descripcion": "Timbre metálico redondo atornillado en lo alto de la pared del pasillo o del patio. Suena fuerte al empezar y acabar cada clase y el recreo: desde casi cualquier sitio se sabe dónde está.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.038, 0.383], [0.146, 0.707], [0.309, 0.924], [0.5, 1.0], [0.691, 0.924], [0.854, 0.707], [0.962, 0.383], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.15, 0.2, 0.3],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.15, 0.2, 0.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 2.3,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/colegio_timbre.flac"
+			},
+			"acciones": [
+				{
+					"id": "col_tocar_timbre",
+					"nombre": "Tocar el timbre",
+					"sonido": "sonidos/colegio_timbre.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "patio_recreo"],
+			"obstaculo": "aereo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Te",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/timbre_escolar.png",
+				"descripcion": "Huella en planta de «Timbre del colegio»: un semicírculo, recto por detrás y redondo por delante de 0,20 por 0,10 metros, colgado a 2,30 metros del suelo, con la letra «Te»."
+			}
+		},
+		{
+			"id": "cajon_objetos_perdidos",
+			"nombre": "Cajón de objetos perdidos",
+			"categoria": "pasillo",
+			"subcategoria": "taquillas_bancos",
+			"etiquetas": ["objetos perdidos", "caja de objetos perdidos", "ropa perdida"],
+			"descripcion": "Caja grande de plástico o un perchero en un rincón de conserjería, lleno de sudaderas, fiambreras y botellas olvidadas. Blando al tocarlo; siempre hay algo dentro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 1.2],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.4, 0.6, 1.5]
+			},
+			"variantes": [
+				{
+					"id": "caja",
+					"nombre": "Caja",
+					"ancho": 0.7,
+					"fondo": 0.5,
+					"alto": 0.55
+				},
+				{
+					"id": "perchero",
+					"nombre": "Perchero con ropa",
+					"ancho": 1.2,
+					"fondo": 0.5,
+					"alto": 1.5
+				}
+			],
+			"colocacion": ["esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "golpe/tela"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["percheros"],
+			"simbolo": {
+				"letra": "Co",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/cajon_objetos_perdidos.png",
+				"descripcion": "Huella en planta de «Cajón de objetos perdidos»: un rectángulo de 0,70 por 0,50 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "contenedor_tapones",
+			"nombre": "Corazón de tapones solidarios",
+			"categoria": "pasillo",
+			"subcategoria": "residuos_aula",
+			"etiquetas": ["tapones solidarios", "corazón de tapones", "recogida de tapones", "contenedor de tapones"],
+			"descripcion": "Jaula de rejilla metálica con forma de corazón, más alta que un niño, llena de tapones de plástico para una causa solidaria. Al echar uno se oye caer entre los demás.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 0.22], [0.62, 0.05], [0.8, 0.0], [0.95, 0.1], [1.0, 0.3], [0.9, 0.55], [0.5, 1.0], [0.1, 0.55], [0.0, 0.3], [0.05, 0.1], [0.2, 0.0], [0.38, 0.05]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.2],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.8, 1.2, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:juguetes.flac"
+			},
+			"acciones": [
+				{
+					"id": "col_echar_tapon",
+					"nombre": "Echar un tapón",
+					"sonido": "hogar:juguetes.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["colegio"],
+			"estancias": ["pasillo", "vestibulo", "patio_recreo"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["reciclaje"],
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_tapones.png",
+				"descripcion": "Huella en planta de «Corazón de tapones solidarios»: un corazón con la punta hacia delante de 0,90 por 0,40 metros, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "secadero_dibujos",
+			"nombre": "Secadero de dibujos",
+			"categoria": "talleres",
+			"subcategoria": "plastica",
+			"etiquetas": ["secadero", "secador de láminas", "rejilla de secado", "secadero de pinturas"],
+			"descripcion": "Mueble de alambre con ruedas, a la altura del pecho, con muchas baldas finas de rejilla donde se dejan secar los dibujos con pintura. Las baldas se levantan con muelle y rebotan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 0.9],
+				"fondo": [0.45, 0.55, 0.65],
+				"alto": [0.9, 1.15, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["colegio", "guarderia"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["pila_plastica"],
+			"simbolo": {
+				"letra": "Sd",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/secadero_dibujos.png",
+				"descripcion": "Huella en planta de «Secadero de dibujos»: un rectángulo de 0,70 por 0,55 metros, con la letra «Sd»."
+			}
+		},
+		{
+			"id": "pila_plastica",
+			"nombre": "Pila honda del aula de plástica",
+			"categoria": "talleres",
+			"subcategoria": "plastica",
+			"etiquetas": ["pila", "fregadero de plástica", "pileta", "lavapinceles"],
+			"descripcion": "Fregadero hondo de acero o de loza sobre un mueble, con dos grifos, para lavar pinceles y botes. Alrededor el suelo suele estar salpicado y resbala.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.8],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [0.6, 0.85, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "infantil",
+					"nombre": "Baja, de infantil",
+					"ancho": 1.0,
+					"fondo": 0.55,
+					"alto": 0.65
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.4,
+					"radio": 5,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": true,
+			"funcion": "sanitario",
+			"lugares": ["colegio"],
+			"estancias": ["aula", "laboratorio"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["secadero_dibujos"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/pila_plastica.png",
+				"descripcion": "Huella en planta de «Pila honda del aula de plástica»: un rectángulo de 1,20 por 0,60 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "urinarios_fila",
+			"nombre": "Fila de urinarios",
+			"categoria": "aseos",
+			"subcategoria": "aseos_escolares",
+			"etiquetas": ["urinarios", "urinario", "mingitorio", "aseo de chicos"],
+			"descripcion": "Urinarios de loza colgados de la pared en fila, con mamparas separadoras entre ellos que sobresalen a la altura de la cadera. Se cuentan por las mamparas; el suelo de delante puede estar mojado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.84, 1.0], [0.84, 0.45], [0.72, 0.45], [0.72, 1.0], [0.56, 1.0], [0.56, 0.45], [0.44, 0.45], [0.44, 1.0], [0.28, 1.0], [0.28, 0.45], [0.16, 0.45], [0.16, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.6, 2.0, 3.6],
+				"fondo": [0.35, 0.45, 0.6],
+				"alto": [0.8, 1.2, 1.5]
+			},
+			"variantes": [
+				{
+					"id": "dos",
+					"nombre": "Dos urinarios",
+					"ancho": 1.0,
+					"fondo": 0.45,
+					"alto": 1.2
+				},
+				{
+					"id": "cuatro",
+					"nombre": "Cuatro urinarios",
+					"ancho": 2.0,
+					"fondo": 0.45,
+					"alto": 1.2
+				},
+				{
+					"id": "seis",
+					"nombre": "Seis urinarios",
+					"ancho": 3.0,
+					"fondo": 0.45,
+					"alto": 1.2
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"acciones": [
+				{
+					"id": "tirar_cadena",
+					"nombre": "Tirar de la cadena",
+					"sonido": "hogar:cisterna.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["colegio", "polideportivo", "oficina", "estacion"],
+			"estancias": ["bano", "vestuario"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["cabinas_inodoro"],
+			"simbolo": {
+				"letra": "Uf",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/urinarios_fila.png",
+				"descripcion": "Huella en planta de «Fila de urinarios»: un peine: una barra con cuerpos que salen hacia delante de 2,00 por 0,45 metros, con la letra «Uf»."
+			}
+		},
+		{
+			"id": "cabinas_inodoro",
+			"nombre": "Cabinas de inodoro",
+			"categoria": "aseos",
+			"subcategoria": "aseos_escolares",
+			"etiquetas": ["cabinas de aseo", "váteres", "retretes", "aseos", "cabinas"],
+			"descripcion": "Fila de cabinas de tablero fenólico con una puerta cada una y un hueco abajo entre el tablero y el suelo. Las puertas abren hacia dentro y se cierran con un pestillo que suena.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.96, 1.0], [0.96, 0.05], [0.68, 0.05], [0.68, 1.0], [0.64, 1.0], [0.64, 0.05], [0.36, 0.05], [0.36, 1.0], [0.32, 1.0], [0.32, 0.05], [0.04, 0.05], [0.04, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.9, 2.7, 5.4],
+				"fondo": [1.2, 1.4, 1.6],
+				"alto": [1.8, 2.0, 2.1]
+			},
+			"variantes": [
+				{
+					"id": "una",
+					"nombre": "Una cabina",
+					"ancho": 0.9,
+					"fondo": 1.4,
+					"alto": 2.0
+				},
+				{
+					"id": "tres",
+					"nombre": "Tres cabinas",
+					"ancho": 2.7,
+					"fondo": 1.4,
+					"alto": 2.0
+				},
+				{
+					"id": "cinco",
+					"nombre": "Cinco cabinas",
+					"ancho": 4.5,
+					"fondo": 1.4,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				},
+				{
+					"id": "tirar_cadena",
+					"nombre": "Tirar de la cadena",
+					"sonido": "hogar:cisterna.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "sanitario",
+			"lugares": ["colegio", "polideportivo", "oficina", "estacion", "centro_comercial"],
+			"estancias": ["bano", "vestuario"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["urinarios_fila"],
+			"simbolo": {
+				"letra": "Ci",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabinas_inodoro.png",
+				"descripcion": "Huella en planta de «Cabinas de inodoro»: un peine: una barra con cuerpos que salen hacia delante de 2,70 por 1,40 metros, con la letra «Ci»."
+			}
+		},
+		{
+			"id": "columpio_sensorial",
+			"nombre": "Columpio sensorial de techo",
+			"categoria": "apoyo",
+			"subcategoria": "sala_sensorial",
+			"etiquetas": ["columpio sensorial", "hamaca de integración sensorial", "columpio de lycra", "plataforma colgante"],
+			"descripcion": "Hamaca de lycra o plataforma colgada de un gancho del techo por una cuerda, a la altura de la rodilla. Se balancea y gira en cualquier dirección; debajo hay una colchoneta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.6],
+				"fondo": [0.8, 1.2, 1.6],
+				"alto": [0.25, 1.2, 1.6]
+			},
+			"variantes": [
+				{
+					"id": "lycra",
+					"nombre": "Hamaca de lycra",
+					"ancho": 0.9,
+					"fondo": 0.9,
+					"alto": 1.5
+				},
+				{
+					"id": "plataforma",
+					"nombre": "Plataforma cuadrada",
+					"ancho": 1.2,
+					"fondo": 1.2,
+					"alto": 0.3
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.4,
+			"detectable_baston": false,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "col_balancearse",
+					"nombre": "Balancearse",
+					"sonido": "comun:columpio_chirrido.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["colegio", "guarderia", "residencia"],
+			"estancias": ["aula", "sala_rehabilitacion"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["cortina_fibras_opticas"],
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#6C3483"
+			},
+			"imagen": {
+				"fichero": "imagenes/columpio_sensorial.png",
+				"descripcion": "Huella en planta de «Columpio sensorial de techo»: un círculo de 1,20 por 1,20 metros, colgado a 0,40 metros del suelo, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "cortina_fibras_opticas",
+			"nombre": "Cortina de fibras ópticas",
+			"categoria": "apoyo",
+			"subcategoria": "sala_sensorial",
+			"etiquetas": ["fibras ópticas", "cortina de fibras", "cascada de fibras", "cortina sensorial"],
+			"descripcion": "Haz de cientos de hilos finos y fríos que cuelga del techo hasta el suelo, en una esquina de la sala sensorial. No corta el paso: se atraviesa y los hilos se deslizan por la cara y los brazos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.5],
+				"fondo": [0.3, 0.5, 1.0],
+				"alto": [1.8, 2.0, 2.4]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "oficina_y_comercio:cortina.flac"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "pasar",
+					"nombre": "Pasar",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				}
+			],
+			"contenedor": false,
+			"aviso": "Cortina de fibras: la atraviesas.",
+			"funcion": "ayuda_tecnica",
+			"lugares": ["colegio", "guarderia", "residencia"],
+			"estancias": ["aula", "sala_rehabilitacion"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["columpio_sensorial"],
+			"simbolo": {
+				"letra": "Cf",
+				"color": "#6C3483"
+			},
+			"imagen": {
+				"fichero": "imagenes/cortina_fibras_opticas.png",
+				"descripcion": "Huella en planta de «Cortina de fibras ópticas»: un rectángulo de 0,80 por 0,50 metros, con la letra «Cf»."
+			}
+		},
+		{
+			"id": "bipedestador",
+			"nombre": "Bipedestador",
+			"categoria": "apoyo",
+			"subcategoria": "ayudas_aula",
+			"etiquetas": ["bipedestador", "plano inclinado", "standing", "mesa de bipedestación"],
+			"descripcion": "Armazón con una base ancha en U y una bandeja delante a la altura del pecho, donde un alumno que no se sostiene pasa un rato de pie sujeto con cinchas. Pesado; la base sobresale a ras de suelo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.15], [1.0, 1.0], [0.85, 1.0], [0.85, 0.3], [0.15, 0.3], [0.15, 1.0], [0.0, 1.0], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.65, 0.8],
+				"fondo": [0.7, 0.85, 1.0],
+				"alto": [1.0, 1.2, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "col_ponerse_de_pie",
+					"nombre": "Ponerse de pie en el bipedestador",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["colegio", "residencia", "centro_salud"],
+			"estancias": ["aula", "sala_rehabilitacion"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bi",
+				"color": "#6C3483"
+			},
+			"imagen": {
+				"fichero": "imagenes/bipedestador.png",
+				"descripcion": "Huella en planta de «Bipedestador»: una mesita delante y una base en U abierta por detrás, donde se pone el niño de 0,65 por 0,85 metros, con la letra «Bi»."
+			}
+		}
+	]
+}

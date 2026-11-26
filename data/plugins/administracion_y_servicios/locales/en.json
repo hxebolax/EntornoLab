@@ -1,0 +1,1412 @@
+{
+	"nombre": "Public offices and services",
+	"descripcion": "Where you get things done: town hall and public counter, police station, bank, post office, court, church and other places of worship, funeral home and cemetery, hairdresser's, launderette and local services.",
+	"categorias": {
+		"atencion": "Public counters and official buildings",
+		"banco_correos": "Bank and post office",
+		"justicia": "Court and council chamber",
+		"culto": "Places of worship",
+		"funerario": "Funeral home and cemetery",
+		"belleza": "Hair and beauty",
+		"lavanderia": "Launderette and dry cleaner's",
+		"otros_servicios": "Other local services"
+	},
+	"subcategorias": {
+		"mostradores_atencion": "Counters and windows",
+		"turnos_espera": "Queueing and waiting",
+		"autoservicio_tramites": "Forms and self-service machines",
+		"vestibulo_oficial": "Official lobby",
+		"control_entrada": "Entrance control and security",
+		"caja_banco": "Bank counters and desks",
+		"cajeros_banco": "Cash machines and bank self-service",
+		"seguridad_banco": "Security and safes",
+		"oficina_correos": "Post office",
+		"paqueteria_correos": "Parcels and delivery",
+		"estrado_sala": "Bench and parties",
+		"publico_sala": "Public and courtroom",
+		"salon_plenos": "Council chamber",
+		"bancos_culto": "Pews and worship seating",
+		"presbiterio": "Altar and sanctuary",
+		"capillas_devocion": "Chapels and devotion",
+		"musica_coro": "Choir, organ and bells",
+		"otros_cultos": "Mosque, synagogue and other temples",
+		"sala_velatorio": "Viewing room",
+		"cementerio_sepulturas": "Graves and tombs",
+		"cementerio_servicios": "Cemetery services",
+		"sillones_peluqueria": "Salon chairs",
+		"lavado_secado": "Hair washing and drying",
+		"muebles_peluqueria": "Salon furniture",
+		"estetica": "Beauty treatments",
+		"maquinas_lavanderia": "Launderette machines",
+		"muebles_lavanderia": "Launderette furniture",
+		"tintoreria": "Dry cleaner's",
+		"locutorio_loteria": "Call shop and lottery",
+		"zapatero_copisteria": "Cobbler and copy shop"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"apagado": "Off",
+		"encendido": "On",
+		"parado": "Stopped",
+		"girando": "Turning",
+		"funcionando": "Running"
+	},
+	"objetos": {
+		"mostrador_atencion_puestos": {
+			"nombre": "Public counter with service points",
+			"descripcion": "Long chest-high counter split into service points by thin screens sticking out towards you. Follow it with your hand and count the screens to find your point.",
+			"etiquetas": ["public counter", "service desk", "service points"],
+			"variantes": {
+				"dos_puestos": "Two points",
+				"tres_puestos": "Three points",
+				"cuatro_puestos": "Four points",
+				"cinco_puestos": "Five points"
+			},
+			"acciones": {
+				"sellar_documento": "Stamp a document"
+			},
+			"imagen": "Footprint of “Public counter with service points”: a comb: a bar with bodies sticking out to the front, 3.60 by 1.00 metres, marked with the letters “Ma”."
+		},
+		"puesto_atencion_sentado": {
+			"nombre": "Seated service desk with accessible section",
+			"descripcion": "Low service desk where you sit facing the clerk. One section is clear underneath for a wheelchair; a wing with the computer sticks out on the other side.",
+			"etiquetas": ["service desk", "accessible counter", "low counter"],
+			"acciones": {
+				"sellar_documento": "Stamp a document"
+			},
+			"imagen": "Footprint of “Seated service desk with accessible section”: an L shape, 1.80 by 1.60 metres, marked with the letters “Pa”."
+		},
+		"ventanilla_cristal": {
+			"nombre": "Glazed window with document tray",
+			"descripcion": "A window closed by glass right to the top. You speak through a grille at mouth height and papers go through a tray sunk into the ledge at waist height.",
+			"etiquetas": ["glazed window", "teller window", "document tray"],
+			"variantes": {
+				"sencilla": "Single",
+				"doble": "Double"
+			},
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Glazed window with document tray”: a rectangle, 1.20 by 0.45 metres, marked with the letters “Vc”."
+		},
+		"mostrador_denuncias": {
+			"nombre": "Police station front desk",
+			"descripcion": "Tall L-shaped desk with a security screen on top and a gap to speak through. The duty officer sits behind; the short arm reaches the wall.",
+			"etiquetas": ["police front desk", "enquiry counter", "duty desk"],
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Police station front desk”: an L shape, 2.40 by 1.60 metres, marked with the letters “Md”."
+		},
+		"cabina_atencion": {
+			"nombre": "Private interview booth",
+			"descripcion": "A small room of panels and glass, with a door, where one person is seen in private. Inside are a desk and two chairs; outside voices fade when the door shuts.",
+			"etiquetas": ["interview booth", "private booth", "interview room"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Private interview booth”: a rectangle with cut corners, 2.00 by 2.00 metres, marked with the letters “Ca”."
+		},
+		"puesto_huellas_dni": {
+			"nombre": "ID card fingerprint and photo desk",
+			"descripcion": "Service desk with a mouse-sized fingerprint reader on the top and a pad to sign on. It beeps when you put your finger on it.",
+			"etiquetas": ["ID card desk", "fingerprint desk", "passport desk"],
+			"acciones": {
+				"poner_huella": "Put your finger on the reader"
+			},
+			"imagen": "Footprint of “ID card fingerprint and photo desk”: a rectangle, 1.40 by 0.80 metres, marked with the letters “Ph”."
+		},
+		"gestor_turnos": {
+			"nombre": "Queue kiosk with ticket and voice",
+			"descripcion": "A column with a sloping screen at chest height and big buttons. Press and a ticket comes out below while a voice says your number. Usually just inside the door.",
+			"etiquetas": ["queue kiosk", "ticket kiosk", "queue management"],
+			"acciones": {
+				"sacar_numero_turno": "Take a number"
+			},
+			"imagen": "Footprint of “Queue kiosk with ticket and voice”: a trapezoid, narrower at the back, 0.50 by 0.45 metres, marked with the letters “Gt”."
+		},
+		"bancada_espera_chapa": {
+			"nombre": "Perforated steel waiting bench",
+			"descripcion": "A row of cold, hard perforated steel seats on a beam with two feet. There is an armrest between seats; sometimes a small table at one end.",
+			"etiquetas": ["waiting bench", "beam seating", "perforated bench"],
+			"variantes": {
+				"tres_plazas": "Three seats",
+				"cuatro_plazas": "Four seats",
+				"cinco_plazas": "Five seats",
+				"tres_y_mesita": "Three seats and a table"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Perforated steel waiting bench”: a rectangle, 2.40 by 0.68 metres, marked with the letters “Be”."
+		},
+		"banco_espera_anclado": {
+			"nombre": "Floor-fixed waiting bench",
+			"descripcion": "A steel bench with no back or arms, bolted to the floor: it does not budge however you push. Knee high.",
+			"etiquetas": ["fixed bench", "bolted bench", "anti-vandal bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Floor-fixed waiting bench”: a rectangle, 1.80 by 0.45 metres, marked with the letters “Be”."
+		},
+		"linea_espera_suelo": {
+			"nombre": "Wait-here floor line",
+			"descripcion": "A strip stuck to the floor a couple of steps from the counter: wait there to give the person ahead some privacy. It is slightly raised; you feel it with foot or cane.",
+			"etiquetas": ["wait-here line", "privacy line", "floor marking"],
+			"aviso": "Waiting line: wait here for your turn.",
+			"imagen": "Footprint of “Wait-here floor line”: a rectangle, 1.20 by 0.10 metres, marked with the letters “Le”."
+		},
+		"mesa_impresos": {
+			"nombre": "Stand-up form-filling table",
+			"descripcion": "A tall, narrow table for writing standing up, with pens on little chains and a sloping rack of forms at the back.",
+			"etiquetas": ["form-filling table", "writing stand", "standing desk"],
+			"acciones": {
+				"escribir": "Write",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Stand-up form-filling table”: a rectangle, 1.40 by 0.60 metres, marked with the letters “Mi”."
+		},
+		"expositor_formularios": {
+			"nombre": "Wall-mounted form rack",
+			"descripcion": "A rack of sloping trays hung on the wall from chest to head height, one kind of form in each slot. It sticks out a hand's width and the cane passes under it.",
+			"etiquetas": ["form rack", "leaflet rack", "brochure holder"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Wall-mounted form rack”: a rectangle, 0.80 by 0.15 metres, hanging 0.90 metres above the floor, marked with the letters “Ef”."
+		},
+		"maquina_certificados": {
+			"nombre": "Self-service certificate machine",
+			"descripcion": "A metal cabinet with a screen, a card reader and a slot at waist height where the printed sheet comes out. It hums slightly and beeps at each key.",
+			"etiquetas": ["certificate machine", "self-service kiosk", "e-government kiosk"],
+			"acciones": {
+				"imprimir": "Print",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Self-service certificate machine”: a rectangle, 0.65 by 0.55 metres, marked with the letters “Mc”."
+		},
+		"fotomaton": {
+			"nombre": "Photo booth with curtain",
+			"descripcion": "A sheet-metal booth with a short curtain across the entrance. Inside is a round stool that goes up and down as you spin it; photos come out of a slot outside at waist height.",
+			"etiquetas": ["photo booth", "passport photo booth"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"hacerse_foto": "Have your photo taken"
+			},
+			"imagen": "Footprint of “Photo booth with curtain”: a box with the curtained entrance at the front left and the machine on the right, 1.60 by 0.85 metres, marked with the letters “Fo”."
+		},
+		"buzon_sugerencias": {
+			"nombre": "Suggestion box on a stand",
+			"descripcion": "A box with a slot on top, on a thin stand at chest height, with a pad of slips and a pen on a string. Push it and it wobbles.",
+			"etiquetas": ["suggestion box", "comments box"],
+			"acciones": {
+				"echar_carta": "Post a letter"
+			},
+			"imagen": "Footprint of “Suggestion box on a stand”: a rectangle, 0.35 by 0.30 metres, marked with the letters “Bs”."
+		},
+		"directorio_plantas": {
+			"nombre": "Floor directory lectern",
+			"descripcion": "A wide sloping lectern on two legs at waist height, listing floors and services in raised print and braille. It stands by the entrance or the lifts.",
+			"etiquetas": ["floor directory", "building directory", "information lectern"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Floor directory lectern”: a trapezoid, narrower at the back, 0.90 by 0.45 metres, marked with the letters “Dp”."
+		},
+		"mastiles_banderas": {
+			"nombre": "Lobby flagpoles",
+			"descripcion": "Three slim poles on heavy bases in a row against the wall. The flags hang limp and brush your shoulder before the cane finds the base.",
+			"etiquetas": ["flagpoles", "indoor flags", "flag stand"],
+			"variantes": {
+				"una": "One flag",
+				"tres": "Three flags",
+				"cinco": "Five flags"
+			},
+			"imagen": "Footprint of “Lobby flagpoles”: a comb: a bar with bodies sticking out to the front, 1.40 by 0.45 metres, marked with the letters “Mb”."
+		},
+		"vitrina_edictos": {
+			"nombre": "Glazed official notice case",
+			"descripcion": "A flat case with locked glass doors, hung on the wall from chest height up, where official notices are posted. It sticks out only a little, but the cane misses it.",
+			"etiquetas": ["official notice case", "notice cabinet"],
+			"imagen": "Footprint of “Glazed official notice case”: a rectangle, 1.20 by 0.10 metres, hanging 1.00 metres above the floor, marked with the letters “Ve”."
+		},
+		"mesa_electoral_urna": {
+			"nombre": "Polling table with ballot box",
+			"descripcion": "A long table with a hard plastic ballot box on it, the size of a fruit crate, with a slot in the lid. The three polling officers sit behind.",
+			"etiquetas": ["ballot box", "polling table", "polling station"],
+			"acciones": {
+				"echar_voto": "Cast your vote"
+			},
+			"imagen": "Footprint of “Polling table with ballot box”: a rectangle, 2.00 by 0.70 metres, marked with the letters “Me”."
+		},
+		"cabina_votacion": {
+			"nombre": "Voting booth",
+			"descripcion": "A tube frame with curtains on three sides and a shelf of ballot papers inside. It is light: lean on it and it shifts.",
+			"etiquetas": ["voting booth", "polling booth"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Voting booth”: a U open at the front, 0.90 by 0.90 metres, marked with the letters “Cv”."
+		},
+		"escaner_bolsos": {
+			"nombre": "Bag X-ray scanner with belt",
+			"descripcion": "A chest-high metal tunnel with a belt running through it non-stop. Put your bag on one end; it goes in through rubber flaps and comes out on the other side.",
+			"etiquetas": ["bag scanner", "X-ray machine", "baggage scanner"],
+			"imagen": "Footprint of “Bag X-ray scanner with belt”: a wide body in the middle with a narrower belt sticking out at both sides, 2.60 by 0.90 metres, marked with the letters “Eb”."
+		},
+		"mesa_bandejas_control": {
+			"nombre": "Security tray table",
+			"descripcion": "A steel table with a stack of plastic trays: leave keys, phone and belt there before walking through the arch. The trays slide and sound hollow.",
+			"etiquetas": ["tray table", "security trays"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Security tray table”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Mb”."
+		},
+		"garita_seguridad": {
+			"nombre": "Security booth",
+			"descripcion": "A small glass-and-metal booth for the guard, with a sliding hatch at chest height. A radio or intercom sounds inside.",
+			"etiquetas": ["security booth", "guard booth", "gatehouse"],
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Security booth”: a rectangle with cut corners, 1.50 by 1.50 metres, marked with the letters “Gs”."
+		},
+		"puesto_caja_banco": {
+			"nombre": "Bank teller position with screen",
+			"descripcion": "A chest-high teller counter with a glass screen on top and a sunken tray where money and papers pass. Drawers and a note counter sound behind it.",
+			"etiquetas": ["teller position", "bank counter", "cashier window"],
+			"variantes": {
+				"un_puesto": "One position",
+				"dos_puestos": "Two positions"
+			},
+			"acciones": {
+				"pagar": "Pay",
+				"sacar_dinero": "Withdraw cash"
+			},
+			"imagen": "Footprint of “Bank teller position with screen”: a rectangle, 1.50 by 0.80 metres, marked with the letters “Pc”."
+		},
+		"mesa_gestor_banco": {
+			"nombre": "Bank adviser's desk with visitor chairs",
+			"descripcion": "An office desk with two client chairs right in front. There is often a low screen between desks; the chairs move and are hardly ever straight.",
+			"etiquetas": ["adviser's desk", "customer desk", "relationship manager desk"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"firmar_libro": "Sign the book"
+			},
+			"imagen": "Footprint of “Bank adviser's desk with visitor chairs”: a wide top at the back and two chairs sticking out to the front, 1.60 by 1.60 metres, marked with the letters “Mg”."
+		},
+		"atril_bienvenida_banco": {
+			"nombre": "Bank greeter desk",
+			"descripcion": "A small rounded stand-up desk just inside the door, where a member of staff asks what you need and sends you to the queue or to a desk.",
+			"etiquetas": ["greeter desk", "welcome desk", "concierge stand"],
+			"imagen": "Footprint of “Bank greeter desk”: a semicircle, straight at the back and round at the front, 0.90 by 0.55 metres, marked with the letters “Ab”."
+		},
+		"bateria_cajeros": {
+			"nombre": "Row of lobby cash machines",
+			"descripcion": "Several cash machines set in a row in one wall, separated by privacy fins sticking out a hand and a half. Each beeps differently when you press its keys.",
+			"etiquetas": ["row of cash machines", "ATM lobby", "self-service zone"],
+			"variantes": {
+				"dos": "Two machines",
+				"tres": "Three machines",
+				"cinco": "Five machines"
+			},
+			"acciones": {
+				"sacar_dinero": "Withdraw cash"
+			},
+			"imagen": "Footprint of “Row of lobby cash machines”: a comb: a bar with bodies sticking out to the front, 2.60 by 0.80 metres, marked with the letters “Bc”."
+		},
+		"cajero_adaptado_voz": {
+			"nombre": "Low accessible cash machine with voice guidance",
+			"descripcion": "A cash machine lower than the rest, with knee space underneath, a keypad with the dot on the five and a headphone socket: plug in and a voice guides you step by step.",
+			"etiquetas": ["accessible cash machine", "talking ATM", "low ATM"],
+			"acciones": {
+				"escuchar": "Listen to the information",
+				"sacar_dinero": "Withdraw cash"
+			},
+			"imagen": "Footprint of “Low accessible cash machine with voice guidance”: a rectangle, 0.65 by 0.60 metres, marked with the letters “Ca”."
+		},
+		"actualizador_libretas": {
+			"nombre": "Passbook update machine",
+			"descripcion": "A narrow machine with a horizontal slot at chest height. Push the open passbook in, hear the printer run back and forth, and it hands it back.",
+			"etiquetas": ["passbook machine", "passbook printer"],
+			"acciones": {
+				"actualizar_libreta": "Update your passbook"
+			},
+			"imagen": "Footprint of “Passbook update machine”: a rectangle, 0.50 by 0.50 metres, marked with the letters “Al”."
+		},
+		"buzon_ingresos": {
+			"nombre": "Night deposit box",
+			"descripcion": "A steel mouth set in the wall at chest height with a tilting flap: drop the envelope of cash in and it falls inside with a thud.",
+			"etiquetas": ["deposit box", "night safe", "deposit chute"],
+			"acciones": {
+				"echar_sobre_ingreso": "Drop the envelope in"
+			},
+			"imagen": "Footprint of “Night deposit box”: a rectangle, 0.45 by 0.15 metres, hanging 1.00 metres above the floor, marked with the letters “Bi”."
+		},
+		"maquina_ingreso_monedas": {
+			"nombre": "Coin deposit machine",
+			"descripcion": "A machine with a deep tray at waist height where you tip your coins. It swallows them with a clatter of change and prints a receipt.",
+			"etiquetas": ["coin deposit machine", "coin counter"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Coin deposit machine”: a rectangle with cut corners, 0.60 by 0.65 metres, marked with the letters “Mi”."
+		},
+		"esclusa_seguridad": {
+			"nombre": "Security interlock door",
+			"descripcion": "A round glass cabin with two curved doors that never open together. Press the button, the lock buzzes, step in, it closes behind you and a voice tells you to go through. Room for one person only.",
+			"etiquetas": ["interlock door", "security portal", "mantrap"],
+			"acciones": {
+				"pulsar": "Press the button",
+				"cerrar": "Close"
+			},
+			"aviso": "Interlock: press the button, step in and wait for the second door to open.",
+			"imagen": "Footprint of “Security interlock door”: a rectangle with rounded corners, 1.20 by 1.30 metres, marked with the letters “Es”."
+		},
+		"caja_fuerte_banco": {
+			"nombre": "Large bank safe",
+			"descripcion": "A solid steel cabinet taller than a person, with a combination dial and a handwheel. It does not ring hollow when struck: it is a solid block.",
+			"etiquetas": ["bank safe", "strongbox", "vault cabinet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Large bank safe”: a rectangle, 1.00 by 0.80 metres, marked with the letters “Cf”."
+		},
+		"cajas_alquiler": {
+			"nombre": "Safe deposit boxes",
+			"descripcion": "A whole wall of little steel doors, each with two locks. Behind each door is a long drawer you pull out by a handle.",
+			"etiquetas": ["safe deposit boxes", "safety deposit lockers"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Safe deposit boxes”: a rectangle, 2.00 by 0.55 metres, marked with the letters “Ca”."
+		},
+		"mostrador_correos": {
+			"nombre": "Post office counter with scales",
+			"descripcion": "A waist-high counter with a lowered section holding the scales: rest the parcel there, it beeps as it is weighed and the clerk stamps it.",
+			"etiquetas": ["post office counter", "parcel counter", "postal scales"],
+			"variantes": {
+				"un_puesto": "One position",
+				"dos_puestos": "Two positions"
+			},
+			"acciones": {
+				"pesar_paquete": "Weigh the parcel",
+				"sellar_documento": "Stamp a document",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Post office counter with scales”: a rectangle, 2.00 by 0.80 metres, marked with the letters “Mc”."
+		},
+		"apartados_correos": {
+			"nombre": "PO box lockers",
+			"descripcion": "A wall of small metal lockers with raised numbers, each with its own lock. The little doors sound like thin sheet metal.",
+			"etiquetas": ["PO boxes", "post office boxes", "mail lockers"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “PO box lockers”: a rectangle, 1.50 by 0.40 metres, marked with the letters “Ac”."
+		},
+		"buzon_correos_interior": {
+			"nombre": "Indoor post office letterbox",
+			"descripcion": "A square sheet-metal unit with two wide mouths at chest height, one for local post and one for everywhere else. The flaps tilt inwards.",
+			"etiquetas": ["indoor letterbox", "posting box"],
+			"acciones": {
+				"echar_carta": "Post a letter"
+			},
+			"imagen": "Footprint of “Indoor post office letterbox”: a rectangle, 0.70 by 0.45 metres, marked with the letters “Bc”."
+		},
+		"mesa_embalaje": {
+			"nombre": "Packing table with tape",
+			"descripcion": "A tall table for packing parcels standing up, with a tape dispenser bolted to the edge and pens on strings. The tape screeches as you pull it.",
+			"etiquetas": ["packing table", "parcel table", "wrapping bench"],
+			"acciones": {
+				"precintar_paquete": "Tape the parcel up",
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Packing table with tape”: a rectangle, 1.50 by 0.70 metres, marked with the letters “Me”."
+		},
+		"expositor_embalajes": {
+			"nombre": "Envelope and box display",
+			"descripcion": "An open rack with flat-packed cardboard boxes standing by size and padded envelopes in trays. The bottom sticks out further than the top.",
+			"etiquetas": ["packaging display", "envelope rack", "box stand"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Envelope and box display”: a trapezoid, narrower at the back, 1.00 by 0.45 metres, marked with the letters “Ee”."
+		},
+		"taquilla_paqueteria": {
+			"nombre": "Smart parcel locker",
+			"descripcion": "A block of sheet-metal doors of several sizes with a screen and scanner in the middle. Scan the code, it beeps, and one door springs open with a clack.",
+			"etiquetas": ["parcel locker", "smart locker", "pick-up locker"],
+			"variantes": {
+				"un_modulo": "One module",
+				"dos_modulos": "Two modules",
+				"cuatro_modulos": "Four modules"
+			},
+			"acciones": {
+				"recoger_paquete": "Collect a parcel",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Smart parcel locker”: a rectangle, 2.00 by 0.60 metres, marked with the letters “Tp”."
+		},
+		"carro_cartero": {
+			"nombre": "Postal delivery trolley",
+			"descripcion": "A tall two-wheeled trolley with a big canvas bag and a handle, like a shopping trolley but sturdier. The postman leaves it in a doorway or in the middle of the pavement.",
+			"etiquetas": ["postal trolley", "mail cart", "delivery trolley"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Postal delivery trolley”: a rectangle, 0.50 by 0.60 metres, marked with the letters “Cc”."
+		},
+		"saca_correo": {
+			"nombre": "Mail sack",
+			"descripcion": "A big canvas sack full of letters and parcels, sealed with a tag, left on the floor. Soft on top and heavy: your foot will not shift it.",
+			"etiquetas": ["mail sack", "postbag"],
+			"imagen": "Footprint of “Mail sack”: a circle, 0.60 by 0.60 metres, marked with the letters “Sc”."
+		},
+		"estrado_juez": {
+			"nombre": "Judge's bench",
+			"descripcion": "A very long desk on a platform one or two steps up, with a solid wooden front down to the floor. From below it is chest high; at the far end of the room, in the middle.",
+			"etiquetas": ["judge's bench", "the bench", "courtroom dais"],
+			"variantes": {
+				"juez_unico": "Single judge",
+				"tres_magistrados": "Three judges",
+				"sala_grande": "Large courtroom"
+			},
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Judge's bench”: a rectangle, 4.00 by 1.80 metres, marked with the letters “Ej”."
+		},
+		"mesa_letrados": {
+			"nombre": "Counsel table",
+			"descripcion": "A long table with a wooden modesty panel in front, set sideways on each flank of the bench: the lawyers sit behind it, facing the middle of the room.",
+			"etiquetas": ["counsel table", "lawyers' table", "prosecution table"],
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Counsel table”: a rectangle, 2.40 by 0.70 metres, marked with the letters “Ml”."
+		},
+		"mesa_secretario_judicial": {
+			"nombre": "Court clerk's desk",
+			"descripcion": "An L-shaped desk at the foot of the bench with the computer and the recording equipment. You hear typing all through the hearing: it tells you where the front of the room is.",
+			"etiquetas": ["court clerk's desk", "registrar's desk"],
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Court clerk's desk”: an L shape, 1.60 by 1.40 metres, marked with the letters “Ms”."
+		},
+		"estrado_testigo": {
+			"nombre": "Witness stand with microphone",
+			"descripcion": "A waist-high wooden rail in a U, open at the back to step in, with a microphone on a flexible arm. You give evidence standing, holding it, facing the bench.",
+			"etiquetas": ["witness stand", "witness box"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Witness stand with microphone”: a U open at the back, 0.90 by 0.80 metres, marked with the letters “Et”."
+		},
+		"banquillo_acusados": {
+			"nombre": "Dock bench",
+			"descripcion": "A short wooden bench without arms, alone in the middle of the room facing the judge. Nothing in front or beside it: you reach it across open floor.",
+			"etiquetas": ["dock", "defendants' bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Dock bench”: a rectangle, 1.80 by 0.45 metres, marked with the letters “Ba”."
+		},
+		"cabina_acusados_blindada": {
+			"nombre": "Glazed secure dock",
+			"descripcion": "An enclosure of thick glass up to the ceiling, with benches inside and a side door. Voices from inside come over a loudspeaker; outside it is a smooth, cold wall.",
+			"etiquetas": ["secure dock", "glass dock"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Glazed secure dock”: a rectangle, 3.00 by 1.50 metres, marked with the letters “Ca”."
+		},
+		"barandilla_publico": {
+			"nombre": "Public bar with gate",
+			"descripcion": "A waist-high wooden rail across the room separating the public from the court. In the middle is a small swing gate that closes by itself.",
+			"etiquetas": ["bar of the court", "public rail", "swing gate"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Public bar with gate”: a rectangle, 4.00 by 0.10 metres, marked with the letters “Bp”."
+		},
+		"banco_publico_sala": {
+			"nombre": "Courtroom public bench",
+			"descripcion": "A long wooden bench with a straight back and no cushion, in rows behind the rail. It creaks when you sit and echoes round the room.",
+			"etiquetas": ["public bench", "courtroom gallery bench"],
+			"variantes": {
+				"tres_plazas": "Three seats",
+				"cinco_plazas": "Five seats",
+				"ocho_plazas": "Eight seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Courtroom public bench”: a rectangle, 2.50 by 0.55 metres, marked with the letters “Bp”."
+		},
+		"cabina_interprete": {
+			"nombre": "Interpreter's booth",
+			"descripcion": "A soundproof booth with a big window in front and a door behind. Inside is a narrow desk with microphones and headphones; shut the door and the room goes silent.",
+			"etiquetas": ["interpreter's booth", "interpreting booth"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Interpreter's booth”: a trapezoid, narrower at the back, 1.70 by 1.70 metres, marked with the letters “Ci”."
+		},
+		"carro_expedientes": {
+			"nombre": "Case file trolley",
+			"descripcion": "A two-shelf metal trolley on four wheels, loaded with folders tied with tape. Staff leave it in the court corridors, in front of any door.",
+			"etiquetas": ["file trolley", "case file cart"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Case file trolley”: a rectangle, 0.50 by 1.00 metres, marked with the letters “Ce”."
+		},
+		"escanos_plenos": {
+			"nombre": "Curved council chamber seats",
+			"descripcion": "A curved bank of desks with their seats behind, in a half-moon facing the chair. From the front it is a continuous wooden face at waist height; each place has a microphone.",
+			"etiquetas": ["council seats", "chamber benches", "hemicycle"],
+			"variantes": {
+				"pleno_pequeno": "Small chamber",
+				"pleno_mediano": "Medium chamber",
+				"pleno_grande": "Large chamber"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Curved council chamber seats”: a curved band bulging towards the front, 5.00 by 2.40 metres, marked with the letters “Ep”."
+		},
+		"tribuna_oradores": {
+			"nombre": "Speaker's rostrum",
+			"descripcion": "A big enclosed lectern, wider at the front, on a step. You climb in from behind; at the top are a sloping shelf and two microphones.",
+			"etiquetas": ["rostrum", "speaker's stand", "podium"],
+			"acciones": {
+				"subir": "Climb on",
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Speaker's rostrum”: a trapezoid, narrower at the back, 1.20 by 1.00 metres, marked with the letters “To”."
+		},
+		"mesa_presidencia_pleno": {
+			"nombre": "Chair's table on a curved dais",
+			"descripcion": "A one-step half-moon platform with a long table and high-backed chairs on it. The curved edge of the platform is the first thing the cane finds.",
+			"etiquetas": ["chair's table", "top table", "dais"],
+			"imagen": "Footprint of “Chair's table on a curved dais”: a semicircle, straight at the back and round at the front, 4.00 by 2.20 metres, marked with the letters “Mp”."
+		},
+		"banco_iglesia": {
+			"nombre": "Church pew with kneeler",
+			"descripcion": "A long wooden bench with a straight back and, in front, a low kneeling board. They stand in rows facing the altar: follow the centre aisle by touching their ends.",
+			"etiquetas": ["pew", "church bench", "kneeler"],
+			"variantes": {
+				"corto": "Short, three seats",
+				"medio": "Medium, five seats",
+				"largo": "Long, seven seats",
+				"muy_largo": "Very long, nine seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"arrodillarse": "Kneel down"
+			},
+			"imagen": "Footprint of “Church pew with kneeler”: a long seat at the back and a kneeling board in front, joined at one end, 2.50 by 0.95 metres, marked with the letters “Bi”."
+		},
+		"reclinatorio_individual": {
+			"nombre": "Single prie-dieu",
+			"descripcion": "A small piece for kneeling: a padded board almost at floor level and, in front, an elbow rest at waist height. It is light and it moves.",
+			"etiquetas": ["prie-dieu", "kneeler", "prayer desk"],
+			"acciones": {
+				"arrodillarse": "Kneel down"
+			},
+			"imagen": "Footprint of “Single prie-dieu”: a T shape, 0.60 by 0.60 metres, marked with the letters “Ri”."
+		},
+		"filas_sillas_unidas_templo": {
+			"nombre": "Linked rows of chapel chairs",
+			"descripcion": "Upholstered chairs hooked together by the legs in a straight row. No kneeler; the whole row shifts if you push one end.",
+			"etiquetas": ["linked chairs", "chapel chairs", "church chairs"],
+			"variantes": {
+				"tres_sillas": "Three chairs",
+				"seis_sillas": "Six chairs",
+				"diez_sillas": "Ten chairs"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Linked rows of chapel chairs”: a rectangle, 3.00 by 0.55 metres, marked with the letters “Fs”."
+		},
+		"silleria_coro": {
+			"nombre": "Choir stalls",
+			"descripcion": "Carved wooden seats joined in a U against the walls, with very high backs and arms between them. The seats tip up on hinges and drop with a bang.",
+			"etiquetas": ["choir stalls", "stalls"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Choir stalls”: a U open at the front, 5.00 by 3.00 metres, marked with the letters “Sc”."
+		},
+		"gradas_presbiterio": {
+			"nombre": "Sanctuary steps",
+			"descripcion": "Two or three wide steps right across the nave leading up to the altar. No handrail: the cane finds them just where the pews end.",
+			"etiquetas": ["sanctuary steps", "altar steps", "chancel steps"],
+			"aviso": "Sanctuary steps: they go up towards the altar.",
+			"imagen": "Footprint of “Sanctuary steps”: a rectangle, 5.00 by 0.90 metres, marked with the letters “Gp”."
+		},
+		"altar_mayor": {
+			"nombre": "Church altar",
+			"descripcion": "A solid stone or wooden table at waist height, covered with a cloth hanging down the sides. It stands alone in the middle of the sanctuary and you can walk round it.",
+			"etiquetas": ["altar", "high altar", "communion table"],
+			"imagen": "Footprint of “Church altar”: a rectangle, 2.20 by 0.90 metres, marked with the letters “Am”."
+		},
+		"ambon": {
+			"nombre": "Ambo",
+			"descripcion": "A solid stone or wooden lectern, wider at the base, with a sloping top and a microphone. It stands to one side of the altar, at the edge of the steps.",
+			"etiquetas": ["ambo", "lectern", "reading desk"],
+			"acciones": {
+				"leer": "Read by touch",
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Ambo”: a trapezoid, narrower at the back, 0.70 by 0.60 metres, marked with the letters “Am”."
+		},
+		"sede_celebrante": {
+			"nombre": "Celebrant's chair",
+			"descripcion": "A big wooden chair with a high back and arms, with a stool on either side. It stands against the back wall or beside the altar, facing the pews.",
+			"etiquetas": ["celebrant's chair", "presider's chair", "sedilia"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Celebrant's chair”: a T shape, 1.80 by 0.65 metres, marked with the letters “Sc”."
+		},
+		"sagrario": {
+			"nombre": "Tabernacle on a pillar",
+			"descripcion": "A box of worked metal with a small locked door, on a pillar or stone shelf at chest height. A small lamp always burns beside it.",
+			"etiquetas": ["tabernacle", "aumbry"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Tabernacle on a pillar”: an octagon, 0.50 by 0.50 metres, marked with the letters “Sa”."
+		},
+		"cirio_pascual": {
+			"nombre": "Paschal candle on its stand",
+			"descripcion": "A thick, very tall candle on a metal stand with a wide foot, beside the ambo or the font. Knock it and it sways; there is a flame at the top.",
+			"etiquetas": ["paschal candle", "candle stand"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Paschal candle on its stand”: a circle, 0.30 by 0.30 metres, marked with the letters “Cp”."
+		},
+		"comulgatorio": {
+			"nombre": "Communion rail",
+			"descripcion": "A low stone or wrought-iron rail closing off the sanctuary from side to side, with a padded step outside for kneeling and a little gate in the middle.",
+			"etiquetas": ["communion rail", "altar rail"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"arrodillarse": "Kneel down"
+			},
+			"imagen": "Footprint of “Communion rail”: a rectangle, 4.00 by 0.40 metres, marked with the letters “Co”."
+		},
+		"pulpito_escalera": {
+			"nombre": "Pulpit with stair",
+			"descripcion": "A many-sided box raised against a pillar, reached by a narrow curving stair. It is hollow underneath: the cane goes in and your head meets the floor of the box.",
+			"etiquetas": ["pulpit", "raised pulpit"],
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"aviso": "Pulpit: mind your head, it overhangs at mid height.",
+			"imagen": "Footprint of “Pulpit with stair”: a many-sided box at the front with a narrow stair reaching it from the back, 1.50 by 2.20 metres, marked with the letters “Pe”."
+		},
+		"pila_bautismal": {
+			"nombre": "Baptismal font",
+			"descripcion": "A big eight-sided stone bowl on a thick stem at waist height, with water in it. The rim is broad and cold; usually near the entrance or in a chapel.",
+			"etiquetas": ["font", "baptismal font"],
+			"acciones": {
+				"mojar_dedos": "Dip your fingers"
+			},
+			"imagen": "Footprint of “Baptismal font”: an octagon, 1.00 by 1.00 metres, marked with the letters “Pb”."
+		},
+		"pila_agua_bendita": {
+			"nombre": "Wall-mounted holy water stoup",
+			"descripcion": "A stone shell the size of a soup plate jutting from the wall or a pillar at chest height, by the door. It has no stem: the cane does not find it.",
+			"etiquetas": ["holy water stoup", "holy water font"],
+			"acciones": {
+				"mojar_dedos": "Dip your fingers"
+			},
+			"imagen": "Footprint of “Wall-mounted holy water stoup”: a semicircle, straight at the back and round at the front, 0.40 by 0.30 metres, hanging 1.00 metres above the floor, marked with the letters “Pa”."
+		},
+		"confesionario": {
+			"nombre": "Confessional",
+			"descripcion": "A wooden booth with a small door or curtain in the middle and, on each side, a recess with a kneeling board and a grille at face height. It stands against the side wall.",
+			"etiquetas": ["confessional", "confession box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"arrodillarse": "Kneel down"
+			},
+			"imagen": "Footprint of “Confessional”: a booth in the middle with a lower wing on each side, 2.00 by 1.10 metres, marked with the letters “Co”."
+		},
+		"lampadario_velas": {
+			"nombre": "Votive candle stand",
+			"descripcion": "A tiered iron tray at waist height full of lit candles, with a coin box. You feel the heat on your face before you touch it and it smells of wax: keep your hand off the top.",
+			"etiquetas": ["votive stand", "candle rack", "prayer candles"],
+			"acciones": {
+				"encender_vela": "Light a candle"
+			},
+			"aviso": "Lit candles: hot.",
+			"imagen": "Footprint of “Votive candle stand”: a rectangle, 0.80 by 0.50 metres, marked with the letters “Lv”."
+		},
+		"cepillo_limosnas": {
+			"nombre": "Alms box",
+			"descripcion": "A narrow iron pillar or a wooden box fixed to the wall, with a slot on top. Coins drop and ring inside.",
+			"etiquetas": ["alms box", "offertory box", "poor box"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Alms box”: a rectangle, 0.25 by 0.25 metres, marked with the letters “Cl”."
+		},
+		"imagen_peana": {
+			"nombre": "Statue on a plinth",
+			"descripcion": "A wooden statue dressed in cloth, on a waist-high wooden plinth. The folds of the mantle and the hands reach out past the plinth at face height.",
+			"etiquetas": ["statue of a saint", "devotional statue"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Statue on a plinth”: a rectangle with cut corners, 0.70 by 0.60 metres, marked with the letters “Ip”."
+		},
+		"verja_capilla": {
+			"nombre": "Chapel screen",
+			"descripcion": "A tall wrought-iron screen closing off a side chapel, with a double gate in the middle. Hand and voice pass between the bars; the gate squeals.",
+			"etiquetas": ["chapel screen", "wrought-iron grille", "chapel gate"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Chapel screen”: a rectangle, 3.00 by 0.08 metres, marked with the letters “Vc”."
+		},
+		"lapida_suelo": {
+			"nombre": "Ledger stone in the church floor",
+			"descripcion": "A stone slab carved with letters and a coat of arms, flush with the nave floor. You walk on it: you feel the relief underfoot and your step sounds different.",
+			"etiquetas": ["ledger stone", "floor tomb", "grave slab"],
+			"imagen": "Footprint of “Ledger stone in the church floor”: a rectangle, 0.90 by 2.00 metres, marked with the letters “Ls”."
+		},
+		"paso_procesional": {
+			"nombre": "Processional float on trestles",
+			"descripcion": "A big platform of wood and silver carrying statues, resting on trestles and skirted in velvet to the floor. The carrying poles stick out at the ends at shoulder height.",
+			"etiquetas": ["processional float", "Holy Week float"],
+			"variantes": {
+				"andas": "Small bier",
+				"paso_cristo": "Christ float",
+				"paso_palio": "Canopied float"
+			},
+			"imagen": "Footprint of “Processional float on trestles”: a rectangle with cut corners, 2.40 by 4.00 metres, marked with the letters “Pp”."
+		},
+		"organo_tubos": {
+			"nombre": "Church organ",
+			"descripcion": "A huge case with a front of metal pipes up to the ceiling and, before it, the console with keyboards and a bench. When it plays it fills the whole nave: it tells you where the choir is.",
+			"etiquetas": ["church organ", "pipe organ"],
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Church organ”: a T shape, 3.00 by 1.80 metres, marked with the letters “Ot”."
+		},
+		"armonio": {
+			"nombre": "Harmonium",
+			"descripcion": "A small bellows organ like a low, short piano, with two broad pedals you tread to give it air. It stands by the altar in churches with no big organ.",
+			"etiquetas": ["harmonium", "reed organ"],
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Harmonium”: a rectangle, 1.10 by 0.50 metres, marked with the letters “Ar”."
+		},
+		"facistol": {
+			"nombre": "Choir lectern",
+			"descripcion": "A giant lectern with four sloping faces on a stem, turning on its axis, for the big choir books. Its corners are at chest height.",
+			"etiquetas": ["choir lectern", "revolving lectern"],
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Choir lectern”: a diamond, 0.90 by 0.90 metres, marked with the letters “Fa”."
+		},
+		"cuerda_campana": {
+			"nombre": "Bell rope",
+			"descripcion": "A thick rope coming down through a hole in the ceiling and ending in a knot at chest height, at the foot of the tower. The cane passes under it; pull and the bell rings above.",
+			"etiquetas": ["bell rope", "church bell"],
+			"acciones": {
+				"tirar_cuerda_campana": "Pull the rope"
+			},
+			"imagen": "Footprint of “Bell rope”: a circle, 0.08 by 0.08 metres, hanging 1.10 metres above the floor, marked with the letters “Cc”."
+		},
+		"alfombras_oracion": {
+			"nombre": "Mosque prayer carpet",
+			"descripcion": "A whole floor of soft carpet with bands marking the rows. You walk on it barefoot: footsteps go silent the moment you step on.",
+			"etiquetas": ["prayer carpet", "prayer hall carpet"],
+			"imagen": "Footprint of “Mosque prayer carpet”: a rectangle, 4.00 by 3.00 metres, marked with the letters “Ao”."
+		},
+		"mueble_calzado_mezquita": {
+			"nombre": "Shoe rack at the prayer hall entrance",
+			"descripcion": "An open wooden pigeonhole unit from floor to chest, with holes the size of a pair of shoes. It stands by the prayer hall door; loose shoes often lie on the floor in front.",
+			"etiquetas": ["shoe rack", "shoe pigeonholes"],
+			"acciones": {
+				"dejar_zapatos": "Leave your shoes"
+			},
+			"imagen": "Footprint of “Shoe rack at the prayer hall entrance”: a rectangle, 1.50 by 0.35 metres, marked with the letters “Mc”."
+		},
+		"fuente_abluciones": {
+			"nombre": "Ablution fountain",
+			"descripcion": "A row of low taps over a stone channel, with a small block in front of each to sit and wash your feet. The floor around is wet and you hear running water.",
+			"etiquetas": ["ablution fountain", "wudu area"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off",
+				"lavarse_abluciones": "Wash"
+			},
+			"imagen": "Footprint of “Ablution fountain”: a comb: a bar with bodies sticking out to the front, 2.40 by 0.90 metres, marked with the letters “Fa”."
+		},
+		"mimbar": {
+			"nombre": "Minbar",
+			"descripcion": "A straight, narrow wooden stair with side rails rising to a small seat. It stands against the far wall; from the side it is a smooth wedge-shaped wall.",
+			"etiquetas": ["minbar", "mosque pulpit"],
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Minbar”: a rectangle, 0.90 by 3.00 metres, marked with the letters “Mi”."
+		},
+		"bima": {
+			"nombre": "Bimah",
+			"descripcion": "A raised platform a couple of steps up in the middle of the synagogue, ringed by a rail, with a big sloping table where the scroll is read. You climb it from the sides.",
+			"etiquetas": ["bimah", "tebah", "reading platform"],
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Bimah”: a rectangle with cut corners, 2.50 by 2.50 metres, marked with the letters “Bi”."
+		},
+		"atril_metacrilato_templo": {
+			"nombre": "Clear acrylic preaching lectern",
+			"descripcion": "An acrylic lectern: a smooth, cold sheet bent into a stand with a sloping top. It is light and nearly invisible; struck, it sounds like hard plastic.",
+			"etiquetas": ["acrylic lectern", "clear pulpit"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Clear acrylic preaching lectern”: a house-shaped pentagon, 0.60 by 0.45 metres, marked with the letters “Am”."
+		},
+		"sofas_velatorio": {
+			"nombre": "Viewing room sofas",
+			"descripcion": "Low, soft sofas joined in a U round a low table with tissues and glasses of water. The U opens towards the viewing window.",
+			"etiquetas": ["viewing room sofas", "family room seating"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Viewing room sofas”: a U open at the front, 3.00 by 2.40 metres, marked with the letters “Sv”."
+		},
+		"tumulo_cristal": {
+			"nombre": "Coffin display behind glass",
+			"descripcion": "A big sheet of glass from wall to wall and floor to ceiling: behind it, in a small cold room, is the coffin. From the front it is a smooth wall, icy to the touch; you hear the cooling hum.",
+			"etiquetas": ["viewing window", "coffin display", "chapel of rest window"],
+			"imagen": "Footprint of “Coffin display behind glass”: a rectangle, 2.60 by 0.15 metres, marked with the letters “Tc”."
+		},
+		"libro_firmas_atril": {
+			"nombre": "Condolence book on a stand",
+			"descripcion": "A chest-high wooden stand with a big open book and a pen on a cord, beside the door of the room.",
+			"etiquetas": ["condolence book", "book of remembrance", "guest book stand"],
+			"acciones": {
+				"firmar_libro": "Sign the book"
+			},
+			"imagen": "Footprint of “Condolence book on a stand”: a trapezoid, narrower at the back, 0.50 by 0.45 metres, marked with the letters “Lf”."
+		},
+		"corona_caballete": {
+			"nombre": "Funeral wreath on an easel",
+			"descripcion": "A big ring of flowers and leaves with a ribbon, resting on an easel with three thin legs. The flowers brush you first, at chest height; the legs catch the cane and it tips over easily.",
+			"etiquetas": ["funeral wreath", "wreath stand"],
+			"imagen": "Footprint of “Funeral wreath on an easel”: a triangle pointing to the front, 0.90 by 0.70 metres, marked with the letters “Cc”."
+		},
+		"banco_tanatorio": {
+			"nombre": "Padded funeral home corridor bench",
+			"descripcion": "A wide, soft backless bench covered in leather, in the corridor outside each room. It gives as you sit and makes no noise.",
+			"etiquetas": ["padded bench", "upholstered bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Padded funeral home corridor bench”: a rectangle with rounded corners, 1.60 by 0.50 metres, marked with the letters “Bt”."
+		},
+		"carro_feretros": {
+			"nombre": "Coffin trolley",
+			"descripcion": "A long, narrow metal frame on four wheels at hip height, with rollers on top. Empty, it is nearly all gap: the cane goes in between the legs.",
+			"etiquetas": ["coffin trolley", "church truck", "bier"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Coffin trolley”: a rectangle, 0.65 by 2.00 metres, marked with the letters “Cf”."
+		},
+		"nichos_pared": {
+			"nombre": "Wall of burial niches",
+			"descripcion": "A long, thick wall of four or five rows of niches, each closed with a marble plaque with raised letters and a small vase sticking out. Two blocks make a lane you follow by hand.",
+			"etiquetas": ["burial niches", "wall of niches", "mausoleum wall"],
+			"variantes": {
+				"tramo_corto": "Short run",
+				"tramo_largo": "Long run",
+				"doble_cara": "Double-sided"
+			},
+			"imagen": "Footprint of “Wall of burial niches”: a rectangle, 8.00 by 2.60 metres, marked with the letters “Np”."
+		},
+		"columbario": {
+			"nombre": "Columbarium",
+			"descripcion": "A wall of small square compartments for urns, each with a stone plaque or little glass door. The plaques are the size of a floor tile and run from floor to head height.",
+			"etiquetas": ["columbarium", "cremation niches"],
+			"imagen": "Footprint of “Columbarium”: a rectangle, 2.00 by 0.50 metres, marked with the letters “Co”."
+		},
+		"tumba_tierra": {
+			"nombre": "Grave with headstone",
+			"descripcion": "A long stone slab a hand or two above the ground, with an upright stone at the head. Between graves runs a narrow path of earth or gravel.",
+			"etiquetas": ["grave", "tomb", "headstone"],
+			"variantes": {
+				"sencilla": "Single",
+				"doble": "Double"
+			},
+			"imagen": "Footprint of “Grave with headstone”: a long slab with a wider upright headstone at the back, 1.00 by 2.20 metres, marked with the letters “Tt”."
+		},
+		"panteon": {
+			"nombre": "Family mausoleum",
+			"descripcion": "A stone hut like a small chapel, with an iron gate for a door and a step in front. The walls are smooth and cold; it echoes inside.",
+			"etiquetas": ["mausoleum", "family vault", "burial chapel"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Family mausoleum”: a house-shaped pentagon, 3.00 by 3.50 metres, marked with the letters “Pa”."
+		},
+		"cruz_piedra": {
+			"nombre": "Stone cross on steps",
+			"descripcion": "A tall stone cross on a column, set on a base of two or three eight-sided steps. It marks the middle of the cemetery or where its paths cross: the cane meets the steps first.",
+			"etiquetas": ["stone cross", "churchyard cross", "wayside cross"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Stone cross on steps”: an octagon, 1.60 by 1.60 metres, marked with the letters “Cp”."
+		},
+		"escalera_nichos": {
+			"nombre": "Rolling niche ladder",
+			"descripcion": "An iron ladder on wheels with a railed platform on top, for reaching the high niches. People leave it anywhere along the lane; it is heavy and squeals when moved.",
+			"etiquetas": ["niche ladder", "rolling ladder", "platform steps"],
+			"acciones": {
+				"subir": "Climb on",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Rolling niche ladder”: a trapezoid, narrower at the back, 0.80 by 1.80 metres, marked with the letters “En”."
+		},
+		"fuente_cementerio": {
+			"nombre": "Cemetery tap with watering cans",
+			"descripcion": "A stone trough with a tap and, hanging on hooks beside it, plastic watering cans and buckets that sound hollow when brushed. The ground around is often wet.",
+			"etiquetas": ["cemetery tap", "water point", "watering cans"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Cemetery tap with watering cans”: a rectangle, 0.90 by 0.60 metres, marked with the letters “Fc”."
+		},
+		"contenedor_flores_secas": {
+			"nombre": "Dead flower cage",
+			"descripcion": "A big wire-mesh cage, open at the top, for dead flowers and broken pots. It smells of old flowers; the mesh rattles when struck.",
+			"etiquetas": ["dead flower cage", "green waste cage"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Dead flower cage”: a rectangle, 1.50 by 1.00 metres, marked with the letters “Cf”."
+		},
+		"sillon_peluqueria": {
+			"nombre": "Hydraulic salon chair",
+			"descripcion": "A swivel chair on a heavy round metal base, with a footrest bar in front and a pedal to pump it up. It turns if you lean on an arm.",
+			"etiquetas": ["salon chair", "styling chair", "hydraulic chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Hydraulic salon chair”: a chair with a narrower footrest sticking out at the front, 0.65 by 1.00 metres, marked with the letters “Sp”."
+		},
+		"sillon_barbero": {
+			"nombre": "Barber's chair",
+			"descripcion": "A very heavy iron and leather chair with a headrest, thick arms and a big metal footplate. It tips back with a lever; it stays put.",
+			"etiquetas": ["barber's chair", "barber chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"plegar": "Fold"
+			},
+			"imagen": "Footprint of “Barber's chair”: a rectangle with rounded corners, 0.70 by 1.15 metres, marked with the letters “Sb”."
+		},
+		"sillon_infantil_coche": {
+			"nombre": "Car-shaped children's salon chair",
+			"descripcion": "A little plastic car with a steering wheel and horn mounted on a chair base: children sit in it for a haircut. Low, with rounded edges.",
+			"etiquetas": ["children's salon chair", "kiddie car chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Car-shaped children's salon chair”: the outline of a vehicle, nose at the front, 0.60 by 1.00 metres, marked with the letters “Si”."
+		},
+		"lavacabezas": {
+			"nombre": "Backwash unit",
+			"descripcion": "A fixed, slightly reclined chair with a ceramic basin behind where your neck fits. Behind the basin is the stylist's space; the floor there is often wet.",
+			"etiquetas": ["backwash unit", "shampoo chair", "wash basin"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Backwash unit”: a wide basin at the back and a narrower chair in front, 0.65 by 1.25 metres, marked with the letters “La”."
+		},
+		"secador_casco": {
+			"nombre": "Hood dryer on a stand",
+			"descripcion": "A big plastic hood on top of a wheeled stand: you sit under it and it blows hot air with a hum. The hood is at head height and the stand has five star legs.",
+			"etiquetas": ["hood dryer", "salon hood dryer"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Hood dryer on a stand”: a 5-pointed star, 0.60 by 0.70 metres, marked with the letters “Sc”."
+		},
+		"tocador_peluqueria": {
+			"nombre": "Styling station with floating shelf",
+			"descripcion": "A big mirror on the wall with a narrow shelf jutting out at waist height, covered in combs, bottles and a dryer on a hook. Nothing underneath: the cane reaches the wall.",
+			"etiquetas": ["styling station", "salon mirror", "styling unit"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Styling station with floating shelf”: a rectangle, 0.90 by 0.30 metres, hanging 0.80 metres above the floor, marked with the letters “Tp”."
+		},
+		"carrito_peluqueria": {
+			"nombre": "Salon trolley",
+			"descripcion": "A narrow tower of plastic drawers on wheels, hip high, with rollers, clips and dyes. It is always beside the chair in use: it moves about all day.",
+			"etiquetas": ["salon trolley", "hairdressing trolley"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Salon trolley”: a rectangle, 0.40 by 0.45 metres, marked with the letters “Cp”."
+		},
+		"recepcion_peluqueria": {
+			"nombre": "Salon reception desk",
+			"descripcion": "A small quarter-circle counter at chest height, tucked in the corner by the door, with the till, the diary and a card reader that beeps.",
+			"etiquetas": ["salon reception", "salon front desk"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Salon reception desk”: a quarter circle with its corner at the back left, 1.20 by 1.20 metres, marked with the letters “Rp”."
+		},
+		"expositor_productos_peluqueria": {
+			"nombre": "Hair product display",
+			"descripcion": "Glass shelves on the wall from chest height to above the head, with rows of shampoo bottles and sprays. The bottles fall if you run your hand along quickly.",
+			"etiquetas": ["hair product display", "retail shelves"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Hair product display”: a rectangle, 0.90 by 0.20 metres, hanging 1.00 metres above the floor, marked with the letters “Ep”."
+		},
+		"poste_barbero": {
+			"nombre": "Revolving barber's pole",
+			"descripcion": "A glass cylinder the size of a large flask, fixed to the shop front on a bracket beside the barber's door. It is at head height and the cane does not detect it.",
+			"etiquetas": ["barber's pole", "barber pole"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Revolving barber's pole”: a semicircle, straight at the back and round at the front, 0.22 by 0.30 metres, hanging 1.50 metres above the floor, marked with the letters “Pb”."
+		},
+		"camilla_estetica": {
+			"nombre": "Beauty treatment couch",
+			"descripcion": "A wide padded couch with the back raised and a face hole at the head end, covered with a towel. It folds in three sections; there is little room around it.",
+			"etiquetas": ["beauty couch", "treatment couch", "massage table"],
+			"acciones": {
+				"tumbarse": "Lie down"
+			},
+			"imagen": "Footprint of “Beauty treatment couch”: a rectangle with rounded corners, 0.70 by 1.90 metres, marked with the letters “Ce”."
+		},
+		"mesa_manicura": {
+			"nombre": "Manicure table",
+			"descripcion": "A narrow table with a cushion to rest your hand on, a lamp on a flexible arm and an extractor that hums. You on one side and the manicurist on the other, very close.",
+			"etiquetas": ["manicure table", "nail desk", "nail station"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Manicure table”: a rectangle with rounded corners, 1.10 by 0.45 metres, marked with the letters “Mm”."
+		},
+		"sillon_pedicura": {
+			"nombre": "Pedicure chair with foot bath",
+			"descripcion": "A tall chair on a plinth with a foot bath in front that bubbles when full. You step up to it; the rim of the bath is at mid-shin height.",
+			"etiquetas": ["pedicure chair", "pedicure spa", "foot spa"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Pedicure chair with foot bath”: a chair with a narrower footrest sticking out at the front, 0.85 by 1.50 metres, marked with the letters “Sp”."
+		},
+		"cabina_rayos_uva": {
+			"nombre": "Stand-up tanning booth",
+			"descripcion": "A metal cylinder as tall as a door that you step into standing up. With the door shut the fans roar and the wall is warm.",
+			"etiquetas": ["tanning booth", "stand-up sunbed", "solarium"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Stand-up tanning booth”: a circle, 1.10 by 1.10 metres, marked with the letters “Cr”."
+		},
+		"lavadora_industrial": {
+			"nombre": "Industrial front-loading washer",
+			"descripcion": "A steel washing machine twice the size of a home one, with a round glass door at chest height and a thick handle. Several stand in a row; the one running vibrates and you hear the water inside.",
+			"etiquetas": ["industrial washer", "commercial washing machine", "launderette washer"],
+			"variantes": {
+				"kilos_8": "8 kg",
+				"kilos_14": "14 kg",
+				"kilos_20": "20 kg"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Industrial front-loading washer”: a rectangle, 0.90 by 1.00 metres, marked with the letters “Li”."
+		},
+		"secadora_industrial_apilada": {
+			"nombre": "Stacked industrial tumble dryer",
+			"descripcion": "A column of two dryers, one on top of the other, each with a huge round door: the lower at hip height, the upper at face height. It hums, blows warm air and buttons rattle inside.",
+			"etiquetas": ["stacked dryer", "industrial tumble dryer", "launderette dryer"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Stacked industrial tumble dryer”: a rectangle, 0.80 by 1.10 metres, marked with the letters “Si”."
+		},
+		"central_pago_lavanderia": {
+			"nombre": "Launderette payment terminal",
+			"descripcion": "A metal box hung on the wall at chest height, with a coin slot, a note reader and a keypad to choose the machine number. The cane passes under it.",
+			"etiquetas": ["payment terminal", "central pay station", "coin box"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Launderette payment terminal”: a rectangle, 0.45 by 0.25 metres, hanging 0.90 metres above the floor, marked with the letters “Cp”."
+		},
+		"dispensador_detergente": {
+			"nombre": "Detergent vending machine",
+			"descripcion": "A narrow floor-standing machine with big buttons and a hatch at the bottom where the dose of soap or sachet of softener drops.",
+			"etiquetas": ["detergent dispenser", "soap vending machine"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Detergent vending machine”: a rectangle, 0.45 by 0.40 metres, marked with the letters “Dd”."
+		},
+		"calandra_planchado": {
+			"nombre": "Flatwork ironer",
+			"descripcion": "A low, very wide machine with a hot roller turning slowly: feed the sheet in at the front and it comes out pressed underneath. The front is hot: keep your hand off the roller.",
+			"etiquetas": ["flatwork ironer", "roller ironer", "calender"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"aviso": "Ironer: the roller is hot.",
+			"imagen": "Footprint of “Flatwork ironer”: a rectangle, 2.20 by 0.80 metres, marked with the letters “Cp”."
+		},
+		"mesa_doblar_ropa": {
+			"nombre": "Laundry folding table",
+			"descripcion": "A tall, smooth table at hip height for folding laundry standing up. There is often a shelf of baskets underneath.",
+			"etiquetas": ["folding table", "laundry table"],
+			"imagen": "Footprint of “Laundry folding table”: a rectangle with rounded corners, 1.80 by 0.80 metres, marked with the letters “Md”."
+		},
+		"carro_ropa_lavanderia": {
+			"nombre": "Laundry cart on wheels",
+			"descripcion": "A deep wire basket on four swivel wheels, sometimes with a tall rail for hangers. It rolls at the slightest push and is never where you left it.",
+			"etiquetas": ["laundry cart", "laundry trolley", "basket trolley"],
+			"variantes": {
+				"cesta": "Basket only",
+				"con_barra": "With hanging rail"
+			},
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Laundry cart on wheels”: a rectangle with cut corners, 0.55 by 0.80 metres, marked with the letters “Cr”."
+		},
+		"banco_lavanderia": {
+			"nombre": "Launderette waiting bench",
+			"descripcion": "A long hard plastic bench bolted to the wall facing the machines, with no front legs: the cane goes under it right to the skirting.",
+			"etiquetas": ["launderette bench", "wall bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Launderette waiting bench”: a rectangle, 2.00 by 0.40 metres, marked with the letters “Bl”."
+		},
+		"mostrador_tintoreria": {
+			"nombre": "Dry cleaner's counter",
+			"descripcion": "A wide, smooth waist-high counter where the garment is spread out, with a rail above hung with suits in crackling plastic covers.",
+			"etiquetas": ["dry cleaner's counter", "garment counter"],
+			"acciones": {
+				"pagar": "Pay",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Dry cleaner's counter”: a rectangle, 1.60 by 0.65 metres, marked with the letters “Mt”."
+		},
+		"transportador_tintoreria": {
+			"nombre": "Overhead garment conveyor",
+			"descripcion": "An oval track hung from the ceiling carrying hundreds of hangers with clothes in covers. When it runs, the garments file past and sweep you at face height; the cane gives no warning.",
+			"etiquetas": ["garment conveyor", "clothes carousel", "overhead conveyor"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Overhead garment conveyor”: an oval, long from front to back, 1.50 by 4.00 metres, hanging 1.00 metres above the floor, marked with the letters “Tt”."
+		},
+		"prensa_vapor": {
+			"nombre": "Steam pressing machine",
+			"descripcion": "A tongue-shaped padded board at waist height with a matching plate above that comes down on a lever and lets out a puff of steam. The whole edge is hot.",
+			"etiquetas": ["steam press", "pressing machine", "garment press"],
+			"acciones": {
+				"bajar_prensa": "Lower the press"
+			},
+			"aviso": "Steam press: hot.",
+			"imagen": "Footprint of “Steam pressing machine”: a teardrop, round at the back and pointed at the front, 1.30 by 0.90 metres, marked with the letters “Pv”."
+		},
+		"cabina_locutorio": {
+			"nombre": "Call shop booth",
+			"descripcion": "A narrow numbered chipboard booth with a folding door, in a row with others like it. Inside are a wall phone, a shelf and a stool; you hear muffled voices in several languages.",
+			"etiquetas": ["call shop booth", "phone booth", "calling cabin"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"llamar": "Call",
+				"colgar": "Hang up"
+			},
+			"imagen": "Footprint of “Call shop booth”: a rectangle, 0.90 by 1.00 metres, marked with the letters “Cl”."
+		},
+		"puestos_internet_locutorio": {
+			"nombre": "Internet stations with dividers",
+			"descripcion": "A long worktop against the wall with a computer every metre and a dividing panel between stations reaching to the edge. You hear typing and the computer fans.",
+			"etiquetas": ["internet stations", "cybercafé desks", "computer carrels"],
+			"variantes": {
+				"dos_puestos": "Two stations",
+				"tres_puestos": "Three stations",
+				"cinco_puestos": "Five stations"
+			},
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Internet stations with dividers”: a comb: a bar with bodies sticking out to the front, 3.00 by 0.75 metres, marked with the letters “Pi”."
+		},
+		"telefono_pared_orejeras": {
+			"nombre": "Wall payphone with side hoods",
+			"descripcion": "A coin phone hung on the wall between two fins sticking out at head height for privacy. It does not reach the floor: you meet the fins with your shoulder or face.",
+			"etiquetas": ["wall payphone", "public telephone", "hooded payphone"],
+			"acciones": {
+				"llamar": "Call",
+				"colgar": "Hang up",
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Wall payphone with side hoods”: a U open at the front, 0.70 by 0.40 metres, hanging 1.00 metres above the floor, marked with the letters “Tp”."
+		},
+		"repisa_boletos": {
+			"nombre": "Betting slip shelf",
+			"descripcion": "A narrow shelf screwed to the wall at chest height, with racks of slips and pens on strings. It has no legs: the cane passes under and you find it with your elbow.",
+			"etiquetas": ["betting slip shelf", "lottery slip counter"],
+			"acciones": {
+				"escribir": "Write",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Betting slip shelf”: a rectangle, 1.20 by 0.30 metres, hanging 1.00 metres above the floor, marked with the letters “Rb”."
+		},
+		"terminal_loteria": {
+			"nombre": "Lottery counter with terminal",
+			"descripcion": "A short chest-high counter with the machine that reads the slips: it whirs, beeps and spits out the receipt. Tickets hang from a string at face height.",
+			"etiquetas": ["lottery counter", "lottery terminal", "betting terminal"],
+			"acciones": {
+				"comprar": "Buy",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Lottery counter with terminal”: a rectangle with cut corners, 1.40 by 0.60 metres, marked with the letters “Tl”."
+		},
+		"maquina_zapatero": {
+			"nombre": "Cobbler's finishing machine",
+			"descripcion": "A long chest-high machine with a row of sanding rollers and brushes spinning at full speed. Running, it makes a rasping noise and smells of burnt rubber: keep your hands away.",
+			"etiquetas": ["cobbler's finishing machine", "shoe repair finisher"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Cobbler's finishing machine”: a rectangle, 1.50 by 0.70 metres, marked with the letters “Mz”."
+		},
+		"mostrador_zapatero_llaves": {
+			"nombre": "Cobbler's counter with key cutter",
+			"descripcion": "A small L-shaped counter covered in shoes, with a key-cutting machine at one end and, behind, a wall of hanging keys that jingle.",
+			"etiquetas": ["cobbler's counter", "key cutting counter", "heel bar"],
+			"acciones": {
+				"copiar_llave": "Have a key cut",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Cobbler's counter with key cutter”: an L shape, 1.50 by 1.20 metres, marked with the letters “Mz”."
+		},
+		"mostrador_copisteria": {
+			"nombre": "Copy shop counter",
+			"descripcion": "A long waist-high counter with stacks of paper, a spiral binder and, right behind, several photocopiers working at once. It smells of warm toner.",
+			"etiquetas": ["copy shop counter", "print shop counter", "reprographics desk"],
+			"acciones": {
+				"copiar": "Make a copy",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Copy shop counter”: a rectangle with rounded corners, 2.20 by 0.70 metres, marked with the letters “Mc”."
+		},
+		"guillotina_copisteria": {
+			"nombre": "Floor-standing paper guillotine",
+			"descripcion": "An iron table at waist height with a broad blade that comes down when you pull a long lever. The lever sticks up and out into the way at shoulder height.",
+			"etiquetas": ["paper guillotine", "paper cutter", "stack cutter"],
+			"acciones": {
+				"bajar_cuchilla": "Bring the blade down"
+			},
+			"imagen": "Footprint of “Floor-standing paper guillotine”: a rectangle with cut corners, 0.90 by 0.90 metres, marked with the letters “Gc”."
+		},
+		"plotter_planos": {
+			"nombre": "Large-format plotter",
+			"descripcion": "A very wide, low printer on two wheeled legs, with a roll of paper behind and a cloth basket in front to catch the plans. The head runs to and fro with a whir.",
+			"etiquetas": ["plotter", "large-format printer", "plan printer"],
+			"acciones": {
+				"imprimir": "Print"
+			},
+			"imagen": "Footprint of “Large-format plotter”: a rectangle, 1.80 by 0.70 metres, marked with the letters “Pp”."
+		}
+	}
+}

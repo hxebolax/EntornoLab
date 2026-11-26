@@ -1,0 +1,703 @@
+{
+	"nombre": "Office and shops",
+	"descripcion": "Furniture for offices, receptions and waiting rooms, and for supermarkets and shops, with their machines and typical obstacles.",
+	"categorias": {
+		"oficina": "Office",
+		"espera": "Reception and waiting room",
+		"maquinas": "Machines",
+		"supermercado": "Supermarket",
+		"tienda": "Shop",
+		"edificio": "Entrances and building features"
+	},
+	"subcategorias": {
+		"mesas_trabajo": "Desks and workstations",
+		"sillas_oficina": "Office chairs",
+		"reuniones": "Meetings and training",
+		"archivo": "Filing and cupboards",
+		"complementos_oficina": "Partitions, bins and coat stands",
+		"instalaciones_oficina": "Building services and time clock",
+		"office_descanso": "Office kitchen",
+		"mostradores_recepcion": "Reception desks",
+		"asientos_espera": "Seats, low tables and plants",
+		"colas_turnos": "Queues and tickets",
+		"reprografia": "Copying and paper",
+		"bebida_comida": "Coffee, water and food machines",
+		"dinero": "Cash machine",
+		"lineales": "Shelving, chillers and freezers",
+		"cajas_cobro": "Checkouts and prices",
+		"carros_cestas": "Trolleys and baskets",
+		"reposicion": "Restocking, cleaning and back room",
+		"servicios_super": "Services and promotions",
+		"mostradores_tienda": "Shop counters",
+		"expositores_tienda": "Displays, rails and signs",
+		"probadores_asientos": "Fitting rooms and benches",
+		"accesos": "Doors, turnstiles and mats",
+		"estructura_edificio": "Columns and safety"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"parado": "Stopped",
+		"girando": "Turning",
+		"desplegado": "Unfolded",
+		"plegado": "Folded",
+		"apagado": "Off",
+		"encendido": "On",
+		"funcionando": "Running"
+	},
+	"objetos": {
+		"mesa_despacho": {
+			"nombre": "Office desk",
+			"descripcion": "Office desk with a computer and papers; the drawer holds things. The chair sits in front.",
+			"etiquetas": ["office desk", "desk", "workstation"],
+			"variantes": {
+				"pequena": "1.20 m",
+				"normal": "1.40 m",
+				"grande": "1.60 m",
+				"direccion": "Executive"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Office desk”: a rectangle, 1.40 by 0.70 metres, marked with the letters “Md”."
+		},
+		"mesa_ele": {
+			"nombre": "L-shaped desk",
+			"descripcion": "Office desk with a wing turning at a right angle: it wraps round whoever sits at it.",
+			"etiquetas": ["L-shaped desk", "corner desk"],
+			"imagen": "Footprint of “L-shaped desk”: an L shape, 1.60 by 1.60 metres, marked with the letters “Me”."
+		},
+		"silla_giratoria": {
+			"nombre": "Office chair",
+			"descripcion": "Swivel chair with castors and arms. Bump into it and it rolls and turns.",
+			"etiquetas": ["office chair", "swivel chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Office chair”: a circle, 0.64 by 0.64 metres, marked with the letters “Sg”."
+		},
+		"silla_confidente": {
+			"nombre": "Visitor chair",
+			"descripcion": "Fixed four-legged chair for visitors to the office.",
+			"etiquetas": ["visitor chair", "guest chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Visitor chair”: a rectangle, 0.55 by 0.55 metres, marked with the letters “Sc”."
+		},
+		"mesa_reuniones": {
+			"nombre": "Meeting table",
+			"descripcion": "Large oval boardroom table with chairs round it. No corners: follow the edge to go round.",
+			"etiquetas": ["meeting table", "conference table", "boardroom table"],
+			"variantes": {
+				"seis_plazas": "For six",
+				"ocho_plazas": "For eight",
+				"doce_plazas": "For twelve"
+			},
+			"imagen": "Footprint of “Meeting table”: an elongated oval with straight sides and round ends, 2.40 by 1.20 metres, marked with the letters “Mr”."
+		},
+		"archivador": {
+			"nombre": "Filing cabinet",
+			"descripcion": "Metal filing cabinet with drawers. An open drawer sticks out half a metre at knee or chest height.",
+			"etiquetas": ["filing cabinet", "drawer unit", "pedestal"],
+			"variantes": {
+				"dos_cajones": "Two drawers",
+				"cuatro_cajones": "Four drawers"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Filing cabinet”: a rectangle, 0.47 by 0.62 metres, marked with the letters “Ar”."
+		},
+		"armario_oficina": {
+			"nombre": "Office cupboard",
+			"descripcion": "Tall two-door metal cupboard for folders.",
+			"etiquetas": ["office cupboard", "stationery cupboard"],
+			"variantes": {
+				"bajo": "Low",
+				"alto": "Tall"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Office cupboard”: a rectangle, 0.90 by 0.45 metres, marked with the letters “Ao”."
+		},
+		"estanteria_oficina": {
+			"nombre": "Office shelving",
+			"descripcion": "Open shelving with lever-arch files.",
+			"etiquetas": ["shelving", "shelves", "bookcase"],
+			"imagen": "Footprint of “Office shelving”: a rectangle, 0.90 by 0.35 metres, marked with the letters “Eo”."
+		},
+		"papelera": {
+			"nombre": "Waste bin",
+			"descripcion": "Mesh bin beside the desk. Light: it tips over if kicked.",
+			"etiquetas": ["bin", "waste bin", "wastepaper basket"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Waste bin”: a circle, 0.28 by 0.28 metres, marked with the letters “Pa”."
+		},
+		"perchero": {
+			"nombre": "Coat stand",
+			"descripcion": "Metal pole with arms at the top for coats.",
+			"etiquetas": ["coat stand", "coat rack"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Coat stand”: a circle, 0.40 by 0.40 metres, marked with the letters “Pe”."
+		},
+		"mampara": {
+			"nombre": "Office partition",
+			"descripcion": "Dividing panel between workstations: thin, shoulder high and covered in fabric.",
+			"etiquetas": ["partition", "screen", "divider"],
+			"imagen": "Footprint of “Office partition”: a rectangle, 1.20 by 0.06 metres, marked with the letters “Ma”."
+		},
+		"pizarra_caballete": {
+			"nombre": "Flipchart",
+			"descripcion": "Board with a paper pad on a tripod. The legs spread wider at the floor than the board.",
+			"etiquetas": ["flipchart", "easel"],
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Flipchart”: a trapezoid, narrower at the back, 0.70 by 0.60 metres, marked with the letters “Pc”."
+		},
+		"mostrador_recepcion": {
+			"nombre": "Reception desk",
+			"descripcion": "Straight, tall counter at chest height, with a person behind it.",
+			"etiquetas": ["reception desk", "front desk", "counter"],
+			"variantes": {
+				"pequeno": "1.40 m",
+				"normal": "2 m",
+				"grande": "3 m"
+			},
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Reception desk”: a rectangle, 2.00 by 0.80 metres, marked with the letters “Mr”."
+		},
+		"mostrador_curvo": {
+			"nombre": "Curved reception desk",
+			"descripcion": "Arc-shaped counter bulging towards whoever arrives. Follow it with your hand: no corners.",
+			"etiquetas": ["curved reception desk", "curved counter"],
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Curved reception desk”: a curved band bulging towards the front, 2.80 by 1.40 metres, marked with the letters “Mc”."
+		},
+		"sillas_espera": {
+			"nombre": "Row of waiting room seats",
+			"descripcion": "Row of seats joined on a beam, against the wall. They do not move.",
+			"etiquetas": ["waiting room seats", "beam seating"],
+			"variantes": {
+				"dos_plazas": "Two seats",
+				"tres_plazas": "Three seats",
+				"cuatro_plazas": "Four seats",
+				"cinco_plazas": "Five seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Row of waiting room seats”: a rectangle, 1.70 by 0.60 metres, marked with the letters “Se”."
+		},
+		"mesita": {
+			"nombre": "Magazine table",
+			"descripcion": "Low square table with magazines, in the middle of the waiting room. At knee height.",
+			"etiquetas": ["magazine table", "low table", "coffee table"],
+			"imagen": "Footprint of “Magazine table”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Me”."
+		},
+		"planta": {
+			"nombre": "Indoor plant",
+			"descripcion": "Large planter with a tall plant. The leaves brush you first.",
+			"etiquetas": ["plant", "pot plant", "planter"],
+			"imagen": "Footprint of “Indoor plant”: a circle, 0.45 by 0.45 metres, marked with the letters “Pl”."
+		},
+		"dispensador_turno": {
+			"nombre": "Queue ticket dispenser",
+			"descripcion": "Post with a machine that gives you a paper slip with your queue number.",
+			"etiquetas": ["queue ticket dispenser", "take a number"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Queue ticket dispenser”: a circle, 0.35 by 0.35 metres, marked with the letters “Dt”."
+		},
+		"postes_cinta": {
+			"nombre": "Queue barrier posts",
+			"descripcion": "Two posts joined by a belt at waist height, to guide the queue. The cane passes under the belt.",
+			"etiquetas": ["queue barrier", "stanchions", "belt barrier"],
+			"imagen": "Footprint of “Queue barrier posts”: two posts joined by a thin belt, 2.00 by 0.35 metres, marked with the letters “Pc”."
+		},
+		"fotocopiadora": {
+			"nombre": "Photocopier",
+			"descripcion": "Large photocopier at chest height. When copying it hums from side to side.",
+			"etiquetas": ["photocopier", "copier", "printer"],
+			"acciones": {
+				"copiar": "Make a copy"
+			},
+			"imagen": "Footprint of “Photocopier”: a rectangle, 0.65 by 0.70 metres, marked with the letters “Fo”."
+		},
+		"maquina_cafe": {
+			"nombre": "Coffee machine",
+			"descripcion": "Coin-operated coffee machine, as tall as a cupboard. It hums all the time and grinds and pours when you order.",
+			"etiquetas": ["coffee machine", "coffee vending machine"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Coffee machine”: a rectangle, 0.60 by 0.70 metres, marked with the letters “Mc”."
+		},
+		"maquina_expendedora": {
+			"nombre": "Vending machine",
+			"descripcion": "Drinks and snacks machine with a glass front. It hums constantly: you hear it from far off.",
+			"etiquetas": ["vending machine", "drinks machine", "snack machine"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Vending machine”: a rectangle, 0.90 by 0.85 metres, marked with the letters “Me”."
+		},
+		"dispensador_agua": {
+			"nombre": "Water cooler",
+			"descripcion": "Narrow column with a water bottle on top. When you pour, the bottle goes glug, glug.",
+			"etiquetas": ["water cooler", "water dispenser"],
+			"acciones": {
+				"beber": "Drink"
+			},
+			"imagen": "Footprint of “Water cooler”: a rectangle, 0.33 by 0.35 metres, marked with the letters “Da”."
+		},
+		"cajero": {
+			"nombre": "Cash machine",
+			"descripcion": "Cash machine, wall-mounted or free-standing: screen and keypad at chest height. The buttons beep.",
+			"etiquetas": ["cash machine", "atm", "cashpoint"],
+			"acciones": {
+				"sacar_dinero": "Withdraw cash"
+			},
+			"imagen": "Footprint of “Cash machine”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Ca”."
+		},
+		"gondola": {
+			"nombre": "Supermarket shelving",
+			"descripcion": "Long double-sided shelving full of goods. Two of them make an aisle: follow it with your hand.",
+			"etiquetas": ["supermarket shelving", "gondola", "aisle"],
+			"variantes": {
+				"un_modulo": "One bay (1 m)",
+				"tres_modulos": "Three bays (4 m)",
+				"cinco_modulos": "Five bays (6 m)"
+			},
+			"imagen": "Footprint of “Supermarket shelving”: a rectangle, 4.00 by 0.90 metres, marked with the letters “Go”."
+		},
+		"gondola_pared": {
+			"nombre": "Supermarket wall shelving",
+			"descripcion": "Single-sided shelving against the wall.",
+			"etiquetas": ["wall shelving"],
+			"imagen": "Footprint of “Supermarket wall shelving”: a rectangle, 3.00 by 0.50 metres, marked with the letters “Gp”."
+		},
+		"caja_registradora": {
+			"nombre": "Checkout with belt",
+			"descripcion": "Supermarket checkout: the long belt where you put your shopping and, at the end, the cashier's station. You pass along the free side.",
+			"etiquetas": ["checkout", "till", "cash register", "conveyor belt"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Checkout with belt”: an L shape: the long belt on one side and the cashier's station at the back, 1.20 by 3.00 metres, marked with the letters “Cr”."
+		},
+		"caja_autopago": {
+			"nombre": "Self-checkout",
+			"descripcion": "Station to pay by yourself: touch screen, scanner and a bagging scale.",
+			"etiquetas": ["self-checkout", "self-service till"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Self-checkout”: a rectangle, 1.10 by 0.70 metres, marked with the letters “Ca”."
+		},
+		"carritos": {
+			"nombre": "Stacked trolleys",
+			"descripcion": "Row of shopping trolleys nested into each other. Wire metal: it rattles when touched.",
+			"etiquetas": ["shopping trolleys", "shopping carts"],
+			"variantes": {
+				"cinco": "Five trolleys",
+				"diez": "Ten trolleys",
+				"veinte": "Twenty trolleys"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Stacked trolleys”: a rectangle, 0.60 by 3.00 metres, marked with the letters “Ca”."
+		},
+		"carrito_suelto": {
+			"nombre": "Stray trolley",
+			"descripcion": "A shopping trolley abandoned in the middle of the aisle. It rolls if pushed.",
+			"etiquetas": ["trolley", "shopping cart"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Stray trolley”: a trapezoid, narrower at the back, 0.60 by 1.00 metres, marked with the letters “Cs”."
+		},
+		"cestas": {
+			"nombre": "Stacked baskets",
+			"descripcion": "Stack of plastic baskets by the entrance.",
+			"etiquetas": ["baskets", "shopping baskets"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Stacked baskets”: a rectangle, 0.45 by 0.32 metres, marked with the letters “Ce”."
+		},
+		"arcon_congelados": {
+			"nombre": "Chest freezer",
+			"descripcion": "Long, low chest with sliding glass lids. It hums and cold comes off it.",
+			"etiquetas": ["chest freezer", "freezer island"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Chest freezer”: a rectangle with cut corners, 2.00 by 0.90 metres, marked with the letters “Ac”."
+		},
+		"palet": {
+			"nombre": "Pallet of goods",
+			"descripcion": "Wooden pallet stacked with boxes, left in the aisle for restocking. An obstacle that is not usually there.",
+			"etiquetas": ["pallet", "boxes", "restocking"],
+			"imagen": "Footprint of “Pallet of goods”: a rectangle, 0.80 by 1.20 metres, marked with the letters “Pa”."
+		},
+		"senal_suelo_mojado": {
+			"nombre": "Wet floor sign",
+			"descripcion": "Plastic A-frame warning of a wet floor. Small and light: it falls over with a hollow clack.",
+			"etiquetas": ["wet floor sign", "caution sign"],
+			"imagen": "Footprint of “Wet floor sign”: a small triangle, 0.30 by 0.40 metres, marked with the letters “Ss”."
+		},
+		"mostrador_vitrina": {
+			"nombre": "Display counter",
+			"descripcion": "Shop counter with a glass display case at the front: it sounds like glass when touched.",
+			"etiquetas": ["display counter", "glass counter", "showcase"],
+			"imagen": "Footprint of “Display counter”: a rectangle, 1.50 by 0.70 metres, marked with the letters “Mv”."
+		},
+		"expositor_giratorio": {
+			"nombre": "Rotating display stand",
+			"descripcion": "Round display stand that spins, with postcards or glasses. Push it and it turns.",
+			"etiquetas": ["rotating display", "spinner rack", "carousel"],
+			"acciones": {
+				"girar": "Spin",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Rotating display stand”: an octagon, 0.50 by 0.50 metres, marked with the letters “Eg”."
+		},
+		"perchero_ropa": {
+			"nombre": "Clothes rail",
+			"descripcion": "Wheeled rail full of hanging clothes. Soft to touch; the cane passes beneath the clothes.",
+			"etiquetas": ["clothes rail", "garment rack"],
+			"imagen": "Footprint of “Clothes rail”: a rectangle, 1.50 by 0.55 metres, marked with the letters “Pr”."
+		},
+		"perchero_circular": {
+			"nombre": "Circular clothes rack",
+			"descripcion": "Round rack loaded with clothes, in the middle of the shop.",
+			"etiquetas": ["circular rack", "round rack"],
+			"imagen": "Footprint of “Circular clothes rack”: a circle, 1.00 by 1.00 metres, marked with the letters “Pc”."
+		},
+		"probador": {
+			"nombre": "Fitting room",
+			"descripcion": "Cubicle with three thin walls and a curtain at the front. Draw the curtain back to go in.",
+			"etiquetas": ["fitting room", "changing room"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Fitting room”: a thin-walled U, open at the front where the curtain hangs, 1.10 by 1.20 metres, marked with the letters “Pr”."
+		},
+		"maniqui": {
+			"nombre": "Mannequin",
+			"descripcion": "Mannequin standing on a round base. The size of a person, but it does not answer.",
+			"etiquetas": ["mannequin", "dummy"],
+			"imagen": "Footprint of “Mannequin”: an oval, 0.45 by 0.40 metres, marked with the letters “Ma”."
+		},
+		"banco_tienda": {
+			"nombre": "Bench",
+			"descripcion": "Padded backless bench to sit on while trying shoes or waiting.",
+			"etiquetas": ["bench", "seat"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Bench”: a rectangle, 1.20 by 0.45 metres, marked with the letters “Bt”."
+		},
+		"cartel_caballete": {
+			"nombre": "A-board",
+			"descripcion": "Two-sided folding sign standing in front of the shop door.",
+			"etiquetas": ["A-board", "sandwich board", "pavement sign"],
+			"imagen": "Footprint of “A-board”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Cc”."
+		},
+		"puerta_giratoria": {
+			"nombre": "Revolving door",
+			"descripcion": "Revolving door: a round glass drum with turning leaves. As an obstacle it is a cylinder; you must time your step to enter.",
+			"etiquetas": ["revolving door"],
+			"acciones": {
+				"empujar": "Push",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Revolving door”: a circle, 2.00 by 2.00 metres, marked with the letters “Pg”."
+		},
+		"torno": {
+			"nombre": "Entry turnstile",
+			"descripcion": "Tripod turnstile: a narrow metal body with an arm barring the way until it gives.",
+			"etiquetas": ["turnstile", "access gate"],
+			"acciones": {
+				"pasar": "Go through",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Entry turnstile”: an L shape, 0.80 by 1.10 metres, marked with the letters “To”."
+		},
+		"arco_seguridad": {
+			"nombre": "Security gates",
+			"descripcion": "Two tall, thin panels either side of the shop door. You walk between them.",
+			"etiquetas": ["security gates", "anti-theft gates"],
+			"aviso": "Security gates: you pass between two panels.",
+			"imagen": "Footprint of “Security gates”: two thin panels joined by a strip on the floor, 1.20 by 0.40 metres, marked with the letters “As”."
+		},
+		"columna": {
+			"nombre": "Column",
+			"descripcion": "Round column in the middle of the room. Hard; no warning until touched.",
+			"etiquetas": ["column", "pillar"],
+			"imagen": "Footprint of “Column”: a circle, 0.45 by 0.45 metres, marked with the letters “Co”."
+		},
+		"extintor": {
+			"nombre": "Wall fire extinguisher",
+			"descripcion": "Fire extinguisher hung on the wall one metre up. The cane passes under it.",
+			"etiquetas": ["fire extinguisher", "extinguisher"],
+			"imagen": "Footprint of “Wall fire extinguisher”: a circle, 0.15 by 0.15 metres, hanging 1.00 metres above the floor, marked with the letters “Ex”."
+		},
+		"felpudo_entrada": {
+			"nombre": "Entrance mat",
+			"descripcion": "Wide mat just inside the door. You feel it underfoot: you have just come in.",
+			"etiquetas": ["entrance mat", "doormat"],
+			"imagen": "Footprint of “Entrance mat”: a rectangle, 1.80 by 1.00 metres, marked with the letters “Fe”."
+		},
+		"mesa_bench": {
+			"nombre": "Bench desking",
+			"descripcion": "Long double desk where people work in two rows, face to face, divided by a low screen down the middle. It only has legs at the ends: the cane slides underneath as far as the chairs on the other side.",
+			"etiquetas": ["bench desk", "bench desking", "shared desk", "open plan desk"],
+			"variantes": {
+				"cuatro_puestos": "Four places",
+				"seis_puestos": "Six places"
+			},
+			"acciones": {
+				"escribir": "Write",
+				"sentarse": "Sit down"
+			},
+			"imagen": "Footprint of “Bench desking”: a long double desktop with a low screen running down the middle, 2.80 by 1.60 metres, marked with the letters “Mb”."
+		},
+		"mesa_elevable": {
+			"nombre": "Sit-stand desk",
+			"descripcion": "Office desk on two motorised columns: one button raises it to chest height for working standing up and another lowers it. Its height changes from one moment to the next and it hums as it moves.",
+			"etiquetas": ["sit-stand desk", "standing desk", "height-adjustable desk"],
+			"variantes": {
+				"sentado": "At sitting height",
+				"de_pie": "Raised for standing"
+			},
+			"acciones": {
+				"ofi_subir_mesa": "Raise the desk",
+				"ofi_bajar_mesa": "Lower the desk"
+			},
+			"imagen": "Footprint of “Sit-stand desk”: a rectangle, 1.40 by 0.80 metres, marked with the letters “Me”."
+		},
+		"cubiculo": {
+			"nombre": "Office cubicle",
+			"descripcion": "Workstation enclosed by three fabric panels at shoulder height, open at the front. Inside, an L-shaped desk and a chair; outside, a corridor between identical cubicles that you follow by hand.",
+			"etiquetas": ["cubicle", "workstation pod", "office booth"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Office cubicle”: a U open at the front, 1.60 by 1.60 metres, marked with the letters “Cu”."
+		},
+		"mampara_vidrio": {
+			"nombre": "Glass office partition",
+			"descripcion": "Floor-to-ceiling glass wall closing off an office or meeting room, with aluminium frames and a glass door. You can walk into it without noticing; the cane gives a sharp, high knock.",
+			"etiquetas": ["glass partition", "glass wall", "glazed office front"],
+			"variantes": {
+				"tramo": "1 m section",
+				"con_puerta": "3 m with a door",
+				"frente": "6 m front"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Glass office partition”: a rectangle, 3.00 by 0.10 metres, marked with the letters “Mv”."
+		},
+		"mesa_abatible_formacion": {
+			"nombre": "Flip-top training tables",
+			"descripcion": "Narrow tables on castors whose tops flip upright so they nest into each other. Open, they form rows in the room; folded, a tall line against the wall.",
+			"etiquetas": ["flip-top table", "training table", "nesting table"],
+			"variantes": {
+				"abierta": "Open",
+				"plegada": "Folded upright"
+			},
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Flip-top training tables”: a rectangle, 1.40 by 0.60 metres, marked with the letters “Ma”."
+		},
+		"rack_servidores": {
+			"nombre": "Server rack",
+			"descripcion": "Tall, deep metal cabinet with a mesh door, full of equipment with small lights. Its fans roar non-stop and hot air comes out of the back: you hear it from the corridor.",
+			"etiquetas": ["server rack", "network cabinet", "data cabinet"],
+			"variantes": {
+				"mural": "Wall-mounted",
+				"medio": "Half height",
+				"completo": "Full height"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Server rack”: a rectangle, 0.60 by 1.00 metres, marked with the letters “Rs”."
+		},
+		"split_aire": {
+			"nombre": "Wall-mounted air conditioner",
+			"descripcion": "Long unit mounted high on the wall, above head height. You cannot touch it, but when on it blows cold air downwards and hums: it marks that wall.",
+			"etiquetas": ["split air conditioner", "AC unit", "heat pump"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Wall-mounted air conditioner”: a rectangle, 0.90 by 0.25 metres, hanging 2.20 metres above the floor, marked with the letters “Sa”."
+		},
+		"cocina_office": {
+			"nombre": "Office kitchenette",
+			"descripcion": "Compact kitchen unit: sink, a small fridge underneath and a wall cupboard above with the microwave. There is always someone with a coffee around it; the floor by the sink may be wet.",
+			"etiquetas": ["kitchenette", "office kitchen", "tea point"],
+			"variantes": {
+				"compacto": "Compact, 1.20 m",
+				"normal": "1.80 m",
+				"grande": "2.40 m"
+			},
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Office kitchenette”: a rectangle, 1.80 by 0.62 metres, marked with the letters “Co”."
+		},
+		"destructora_papel": {
+			"nombre": "Paper shredder",
+			"descripcion": "Tall bin with a head on top and a slot where papers go in. Feed one in and it starts with a grinding roar of blades and stops by itself.",
+			"etiquetas": ["shredder", "paper shredder", "document shredder"],
+			"acciones": {
+				"ofi_destruir": "Shred papers"
+			},
+			"imagen": "Footprint of “Paper shredder”: a rectangle, 0.40 by 0.30 metres, marked with the letters “Dp”."
+		},
+		"verificador_precios": {
+			"nombre": "Price checker",
+			"descripcion": "Small screen with a barcode reader fixed to a column or the end of an aisle, at chest height. Pass a product under it and it beeps and says or shows the price.",
+			"etiquetas": ["price checker", "price scanner", "barcode scanner"],
+			"acciones": {
+				"ofi_consultar_precio": "Scan the barcode"
+			},
+			"imagen": "Footprint of “Price checker”: a rectangle, 0.30 by 0.15 metres, hanging 1.20 metres above the floor, marked with the letters “Vp”."
+		},
+		"mural_refrigerado": {
+			"nombre": "Open multideck chiller",
+			"descripcion": "Refrigerated shelving with no doors against the wall, holding dairy or cut fruit. A curtain of cold air falls down the front; you feel it on your face and it hums all the time.",
+			"etiquetas": ["multideck chiller", "open chiller", "dairy chiller"],
+			"variantes": {
+				"un_modulo": "One section",
+				"dos_modulos": "Two sections",
+				"tres_modulos": "Three sections"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Open multideck chiller”: a rectangle, 2.50 by 0.95 metres, marked with the letters “Mr”."
+		},
+		"armario_refrigerado": {
+			"nombre": "Glass-door upright fridge",
+			"descripcion": "Tall drinks or frozen-food fridge with glass doors opening into the aisle. The glass is cold and misted; it hums and the door closes by itself.",
+			"etiquetas": ["glass-door fridge", "drinks fridge", "upright freezer", "display fridge"],
+			"variantes": {
+				"una_puerta": "One door",
+				"dos_puertas": "Two doors",
+				"tres_puertas": "Three doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Glass-door upright fridge”: a rectangle, 1.30 by 0.70 metres, marked with the letters “Ar”."
+		},
+		"mesa_degustacion": {
+			"nombre": "Promotional tasting stand",
+			"descripcion": "Small skirted table with a person behind it offering samples, set up in the middle of the aisle for a few days. It smells of food and the promoter talks to passers-by.",
+			"etiquetas": ["tasting stand", "sampling table", "promo stand"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Promotional tasting stand”: a rectangle, 0.80 by 0.60 metres, marked with the letters “Md”."
+		},
+		"escalera_reposicion": {
+			"nombre": "Rolling stock ladder",
+			"descripcion": "Metal ladder with several steps, a platform at the top and handrails, on castors. It rolls if pushed empty; when someone climbs on, it brakes and stays put.",
+			"etiquetas": ["rolling ladder", "warehouse ladder", "platform ladder"],
+			"variantes": {
+				"tres_peldanos": "Three steps",
+				"cinco_peldanos": "Five steps"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Rolling stock ladder”: a trapezoid, narrower at the back, 0.70 by 1.20 metres, marked with the letters “Er”."
+		},
+		"prensa_carton": {
+			"nombre": "Cardboard baler",
+			"descripcion": "Cupboard-sized machine in the back room, with a barred door where the cardboard goes in. Running, the plate comes down with a hydraulic whine and a dull thud.",
+			"etiquetas": ["cardboard baler", "compactor", "baling press"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Cardboard baler”: a rectangle, 1.10 by 0.80 metres, marked with the letters “Pc”."
+		},
+		"exprimidora_naranjas": {
+			"nombre": "Self-service orange juicer",
+			"descripcion": "Machine on a cabinet, taller than a person, with a basket of oranges on top and a plastic dome. Press it and the oranges roll down, the blades split them and the juice drips into the bottle.",
+			"etiquetas": ["orange juicer", "juice machine", "fresh orange juice"],
+			"acciones": {
+				"ofi_exprimir": "Squeeze juice"
+			},
+			"imagen": "Footprint of “Self-service orange juicer”: a rectangle, 0.70 by 0.60 metres, marked with the letters “En”."
+		},
+		"maquina_reciclaje_envases": {
+			"nombre": "Reverse vending machine",
+			"descripcion": "Large machine set into the wall by the entrance, with a round hole at chest height where cans and bottles go in. A belt pulls them in, crushes them with a crunch and beeps as it gives the voucher.",
+			"etiquetas": ["reverse vending machine", "bottle return machine", "can recycling machine"],
+			"variantes": {
+				"una_boca": "Single feed",
+				"doble": "Double, cans and bottles"
+			},
+			"acciones": {
+				"ofi_devolver_envase": "Return a container"
+			},
+			"imagen": "Footprint of “Reverse vending machine”: a rectangle, 1.00 by 0.90 metres, marked with the letters “Mr”."
+		},
+		"reja_tijera": {
+			"nombre": "Folding security grille",
+			"descripcion": "Grille of metal bars that folds like an accordion to one side of the shop entrance. Folded it is a narrow bundle by the frame; drawn across, it blocks the way and clangs like iron.",
+			"etiquetas": ["folding grille", "scissor gate", "security gate"],
+			"variantes": {
+				"recogida": "Folded to one side",
+				"cerrada": "Drawn across"
+			},
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Folding security grille”: a thin zigzag of crossed bars, 2.00 by 0.12 metres, marked with the letters “Rt”."
+		}
+	}
+}

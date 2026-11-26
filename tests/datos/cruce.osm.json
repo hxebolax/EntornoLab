@@ -1,0 +1,407 @@
+{
+	"version": 0.6,
+	"generator": "EntornoLab: datos FICTICIOS de prueba; no proceden de OpenStreetMap",
+	"osm3s": {
+		"timestamp_osm_base": "2026-11-01T00:00:00Z"
+	},
+	"recuadro": [
+		39.9992805,
+		-3.7009392,
+		40.0007195,
+		-3.6990608
+	],
+	"elements": [
+		{
+			"type": "node",
+			"id": 1,
+			"lat": 40.0,
+			"lon": -3.7008218
+		},
+		{
+			"type": "node",
+			"id": 2,
+			"lat": 40.0,
+			"lon": -3.7002348,
+			"tags": {
+				"highway": "crossing",
+				"crossing": "traffic_signals",
+				"traffic_signals:sound": "yes",
+				"traffic_signals:vibration": "yes",
+				"button_operated": "yes",
+				"crossing:island": "no",
+				"tactile_paving": "yes",
+				"kerb": "lowered"
+			}
+		},
+		{
+			"type": "node",
+			"id": 3,
+			"lat": 40.0,
+			"lon": -3.7
+		},
+		{
+			"type": "node",
+			"id": 4,
+			"lat": 40.0,
+			"lon": -3.6996478
+		},
+		{
+			"type": "node",
+			"id": 5,
+			"lat": 40.0,
+			"lon": -3.6991782
+		},
+		{
+			"type": "node",
+			"id": 6,
+			"lat": 39.9994604,
+			"lon": -3.7
+		},
+		{
+			"type": "node",
+			"id": 7,
+			"lat": 39.9998651,
+			"lon": -3.7,
+			"tags": {
+				"highway": "crossing"
+			}
+		},
+		{
+			"type": "node",
+			"id": 8,
+			"lat": 40.0005396,
+			"lon": -3.7
+		},
+		{
+			"type": "node",
+			"id": 20,
+			"lat": 40.0001079,
+			"lon": -3.6998826
+		},
+		{
+			"type": "node",
+			"id": 21,
+			"lat": 40.0001079,
+			"lon": -3.6997652,
+			"tags": {
+				"entrance": "main",
+				"addr:housenumber": "12",
+				"addr:street": "Calle Mayor"
+			}
+		},
+		{
+			"type": "node",
+			"id": 22,
+			"lat": 40.0001079,
+			"lon": -3.6995304
+		},
+		{
+			"type": "node",
+			"id": 23,
+			"lat": 40.0002698,
+			"lon": -3.6995304
+		},
+		{
+			"type": "node",
+			"id": 24,
+			"lat": 40.0002698,
+			"lon": -3.6998826
+		},
+		{
+			"type": "node",
+			"id": 25,
+			"lat": 40.0001079,
+			"lon": -3.7005283
+		},
+		{
+			"type": "node",
+			"id": 26,
+			"lat": 40.0001079,
+			"lon": -3.7001761
+		},
+		{
+			"type": "node",
+			"id": 27,
+			"lat": 40.0002698,
+			"lon": -3.7001761
+		},
+		{
+			"type": "node",
+			"id": 28,
+			"lat": 40.0002698,
+			"lon": -3.7005283
+		},
+		{
+			"type": "node",
+			"id": 30,
+			"lat": 40.0000405,
+			"lon": -3.6994717,
+			"tags": {
+				"highway": "bus_stop",
+				"name": "Calle Mayor",
+				"shelter": "yes",
+				"bench": "no",
+				"route_ref": "3;7",
+				"ref": "1021"
+			}
+		},
+		{
+			"type": "node",
+			"id": 40,
+			"lat": 39.9998921,
+			"lon": -3.7003522
+		},
+		{
+			"type": "node",
+			"id": 41,
+			"lat": 39.9997752,
+			"lon": -3.7003522
+		},
+		{
+			"type": "node",
+			"id": 42,
+			"lat": 39.9998921,
+			"lon": -3.7004696
+		},
+		{
+			"type": "node",
+			"id": 43,
+			"lat": 39.9998201,
+			"lon": -3.7004696
+		},
+		{
+			"type": "node",
+			"id": 50,
+			"lat": 40.0000378,
+			"lon": -3.6999061,
+			"tags": {
+				"barrier": "bollard"
+			}
+		},
+		{
+			"type": "node",
+			"id": 51,
+			"lat": 40.0000396,
+			"lon": -3.7001174,
+			"tags": {
+				"amenity": "bench"
+			}
+		},
+		{
+			"type": "node",
+			"id": 52,
+			"lat": 40.0000989,
+			"lon": -3.6997065,
+			"tags": {
+				"shop": "bakery",
+				"name": "Panadería La Espiga"
+			}
+		},
+		{
+			"type": "node",
+			"id": 53,
+			"lat": 40.0001799,
+			"lon": -3.6997065,
+			"tags": {
+				"natural": "tree"
+			}
+		},
+		{
+			"type": "node",
+			"id": 54,
+			"lat": 40.0000396,
+			"lon": -3.700587,
+			"tags": {
+				"amenity": "pharmacy"
+			}
+		},
+		{
+			"type": "node",
+			"id": 60,
+			"lat": 39.9997302,
+			"lon": -3.7007044
+		},
+		{
+			"type": "node",
+			"id": 61,
+			"lat": 39.9997302,
+			"lon": -3.7006105,
+			"tags": {
+				"barrier": "gate"
+			}
+		},
+		{
+			"type": "node",
+			"id": 62,
+			"lat": 39.9997302,
+			"lon": -3.7005283
+		},
+		{
+			"type": "node",
+			"id": 70,
+			"lat": 39.9995503,
+			"lon": -3.6998239
+		},
+		{
+			"type": "node",
+			"id": 71,
+			"lat": 39.9995503,
+			"lon": -3.6992956
+		},
+		{
+			"type": "node",
+			"id": 72,
+			"lat": 39.9998651,
+			"lon": -3.6992956
+		},
+		{
+			"type": "node",
+			"id": 73,
+			"lat": 39.9998651,
+			"lon": -3.6998239
+		},
+		{
+			"type": "node",
+			"id": 74,
+			"lat": 39.9995953,
+			"lon": -3.6997652
+		},
+		{
+			"type": "node",
+			"id": 75,
+			"lat": 39.9998201,
+			"lon": -3.6993543
+		},
+		{
+			"type": "way",
+			"id": 100,
+			"nodes": [
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"tags": {
+				"highway": "tertiary",
+				"name": "Calle Mayor",
+				"lanes": "2",
+				"sidewalk": "both",
+				"maxspeed": "30",
+				"surface": "asphalt"
+			}
+		},
+		{
+			"type": "way",
+			"id": 101,
+			"nodes": [
+				6,
+				7,
+				3,
+				8
+			],
+			"tags": {
+				"highway": "residential",
+				"name": "Calle del Río",
+				"oneway": "yes"
+			}
+		},
+		{
+			"type": "way",
+			"id": 200,
+			"nodes": [
+				20,
+				21,
+				22,
+				23,
+				24,
+				20
+			],
+			"tags": {
+				"building": "apartments",
+				"building:levels": "4"
+			}
+		},
+		{
+			"type": "way",
+			"id": 201,
+			"nodes": [
+				25,
+				26,
+				27,
+				28,
+				25
+			],
+			"tags": {
+				"building": "yes",
+				"name": "Mercado",
+				"amenity": "marketplace"
+			}
+		},
+		{
+			"type": "way",
+			"id": 300,
+			"nodes": [
+				40,
+				41
+			],
+			"tags": {
+				"highway": "steps",
+				"step_count": "12",
+				"handrail:left": "yes",
+				"handrail:right": "yes",
+				"incline": "up"
+			}
+		},
+		{
+			"type": "way",
+			"id": 301,
+			"nodes": [
+				42,
+				43
+			],
+			"tags": {
+				"highway": "steps"
+			}
+		},
+		{
+			"type": "way",
+			"id": 400,
+			"nodes": [
+				60,
+				61,
+				62
+			],
+			"tags": {
+				"barrier": "fence"
+			}
+		},
+		{
+			"type": "way",
+			"id": 500,
+			"nodes": [
+				70,
+				71,
+				72,
+				73,
+				70
+			],
+			"tags": {
+				"leisure": "park",
+				"name": "Parque del Río"
+			}
+		},
+		{
+			"type": "way",
+			"id": 501,
+			"nodes": [
+				74,
+				75
+			],
+			"tags": {
+				"highway": "footway",
+				"surface": "gravel"
+			}
+		}
+	]
+}

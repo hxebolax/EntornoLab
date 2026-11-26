@@ -1,0 +1,25 @@
+pygame-ce 2.5.8 (pygame, edición de la comunidad). https://pyga.me
+https://github.com/pygame-community/pygame-ce
+
+Licencia: GNU LGPL, versión 2.1 o posterior (identificador LGPL-2.1-or-later).
+El texto completo de la LGPL 2.1 está en LGPL-2.1.txt, en esta misma carpeta.
+
+EntornoLab usa pygame-ce sin modificarlo, como paquete suelto (lib/pygame en la
+versión compilada). Puede sustituirse por otra versión compatible.
+
+Bibliotecas que pygame-ce trae como DLL sueltas en su carpeta, cada una con su
+licencia:
+
+  SDL2, SDL2_mixer, SDL2_ttf, SDL2_image   zlib                https://www.libsdl.org
+  FreeType                                 FreeType License    https://freetype.org
+  libpng                                   libpng License      http://www.libpng.org
+  libjpeg-turbo                            IJG y BSD modificada https://libjpeg-turbo.org
+  libtiff                                  libtiff (tipo BSD)  http://www.libtiff.org
+  libwebp                                  BSD de 3 cláusulas  https://chromium.googlesource.com/webm/libwebp
+  libogg, libopus, opusfile                BSD de 3 cláusulas  https://xiph.org
+  WavPack                                  BSD de 3 cláusulas  https://www.wavpack.com
+  libxmp                                   MIT (versiones antiguas, LGPL 2.1) https://github.com/libxmp/libxmp
+  PortMidi                                 MIT                 https://github.com/PortMidi/portmidi
+
+Las condiciones exactas de cada una están en el sitio indicado y en el código
+fuente de pygame-ce.

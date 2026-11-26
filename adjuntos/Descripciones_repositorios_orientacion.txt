@@ -1,0 +1,83 @@
+REPOSITORIOS DE ORIENTACIÓN ESPACIAL Y AUDIOJUEGOS Fecha: 26 de
+noviembre de 2026
+
+Selección de 12 repositorios públicos localizados en GitHub. No se han
+ejecutado ni clonado para comprobarlos. Las fechas exactas de último
+commit no se han podido confirmar; la fecha de indexación no equivale a
+mantenimiento activo. VisionPulse sí documenta una publicación de 2026.
+No se ha localizado el código original de AbES, AudioDoom o BlindAid en
+esta búsqueda.
+
+1.  teal-lab/VisionPulse https://github.com/teal-lab/VisionPulse
+    Investigación 2026; Unity, exploración libre de entornos virtuales
+    con audio, voz y háptica. Estudio con 12 participantes con
+    discapacidad visual; no demuestra transferencia física. Requiere
+    entorno VR. Prioridad máxima. DOI:
+    https://doi.org/10.1145/3797867.3828994
+
+2.  santient/audio-maze https://github.com/santient/audio-maze
+    Laberintos con editor de niveles, puertas, paredes y exploración
+    mediante canicas acústicas. Muy interesante para representar
+    viviendas y construir mapas mentales. Licencia no confirmada.
+
+3.  ohylli/audio-memory-maze https://github.com/ohylli/audio-memory-maze
+    Prototipo web Phaser 3, cuadrícula 5x5, flechas, colisiones y avisos
+    ARIA. Base sencilla para ejercicios infantiles. No acredita
+    transferencia real.
+
+4.  abdulhakkeempa/maze-game https://github.com/abdulhakkeempa/maze-game
+    Next.js y Tone.js; orientación por campana, atenuación, filtros,
+    reverberación y teclado. Útil para estudiar balizas y obstáculos.
+
+5.  m-toman/Audio-Games https://github.com/m-toman/Audio-Games
+    Investigación doctoral sobre percepción de voces TTS; incluye
+    laberinto y memoria, Windows, alemán, licencia MIT. No es un estudio
+    de transferencia espacial.
+
+6.  ohokke/AudioGame https://github.com/ohokke/AudioGame Prototipos
+    Unity con carpeta NavMesh Sound Propagation. Interesante para
+    propagación por pasillos y obstáculos. Revisar condiciones de
+    AstoundSound y licencia.
+
+7.  Orinks/EchoGraft https://github.com/Orinks/EchoGraft Juego
+    web/Electron con audio procedural, exploración por cámaras, rotación
+    y escaneo acústico, teclado y lector de pantalla.
+
+8.  Bernard-Olivier/SoundArcade
+    https://github.com/Bernard-Olivier/SoundArcade C# y Raylib,
+    arquitectura modular, audio espacial, TTS y teclado; útil para
+    desarrollar ejercicios independientes.
+
+9.  eleven-hits/subway_surfers_blind
+    https://github.com/eleven-hits/subway_surfers_blind Python, Pygame,
+    pyopenalsoft, accessible_output2, HRTF y configuración de mandos.
+    Referencia técnica Windows; no simulación de vivienda.
+
+10. soundscape-community/soundscape
+    https://github.com/soundscape-community/soundscape Proyecto
+    comunitario iOS, audio 3D y OpenStreetMap; interesante para
+    representar calles y puntos de interés. Navegación real, no
+    videojuego. MIT.
+
+11. MIT-Assistive-Technology/Project-Daredevil
+    https://github.com/MIT-Assistive-Technology/Project-Daredevil
+    Prototipo Python y aplicación iOS de percepción de profundidad
+    traducida a sonido espacial. Referencia para sonificación de
+    obstáculos; no simulador.
+
+12. gamesforblindgamers/blind-accessible-game-engines
+    https://github.com/gamesforblindgamers/blind-accessible-game-engines
+    Catálogo de motores y plantillas accesibles, incluyendo syngen y
+    alternativas web. Es documentación, no un motor.
+
+RECOMENDACIÓN Empezar por VisionPulse, Audio Maze y Audio Memory Maze
+para el diseño espacial; Subway Surfers Blind para Python y mandos;
+Soundscape para cartografía exterior. Combinar escenarios de geometría
+real con ejercicios de rutas nuevas, orientación y evaluación
+supervisada en el entorno físico. No presentar estos repositorios como
+tratamientos clínicamente validados. Revisar licencias antes de
+reutilizar código o recursos.
+
+USO DEL BAT Requiere Git en PATH. Crea RepositoriosOrientacion junto al
+BAT, clona los 12 proyectos, omite carpetas existentes y cuenta los
+errores. No instala dependencias ni ejecuta código descargado.

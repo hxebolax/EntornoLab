@@ -1,0 +1,919 @@
+{
+	"nombre": "Play",
+	"descripcion": "Objects for games: hiding places for prizes, things that sound when touched, and goals. Some fantastical, for children; some sober, for adults.",
+	"categorias": {
+		"tesoros": "Hiding places for prizes",
+		"sonoros": "Things that make sounds",
+		"fantasia": "Fantasy places",
+		"metas": "Goals and markers",
+		"adultos": "Games for adults",
+		"acertijos": "Keys, doors and puzzles",
+		"personajes": "Characters and animals",
+		"aventura": "Adventure obstacles"
+	},
+	"subcategorias": {
+		"cofres_cajas": "Chests, boxes and jars",
+		"bolsas_huchas": "Piggy banks, sacks and piñatas",
+		"joyas_reliquias": "Jewels, relics and nests",
+		"mensajes_mapas": "Messages and maps",
+		"campanas_timbres": "Bells, chimes and horns",
+		"instrumentos_juego": "Instruments to play",
+		"balizas_pistas_sonoras": "Beacons and sound clues",
+		"naturaleza_magica": "Magical nature",
+		"refugios_caminos": "Shelters and paths",
+		"castillo_magia": "Castle and sorcery",
+		"piratas": "Pirate ship",
+		"espacio": "Spaceship",
+		"metas_podios": "Finish lines and podiums",
+		"blancos_juegos": "Targets and floor games",
+		"marcas_pistas": "Markers and clues",
+		"guardar_cosas": "Lockers, safes and parcels",
+		"objetos_casa": "Things to pick up",
+		"llaves_puertas": "Keys and doors",
+		"mecanismos": "Mechanisms and puzzles",
+		"criaturas": "Animals and creatures",
+		"figuras": "Figures and beings",
+		"trampas_suelo": "Floor traps",
+		"colgantes": "Hanging things",
+		"muros_cuevas": "Caves and walls"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"encendido": "On",
+		"apagado": "Off",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"hinchado": "Inflated",
+		"explotado": "Popped",
+		"jue_entera": "Whole",
+		"jue_rota": "Broken: the prizes have fallen out",
+		"parado": "Stopped",
+		"girando": "Turning",
+		"jue_clavada": "Stuck in the stone",
+		"jue_sacada": "Drawn from the stone",
+		"jue_arriba": "Lever up",
+		"jue_abajo": "Lever down",
+		"vacio": "Empty",
+		"jue_cayendo": "Sand running",
+		"jue_dormido": "Asleep",
+		"jue_despierto": "Awake"
+	},
+	"objetos": {
+		"cofre": {
+			"nombre": "Treasure chest",
+			"descripcion": "Wooden chest with iron fittings. The lid creaks open and there may be treasure inside.",
+			"etiquetas": ["treasure chest", "chest"],
+			"variantes": {
+				"pequeno": "Small",
+				"mediano": "Medium",
+				"grande": "Large"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Treasure chest”: a rectangle with the front corners cut and a notch in the middle, where the clasp is, 0.80 by 0.50 metres, marked with the letters “Co”."
+		},
+		"caja_sorpresa": {
+			"nombre": "Jack-in-the-box",
+			"descripcion": "Square box with a crank. Open it and a spring jumps out with a boing.",
+			"etiquetas": ["jack-in-the-box", "surprise box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Jack-in-the-box”: a rectangle, 0.40 by 0.40 metres, marked with the letters “Cs”."
+		},
+		"hucha": {
+			"nombre": "Piggy bank",
+			"descripcion": "Earthenware piggy bank the size of a football. Shake it and the coins jingle.",
+			"etiquetas": ["piggy bank", "money box"],
+			"acciones": {
+				"agitar": "Shake",
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Piggy bank”: an oval, 0.30 by 0.40 metres, marked with the letters “Hu”."
+		},
+		"mochila": {
+			"nombre": "Backpack",
+			"descripcion": "Backpack standing on the floor. Soft; the zip goes zzzip when opened.",
+			"etiquetas": ["backpack", "rucksack", "bag"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Backpack”: a rectangle with rounded corners, 0.35 by 0.25 metres, marked with the letters “Mo”."
+		},
+		"caja_juguetes": {
+			"nombre": "Toy box",
+			"descripcion": "Big plastic box full of toys. Rummage in it and everything rattles.",
+			"etiquetas": ["toy box", "toy chest"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"agitar": "Shake"
+			},
+			"imagen": "Footprint of “Toy box”: a rectangle, 0.70 by 0.45 metres, marked with the letters “Cj”."
+		},
+		"buzon_mensajes": {
+			"nombre": "Message box",
+			"descripcion": "Small letterbox on a post, at chest height. There may be a message or a clue inside.",
+			"etiquetas": ["message box", "letterbox", "clue box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Message box”: a rectangle, 0.35 by 0.30 metres, marked with the letters “Bm”."
+		},
+		"nido": {
+			"nombre": "Giant nest",
+			"descripcion": "Nest of branches the size of a lorry tyre, on the ground. There may be something among the twigs.",
+			"etiquetas": ["nest", "giant nest"],
+			"imagen": "Footprint of “Giant nest”: a circle, 1.00 by 1.00 metres, marked with the letters “Ni”."
+		},
+		"olla_arcoiris": {
+			"nombre": "Pot at the end of the rainbow",
+			"descripcion": "Round, pot-bellied iron cauldron with a lid. Heavy; it rings like a low bell when struck.",
+			"etiquetas": ["pot of gold", "cauldron"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Pot at the end of the rainbow”: a circle, 0.50 by 0.50 metres, marked with the letters “Oa”."
+		},
+		"campana": {
+			"nombre": "Bell",
+			"descripcion": "Bronze bell hanging from an arch, at hand height. Touch it and it rings for a long time.",
+			"etiquetas": ["bell", "gong"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Bell”: a circle, 0.50 by 0.50 metres, hanging 1.00 metres above the floor, marked with the letters “Ca”."
+		},
+		"xilofono": {
+			"nombre": "Giant xylophone",
+			"descripcion": "Xylophone with wooden bars as big as a table, wider at one end than the other. Touch it and a scale plays.",
+			"etiquetas": ["xylophone", "marimba", "chime bars"],
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Giant xylophone”: a trapezoid, narrower at the back, 1.60 by 0.80 metres, marked with the letters “Xi”."
+		},
+		"tambor": {
+			"nombre": "Drum",
+			"descripcion": "Big standing drum, round, waist high. Strike it: boom, boom.",
+			"etiquetas": ["drum", "bass drum"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Drum”: a circle, 0.60 by 0.60 metres, marked with the letters “Ta”."
+		},
+		"baliza_musical": {
+			"nombre": "Musical beacon",
+			"descripcion": "Small post playing a music-box tune non-stop. Heard from afar: use it to mark a place to reach.",
+			"etiquetas": ["musical beacon", "music box", "beacon"],
+			"acciones": {
+				"apagar": "Switch off",
+				"encender": "Switch on"
+			},
+			"imagen": "Footprint of “Musical beacon”: a hexagon, 0.25 by 0.25 metres, marked with the letters “Bm”."
+		},
+		"carillon": {
+			"nombre": "Wind chimes",
+			"descripcion": "Metal tubes hanging at head height. Brush them and they chime. The cane does not find them.",
+			"etiquetas": ["wind chimes", "chimes"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Wind chimes”: a circle, 0.30 by 0.30 metres, hanging 1.50 metres above the floor, marked with the letters “Ca”."
+		},
+		"timbre": {
+			"nombre": "Counter bell",
+			"descripcion": "Round metal bell on a pedestal: slap it and it goes ring.",
+			"etiquetas": ["counter bell", "desk bell"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Counter bell”: a circle, 0.30 by 0.30 metres, marked with the letters “Ti”."
+		},
+		"arbol_magico": {
+			"nombre": "Magic tree",
+			"descripcion": "A tree with a thick, gnarled trunk whose leaves sound like glass bells. Things can be kept in a hollow in the trunk.",
+			"etiquetas": ["magic tree", "enchanted tree"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Magic tree”: a 7-pointed star, 1.00 by 1.00 metres, marked with the letters “Am”."
+		},
+		"tienda_campana": {
+			"nombre": "Tent",
+			"descripcion": "Six-sided tent. The fabric gives when touched; the entrance has a zip.",
+			"etiquetas": ["tent", "tepee"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Tent”: a hexagon, 2.20 by 1.90 metres, marked with the letters “Tc”."
+		},
+		"casita": {
+			"nombre": "Playhouse",
+			"descripcion": "Wooden playhouse with a pitched roof and a small door. Closed, it is an obstacle; open, you duck to go in.",
+			"etiquetas": ["playhouse", "wendy house", "cabin"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Playhouse”: a house-shaped pentagon, 1.60 by 1.60 metres, marked with the letters “Ca”."
+		},
+		"alfombra_voladora": {
+			"nombre": "Flying carpet",
+			"descripcion": "A rug with wavy edges lying on the floor. It does not block the way: step on it and your footsteps go quiet.",
+			"etiquetas": ["flying carpet", "magic carpet"],
+			"aviso": "You are on the flying carpet.",
+			"imagen": "Footprint of “Flying carpet”: a rectangle with wavy edges, 1.80 by 1.20 metres, marked with the letters “Av”."
+		},
+		"fuente_deseos": {
+			"nombre": "Wishing well",
+			"descripcion": "Round stone well with a trickle of water. Drop a coin in and you hear the plop and a sparkle.",
+			"etiquetas": ["wishing well", "wishing fountain"],
+			"acciones": {
+				"pedir_deseo": "Make a wish"
+			},
+			"imagen": "Footprint of “Wishing well”: an octagon, 1.40 by 1.40 metres, marked with the letters “Fd”."
+		},
+		"estatua": {
+			"nombre": "Statue",
+			"descripcion": "Stone statue on a square pedestal. The pedestal comes up to the waist; above it, the figure.",
+			"etiquetas": ["statue", "sculpture", "monument"],
+			"imagen": "Footprint of “Statue”: a rectangle with cut corners, 0.80 by 0.80 metres, marked with the letters “Es”."
+		},
+		"seta_gigante": {
+			"nombre": "Giant mushroom",
+			"descripcion": "Fantasy mushroom: a thick stalk and a wide cap at chest height that you can sit on.",
+			"etiquetas": ["giant mushroom", "toadstool"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Giant mushroom”: a circle, 0.90 by 0.90 metres, marked with the letters “Sg”."
+		},
+		"puente": {
+			"nombre": "Little bridge",
+			"descripcion": "Short, narrow wooden bridge. You walk across it: your steps sound hollow.",
+			"etiquetas": ["little bridge", "footbridge"],
+			"aviso": "You are crossing the bridge.",
+			"imagen": "Footprint of “Little bridge”: a rectangle, 1.20 by 2.50 metres, marked with the letters “Pu”."
+		},
+		"charca": {
+			"nombre": "Frog pond",
+			"descripcion": "A shallow pond. It does not block the way, but step in it and you splash.",
+			"etiquetas": ["pond", "frog pond", "puddle"],
+			"imagen": "Footprint of “Frog pond”: an oval, 2.00 by 1.50 metres, marked with the letters “Ch”."
+		},
+		"bandera_meta": {
+			"nombre": "Finish flag",
+			"descripcion": "A pole with a flag snapping in the wind. It marks the finish: reach it and you are done.",
+			"etiquetas": ["finish flag", "flag", "goal"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Finish flag”: a circle, 0.20 by 0.20 metres, marked with the letters “Bm”."
+		},
+		"arco_meta": {
+			"nombre": "Finish arch",
+			"descripcion": "Inflatable finish arch: two soft columns at the sides and the way through in the middle.",
+			"etiquetas": ["finish arch", "finish line", "inflatable arch"],
+			"aviso": "Finish!",
+			"imagen": "Footprint of “Finish arch”: two columns joined by a thin strip on the ground, 3.50 by 0.80 metres, marked with the letters “Am”."
+		},
+		"podio": {
+			"nombre": "Podium",
+			"descripcion": "A three-box podium: the middle one taller and further forward. You climb on it at the end.",
+			"etiquetas": ["podium", "winners' stand"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Podium”: three boxes side by side: the middle one sticks out further forward, 1.80 by 0.80 metres, marked with the letters “Po”."
+		},
+		"globo": {
+			"nombre": "Balloon",
+			"descripcion": "A balloon on a string, floating at head height. The cane misses it; it squeaks when brushed and pops if squeezed.",
+			"etiquetas": ["balloon"],
+			"acciones": {
+				"explotar": "Pop",
+				"hinchar": "Inflate"
+			},
+			"imagen": "Footprint of “Balloon”: a teardrop, round at the back and pointed at the front, 0.30 by 0.40 metres, hanging 1.40 metres above the floor, marked with the letters “Gl”."
+		},
+		"diana": {
+			"nombre": "Target",
+			"descripcion": "Round target on a tripod, at chest height.",
+			"etiquetas": ["target", "bullseye"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Target”: a triangle pointing to the front, 0.80 by 0.60 metres, marked with the letters “Di”."
+		},
+		"senal_flecha": {
+			"nombre": "Signpost with arrows",
+			"descripcion": "A post with wooden arrows pointing along paths. The arrows are at head height.",
+			"etiquetas": ["signpost", "fingerpost", "arrows"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Signpost with arrows”: a circle, 0.12 by 0.12 metres, marked with the letters “Sf”."
+		},
+		"estrella_suelo": {
+			"nombre": "Star on the ground",
+			"descripcion": "A star painted on the ground. You cannot feel it underfoot: it marks a point you must pass.",
+			"etiquetas": ["star", "marker", "checkpoint"],
+			"aviso": "You stepped on a star.",
+			"imagen": "Footprint of “Star on the ground”: a 5-pointed star, 0.80 by 0.80 metres, marked with the letters “Es”."
+		},
+		"taquilla": {
+			"nombre": "Locker",
+			"descripcion": "Tall, narrow metal locker with a lock. You leave your things inside before going in.",
+			"etiquetas": ["locker"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Locker”: a rectangle, 0.40 by 0.50 metres, marked with the letters “Ta”."
+		},
+		"caja_fuerte": {
+			"nombre": "Safe",
+			"descripcion": "Steel safe, low and very heavy. The dial clicks as it turns and the door gives slowly.",
+			"etiquetas": ["safe", "strongbox"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Safe”: a rectangle, 0.50 by 0.45 metres, marked with the letters “Cf”."
+		},
+		"buzon": {
+			"nombre": "Entrance letterbox",
+			"descripcion": "Bank of letterboxes in the entrance hall, hung at chest height. It sticks out only a little; the cane passes under it.",
+			"etiquetas": ["letterbox", "mailboxes"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Entrance letterbox”: a rectangle, 0.90 by 0.15 metres, hanging 1.00 metres above the floor, marked with the letters “Bu”."
+		},
+		"paquete": {
+			"nombre": "Parcel",
+			"descripcion": "Sealed cardboard box left on the floor by a door. Light; it crackles when picked up.",
+			"etiquetas": ["parcel", "package", "box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Parcel”: a rectangle, 0.40 by 0.30 metres, marked with the letters “Pa”."
+		},
+		"maletin": {
+			"nombre": "Briefcase",
+			"descripcion": "Rigid briefcase on the floor beside a chair. The catches go clack.",
+			"etiquetas": ["briefcase", "attaché case"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Briefcase”: a rectangle, 0.45 by 0.12 metres, marked with the letters “Ma”."
+		},
+		"cuenco_llaves": {
+			"nombre": "Keys in a bowl",
+			"descripcion": "Ceramic bowl with a bunch of keys, on a narrow pedestal at hand height.",
+			"etiquetas": ["keys", "key bowl", "keyring"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Keys in a bowl”: a circle, 0.30 by 0.30 metres, marked with the letters “Cl”."
+		},
+		"paraguero": {
+			"nombre": "Umbrella in the stand",
+			"descripcion": "Metal umbrella stand by the door with an umbrella in it. Remember to take it when you leave.",
+			"etiquetas": ["umbrella", "umbrella stand"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Umbrella in the stand”: a circle, 0.25 by 0.25 metres, marked with the letters “Pa”."
+		},
+		"percha_abrigo": {
+			"nombre": "Coat on the hook",
+			"descripcion": "A coat hanging on a wall hook at shoulder height. Soft; it sticks out a hand's width.",
+			"etiquetas": ["coat", "coat hook", "jacket"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Coat on the hook”: a rectangle, 0.50 by 0.20 metres, hanging 0.60 metres above the floor, marked with the letters “Pa”."
+		},
+		"mesa_objetos": {
+			"nombre": "Table of items",
+			"descripcion": "Small table with several things on it to recognise by touch: a wallet, a phone, a pair of glasses.",
+			"etiquetas": ["table of items", "tray", "belongings"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Table of items”: a rectangle, 0.80 by 0.50 metres, marked with the letters “Mo”."
+		},
+		"saco_monedas": {
+			"nombre": "Sack of coins",
+			"descripcion": "Cloth sack tied with a cord, fat and heavy. Move it and the coins inside jingle; you can feel the round lumps through the cloth.",
+			"etiquetas": ["sack of coins", "bag of gold", "loot bag"],
+			"acciones": {
+				"agitar": "Shake",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Sack of coins”: a rectangle with rounded corners, 0.40 by 0.40 metres, marked with the letters “Sm”."
+		},
+		"pinata": {
+			"nombre": "Hanging piñata",
+			"descripcion": "A cardboard and crêpe-paper figure hanging from a rope at head height. You hit it with a stick until it breaks and the sweets and prizes tumble out.",
+			"etiquetas": ["piñata", "party piñata", "sweets"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Hanging piñata”: a 5-pointed star, 0.50 by 0.50 metres, hanging 1.45 metres above the floor, marked with the letters “Pi”."
+		},
+		"caja_musica": {
+			"nombre": "Music box",
+			"descripcion": "Small wooden box with a crank on one side. Lift the lid and a tinkling tune plays and slowly fades; inside there is a cloth-lined hollow.",
+			"etiquetas": ["music box", "musical jewellery box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"jue_dar_cuerda": "Wind up"
+			},
+			"imagen": "Footprint of “Music box”: a rectangle, 0.25 by 0.18 metres, marked with the letters “Cm”."
+		},
+		"vasija": {
+			"nombre": "Ancient jar",
+			"descripcion": "Pot-bellied clay jar, thigh high, with two handles and a narrow mouth. It sounds hollow when tapped and, if you shake it, something rolls about inside.",
+			"etiquetas": ["jar", "amphora", "urn", "ancient pot"],
+			"acciones": {
+				"agitar": "Shake"
+			},
+			"imagen": "Footprint of “Ancient jar”: a circle, 0.45 by 0.45 metres, marked with the letters “Va”."
+		},
+		"barril_pirata": {
+			"nombre": "Pirate barrel",
+			"descripcion": "Wooden barrel of staves bound with iron hoops, waist high. It sounds hollow when struck; the lid lifts off and anything could be inside.",
+			"etiquetas": ["barrel", "cask", "pirate barrel"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Pirate barrel”: a circle, 0.60 by 0.60 metres, marked with the letters “Bp”."
+		},
+		"huevo_dragon": {
+			"nombre": "Dragon egg",
+			"descripcion": "Huge egg the size of a watermelon, with a hard shell of raised scales. It is warm and, every so often, something stirs inside.",
+			"etiquetas": ["dragon egg", "magic egg", "giant egg"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Dragon egg”: an oval, 0.40 by 0.40 metres, marked with the letters “Hd”."
+		},
+		"corona_cojin": {
+			"nombre": "Crown on a cushion",
+			"descripcion": "Narrow waist-high column with a soft cushion on top and, on it, a cold metal crown with points. Its pendants jingle when you lift it.",
+			"etiquetas": ["crown", "royal crown", "crown cushion"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Crown on a cushion”: a rectangle with cut corners, 0.50 by 0.50 metres, marked with the letters “Cc”."
+		},
+		"gema_pedestal": {
+			"nombre": "Gem on a pedestal",
+			"descripcion": "Stone column at chest height with a large gem on top, cold, with smooth faces and sharp edges. Pick it up and a bright chord rings out.",
+			"etiquetas": ["gem", "jewel", "magic crystal", "pedestal"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Gem on a pedestal”: a hexagon, 0.40 by 0.40 metres, marked with the letters “Gp”."
+		},
+		"mapa_tesoro": {
+			"nombre": "Treasure map on a lectern",
+			"descripcion": "Sloping wooden lectern with a rolled parchment tied with a ribbon. It crackles when unrolled; the path is marked in relief so you can trace it with a finger.",
+			"etiquetas": ["treasure map", "parchment", "secret map"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Treasure map on a lectern”: a rectangle, 0.50 by 0.40 metres, marked with the letters “Mt”."
+		},
+		"botella_mensaje": {
+			"nombre": "Message in a bottle",
+			"descripcion": "Glass bottle lying on the ground, corked, with a rolled paper inside. Move it and the paper rustles against the glass; it rolls away if nobody holds it.",
+			"etiquetas": ["message in a bottle", "bottle", "castaway note"],
+			"acciones": {
+				"coger": "Take",
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Message in a bottle”: an oval, 0.10 by 0.30 metres, marked with the letters “Bm”."
+		},
+		"litofono": {
+			"nombre": "Stone lithophone",
+			"descripcion": "Low wooden table with five stone slabs laid from largest to smallest. Struck with the mallet they ring like dry bells: the big ones low, the small ones high.",
+			"etiquetas": ["lithophone", "ringing stones", "stone chimes"],
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Stone lithophone”: a trapezoid, narrower at the back, 1.40 by 0.50 metres, marked with the letters “Li”."
+		},
+		"cuerno_caza": {
+			"nombre": "Horn hanging on the wall",
+			"descripcion": "Curved brass horn hanging from a nail at shoulder height, with a cold mouthpiece at the narrow end. Blow it and a call rings out across the whole castle.",
+			"etiquetas": ["horn", "hunting horn", "bugle"],
+			"acciones": {
+				"jue_soplar": "Blow"
+			},
+			"imagen": "Footprint of “Horn hanging on the wall”: a rectangle, 0.50 by 0.20 metres, hanging 1.30 metres above the floor, marked with the letters “Cc”."
+		},
+		"caracola": {
+			"nombre": "Talking conch shell",
+			"descripcion": "Large conch, rough outside and smooth and cold inside. Hold it to your ear and you hear the sea and, sometimes, a whispered clue.",
+			"etiquetas": ["conch", "seashell", "conch shell", "clue"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Talking conch shell”: a teardrop, round at the back and pointed at the front, 0.30 by 0.20 metres, marked with the letters “Ca”."
+		},
+		"organillo": {
+			"nombre": "Barrel organ",
+			"descripcion": "Wooden box on a two-wheeled cart, waist high, with a crank on one side: turn it and a fairground waltz plays. Push it and it rolls.",
+			"etiquetas": ["barrel organ", "street organ", "hand organ"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Barrel organ”: a rectangle, 0.70 by 0.50 metres, marked with the letters “Or”."
+		},
+		"trono": {
+			"nombre": "Throne",
+			"descripcion": "Huge carved wooden chair with broad arms and a back taller than a person, on a one-step dais. You have to climb the step to sit down.",
+			"etiquetas": ["throne", "royal seat", "king's chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Throne”: a U open at the front, 1.00 by 0.80 metres, marked with the letters “Tr”."
+		},
+		"caldero_pociones": {
+			"nombre": "Potion cauldron over the fire",
+			"descripcion": "Iron cauldron on three legs over glowing embers, bubbling non-stop. You feel the heat as you approach: do not touch it. There is a long ladle for stirring.",
+			"etiquetas": ["cauldron", "potion pot", "witch's cauldron"],
+			"acciones": {
+				"jue_remover": "Stir the cauldron"
+			},
+			"imagen": "Footprint of “Potion cauldron over the fire”: a circle, 0.80 by 0.80 metres, marked with the letters “Cp”."
+		},
+		"libro_hechizos": {
+			"nombre": "Spell book on a lectern",
+			"descripcion": "Huge, heavy book lying open on a stone lectern, with leather covers and thick pages that crackle. Turn a page and a spell sounds.",
+			"etiquetas": ["spell book", "grimoire", "magic book"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Spell book on a lectern”: a rectangle, 0.60 by 0.45 metres, marked with the letters “Lh”."
+		},
+		"bola_cristal": {
+			"nombre": "Crystal ball on a small table",
+			"descripcion": "Small round table covered with a fringed cloth and, on top, a cold smooth crystal ball on its stand. Cup it in your hands and it hums and whispers.",
+			"etiquetas": ["crystal ball", "fortune teller", "seer"],
+			"acciones": {
+				"jue_mirar_bola": "Gaze into the ball"
+			},
+			"imagen": "Footprint of “Crystal ball on a small table”: a circle, 0.60 by 0.60 metres, marked with the letters “Bc”."
+		},
+		"espada_roca": {
+			"nombre": "Sword in the stone",
+			"descripcion": "Large rock, knee high, with a sword driven halfway in; the hilt is at chest height. It only comes out once the challenge is won.",
+			"etiquetas": ["sword in the stone", "Excalibur", "magic sword"],
+			"acciones": {
+				"jue_sacar_espada": "Pull out the sword",
+				"jue_clavar_espada": "Put the sword back"
+			},
+			"imagen": "Footprint of “Sword in the stone”: a rock with an irregular outline, 1.00 by 1.00 metres, marked with the letters “Er”."
+		},
+		"canon_pirata": {
+			"nombre": "Pirate cannon",
+			"descripcion": "Long iron cannon on a four-wheeled wooden carriage. The cold barrel sticks out at the front; fire it and the fuse fizzes, it booms and the cannon jerks back.",
+			"etiquetas": ["cannon", "pirate cannon", "ship's gun"],
+			"acciones": {
+				"jue_disparar": "Fire the cannon"
+			},
+			"imagen": "Footprint of “Pirate cannon”: a wide carriage at the back and the long barrel reaching forward, 0.80 by 1.80 metres, marked with the letters “Cp”."
+		},
+		"timon_barco": {
+			"nombre": "Ship's wheel",
+			"descripcion": "Wooden ship's wheel with spokes ending in handles, on a stand at chest height. It turns with a wooden clatter and lets you choose a course.",
+			"etiquetas": ["ship's wheel", "helm", "steering wheel"],
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Ship's wheel”: a rectangle, 1.00 by 0.40 metres, marked with the letters “Tb”."
+		},
+		"consola_nave": {
+			"nombre": "Spaceship control console",
+			"descripcion": "Curved control desk at waist height, covered in buttons, levers and switches of different shapes that beep when touched. The pilot sits inside the curve.",
+			"etiquetas": ["control console", "flight deck", "cockpit controls"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Spaceship control console”: a curved band bulging towards the front, 1.60 by 0.80 metres, marked with the letters “Cn”."
+		},
+		"escotilla_nave": {
+			"nombre": "Spaceship hatch",
+			"descripcion": "Round, thick metal door in its frame: it beeps twice, hisses as the pressure releases and slides aside. Closed it blocks the way; open, there is a step in the frame.",
+			"etiquetas": ["hatch", "airlock door", "spaceship door"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Spaceship hatch”: two thick jambs at the sides joined by a thin leaf barring the way, 1.20 by 0.40 metres, marked with the letters “En”."
+		},
+		"meteorito": {
+			"nombre": "Smoking meteorite",
+			"descripcion": "Black, porous rock fallen from the sky, in a small crater. It is still hot: it smokes and crackles. Do not touch it until it cools; the crater rim is easy to trip on.",
+			"etiquetas": ["meteorite", "space rock", "crater"],
+			"imagen": "Footprint of “Smoking meteorite”: a rock with an irregular outline, 0.90 by 0.90 metres, marked with the letters “Me”."
+		},
+		"dado_gigante": {
+			"nombre": "Giant die",
+			"descripcion": "Large cube of firm foam with raised dots on each face, from one to six. Roll it, then feel the dots on the top face to count them.",
+			"etiquetas": ["die", "giant dice", "foam dice"],
+			"variantes": {
+				"mediano": "Medium",
+				"grande": "Large"
+			},
+			"acciones": {
+				"jue_tirar_dado": "Roll the die"
+			},
+			"imagen": "Footprint of “Giant die”: a rectangle, 0.50 by 0.50 metres, marked with the letters “Dg”."
+		},
+		"rayuela": {
+			"nombre": "Raised hopscotch",
+			"descripcion": "Numbered squares on the ground with a raised cord stuck along their edges, for hopping on one foot. Your foot feels the cord as you pass from square to square.",
+			"etiquetas": ["hopscotch", "hopscotch grid"],
+			"acciones": {
+				"jue_saltar_casillas": "Hop through the squares"
+			},
+			"aviso": "Hopscotch: hop square by square.",
+			"imagen": "Footprint of “Raised hopscotch”: a rectangle, 1.20 by 3.50 metres, marked with the letters “Ra”."
+		},
+		"huellas_suelo": {
+			"nombre": "Footprints on the ground",
+			"descripcion": "A trail of raised footprints on the ground (feet, paws or claws) leading somewhere. You feel them through your soles and they crunch underfoot.",
+			"etiquetas": ["footprints", "tracks", "trail", "paw prints"],
+			"aviso": "Footprints: follow them.",
+			"imagen": "Footprint of “Footprints on the ground”: a rectangle, 0.40 by 3.00 metres, marked with the letters “Hs”."
+		},
+		"llave_magica": {
+			"nombre": "Magic key on its hook",
+			"descripcion": "Large, heavy iron key with an ornate ring, hanging from a hook on a low column. It chimes as you take it: it opens some door or chest.",
+			"etiquetas": ["key", "magic key", "old key", "golden key"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Magic key on its hook”: a circle, 0.35 by 0.35 metres, marked with the letters “Lm”."
+		},
+		"puerta_magica": {
+			"nombre": "Magic door",
+			"descripcion": "Wooden door with iron fittings and a big lock, in its stone frame, standing in the middle of the path with no wall around it. It opens only with the key; you hear a sparkle as you pass through.",
+			"etiquetas": ["magic door", "enchanted door", "locked door"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Magic door”: two thick jambs at the sides joined by a thin leaf barring the way, 1.20 by 0.30 metres, marked with the letters “Pm”."
+		},
+		"puerta_secreta": {
+			"nombre": "Bookcase with a secret door",
+			"descripcion": "Bookcase full of books that, when you pull one particular book, swings round with a creak and reveals a passage behind. From the front it is an ordinary bookcase.",
+			"etiquetas": ["secret door", "hidden passage", "revolving bookcase"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Bookcase with a secret door”: a rectangle, 1.20 by 0.40 metres, marked with the letters “Ps”."
+		},
+		"rastrillo": {
+			"nombre": "Castle portcullis",
+			"descripcion": "Iron grille at the castle entrance, with thick bars ending in points. Lowered, it bars the way; as it rises the chain creaks and rattles, and it ends up above your head.",
+			"etiquetas": ["portcullis", "castle gate", "iron grille"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Castle portcullis”: a rectangle, 3.00 by 0.15 metres, marked with the letters “Ra”."
+		},
+		"puente_levadizo": {
+			"nombre": "Drawbridge",
+			"descripcion": "Plank bridge over the moat, hanging from two chains. Raised, it is a wooden wall with the moat in front; lowered, you cross it and your steps sound hollow.",
+			"etiquetas": ["drawbridge", "moat bridge", "castle bridge"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Drawbridge”: a rectangle, 2.50 by 4.00 metres, marked with the letters “Pl”."
+		},
+		"palanca": {
+			"nombre": "Wall lever",
+			"descripcion": "Iron lever on the wall at waist height, with a wooden handle. Pull it down or push it up and it clacks, and something moves somewhere else.",
+			"etiquetas": ["lever", "wall lever", "secret switch"],
+			"acciones": {
+				"jue_tirar_palanca": "Pull the lever down",
+				"jue_subir_palanca": "Push the lever up"
+			},
+			"imagen": "Footprint of “Wall lever”: a rectangle, 0.20 by 0.20 metres, hanging 0.90 metres above the floor, marked with the letters “Pa”."
+		},
+		"placa_presion": {
+			"nombre": "Pressure plate",
+			"descripcion": "Square slab slightly higher than the rest that sinks with a click when stepped on and sets something off: a trap or a door. Your foot feels the joint around it.",
+			"etiquetas": ["pressure plate", "trap tile", "floor switch"],
+			"aviso": "Click: the slab has sunk under your foot.",
+			"imagen": "Footprint of “Pressure plate”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Pp”."
+		},
+		"panel_simon": {
+			"nombre": "Four-button memory panel",
+			"descripcion": "Wall panel with four large buttons, each with a raised shape (circle, square, triangle and star) and its own note. You must repeat the tune it plays.",
+			"etiquetas": ["memory panel", "Simon game", "musical buttons", "puzzle"],
+			"acciones": {
+				"escuchar": "Listen to the information",
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Four-button memory panel”: a rectangle, 0.60 by 0.15 metres, hanging 0.90 metres above the floor, marked with the letters “Ps”."
+		},
+		"reloj_arena": {
+			"nombre": "Giant hourglass",
+			"descripcion": "Hourglass on a stand at waist height: two cold glass bulbs joined at the waist. Turn it over and you hear the sand run for a minute; when it stops, time is up.",
+			"etiquetas": ["hourglass", "sand timer", "timer"],
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Giant hourglass”: a circle, 0.35 by 0.35 metres, marked with the letters “Ra”."
+		},
+		"portal_magico": {
+			"nombre": "Magic stone portal",
+			"descripcion": "Two clusters of standing stones, taller than a person, with a gap between them. When active it hums and the air shimmers; walk through and you travel somewhere else. When inactive, a spell seals the gap.",
+			"etiquetas": ["portal", "magic portal", "stone circle", "teleport"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Magic stone portal”: two clusters of tall stones at the sides and the way through in the middle, 2.00 by 0.50 metres, marked with the letters “Pm”."
+		},
+		"dragon_dormido": {
+			"nombre": "Sleeping dragon",
+			"descripcion": "Enormous dragon curled up asleep, tail wrapped around it. Its scales are hard and warm; it breathes slowly and snores. Touch it and it wakes with a roar.",
+			"etiquetas": ["dragon", "sleeping dragon", "monster", "treasure guardian"],
+			"acciones": {
+				"jue_despertar": "Wake up"
+			},
+			"imagen": "Footprint of “Sleeping dragon”: a curled-up body, almost round, with the tail wrapped around it, 3.00 by 4.50 metres, marked with the letters “Dd”."
+		},
+		"buho_percha": {
+			"nombre": "Owl on its perch",
+			"descripcion": "Owl on a free-standing wooden perch, its head at chest height. It hoots now and then and, if you ask, gives a clue. Very soft feathers; it does not like being touched.",
+			"etiquetas": ["owl", "wise owl", "barn owl"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Owl on its perch”: a circle, 0.40 by 0.40 metres, marked with the letters “Bp”."
+		},
+		"loro_percha": {
+			"nombre": "Parrot on its perch",
+			"descripcion": "Parrot on a T-shaped wooden perch at chest height. It squawks, repeats words and sometimes blurts out where something is hidden.",
+			"etiquetas": ["parrot", "pirate parrot", "macaw"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Parrot on its perch”: a T shape, 0.50 by 0.35 metres, marked with the letters “Lp”."
+		},
+		"gato_negro": {
+			"nombre": "Cat",
+			"descripcion": "A cat sitting or lying on the floor, small and soft. It miaows, purrs if you stroke it and sometimes moves elsewhere: take care not to tread on it.",
+			"etiquetas": ["cat", "black cat", "kitten", "pet"],
+			"acciones": {
+				"jue_acariciar": "Stroke"
+			},
+			"imagen": "Footprint of “Cat”: a teardrop, round at the back and pointed at the front, 0.25 by 0.50 metres, marked with the letters “Gn”."
+		},
+		"panal_colgado": {
+			"nombre": "Wild honeycomb hanging from a branch",
+			"descripcion": "Wild bees' nest hanging from a branch at head height, teardrop-shaped and rough as paper, buzzing non-stop. Better not touch it: there is honey inside, and bees. The cane misses it; the buzzing does not.",
+			"etiquetas": ["wild honeycomb", "bees' nest", "swarm", "honey", "bees"],
+			"imagen": "Footprint of “Wild honeycomb hanging from a branch”: a circle, 0.50 by 0.50 metres, hanging 1.50 metres above the floor, marked with the letters “Pc”."
+		},
+		"armadura": {
+			"nombre": "Suit of armour",
+			"descripcion": "Knight's suit of armour standing on a plinth, holding a lance. Cold, jointed metal: it clanks when struck and the helmet visor lifts up.",
+			"etiquetas": ["suit of armour", "knight", "helmet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Suit of armour”: a rectangle with cut corners, 0.70 by 0.60 metres, marked with the letters “Ar”."
+		},
+		"robot_guia": {
+			"nombre": "Guide robot",
+			"descripcion": "Round robot on wheels, the height of a child. It whirrs as it turns its head, beeps as if talking and leads you to the next challenge. It can move: listen for where it is.",
+			"etiquetas": ["robot", "android", "guide robot"],
+			"acciones": {
+				"saludar": "Wave"
+			},
+			"imagen": "Footprint of “Guide robot”: a circle, 0.60 by 0.60 metres, marked with the letters “Rg”."
+		},
+		"muneco_nieve": {
+			"nombre": "Snowman",
+			"descripcion": "Three-ball snowman, cold and wet, with a carrot nose and two twigs for arms. It crumbles a little when touched and the ground around it is slippery.",
+			"etiquetas": ["snowman", "snow figure", "winter"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Snowman”: a circle, 0.60 by 0.60 metres, marked with the letters “Mn”."
+		},
+		"fantasma": {
+			"nombre": "Bedsheet ghost",
+			"descripcion": "Old sheet hanging from the ceiling like a ghost, floating from knee height to above your head. Brush against it and it sways and a wail sounds. The cane passes underneath.",
+			"etiquetas": ["ghost", "spook", "haunted sheet"],
+			"imagen": "Footprint of “Bedsheet ghost”: a teardrop, round at the back and pointed at the front, 0.60 by 0.60 metres, hanging 0.60 metres above the floor, marked with the letters “Fa”."
+		},
+		"telarana": {
+			"nombre": "Giant cobweb",
+			"descripcion": "Cobweb strung between two trees or two columns, sticky threads from waist height to above your head. The cane does not touch it: you feel it on your face and hands.",
+			"etiquetas": ["cobweb", "spider web", "web"],
+			"imagen": "Footprint of “Giant cobweb”: a rectangle, 1.50 by 0.10 metres, hanging 0.60 metres above the floor, marked with the letters “Te”."
+		},
+		"estalactita": {
+			"nombre": "Stalactite",
+			"descripcion": "Cold, wet spike of rock hanging from the cave roof down to head height. It drips constantly: the plink, plink helps you find it, and the floor beneath is slippery.",
+			"etiquetas": ["stalactite", "dripstone", "cave spike"],
+			"imagen": "Footprint of “Stalactite”: a circle, 0.30 by 0.30 metres, hanging 1.50 metres above the floor, marked with the letters “Es”."
+		},
+		"liana": {
+			"nombre": "Hanging vine",
+			"descripcion": "Thick, rough vine hanging from a tree down to knee height; it swings when pushed. Holding on, you can leap across a river or a moat.",
+			"etiquetas": ["vine", "liana", "jungle rope"],
+			"acciones": {
+				"jue_balancearse": "Swing on it"
+			},
+			"imagen": "Footprint of “Hanging vine”: a circle, 0.15 by 0.15 metres, hanging 0.40 metres above the floor, marked with the letters “Li”."
+		},
+		"escalera_cuerda": {
+			"nombre": "Rope ladder",
+			"descripcion": "Rope ladder with wooden rungs hanging from a branch or a ship's side down to the ground. It sways a lot as you climb and the rungs wobble.",
+			"etiquetas": ["rope ladder", "ship's ladder", "treehouse ladder"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Rope ladder”: a rectangle, 0.50 by 0.10 metres, marked with the letters “Ec”."
+		},
+		"arenas_movedizas": {
+			"nombre": "Quicksand",
+			"descripcion": "Pool of wet, soft sand where your feet sink and are hard to pull out. It makes a dull squelch. To get out: slowly and backwards.",
+			"etiquetas": ["quicksand", "bog", "mire"],
+			"aviso": "Quicksand! Get out slowly, backwards.",
+			"imagen": "Footprint of “Quicksand”: an oval, 2.00 by 2.00 metres, marked with the letters “Am”."
+		},
+		"rio_lava": {
+			"nombre": "River of lava",
+			"descripcion": "River of lava crossing the path: you hear it bubble and crackle and feel the heat on your face several steps away. It cannot be walked on: find a bridge or a vine.",
+			"etiquetas": ["lava", "lava river", "volcano", "magma"],
+			"imagen": "Footprint of “River of lava”: a rectangle with wavy edges, 1.50 by 5.00 metres, marked with the letters “Rl”."
+		},
+		"trampilla_suelo": {
+			"nombre": "Trapdoor in the floor",
+			"descripcion": "Plank trapdoor in the floor with an iron ring to pull. Closed, you walk on it and it sounds hollow; open, it leaves a hole with a ladder leading down.",
+			"etiquetas": ["trapdoor", "hatch", "cellar door"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"aviso": "Trapdoor: when it is open there is a hole in the floor.",
+			"imagen": "Footprint of “Trapdoor in the floor”: a rectangle, 0.80 by 0.80 metres, marked with the letters “Ts”."
+		},
+		"hilo_cascabeles": {
+			"nombre": "Tripwire with bells",
+			"descripcion": "Taut string across the path at ankle height, with little bells hanging from it: touch it and they jingle and give you away. The cane finds it if you sweep low along the ground.",
+			"etiquetas": ["tripwire", "bell trap", "alarm string"],
+			"imagen": "Footprint of “Tripwire with bells”: a rectangle, 2.00 by 0.03 metres, hanging 0.15 metres above the floor, marked with the letters “Hc”."
+		},
+		"entrada_cueva": {
+			"nombre": "Cave mouth",
+			"descripcion": "Arch of rough, cold rock opening in a stone wall. Inside the air is damp and every sound echoes; you can follow the walls by hand to the back, where something may be hidden.",
+			"etiquetas": ["cave", "cave mouth", "grotto", "cavern"],
+			"imagen": "Footprint of “Cave mouth”: a U open at the front, 3.00 by 1.50 metres, marked with the letters “Ec”."
+		},
+		"muralla_almenas": {
+			"nombre": "Battlemented wall section",
+			"descripcion": "Thick stone wall, taller than a person, with battlements on top. Follow it by hand: large stones, deep cold joints. A wall to find your way around the castle.",
+			"etiquetas": ["castle wall", "battlements", "rampart"],
+			"imagen": "Footprint of “Battlemented wall section”: a rectangle, 4.00 by 0.80 metres, marked with the letters “Ma”."
+		}
+	}
+}

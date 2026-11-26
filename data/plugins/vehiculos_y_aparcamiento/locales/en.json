@@ -1,0 +1,788 @@
+{
+	"nombre": "Vehicles and parking",
+	"descripcion": "Stationary vehicles as obstacles (with their doors, tailgates, ramps and overhangs), trailers, skips and site machinery, and what you find in a car park and a filling station: bays, wheel stops, barriers, payment, car wash and air.",
+	"categorias": {
+		"turismos": "Cars, vans and caravans",
+		"pesados": "Lorries and buses",
+		"servicio": "Emergency and cleaning vehicles",
+		"dos_ruedas": "Bicycles, motorbikes and tricycles",
+		"remolques_obra": "Trailers and site containers",
+		"plazas": "Bays, wheel stops and car park ground",
+		"control": "Barriers, payment and control",
+		"gasolinera": "Filling station, car wash and air"
+	},
+	"subcategorias": {
+		"coches_altos": "Cars and off-roaders",
+		"puertas_salientes": "Open doors and car overhangs",
+		"furgonetas": "Vans and box vans",
+		"caravanas": "Caravans and motorhomes",
+		"ligeros": "Light vehicles",
+		"camiones": "Lorries",
+		"autobuses": "Buses and coaches",
+		"salientes_pesados": "Lorry and bus overhangs",
+		"emergencias": "Emergency vehicles",
+		"limpieza": "Cleaning vehicles",
+		"bicicletas": "Bicycles and tricycles",
+		"motos": "Motorbikes and mopeds",
+		"remolques": "Trailers",
+		"contenedores_obra": "Skips and site cabins",
+		"maquinaria_obra": "Site machinery in the street",
+		"marcas_plaza": "Bay markings",
+		"topes_cierres": "Wheel stops, kerbs and closures",
+		"aparcabicis": "Bike, motorbike and scooter parking",
+		"pavimento": "Ramps and floor joints",
+		"cubiertas": "Canopies and shelters",
+		"barreras": "Barriers and gates",
+		"pago_tiques": "Tickets and payment",
+		"vigilancia": "Height limit, mirrors and warnings",
+		"surtidores": "Fuel pumps",
+		"lavado": "Car wash",
+		"aire_aspirado": "Air and vacuum"
+	},
+	"estados": {
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"apagado": "Off",
+		"funcionando": "Running",
+		"cerrado": "Closed",
+		"abierto": "Open"
+	},
+	"objetos": {
+		"todoterreno_alto": {
+			"nombre": "Tall off-roader",
+			"descripcion": "Big, tall off-roader. The bonnet is chest high and the wing mirrors are at shoulder height; there is a lot of clearance underneath and the cane reaches in as far as the wheels.",
+			"etiquetas": ["off-roader", "4x4", "large SUV"],
+			"variantes": {
+				"medio": "Mid-size off-roader",
+				"grande": "Large off-roader"
+			},
+			"imagen": "Footprint of “Tall off-roader”: the outline of a vehicle, nose at the front, 1.98 by 4.90 metres, marked with the letters “Ta”."
+		},
+		"camioneta_caja_abierta": {
+			"nombre": "Pick-up truck",
+			"descripcion": "Truck with a cab at the front and, behind it, a sheet-metal load bed open at the top, its edge at chest height. The tailgate may be down, sticking out a good hand's length.",
+			"etiquetas": ["pick-up", "pickup truck", "ute"],
+			"imagen": "Footprint of “Pick-up truck”: a long box at the back and a slightly narrower cab at the front, 1.95 by 5.40 metres, marked with the letters “Cc”."
+		},
+		"cuadriciclo": {
+			"nombre": "Light quadricycle",
+			"descripcion": "A very small, narrow plastic car: it sounds hollow when touched. It fits crossways in a bay and is sometimes parked on the pavement.",
+			"etiquetas": ["quadricycle", "microcar", "licence-free car"],
+			"imagen": "Footprint of “Light quadricycle”: the outline of a vehicle, nose at the front, 1.50 by 3.00 metres, marked with the letters “Cu”."
+		},
+		"taxi_parado": {
+			"nombre": "Taxi waiting with its engine running",
+			"descripcion": "Taxi waiting with its engine idling: you hear it purring from a few metres away. The rear door is on the side; pull the handle to open it.",
+			"etiquetas": ["taxi", "cab", "minicab"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Taxi waiting with its engine running”: the outline of a vehicle, nose at the front, 1.82 by 4.65 metres, marked with the letters “Tp”."
+		},
+		"coche_electrico_cargando": {
+			"nombre": "Electric car charging",
+			"descripcion": "Electric car plugged in. There is no engine noise: only a faint hum from the charger. A thick cable runs from its side to the post.",
+			"etiquetas": ["electric car", "EV", "car on charge"],
+			"imagen": "Footprint of “Electric car charging”: the outline of a vehicle, nose at the front, 1.85 by 4.50 metres, marked with the letters “Ce”."
+		},
+		"cable_recarga_suelo": {
+			"nombre": "Charging cable on the ground",
+			"descripcion": "Thick rubber cable crossing the path from the charging post to the car. It does not block the way, but feet and cane catch on it.",
+			"etiquetas": ["charging cable", "trailing cable"],
+			"aviso": "Cable on the ground: lift your feet.",
+			"imagen": "Footprint of “Charging cable on the ground”: a rectangle with wavy edges, 2.50 by 0.05 metres, marked with the letters “Cr”."
+		},
+		"porton_trasero_abierto": {
+			"nombre": "Open tailgate",
+			"descripcion": "The raised tailgate of a people carrier or an SUV: a sheet of metal and glass jutting backwards at forehead height. The cane passes underneath without touching it.",
+			"etiquetas": ["tailgate", "open boot", "hatch", "overhead obstacle"],
+			"imagen": "Footprint of “Open tailgate”: a rectangle, 1.30 by 1.00 metres, hanging 1.75 metres above the floor, marked with the letters “Pt”."
+		},
+		"puerta_coche_abierta": {
+			"nombre": "Car door open over the pavement",
+			"descripcion": "A car door wide open across the path. The edge is thin sheet metal; its bottom is a hand's width above the ground.",
+			"etiquetas": ["car door", "open door"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Car door open over the pavement”: a rectangle, 1.00 by 0.10 metres, hanging 0.25 metres above the floor, marked with the letters “Pc”."
+		},
+		"portabicicletas_trasero": {
+			"nombre": "Rear bike carrier with bikes",
+			"descripcion": "Bikes hung across the back of a car: wheels and handlebars stick out on both sides at waist and chest height. There is nothing underneath.",
+			"etiquetas": ["bike carrier", "cycle rack", "tow bar rack"],
+			"imagen": "Footprint of “Rear bike carrier with bikes”: a rectangle, 1.70 by 0.60 metres, hanging 0.60 metres above the floor, marked with the letters “Pt”."
+		},
+		"carga_saliente_baca": {
+			"nombre": "Load overhanging from a roof rack",
+			"descripcion": "A ladder or planks tied to a car roof, sticking out behind at face height. The cane does not find them.",
+			"etiquetas": ["roof rack load", "overhanging load", "overhead obstacle"],
+			"imagen": "Footprint of “Load overhanging from a roof rack”: a rectangle, 0.45 by 1.20 metres, hanging 1.60 metres above the floor, marked with the letters “Cs”."
+		},
+		"bola_remolque": {
+			"nombre": "Tow ball",
+			"descripcion": "Iron hook with a ball sticking out behind a car at shin height. Small and hard: easy to bang your leg on.",
+			"etiquetas": ["tow ball", "tow bar", "hitch"],
+			"imagen": "Footprint of “Tow ball”: a rectangle, 0.10 by 0.20 metres, hanging 0.35 metres above the floor, marked with the letters “Br”."
+		},
+		"coche_con_remolque": {
+			"nombre": "Car with trailer",
+			"descripcion": "Car with a trailer hitched on. Between the two is the drawbar: a low bar at shin height, so you cannot cut through the gap.",
+			"etiquetas": ["car and trailer", "car with trailer"],
+			"imagen": "Footprint of “Car with trailer”: a car at the front and a trailer behind, joined by a narrow drawbar, 1.80 by 7.00 metres, marked with the letters “Cc”."
+		},
+		"furgoneta_puertas_abiertas": {
+			"nombre": "Delivery van with rear doors open",
+			"descripcion": "Van being unloaded: both rear doors are open and stick straight out, tall and thin. Between them is the load opening, its floor at knee height.",
+			"etiquetas": ["delivery van", "van with open doors", "loading"],
+			"imagen": "Footprint of “Delivery van with rear doors open”: a van with both rear doors open backwards, leaving a gap between them, 2.05 by 6.30 metres, marked with the letters “Fp”."
+		},
+		"furgon_capitone": {
+			"nombre": "Luton box van",
+			"descripcion": "Large box van: a square, flat-sided box as tall as a wall, overhanging the cab. It beeps when it reverses.",
+			"etiquetas": ["box van", "Luton van", "removal van"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Luton box van”: a long box at the back and a slightly narrower cab at the front, 2.20 by 6.80 metres, marked with the letters “Fc”."
+		},
+		"puesto_rodante_comida": {
+			"nombre": "Food truck with its hatch open",
+			"descripcion": "Parked food truck: a shelf sticks out of one side at chest height with a raised hatch above it as a canopy. You can smell frying and hear the griddle.",
+			"etiquetas": ["food truck", "catering van", "snack van"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Food truck with its hatch open”: a van with its counter and canopy sticking out of the right side, 3.20 by 6.00 metres, marked with the letters “Pr”."
+		},
+		"caravana": {
+			"nombre": "Caravan",
+			"descripcion": "A towed caravan with smooth plastic and metal walls. At the front is the drawbar: a low iron A-frame with a small wheel, reaching knee height.",
+			"etiquetas": ["caravan", "touring caravan", "trailer home"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Caravan”: a box with a pointed drawbar sticking out at the front, 2.30 by 6.00 metres, marked with the letters “Ca”."
+		},
+		"autocaravana_toldo": {
+			"nombre": "Motorhome with awning out",
+			"descripcion": "Parked motorhome with its awning out to one side. The awning edge is at head height, held by two thin legs and diagonal guy lines; there are usually a table and chairs underneath.",
+			"etiquetas": ["motorhome", "camper van", "RV awning"],
+			"imagen": "Footprint of “Motorhome with awning out”: the motorhome on the left and the unrolled awning on the right, 4.80 by 7.00 metres, marked with the letters “At”."
+		},
+		"carrito_golf": {
+			"nombre": "Golf buggy",
+			"descripcion": "Small open electric cart with no doors and a roof on four bars. It makes no noise when it moves.",
+			"etiquetas": ["golf buggy", "golf cart"],
+			"variantes": {
+				"dos_plazas": "Two-seater",
+				"cuatro_plazas": "Four-seater"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Golf buggy”: a rectangle with rounded corners, 1.20 by 2.40 metres, marked with the letters “Cg”."
+		},
+		"quad": {
+			"nombre": "Parked quad bike",
+			"descripcion": "Motorbike on four fat, soft wheels, with wide handlebars. Low and square; the tyres are what you touch first.",
+			"etiquetas": ["quad bike", "ATV"],
+			"imagen": "Footprint of “Parked quad bike”: a rectangle with cut corners, 1.15 by 2.00 metres, marked with the letters “Qu”."
+		},
+		"camion_reparto": {
+			"nombre": "Box delivery lorry",
+			"descripcion": "Lorry with a long sheet-metal box. The box starts at chest height: underneath, between the wheels, the cane goes in without touching anything. It beeps when reversing.",
+			"etiquetas": ["lorry", "delivery lorry", "box truck"],
+			"variantes": {
+				"dos_ejes": "Two-axle",
+				"tres_ejes": "Three-axle"
+			},
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Box delivery lorry”: a long box at the back and a slightly narrower cab at the front, 2.50 by 8.50 metres, marked with the letters “Cr”."
+		},
+		"plataforma_elevadora_camion": {
+			"nombre": "Lorry tail lift",
+			"descripcion": "A large horizontal metal plate hanging behind a lorry at waist height while it is unloaded. Its edge is iron and the cane passes underneath.",
+			"etiquetas": ["tail lift", "lorry tail lift", "liftgate"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Lorry tail lift”: a rectangle, 2.40 by 1.80 metres, hanging 1.00 metres above the floor, marked with the letters “Pe”."
+		},
+		"retrovisor_camion": {
+			"nombre": "Protruding lorry or bus mirror",
+			"descripcion": "Large mirror on an arm sticking out of the side of the cab at face height. If the vehicle is tight against the kerb, it juts over the pavement.",
+			"etiquetas": ["wing mirror", "lorry mirror", "bus mirror", "overhead obstacle"],
+			"imagen": "Footprint of “Protruding lorry or bus mirror”: a rectangle, 0.30 by 0.20 metres, hanging 1.50 metres above the floor, marked with the letters “Rc”."
+		},
+		"camion_mudanzas_rampa": {
+			"nombre": "Removal lorry with ramp",
+			"descripcion": "Removal lorry with its doors open and a metal ramp running from the box down to the ground. The ramp is narrow, rings underfoot and has no handrail.",
+			"etiquetas": ["removal lorry", "moving truck", "loading ramp"],
+			"imagen": "Footprint of “Removal lorry with ramp”: a lorry with a narrow ramp running from its back down to the ground, 2.50 by 11.00 metres, marked with the letters “Cm”."
+		},
+		"camion_hormigonera": {
+			"nombre": "Concrete mixer lorry",
+			"descripcion": "Lorry with a slowly turning drum: you hear the gravel rolling inside. An iron chute sticks out behind at chest height, caked in concrete.",
+			"etiquetas": ["concrete mixer", "cement lorry", "mixer truck"],
+			"imagen": "Footprint of “Concrete mixer lorry”: a lorry with a narrow chute sticking out at the back, 2.50 by 9.00 metres, marked with the letters “Ch”."
+		},
+		"camion_grua_estabilizadores": {
+			"nombre": "Crane lorry with outriggers out",
+			"descripcion": "Crane lorry at work. Two iron legs stick out of each side and rest on pads on the ground, a long stride from the lorry; the boom swings the load overhead.",
+			"etiquetas": ["crane lorry", "lorry loader crane", "outriggers"],
+			"aviso": "Crane lorry at work: iron legs at the sides and a load overhead.",
+			"imagen": "Footprint of “Crane lorry with outriggers out”: a lorry with four legs sticking out sideways, two on each side, 5.50 by 10.00 metres, marked with the letters “Cg”."
+		},
+		"autobus_urbano_parado": {
+			"nombre": "City bus at a stop",
+			"descripcion": "Bus standing with its engine running: a long wall of metal and glass. The doors are on the side and open with a hiss of air.",
+			"etiquetas": ["bus", "city bus", "single-decker"],
+			"variantes": {
+				"corto": "Short, 10 metres",
+				"normal": "12 metres"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “City bus at a stop”: a rectangle with cut corners, 2.55 by 12.00 metres, marked with the letters “Au”."
+		},
+		"autobus_articulado_trasero": {
+			"nombre": "Articulated bus: rear section with bellows",
+			"descripcion": "Rear half of an articulated bus. It sits behind the standard bus, joined by soft, pleated rubber bellows, narrower than the body: together they are over eighteen metres long.",
+			"etiquetas": ["articulated bus", "bendy bus", "bellows"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Articulated bus: rear section with bellows”: a long rectangle narrowing at the front, at the bellows, 2.55 by 8.00 metres, marked with the letters “Aa”."
+		},
+		"autocar": {
+			"nombre": "Coach",
+			"descripcion": "Touring coach, taller than a city bus: the windows are above head height and the luggage holds are low down along the sides. A single door at the front, with steps.",
+			"etiquetas": ["coach", "touring coach", "motor coach"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Coach”: a rectangle with cut corners, 2.55 by 13.00 metres, marked with the letters “Au”."
+		},
+		"trampilla_maletero_autocar": {
+			"nombre": "Open coach luggage hatch",
+			"descripcion": "The lid of a coach luggage hold swung up and out: a wide metal panel jutting from the side at face height while cases are loaded.",
+			"etiquetas": ["luggage hatch", "coach hold door", "overhead obstacle"],
+			"imagen": "Footprint of “Open coach luggage hatch”: a rectangle, 2.00 by 0.90 metres, hanging 1.50 metres above the floor, marked with the letters “Tm”."
+		},
+		"microbus_rampa_lateral": {
+			"nombre": "Accessible minibus with ramp out",
+			"descripcion": "Accessible minibus with its side door open and a metal ramp down to the pavement. The ramp has edges raised a finger's width.",
+			"etiquetas": ["minibus", "accessible minibus", "wheelchair ramp"],
+			"imagen": "Footprint of “Accessible minibus with ramp out”: a minibus with a ramp sticking out of its right side, 3.30 by 7.50 metres, marked with the letters “Mr”."
+		},
+		"tractor": {
+			"nombre": "Tractor",
+			"descripcion": "Farm tractor: two huge rear wheels of knobbly rubber, taller than a person, and a narrow bonnet. The cab steps are at knee height.",
+			"etiquetas": ["tractor", "farm tractor"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Tractor”: wide at the back, because of the big wheels, and narrow at the front, at the bonnet, 2.40 by 4.50 metres, marked with the letters “Tr”."
+		},
+		"carretilla_bebidas": {
+			"nombre": "Drinks delivery sack truck",
+			"descripcion": "Two-wheeled sack truck stacked chest high with bottle crates, left in the middle of the pavement outside a bar. Push it and the bottles clink and it may tip.",
+			"etiquetas": ["sack truck", "hand truck", "drinks delivery"],
+			"imagen": "Footprint of “Drinks delivery sack truck”: a trapezoid, narrower at the back, 0.50 by 0.60 metres, marked with the letters “Cb”."
+		},
+		"ambulancia_porton": {
+			"nombre": "Ambulance with rear doors open",
+			"descripcion": "Ambulance standing with its engine running and its rear doors open. The step and the stretcher stick out behind at knee and hip height.",
+			"etiquetas": ["ambulance", "emergency ambulance"],
+			"imagen": "Footprint of “Ambulance with rear doors open”: a van with a centred projection at the back: the step and the stretcher, 2.10 by 7.20 metres, marked with the letters “Ap”."
+		},
+		"coche_bomberos": {
+			"nombre": "Fire engine",
+			"descripcion": "Fire engine standing with its engine running. Its sides are corrugated metal shutters, sometimes rolled up, with tools inside; there may be hoses on the ground around it.",
+			"etiquetas": ["fire engine", "fire appliance", "fire truck"],
+			"imagen": "Footprint of “Fire engine”: a long box at the back and a slightly narrower cab at the front, 2.50 by 8.00 metres, marked with the letters “Cb”."
+		},
+		"manguera_bomberos": {
+			"nombre": "Fire hose on the ground",
+			"descripcion": "Thick, hard hose full of water snaking across the street. It does not block the way, but it is like a round kerb: you must step over it. The ground is wet.",
+			"etiquetas": ["fire hose", "hose"],
+			"aviso": "Hose on the ground: step over it.",
+			"imagen": "Footprint of “Fire hose on the ground”: a rectangle with wavy edges, 6.00 by 0.10 metres, marked with the letters “Mb”."
+		},
+		"coche_patrulla": {
+			"nombre": "Patrol car standing by",
+			"descripcion": "Police car standing with its engine running, often up on the pavement or parked askew. It has a light bar on the roof; you can hear the radio inside.",
+			"etiquetas": ["patrol car", "police car"],
+			"imagen": "Footprint of “Patrol car standing by”: the outline of a vehicle, nose at the front, 1.85 by 4.70 metres, marked with the letters “Cp”."
+		},
+		"barredora": {
+			"nombre": "Road sweeper",
+			"descripcion": "Road sweeper: you hear it from far off, brushes scraping and fan sucking. The round brushes stick out at ground level in front and throw up water and dust.",
+			"etiquetas": ["road sweeper", "street sweeper"],
+			"variantes": {
+				"de_aceras": "Pavement sweeper",
+				"de_calzada": "Road sweeper"
+			},
+			"imagen": "Footprint of “Road sweeper”: a body with two round brushes sticking out at the front corners, 1.80 by 4.50 metres, marked with the letters “Ba”."
+		},
+		"camion_basura": {
+			"nombre": "Bin lorry",
+			"descripcion": "Bin lorry. When stopped it is a wall of metal with an open hopper at the back at waist height. At work it is very noisy: the lift whines and the bin crashes over.",
+			"etiquetas": ["bin lorry", "refuse lorry", "dustcart"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Bin lorry”: a lorry with its slightly narrower loading hopper at the back, 2.50 by 9.50 metres, marked with the letters “Cb”."
+		},
+		"carro_barrendero": {
+			"nombre": "Street cleaner's cart",
+			"descripcion": "Cart with two plastic bins, wheels and a handle, with the broom and shovel sticking out. The street cleaner leaves it on the pavement while working.",
+			"etiquetas": ["street cleaner's cart", "barrow", "orderly barrow"],
+			"imagen": "Footprint of “Street cleaner's cart”: a rectangle, 0.70 by 1.20 metres, marked with the letters “Cb”."
+		},
+		"bici_caballete": {
+			"nombre": "Bike standing on its kickstand",
+			"descripcion": "Unlocked bike resting only on its kickstand. Brush against it and it clatters over: the handlebars swing round and the pedal is at shin height.",
+			"etiquetas": ["bike on kickstand", "free-standing bicycle"],
+			"imagen": "Footprint of “Bike standing on its kickstand”: a long narrow body with the handlebars across it, 0.62 by 1.80 metres, marked with the letters “Bc”."
+		},
+		"bici_carga": {
+			"nombre": "Cargo bike",
+			"descripcion": "Long bike with a big wooden box at the front for children or parcels. The box is hip high and is the first thing you meet.",
+			"etiquetas": ["cargo bike", "box bike", "delivery bike"],
+			"imagen": "Footprint of “Cargo bike”: narrow at the back with a wide box at the front, 0.90 by 2.50 metres, marked with the letters “Bc”."
+		},
+		"bici_remolque_infantil": {
+			"nombre": "Bike with child trailer",
+			"descripcion": "Bike with a fabric trailer hitched behind, low and wider than the bike. A bar near the ground joins the two; a thin flag pole rises from the trailer.",
+			"etiquetas": ["bike trailer", "child trailer"],
+			"imagen": "Footprint of “Bike with child trailer”: a bicycle at the front and a wide, low trailer behind, 0.80 by 3.30 metres, marked with the letters “Br”."
+		},
+		"triciclo_adaptado": {
+			"nombre": "Adult adapted tricycle",
+			"descripcion": "Adult tricycle: one wheel in front and two behind with a big basket between them. It does not fall over when touched; at the back it is as wide as a wheelchair.",
+			"etiquetas": ["tricycle", "adult trike", "adapted tricycle"],
+			"imagen": "Footprint of “Adult adapted tricycle”: wide at the back, with two wheels and a basket, and narrow at the front, 0.80 by 1.80 metres, marked with the letters “Ta”."
+		},
+		"bicicleta_tumbada": {
+			"nombre": "Bike lying on the ground",
+			"descripcion": "Bike fallen across the path: a low tangle of wheels, pedals and handlebars, below knee height. The cane gets caught in the spokes.",
+			"etiquetas": ["fallen bike", "bicycle on the ground"],
+			"imagen": "Footprint of “Bike lying on the ground”: an irregular patch of wheels, frame and handlebars, 1.75 by 1.00 metres, marked with the letters “Bt”."
+		},
+		"moto_grande_maletas": {
+			"nombre": "Large motorbike with panniers",
+			"descripcion": "Large touring motorbike with two hard panniers at the sides and a top box behind: at the back it is as wide as a doorway. Engine and exhaust may be hot.",
+			"etiquetas": ["touring motorbike", "motorbike with panniers"],
+			"imagen": "Footprint of “Large motorbike with panniers”: a narrow body with two wide panniers at the back and the handlebars at the front, 1.00 by 2.40 metres, marked with the letters “Mg”."
+		},
+		"ciclomotor_reparto": {
+			"nombre": "Delivery moped with box",
+			"descripcion": "Food delivery moped with a square box at the back at chest height. It is left on the pavement for a moment, often with the engine running.",
+			"etiquetas": ["delivery moped", "delivery scooter", "takeaway bike"],
+			"imagen": "Footprint of “Delivery moped with box”: a narrow body with a square box at the back and the handlebars at the front, 0.70 by 1.95 metres, marked with the letters “Cr”."
+		},
+		"remolque_suelto": {
+			"nombre": "Unhitched trailer with drawbar",
+			"descripcion": "Unhitched goods trailer. The box is waist high, but at the front is the drawbar: an iron bar a hand's width above the ground, resting on a jockey wheel.",
+			"etiquetas": ["trailer", "box trailer", "drawbar"],
+			"imagen": "Footprint of “Unhitched trailer with drawbar”: a box with a pointed drawbar sticking out at the front, 1.50 by 3.30 metres, marked with the letters “Rs”."
+		},
+		"montamuebles": {
+			"nombre": "Furniture hoist",
+			"descripcion": "Removal hoist: a small trailer with an aluminium ladder slanting up to a balcony. The ladder crosses the pavement diagonally at head height.",
+			"etiquetas": ["furniture hoist", "ladder lift", "removal hoist"],
+			"aviso": "Furniture hoist: a slanting ladder crosses overhead.",
+			"imagen": "Footprint of “Furniture hoist”: a T shape, 1.80 by 5.00 metres, marked with the letters “Mo”."
+		},
+		"cuba_escombros": {
+			"nombre": "Builder's skip",
+			"descripcion": "Thick sheet-metal builder's skip with sloping ends and its rim at chest height. The lugs the lorry lifts it by stick out of its sides.",
+			"etiquetas": ["skip", "builder's skip", "rubble skip"],
+			"variantes": {
+				"pequena": "3 cubic metres",
+				"mediana": "5 cubic metres",
+				"grande": "7 cubic metres"
+			},
+			"imagen": "Footprint of “Builder's skip”: a rectangle with sloping ends and lifting lugs sticking out of the sides, 1.80 by 3.40 metres, marked with the letters “Ce”."
+		},
+		"contenedor_maritimo": {
+			"nombre": "Shipping container",
+			"descripcion": "Huge corrugated steel box as tall as a room, used as a site store. It booms when struck; the doors, at one end, have upright locking bars.",
+			"etiquetas": ["shipping container", "sea container", "storage container"],
+			"variantes": {
+				"veinte_pies": "20-foot",
+				"cuarenta_pies": "40-foot"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Shipping container”: a rectangle, 2.44 by 6.06 metres, marked with the letters “Cm”."
+		},
+		"caseta_obra": {
+			"nombre": "Site cabin",
+			"descripcion": "Prefabricated metal cabin with a door and a loose step in front. It is the site office or changing room; the air conditioner hums on one wall.",
+			"etiquetas": ["site cabin", "site office", "portable cabin"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Site cabin”: a rectangle, 2.40 by 6.00 metres, marked with the letters “Co”."
+		},
+		"deposito_gasoil": {
+			"nombre": "Site diesel tank",
+			"descripcion": "Sheet-metal tank lying on a drip tray, with a hose and nozzle hanging from it. It smells of diesel and the ground around is slippery.",
+			"etiquetas": ["diesel tank", "fuel bowser", "site fuel tank"],
+			"imagen": "Footprint of “Site diesel tank”: a rectangle with rounded corners, 1.30 by 2.20 metres, marked with the letters “Dg”."
+		},
+		"silo_mortero": {
+			"nombre": "Mortar silo",
+			"descripcion": "Very tall sheet-metal cylinder on four legs, standing in the road next to a building site. The outlet hangs between the legs at chest height and there are hoses on the ground.",
+			"etiquetas": ["mortar silo", "cement silo"],
+			"imagen": "Footprint of “Mortar silo”: a square: the four legs of the silo, 2.50 by 2.50 metres, marked with the letters “Sm”."
+		},
+		"grupo_electrogeno": {
+			"nombre": "Towable generator",
+			"descripcion": "Site generator on a trailer: a chest-high metal box with a low drawbar at the front. When running it gives a loud, steady engine noise and blows hot air.",
+			"etiquetas": ["generator", "towable generator", "genset"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Towable generator”: a box with a pointed drawbar sticking out at the front, 1.40 by 3.20 metres, marked with the letters “Ge”."
+		},
+		"miniexcavadora": {
+			"nombre": "Parked mini digger",
+			"descripcion": "Small digger on rubber tracks. The folded arm sticks out in front with the bucket resting on the ground; the elbow of the arm is at head height.",
+			"etiquetas": ["mini digger", "mini excavator"],
+			"imagen": "Footprint of “Parked mini digger”: a T shape, 1.50 by 4.50 metres, marked with the letters “Mi”."
+		},
+		"plaza_bateria": {
+			"nombre": "Perpendicular parking bay",
+			"descripcion": "Painted markings of a bay at right angles to the aisle. You cannot feel them underfoot: they show where cars go, side by side, nose or tail in.",
+			"etiquetas": ["parking bay", "perpendicular bay", "parking space"],
+			"variantes": {
+				"estrecha": "Narrow",
+				"normal": "Standard",
+				"amplia": "Wide"
+			},
+			"imagen": "Footprint of “Perpendicular parking bay”: a rectangle, 2.50 by 5.00 metres, marked with the letters “Pb”."
+		},
+		"plaza_linea": {
+			"nombre": "Parallel parking bay",
+			"descripcion": "Markings of a bay along the kerb. Cars stand one behind another, tight against the pavement.",
+			"etiquetas": ["parallel bay", "kerbside bay", "parallel parking"],
+			"imagen": "Footprint of “Parallel parking bay”: a rectangle, 5.00 by 2.20 metres, marked with the letters “Pl”."
+		},
+		"plaza_espiga": {
+			"nombre": "Echelon parking bay",
+			"descripcion": "Markings of a bay slanted to the aisle. Cars stand diagonally: their corners make a saw-tooth edge as you follow them with the cane.",
+			"etiquetas": ["echelon bay", "angled bay", "angle parking"],
+			"imagen": "Footprint of “Echelon parking bay”: a slanted parallelogram, 4.00 by 4.80 metres, marked with the letters “Pe”."
+		},
+		"plaza_movilidad_reducida": {
+			"nombre": "Disabled parking bay",
+			"descripcion": "Reserved bay, wider than the others: beside it is a clear strip for opening the door fully and getting a wheelchair out, linked to the pavement by a dropped kerb.",
+			"etiquetas": ["disabled bay", "accessible parking bay", "blue badge bay"],
+			"variantes": {
+				"en_bateria": "Perpendicular, with side strip",
+				"en_linea": "Parallel, with rear strip",
+				"doble": "Two bays sharing a strip"
+			},
+			"aviso": "Disabled parking bay.",
+			"imagen": "Footprint of “Disabled parking bay”: a rectangle, 3.70 by 5.00 metres, marked with the letters “Pm”."
+		},
+		"tope_rueda": {
+			"nombre": "Wheel stop",
+			"descripcion": "Low rubber or concrete bar bolted at the end of the bay, a hand's width high. With the car away it lies alone on the ground: a trip hazard.",
+			"etiquetas": ["wheel stop", "parking stop", "kerb stop"],
+			"aviso": "Wheel stop: lift your foot.",
+			"imagen": "Footprint of “Wheel stop”: a rectangle, 1.80 by 0.15 metres, marked with the letters “Tr”."
+		},
+		"isleta_aparcamiento": {
+			"nombre": "Kerbed car park island",
+			"descripcion": "Long, round-ended island between rows of bays, edged by a kerb a hand's width high and filled with earth, gravel or plants. Step up onto it or go round.",
+			"etiquetas": ["car park island", "kerbed island", "landscaped island"],
+			"imagen": "Footprint of “Kerbed car park island”: an elongated oval with straight sides and round ends, 5.00 by 1.50 metres, marked with the letters “Ia”."
+		},
+		"bolardo_abatible_plaza": {
+			"nombre": "Fold-down parking post",
+			"descripcion": "Iron hoop in the middle of a reserved bay, knee high. With its key it folds flat to the ground and lets you through; raised, it keeps the bay.",
+			"etiquetas": ["fold-down bollard", "parking post", "parking space protector"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Fold-down parking post”: a rectangle, 0.50 by 0.10 metres, marked with the letters “Ba”."
+		},
+		"cepo_rueda": {
+			"nombre": "Wheel clamp",
+			"descripcion": "Iron clamp fixed to the wheel of a badly parked car: a triangular piece sticking out from the side at shin height.",
+			"etiquetas": ["wheel clamp", "clamp", "Denver boot"],
+			"imagen": "Footprint of “Wheel clamp”: a triangle pointing to the front, 0.50 by 0.30 metres, marked with the letters “Cr”."
+		},
+		"guardarrail_bajo": {
+			"nombre": "Low crash barrier",
+			"descripcion": "Band of corrugated steel on short posts, knee to thigh high, closing off the edge of the car park. You can trail it with the cane; the edges are sharp.",
+			"etiquetas": ["crash barrier", "guard rail", "Armco barrier"],
+			"variantes": {
+				"un_tramo": "One section",
+				"tres_tramos": "Three sections"
+			},
+			"imagen": "Footprint of “Low crash barrier”: a rectangle, 4.00 by 0.30 metres, marked with the letters “Gb”."
+		},
+		"cadena_entre_postes": {
+			"nombre": "Chain between posts",
+			"descripcion": "Chain hanging slack between two short posts, closing off a car park or a passage. It is at knee or thigh height and the cane may pass underneath without touching it.",
+			"etiquetas": ["chain", "chain barrier", "post and chain"],
+			"imagen": "Footprint of “Chain between posts”: a rectangle, 2.50 by 0.08 metres, hanging 0.50 metres above the floor, marked with the letters “Ce”."
+		},
+		"pilar_marquesina_solar": {
+			"nombre": "Car park canopy post",
+			"descripcion": "Steel post of the canopy shading the bays, set on a concrete block that sticks out at shin height. Above, the solar panels hum slightly.",
+			"etiquetas": ["car park canopy", "carport post", "solar carport"],
+			"imagen": "Footprint of “Car park canopy post”: a rectangle with cut corners, 0.60 by 0.60 metres, marked with the letters “Pm”."
+		},
+		"recinto_carritos": {
+			"nombre": "Trolley shelter",
+			"descripcion": "Shelter open at the front where supermarket trolleys are left: tubular rails on both sides and a roof. Inside, the nested trolleys rattle.",
+			"etiquetas": ["trolley shelter", "trolley bay", "cart corral"],
+			"imagen": "Footprint of “Trolley shelter”: a U open at the front, 2.50 by 5.00 metres, marked with the letters “Rc”."
+		},
+		"anclajes_motos": {
+			"nombre": "Motorbike parking with anchor rails",
+			"descripcion": "Row of low iron rails at mid-shin height for chaining motorbikes to. With no bikes there, the rails stand alone and trip you.",
+			"etiquetas": ["motorbike parking", "ground anchors", "motorcycle rail"],
+			"imagen": "Footprint of “Motorbike parking with anchor rails”: a comb: a bar with bodies sticking out to the front, 4.00 by 0.70 metres, marked with the letters “Am”."
+		},
+		"taquilla_bicicleta": {
+			"nombre": "Bike locker",
+			"descripcion": "Wedge-shaped metal locker that holds one bike: wide at the door and narrow at the back. Several together form a fan or a row.",
+			"etiquetas": ["bike locker", "cycle locker"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Bike locker”: a trapezoid, narrower at the back, 0.90 by 2.00 metres, marked with the letters “Tb”."
+		},
+		"bancada_bicis_dos_pisos": {
+			"nombre": "Two-tier bike rack",
+			"descripcion": "Two-level bike rack: bikes in channels below and another row above on pull-out rails. The upper rails and handlebars are at head height.",
+			"etiquetas": ["two-tier bike rack", "double-decker cycle rack"],
+			"variantes": {
+				"seis_bicis": "Six bikes",
+				"doce_bicis": "Twelve bikes",
+				"veinticuatro_bicis": "Twenty-four bikes"
+			},
+			"imagen": "Footprint of “Two-tier bike rack”: a comb: a bar with bodies sticking out to the front, 3.00 by 2.00 metres, marked with the letters “Bb”."
+		},
+		"estacion_bici_publica": {
+			"nombre": "Bike share docking station",
+			"descripcion": "Row of bike share docks: low posts every good half metre, some with bikes locked in, and a terminal at one end. It beeps when a bike is released.",
+			"etiquetas": ["bike share station", "docking station", "hire bikes"],
+			"variantes": {
+				"cinco_anclajes": "Five docks",
+				"diez_anclajes": "Ten docks",
+				"veinte_anclajes": "Twenty docks"
+			},
+			"acciones": {
+				"desbloquear_bici": "Unlock a bike"
+			},
+			"imagen": "Footprint of “Bike share docking station”: a comb: a bar with bodies sticking out to the front, 7.50 by 1.90 metres, marked with the letters “Eb”."
+		},
+		"estacion_patinetes": {
+			"nombre": "Shared e-scooter dock",
+			"descripcion": "Fixed base with low rails where hire scooters slot in, all upright in a row. The handlebars are at chest height; the empty rails are at ground level.",
+			"etiquetas": ["e-scooter dock", "scooter parking station"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Shared e-scooter dock”: a comb: a bar with bodies sticking out to the front, 3.00 by 1.20 metres, marked with the letters “Ep”."
+		},
+		"rampa_aparcamiento": {
+			"nombre": "Car park entry ramp",
+			"descripcion": "Grooved concrete ramp that cars drive up and down. The ground slopes steeply and there is no footway: you hear the echo of the car park and engines approaching.",
+			"etiquetas": ["car park ramp", "garage ramp"],
+			"aviso": "Vehicle ramp: no footway here and cars may come.",
+			"imagen": "Footprint of “Car park entry ramp”: a rectangle, 3.50 by 10.00 metres, marked with the letters “Ra”."
+		},
+		"junta_dilatacion": {
+			"nombre": "Metal expansion joint",
+			"descripcion": "Metal strip crossing the car park floor from side to side. It sounds different underfoot and is slippery when wet; cars make it clunk twice as they cross.",
+			"etiquetas": ["expansion joint", "movement joint"],
+			"imagen": "Footprint of “Metal expansion joint”: a rectangle, 5.00 by 0.20 metres, marked with the letters “Jd”."
+		},
+		"canaleta_rejilla": {
+			"nombre": "Drainage channel with grating",
+			"descripcion": "Narrow channel with an iron grating across the foot of the ramp to collect water. The cane tip slips between the bars and, if a section is missing, there is a gap.",
+			"etiquetas": ["drainage channel", "channel drain", "linear drain"],
+			"aviso": "Drain grating: the cane tip may slip in.",
+			"imagen": "Footprint of “Drainage channel with grating”: a rectangle, 3.50 by 0.20 metres, marked with the letters “Cr”."
+		},
+		"banda_reductora_goma": {
+			"nombre": "Rubber speed bump",
+			"descripcion": "Rubber hump bolted across the lane, three fingers high. Underfoot it feels like a rounded step; cars thud over it.",
+			"etiquetas": ["rubber speed bump", "speed hump", "sleeping policeman"],
+			"aviso": "Hump on the ground.",
+			"imagen": "Footprint of “Rubber speed bump”: a rectangle, 3.00 by 0.40 metres, marked with the letters “Br”."
+		},
+		"barrera_aparcamiento": {
+			"nombre": "Car park barrier",
+			"descripcion": "Long, light arm across the lane at waist height, coming out of a metal cabinet at one side. The cane passes underneath. It rises with a hum and a clunk when it opens.",
+			"etiquetas": ["car park barrier", "boom gate", "barrier arm"],
+			"variantes": {
+				"tres_metros": "3 metres",
+				"cuatro_y_medio": "4.5 metres",
+				"seis_metros": "6 metres"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Car park barrier”: a rectangle, 3.00 by 0.10 metres, hanging 0.90 metres above the floor, marked with the letters “Ba”."
+		},
+		"cancela_corredera": {
+			"nombre": "Motorised sliding gate",
+			"descripcion": "Barred gate sliding sideways on a floor rail to close the vehicle entrance. It hums and rolls as it moves; the rail, a finger high, is always there.",
+			"etiquetas": ["sliding gate", "motorised gate", "vehicle gate"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Motorised sliding gate”: a rectangle, 4.00 by 0.10 metres, marked with the letters “Cc”."
+		},
+		"columna_tiques": {
+			"nombre": "Car park ticket column",
+			"descripcion": "Metal column at car window height, next to the barrier. It has a big button, a slot the ticket comes out of and an intercom; it beeps and speaks.",
+			"etiquetas": ["ticket column", "ticket dispenser", "entry terminal"],
+			"variantes": {
+				"de_entrada": "Entry",
+				"de_salida": "Exit"
+			},
+			"acciones": {
+				"tique_aparcamiento": "Take the ticket",
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Car park ticket column”: a rectangle with cut corners, 0.35 by 0.40 metres, marked with the letters “Ct”."
+		},
+		"cajero_aparcamiento": {
+			"nombre": "Car park pay station",
+			"descripcion": "Pay machine by the pedestrian exit: insert the ticket, pay with coins or card and it returns it validated. It has keys, slots and a tray at the bottom for change.",
+			"etiquetas": ["pay station", "parking pay machine", "pay on foot"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Car park pay station”: a rectangle, 0.70 by 0.50 metres, marked with the letters “Ca”."
+		},
+		"lector_matricula": {
+			"nombre": "Number plate reader post",
+			"descripcion": "Slim post with a camera, just before the barrier. Thin and alone in the middle of the island: easy to miss with the cane.",
+			"etiquetas": ["number plate reader", "ANPR camera post"],
+			"imagen": "Footprint of “Number plate reader post”: a circle, 0.20 by 0.20 metres, marked with the letters “Lm”."
+		},
+		"garita_control": {
+			"nombre": "Attendant's booth",
+			"descripcion": "Small metal and glass booth for the attendant, on the island between the way in and the way out. It has a sliding hatch at chest height.",
+			"etiquetas": ["attendant's booth", "security booth", "kiosk"],
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Attendant's booth”: a rectangle with cut corners, 1.50 by 2.00 metres, marked with the letters “Gc”."
+		},
+		"arco_galibo": {
+			"nombre": "Height restriction bar",
+			"descripcion": "Horizontal bar hung on two chains over the entrance to warn tall vehicles. It is at crown-of-the-head height: a tall person will touch it.",
+			"etiquetas": ["height restriction bar", "height limiter", "headroom bar"],
+			"imagen": "Footprint of “Height restriction bar”: a rectangle, 3.00 by 0.10 metres, hanging 2.00 metres above the floor, marked with the letters “Ag”."
+		},
+		"espejo_convexo": {
+			"nombre": "Convex corner mirror",
+			"descripcion": "Round, domed mirror on an arm at the corner of a ramp or an exit so that drivers can see. It sticks out from the wall at head height.",
+			"etiquetas": ["convex mirror", "traffic mirror", "blind-spot mirror"],
+			"imagen": "Footprint of “Convex corner mirror”: a semicircle, straight at the back and round at the front, 0.60 by 0.25 metres, hanging 1.70 metres above the floor, marked with the letters “Ec”."
+		},
+		"avisador_salida_vehiculos": {
+			"nombre": "Vehicle exit warning sounder",
+			"descripcion": "Box with a light and a beeper above a garage door. When a car is about to come out it gives two quick high beeps over and over: stop and let it cross the pavement.",
+			"etiquetas": ["exit warning sounder", "garage warning beeper", "vehicle exit alarm"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Vehicle exit warning sounder”: a rectangle, 0.25 by 0.15 metres, hanging 2.20 metres above the floor, marked with the letters “As”."
+		},
+		"surtidor_combustible": {
+			"nombre": "Fuel pump",
+			"descripcion": "Filling station pump on an island a hand's width high: a cabinet with rubber hoses hanging on both sides and the nozzles at waist height. It smells of petrol.",
+			"etiquetas": ["fuel pump", "petrol pump", "fuel dispenser"],
+			"acciones": {
+				"repostar_combustible": "Fill up"
+			},
+			"imagen": "Footprint of “Fuel pump”: a rectangle with rounded corners, 1.20 by 0.60 metres, marked with the letters “Sc”."
+		},
+		"arco_protector_surtidor": {
+			"nombre": "Pump protection hoop",
+			"descripcion": "Thick iron tube bent into a hoop and fixed in the ground, knee high, at the corners of the pump island. Solid: it does not move.",
+			"etiquetas": ["protection hoop", "pump guard", "hoop barrier"],
+			"imagen": "Footprint of “Pump protection hoop”: a rectangle, 0.80 by 0.09 metres, marked with the letters “Ap”."
+		},
+		"jaula_bombonas": {
+			"nombre": "Gas cylinder cage",
+			"descripcion": "Iron mesh cage with gas cylinders inside, next to the filling station shop. Touch it and the mesh rattles and the cylinders ring like hollow metal.",
+			"etiquetas": ["gas cylinder cage", "gas bottle cage"],
+			"imagen": "Footprint of “Gas cylinder cage”: a rectangle, 1.50 by 0.80 metres, marked with the letters “Jb”."
+		},
+		"tunel_lavado": {
+			"nombre": "Car wash tunnel",
+			"descripcion": "Car wash: two walls with rollers and jets that the car passes between. When running it is very noisy, it splashes and the ground at each end is wet.",
+			"etiquetas": ["car wash", "automatic car wash", "wash tunnel"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Car wash tunnel”: a U open at the front, 4.50 by 10.00 metres, marked with the letters “Tl”."
+		},
+		"box_lavado_manual": {
+			"nombre": "Jet wash bay",
+			"descripcion": "Bay open at the front with metal walls where you wash your own car with a pressure lance. The floor is a wet, soapy grating.",
+			"etiquetas": ["jet wash bay", "self-service car wash"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Jet wash bay”: a U open at the front, 4.00 by 6.00 metres, marked with the letters “Bl”."
+		},
+		"aspirador_gasolinera": {
+			"nombre": "Forecourt vacuum",
+			"descripcion": "Fat metal column with a long corrugated hose on a hook. Put a coin in and it roars for a minute; the hose is often left lying on the ground.",
+			"etiquetas": ["forecourt vacuum", "car vacuum", "coin-operated vacuum"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Forecourt vacuum”: a circle, 0.60 by 0.60 metres, marked with the letters “Ag”."
+		},
+		"poste_aire_agua": {
+			"nombre": "Air and water point",
+			"descripcion": "Post with the air hose for tyres and a water tap. In use, the compressor chugs and beeps when it reaches pressure.",
+			"etiquetas": ["air and water", "tyre inflator", "air pump"],
+			"acciones": {
+				"hinchar_rueda": "Pump up a tyre"
+			},
+			"imagen": "Footprint of “Air and water point”: a rectangle, 0.40 by 0.35 metres, marked with the letters “Pa”."
+		}
+	}
+}

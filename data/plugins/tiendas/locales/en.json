@@ -1,0 +1,1197 @@
+{
+	"nombre": "Shops and shopping centre",
+	"descripcion": "Small shops one by one (bakery, greengrocer, butcher, fishmonger, ironmonger, clothes, shoes, bookshop, tobacconist, optician, jeweller, florist, toy shop, bazaar), the indoor market and the mall of a shopping centre.",
+	"categorias": {
+		"panaderia": "Bakery and cake shop",
+		"fruteria": "Greengrocer and indoor market",
+		"carniceria": "Butcher, fishmonger and delicatessen",
+		"ferreteria": "Ironmonger",
+		"moda": "Clothes and shoe shops",
+		"libreria_optica": "Bookshop, tobacconist, optician and jeweller",
+		"flores_ocio": "Florist, electronics, toy shop and bazaar",
+		"galeria": "Shopping centre and shop doorway"
+	},
+	"subcategorias": {
+		"pan_mostradores": "Bakery counters and display cases",
+		"pan_exposicion": "Bread on display",
+		"pan_maquinas": "Bakery oven and machines",
+		"fruta_exposicion": "Fruit on display",
+		"fruta_suelo": "Goods on the floor",
+		"fruta_pesaje": "Scales and bags",
+		"mercado": "Indoor market",
+		"frio_mostradores": "Chilled counters",
+		"corte": "Blocks and slicing machines",
+		"colgado": "Hanging goods",
+		"turno": "Queue numbers",
+		"camaras": "Cold rooms, tanks and roasters",
+		"ferr_mostrador": "Ironmonger's counter and drawers",
+		"ferr_pared": "Ironmonger's panels and displays",
+		"ferr_suelo": "Ironmonger's goods on the floor",
+		"ferr_maquinas": "Ironmonger's machines",
+		"percheros": "Shop clothes rails",
+		"mesas_expositores": "Clothes tables and displays",
+		"probadores": "Fitting rooms and mirrors",
+		"maniquies": "Mannequins and busts",
+		"zapateria": "Shoe shop",
+		"libreria": "Bookshop and stationer",
+		"estanco": "Tobacconist, press and lottery",
+		"optica": "Optician",
+		"joyeria": "Jeweller",
+		"floristeria": "Florist",
+		"electronica": "Phones and electronics",
+		"jugueteria": "Toy shop",
+		"bazar": "Bazaar and haberdashery",
+		"cc_asientos": "Mall benches, fountains, atrium and decorations",
+		"cc_islas": "Mall islands and stands",
+		"cc_infantil": "Children's area and coin machines",
+		"cc_servicios": "Mall information and services",
+		"puerta_tienda": "Shop door and entrance",
+		"cc_reclamos": "Signs and promotions"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"apagado": "Off",
+		"funcionando": "Running",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"bloqueado": "Locked"
+	},
+	"objetos": {
+		"mostrador_panaderia": {
+			"nombre": "Bakery display counter",
+			"descripcion": "Tall counter with a curved glass front, smooth and slightly warm on top. Follow it with your hand to the till at one end.",
+			"etiquetas": ["bakery counter", "bread counter", "curved glass counter"],
+			"variantes": {
+				"corto": "Short",
+				"normal": "Two metres",
+				"largo": "Long"
+			},
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Bakery display counter”: a rectangle with its front bulging towards the customer, 2.00 by 0.90 metres, marked with the letters “Mp”."
+		},
+		"estantes_pan_pared": {
+			"nombre": "Sloping bread shelves",
+			"descripcion": "Wooden shelves sloping forwards on the wall behind the counter, with the loaves resting on them. You can smell the bread from the door.",
+			"etiquetas": ["bread shelves", "bread rack", "sloping shelves"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Sloping bread shelves”: a rectangle, 1.50 by 0.45 metres, marked with the letters “Ep”."
+		},
+		"cesto_barras": {
+			"nombre": "Standing baguette basket",
+			"descripcion": "Tall wicker basket with baguettes standing in it. The ends of the loaves poke out at the top, at waist height.",
+			"etiquetas": ["baguette basket", "bread basket", "wicker basket"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Standing baguette basket”: a circle, 0.45 by 0.45 metres, marked with the letters “Cb”."
+		},
+		"horno_panaderia": {
+			"nombre": "Bakery oven",
+			"descripcion": "Tall sheet-metal oven the size of a wardrobe. It hums constantly and gives off heat a step away: the door burns.",
+			"etiquetas": ["bakery oven", "bread oven", "convection oven"],
+			"variantes": {
+				"una_puerta": "Single door",
+				"rotativo": "Rack oven"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Bakery oven”: a rectangle, 1.00 by 1.10 metres, marked with the letters “Hp”."
+		},
+		"vitrina_pasteles": {
+			"nombre": "Chilled cake display",
+			"descripcion": "Glass display case, cold to the touch, with the cakes inside. It hums quietly and warm air blows out at foot level.",
+			"etiquetas": ["cake display", "chilled display case", "patisserie cabinet"],
+			"variantes": {
+				"mostrador": "Counter height",
+				"torre": "Upright cake tower"
+			},
+			"imagen": "Footprint of “Chilled cake display”: a rectangle, 1.20 by 0.75 metres, marked with the letters “Vp”."
+		},
+		"cortadora_pan": {
+			"nombre": "Bread slicer",
+			"descripcion": "Machine that slices bread, on a stand behind the counter. When running it is very loud for a few seconds and drowns out voices.",
+			"etiquetas": ["bread slicer", "slicing machine"],
+			"variantes": {
+				"sobremesa": "Countertop",
+				"de_pie": "Free-standing"
+			},
+			"acciones": {
+				"cortar_pan": "Slice the bread"
+			},
+			"imagen": "Footprint of “Bread slicer”: a rectangle, 0.60 by 0.70 metres, marked with the letters “Cp”."
+		},
+		"barra_degustacion_pared": {
+			"nombre": "Wall tasting ledge",
+			"descripcion": "Narrow board fixed to the wall at elbow height, for a standing coffee. It has no legs: the cane passes beneath and the edge is at stomach height.",
+			"etiquetas": ["wall ledge", "tasting bar", "standing shelf"],
+			"imagen": "Footprint of “Wall tasting ledge”: a rectangle, 1.80 by 0.35 metres, hanging 0.75 metres above the floor, marked with the letters “Bd”."
+		},
+		"carro_latas_panaderia": {
+			"nombre": "Bakery tray trolley",
+			"descripcion": "Tall, narrow wheeled trolley stacked with oven trays. Fresh from the oven it burns, and it is left in the way while restocking.",
+			"etiquetas": ["bakery trolley", "oven rack trolley", "tray rack"],
+			"imagen": "Footprint of “Bakery tray trolley”: a rectangle, 0.60 by 0.80 metres, marked with the letters “Cl”."
+		},
+		"mueble_bolleria_autoservicio": {
+			"nombre": "Self-service pastry cabinet",
+			"descripcion": "Cabinet of compartments with lift-up clear lids; the pastries are inside. Tongs and paper bags hang at one side.",
+			"etiquetas": ["self-service pastry cabinet", "bakery bins", "pick and mix bakery"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Self-service pastry cabinet”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Mb”."
+		},
+		"expositor_fruta_gradas": {
+			"nombre": "Tiered sloping fruit display",
+			"descripcion": "Fruit crates on sloping steps against the wall: the bottom ones stick out furthest, at knee height; the top ones are chest high. You know it by the smell.",
+			"etiquetas": ["fruit display", "tiered fruit stand", "greengrocer display"],
+			"variantes": {
+				"un_modulo": "One section",
+				"dos_modulos": "Two sections",
+				"tres_modulos": "Three sections"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Tiered sloping fruit display”: a rectangle, 2.00 by 1.00 metres, marked with the letters “Ef”."
+		},
+		"isla_fruta": {
+			"nombre": "Double-sided fruit island",
+			"descripcion": "Unit in the middle of the shop with crates sloping to both sides, like a roof. You can walk all round it; it leaves an aisle on each side.",
+			"etiquetas": ["fruit island", "central produce stand"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Double-sided fruit island”: a rectangle with cut corners, 2.00 by 1.20 metres, marked with the letters “If”."
+		},
+		"cajas_fruta_suelo": {
+			"nombre": "Fruit crates stacked on the floor",
+			"descripcion": "Plastic crates of produce left on the floor in front of the displays. They block the aisle and move every day; shin to waist high.",
+			"etiquetas": ["fruit crates", "stacked crates", "boxes on the floor"],
+			"variantes": {
+				"una_caja": "Single crate",
+				"pila": "Stack of four",
+				"varias": "Several stacks"
+			},
+			"imagen": "Footprint of “Fruit crates stacked on the floor”: an irregular heap, 0.80 by 0.60 metres, marked with the letters “Cf”."
+		},
+		"bascula_colgante": {
+			"nombre": "Hanging greengrocer's scale",
+			"descripcion": "Dial scale hung from the ceiling with a metal pan below it, at face height. The cane misses it and it swings if touched.",
+			"etiquetas": ["hanging scale", "dial scale", "greengrocer's scale"],
+			"acciones": {
+				"pesar_compra": "Weigh your shopping"
+			},
+			"imagen": "Footprint of “Hanging greengrocer's scale”: a circle, 0.35 by 0.35 metres, hanging 1.20 metres above the floor, marked with the letters “Bc”."
+		},
+		"mostrador_fruteria": {
+			"nombre": "Greengrocer's counter with scale",
+			"descripcion": "Small counter near the exit with the scale and till on top. The scale beeps when weighing and prints a ticket.",
+			"etiquetas": ["greengrocer's counter", "counter scale", "weighing counter"],
+			"acciones": {
+				"pesar_compra": "Weigh your shopping",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Greengrocer's counter with scale”: a rectangle, 1.50 by 0.70 metres, marked with the letters “Mf”."
+		},
+		"bascula_autoservicio": {
+			"nombre": "Self-service scale",
+			"descripcion": "Column with a metal pan at waist height and a keypad screen above. Put the bag on, press, and a label comes out with a beep.",
+			"etiquetas": ["self-service scale", "produce scale", "label scale"],
+			"acciones": {
+				"pesar_compra": "Weigh your shopping"
+			},
+			"imagen": "Footprint of “Self-service scale”: a rectangle, 0.50 by 0.55 metres, marked with the letters “Ba”."
+		},
+		"sacos_patatas": {
+			"nombre": "Sacks of potatoes on the floor",
+			"descripcion": "Mesh sacks full of potatoes or onions lying on the floor by the wall. Low, hard and lumpy: your foot trips before your hand notices.",
+			"etiquetas": ["potato sacks", "onion sacks", "mesh sacks"],
+			"imagen": "Footprint of “Sacks of potatoes on the floor”: an irregular heap, 0.80 by 0.60 metres, marked with the letters “Sp”."
+		},
+		"soporte_bolsas_fruta": {
+			"nombre": "Bag roll on a stand",
+			"descripcion": "Thin post with a roll of bags at chest height and sometimes plastic gloves. Pull a bag downwards and tear it off.",
+			"etiquetas": ["bag roll stand", "produce bags", "bag dispenser"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Bag roll on a stand”: a circle, 0.30 by 0.30 metres, marked with the letters “Sb”."
+		},
+		"cajon_melones": {
+			"nombre": "Melon and watermelon bin",
+			"descripcion": "Big eight-sided cardboard bin on a pallet, full of melons or watermelons. Hip high and open at the top.",
+			"etiquetas": ["melon bin", "watermelon bin", "pallet box"],
+			"imagen": "Footprint of “Melon and watermelon bin”: an octagon, 1.20 by 1.00 metres, marked with the letters “Cm”."
+		},
+		"tolvas_granel": {
+			"nombre": "Bulk nut dispensers",
+			"descripcion": "Row of clear tubes on the wall, full of nuts or pulses. Each has a lever at the bottom: pull it and the goods rattle down into your bag.",
+			"etiquetas": ["bulk dispensers", "gravity bins", "pick and mix nuts"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Bulk nut dispensers”: a rectangle, 1.20 by 0.40 metres, marked with the letters “Tg”."
+		},
+		"racimos_colgados": {
+			"nombre": "Hanging banana bunches and strings",
+			"descripcion": "Bunches of bananas, strings of garlic and pineapples hung from a ceiling rail at head height. Soft, but they hit your face without warning.",
+			"etiquetas": ["hanging bananas", "garlic strings", "hanging produce"],
+			"imagen": "Footprint of “Hanging banana bunches and strings”: a rectangle, 0.80 by 0.35 metres, hanging 1.40 metres above the floor, marked with the letters “Rc”."
+		},
+		"puesto_mercado_u": {
+			"nombre": "Market stall with U-shaped counter",
+			"descripcion": "Indoor market stall: a marble counter running round three sides, with the seller inside. Follow it with your hand round its two corners.",
+			"etiquetas": ["market stall", "indoor market stand", "market counter"],
+			"variantes": {
+				"pequeno": "Small",
+				"normal": "Standard",
+				"de_esquina": "Large corner stall"
+			},
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Market stall with U-shaped counter”: a U open at the back: the counter wraps round and the seller stands inside, 3.50 by 2.50 metres, marked with the letters “Pm”."
+		},
+		"persiana_puesto": {
+			"nombre": "Stall roller shutter",
+			"descripcion": "Sheet-metal slatted shutter closing a stall or shop front. When down it is a ribbed wall that booms when touched; it goes up with a great clatter.",
+			"etiquetas": ["roller shutter", "metal shutter", "closed stall"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Stall roller shutter”: a rectangle, 3.00 by 0.10 metres, marked with the letters “Pp”."
+		},
+		"bascula_publica": {
+			"nombre": "Coin-operated public scale",
+			"descripcion": "Stand-on scale: a rubber platform on the floor and a column with the coin slot at chest height. Step on, drop a coin in and a ticket comes out.",
+			"etiquetas": ["public scale", "coin-operated scale", "weighing machine"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"pesarse_monedas": "Weigh yourself"
+			},
+			"imagen": "Footprint of “Coin-operated public scale”: a platform at the front and a narrow column at the back, 0.45 by 0.70 metres, marked with the letters “Bp”."
+		},
+		"mostrador_carniceria": {
+			"nombre": "Butcher's chilled counter",
+			"descripcion": "Long, tall counter with a straight glass front, cold to the touch. A narrow ledge on top takes your shopping; the motor hums underneath.",
+			"etiquetas": ["butcher's counter", "chilled counter", "deli counter", "meat display"],
+			"variantes": {
+				"un_modulo": "One section",
+				"dos_modulos": "Two sections",
+				"tres_modulos": "Three sections"
+			},
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Butcher's chilled counter”: a rectangle, 2.50 by 1.10 metres, marked with the letters “Mc”."
+		},
+		"mostrador_pescaderia": {
+			"nombre": "Fishmonger's ice counter",
+			"descripcion": "Steel table tilted towards the customer and covered in ice, at waist height. It drips constantly: the floor in front is wet and it smells of the sea.",
+			"etiquetas": ["fishmonger's counter", "ice counter", "fish display"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Fishmonger's ice counter”: a rectangle, 2.50 by 1.10 metres, marked with the letters “Mp”."
+		},
+		"suelo_mojado_pescaderia": {
+			"nombre": "Wet fishmonger's floor",
+			"descripcion": "Strip of floor in front of the fish counter, always wet, with a drain grating. It does not block the way, but it is slippery.",
+			"etiquetas": ["wet floor", "fishmonger's puddle", "slippery floor"],
+			"aviso": "Wet fishmonger's floor: slippery.",
+			"imagen": "Footprint of “Wet fishmonger's floor”: a rectangle, 2.50 by 1.00 metres, marked with the letters “Sm”."
+		},
+		"tajo_carnicero": {
+			"nombre": "Butcher's block",
+			"descripcion": "Solid block of wood on legs, hip high, behind the counter. The chopping on it can be heard all over the shop.",
+			"etiquetas": ["butcher's block", "chopping block"],
+			"variantes": {
+				"cuadrado": "Square",
+				"grande": "Large"
+			},
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Butcher's block”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Tc”."
+		},
+		"cortadora_fiambre": {
+			"nombre": "Meat slicer",
+			"descripcion": "Machine with a spinning blade, on a stand at chest height behind the counter. It whistles as it cuts; never touch the blade.",
+			"etiquetas": ["meat slicer", "deli slicer", "slicing machine"],
+			"acciones": {
+				"cortar_fiambre": "Slice cold meat"
+			},
+			"imagen": "Footprint of “Meat slicer”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Cf”."
+		},
+		"ganchos_carniceria": {
+			"nombre": "Butcher's hook rail",
+			"descripcion": "Steel rail on the wall with sharp hooks, empty or holding cuts of meat, above head height. Better not to reach up towards it.",
+			"etiquetas": ["meat hooks", "butcher's rail", "hook rail"],
+			"imagen": "Footprint of “Butcher's hook rail”: a rectangle, 1.50 by 0.15 metres, hanging 1.70 metres above the floor, marked with the letters “Gc”."
+		},
+		"camara_carniceria": {
+			"nombre": "Butcher's cold room",
+			"descripcion": "Cold room of smooth sheet-metal panels with a thick lever-handled door. A blast of cold comes out when it opens; the motor hums on top.",
+			"etiquetas": ["cold room", "walk-in fridge", "meat locker"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Butcher's cold room”: a rectangle, 2.00 by 2.00 metres, marked with the letters “Cc”."
+		},
+		"pantalla_turno": {
+			"nombre": "Hanging queue number display",
+			"descripcion": "Display hung from the ceiling over the counter. It goes «ding» each time the number changes; if you cannot see it you must ask which number is being served.",
+			"etiquetas": ["queue display", "now serving sign", "ticket number display"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Hanging queue number display”: a rectangle, 0.50 by 0.10 metres, hanging 2.10 metres above the floor, marked with the letters “Pt”."
+		},
+		"dispensador_turno_pared": {
+			"nombre": "Wall-mounted ticket roll dispenser",
+			"descripcion": "Small snail-shaped plastic box fixed to the wall or a column at chest height. A paper tab sticks out at the bottom: pull it and tear off your number.",
+			"etiquetas": ["ticket roll dispenser", "take a number dispenser", "queue tickets"],
+			"acciones": {
+				"coger_numero_turno": "Take a number"
+			},
+			"imagen": "Footprint of “Wall-mounted ticket roll dispenser”: a rectangle, 0.20 by 0.15 metres, hanging 1.20 metres above the floor, marked with the letters “Dt”."
+		},
+		"cajas_poliespan": {
+			"nombre": "Stack of fish boxes",
+			"descripcion": "White polystyrene boxes stacked by the counter, wet and icy. Light: push them and the stack falls over.",
+			"etiquetas": ["fish boxes", "polystyrene boxes", "ice boxes"],
+			"imagen": "Footprint of “Stack of fish boxes”: a rectangle, 0.60 by 0.40 metres, marked with the letters “Cp”."
+		},
+		"asador_pollos": {
+			"nombre": "Chicken rotisserie",
+			"descripcion": "Glass and steel oven where chickens turn on spits. It throws out heat at the front, you can smell it from the street and the glass burns.",
+			"etiquetas": ["chicken rotisserie", "rotisserie oven", "roast chicken oven"],
+			"imagen": "Footprint of “Chicken rotisserie”: a rectangle, 1.00 by 0.70 metres, marked with the letters “Ap”."
+		},
+		"mostrador_ferreteria": {
+			"nombre": "Ironmonger's counter",
+			"descripcion": "Long counter of worn wood with a measuring rule nailed along its edge and drawers on the inside. You are served from the other side: here you hardly pick anything yourself.",
+			"etiquetas": ["ironmonger's counter", "hardware shop counter"],
+			"variantes": {
+				"corto": "Short",
+				"normal": "Standard",
+				"largo": "Long"
+			},
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Ironmonger's counter”: a rectangle, 2.50 by 0.70 metres, marked with the letters “Mf”."
+		},
+		"mueble_tornilleria": {
+			"nombre": "Screw drawer cabinet",
+			"descripcion": "A whole wall of small metal drawers behind the counter, each with its pull. Screws, nuts and washers rattle inside.",
+			"etiquetas": ["screw drawer cabinet", "small parts cabinet", "hardware drawers"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Screw drawer cabinet”: a rectangle, 2.00 by 0.40 metres, marked with the letters “Mt”."
+		},
+		"panel_herramientas": {
+			"nombre": "Tool pegboard",
+			"descripcion": "Perforated metal panel on the wall with tools hanging on hooks. Handles and points stick out from hip to head height; there is nothing lower down.",
+			"etiquetas": ["pegboard", "tool board", "tool wall"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Tool pegboard”: a rectangle, 2.00 by 0.15 metres, hanging 0.60 metres above the floor, marked with the letters “Ph”."
+		},
+		"cubos_apilados_ferreteria": {
+			"nombre": "Stacked buckets and drums on the floor",
+			"descripcion": "Towers of nested plastic buckets and drums on the floor beside the aisle. They sound hollow and the tower leans and falls if pushed.",
+			"etiquetas": ["stacked buckets", "drums", "tubs"],
+			"imagen": "Footprint of “Stacked buckets and drums on the floor”: an irregular heap, 0.80 by 0.60 metres, marked with the letters “Ca”."
+		},
+		"escaleras_expuestas": {
+			"nombre": "Ladders on display",
+			"descripcion": "Several aluminium ladders leaning against the wall. Their feet stick out into the path at the bottom and the rails stand away from the wall at face height.",
+			"etiquetas": ["ladders", "step ladders", "ladders on display"],
+			"imagen": "Footprint of “Ladders on display”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Ee”."
+		},
+		"bidon_tubos_listones": {
+			"nombre": "Pipes and battens standing in a drum",
+			"descripcion": "Drum full of pipes, battens and handles standing upright and fanning out. The cane finds the drum, but the tips lean further out, at face height.",
+			"etiquetas": ["pipes in a drum", "battens", "standing profiles"],
+			"imagen": "Footprint of “Pipes and battens standing in a drum”: a circle, 0.50 by 0.50 metres, marked with the letters “Bt”."
+		},
+		"duplicadora_llaves": {
+			"nombre": "Key cutting machine",
+			"descripcion": "Small machine on a stand next to a board of hanging keys. When cutting a key it screeches loudly for a few seconds and throws filings.",
+			"etiquetas": ["key cutting machine", "key duplicator", "key cutter"],
+			"acciones": {
+				"copiar_llave": "Have a key cut",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Key cutting machine”: a rectangle, 0.50 by 0.50 metres, marked with the letters “Dl”."
+		},
+		"rollos_cadena": {
+			"nombre": "Chain and rope reel rack",
+			"descripcion": "Frame holding reels of chain, rope and cable one above another. The loose ends hang and jingle; a cutter at the bottom cuts to length.",
+			"etiquetas": ["chain reels", "rope reels", "chain by the metre"],
+			"acciones": {
+				"cortar_trozo": "Cut a length"
+			},
+			"imagen": "Footprint of “Chain and rope reel rack”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Rc”."
+		},
+		"carretillas_expuestas": {
+			"nombre": "Wheelbarrows on display",
+			"descripcion": "Sheet-metal wheelbarrows at the door or in the aisle, sometimes nested. The handles stick out behind at knee height; the tub rings like hollow metal.",
+			"etiquetas": ["wheelbarrows", "builder's barrows"],
+			"variantes": {
+				"una": "One wheelbarrow",
+				"tres": "Three in a row",
+				"encajadas": "Several nested"
+			},
+			"imagen": "Footprint of “Wheelbarrows on display”: a tub narrowing towards the front wheel, with the two handles sticking out at the back, 0.65 by 1.40 metres, marked with the letters “Ce”."
+		},
+		"sacos_cemento": {
+			"nombre": "Stacked cement bags",
+			"descripcion": "Paper bags of cement or plaster stacked on a pallet, knee to waist high. Hard as stone and dusty to the touch.",
+			"etiquetas": ["cement bags", "plaster bags", "stacked sacks"],
+			"imagen": "Footprint of “Stacked cement bags”: a rectangle, 0.80 by 1.20 metres, marked with the letters “Sc”."
+		},
+		"mezcladora_pintura": {
+			"nombre": "Paint mixing machine",
+			"descripcion": "Chest-high metal cabinet that takes a tin of paint. Once started it shakes the tin with a to-and-fro hum for a minute.",
+			"etiquetas": ["paint mixer", "paint shaker", "tinting machine"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Paint mixing machine”: a rectangle, 0.80 by 0.70 metres, marked with the letters “Mp”."
+		},
+		"portarrollos_hule": {
+			"nombre": "Oilcloth and plastic roll rack",
+			"descripcion": "Frame holding wide rolls lying one above another: oilcloth, plastic sheeting, mesh. The rolls turn when touched and the loose end hangs down.",
+			"etiquetas": ["roll rack", "oilcloth rolls", "sheeting by the metre"],
+			"acciones": {
+				"cortar_trozo": "Cut a length"
+			},
+			"imagen": "Footprint of “Oilcloth and plastic roll rack”: a rectangle, 1.80 by 0.60 metres, marked with the letters “Ph”."
+		},
+		"muestrario_hojas": {
+			"nombre": "Swing-panel sample display",
+			"descripcion": "Boards of samples (knobs, tiles, flooring) hinged on a post and turned like the pages of a book. One left open sticks out edge-on into the aisle.",
+			"etiquetas": ["swing-panel display", "sample wing rack", "flip display"],
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Swing-panel sample display”: a semicircle, straight at the back and round at the front, 0.80 by 0.50 metres, marked with the letters “Mh”."
+		},
+		"perchero_pared_voladizo": {
+			"nombre": "Wall-mounted clothes rail",
+			"descripcion": "Rail projecting from the wall, with no legs, hung with clothes. The clothes start at hip height: the cane passes beneath and you walk into the garments.",
+			"etiquetas": ["wall rail", "wall-mounted garment rail", "hanging rail"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Wall-mounted clothes rail”: a rectangle, 1.20 by 0.50 metres, hanging 0.80 metres above the floor, marked with the letters “Pp”."
+		},
+		"perchero_cruz": {
+			"nombre": "Four-arm clothes rack",
+			"descripcion": "Central post with four arms in a cross, loaded with clothes. The arm ends are metal and at chest height; there is a gap between one arm and the next.",
+			"etiquetas": ["four-arm rack", "four-way garment rack"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Four-arm clothes rack”: a cross, 1.00 by 1.00 metres, marked with the letters “Pc”."
+		},
+		"burro_reposicion": {
+			"nombre": "Loaded restocking rail in the aisle",
+			"descripcion": "Tall wheeled rail, fully loaded and with boxes on its base, that staff leave in the middle of the aisle while restocking. It rolls if pushed.",
+			"etiquetas": ["restocking rail", "rolling garment rack", "stock rail"],
+			"imagen": "Footprint of “Loaded restocking rail in the aisle”: a rectangle with rounded corners, 1.60 by 0.60 metres, marked with the letters “Br”."
+		},
+		"mesa_ropa_doblada": {
+			"nombre": "Folded clothes table",
+			"descripcion": "Wide hip-high table with piles of folded clothes. Soft on top with a hard edge; a lower one is often half tucked beneath it.",
+			"etiquetas": ["folded clothes table", "display table", "nesting tables"],
+			"variantes": {
+				"normal": "Standard",
+				"nido": "Two-tier nest"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Folded clothes table”: a rectangle, 1.40 by 0.80 metres, marked with the letters “Mr”."
+		},
+		"busto_sastre": {
+			"nombre": "Tailor's dummy on a stand",
+			"descripcion": "Fabric torso with no head or arms on a three-legged stand. To the touch it feels like a person's chest; the legs stick out at the bottom.",
+			"etiquetas": ["tailor's dummy", "dress form", "bust form"],
+			"imagen": "Footprint of “Tailor's dummy on a stand”: a triangle pointing to the front, 0.45 by 0.35 metres, marked with the letters “Bs”."
+		},
+		"tarima_maniquies": {
+			"nombre": "Mannequin platform",
+			"descripcion": "Low platform with several dressed mannequins on it. First you trip on the platform step; then your hand finds figures that feel like people standing still.",
+			"etiquetas": ["mannequin platform", "mannequin group", "display plinth"],
+			"imagen": "Footprint of “Mannequin platform”: a rectangle with cut corners, 2.00 by 1.00 metres, marked with the letters “Tm”."
+		},
+		"fila_probadores": {
+			"nombre": "Row of curtained fitting rooms",
+			"descripcion": "Several cubicles in a row, divided by thin partitions and closed at the front by curtains. Follow the row by touch: curtain, partition, curtain. Inside are a bench and hooks.",
+			"etiquetas": ["row of fitting rooms", "changing cubicles", "fitting room block"],
+			"variantes": {
+				"dos": "Two cubicles",
+				"tres": "Three cubicles",
+				"cinco": "Five cubicles"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"probarse_ropa": "Try the clothes on"
+			},
+			"imagen": "Footprint of “Row of curtained fitting rooms”: a comb: a bar with bodies sticking out to the front, 3.40 by 1.30 metres, marked with the letters “Fp”."
+		},
+		"probador_puerta": {
+			"nombre": "Fitting room with a door",
+			"descripcion": "Roomy cubicle with a bolted door instead of a curtain, a fixed bench and a grab rail: the accessible fitting room. If the bolt is across, it is occupied.",
+			"etiquetas": ["fitting room with door", "accessible fitting room", "changing room"],
+			"variantes": {
+				"normal": "Standard",
+				"adaptado": "Accessible"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"probarse_ropa": "Try the clothes on"
+			},
+			"imagen": "Footprint of “Fitting room with a door”: a U open at the front, 1.60 by 1.80 metres, marked with the letters “Pp”."
+		},
+		"puf_probadores": {
+			"nombre": "Round waiting pouffe by the fitting rooms",
+			"descripcion": "Large round upholstered seat with no back, in front of the fitting rooms, where companions wait. Low: at knee height.",
+			"etiquetas": ["pouffe", "round ottoman", "waiting seat"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Round waiting pouffe by the fitting rooms”: a circle, 1.20 by 1.20 metres, marked with the letters “Pp”."
+		},
+		"espejo_pie_inclinado": {
+			"nombre": "Leaning floor mirror",
+			"descripcion": "Large framed mirror standing on the floor and leaning against the wall. Its base stands out from the wall: your foot finds it before your hand does.",
+			"etiquetas": ["floor mirror", "leaning mirror", "full-length mirror"],
+			"acciones": {
+				"mirarse_espejo": "Look at yourself"
+			},
+			"imagen": "Footprint of “Leaning floor mirror”: a rectangle, 0.60 by 0.40 metres, marked with the letters “Ep”."
+		},
+		"mostrador_caja_ropa": {
+			"nombre": "Clothes shop till counter",
+			"descripcion": "L-shaped counter where you pay and clothes are folded. On top are the beeping scanner, the till and the tag remover; the bags are underneath.",
+			"etiquetas": ["till counter", "cash desk", "pay point"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Clothes shop till counter”: an L shape, 2.00 by 1.20 metres, marked with the letters “Mc”."
+		},
+		"expositor_complementos": {
+			"nombre": "Accessories stand",
+			"descripcion": "Six-sided tower with hooks holding bags, belts and scarves. The hanging items swing when brushed and the hook ends are metal.",
+			"etiquetas": ["accessories stand", "bag display", "belt tower"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Accessories stand”: a hexagon, 0.80 by 0.80 metres, marked with the letters “Ec”."
+		},
+		"cesta_ofertas": {
+			"nombre": "Bargain bin",
+			"descripcion": "Large hip-high wire-mesh bin full of jumbled clothes. Usually in the middle of the way or by the door; it sounds like wire.",
+			"etiquetas": ["bargain bin", "sale bin", "dump bin"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Bargain bin”: a rectangle with cut corners, 0.80 by 0.80 metres, marked with the letters “Co”."
+		},
+		"estantes_zapatos_pared": {
+			"nombre": "Wall shelves of shoes",
+			"descripcion": "Narrow shelves projecting from the wall one above another, with a single shoe at each place. The lowest is above knee height: the cane does not touch them.",
+			"etiquetas": ["shoe shelves", "shoe wall", "footwear display"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Wall shelves of shoes”: a rectangle, 2.00 by 0.30 metres, hanging 0.50 metres above the floor, marked with the letters “Ez”."
+		},
+		"espejo_bajo_zapateria": {
+			"nombre": "Low tilted shoe mirror",
+			"descripcion": "Small mirror on the floor, tilted upwards, for looking at your feet. It is below knee height and stands by the benches: easy to trip over.",
+			"etiquetas": ["shoe mirror", "low mirror", "foot mirror"],
+			"acciones": {
+				"mirarse_espejo": "Look at yourself"
+			},
+			"imagen": "Footprint of “Low tilted shoe mirror”: a trapezoid, narrower at the back, 0.40 by 0.35 metres, marked with the letters “Eb”."
+		},
+		"medidor_pies": {
+			"nombre": "Foot measuring gauge",
+			"descripcion": "Metal plate on the floor with a heel stop and a slider to measure the foot. It does not block the way, but you can step on it and slip.",
+			"etiquetas": ["foot gauge", "foot measurer", "shoe size gauge"],
+			"acciones": {
+				"medirse_pie": "Measure your foot"
+			},
+			"imagen": "Footprint of “Foot measuring gauge”: a rectangle, 0.15 by 0.35 metres, marked with the letters “Mp”."
+		},
+		"expositor_central_zapatos": {
+			"nombre": "Central shoe display",
+			"descripcion": "Stepped unit in the middle of the shoe shop, like a low pyramid, with shoes on each step. The first step is at shin height.",
+			"etiquetas": ["shoe display", "shoe island", "stepped display"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Central shoe display”: a rectangle with rounded corners, 1.40 by 1.20 metres, marked with the letters “Ec”."
+		},
+		"pila_cajas_zapatos": {
+			"nombre": "Stack of shoe boxes",
+			"descripcion": "Tower of cardboard boxes beside a bench or in the aisle while someone tries shoes on. Light: brush against it and it collapses.",
+			"etiquetas": ["shoe boxes", "stack of boxes", "box tower"],
+			"imagen": "Footprint of “Stack of shoe boxes”: a rectangle, 0.60 by 0.35 metres, marked with the letters “Pc”."
+		},
+		"mesa_novedades": {
+			"nombre": "Bookshop new releases table",
+			"descripcion": "Large table near the entrance covered with piles of books at different heights. The piles topple easily if you sweep a hand across the table.",
+			"etiquetas": ["new releases table", "book table", "front table"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Bookshop new releases table”: a rectangle, 1.50 by 1.00 metres, marked with the letters “Mn”."
+		},
+		"estanteria_escalera_corredera": {
+			"nombre": "Floor-to-ceiling bookcase with sliding ladder",
+			"descripcion": "Wall of books up to the ceiling with a leaning ladder running on a rail. The ladder sticks a metre out into the aisle and is never in the same place.",
+			"etiquetas": ["bookcase with ladder", "rolling library ladder", "wall of books"],
+			"acciones": {
+				"correr_escalera": "Slide the ladder",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Floor-to-ceiling bookcase with sliding ladder”: a T shape, 2.40 by 1.00 metres, marked with the letters “Ee”."
+		},
+		"mostrador_papeleria": {
+			"nombre": "Stationer's counter",
+			"descripcion": "Crowded L-shaped counter: pots of pens, small display stands and the till. Feel carefully to find a clear spot to put things down.",
+			"etiquetas": ["stationer's counter", "stationery shop counter"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Stationer's counter”: an L shape, 2.00 by 1.50 metres, marked with the letters “Mp”."
+		},
+		"banqueta_rodante_libreria": {
+			"nombre": "Rolling library step stool",
+			"descripcion": "Low round plastic step with hidden castors: it rolls if pushed and locks when someone stands on it. It gets left behind in the aisles.",
+			"etiquetas": ["kick stool", "rolling step stool", "library step"],
+			"acciones": {
+				"subir": "Climb on",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Rolling library step stool”: a circle, 0.44 by 0.44 metres, marked with the letters “Br”."
+		},
+		"mostrador_estanco": {
+			"nombre": "Tobacconist's counter with display case",
+			"descripcion": "Short, tall counter with a glass top and a change tray. Behind it, a whole wall of packets; the shopkeeper hands you everything.",
+			"etiquetas": ["tobacconist's counter", "tobacco shop counter"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Tobacconist's counter with display case”: a rectangle, 1.80 by 0.65 metres, marked with the letters “Me”."
+		},
+		"expositor_prensa_exterior": {
+			"nombre": "Doorway newspaper and magazine stand",
+			"descripcion": "Wheeled wire stand full of newspapers and magazines, put out by the door each morning. It narrows the entrance and is on one side one day and the other the next.",
+			"etiquetas": ["newspaper stand", "magazine stand", "press rack"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Doorway newspaper and magazine stand”: a rectangle, 0.80 by 0.50 metres, marked with the letters “Ep”."
+		},
+		"maquina_recargas": {
+			"nombre": "Top-up machine",
+			"descripcion": "Narrow free-standing machine with a screen, keys and a slot, for topping up a travel card or a phone. It beeps when payment is accepted.",
+			"etiquetas": ["top-up machine", "travel card top-up", "recharge terminal"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Top-up machine”: a rectangle, 0.50 by 0.40 metres, marked with the letters “Mr”."
+		},
+		"mesa_optica": {
+			"nombre": "Optician's fitting table with chairs",
+			"descripcion": "Small table set crosswise, with the optician's chair behind and two chairs in front. On it are a table mirror and trays of frames.",
+			"etiquetas": ["optician's table", "dispensing table", "fitting desk"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Optician's fitting table with chairs”: a table set crosswise with one chair behind and two in front, 1.20 by 1.60 metres, marked with the letters “Mo”."
+		},
+		"expositor_gafas_pared": {
+			"nombre": "Wall glasses display",
+			"descripcion": "Lit panel on the wall with rows of glasses on holders, from waist to head height. It gives off a little warmth; the glasses fall if you run a hand along quickly.",
+			"etiquetas": ["glasses display", "frame wall", "eyewear display"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Wall glasses display”: a rectangle, 1.20 by 0.15 metres, hanging 0.80 metres above the floor, marked with the letters “Eg”."
+		},
+		"columna_espejos_optica": {
+			"nombre": "Optician's mirror column",
+			"descripcion": "Eight-sided mirrored column in the middle of the shop with sunglasses on holders. Smooth and cold; confusing with low vision because it reflects the shop.",
+			"etiquetas": ["mirror column", "sunglasses tower", "mirrored pillar"],
+			"acciones": {
+				"mirarse_espejo": "Look at yourself"
+			},
+			"imagen": "Footprint of “Optician's mirror column”: an octagon, 0.50 by 0.50 metres, marked with the letters “Ce”."
+		},
+		"sillon_gabinete_optica": {
+			"nombre": "Refraction chair with phoropter",
+			"descripcion": "Tall chair with a footrest and, to one side, a column with an arm carrying the sight-testing instrument. The arm is at face height: swing it out of the way.",
+			"etiquetas": ["refraction unit", "phoropter chair", "eye test chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Refraction chair with phoropter”: an L shape, 1.20 by 1.20 metres, marked with the letters “Sg”."
+		},
+		"vitrina_columna_joyeria": {
+			"nombre": "Jeweller's tower showcase",
+			"descripcion": "Narrow tower with glass on all four sides, locked, on a plinth. Hard to see, and it rings like glass at the slightest touch.",
+			"etiquetas": ["tower showcase", "jewellery display tower", "glass showcase"],
+			"imagen": "Footprint of “Jeweller's tower showcase”: a rectangle, 0.50 by 0.50 metres, marked with the letters “Vc”."
+		},
+		"mostrador_joyeria": {
+			"nombre": "L-shaped jeweller's counter",
+			"descripcion": "All-glass counter with the jewellery inside and a velvet mat on top for showing pieces. There are often high stools in front to sit on.",
+			"etiquetas": ["jeweller's counter", "jewellery showcase counter"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “L-shaped jeweller's counter”: an L shape, 2.20 by 1.60 metres, marked with the letters “Mj”."
+		},
+		"puerta_joyeria": {
+			"nombre": "Jeweller's door with buzzer entry",
+			"descripcion": "Thick glass door that is always locked. Press the bell beside it at chest height: a buzzer sounds and only then does it give when pushed. It locks again by itself.",
+			"etiquetas": ["buzzer door", "jeweller's door", "door with entry buzzer"],
+			"acciones": {
+				"llamar_timbre_tienda": "Ring the bell",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Jeweller's door with buzzer entry”: a rectangle, 0.95 by 0.10 metres, marked with the letters “Pj”."
+		},
+		"cubos_flores_gradas": {
+			"nombre": "Tiered flower buckets",
+			"descripcion": "Buckets of water and cut flowers on steps, wider at the front. The flowers and leaves brush you first; the scent is strong and the floor around is often wet.",
+			"etiquetas": ["flower buckets", "tiered flower stand", "cut flowers"],
+			"acciones": {
+				"oler_flores": "Smell the flowers",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Tiered flower buckets”: a trapezoid, narrower at the back, 1.50 by 1.00 metres, marked with the letters “Cf”."
+		},
+		"mesa_ramos": {
+			"nombre": "Bouquet-making bench",
+			"descripcion": "Tall workbench where bouquets are made up: rolls of paper and ribbon hang from a bar, with scissors on top and cut stems on the floor.",
+			"etiquetas": ["bouquet bench", "florist's workbench", "wrapping table"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Bouquet-making bench”: a rectangle, 1.60 by 0.80 metres, marked with the letters “Mr”."
+		},
+		"camara_flores": {
+			"nombre": "Flower cooler",
+			"descripcion": "Large cabinet with sliding glass doors, cold and misted to the touch, with buckets of flowers inside. It hums; cool damp air comes out when opened.",
+			"etiquetas": ["flower cooler", "floral fridge", "flower cold cabinet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Flower cooler”: a rectangle, 1.80 by 0.80 metres, marked with the letters “Cf”."
+		},
+		"plantas_colgantes": {
+			"nombre": "Hanging plants",
+			"descripcion": "Pots hung from the ceiling on chains, with stems trailing down to face height. The leaves brush you first; the pot, higher up, is hard.",
+			"etiquetas": ["hanging plants", "hanging baskets", "hanging pots"],
+			"imagen": "Footprint of “Hanging plants”: a circle, 0.40 by 0.40 metres, hanging 1.40 metres above the floor, marked with the letters “Pc”."
+		},
+		"mesa_dispositivos": {
+			"nombre": "Display table with tethered devices",
+			"descripcion": "Long table with rounded edges holding phones and tablets on short cables. You can pick them up but the cable pulls back; force it and an alarm goes off.",
+			"etiquetas": ["device display table", "phone table", "demo table"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Display table with tethered devices”: a rectangle with rounded corners, 2.00 by 0.90 metres, marked with the letters “Md”."
+		},
+		"pared_televisores": {
+			"nombre": "Wall of switched-on televisions",
+			"descripcion": "Wall full of screens all switched on. A murmur of voices and music carries from afar: it tells you where the back of the shop is.",
+			"etiquetas": ["television wall", "wall of screens", "tv display"],
+			"imagen": "Footprint of “Wall of switched-on televisions”: a rectangle, 3.00 by 0.40 metres, marked with the letters “Pt”."
+		},
+		"puesto_videojuegos": {
+			"nombre": "Video game demo pod",
+			"descripcion": "Column with a screen at face height and, on a ledge at waist height, a controller on a cable. Children are usually standing in front of it.",
+			"etiquetas": ["game demo pod", "console kiosk", "demo station"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Video game demo pod”: a trapezoid, narrower at the back, 0.80 by 0.60 metres, marked with the letters “Pv”."
+		},
+		"fila_electrodomesticos": {
+			"nombre": "Row of appliances on display",
+			"descripcion": "Washing machines and ovens displayed in a row on a low plinth. You follow a wall of smooth metal with round doors; the plinth makes a step in front.",
+			"etiquetas": ["appliances on display", "row of washing machines", "white goods"],
+			"variantes": {
+				"tres": "Three appliances",
+				"cinco": "Five appliances",
+				"frigorificos": "Row of fridges"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Row of appliances on display”: a rectangle, 3.00 by 0.70 metres, marked with the letters “Fe”."
+		},
+		"gondola_baja_jugueteria": {
+			"nombre": "Low toy shop gondola",
+			"descripcion": "Double-sided shelf unit reaching an adult's chest so children can reach. Boxes stick out and you can hear over the top who is on the other side.",
+			"etiquetas": ["toy gondola", "low toy shelving", "toy aisle unit"],
+			"variantes": {
+				"un_modulo": "One section",
+				"dos_modulos": "Two sections"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Low toy shop gondola”: a rectangle, 1.30 by 0.80 metres, marked with the letters “Gb”."
+		},
+		"cesto_pelotas": {
+			"nombre": "Ball cage",
+			"descripcion": "Tall mesh cage full of balls, open at the top. Reach in and the balls roll and bounce; the mesh gives if you lean on it.",
+			"etiquetas": ["ball cage", "ball bin", "football bin"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Ball cage”: a hexagon, 0.80 by 0.80 metres, marked with the letters “Cp”."
+		},
+		"mesa_juego_demostracion": {
+			"nombre": "Toy demonstration play table",
+			"descripcion": "Very low table, at an adult's knee height, with a train set or building bricks to try. Children sit on the floor around it among loose pieces.",
+			"etiquetas": ["play table", "train table", "demo play table"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Toy demonstration play table”: a rectangle with rounded corners, 1.20 by 0.80 metres, marked with the letters “Mj”."
+		},
+		"peluche_gigante": {
+			"nombre": "Giant soft toy at the entrance",
+			"descripcion": "Teddy bear taller than a child, sitting by the door. Soft and furry: to the touch it feels like someone sitting on the floor.",
+			"etiquetas": ["giant teddy", "giant soft toy", "shop mascot"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Giant soft toy at the entrance”: a teardrop, round at the back and pointed at the front, 1.00 by 1.00 metres, marked with the letters “Pg”."
+		},
+		"fila_bicicletas_infantiles": {
+			"nombre": "Row of children's bikes and trikes",
+			"descripcion": "Small bikes and tricycles in a row with their front wheels towards the aisle. Handlebars at hip height and pedals that catch the cane.",
+			"etiquetas": ["children's bikes", "tricycles", "row of bikes"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Row of children's bikes and trikes”: a comb: a bar with bodies sticking out to the front, 2.50 by 1.20 metres, marked with the letters “Fb”."
+		},
+		"mercancia_colgada_bazar": {
+			"nombre": "Goods hanging in the bazaar aisle",
+			"descripcion": "Strips of bags, mops, toys and umbrellas hung from the ceiling or the shelf edge at head height. The cane gives no warning: they keep hitting your face.",
+			"etiquetas": ["hanging goods", "hanging strips", "overhead clutter"],
+			"imagen": "Footprint of “Goods hanging in the bazaar aisle”: a rectangle, 1.00 by 0.30 metres, hanging 1.30 metres above the floor, marked with the letters “Mc”."
+		},
+		"cestos_suelo_bazar": {
+			"nombre": "Baskets on the bazaar floor",
+			"descripcion": "Row of low baskets and tubs at the foot of the shelves, full of loose items. They narrow the aisle further and are below knee height.",
+			"etiquetas": ["floor baskets", "tubs on the floor", "bargain tubs"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Baskets on the bazaar floor”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Cs”."
+		},
+		"estanteria_bazar": {
+			"nombre": "Floor-to-ceiling bazaar shelving",
+			"descripcion": "Metal shelving crammed from floor to ceiling. The aisles between two of them are so narrow you touch both at once with your elbows.",
+			"etiquetas": ["bazaar shelving", "narrow aisle shelving", "pound shop shelves"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Floor-to-ceiling bazaar shelving”: a rectangle, 2.00 by 0.40 metres, marked with the letters “Eb”."
+		},
+		"mostrador_telas": {
+			"nombre": "Fabric cutting counter",
+			"descripcion": "Very long, smooth counter with a measure set into its edge. The bolt of cloth is unrolled on it with dull thumps and cut with shears.",
+			"etiquetas": ["fabric counter", "cutting counter", "haberdashery counter"],
+			"acciones": {
+				"cortar_trozo": "Cut a length",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Fabric cutting counter”: a rectangle, 2.50 by 0.90 metres, marked with the letters “Mt”."
+		},
+		"rollos_tela_pie": {
+			"nombre": "Bolts of cloth standing on end",
+			"descripcion": "Bolts of cloth stood on end against the wall, close together. Soft and heavy; one may slip and lean out into the aisle.",
+			"etiquetas": ["bolts of cloth", "fabric rolls", "cloth rolls"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Bolts of cloth standing on end”: a rectangle, 1.50 by 0.40 metres, marked with the letters “Rt”."
+		},
+		"zona_descanso_sillones": {
+			"nombre": "Seating area with armchairs",
+			"descripcion": "Four upholstered armchairs facing a low coffee table, as an island in the middle of the mall. Soft and quiet; the table, lower than the seats, is what trips you.",
+			"etiquetas": ["seating area", "armchairs", "mall lounge", "rest area"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Seating area with armchairs”: a cross, 2.60 by 2.60 metres, marked with the letters “Zd”."
+		},
+		"banco_jardinera_galeria": {
+			"nombre": "Bench round a planter",
+			"descripcion": "Square planter with an indoor tree, surrounded on all four sides by a backless slatted bench. Trail the bench with your hand to go round it; above, the leaves brush your head.",
+			"etiquetas": ["planter bench", "mall bench", "bench seating"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Bench round a planter”: a rectangle with cut corners, 2.40 by 2.40 metres, marked with the letters “Bj”."
+		},
+		"fuente_galeria": {
+			"nombre": "Indoor mall fountain",
+			"descripcion": "Low round basin with a marble rim at seat height and jets that rise and fall. You hear it across half the mall and it makes a meeting point; the rim is wet and beyond it is water.",
+			"etiquetas": ["fountain", "mall fountain", "indoor pool"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"aviso": "Fountain rim: water beyond.",
+			"imagen": "Footprint of “Indoor mall fountain”: a circle, 3.50 by 3.50 metres, marked with the letters “Fg”."
+		},
+		"barandilla_atrio": {
+			"nombre": "Glass atrium balustrade",
+			"descripcion": "Thick glass parapet with a steel handrail at chest height, running round the central void between floors. The glass sounds hollow and is hard to see; beyond it there is no floor: you hear the levels below.",
+			"etiquetas": ["atrium balustrade", "glass railing", "atrium void", "handrail"],
+			"variantes": {
+				"tramo": "Four-metre run",
+				"tramo_largo": "Ten-metre run"
+			},
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"aviso": "Atrium balustrade: a drop of several floors lies beyond.",
+			"imagen": "Footprint of “Glass atrium balustrade”: a rectangle, 4.00 by 0.10 metres, marked with the letters “Ba”."
+		},
+		"macetero_palmera_galeria": {
+			"nombre": "Large planter with a palm",
+			"descripcion": "Tall, heavy planter with an indoor palm. The cane finds the pot, but the long, spreading fronds stick out much further at face height.",
+			"etiquetas": ["planter", "indoor palm", "large plant pot"],
+			"imagen": "Footprint of “Large planter with a palm”: a circle, 0.80 by 0.80 metres, marked with the letters “Mp”."
+		},
+		"isla_venta_galeria": {
+			"nombre": "Mall island kiosk",
+			"descripcion": "Counter closed on all four sides in the middle of the mall, with the seller inside and displays of phone cases, glasses or watches on top. It splits the walkway in two: go round either side.",
+			"etiquetas": ["mall kiosk", "retail island", "mall island"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Mall island kiosk”: a rectangle with cut corners, 3.00 by 2.00 metres, marked with the letters “Iv”."
+		},
+		"carro_venta_galeria": {
+			"nombre": "Decorative merchandise cart",
+			"descripcion": "Wooden cart with two large spoked wheels, just for show, and a fabric canopy on four poles. Keyrings, bags or sweets hang from the edges down to face height.",
+			"etiquetas": ["merchandise cart", "retail cart", "mall cart"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Decorative merchandise cart”: a cart with two large wheels sticking out at the sides, 1.80 by 1.00 metres, marked with the letters “Cv”."
+		},
+		"isla_helados_crepes": {
+			"nombre": "Ice cream and waffle island",
+			"descripcion": "Elongated counter in the middle of the mall, with a cold ice cream display and a hot waffle iron. It smells of sugar and toasted batter from afar; there is a queue around it and the floor is sticky.",
+			"etiquetas": ["ice cream kiosk", "waffle stand", "crepe island"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Ice cream and waffle island”: an elongated oval with straight sides and round ends, 3.00 by 1.50 metres, marked with the letters “Ih”."
+		},
+		"stand_promocion": {
+			"nombre": "Promotional stand with host",
+			"descripcion": "Light curved counter set up in the mall for a few days, with leaflets and samples on top and someone who comes over to offer them. It moves around; behind it there is usually an advertising panel.",
+			"etiquetas": ["promotional stand", "promo desk", "sampling stand"],
+			"acciones": {
+				"coger": "Take",
+				"preguntar_info": "Ask"
+			},
+			"imagen": "Footprint of “Promotional stand with host”: a semicircle, straight at the back and round at the front, 1.50 by 0.80 metres, marked with the letters “Sp”."
+		},
+		"maquina_balanceo_monedas": {
+			"nombre": "Coin-operated kiddie ride",
+			"descripcion": "Fibreglass figure for one child (a pony, a car, a helicopter) on a base. Drop a coin in and it rocks with a little tune for a minute; the base sticks out at floor level.",
+			"etiquetas": ["kiddie ride", "coin-operated ride", "rocking ride"],
+			"variantes": {
+				"caballito": "Pony",
+				"coche": "Car",
+				"helicoptero": "Helicopter"
+			},
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Coin-operated kiddie ride”: an oval, 0.80 by 1.20 metres, marked with the letters “Mb”."
+		},
+		"sillon_masaje_monedas": {
+			"nombre": "Coin-operated massage chair",
+			"descripcion": "Large padded armchair with a footrest, set against a wall or pillar. With a coin, rollers move up and down your back for a few minutes with a hum; the footrest sticks out.",
+			"etiquetas": ["massage chair", "coin massage chair"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Coin-operated massage chair”: a rectangle, 0.90 by 1.50 metres, marked with the letters “Sm”."
+		},
+		"parque_bolas_galeria": {
+			"nombre": "Soft play area with nets",
+			"descripcion": "Enclosure netted up to the ceiling with several levels of padded platforms, slides and a ball pit. You enter through a desk where shoes come off; continuous shrieking comes from inside.",
+			"etiquetas": ["soft play", "indoor playground", "ball pit", "play centre"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Soft play area with nets”: an L shape, 8.00 by 6.00 metres, marked with the letters “Pb”."
+		},
+		"peluche_motorizado": {
+			"nombre": "Ride-on motorised plush animal",
+			"descripcion": "Plush animal the size of a pony, with hidden wheels and a motor, driven around the mall by a child. It moves slowly, whirring and playing a tune, but it may come straight at you and does not stop by itself.",
+			"etiquetas": ["ride-on plush animal", "motorised animal ride", "mall animal ride"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in",
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Ride-on motorised plush animal”: a teardrop, round at the back and pointed at the front, 0.60 by 1.20 metres, marked with the letters “Pm”."
+		},
+		"enfundador_paraguas": {
+			"nombre": "Umbrella bagger",
+			"descripcion": "Hip-high column with a slot on top: put your wet umbrella in, pull it out and it comes out in a plastic sleeve with a crinkle. It stands by the door and the floor around is wet.",
+			"etiquetas": ["umbrella bagger", "umbrella wrapper", "umbrella bag dispenser"],
+			"acciones": {
+				"enfundar_paraguas": "Bag your umbrella"
+			},
+			"imagen": "Footprint of “Umbrella bagger”: a rectangle, 0.40 by 0.40 metres, marked with the letters “Ep”."
+		},
+		"carritos_coche_infantil": {
+			"nombre": "Shopping trolleys with a toy car",
+			"descripcion": "Row of trolleys nested together, each with a plastic car at the front for a child to sit in. They are much longer than an ordinary trolley and the steering wheel sticks out.",
+			"etiquetas": ["car trolley", "kiddie trolley", "child shopping cart"],
+			"variantes": {
+				"dos": "Two trolleys",
+				"cinco": "Five trolleys"
+			},
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Shopping trolleys with a toy car”: the outline of a vehicle, nose at the front, 0.70 by 3.50 metres, marked with the letters “Cc”."
+		},
+		"entrada_aseos_recodo": {
+			"nombre": "Doorless dog-leg toilet entrance",
+			"descripcion": "Doorless entrance to the toilets: a tiled screen wall straight ahead makes you turn a right angle. Follow the wall with your hand; round the corner you hear hand dryers and water, and the echo changes.",
+			"etiquetas": ["toilets", "restrooms", "toilet entrance", "screen wall"],
+			"imagen": "Footprint of “Doorless dog-leg toilet entrance”: an L shape, 2.40 by 2.40 metres, marked with the letters “Ea”."
+		},
+		"puerta_campanilla_tienda": {
+			"nombre": "Shop door with bell",
+			"descripcion": "Wood and glass door with a little bell above that rings when it opens: that is how the shopkeeper knows someone has come in. It is sprung and closes behind you.",
+			"etiquetas": ["shop door", "door bell", "shop entrance"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Shop door with bell”: a rectangle, 0.90 by 0.08 metres, marked with the letters “Pc”."
+		},
+		"escalon_entrada_tienda": {
+			"nombre": "Step at the shop entrance",
+			"descripcion": "A single stone step on the threshold, a hand's width high, between the pavement and the shop floor. Typical of old shops: no handrail and a worn, rounded edge.",
+			"etiquetas": ["step", "entrance step", "threshold step"],
+			"aviso": "Step at the entrance.",
+			"imagen": "Footprint of “Step at the shop entrance”: a rectangle, 1.00 by 0.35 metres, marked with the letters “Ee”."
+		},
+		"rampa_portatil_tienda": {
+			"nombre": "Portable step ramp",
+			"descripcion": "Short aluminium ramp with a non-slip pattern, laid over the entrance step for wheelchairs and pushchairs. It clanks underfoot; when not in use it leans against the wall.",
+			"etiquetas": ["portable ramp", "threshold ramp", "aluminium ramp"],
+			"aviso": "Portable ramp: the floor rises.",
+			"imagen": "Footprint of “Portable step ramp”: a rectangle, 0.80 by 0.90 metres, marked with the letters “Rp”."
+		},
+		"escaparate_galeria": {
+			"nombre": "Shop window",
+			"descripcion": "Floor-to-ceiling glass pane beside the door, with a low plinth and the goods on display behind. It sounds like thick glass and is colder than the wall; trail it with your hand to find the door.",
+			"etiquetas": ["shop window", "display window", "storefront glass"],
+			"imagen": "Footprint of “Shop window”: a rectangle, 3.00 by 0.15 metres, marked with the letters “Eg”."
+		},
+		"cierre_reja_galeria": {
+			"nombre": "Roll-down security grille",
+			"descripcion": "Metal mesh grille that rolls down from the ceiling and closes the whole front of a mall shop. When down it is a wall that rattles and lets air and sound through; it is very noisy going up or down.",
+			"etiquetas": ["security grille", "roller grille", "shop shutter"],
+			"acciones": {
+				"cerrar": "Close",
+				"abrir": "Open"
+			},
+			"imagen": "Footprint of “Roll-down security grille”: a rectangle, 4.00 by 0.10 metres, marked with the letters “Cr”."
+		},
+		"pantalla_atrio": {
+			"nombre": "Advertising screen hung in the atrium",
+			"descripcion": "Huge screen hanging from the atrium ceiling, far above your head. You cannot touch it, but you hear its adverts and music from afar: it tells you where the centre of the mall is.",
+			"etiquetas": ["giant screen", "advertising screen", "video wall"],
+			"imagen": "Footprint of “Advertising screen hung in the atrium”: a rectangle, 5.00 by 0.50 metres, hanging 4.00 metres above the floor, marked with the letters “Pa”."
+		},
+		"coche_exposicion_galeria": {
+			"nombre": "Car on display in the mall",
+			"descripcion": "New car on a low carpeted platform in the middle of the mall, sometimes roped off. Smooth, cold bodywork; the platform edge trips you before you touch the car.",
+			"etiquetas": ["display car", "car promotion", "prize car"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Car on display in the mall”: the outline of a vehicle, nose at the front, 3.00 by 5.50 metres, marked with the letters “Ce”."
+		},
+		"columna_globos": {
+			"nombre": "Opening-day balloon column",
+			"descripcion": "Column of balloons tied round a pole on a water-filled base, by the door of a newly opened shop. Soft, it moves in the air and squeaks when brushed; loose ribbons touch your face.",
+			"etiquetas": ["balloon column", "balloons", "opening decoration"],
+			"acciones": {
+				"explotar": "Pop"
+			},
+			"imagen": "Footprint of “Opening-day balloon column”: a circle, 0.60 by 0.60 metres, marked with the letters “Cg”."
+		},
+		"photocall_galeria": {
+			"nombre": "Photo backdrop with platform",
+			"descripcion": "Large stretched-canvas panel on a frame, with a low platform in front to stand on for photos. Set up in the mall for a few days; the canvas booms like a drum when struck and the frame has feet sticking out at the back.",
+			"etiquetas": ["photocall", "photo backdrop", "photo wall"],
+			"acciones": {
+				"subir": "Climb on",
+				"hacerse_foto": "Have your photo taken"
+			},
+			"imagen": "Footprint of “Photo backdrop with platform”: a T shape, 3.00 by 1.40 metres, marked with the letters “Pg”."
+		}
+	}
+}

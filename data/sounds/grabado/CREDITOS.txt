@@ -1,0 +1,360 @@
+PAQUETE DE SONIDOS «GRABADO» DE ENTORNOLAB
+
+Grabaciones reales de uso libre: pasos sobre doce suelos, golpes, roces, puertas, ascensor, agua, tráfico, máquinas y ambientes de calle, parque, casa, oficina, pasillo y cocina. Paquete parcial: los avisos que codifican información y lo que aún no tiene grabación suenan con el paquete por defecto.
+
+Trae 113 de los 198 sonidos del catálogo. Lo que no trae suena con el paquete por defecto.
+
+CÓMO SE HIZO
+  Con grabaciones de colecciones de sonidos libres, recortadas y niveladas con tools/montar_paquete_grabado.py
+  a partir de la tabla de tools/receta_grabado.py. A cada grabación solo se le ha hecho esto: paso a mono
+  (los ambientes siguen en estéreo), remuestreo a 44,1 kHz, recorte del tramo que se indica, fundidos de
+  entrada y de salida (o fundido cruzado, en los bucles) y una ganancia para igualarla al sonido de serie
+  del mismo nombre. No se ha filtrado, ecualizado ni mezclado nada, y no se ha usado inteligencia artificial.
+  Los ficheros originales no viajan con el programa: aquí solo están los FLAC ya recortados.
+  El tramo exacto de cada uno está en receta.json y lo que se midió, en medidas.json. Para rehacerlo:
+      .venv\Scripts\python.exe tools\montar_paquete_grabado.py --fuentes <carpeta con los originales> --descargadas <carpeta con lo descargado>
+
+LICENCIAS
+  Todas las grabaciones de este paquete están dedicadas al dominio público con Creative Commons Zero
+  (CC0 1.0 Universal): https://creativecommons.org/publicdomain/zero/1.0/deed.es
+  CC0 permite copiar, modificar y redistribuir la obra, también con fines comerciales, sin pedir permiso y
+  sin obligación de citar al autor. Aun así, aquí se cita a cada uno: es de justicia y permite comprobarlo.
+  Los recortes de este paquete se publican con la misma dedicación (CC0 1.0); el resto del programa, con la suya.
+  En «Constancia» se dice dónde figura la licencia de cada colección. Las marcadas como «anotada por el autor
+  de EntornoLab» no traen fichero de licencia propio: conviene volver a comprobar su página antes de publicar.
+  Las grabaciones de Freesound descargadas para este paquete son las vistas previas de alta calidad (OGG): en la
+  página de cada una, que va en su línea, figura «Creative Commons 0». No hay ninguna con licencia CC BY, así que
+  no hace falta texto de atribución obligatorio; si alguna vez se añade, su línea llevará la atribución exacta.
+
+COLECCIONES USADAS
+  «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. 12 sonidos.
+      Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone
+      Constancia: su página de OpenGameArt dice «Author: Fantozzi (Submitted by qubodup)» y «License(s): CC0», y que las tomas salen de un paquete que Fantozzi publicó en Freesound con CC0 (comprobado en su página de OpenGameArt el 26 de noviembre de 2026); la colección no trae fichero de licencia
+  «42 snow and gravel footsteps». Autor: Corsica_S (grabación), recortadas por Iwan Gabovitch (qubodup). Licencia: CC0 1.0. 6 sonidos.
+      Origen: https://opengameart.org/content/42-snow-and-gravel-footsteps
+      Constancia: readme.txt de la colección: el autor dio permiso para publicarlas con CC0
+  «50 RPG sound effects (RPG Audio)». Autor: Kenney Vleugels (www.kenney.nl). Licencia: CC0 1.0. 3 sonidos.
+      Origen: https://opengameart.org/content/50-rpg-sound-effects
+      Constancia: license.txt de la colección
+  «51 UI sound effects (UI Audio)». Autor: Kenney Vleugels (www.kenney.nl). Licencia: CC0 1.0. 3 sonidos.
+      Origen: https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks
+      Constancia: readme.txt de la colección (uso libre, personal y comercial, sin obligación de citar) y anotada como CC0 por el autor de EntornoLab en herramientas/crear_packs.py de Puerto Bravo
+  «100 CC0 SFX #2». Autor: rubberduck. Licencia: CC0 1.0. 5 sonidos.
+      Origen: https://opengameart.org/content/100-cc0-sfx-2
+      Constancia: su página de OpenGameArt dice «Author: rubberduck» y «License(s): CC0» (comprobado en su página de OpenGameArt el 26 de noviembre de 2026); el título también declara CC0
+  «100 CC0 metal and wood SFX». Autor: rubberduck. Licencia: CC0 1.0. 1 sonido.
+      Origen: https://opengameart.org/content/100-cc0-metal-and-wood-sfx
+      Constancia: su página de OpenGameArt dice «Author: rubberduck» y «License(s): CC0» (comprobado en su página de OpenGameArt el 26 de noviembre de 2026); el título también declara CC0
+  «40 CC0 water, splash, slime SFX». Autor: rubberduck. Licencia: CC0 1.0. 1 sonido.
+      Origen: https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+      Constancia: su página de OpenGameArt dice «Author: rubberduck» y «License(s): CC0» (comprobado en su página de OpenGameArt el 26 de noviembre de 2026); el título también declara CC0
+  «Ticking clock». Autor: no indicado en la colección (figura en su página de OpenGameArt). Licencia: CC0 1.0. 1 sonido.
+      Origen: https://opengameart.org/content/ticking-clock-0
+      Constancia: LICENSE.txt de la colección (texto legal de CC0 1.0 Universal)
+  «BigSoundBank.com». Autor: Joseph SARDIN y colaboradores de BigSoundBank.com. Licencia: CC0 1.0. 3 sonidos.
+      Origen: https://bigsoundbank.com
+      Constancia: LEEME.txt del autor junto a los originales: título y página de cada grabación, todas «CC0 (dominio público)»
+  «BigSoundBank.com (descargas de noviembre de 2026)». Autor: Joseph SARDIN y colaboradores de BigSoundBank.com. Licencia: CC0 1.0. 2 sonidos.
+      Origen: https://bigsoundbank.com
+      Constancia: LEEME.txt del autor junto a los originales: en la página de cada una figura «License: CC0 (public domain)», leído el 18 de noviembre de 2026
+  «Freesound (vistas previas de alta calidad)». Autor: varios; el de cada grabación va en su línea. Licencia: CC0 1.0. 3 sonidos.
+      Origen: https://freesound.org
+      Constancia: fuentes.json del autor junto a los originales: título, autor, licencia «CC0 1.0 (Creative Commons 0)» y página de cada grabación
+  «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: varios; el de cada grabación va en su línea. Licencia: CC0 1.0. 73 sonidos.
+      Origen: https://freesound.org
+      Constancia: en la página de Freesound de cada grabación figura «Creative Commons 0» (comprobado al descargarla y otra vez el 26 de noviembre de 2026); inventario.json de adjuntos/fuentes_sonido: página, enlace de descarga, autor, licencia y SHA-256 de cada fichero
+
+QUÉ SONIDO SALE DE DÓNDE
+  eco/chasquido: fleurescence/573148_tongue_click.ogg, «tongue click», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: fleurescence. Licencia: CC0 1.0. Origen: https://freesound.org/people/fleurescence/sounds/573148/. Tramo: del segundo 0,00 al 0,06, con fundidos de entrada y de salida.
+  pasos/baldosa_izq_1: SpliceSound/170500_Footsteps_Tile_Male_Tennis_Shoes_Medium_Pace.ogg, «Footsteps, Tile, Male Tennis Shoes, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/170500/. Tramo: del segundo 2,10 al 2,34, con fundidos de entrada y de salida.
+      Nota: Zapatillas de tenis sobre baldosa.
+  pasos/baldosa_izq_2: SpliceSound/170500_Footsteps_Tile_Male_Tennis_Shoes_Medium_Pace.ogg, «Footsteps, Tile, Male Tennis Shoes, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/170500/. Tramo: del segundo 6,16 al 6,40, con fundidos de entrada y de salida.
+      Nota: Zapatillas de tenis sobre baldosa.
+  pasos/baldosa_izq_3: SpliceSound/170500_Footsteps_Tile_Male_Tennis_Shoes_Medium_Pace.ogg, «Footsteps, Tile, Male Tennis Shoes, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/170500/. Tramo: del segundo 15,52 al 15,76, con fundidos de entrada y de salida.
+      Nota: Zapatillas de tenis sobre baldosa.
+  pasos/baldosa_der_1: SpliceSound/170500_Footsteps_Tile_Male_Tennis_Shoes_Medium_Pace.ogg, «Footsteps, Tile, Male Tennis Shoes, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/170500/. Tramo: del segundo 3,60 al 3,84, con fundidos de entrada y de salida.
+      Nota: Zapatillas de tenis sobre baldosa.
+  pasos/baldosa_der_2: SpliceSound/170500_Footsteps_Tile_Male_Tennis_Shoes_Medium_Pace.ogg, «Footsteps, Tile, Male Tennis Shoes, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/170500/. Tramo: del segundo 14,99 al 15,23, con fundidos de entrada y de salida.
+      Nota: Zapatillas de tenis sobre baldosa.
+  pasos/baldosa_der_3: SpliceSound/170500_Footsteps_Tile_Male_Tennis_Shoes_Medium_Pace.ogg, «Footsteps, Tile, Male Tennis Shoes, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/170500/. Tramo: del segundo 16,54 al 16,78, con fundidos de entrada y de salida.
+      Nota: Zapatillas de tenis sobre baldosa.
+  pasos/madera_izq_1: vicleb/712874_High_heels_on_wood.ogg, «High heels on wood», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: vicleb. Licencia: CC0 1.0. Origen: https://freesound.org/people/vicleb/sounds/712874/. Tramo: del segundo 7,36 al 7,69, con fundidos de entrada y de salida.
+      Nota: Tacones sobre suelo de madera: las pisadas con zapato plano que se encontraron no tienen agudos.
+  pasos/madera_izq_2: vicleb/712874_High_heels_on_wood.ogg, «High heels on wood», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: vicleb. Licencia: CC0 1.0. Origen: https://freesound.org/people/vicleb/sounds/712874/. Tramo: del segundo 9,23 al 9,56, con fundidos de entrada y de salida.
+      Nota: Tacones sobre suelo de madera: las pisadas con zapato plano que se encontraron no tienen agudos.
+  pasos/madera_izq_3: vicleb/712874_High_heels_on_wood.ogg, «High heels on wood», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: vicleb. Licencia: CC0 1.0. Origen: https://freesound.org/people/vicleb/sounds/712874/. Tramo: del segundo 14,19 al 14,52, con fundidos de entrada y de salida.
+      Nota: Tacones sobre suelo de madera: las pisadas con zapato plano que se encontraron no tienen agudos.
+  pasos/madera_der_1: vicleb/712874_High_heels_on_wood.ogg, «High heels on wood», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: vicleb. Licencia: CC0 1.0. Origen: https://freesound.org/people/vicleb/sounds/712874/. Tramo: del segundo 8,73 al 9,06, con fundidos de entrada y de salida.
+      Nota: Tacones sobre suelo de madera: las pisadas con zapato plano que se encontraron no tienen agudos.
+  pasos/madera_der_2: vicleb/712874_High_heels_on_wood.ogg, «High heels on wood», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: vicleb. Licencia: CC0 1.0. Origen: https://freesound.org/people/vicleb/sounds/712874/. Tramo: del segundo 12,06 al 12,39, con fundidos de entrada y de salida.
+      Nota: Tacones sobre suelo de madera: las pisadas con zapato plano que se encontraron no tienen agudos.
+  pasos/madera_der_3: vicleb/712874_High_heels_on_wood.ogg, «High heels on wood», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: vicleb. Licencia: CC0 1.0. Origen: https://freesound.org/people/vicleb/sounds/712874/. Tramo: del segundo 14,53 al 14,86, con fundidos de entrada y de salida.
+      Nota: Tacones sobre suelo de madera: las pisadas con zapato plano que se encontraron no tienen agudos.
+  pasos/alfombra_izq_1: SpliceSound/260115_01-25_Footsteps__Rug__Slippers__Medium_Pace.ogg, «01-25 Footsteps, Rug, Slippers, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/260115/. Tramo: del segundo 0,64 al 0,99, con fundidos de entrada y de salida.
+      Nota: Zapatillas de casa sobre una alfombra.
+  pasos/alfombra_izq_2: SpliceSound/260115_01-25_Footsteps__Rug__Slippers__Medium_Pace.ogg, «01-25 Footsteps, Rug, Slippers, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/260115/. Tramo: del segundo 11,44 al 11,79, con fundidos de entrada y de salida.
+      Nota: Zapatillas de casa sobre una alfombra.
+  pasos/alfombra_izq_3: SpliceSound/260115_01-25_Footsteps__Rug__Slippers__Medium_Pace.ogg, «01-25 Footsteps, Rug, Slippers, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/260115/. Tramo: del segundo 15,38 al 15,73, con fundidos de entrada y de salida.
+      Nota: Zapatillas de casa sobre una alfombra.
+  pasos/alfombra_der_1: SpliceSound/260115_01-25_Footsteps__Rug__Slippers__Medium_Pace.ogg, «01-25 Footsteps, Rug, Slippers, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/260115/. Tramo: del segundo 9,21 al 9,56, con fundidos de entrada y de salida.
+      Nota: Zapatillas de casa sobre una alfombra.
+  pasos/alfombra_der_2: SpliceSound/260115_01-25_Footsteps__Rug__Slippers__Medium_Pace.ogg, «01-25 Footsteps, Rug, Slippers, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/260115/. Tramo: del segundo 12,02 al 12,37, con fundidos de entrada y de salida.
+      Nota: Zapatillas de casa sobre una alfombra.
+  pasos/alfombra_der_3: SpliceSound/260115_01-25_Footsteps__Rug__Slippers__Medium_Pace.ogg, «01-25 Footsteps, Rug, Slippers, Medium Pace.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SpliceSound. Licencia: CC0 1.0. Origen: https://freesound.org/people/SpliceSound/sounds/260115/. Tramo: del segundo 15,91 al 16,26, con fundidos de entrada y de salida.
+      Nota: Zapatillas de casa sobre una alfombra.
+  pasos/hormigon_izq_1: florianreichelt/459964_Footsteps_on_concrete.ogg, «Footsteps on concrete», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: florianreichelt. Licencia: CC0 1.0. Origen: https://freesound.org/people/florianreichelt/sounds/459964/. Tramo: del segundo 3,30 al 3,56, con fundidos de entrada y de salida.
+  pasos/hormigon_izq_2: florianreichelt/459964_Footsteps_on_concrete.ogg, «Footsteps on concrete», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: florianreichelt. Licencia: CC0 1.0. Origen: https://freesound.org/people/florianreichelt/sounds/459964/. Tramo: del segundo 7,88 al 8,14, con fundidos de entrada y de salida.
+  pasos/hormigon_izq_3: florianreichelt/459964_Footsteps_on_concrete.ogg, «Footsteps on concrete», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: florianreichelt. Licencia: CC0 1.0. Origen: https://freesound.org/people/florianreichelt/sounds/459964/. Tramo: del segundo 12,70 al 12,96, con fundidos de entrada y de salida.
+  pasos/hormigon_der_1: florianreichelt/459964_Footsteps_on_concrete.ogg, «Footsteps on concrete», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: florianreichelt. Licencia: CC0 1.0. Origen: https://freesound.org/people/florianreichelt/sounds/459964/. Tramo: del segundo 3,67 al 3,93, con fundidos de entrada y de salida.
+  pasos/hormigon_der_2: florianreichelt/459964_Footsteps_on_concrete.ogg, «Footsteps on concrete», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: florianreichelt. Licencia: CC0 1.0. Origen: https://freesound.org/people/florianreichelt/sounds/459964/. Tramo: del segundo 11,78 al 12,04, con fundidos de entrada y de salida.
+  pasos/hormigon_der_3: florianreichelt/459964_Footsteps_on_concrete.ogg, «Footsteps on concrete», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: florianreichelt. Licencia: CC0 1.0. Origen: https://freesound.org/people/florianreichelt/sounds/459964/. Tramo: del segundo 19,21 al 19,47, con fundidos de entrada y de salida.
+  pasos/asfalto_izq_1: Rimmer/648336_Walking_asphalt.ogg, «Walking asphalt.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Rimmer. Licencia: CC0 1.0. Origen: https://freesound.org/people/Rimmer/sounds/648336/. Tramo: del segundo 0,53 al 0,80, con fundidos de entrada y de salida.
+      Nota: La grabación es de dos personas que caminan casi al paso; se toman pisadas sueltas.
+  pasos/asfalto_izq_2: Rimmer/648336_Walking_asphalt.ogg, «Walking asphalt.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Rimmer. Licencia: CC0 1.0. Origen: https://freesound.org/people/Rimmer/sounds/648336/. Tramo: del segundo 3,33 al 3,60, con fundidos de entrada y de salida.
+      Nota: La grabación es de dos personas que caminan casi al paso; se toman pisadas sueltas.
+  pasos/asfalto_izq_3: Rimmer/648336_Walking_asphalt.ogg, «Walking asphalt.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Rimmer. Licencia: CC0 1.0. Origen: https://freesound.org/people/Rimmer/sounds/648336/. Tramo: del segundo 10,00 al 10,27, con fundidos de entrada y de salida.
+      Nota: La grabación es de dos personas que caminan casi al paso; se toman pisadas sueltas.
+  pasos/asfalto_der_1: Rimmer/648336_Walking_asphalt.ogg, «Walking asphalt.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Rimmer. Licencia: CC0 1.0. Origen: https://freesound.org/people/Rimmer/sounds/648336/. Tramo: del segundo 2,10 al 2,37, con fundidos de entrada y de salida.
+      Nota: La grabación es de dos personas que caminan casi al paso; se toman pisadas sueltas.
+  pasos/asfalto_der_2: Rimmer/648336_Walking_asphalt.ogg, «Walking asphalt.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Rimmer. Licencia: CC0 1.0. Origen: https://freesound.org/people/Rimmer/sounds/648336/. Tramo: del segundo 4,34 al 4,61, con fundidos de entrada y de salida.
+      Nota: La grabación es de dos personas que caminan casi al paso; se toman pisadas sueltas.
+  pasos/asfalto_der_3: Rimmer/648336_Walking_asphalt.ogg, «Walking asphalt.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Rimmer. Licencia: CC0 1.0. Origen: https://freesound.org/people/Rimmer/sounds/648336/. Tramo: del segundo 11,61 al 11,88, con fundidos de entrada y de salida.
+      Nota: La grabación es de dos personas que caminan casi al paso; se toman pisadas sueltas.
+  pasos/acera_izq_1: Fantozzi-StoneL1.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,00 al 0,24, con fundidos de entrada y de salida.
+      Nota: Pisada sobre losa de piedra; se corta a 0,24 s (la de serie dura 0,14) con un fundido final de 40 ms.
+  pasos/acera_izq_2: Fantozzi-StoneL2.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,00 al 0,24, con fundidos de entrada y de salida.
+      Nota: Pisada sobre losa de piedra; se corta a 0,24 s (la de serie dura 0,14) con un fundido final de 40 ms.
+  pasos/acera_izq_3: Fantozzi-StoneL3.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,00 al 0,24, con fundidos de entrada y de salida.
+      Nota: Pisada sobre losa de piedra; se corta a 0,24 s (la de serie dura 0,14) con un fundido final de 40 ms.
+  pasos/acera_der_1: Fantozzi-StoneR1.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,00 al 0,24, con fundidos de entrada y de salida.
+      Nota: Pisada sobre losa de piedra; se corta a 0,24 s (la de serie dura 0,14) con un fundido final de 40 ms.
+  pasos/acera_der_2: Fantozzi-StoneR2.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,01 al 0,25, con fundidos de entrada y de salida.
+      Nota: Pisada sobre losa de piedra; se corta a 0,24 s (la de serie dura 0,14) con un fundido final de 40 ms.
+  pasos/acera_der_3: Fantozzi-StoneR3.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,00 al 0,24, con fundidos de entrada y de salida.
+      Nota: Pisada sobre losa de piedra; se corta a 0,24 s (la de serie dura 0,14) con un fundido final de 40 ms.
+  pasos/tierra_izq_1: kyles/637550_footsteps_shoes_dirt_walk.ogg, «footsteps shoes dirt walk.flac», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: kyles. Licencia: CC0 1.0. Origen: https://freesound.org/people/kyles/sounds/637550/. Tramo: del segundo 4,19 al 4,52, con fundidos de entrada y de salida.
+  pasos/tierra_izq_2: kyles/637550_footsteps_shoes_dirt_walk.ogg, «footsteps shoes dirt walk.flac», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: kyles. Licencia: CC0 1.0. Origen: https://freesound.org/people/kyles/sounds/637550/. Tramo: del segundo 5,97 al 6,30, con fundidos de entrada y de salida.
+  pasos/tierra_izq_3: kyles/637550_footsteps_shoes_dirt_walk.ogg, «footsteps shoes dirt walk.flac», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: kyles. Licencia: CC0 1.0. Origen: https://freesound.org/people/kyles/sounds/637550/. Tramo: del segundo 15,27 al 15,60, con fundidos de entrada y de salida.
+  pasos/tierra_der_1: kyles/637550_footsteps_shoes_dirt_walk.ogg, «footsteps shoes dirt walk.flac», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: kyles. Licencia: CC0 1.0. Origen: https://freesound.org/people/kyles/sounds/637550/. Tramo: del segundo 5,39 al 5,72, con fundidos de entrada y de salida.
+  pasos/tierra_der_2: kyles/637550_footsteps_shoes_dirt_walk.ogg, «footsteps shoes dirt walk.flac», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: kyles. Licencia: CC0 1.0. Origen: https://freesound.org/people/kyles/sounds/637550/. Tramo: del segundo 14,19 al 14,52, con fundidos de entrada y de salida.
+  pasos/tierra_der_3: kyles/637550_footsteps_shoes_dirt_walk.ogg, «footsteps shoes dirt walk.flac», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: kyles. Licencia: CC0 1.0. Origen: https://freesound.org/people/kyles/sounds/637550/. Tramo: del segundo 18,45 al 18,78, con fundidos de entrada y de salida.
+  pasos/hierba_izq_1: Nox_Sound/556042_Footsteps_Mountain_Boots_Grass_Mono.ogg, «Footsteps_Mountain_Boots_Grass_Mono.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Nox_Sound. Licencia: CC0 1.0. Origen: https://freesound.org/people/Nox_Sound/sounds/556042/. Tramo: del segundo 18,86 al 19,24, con fundidos de entrada y de salida.
+      Nota: Botas de montaña sobre hierba.
+  pasos/hierba_izq_2: Nox_Sound/556042_Footsteps_Mountain_Boots_Grass_Mono.ogg, «Footsteps_Mountain_Boots_Grass_Mono.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Nox_Sound. Licencia: CC0 1.0. Origen: https://freesound.org/people/Nox_Sound/sounds/556042/. Tramo: del segundo 25,27 al 25,65, con fundidos de entrada y de salida.
+      Nota: Botas de montaña sobre hierba.
+  pasos/hierba_izq_3: Nox_Sound/556042_Footsteps_Mountain_Boots_Grass_Mono.ogg, «Footsteps_Mountain_Boots_Grass_Mono.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Nox_Sound. Licencia: CC0 1.0. Origen: https://freesound.org/people/Nox_Sound/sounds/556042/. Tramo: del segundo 30,03 al 30,41, con fundidos de entrada y de salida.
+      Nota: Botas de montaña sobre hierba.
+  pasos/hierba_der_1: Nox_Sound/556042_Footsteps_Mountain_Boots_Grass_Mono.ogg, «Footsteps_Mountain_Boots_Grass_Mono.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Nox_Sound. Licencia: CC0 1.0. Origen: https://freesound.org/people/Nox_Sound/sounds/556042/. Tramo: del segundo 21,32 al 21,70, con fundidos de entrada y de salida.
+      Nota: Botas de montaña sobre hierba.
+  pasos/hierba_der_2: Nox_Sound/556042_Footsteps_Mountain_Boots_Grass_Mono.ogg, «Footsteps_Mountain_Boots_Grass_Mono.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Nox_Sound. Licencia: CC0 1.0. Origen: https://freesound.org/people/Nox_Sound/sounds/556042/. Tramo: del segundo 26,57 al 26,95, con fundidos de entrada y de salida.
+      Nota: Botas de montaña sobre hierba.
+  pasos/hierba_der_3: Nox_Sound/556042_Footsteps_Mountain_Boots_Grass_Mono.ogg, «Footsteps_Mountain_Boots_Grass_Mono.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Nox_Sound. Licencia: CC0 1.0. Origen: https://freesound.org/people/Nox_Sound/sounds/556042/. Tramo: del segundo 39,58 al 39,96, con fundidos de entrada y de salida.
+      Nota: Botas de montaña sobre hierba.
+  pasos/grava_izq_1: Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.flac, de la colección «42 snow and gravel footsteps». Autor: Corsica_S (grabación), recortadas por Iwan Gabovitch (qubodup). Licencia: CC0 1.0. Origen: https://opengameart.org/content/42-snow-and-gravel-footsteps. Tramo: del segundo 0,00 al 0,46, con fundidos de entrada y de salida.
+      Nota: Grava cubierta de nieve y hielo: cruje como la grava suelta, algo más amortiguada. Se corta a 0,46 s.
+  pasos/grava_izq_2: Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.flac, de la colección «42 snow and gravel footsteps». Autor: Corsica_S (grabación), recortadas por Iwan Gabovitch (qubodup). Licencia: CC0 1.0. Origen: https://opengameart.org/content/42-snow-and-gravel-footsteps. Tramo: del segundo 0,00 al 0,46, con fundidos de entrada y de salida.
+      Nota: Grava cubierta de nieve y hielo: cruje como la grava suelta, algo más amortiguada. Se corta a 0,46 s.
+  pasos/grava_izq_3: Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.flac, de la colección «42 snow and gravel footsteps». Autor: Corsica_S (grabación), recortadas por Iwan Gabovitch (qubodup). Licencia: CC0 1.0. Origen: https://opengameart.org/content/42-snow-and-gravel-footsteps. Tramo: del segundo 0,00 al 0,46, con fundidos de entrada y de salida.
+      Nota: Grava cubierta de nieve y hielo: cruje como la grava suelta, algo más amortiguada. Se corta a 0,46 s.
+  pasos/grava_der_1: Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.flac, de la colección «42 snow and gravel footsteps». Autor: Corsica_S (grabación), recortadas por Iwan Gabovitch (qubodup). Licencia: CC0 1.0. Origen: https://opengameart.org/content/42-snow-and-gravel-footsteps. Tramo: del segundo 0,00 al 0,46, con fundidos de entrada y de salida.
+      Nota: Grava cubierta de nieve y hielo: cruje como la grava suelta, algo más amortiguada. Se corta a 0,46 s.
+  pasos/grava_der_2: Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.flac, de la colección «42 snow and gravel footsteps». Autor: Corsica_S (grabación), recortadas por Iwan Gabovitch (qubodup). Licencia: CC0 1.0. Origen: https://opengameart.org/content/42-snow-and-gravel-footsteps. Tramo: del segundo 0,00 al 0,46, con fundidos de entrada y de salida.
+      Nota: Grava cubierta de nieve y hielo: cruje como la grava suelta, algo más amortiguada. Se corta a 0,46 s.
+  pasos/grava_der_3: Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.flac, de la colección «42 snow and gravel footsteps». Autor: Corsica_S (grabación), recortadas por Iwan Gabovitch (qubodup). Licencia: CC0 1.0. Origen: https://opengameart.org/content/42-snow-and-gravel-footsteps. Tramo: del segundo 0,01 al 0,47, con fundidos de entrada y de salida.
+      Nota: Grava cubierta de nieve y hielo: cruje como la grava suelta, algo más amortiguada. Se corta a 0,46 s.
+  pasos/metal_izq_1: SoftDistortionFX/398937_Metal_Footsteps.ogg, «Metal Footsteps», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SoftDistortionFX. Licencia: CC0 1.0. Origen: https://freesound.org/people/SoftDistortionFX/sounds/398937/. Tramo: del segundo 19,09 al 19,56, con fundidos de entrada y de salida.
+      Nota: Zapatos de suela dura sobre una rejilla metálica.
+  pasos/metal_izq_2: SoftDistortionFX/398937_Metal_Footsteps.ogg, «Metal Footsteps», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SoftDistortionFX. Licencia: CC0 1.0. Origen: https://freesound.org/people/SoftDistortionFX/sounds/398937/. Tramo: del segundo 39,47 al 39,94, con fundidos de entrada y de salida.
+      Nota: Zapatos de suela dura sobre una rejilla metálica.
+  pasos/metal_izq_3: SoftDistortionFX/398937_Metal_Footsteps.ogg, «Metal Footsteps», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SoftDistortionFX. Licencia: CC0 1.0. Origen: https://freesound.org/people/SoftDistortionFX/sounds/398937/. Tramo: del segundo 61,76 al 62,23, con fundidos de entrada y de salida.
+      Nota: Zapatos de suela dura sobre una rejilla metálica.
+  pasos/metal_der_1: SoftDistortionFX/398937_Metal_Footsteps.ogg, «Metal Footsteps», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SoftDistortionFX. Licencia: CC0 1.0. Origen: https://freesound.org/people/SoftDistortionFX/sounds/398937/. Tramo: del segundo 22,07 al 22,54, con fundidos de entrada y de salida.
+      Nota: Zapatos de suela dura sobre una rejilla metálica.
+  pasos/metal_der_2: SoftDistortionFX/398937_Metal_Footsteps.ogg, «Metal Footsteps», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SoftDistortionFX. Licencia: CC0 1.0. Origen: https://freesound.org/people/SoftDistortionFX/sounds/398937/. Tramo: del segundo 45,54 al 46,01, con fundidos de entrada y de salida.
+      Nota: Zapatos de suela dura sobre una rejilla metálica.
+  pasos/metal_der_3: SoftDistortionFX/398937_Metal_Footsteps.ogg, «Metal Footsteps», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: SoftDistortionFX. Licencia: CC0 1.0. Origen: https://freesound.org/people/SoftDistortionFX/sounds/398937/. Tramo: del segundo 82,75 al 83,22, con fundidos de entrada y de salida.
+      Nota: Zapatos de suela dura sobre una rejilla metálica.
+  pasos/arena_izq_1: Fantozzi-SandL1.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,00 al 0,42, con fundidos de entrada y de salida.
+  pasos/arena_izq_2: Fantozzi-SandL2.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,01 al 0,32, con fundidos de entrada y de salida.
+  pasos/arena_izq_3: Fantozzi-SandL3.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,00 al 0,30, con fundidos de entrada y de salida.
+  pasos/arena_der_1: Fantozzi-SandR1.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,01 al 0,41, con fundidos de entrada y de salida.
+  pasos/arena_der_2: Fantozzi-SandR2.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,01 al 0,34, con fundidos de entrada y de salida.
+  pasos/arena_der_3: Fantozzi-SandR3.flac, de la colección «Fantozzi's Footsteps (Grass/Sand & Stone)». Autor: Fantozzi. Licencia: CC0 1.0. Origen: https://opengameart.org/content/fantozzis-footsteps-grasssand-stone. Tramo: del segundo 0,01 al 0,33, con fundidos de entrada y de salida.
+  pasos/agua_izq_1: patchytherat/531566_puddle_footsteps.ogg, «puddle footsteps.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: patchytherat. Licencia: CC0 1.0. Origen: https://freesound.org/people/patchytherat/sounds/531566/. Tramo: del segundo 1,89 al 2,29, con fundidos de entrada y de salida.
+      Nota: Seis pisadas distintas en un charco (antes, tres tomas repetidas en los dos pies).
+  pasos/agua_izq_2: patchytherat/531566_puddle_footsteps.ogg, «puddle footsteps.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: patchytherat. Licencia: CC0 1.0. Origen: https://freesound.org/people/patchytherat/sounds/531566/. Tramo: del segundo 4,87 al 5,27, con fundidos de entrada y de salida.
+      Nota: Seis pisadas distintas en un charco (antes, tres tomas repetidas en los dos pies).
+  pasos/agua_izq_3: patchytherat/531566_puddle_footsteps.ogg, «puddle footsteps.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: patchytherat. Licencia: CC0 1.0. Origen: https://freesound.org/people/patchytherat/sounds/531566/. Tramo: del segundo 6,26 al 6,66, con fundidos de entrada y de salida.
+      Nota: Seis pisadas distintas en un charco (antes, tres tomas repetidas en los dos pies).
+  pasos/agua_der_1: patchytherat/531566_puddle_footsteps.ogg, «puddle footsteps.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: patchytherat. Licencia: CC0 1.0. Origen: https://freesound.org/people/patchytherat/sounds/531566/. Tramo: del segundo 2,69 al 3,09, con fundidos de entrada y de salida.
+      Nota: Seis pisadas distintas en un charco (antes, tres tomas repetidas en los dos pies).
+  pasos/agua_der_2: patchytherat/531566_puddle_footsteps.ogg, «puddle footsteps.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: patchytherat. Licencia: CC0 1.0. Origen: https://freesound.org/people/patchytherat/sounds/531566/. Tramo: del segundo 5,46 al 5,86, con fundidos de entrada y de salida.
+      Nota: Seis pisadas distintas en un charco (antes, tres tomas repetidas en los dos pies).
+  pasos/agua_der_3: patchytherat/531566_puddle_footsteps.ogg, «puddle footsteps.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: patchytherat. Licencia: CC0 1.0. Origen: https://freesound.org/people/patchytherat/sounds/531566/. Tramo: del segundo 8,04 al 8,44, con fundidos de entrada y de salida.
+      Nota: Seis pisadas distintas en un charco (antes, tres tomas repetidas en los dos pies).
+  golpe/ladrillo: Alexbuk/391765_BRICK_taps_and_hits.ogg, «BRICK taps and hits.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Alexbuk. Licencia: CC0 1.0. Origen: https://freesound.org/people/Alexbuk/sounds/391765/. Tramo: del segundo 1,15 al 1,45, con fundidos de entrada y de salida.
+  golpe/madera: wood_hit_03.ogg, de la colección «100 CC0 metal and wood SFX». Autor: rubberduck. Licencia: CC0 1.0. Origen: https://opengameart.org/content/100-cc0-metal-and-wood-sfx. Tramo: del segundo 0,01 al 0,41, con fundidos de entrada y de salida.
+  golpe/metal: sfx100v2_metal_hit_01.ogg, de la colección «100 CC0 SFX #2». Autor: rubberduck. Licencia: CC0 1.0. Origen: https://opengameart.org/content/100-cc0-sfx-2. Tramo: del segundo 0,02 al 0,81, con fundidos de entrada y de salida.
+  golpe/cristal: sfx100v2_glass_02.ogg, de la colección «100 CC0 SFX #2». Autor: rubberduck. Licencia: CC0 1.0. Origen: https://opengameart.org/content/100-cc0-sfx-2. Tramo: del segundo 0,05 al 0,67, con fundidos de entrada y de salida.
+  golpe/piedra: sfx100v2_stones_02.ogg, de la colección «100 CC0 SFX #2». Autor: rubberduck. Licencia: CC0 1.0. Origen: https://opengameart.org/content/100-cc0-sfx-2. Tramo: del segundo 0,02 al 0,52, con fundidos de entrada y de salida.
+  roce/ladrillo: Alexbuk/391764_Brick_scrapes.ogg, «Brick scrapes.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Alexbuk. Licencia: CC0 1.0. Origen: https://freesound.org/people/Alexbuk/sounds/391764/. Tramo: del segundo 4,70 al 5,15, con fundidos de entrada y de salida.
+  roce/madera: dvandevorst/568914_rubbed_wood_on_wood.ogg, «rubbed wood on wood.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: dvandevorst. Licencia: CC0 1.0. Origen: https://freesound.org/people/dvandevorst/sounds/568914/. Tramo: del segundo 1,90 al 2,35, con fundidos de entrada y de salida.
+      Nota: Un trozo de madera frotado contra otro.
+  roce/metal: ocramrudiger/832547_Hitting_and_rubbing_a_metallic_railing.ogg, «Hitting and rubbing a metallic railing», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: ocramrudiger. Licencia: CC0 1.0. Origen: https://freesound.org/people/ocramrudiger/sounds/832547/. Tramo: del segundo 2,40 al 2,85, con fundidos de entrada y de salida.
+      Nota: Tramo del frotado de una barandilla (la grabación empieza con golpes), grabado con micrófono de contacto.
+  roce/cristal: trexlasso/630007_SLIDING_ON_GLASS.ogg, «SLIDING ON GLASS.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: trexlasso. Licencia: CC0 1.0. Origen: https://freesound.org/people/trexlasso/sounds/630007/. Tramo: del segundo 0,26 al 0,71, con fundidos de entrada y de salida.
+  roce/plastico: newagesoup/369121_VSH-53-plastic-hand-rub-squeak-short.ogg, «VSH-53-plastic-hand-rub-squeak-short.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: newagesoup. Licencia: CC0 1.0. Origen: https://freesound.org/people/newagesoup/sounds/369121/. Tramo: del segundo 0,55 al 1,00, con fundidos de entrada y de salida.
+      Nota: Mano frotando un objeto de plástico; el autor dice haberle aplicado ecualización y compresión.
+  roce/tela: cloth4.ogg, de la colección «50 RPG sound effects (RPG Audio)». Autor: Kenney Vleugels (www.kenney.nl). Licencia: CC0 1.0. Origen: https://opengameart.org/content/50-rpg-sound-effects. Tramo: del segundo 0,00 al 0,38, con fundidos de entrada y de salida.
+  puerta/abrir: doorOpen_1.ogg, de la colección «50 RPG sound effects (RPG Audio)». Autor: Kenney Vleugels (www.kenney.nl). Licencia: CC0 1.0. Origen: https://opengameart.org/content/50-rpg-sound-effects. Tramo: del segundo 0,05 al 0,92, con fundidos de entrada y de salida.
+  puerta/cerrar: doorClose_1.ogg, de la colección «50 RPG sound effects (RPG Audio)». Autor: Kenney Vleugels (www.kenney.nl). Licencia: CC0 1.0. Origen: https://opengameart.org/content/50-rpg-sound-effects. Tramo: del segundo 0,00 al 0,66, con fundidos de entrada y de salida.
+  puerta/con_llave: CastIronCarousel/216871_Locked_doorknob_rattle_1.ogg, «Locked doorknob rattle 1.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: CastIronCarousel. Licencia: CC0 1.0. Origen: https://freesound.org/people/CastIronCarousel/sounds/216871/. Tramo: del segundo 0,09 al 0,99, con fundidos de entrada y de salida.
+      Nota: La manilla de una puerta cerrada con llave que se prueba y no cede.
+  puerta/automatica: Stroms/369500_Automatic_Door.ogg, «Automatic Door.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Stroms. Licencia: CC0 1.0. Origen: https://freesound.org/people/Stroms/sounds/369500/. Tramo: del segundo 0,00 al 1,05, con fundidos de entrada y de salida.
+      Nota: Puerta corredera de cristal que se abre sola.
+  ascensor/puerta: Rshai/202604_Opening_an_elevator_door_sample.ogg, «Opening an elevator door sample.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Rshai. Licencia: CC0 1.0. Origen: https://freesound.org/people/Rshai/sounds/202604/. Tramo: del segundo 0,02 al 2,22, con fundidos de entrada y de salida.
+  ascensor/viaje: JoanCalsina/867597_Subtle_quiet_elevator_ride.ogg, «Subtle quiet elevator ride», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: JoanCalsina. Licencia: CC0 1.0. Origen: https://freesound.org/people/JoanCalsina/sounds/867597/. Tramo: del segundo 11,00 al 14,75, bucle con 0,50 s de fundido cruzado.
+      Nota: Tramo del viaje, lejos del timbre y de la puerta del final.
+  premio/recogido: LamaMakesMusic/403573_Coins_Table_Short.ogg, «Coins_Table_Short.ogg», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: LamaMakesMusic. Licencia: CC0 1.0. Origen: https://freesound.org/people/LamaMakesMusic/sounds/403573/. Tramo: del segundo 0,00 al 0,55, con fundidos de entrada y de salida.
+  trafico/coche: Breviceps/462862_Passing_Car__Wet_road.ogg, «Passing Car (Wet road)», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Breviceps. Licencia: CC0 1.0. Origen: https://freesound.org/people/Breviceps/sounds/462862/. Tramo: del segundo 0,30 al 4,80, con fundidos de entrada y de salida.
+      Nota: Un coche que pasa a unos 100 km/h por una calzada mojada.
+  trafico/moto: kyles/450698_scooter_pass_by_medium_speed_echo_off_building.ogg, «scooter pass by medium speed echo off building.flac», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: kyles. Licencia: CC0 1.0. Origen: https://freesound.org/people/kyles/sounds/450698/. Tramo: del segundo 4,60 al 9,10, con fundidos de entrada y de salida.
+      Nota: Un ciclomotor que llega y pasa; se corta cuando se aleja.
+  trafico/autobus: motor_camion_1442.wav, «Moteur de camion #1», de la colección «BigSoundBank.com». Autor: no indicado en el inventario descargado (figura en la página de origen). Licencia: CC0 1.0. Origen: https://bigsoundbank.com/moteur-de-camion-1-s1442.html. Tramo: del segundo 3,00 al 7,50, con fundidos de entrada y de salida.
+      Nota: Es el motor diésel de un camión, no un autobús, y no trae el soplido de frenos del final. La entrada y la salida largas hacen de «llega y se va».
+  trafico/ambiente_leve: calle_1713.wav, «Petite rue parisienne», de la colección «BigSoundBank.com». Autor: no indicado en el inventario descargado (figura en la página de origen). Licencia: CC0 1.0. Origen: https://bigsoundbank.com/petite-rue-parisienne-s1713.html. Tramo: del segundo 3,00 al 13,60, bucle con 0,60 s de fundido cruzado.
+  trafico/ambiente_medio: amb_ciudad.ogg, «Day Traffic - City Life», de la colección «Freesound (vistas previas de alta calidad)». Autor: Liljendal. Licencia: CC0 1.0. Origen: https://freesound.org/people/Liljendal/sounds/442636/. Tramo: del segundo 18,00 al 28,60, bucle con 0,60 s de fundido cruzado.
+      Nota: Se parte de la vista previa de alta calidad de Freesound (OGG, con pérdida), no del original.
+  trafico/ambiente_intenso: sfx100v2_loop_highway.ogg, de la colección «100 CC0 SFX #2». Autor: rubberduck. Licencia: CC0 1.0. Origen: https://opengameart.org/content/100-cc0-sfx-2. Tramo: del segundo 3,50 al 14,10, bucle con 0,60 s de fundido cruzado.
+      Nota: El original tiene dos canales iguales: es estéreo de formato, sin anchura.
+  fuente/frigorifico: nevera/nevera_motor_0034.wav, «Refrigerator», de la colección «BigSoundBank.com (descargas de noviembre de 2026)». Autor: no indicado en el inventario descargado (figura en la página de origen). Licencia: CC0 1.0. Origen: https://bigsoundbank.com/refrigerator-s0034.html. Tramo: del segundo 0,50 al 5,00, bucle con 0,50 s de fundido cruzado.
+  fuente/reloj: clock-1.wav, de la colección «Ticking clock». Autor: no indicado en la colección (figura en su página de OpenGameArt). Licencia: CC0 1.0. Origen: https://opengameart.org/content/ticking-clock-0. Tramo: del segundo 0,05 al 2,15, bucle con 0,10 s de fundido cruzado.
+      Nota: Dos segundos de un reloj que da un golpe por segundo; el cruce cae en el silencio entre dos golpes.
+  fuente/grifo: loop_water_01.ogg, de la colección «40 CC0 water, splash, slime SFX». Autor: rubberduck. Licencia: CC0 1.0. Origen: https://opengameart.org/content/40-cc0-water-splash-slime-sfx. Tramo: del segundo 0,04 al 3,34, bucle con 0,30 s de fundido cruzado.
+  fuente/fuente_agua: sfx100v2_loop_water_02.ogg, de la colección «100 CC0 SFX #2». Autor: rubberduck. Licencia: CC0 1.0. Origen: https://opengameart.org/content/100-cc0-sfx-2. Tramo: del segundo 3,00 al 7,50, bucle con 0,50 s de fundido cruzado.
+  fuente/maquina_expendedora: Filmscore/825404_Vending_Machines_in_Hotel.ogg, «Vending Machines in Hotel», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Filmscore. Licencia: CC0 1.0. Origen: https://freesound.org/people/Filmscore/sounds/825404/. Tramo: del segundo 24,00 al 28,50, bucle con 0,50 s de fundido cruzado.
+      Nota: El zumbido de unas máquinas expendedoras en la zona de un hotel.
+  fuente/campanas: barrio_perdido/campana_0135.wav, «Church Bell», de la colección «BigSoundBank.com (descargas de noviembre de 2026)». Autor: Joseph SARDIN. Licencia: CC0 1.0. Origen: https://bigsoundbank.com/church-bell-s0135.html. Tramo: del segundo 7,72 al 12,97, bucle con 0,25 s de fundido cruzado.
+      Nota: Dos campanadas seguidas de la grabación (a dos segundos una de otra) y la cola de la segunda: dos campanadas en cada vuelta de cinco segundos, como describe el catálogo.
+  fuente/pajaros: amb_residencial.ogg, «Nõmme_Morning_June.wav», de la colección «Freesound (vistas previas de alta calidad)». Autor: Islabonita. Licencia: CC0 1.0. Origen: https://freesound.org/people/Islabonita/sounds/471070/. Tramo: del segundo 18,00 al 24,50, bucle con 0,50 s de fundido cruzado.
+      Nota: Pájaros de un barrio al amanecer, pasados a mono. Vista previa de alta calidad de Freesound (OGG, con pérdida).
+  ambiente/casa: leonelmail/329569_Roomtone_Bedroom_Yew.ogg, «Roomtone Bedroom Yew», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: leonelmail. Licencia: CC0 1.0. Origen: https://freesound.org/people/leonelmail/sounds/329569/. Tramo: del segundo 5,00 al 15,60, bucle con 0,60 s de fundido cruzado.
+      Nota: Tono de sala de un dormitorio tranquilo.
+  ambiente/oficina: Chelly01/541117_Office_ambience.ogg, «Office ambience.wav», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Chelly01. Licencia: CC0 1.0. Origen: https://freesound.org/people/Chelly01/sounds/541117/. Tramo: del segundo 88,00 al 98,60, bucle con 0,60 s de fundido cruzado.
+      Nota: Murmullo, papeles, máquinas y aire acondicionado de una oficina, en estéreo (X/Y).
+  ambiente/pasillo: Sheyvan/570015_Ambience_Empty_Office_Hallway__Stereo.ogg, «Ambience Empty Office Hallway (Stereo)», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: Sheyvan. Licencia: CC0 1.0. Origen: https://freesound.org/people/Sheyvan/sounds/570015/. Tramo: del segundo 10,00 al 20,60, bucle con 0,60 s de fundido cruzado.
+  ambiente/calle: pueblo_1347.wav, «Village centre ville #2», de la colección «BigSoundBank.com». Autor: no indicado en el inventario descargado (figura en la página de origen). Licencia: CC0 1.0. Origen: https://bigsoundbank.com/village-centre-ville-2-s1347.html. Tramo: del segundo 4,50 al 15,10, bucle con 0,60 s de fundido cruzado.
+  ambiente/parque: amb_parque.ogg, «St_Stephen's_Green_Ambiance_Dublin_04», de la colección «Freesound (vistas previas de alta calidad)». Autor: SignatureSoundsOrg. Licencia: CC0 1.0. Origen: https://freesound.org/people/SignatureSoundsOrg/sounds/869037/. Tramo: del segundo 5,50 al 16,10, bucle con 0,60 s de fundido cruzado.
+      Nota: Vista previa de alta calidad de Freesound (OGG, con pérdida), no el original.
+  ambiente/cocina: brunoboselli/512511_Kitchen_Ambience.ogg, «Kitchen Ambience», de la colección «Freesound (vistas previas de alta calidad descargadas para este paquete)». Autor: brunoboselli. Licencia: CC0 1.0. Origen: https://freesound.org/people/brunoboselli/sounds/512511/. Tramo: del segundo 15,00 al 25,60, bucle con 0,60 s de fundido cruzado.
+      Nota: Cubiertos, vasos y cacharros oídos desde media distancia; sin frigorífico de fondo.
+  interfaz/mover: click5.wav, de la colección «51 UI sound effects (UI Audio)». Autor: Kenney Vleugels (www.kenney.nl). Licencia: CC0 1.0. Origen: https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks. Tramo: del segundo 0,00 al 0,03, con fundidos de entrada y de salida.
+  interfaz/borde: click2.wav, de la colección «51 UI sound effects (UI Audio)». Autor: Kenney Vleugels (www.kenney.nl). Licencia: CC0 1.0. Origen: https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks. Tramo: del segundo 0,00 al 0,06, con fundidos de entrada y de salida.
+  interfaz/ajuste: switch13.wav, de la colección «51 UI sound effects (UI Audio)». Autor: Kenney Vleugels (www.kenney.nl). Licencia: CC0 1.0. Origen: https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks. Tramo: del segundo 0,00 al 0,03, con fundidos de entrada y de salida.
+
+SONIDOS QUE CODIFICAN INFORMACIÓN Y SE DEJAN A PROPÓSITO CON EL PAQUETE POR DEFECTO
+  Una grabación no conserva su código (número de toques, orden de las notas, ritmo), así que no se sustituyen.
+  baliza/pulso: baliza de destino: su nota y su número de pulsos dicen si vas bien, si queda detrás o si has llegado
+  baliza/alineado: baliza de destino: su nota y su número de pulsos dicen si vas bien, si queda detrás o si has llegado
+  baliza/detras: baliza de destino: su nota y su número de pulsos dicen si vas bien, si queda detrás o si has llegado
+  baliza/cerca: baliza de destino: su nota y su número de pulsos dicen si vas bien, si queda detrás o si has llegado
+  baliza/llegada: baliza de destino: su nota y su número de pulsos dicen si vas bien, si queda detrás o si has llegado
+  sonda/pared: bastón sonoro: cada hallazgo tiene su propio timbre y su propio dibujo de toques
+  sonda/puerta: bastón sonoro: cada hallazgo tiene su propio timbre y su propio dibujo de toques
+  sonda/objeto: bastón sonoro: cada hallazgo tiene su propio timbre y su propio dibujo de toques
+  sonda/libre: bastón sonoro: cada hallazgo tiene su propio timbre y su propio dibujo de toques
+  sonda/escalon: bastón sonoro: cada hallazgo tiene su propio timbre y su propio dibujo de toques
+  sonda/bordillo: bastón sonoro: cada hallazgo tiene su propio timbre y su propio dibujo de toques
+  sonda/cerca: bastón sonoro: tres, dos y un pitido, cada vez más grave, dan la distancia
+  sonda/media: bastón sonoro: tres, dos y un pitido, cada vez más grave, dan la distancia
+  sonda/lejos: bastón sonoro: tres, dos y un pitido, cada vez más grave, dan la distancia
+  brujula/norte: brújula: el rumbo va en el número de notas y en su altura
+  brujula/este: brújula: el rumbo va en el número de notas y en su altura
+  brujula/sur: brújula: el rumbo va en el número de notas y en su altura
+  brujula/oeste: brújula: el rumbo va en el número de notas y en su altura
+  brujula/noreste: brújula: el rumbo va en el número de notas y en su altura
+  brujula/sureste: brújula: el rumbo va en el número de notas y en su altura
+  brujula/suroeste: brújula: el rumbo va en el número de notas y en su altura
+  brujula/noroeste: brújula: el rumbo va en el número de notas y en su altura
+  pasos/tactil_botones_izq_1: pavimento táctil: repique doble que avisa de un peligro; es un código, no el ruido de un suelo
+  pasos/tactil_botones_izq_2: pavimento táctil: repique doble que avisa de un peligro; es un código, no el ruido de un suelo
+  pasos/tactil_botones_izq_3: pavimento táctil: repique doble que avisa de un peligro; es un código, no el ruido de un suelo
+  pasos/tactil_botones_der_1: pavimento táctil: repique doble que avisa de un peligro; es un código, no el ruido de un suelo
+  pasos/tactil_botones_der_2: pavimento táctil: repique doble que avisa de un peligro; es un código, no el ruido de un suelo
+  pasos/tactil_botones_der_3: pavimento táctil: repique doble que avisa de un peligro; es un código, no el ruido de un suelo
+  pasos/tactil_rayas_izq_1: pavimento táctil: raspado corto que marca un camino; es un código, no el ruido de un suelo
+  pasos/tactil_rayas_izq_2: pavimento táctil: raspado corto que marca un camino; es un código, no el ruido de un suelo
+  pasos/tactil_rayas_izq_3: pavimento táctil: raspado corto que marca un camino; es un código, no el ruido de un suelo
+  pasos/tactil_rayas_der_1: pavimento táctil: raspado corto que marca un camino; es un código, no el ruido de un suelo
+  pasos/tactil_rayas_der_2: pavimento táctil: raspado corto que marca un camino; es un código, no el ruido de un suelo
+  pasos/tactil_rayas_der_3: pavimento táctil: raspado corto que marca un camino; es un código, no el ruido de un suelo
+  escalera/subir: una pisada y dos notas que suben, cada peldaño un poco más agudo
+  escalera/bajar: una pisada y dos notas que bajan, cada peldaño un poco más grave
+  escalera/rampa: deslizamiento que el juego sube o baja de tono según subas o bajes
+  ascensor/llamada: un clic y un pitido: el pitido confirma la llamada
+  ascensor/llegada: dos campanadas, la segunda más grave: es la señal de llegada
+  ascensor/planta_0: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_1: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_2: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_3: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_4: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_5: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_6: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_7: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_8: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  ascensor/planta_9: las diez plantas forman una escala: cada una, una nota más aguda que la anterior
+  premio/aparece: cinco tintineos que suben
+  premio/cerca: centelleo que se repite desde el premio para ir hacia él
+  premio/tesoro: una melodía que sube
+  logro/logro: tres notas que suben
+  logro/estrella_1: tantas notas como estrellas
+  logro/estrella_2: tantas notas como estrellas
+  logro/estrella_3: tantas notas como estrellas
+  logro/medalla: fanfarria: una melodía
+  logro/error: dos notas graves que bajan
+  logro/pista: dos campanillas que suben
+  semaforo/verde: fases del semáforo sonoro: se distinguen por el ritmo de los píos
+  semaforo/intermitente: fases del semáforo sonoro: se distinguen por el ritmo de los píos
+  semaforo/rojo: fases del semáforo sonoro: se distinguen por el ritmo de los píos
+  semaforo/pulsador: un clic y dos pitidos que confirman la petición de verde
+  exterior/bordillo: aviso de seguridad con forma fija: un raspado y un golpe grave
+  interfaz/elegir: menús: dos notas que suben
+  interfaz/atras: menús: dos notas que bajan
+  interfaz/abrir: menús: tres notas que suben
+  interfaz/cerrar: menús: tres notas que bajan
+
+SONIDOS PARA LOS QUE NO HABÍA UNA GRABACIÓN VÁLIDA (suenan con el paquete por defecto) Y QUÉ HABRÍA QUE BUSCAR
+  pasos/moqueta_izq_1: las grabaciones CC0 de Freesound que se descargaron y midieron (alec_mackay, izzylikesnoise, hannagreen, theshuggie y LewisEmmott5; también las de Kenney) no llegan al 2 % de energía por encima de 3 kHz en ninguna pisada: no se podrían situar
+      Buscar: seis pisadas sobre moqueta: muy apagadas y cortas, pero con el roce de la suela audible (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,31 s, con contenido por encima de 3 kHz
+  pasos/moqueta_izq_2: las grabaciones CC0 de Freesound que se descargaron y midieron (alec_mackay, izzylikesnoise, hannagreen, theshuggie y LewisEmmott5; también las de Kenney) no llegan al 2 % de energía por encima de 3 kHz en ninguna pisada: no se podrían situar
+      Buscar: seis pisadas sobre moqueta: muy apagadas y cortas, pero con el roce de la suela audible (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,31 s, con contenido por encima de 3 kHz
+  pasos/moqueta_izq_3: las grabaciones CC0 de Freesound que se descargaron y midieron (alec_mackay, izzylikesnoise, hannagreen, theshuggie y LewisEmmott5; también las de Kenney) no llegan al 2 % de energía por encima de 3 kHz en ninguna pisada: no se podrían situar
+      Buscar: seis pisadas sobre moqueta: muy apagadas y cortas, pero con el roce de la suela audible (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,31 s, con contenido por encima de 3 kHz
+  pasos/moqueta_der_1: las grabaciones CC0 de Freesound que se descargaron y midieron (alec_mackay, izzylikesnoise, hannagreen, theshuggie y LewisEmmott5; también las de Kenney) no llegan al 2 % de energía por encima de 3 kHz en ninguna pisada: no se podrían situar
+      Buscar: seis pisadas sobre moqueta: muy apagadas y cortas, pero con el roce de la suela audible (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,31 s, con contenido por encima de 3 kHz
+  pasos/moqueta_der_2: las grabaciones CC0 de Freesound que se descargaron y midieron (alec_mackay, izzylikesnoise, hannagreen, theshuggie y LewisEmmott5; también las de Kenney) no llegan al 2 % de energía por encima de 3 kHz en ninguna pisada: no se podrían situar
+      Buscar: seis pisadas sobre moqueta: muy apagadas y cortas, pero con el roce de la suela audible (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,31 s, con contenido por encima de 3 kHz
+  pasos/moqueta_der_3: las grabaciones CC0 de Freesound que se descargaron y midieron (alec_mackay, izzylikesnoise, hannagreen, theshuggie y LewisEmmott5; también las de Kenney) no llegan al 2 % de energía por encima de 3 kHz en ninguna pisada: no se podrían situar
+      Buscar: seis pisadas sobre moqueta: muy apagadas y cortas, pero con el roce de la suela audible (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,31 s, con contenido por encima de 3 kHz
+  pasos/adoquin_izq_1: no se encontró en Freesound ni en OpenGameArt una grabación CC0 de pisadas sobre adoquín; las de losa de piedra descargadas (kyles, xkeril, Fission9, niamhd00145229, SecureSubset) no tienen agudos en más de una pisada
+      Buscar: seis pisadas sobre adoquín o empedrado irregular: dos toques desiguales por paso (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,29 s, con contenido por encima de 3 kHz
+  pasos/adoquin_izq_2: no se encontró en Freesound ni en OpenGameArt una grabación CC0 de pisadas sobre adoquín; las de losa de piedra descargadas (kyles, xkeril, Fission9, niamhd00145229, SecureSubset) no tienen agudos en más de una pisada
+      Buscar: seis pisadas sobre adoquín o empedrado irregular: dos toques desiguales por paso (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,29 s, con contenido por encima de 3 kHz
+  pasos/adoquin_izq_3: no se encontró en Freesound ni en OpenGameArt una grabación CC0 de pisadas sobre adoquín; las de losa de piedra descargadas (kyles, xkeril, Fission9, niamhd00145229, SecureSubset) no tienen agudos en más de una pisada
+      Buscar: seis pisadas sobre adoquín o empedrado irregular: dos toques desiguales por paso (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,29 s, con contenido por encima de 3 kHz
+  pasos/adoquin_der_1: no se encontró en Freesound ni en OpenGameArt una grabación CC0 de pisadas sobre adoquín; las de losa de piedra descargadas (kyles, xkeril, Fission9, niamhd00145229, SecureSubset) no tienen agudos en más de una pisada
+      Buscar: seis pisadas sobre adoquín o empedrado irregular: dos toques desiguales por paso (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,29 s, con contenido por encima de 3 kHz
+  pasos/adoquin_der_2: no se encontró en Freesound ni en OpenGameArt una grabación CC0 de pisadas sobre adoquín; las de losa de piedra descargadas (kyles, xkeril, Fission9, niamhd00145229, SecureSubset) no tienen agudos en más de una pisada
+      Buscar: seis pisadas sobre adoquín o empedrado irregular: dos toques desiguales por paso (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,29 s, con contenido por encima de 3 kHz
+  pasos/adoquin_der_3: no se encontró en Freesound ni en OpenGameArt una grabación CC0 de pisadas sobre adoquín; las de losa de piedra descargadas (kyles, xkeril, Fission9, niamhd00145229, SecureSubset) no tienen agudos en más de una pisada
+      Buscar: seis pisadas sobre adoquín o empedrado irregular: dos toques desiguales por paso (tres de cada pie, o seis tomas sueltas del mismo calzado y el mismo suelo), grabadas de cerca; mono, cada una de menos de 0,29 s, con contenido por encima de 3 kHz
+  golpe/plastico: lo descargado con licencia en regla no es un golpe: «Plastic» de Pipelenisf es una botella frotada y el golpe en un barreño de Sadiquecat no tiene nada por encima de 3 kHz
+      Buscar: un golpe contra un objeto hueco de plástico (un cubo, una caja): clac hueco y ligero; mono, de 0,15 a 0,5 s
+  golpe/tela: los golpes en almohada descargados (KoimeMatsuchiya, saturdaysoundguy) y los de Kenney no llegan al 2 % por encima de 3 kHz
+      Buscar: un golpe contra un cojín, un sofá o una cortina gruesa, con el roce de la tela audible; mono, de 0,15 a 0,5 s
+  roce/piedra: los raspados de piedra descargados (alegemaate, dslrguide) no llegan al 2 % por encima de 3 kHz
+      Buscar: una mano o un bastón rozando un muro de piedra: raspado duro y granulado; mono, de 0,2 a 0,7 s
+  fuente/ventilador: los ventiladores descargados (RealSquink, unfa, NorTEEN_X) son un zumbido sin agudos (menos del 1 % por encima de 3 kHz)
+      Buscar: un ventilador de techo o de pie en marcha, de cerca: soplo continuo con el batir de las aspas; mono, al menos 4 s para un bucle de 3 s
+  fuente/television: la televisión oída tras una pared que se descargó (milcahrawr) no tiene nada por encima de 3 kHz: lo que llega amortiguado no se podría situar
+      Buscar: una televisión o una radio oída desde otra habitación: voces apagadas que no se entienden, sin música reconocible; mono, al menos 6 s para un bucle de 5 s

@@ -1,0 +1,864 @@
+{
+	"nombre": "Street",
+	"descripcion": "What you meet on a pavement: street furniture, traffic lights, bins, trees, parked vehicles, café terraces, roadworks and ground markings.",
+	"categorias": {
+		"mobiliario": "Street furniture",
+		"trafico": "Traffic lights and signs",
+		"residuos": "Bins and containers",
+		"verde": "Trees, planters and fountains",
+		"vehiculos": "Parked vehicles",
+		"terraza": "Terraces, kiosks and trade",
+		"obras": "Roadworks and temporary obstacles",
+		"suelo": "Ground, kerbs and utilities",
+		"plaza": "Squares and monuments"
+	},
+	"subcategorias": {
+		"alumbrado_postes": "Lamp posts and poles",
+		"bolardos_protecciones": "Bollards and guards",
+		"asientos_urbanos": "Benches and seats",
+		"buzones_cabinas": "Post boxes, booths and toilets",
+		"informacion_publicidad": "Information, adverts and clocks",
+		"pago_recarga_bicis": "Bikes, parking meters and charging",
+		"semaforos": "Traffic lights",
+		"senales_verticales": "Signs and plates",
+		"cruces_pasos": "Pedestrian crossings and refuges",
+		"carril_bici_balizas": "Cycle lanes and lane posts",
+		"papeleras": "Litter bins and dog bags",
+		"contenedores_calle": "Rubbish containers",
+		"reciclaje": "Recycling",
+		"arboles_alcorques": "Trees and tree pits",
+		"jardineras_setos": "Planters, hedges and lawn beds",
+		"fuentes_agua": "Fountains and water",
+		"coches_furgonetas": "Cars and vans",
+		"motos_bicis_patinetes": "Motorbikes, bikes and scooters",
+		"terrazas_bar": "Café terraces",
+		"quioscos_puestos": "Kiosks and stalls",
+		"comercio_acera": "Shop displays on the pavement",
+		"vallas_andamios": "Barriers and scaffolding",
+		"zanjas_conos": "Trenches, cones and puddles",
+		"tapas_rejillas": "Covers and gratings",
+		"servicios_fachada": "Cabinets, hydrants and façades",
+		"bordillos_desniveles": "Kerbs, steps and drops",
+		"pavimentos_guias": "Paving and ground guides",
+		"plaza_monumentos": "Monuments and arcades",
+		"plaza_reunion": "Bandstands, terraces and rides"
+	},
+	"estados": {
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"apagado": "Off",
+		"funcionando": "Running",
+		"rojo": "Red: do not cross",
+		"verde": "Green: you may cross",
+		"intermitente": "Flashing green: time is running out",
+		"ambar": "Amber",
+		"parado": "Stopped",
+		"girando": "Turning"
+	},
+	"objetos": {
+		"farola": {
+			"nombre": "Street lamp",
+			"descripcion": "Lamp post: a metal tube as thick as an arm, next to the kerb. It rings when struck.",
+			"etiquetas": ["street lamp", "lamp post", "streetlight"],
+			"variantes": {
+				"peatonal": "Pedestrian",
+				"de_calle": "Street",
+				"clasica": "Classic cast iron"
+			},
+			"imagen": "Footprint of “Street lamp”: a circle, 0.18 by 0.18 metres, marked with the letters “Fa”."
+		},
+		"poste_luz": {
+			"nombre": "Utility pole",
+			"descripcion": "Wooden or concrete pole carrying cables, thicker than a lamp post and sometimes in the middle of the pavement.",
+			"etiquetas": ["utility pole", "telegraph pole", "power pole"],
+			"imagen": "Footprint of “Utility pole”: a circle, 0.30 by 0.30 metres, marked with the letters “Pl”."
+		},
+		"bolardo": {
+			"nombre": "Bollard",
+			"descripcion": "Short iron post, knee to hip high. There are usually several in a row along the edge of the pavement.",
+			"etiquetas": ["bollard", "post"],
+			"variantes": {
+				"fino": "Slim",
+				"normal": "Standard",
+				"bola": "Ball-topped"
+			},
+			"imagen": "Footprint of “Bollard”: a circle, 0.15 by 0.15 metres, marked with the letters “Bo”."
+		},
+		"pilona": {
+			"nombre": "Retractable bollard",
+			"descripcion": "Thick metal cylinder that rises from and sinks into the ground to stop cars. When down, you walk over it.",
+			"etiquetas": ["rising bollard", "retractable bollard"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Retractable bollard”: a circle, 0.27 by 0.27 metres, marked with the letters “Pi”."
+		},
+		"banco": {
+			"nombre": "Bench",
+			"descripcion": "Slatted wooden bench with a backrest, facing the street.",
+			"etiquetas": ["bench", "seat"],
+			"variantes": {
+				"dos_plazas": "Two-seater",
+				"tres_plazas": "Three-seater",
+				"largo": "Long"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Bench”: a rectangle, 1.80 by 0.65 metres, marked with the letters “Ba”."
+		},
+		"banco_piedra": {
+			"nombre": "Backless stone bench",
+			"descripcion": "Low, solid block of stone to sit on. Hard and cold; at knee height.",
+			"etiquetas": ["stone bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Backless stone bench”: a rectangle, 2.00 by 0.50 metres, marked with the letters “Bp”."
+		},
+		"bancos_rotonda": {
+			"nombre": "Ring of benches",
+			"descripcion": "A bench running in a circle, with an opening at the front. Inside is a ring to sit and talk.",
+			"etiquetas": ["ring of benches", "circular bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Ring of benches”: a ring with an opening at the front, 4.00 by 4.00 metres, marked with the letters “Br”."
+		},
+		"buzon": {
+			"nombre": "Post box",
+			"descripcion": "Post box: a sheet-metal cylinder as tall as a person, with the slot at chest height.",
+			"etiquetas": ["post box", "mailbox", "letterbox"],
+			"acciones": {
+				"echar_carta": "Post a letter"
+			},
+			"imagen": "Footprint of “Post box”: a circle, 0.50 by 0.50 metres, marked with the letters “Bu”."
+		},
+		"buzon_pared": {
+			"nombre": "Wall letterbox",
+			"descripcion": "Letterbox hung on the wall at chest height. It sticks out a hand's width and the cane passes under it.",
+			"etiquetas": ["wall letterbox", "wall-mounted post box"],
+			"acciones": {
+				"echar_carta": "Post a letter"
+			},
+			"imagen": "Footprint of “Wall letterbox”: a rectangle, 0.40 by 0.20 metres, hanging 1.00 metres above the floor, marked with the letters “Bp”."
+		},
+		"totem": {
+			"nombre": "Information totem",
+			"descripcion": "Tall, narrow upright panel with a map or adverts. Flat on both faces and thin edge-on.",
+			"etiquetas": ["information totem", "advertising panel", "map panel"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Information totem”: a rectangle, 1.20 by 0.20 metres, marked with the letters “To”."
+		},
+		"cabina": {
+			"nombre": "Phone box",
+			"descripcion": "Phone box: a post with a hood and glass panels at head height.",
+			"etiquetas": ["phone box", "telephone booth"],
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Phone box”: a rectangle with cut corners, 0.90 by 0.90 metres, marked with the letters “Ca”."
+		},
+		"aparcabicis": {
+			"nombre": "Bike rack with bikes",
+			"descripcion": "Rail with metal hoops and bikes locked to it. Wheels and handlebars stick out into the path.",
+			"etiquetas": ["bike rack", "cycle stand", "bicycles"],
+			"variantes": {
+				"tres_bicis": "Three bikes",
+				"cinco_bicis": "Five bikes",
+				"diez_bicis": "Ten bikes"
+			},
+			"imagen": "Footprint of “Bike rack with bikes”: a comb: a bar with bodies sticking out to the front, 3.00 by 1.80 metres, marked with the letters “Ap”."
+		},
+		"parquimetro": {
+			"nombre": "Parking meter",
+			"descripcion": "Metal column with buttons and a slot, at chest height.",
+			"etiquetas": ["parking meter", "pay and display"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Parking meter”: a rectangle, 0.35 by 0.35 metres, marked with the letters “Pa”."
+		},
+		"punto_recarga": {
+			"nombre": "Charging point",
+			"descripcion": "Electric car charging post, with a thick cable that may cross the pavement. It hums while charging.",
+			"etiquetas": ["charging point", "ev charger"],
+			"acciones": {
+				"recargar": "Plug in",
+				"desenchufar": "Unplug"
+			},
+			"imagen": "Footprint of “Charging point”: a rectangle, 0.40 by 0.30 metres, marked with the letters “Pr”."
+		},
+		"semaforo_peatones": {
+			"nombre": "Audible pedestrian light with button",
+			"descripcion": "Pedestrian light post with a button at hand height. It ticks slowly on red and fast on green.",
+			"etiquetas": ["pedestrian light", "pelican crossing", "audible signal", "push button"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Audible pedestrian light with button”: a circle, 0.15 by 0.15 metres, marked with the letters “Sp”."
+		},
+		"semaforo_peatones_sonoro": {
+			"nombre": "Audible pedestrian light",
+			"descripcion": "Pedestrian light post. It ticks slowly on red and fast on green; no button.",
+			"etiquetas": ["audible pedestrian light", "audible signal"],
+			"imagen": "Footprint of “Audible pedestrian light”: a circle, 0.15 by 0.15 metres, marked with the letters “Sp”."
+		},
+		"semaforo_peatones_mudo": {
+			"nombre": "Silent pedestrian light",
+			"descripcion": "Pedestrian light post. It makes no sound: to cross you must listen for the cars stopping.",
+			"etiquetas": ["pedestrian light", "silent signal"],
+			"imagen": "Footprint of “Silent pedestrian light”: a circle, 0.15 by 0.15 metres, marked with the letters “Sp”."
+		},
+		"semaforo_vehiculos": {
+			"nombre": "Traffic light",
+			"descripcion": "Thick traffic light post next to the kerb, sometimes with an arm over the road.",
+			"etiquetas": ["traffic light", "traffic signal"],
+			"imagen": "Footprint of “Traffic light”: a circle, 0.20 by 0.20 metres, marked with the letters “Sv”."
+		},
+		"senal": {
+			"nombre": "Road sign on a post",
+			"descripcion": "Thin metal post with a sign on top. The plate may be at head height.",
+			"etiquetas": ["road sign", "traffic sign", "signpost"],
+			"imagen": "Footprint of “Road sign on a post”: a circle, 0.08 by 0.08 metres, marked with the letters “Se”."
+		},
+		"senal_baja": {
+			"nombre": "Sign plate at head height",
+			"descripcion": "Sign plate fixed too low, jutting over the pavement at face height. The cane does not detect it.",
+			"etiquetas": ["low sign", "sign plate", "overhead obstacle"],
+			"imagen": "Footprint of “Sign plate at head height”: a rectangle, 0.60 by 0.05 metres, hanging 1.50 metres above the floor, marked with the letters “Sb”."
+		},
+		"papelera": {
+			"nombre": "Litter bin",
+			"descripcion": "Street litter bin, hung on a post or free-standing, at hip height.",
+			"etiquetas": ["litter bin", "rubbish bin", "trash can"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Litter bin”: a circle, 0.40 by 0.40 metres, marked with the letters “Pa”."
+		},
+		"contenedor_240": {
+			"nombre": "240-litre wheelie bin",
+			"descripcion": "Two-wheeled bin with a lid, waist high. Neighbours put it out and leave it anywhere on the pavement.",
+			"etiquetas": ["wheelie bin", "240 litre bin"],
+			"variantes": {
+				"litros_120": "120 litres",
+				"litros_240": "240 litres"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “240-litre wheelie bin”: a rectangle, 0.58 by 0.73 metres, marked with the letters “C2”."
+		},
+		"contenedor_resto": {
+			"nombre": "1100-litre general waste container",
+			"descripcion": "Large four-wheeled container with a curved lid, chest high. Hollow plastic when struck.",
+			"etiquetas": ["waste container", "dumpster", "1100 litre bin"],
+			"variantes": {
+				"litros_800": "800 litres",
+				"litros_1100": "1100 litres"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “1100-litre general waste container”: a rectangle with cut corners, 1.37 by 1.07 metres, marked with the letters “Cr”."
+		},
+		"contenedor_envases": {
+			"nombre": "Packaging recycling container",
+			"descripcion": "Side-loading container for packaging: a big, tall box with a round opening at shoulder height.",
+			"etiquetas": ["packaging container", "recycling bin"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Packaging recycling container”: a rectangle with cut corners, 1.88 by 1.45 metres, marked with the letters “Ce”."
+		},
+		"contenedor_papel": {
+			"nombre": "Paper recycling container",
+			"descripcion": "Container for paper and card: a big box with a wide horizontal slot at chest height.",
+			"etiquetas": ["paper container", "paper bank"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Paper recycling container”: a rectangle with cut corners, 1.88 by 1.45 metres, marked with the letters “Cp”."
+		},
+		"contenedor_vidrio": {
+			"nombre": "Igloo bottle bank",
+			"descripcion": "Bottle bank igloo: a round dome with small holes. Drop a bottle in and you hear it smash inside.",
+			"etiquetas": ["bottle bank", "glass recycling igloo"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Igloo bottle bank”: a circle, 1.60 by 1.60 metres, marked with the letters “Cv”."
+		},
+		"alcorque": {
+			"nombre": "Tree pit with tree",
+			"descripcion": "Pavement tree. The trunk blocks the way; around it, the tree pit is a slightly sunken square of earth. The leaves rustle in the breeze.",
+			"etiquetas": ["tree", "tree pit", "trunk"],
+			"variantes": {
+				"joven": "Young tree",
+				"mediano": "Medium tree",
+				"viejo": "Old tree"
+			},
+			"imagen": "Footprint of “Tree pit with tree”: a circle, 0.35 by 0.35 metres, marked with the letters “Al”."
+		},
+		"alcorque_hueco": {
+			"nombre": "Empty tree pit",
+			"descripcion": "Square of earth in the pavement, a little lower than the slabs. It does not block the way, but you can turn an ankle on the edge.",
+			"etiquetas": ["tree pit", "empty tree pit"],
+			"aviso": "Tree pit: the ground drops and turns to earth.",
+			"imagen": "Footprint of “Empty tree pit”: a rectangle, 1.00 by 1.00 metres, marked with the letters “Ah”."
+		},
+		"jardinera": {
+			"nombre": "Planter",
+			"descripcion": "Long concrete planter with plants, at knee height.",
+			"etiquetas": ["planter", "flower bed"],
+			"imagen": "Footprint of “Planter”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Ja”."
+		},
+		"maceta_grande": {
+			"nombre": "Large flowerpot",
+			"descripcion": "Big round earthenware pot with a shrub. The branches brush you first.",
+			"etiquetas": ["flowerpot", "large pot", "tub"],
+			"imagen": "Footprint of “Large flowerpot”: a circle, 0.70 by 0.70 metres, marked with the letters “Mg”."
+		},
+		"seto": {
+			"nombre": "Hedge",
+			"descripcion": "Trimmed hedge: a soft green wall you can follow with your hand.",
+			"etiquetas": ["hedge", "shrub"],
+			"imagen": "Footprint of “Hedge”: a rectangle, 3.00 by 0.60 metres, marked with the letters “Se”."
+		},
+		"fuente_beber": {
+			"nombre": "Drinking fountain",
+			"descripcion": "Iron fountain with a push button. It always drips a little: you hear it as you get near.",
+			"etiquetas": ["drinking fountain", "water fountain"],
+			"acciones": {
+				"beber": "Drink"
+			},
+			"imagen": "Footprint of “Drinking fountain”: an octagon, 0.40 by 0.40 metres, marked with the letters “Fb”."
+		},
+		"fuente_ornamental": {
+			"nombre": "Ornamental fountain",
+			"descripcion": "Large square fountain: a round stone basin with jets in the middle. It can be heard across the whole square and is a good landmark.",
+			"etiquetas": ["ornamental fountain", "fountain", "basin"],
+			"variantes": {
+				"pequena": "Small",
+				"mediana": "Medium",
+				"grande": "Large"
+			},
+			"imagen": "Footprint of “Ornamental fountain”: a twelve-sided circle, 4.00 by 4.00 metres, marked with the letters “Fo”."
+		},
+		"coche": {
+			"nombre": "Parked car",
+			"descripcion": "Parked car. Metal and glass; the wing mirrors stick out at hip height.",
+			"etiquetas": ["car", "parked car", "vehicle"],
+			"variantes": {
+				"utilitario": "Small car",
+				"compacto": "Hatchback",
+				"todoterreno": "SUV"
+			},
+			"imagen": "Footprint of “Parked car”: the outline of a vehicle, nose at the front, 1.80 by 4.30 metres, marked with the letters “Co”."
+		},
+		"furgoneta": {
+			"nombre": "Van",
+			"descripcion": "Delivery van stopped, sometimes with two wheels on the pavement. Tall, with flat metal sides.",
+			"etiquetas": ["van", "delivery van"],
+			"imagen": "Footprint of “Van”: a rectangle with cut corners, 2.00 by 5.40 metres, marked with the letters “Fu”."
+		},
+		"moto": {
+			"nombre": "Motorbike parked on the pavement",
+			"descripcion": "Motorbike parked on the pavement. The handlebars and mirrors stick out; the exhaust may be hot.",
+			"etiquetas": ["motorbike", "motorcycle", "scooter"],
+			"imagen": "Footprint of “Motorbike parked on the pavement”: a long narrow body with the handlebars across it near the front, 0.80 by 2.00 metres, marked with the letters “Mo”."
+		},
+		"patinetes": {
+			"nombre": "Parked e-scooters",
+			"descripcion": "Electric scooters left in the middle of the pavement, some lying flat. An obstacle that moves every day.",
+			"etiquetas": ["e-scooter", "electric scooters"],
+			"variantes": {
+				"uno": "One scooter",
+				"tres": "Three scooters",
+				"tumbado": "One lying flat"
+			},
+			"imagen": "Footprint of “Parked e-scooters”: a comb: a bar with bodies sticking out to the front, 1.20 by 1.15 metres, marked with the letters “Pa”."
+		},
+		"bicicleta": {
+			"nombre": "Bike locked to a post",
+			"descripcion": "A single bike locked to a lamp post or sign, across the pavement.",
+			"etiquetas": ["bicycle", "bike"],
+			"imagen": "Footprint of “Bike locked to a post”: a long narrow body with the handlebars across it near the front, 0.60 by 1.75 metres, marked with the letters “Bi”."
+		},
+		"mesa_terraza": {
+			"nombre": "Café table with chairs",
+			"descripcion": "Café table with four metal chairs round it. The chairs move: the terrace is never the same two days running.",
+			"etiquetas": ["café table", "terrace table", "chairs"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Café table with chairs”: a thick cross: the table in the middle and a chair on each side, 1.80 by 1.80 metres, marked with the letters “Mt”."
+		},
+		"mesa_alta": {
+			"nombre": "Tall bar table",
+			"descripcion": "Tall round table, or a barrel, for standing with a drink.",
+			"etiquetas": ["tall table", "poseur table", "barrel"],
+			"imagen": "Footprint of “Tall bar table”: a circle, 0.70 by 0.70 metres, marked with the letters “Ma”."
+		},
+		"sombrilla": {
+			"nombre": "Parasol",
+			"descripcion": "Terrace parasol: a heavy base on the ground and a pole. The ribs are at head height.",
+			"etiquetas": ["parasol", "sunshade", "umbrella base"],
+			"imagen": "Footprint of “Parasol”: a rectangle with cut corners, 0.50 by 0.50 metres, marked with the letters “So”."
+		},
+		"cartel_caballete": {
+			"nombre": "A-board",
+			"descripcion": "Two-sided folding sign with the menu of the day, standing in the middle of the pavement.",
+			"etiquetas": ["A-board", "sandwich board", "pavement sign"],
+			"imagen": "Footprint of “A-board”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Cc”."
+		},
+		"toldo_bajo": {
+			"nombre": "Low awning",
+			"descripcion": "A shop awning hanging too low: the bar is at forehead height. The cane gives no warning.",
+			"etiquetas": ["awning", "low awning", "overhead obstacle"],
+			"imagen": "Footprint of “Low awning”: a rectangle, 3.00 by 1.20 metres, hanging 1.65 metres above the floor, marked with the letters “Tb”."
+		},
+		"quiosco": {
+			"nombre": "Kiosk",
+			"descripcion": "Newspaper kiosk: an eight-sided metal booth with a counter and magazines hanging all round.",
+			"etiquetas": ["kiosk", "news stand", "newsagent"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Kiosk”: an octagon, 2.50 by 2.50 metres, marked with the letters “Qu”."
+		},
+		"puesto_mercado": {
+			"nombre": "Market stall",
+			"descripcion": "Street market stall: a counter with goods and an awning above on four legs.",
+			"etiquetas": ["market stall", "stand"],
+			"imagen": "Footprint of “Market stall”: a trapezoid, narrower at the back, 3.00 by 2.00 metres, marked with the letters “Pm”."
+		},
+		"expositor_fruta": {
+			"nombre": "Fruit crates on the pavement",
+			"descripcion": "Fruit crates the greengrocer puts out on the pavement, tilted, at knee to hip height.",
+			"etiquetas": ["fruit crates", "greengrocer display"],
+			"imagen": "Footprint of “Fruit crates on the pavement”: a rectangle, 2.00 by 0.80 metres, marked with the letters “Ef”."
+		},
+		"valla_obra": {
+			"nombre": "Roadworks barrier",
+			"descripcion": "Metal roadworks barrier, waist high, with feet sticking out at the bottom.",
+			"etiquetas": ["roadworks barrier", "barrier", "fence"],
+			"variantes": {
+				"peatonal": "Pedestrian barrier",
+				"alta": "Tall mesh panel"
+			},
+			"imagen": "Footprint of “Roadworks barrier”: a rectangle, 2.50 by 0.50 metres, marked with the letters “Vo”."
+		},
+		"andamio": {
+			"nombre": "Scaffolding legs",
+			"descripcion": "A row of legs of scaffolding standing on the pavement. Between this row and the wall is a narrow tunnel you walk through, wall on one side and tubes on the other.",
+			"etiquetas": ["scaffolding", "scaffold", "narrow passage"],
+			"variantes": {
+				"un_tramo": "One bay",
+				"dos_tramos": "Two bays",
+				"cuatro_tramos": "Four bays"
+			},
+			"aviso": "Scaffolding: narrow passage, mind your head.",
+			"imagen": "Footprint of “Scaffolding legs”: a rectangle, 5.00 by 0.15 metres, marked with the letters “An”."
+		},
+		"andamio_travesano": {
+			"nombre": "Scaffolding cross bar",
+			"descripcion": "A scaffolding tube crossing the passage at forehead height. The cane passes underneath without touching it.",
+			"etiquetas": ["scaffolding bar", "cross bar", "overhead obstacle"],
+			"imagen": "Footprint of “Scaffolding cross bar”: a rectangle, 1.30 by 0.06 metres, hanging 1.70 metres above the floor, marked with the letters “At”."
+		},
+		"zanja": {
+			"nombre": "Fenced trench",
+			"descripcion": "Open trench in the pavement, fenced off. No way through: you must go round.",
+			"etiquetas": ["trench", "excavation", "hole"],
+			"aviso": "Roadworks trench: no way through.",
+			"imagen": "Footprint of “Fenced trench”: a rectangle with cut corners, 2.00 by 1.20 metres, marked with the letters “Za”."
+		},
+		"cono": {
+			"nombre": "Traffic cone",
+			"descripcion": "Plastic roadworks cone, knee high. Knock it and it falls over.",
+			"etiquetas": ["traffic cone", "cone"],
+			"imagen": "Footprint of “Traffic cone”: a rectangle, 0.30 by 0.30 metres, marked with the letters “Co”."
+		},
+		"saco_escombros": {
+			"nombre": "Rubble sack",
+			"descripcion": "Big builder's bag full of rubble, left by the kerb.",
+			"etiquetas": ["rubble sack", "builder's bag"],
+			"imagen": "Footprint of “Rubble sack”: a rectangle with rounded corners, 0.90 by 0.90 metres, marked with the letters “Se”."
+		},
+		"charco": {
+			"nombre": "Puddle",
+			"descripcion": "Puddle on the pavement after rain. It does not block the way: you hear the splash when you step in it.",
+			"etiquetas": ["puddle", "water"],
+			"imagen": "Footprint of “Puddle”: an oval, 1.20 by 0.80 metres, marked with the letters “Ch”."
+		},
+		"armario_servicios": {
+			"nombre": "Utility cabinet",
+			"descripcion": "Metal electricity or telephone cabinet against the wall. It hums slightly.",
+			"etiquetas": ["utility cabinet", "electrical cabinet"],
+			"imagen": "Footprint of “Utility cabinet”: a rectangle, 1.00 by 0.40 metres, marked with the letters “As”."
+		},
+		"boca_riego": {
+			"nombre": "Hydrant cover",
+			"descripcion": "Small iron cover in the pavement, almost flush. You feel it underfoot and it rings like metal.",
+			"etiquetas": ["hydrant cover", "hydrant"],
+			"imagen": "Footprint of “Hydrant cover”: a rectangle, 0.30 by 0.30 metres, marked with the letters “Br”."
+		},
+		"hidrante": {
+			"nombre": "Pillar hydrant",
+			"descripcion": "Fire hydrant: a short iron pillar with outlets on its sides, at knee height.",
+			"etiquetas": ["fire hydrant", "pillar hydrant"],
+			"imagen": "Footprint of “Pillar hydrant”: a cross, 0.30 by 0.30 metres, marked with the letters “Hi”."
+		},
+		"tapa_alcantarilla": {
+			"nombre": "Manhole cover",
+			"descripcion": "Round iron cover. It does not block the way: steps ring like metal and it sometimes rocks a little.",
+			"etiquetas": ["manhole cover", "drain cover"],
+			"imagen": "Footprint of “Manhole cover”: a circle, 0.70 by 0.70 metres, marked with the letters “Ta”."
+		},
+		"rejilla": {
+			"nombre": "Ventilation grating",
+			"descripcion": "Metal grating in the pavement, from the underground or a car park. You walk on it: it sounds hollow and the cane tip may catch.",
+			"etiquetas": ["grating", "ventilation grille"],
+			"aviso": "Grating: the cane tip may catch.",
+			"imagen": "Footprint of “Ventilation grating”: a rectangle, 1.50 by 1.00 metres, marked with the letters “Re”."
+		},
+		"bordillo_alto": {
+			"nombre": "Step or high kerb",
+			"descripcion": "A step a hand's width high across the path. It does not block the way, but you must step up or down.",
+			"etiquetas": ["step", "kerb", "high kerb"],
+			"aviso": "Step.",
+			"imagen": "Footprint of “Step or high kerb”: a rectangle, 2.00 by 0.30 metres, marked with the letters “Ba”."
+		},
+		"rampa_vado": {
+			"nombre": "Dropped kerb ramp",
+			"descripcion": "Pavement sloping down to the road: the ground tilts. At a garage entrance, cars may cross.",
+			"etiquetas": ["dropped kerb", "ramp", "driveway"],
+			"aviso": "Dropped kerb: the pavement slopes down to the road.",
+			"imagen": "Footprint of “Dropped kerb ramp”: a trapezoid, narrower at the back, 3.00 by 1.50 metres, marked with the letters “Rv”."
+		},
+		"pavimento_botones": {
+			"nombre": "Blister tactile paving",
+			"descripcion": "Strip of slabs with raised blisters. It warns of a hazard or a crossing just ahead: stop here.",
+			"etiquetas": ["tactile paving", "blister paving", "warning surface"],
+			"aviso": "Blister paving: stop, there is a crossing or a hazard ahead.",
+			"imagen": "Footprint of “Blister tactile paving”: a rectangle, 4.00 by 0.60 metres, marked with the letters “Pb”."
+		},
+		"pavimento_rayas": {
+			"nombre": "Corduroy tactile paving",
+			"descripcion": "Strip of slabs with raised bars. It marks a route: follow it in the direction of the bars.",
+			"etiquetas": ["tactile paving", "guidance path", "corduroy paving"],
+			"imagen": "Footprint of “Corduroy tactile paving”: a rectangle, 0.80 by 4.00 metres, marked with the letters “Pr”."
+		},
+		"silla_urbana": {
+			"nombre": "Single street seat",
+			"descripcion": "Seat for one person, with a backrest and two firm arms to push up from. It is bolted to the ground: it does not move however hard you pull. There are usually several, a step apart.",
+			"etiquetas": ["street seat", "single seat", "seat with armrests"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Single street seat”: a U open at the front: the backrest behind and an arm on each side, 0.60 by 0.60 metres, marked with the letters “Su”."
+		},
+		"bloque_antivehiculo": {
+			"nombre": "Concrete anti-vehicle block",
+			"descripcion": "Solid concrete block at thigh height, sometimes shaped like a planter or a letter, to keep cars out of a pedestrian street. They stand in a row with gaps of one step. It sounds dull when struck and does not move.",
+			"etiquetas": ["anti-vehicle block", "concrete block", "hostile vehicle barrier"],
+			"variantes": {
+				"cubo": "Cube",
+				"alargado": "Long"
+			},
+			"imagen": "Footprint of “Concrete anti-vehicle block”: a rectangle with cut corners, 1.60 by 0.80 metres, marked with the letters “Ba”."
+		},
+		"guardacanton": {
+			"nombre": "Corner guard stone",
+			"descripcion": "Thick, rounded block of stone or iron fixed to the corner of an old building at knee height, once protecting the wall from carts. It sticks out exactly where you turn the corner following the wall.",
+			"etiquetas": ["corner guard stone", "spur stone", "guard stone"],
+			"imagen": "Footprint of “Corner guard stone”: a quarter circle with its corner at the back left, 0.40 by 0.40 metres, marked with the letters “Gu”."
+		},
+		"aseo_publico_automatico": {
+			"nombre": "Automatic public toilet",
+			"descripcion": "Large metal booth with a wide sliding door and a big raised button beside it. When you go in a voice explains where everything is; after you leave it cleans itself with a rush of water. A wheelchair fits inside.",
+			"etiquetas": ["public toilet", "automatic toilet", "superloo", "street toilet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tirar_cadena": "Flush"
+			},
+			"imagen": "Footprint of “Automatic public toilet”: a rectangle with cut corners, 2.60 by 1.80 metres, marked with the letters “Ap”."
+		},
+		"columna_anunciadora": {
+			"nombre": "Advertising column",
+			"descripcion": "Thick cylinder, as wide as a hug, covered in paper posters that rustle when brushed. At the top there is a small projecting roof, well above your head. Walk round it and you come back to the same place without meeting a corner.",
+			"etiquetas": ["advertising column", "Morris column", "poster pillar"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Advertising column”: a circle, 1.20 by 1.20 metres, marked with the letters “Ca”."
+		},
+		"reloj_calle": {
+			"nombre": "Street clock on a column",
+			"descripcion": "Cast-iron column, as slim as a lamp post, with a four-faced clock on top. It ticks, and some strike the hours: a meeting point and a way to know where the square is.",
+			"etiquetas": ["street clock", "square clock", "post clock", "public clock"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Street clock on a column”: a circle, 0.30 by 0.30 metres, marked with the letters “Rc”."
+		},
+		"placa_calle_braille": {
+			"nombre": "Raised and braille street name plate",
+			"descripcion": "Small plate screwed to the wall at the corner, at hand height, with the street name and house numbers in raised letters and braille. You find it by following the wall to the corner.",
+			"etiquetas": ["street name plate", "braille street sign", "tactile street sign"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Raised and braille street name plate”: a rectangle, 0.30 by 0.03 metres, hanging 1.20 metres above the floor, marked with the letters “Pc”."
+		},
+		"paso_cebra": {
+			"nombre": "Zebra crossing",
+			"descripcion": "Wide painted stripes across the road. You can barely feel them underfoot: they are a little smoother and slippery in the rain. It starts and ends at the blister strip on each pavement; follow the direction of the guidance strip to cross straight.",
+			"etiquetas": ["zebra crossing", "pedestrian crossing", "crosswalk"],
+			"variantes": {
+				"calle_estrecha": "One-lane street",
+				"dos_carriles": "Two lanes",
+				"avenida": "Avenue"
+			},
+			"aviso": "Pedestrian crossing: you are on the road. Cross straight and keep going.",
+			"imagen": "Footprint of “Zebra crossing”: a rectangle, 4.00 by 7.00 metres, marked with the letters “Pc”."
+		},
+		"isleta_refugio": {
+			"nombre": "Pedestrian refuge island",
+			"descripcion": "A piece of pavement in the middle of the road so you can cross in two stages. Sometimes it has a kerb, sometimes it is level with the road with blisters at each edge. Stop on it: behind it cars pass again, the other way.",
+			"etiquetas": ["refuge island", "pedestrian island", "traffic island"],
+			"aviso": "Refuge island: you are in the middle of the road. Wait before crossing on.",
+			"imagen": "Footprint of “Pedestrian refuge island”: an elongated oval with straight sides and round ends, 4.00 by 2.00 metres, marked with the letters “Ir”."
+		},
+		"paso_elevado": {
+			"nombre": "Raised pedestrian crossing",
+			"descripcion": "The road ramps up to pavement level and the crossing is flat: there is no kerb to step down. That makes it hard to tell where the pavement ends; the blister strips on each side mark it. Cars brake and you hear them climb the ramp.",
+			"etiquetas": ["raised crossing", "speed table", "raised zebra"],
+			"aviso": "Raised crossing: you are on the road even though there is no kerb.",
+			"imagen": "Footprint of “Raised pedestrian crossing”: a trapezoid, narrower at the back, 4.00 by 7.00 metres, marked with the letters “Pe”."
+		},
+		"carril_bici": {
+			"nombre": "Cycle lane on the pavement",
+			"descripcion": "Strip of pavement reserved for bikes, of smoother asphalt than the paving slabs and sometimes separated by a low kerb or a raised line. Bikes and scooters pass fast and almost silently: cross it straight and do not stop on it.",
+			"etiquetas": ["cycle lane", "bike lane", "cycle track"],
+			"variantes": {
+				"un_sentido": "One-way",
+				"doble_sentido": "Two-way"
+			},
+			"aviso": "Cycle lane: fast, silent bikes may pass.",
+			"imagen": "Footprint of “Cycle lane on the pavement”: a rectangle, 2.00 by 10.00 metres, marked with the letters “Cb”."
+		},
+		"baliza_flexible": {
+			"nombre": "Flexible lane post",
+			"descripcion": "Thin post of soft plastic that bends when pushed and springs back upright. It separates the cycle lane or closes a way to cars, often in a row. Strike it with the cane and it sounds hollow and gives.",
+			"etiquetas": ["flexible post", "delineator post", "bollard post"],
+			"imagen": "Footprint of “Flexible lane post”: a circle, 0.10 by 0.10 metres, marked with the letters “Bf”."
+		},
+		"dispensador_bolsas_perro": {
+			"nombre": "Dog waste bag dispenser",
+			"descripcion": "Thin post with a box at chest height from which you pull a bag; a small bin usually hangs underneath. It stands by lamp posts, tree pits and park entrances.",
+			"etiquetas": ["dog bag dispenser", "dog waste bin", "poop bag station"],
+			"acciones": {
+				"cal_coger_bolsa": "Take a bag",
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Dog waste bag dispenser”: a rectangle, 0.30 by 0.20 metres, marked with the letters “Db”."
+		},
+		"cercado_contenedores": {
+			"nombre": "Bin enclosure",
+			"descripcion": "Enclosure of wooden or metal slats hiding a row of bins. From the pavement it is a smooth wall at chest height; it is open on the road side. It smells of rubbish and you hear the lids.",
+			"etiquetas": ["bin enclosure", "bin store", "bin screen"],
+			"imagen": "Footprint of “Bin enclosure”: a U open at the front, 4.00 by 1.80 metres, marked with the letters “Cc”."
+		},
+		"contenedor_soterrado": {
+			"nombre": "Underground bin chute",
+			"descripcion": "Metal column, waist to chest high, with a hatch you open by pulling the handle. The rubbish drops into a buried container and you hear it fall a long way. Around it the ground is a metal platform that sounds different underfoot.",
+			"etiquetas": ["underground bin", "underground waste chute", "buried container"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Underground bin chute”: a rectangle, 0.80 by 0.70 metres, marked with the letters “Cs”."
+		},
+		"contenedor_ropa": {
+			"nombre": "Clothing bank",
+			"descripcion": "Metal box taller than a person, with a tilting hopper at chest height: pull the handle, put the bag of clothes in and let go. It sounds like hollow sheet metal when struck.",
+			"etiquetas": ["clothing bank", "textile bank", "clothes recycling bin"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Clothing bank”: a rectangle, 1.20 by 1.00 metres, marked with the letters “Cr”."
+		},
+		"contenedor_aceite": {
+			"nombre": "Used cooking oil bin",
+			"descripcion": "A container smaller than the rubbish bins, with a round lidded opening at chest height, where you drop in a closed plastic bottle of used cooking oil.",
+			"etiquetas": ["cooking oil bin", "used oil container", "oil recycling"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Used cooking oil bin”: a rectangle with cut corners, 0.70 by 0.60 metres, marked with the letters “Ca”."
+		},
+		"contenedor_pilas": {
+			"nombre": "Battery recycling tube",
+			"descripcion": "Plastic tube the size of a flask, fixed to a lamp post or pole at chest height, with a slot on top. It sticks out only a little and the cane misses it. Drop a battery in and you hear it land on the others.",
+			"etiquetas": ["battery bin", "battery recycling", "used batteries"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Battery recycling tube”: a circle, 0.25 by 0.20 metres, hanging 0.80 metres above the floor, marked with the letters “Cp”."
+		},
+		"rejilla_alcorque": {
+			"nombre": "Tree grate",
+			"descripcion": "Square iron grate flush with the pavement around a tree, with a round hole in the middle for the trunk. You walk on it: it rings like metal and the cane tip slips into the slots. The trunk rises in the centre.",
+			"etiquetas": ["tree grate", "tree grille", "tree pit cover"],
+			"aviso": "Tree grate: the tree trunk is in the middle.",
+			"imagen": "Footprint of “Tree grate”: a rectangle, 1.20 by 1.20 metres, marked with the letters “Ra”."
+		},
+		"parterre_bordillo": {
+			"nombre": "Lawn bed with a low edging kerb",
+			"descripcion": "Patch of lawn or flowers edged with a kerb a hand's width high. The kerb is easy to trip on and, beyond it, your foot sinks into soft soil that smells of wet grass.",
+			"etiquetas": ["lawn bed", "flower bed", "grass verge"],
+			"variantes": {
+				"cuadrado": "Square",
+				"franja": "Long strip"
+			},
+			"aviso": "Lawn bed: a low kerb and then soft ground.",
+			"imagen": "Footprint of “Lawn bed with a low edging kerb”: a rectangle with rounded corners, 3.00 by 1.50 metres, marked with the letters “Pb”."
+		},
+		"valla_arquillos": {
+			"nombre": "Low hoop edging fence",
+			"descripcion": "Iron wire hoops pushed in one after another along the edge of a lawn, at ankle or shin height. They are very thin: the cane often sweeps over them and your foot catches.",
+			"etiquetas": ["hoop fence", "hoop edging", "lawn edging", "low garden fence"],
+			"imagen": "Footprint of “Low hoop edging fence”: a rectangle, 2.00 by 0.03 metres, marked with the letters “Va”."
+		},
+		"lavadero_publico": {
+			"nombre": "Public wash house",
+			"descripcion": "Long stone trough at waist height, with sloping edges for scrubbing clothes and a spout that never stops running, under a roof on columns. You hear the water from across the square and the edge is always wet.",
+			"etiquetas": ["wash house", "public washing trough", "village laundry"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Public wash house”: a rectangle with rounded corners, 4.00 by 1.50 metres, marked with the letters “Lp”."
+		},
+		"quiosco_flores": {
+			"nombre": "Flower kiosk",
+			"descripcion": "Permanent flower stall: a booth with buckets of water and bunches on tiered stands reaching out onto the pavement, at knee and hip height. It smells strongly of flowers and the ground around it is usually wet.",
+			"etiquetas": ["flower kiosk", "flower stall", "florist's stand"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Flower kiosk”: a booth at the back and a wider stand of buckets reaching forward, 3.00 by 2.00 metres, marked with the letters “Qf”."
+		},
+		"expositor_postales": {
+			"nombre": "Revolving postcard stand",
+			"descripcion": "Wire tower of postcards, magnets or sunglasses standing at a shop door on a heavy round base. It turns with a squeak when touched and the cards rattle.",
+			"etiquetas": ["revolving stand", "postcard rack", "spinner rack"],
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Revolving postcard stand”: an octagon, 0.50 by 0.50 metres, marked with the letters “Ep”."
+		},
+		"reja_ventana": {
+			"nombre": "Protruding window grille",
+			"descripcion": "Iron grille over a ground-floor window that sticks out from the wall a hand's width or more, from waist height to above the head. The cane, close to the wall, passes underneath: you meet it with your hip or shoulder.",
+			"etiquetas": ["window grille", "window bars", "protruding grille"],
+			"imagen": "Footprint of “Protruding window grille”: a rectangle, 1.20 by 0.25 metres, hanging 0.80 metres above the floor, marked with the letters “Rv”."
+		},
+		"escaleras_calle": {
+			"nombre": "Street steps with handrail",
+			"descripcion": "Flight of stone steps climbing a slope in the street, with handrails at the sides or in the middle. There is a blister strip at the top and bottom; the steps are wide and sometimes uneven.",
+			"etiquetas": ["street steps", "outdoor stairs", "flight of steps"],
+			"variantes": {
+				"cuatro_peldanos": "Four steps",
+				"ocho_peldanos": "Eight steps",
+				"doce_peldanos": "Twelve steps"
+			},
+			"aviso": "Street steps: a flight of steps with a handrail.",
+			"imagen": "Footprint of “Street steps with handrail”: a rectangle, 3.00 by 2.40 metres, marked with the letters “Ec”."
+		},
+		"desnivel_lateral": {
+			"nombre": "Unprotected raised pavement edge",
+			"descripcion": "A stretch of pavement higher than the road or a neighbouring plot, with no railing: the ground drops away suddenly by half a metre or more. You notice the change in the cane's echo and the air; keep close to the wall.",
+			"etiquetas": ["unprotected edge", "drop-off", "raised pavement edge"],
+			"aviso": "Unprotected edge: the ground drops away to one side.",
+			"imagen": "Footprint of “Unprotected raised pavement edge”: a rectangle, 6.00 by 0.20 metres, marked with the letters “Dl”."
+		},
+		"rigola_plataforma_unica": {
+			"nombre": "Shared-street drainage channel",
+			"descripcion": "In streets without kerbs, where pavement and road are at the same level, a strip of setts or a slightly sunken channel marks where the cars go. You feel it underfoot and with the cane: do not cross it without listening.",
+			"etiquetas": ["drainage channel", "shared street edge", "gutter strip"],
+			"aviso": "Channel: cars may pass on the other side.",
+			"imagen": "Footprint of “Shared-street drainage channel”: a rectangle, 0.40 by 10.00 metres, marked with the letters “Rp”."
+		},
+		"adoquinado": {
+			"nombre": "Stretch of uneven cobbles",
+			"descripcion": "An area of setts or round cobbles with wide joints. The cane bounces and catches in the joints, and your steps sound different: a sign you are entering a square or an old town.",
+			"etiquetas": ["cobbles", "cobblestones", "setts", "cobbled street"],
+			"imagen": "Footprint of “Stretch of uneven cobbles”: a rectangle, 3.00 by 5.00 metres, marked with the letters “Ad”."
+		},
+		"monumento_plaza": {
+			"nombre": "Monument on a stepped plinth",
+			"descripcion": "Statue or memorial column on a stone plinth with two or three steps all round and sometimes a low railing. The steps come before the plinth: the cane hits the first one. It usually stands in the middle of the square.",
+			"etiquetas": ["monument", "statue", "plinth", "memorial"],
+			"imagen": "Footprint of “Monument on a stepped plinth”: a rectangle with cut corners, 3.50 by 3.50 metres, marked with the letters “Mp”."
+		},
+		"pilar_soportal": {
+			"nombre": "Arcade pillar",
+			"descripcion": "Stone pillar or column of an arcade, every few metres, between the covered walkway (with the shop fronts on one side) and the square. Under the arcade the echo of the ceiling changes and you no longer hear the rain.",
+			"etiquetas": ["arcade pillar", "colonnade", "portico column"],
+			"variantes": {
+				"cuadrado": "Square pillar",
+				"grueso": "Thick stone pillar"
+			},
+			"imagen": "Footprint of “Arcade pillar”: a rectangle with cut corners, 0.50 by 0.50 metres, marked with the letters “Ps”."
+		},
+		"templete_musica": {
+			"nombre": "Bandstand",
+			"descripcion": "Octagonal platform raised to chest height, with a railing, slender columns and a roof, reached by a flight of steps. Walking round it you follow its stone base. On feast days a band plays there.",
+			"etiquetas": ["bandstand", "band shell", "music pavilion"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Bandstand”: an octagon, 7.00 by 7.00 metres, marked with the letters “Tm”."
+		},
+		"graderio_plaza": {
+			"nombre": "Stone seating terrace",
+			"descripcion": "Wide, curved stone steps like a small amphitheatre, for sitting to watch the square or a stage. Each step comes up to the knee and is deep; going down without a handrail is hard.",
+			"etiquetas": ["seating terrace", "amphitheatre steps", "stone tiers"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Stone seating terrace”: a curved band bulging towards the front, 6.00 by 2.50 metres, marked with the letters “Gp”."
+		},
+		"tiovivo": {
+			"nombre": "Merry-go-round",
+			"descripcion": "Round ride with horses and little cars rising and falling on a turning platform, under a canopy. When running it plays barrel-organ music you hear from afar: a good landmark at fairs and in squares. The edge has a step and a railing with the entrance.",
+			"etiquetas": ["merry-go-round", "carousel", "roundabout ride"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop",
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Merry-go-round”: a twelve-sided circle, 8.00 by 8.00 metres, marked with the letters “Ti”."
+		}
+	}
+}

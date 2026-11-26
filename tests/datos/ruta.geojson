@@ -1,0 +1,42 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Ruta al mercado"
+			},
+			"geometry": {
+				"type": "LineString",
+				"coordinates": [
+					[
+						-3.699413,
+						40.0000378
+					],
+					[
+						-3.6998826,
+						40.0000378
+					],
+					[
+						-3.7003522,
+						40.0000378
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Punto de encuentro",
+				"description": "Junto al banco."
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-3.7001174,
+					40.0000342
+				]
+			}
+		}
+	]
+}

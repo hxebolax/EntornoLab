@@ -1,0 +1,4955 @@
+{
+	"formato": 1,
+	"id": "juego",
+	"nombre": "Juego",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Objetos para los juegos: escondites de premios, cosas que suenan al tocarlas y metas. Unos fantásticos, para niños, y otros sobrios, para adultos.",
+	"depende_de": ["comun", "hogar", "colegio", "oficina_y_comercio", "calle", "transporte"],
+	"categorias": {
+		"tesoros": "Escondites de premios",
+		"sonoros": "Cosas que suenan",
+		"fantasia": "Lugares de fantasía",
+		"metas": "Metas y señales",
+		"adultos": "Juegos de adultos",
+		"acertijos": "Llaves, puertas y acertijos",
+		"personajes": "Personajes y animales",
+		"aventura": "Obstáculos de aventura"
+	},
+	"subcategorias": {
+		"cofres_cajas": "Cofres, cajas y vasijas",
+		"bolsas_huchas": "Huchas, sacos y piñatas",
+		"joyas_reliquias": "Joyas, reliquias y nidos",
+		"mensajes_mapas": "Mensajes y mapas",
+		"campanas_timbres": "Campanas, timbres y cuernos",
+		"instrumentos_juego": "Instrumentos para tocar",
+		"balizas_pistas_sonoras": "Balizas y pistas sonoras",
+		"naturaleza_magica": "Naturaleza mágica",
+		"refugios_caminos": "Refugios y caminos",
+		"castillo_magia": "Castillo y hechicería",
+		"piratas": "Barco pirata",
+		"espacio": "Nave espacial",
+		"metas_podios": "Metas y podios",
+		"blancos_juegos": "Blancos y juegos de suelo",
+		"marcas_pistas": "Marcas y pistas",
+		"guardar_cosas": "Taquillas, cajas y paquetes",
+		"objetos_casa": "Cosas que hay que recoger",
+		"llaves_puertas": "Llaves y puertas",
+		"mecanismos": "Mecanismos y acertijos",
+		"criaturas": "Animales y criaturas",
+		"figuras": "Figuras y seres",
+		"trampas_suelo": "Trampas del suelo",
+		"colgantes": "Cosas que cuelgan",
+		"muros_cuevas": "Cuevas y murallas"
+	},
+	"estados": {
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"encendido": "Encendido",
+		"apagado": "Apagado",
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"hinchado": "Hinchado",
+		"explotado": "Explotado",
+		"jue_entera": "Entera",
+		"jue_rota": "Rota: han caído los premios",
+		"parado": "Parado",
+		"girando": "Girando",
+		"jue_clavada": "Clavada en la roca",
+		"jue_sacada": "Sacada de la roca",
+		"jue_arriba": "Palanca arriba",
+		"jue_abajo": "Palanca abajo",
+		"vacio": "Vacío",
+		"jue_cayendo": "Cayendo la arena",
+		"jue_dormido": "Dormido",
+		"jue_despierto": "Despierto"
+	},
+	"objetos": [
+		{
+			"id": "cofre",
+			"nombre": "Cofre del tesoro",
+			"categoria": "tesoros",
+			"subcategoria": "cofres_cajas",
+			"etiquetas": ["cofre", "tesoro", "arcón", "baúl"],
+			"descripcion": "Cofre de madera con herrajes. La tapa cruje al abrirse y dentro puede haber un tesoro.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.8], [0.9, 1.0], [0.6, 1.0], [0.6, 0.85], [0.4, 0.85], [0.4, 1.0], [0.1, 1.0], [0.0, 0.8]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.2],
+				"fondo": [0.35, 0.5, 0.7],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "Pequeño",
+					"ancho": 0.5,
+					"fondo": 0.35,
+					"alto": 0.4
+				},
+				{
+					"id": "mediano",
+					"nombre": "Mediano",
+					"ancho": 0.8,
+					"fondo": 0.5,
+					"alto": 0.5
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 1.2,
+					"fondo": 0.7,
+					"alto": 0.7
+				}
+			],
+			"colocacion": ["suelo", "pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cofre_abrir.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cofre_cerrar.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["llave_magica", "mapa_tesoro"],
+			"simbolo": {
+				"letra": "Co",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cofre.png",
+				"descripcion": "Huella en planta de «Cofre del tesoro»: un rectángulo con las esquinas de delante cortadas y una muesca en el centro, donde está el cierre de 0,80 por 0,50 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "caja_sorpresa",
+			"nombre": "Caja sorpresa",
+			"categoria": "tesoros",
+			"subcategoria": "cofres_cajas",
+			"etiquetas": ["caja sorpresa", "caja de muelle", "sorpresa"],
+			"descripcion": "Caja cuadrada con una manivela. Al abrirla salta un muelle con un boing.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.3, 0.4, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/muelle.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/caja_sorpresa.png",
+				"descripcion": "Huella en planta de «Caja sorpresa»: un rectángulo de 0,40 por 0,40 metros, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "hucha",
+			"nombre": "Hucha",
+			"categoria": "tesoros",
+			"subcategoria": "bolsas_huchas",
+			"etiquetas": ["hucha", "cerdito", "alcancía", "monedas"],
+			"descripcion": "Hucha de barro con forma de cerdito, del tamaño de un balón. Si la agitas, suenan las monedas.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.45],
+				"fondo": [0.35, 0.4, 0.6],
+				"alto": [0.25, 0.3, 0.45]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"uso": "sonidos/monedas.flac"
+			},
+			"acciones": [
+				{
+					"id": "agitar",
+					"nombre": "Agitar",
+					"sonido": "sonidos/monedas.flac"
+				},
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "sonidos/monedas.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera", "vivienda"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["saco_monedas"],
+			"simbolo": {
+				"letra": "Hu",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/hucha.png",
+				"descripcion": "Huella en planta de «Hucha»: un óvalo de 0,30 por 0,40 metros, con la letra «Hu»."
+			}
+		},
+		{
+			"id": "mochila",
+			"nombre": "Mochila",
+			"categoria": "tesoros",
+			"subcategoria": "bolsas_huchas",
+			"etiquetas": ["mochila", "bolsa", "macuto"],
+			"descripcion": "Mochila apoyada en el suelo. Blanda; la cremallera hace zip al abrirla.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.966, 0.791], [0.865, 0.932], [0.684, 1.0], [0.316, 1.0], [0.135, 0.932], [0.034, 0.791], [0.0, 0.5], [0.034, 0.209], [0.135, 0.068], [0.316, 0.0], [0.684, 0.0], [0.865, 0.068], [0.966, 0.209]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.45],
+				"fondo": [0.2, 0.25, 0.3],
+				"alto": [0.4, 0.45, 0.55]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cremallera.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cremallera.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["cualquiera", "colegio"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mo",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mochila.png",
+				"descripcion": "Huella en planta de «Mochila»: un rectángulo de esquinas redondeadas de 0,35 por 0,25 metros, con la letra «Mo»."
+			}
+		},
+		{
+			"id": "caja_juguetes",
+			"nombre": "Caja de juguetes",
+			"categoria": "tesoros",
+			"subcategoria": "cofres_cajas",
+			"etiquetas": ["caja de juguetes", "juguetero", "baúl de juguetes"],
+			"descripcion": "Cajón grande de plástico lleno de juguetes. Al rebuscar, todo suena.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 1.0],
+				"fondo": [0.35, 0.45, 0.6],
+				"alto": [0.35, 0.45, 0.6]
+			},
+			"colocacion": ["suelo", "pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "agitar",
+					"nombre": "Agitar",
+					"sonido": "hogar:juguetes.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["cualquiera", "vivienda", "guarderia"],
+			"estancias": ["habitacion_infantil", "aula_infantil", "cualquiera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cj",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/caja_juguetes.png",
+				"descripcion": "Huella en planta de «Caja de juguetes»: un rectángulo de 0,70 por 0,45 metros, con la letra «Cj»."
+			}
+		},
+		{
+			"id": "buzon_mensajes",
+			"nombre": "Buzón de mensajes",
+			"categoria": "tesoros",
+			"subcategoria": "mensajes_mapas",
+			"etiquetas": ["buzón", "buzon", "mensajes", "cartas", "pista"],
+			"descripcion": "Buzón pequeño sobre un poste, a la altura del pecho. Dentro puede haber un mensaje o una pista.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.45],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [1.1, 1.2, 1.4]
+			},
+			"colocacion": ["suelo", "pared", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "calle:trampilla_buzon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "calle:trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["mapa_tesoro"],
+			"simbolo": {
+				"letra": "Bm",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/buzon_mensajes.png",
+				"descripcion": "Huella en planta de «Buzón de mensajes»: un rectángulo de 0,35 por 0,30 metros, con la letra «Bm»."
+			}
+		},
+		{
+			"id": "nido",
+			"nombre": "Nido gigante",
+			"categoria": "tesoros",
+			"subcategoria": "joyas_reliquias",
+			"etiquetas": ["nido", "ramas", "huevos"],
+			"descripcion": "Nido de ramas del tamaño de una rueda de camión, en el suelo. Entre las ramas puede haber algo.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.5],
+				"fondo": [0.8, 1.0, 1.5],
+				"alto": [0.3, 0.4, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "planta",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "animal",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque"],
+			"obstaculo": "bajo",
+			"frecuencia": "ocasional",
+			"relacionados": ["huevo_dragon"],
+			"simbolo": {
+				"letra": "Ni",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/nido.png",
+				"descripcion": "Huella en planta de «Nido gigante»: un círculo de 1,00 por 1,00 metros, con la letra «Ni»."
+			}
+		},
+		{
+			"id": "olla_arcoiris",
+			"nombre": "Olla del final del arcoíris",
+			"categoria": "tesoros",
+			"subcategoria": "joyas_reliquias",
+			"etiquetas": ["olla", "caldero", "arcoíris", "oro"],
+			"descripcion": "Caldero redondo de hierro, panzudo, con tapa. Pesa y suena a campana grave al golpearlo.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.8],
+				"fondo": [0.4, 0.5, 0.8],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "sonidos/campana.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/magia.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cofre_cerrar.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["bosque"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Oa",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/olla_arcoiris.png",
+				"descripcion": "Huella en planta de «Olla del final del arcoíris»: un círculo de 0,50 por 0,50 metros, con la letra «Oa»."
+			}
+		},
+		{
+			"id": "campana",
+			"nombre": "Campana",
+			"categoria": "sonoros",
+			"subcategoria": "campanas_timbres",
+			"etiquetas": ["campana", "campanilla", "gong"],
+			"descripcion": "Campana de bronce colgada de un arco, a la altura de la mano. Al tocarla, suena largo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.8],
+				"fondo": [0.4, 0.5, 0.8],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "sonidos/campana.flac",
+				"uso": "sonidos/campana.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/campana.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/campana.png",
+				"descripcion": "Huella en planta de «Campana»: un círculo de 0,50 por 0,50 metros, colgado a 1,00 metros del suelo, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "xilofono",
+			"nombre": "Xilófono gigante",
+			"categoria": "sonoros",
+			"subcategoria": "instrumentos_juego",
+			"etiquetas": ["xilófono", "xilofono", "marimba", "láminas"],
+			"descripcion": "Xilófono de láminas de madera tan grande como una mesa, más ancho por un lado que por el otro. Al tocarlo suena una escala.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.225, 0.0], [0.775, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.4],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [0.6, 0.75, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "sonidos/xilofono.flac",
+				"uso": "sonidos/xilofono.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar_nota",
+					"nombre": "Tocar una nota",
+					"sonido": "sonidos/xilofono.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["tambor", "litofono"],
+			"simbolo": {
+				"letra": "Xi",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/xilofono.png",
+				"descripcion": "Huella en planta de «Xilófono gigante»: un trapecio, más estrecho por detrás de 1,60 por 0,80 metros, con la letra «Xi»."
+			}
+		},
+		{
+			"id": "tambor",
+			"nombre": "Tambor",
+			"categoria": "sonoros",
+			"subcategoria": "instrumentos_juego",
+			"etiquetas": ["tambor", "bombo", "timbal"],
+			"descripcion": "Tambor grande de pie, redondo, del alto de la cintura. Al golpearlo: pom, pom.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 1.0],
+				"fondo": [0.4, 0.6, 1.0],
+				"alto": [0.5, 0.8, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "sonidos/tambor.flac",
+				"uso": "sonidos/tambor.flac"
+			},
+			"acciones": [
+				{
+					"id": "golpear",
+					"nombre": "Golpear",
+					"sonido": "sonidos/tambor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "instrumento",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["xilofono"],
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/tambor.png",
+				"descripcion": "Huella en planta de «Tambor»: un círculo de 0,60 por 0,60 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "baliza_musical",
+			"nombre": "Baliza musical",
+			"categoria": "sonoros",
+			"subcategoria": "balizas_pistas_sonoras",
+			"etiquetas": ["baliza", "baliza musical", "caja de música", "faro"],
+			"descripcion": "Poste pequeño que toca una melodía de caja de música sin parar. Se oye de lejos: sirve para marcar un sitio al que hay que llegar.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.75, 1.0], [0.25, 1.0], [0.0, 0.5], [0.25, 0.0], [0.75, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.4],
+				"fondo": [0.2, 0.25, 0.4],
+				"alto": [0.8, 1.0, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/baliza_musical.flac",
+					"volumen": 0.5,
+					"radio": 15,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["encendido", "apagado"],
+			"acciones": [
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "referencia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["bandera_meta"],
+			"simbolo": {
+				"letra": "Bm",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/baliza_musical.png",
+				"descripcion": "Huella en planta de «Baliza musical»: un hexágono de 0,25 por 0,25 metros, con la letra «Bm»."
+			}
+		},
+		{
+			"id": "carillon",
+			"nombre": "Carillón de viento",
+			"categoria": "sonoros",
+			"subcategoria": "campanas_timbres",
+			"etiquetas": ["carillón", "campanillas", "móvil de viento"],
+			"descripcion": "Tubos de metal colgados a la altura de la cabeza. Si los rozas, tintinean. El bastón no los encuentra.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.3, 0.5],
+				"fondo": [0.2, 0.3, 0.5],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "sonidos/magia.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/magia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/carillon.png",
+				"descripcion": "Huella en planta de «Carillón de viento»: un círculo de 0,30 por 0,30 metros, colgado a 1,50 metros del suelo, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "timbre",
+			"nombre": "Timbre de mostrador",
+			"categoria": "sonoros",
+			"subcategoria": "campanas_timbres",
+			"etiquetas": ["timbre", "llamador", "campanilla"],
+			"descripcion": "Timbre redondo de metal sobre un pedestal: se le da una palmada y hace ring.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:timbre_bici.flac"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "transporte:timbre_bici.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ti",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/timbre.png",
+				"descripcion": "Huella en planta de «Timbre de mostrador»: un círculo de 0,30 por 0,30 metros, con la letra «Ti»."
+			}
+		},
+		{
+			"id": "arbol_magico",
+			"nombre": "Árbol mágico",
+			"categoria": "fantasia",
+			"subcategoria": "naturaleza_magica",
+			"etiquetas": ["árbol mágico", "arbol", "árbol encantado"],
+			"descripcion": "Árbol de tronco grueso y nudoso cuyas hojas suenan como campanillas de cristal. En un hueco del tronco se pueden guardar cosas.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 1.0], [0.34, 0.815], [0.099, 0.802], [0.14, 0.558], [0.0, 0.357], [0.211, 0.238], [0.277, 0.0], [0.5, 0.095], [0.723, 0.0], [0.789, 0.238], [1.0, 0.357], [0.86, 0.558], [0.901, 0.802], [0.66, 0.815]]
+			},
+			"medidas": {
+				"ancho": [0.6, 1.0, 2.0],
+				"fondo": [0.6, 1.0, 2.0],
+				"alto": [3.0, 5.0, 8.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "sonidos/arbol_magico.flac",
+					"volumen": 0.45,
+					"radio": 12
+				}
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/magia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["bosque"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["seta_gigante", "fuente_deseos"],
+			"simbolo": {
+				"letra": "Am",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/arbol_magico.png",
+				"descripcion": "Huella en planta de «Árbol mágico»: una estrella de 7 puntas de 1,00 por 1,00 metros, con la letra «Am»."
+			}
+		},
+		{
+			"id": "tienda_campana",
+			"nombre": "Tienda de campaña",
+			"categoria": "fantasia",
+			"subcategoria": "refugios_caminos",
+			"etiquetas": ["tienda de campaña", "tipi", "carpa", "campamento"],
+			"descripcion": "Tienda de campaña de seis lados. La tela cede al tocarla; la entrada tiene cremallera.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.75, 1.0], [0.25, 1.0], [0.0, 0.5], [0.25, 0.0], [0.75, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.6, 2.2, 3.5],
+				"fondo": [1.4, 1.9, 3.0],
+				"alto": [1.2, 1.5, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cremallera.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cremallera.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["fantasia", "naturaleza", "cualquiera"],
+			"estancias": ["bosque", "isla"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tc",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/tienda_campana.png",
+				"descripcion": "Huella en planta de «Tienda de campaña»: un hexágono de 2,20 por 1,90 metros, con la letra «Tc»."
+			}
+		},
+		{
+			"id": "casita",
+			"nombre": "Casita de juegos",
+			"categoria": "fantasia",
+			"subcategoria": "refugios_caminos",
+			"etiquetas": ["casita", "cabaña", "casa de muñecas", "caseta"],
+			"descripcion": "Casita de madera con tejado a dos aguas y una puerta pequeña. Cerrada es un obstáculo; abierta, se entra agachándose.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.35], [0.5, 0.0], [1.0, 0.35], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.5],
+				"fondo": [1.2, 1.6, 2.5],
+				"alto": [1.4, 1.6, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "parque_infantil", "cualquiera"],
+			"estancias": ["bosque", "cualquiera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/casita.png",
+				"descripcion": "Huella en planta de «Casita de juegos»: un pentágono con forma de casita de 1,60 por 1,60 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "alfombra_voladora",
+			"nombre": "Alfombra voladora",
+			"categoria": "fantasia",
+			"subcategoria": "refugios_caminos",
+			"etiquetas": ["alfombra voladora", "alfombra mágica", "tapiz"],
+			"descripcion": "Alfombra de bordes ondulados tendida en el suelo. No corta el paso: al pisarla, los pasos se apagan.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.08], [0.125, 0.16], [0.25, 0.08], [0.375, 0.0], [0.5, 0.08], [0.625, 0.16], [0.75, 0.08], [0.875, 0.0], [1.0, 0.08], [1.0, 0.92], [0.875, 1.0], [0.75, 0.92], [0.625, 0.84], [0.5, 0.92], [0.375, 1.0], [0.25, 0.92], [0.125, 0.84], [0.0, 0.92]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.8, 3.0],
+				"fondo": [0.7, 1.2, 2.0],
+				"alto": [0.01, 0.02, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "sonidos/magia.flac"
+			},
+			"contenedor": true,
+			"suelo": "alfombra",
+			"aviso": "Estás sobre la alfombra voladora.",
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["castillo", "cualquiera"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Av",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/alfombra_voladora.png",
+				"descripcion": "Huella en planta de «Alfombra voladora»: un rectángulo de bordes ondulados de 1,80 por 1,20 metros, con la letra «Av»."
+			}
+		},
+		{
+			"id": "fuente_deseos",
+			"nombre": "Fuente de los deseos",
+			"categoria": "fantasia",
+			"subcategoria": "naturaleza_magica",
+			"etiquetas": ["fuente de los deseos", "pozo", "pozo de los deseos"],
+			"descripcion": "Pozo redondo de piedra con un hilo de agua. Si echas una moneda, se oye el plop y un brillo.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 2.5],
+				"fondo": [1.0, 1.4, 2.5],
+				"alto": [0.6, 0.9, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"uso": "sonidos/deseo.flac",
+				"propio": {
+					"sonido": "sonidos/fuente_deseos.flac",
+					"volumen": 0.45,
+					"radio": 10
+				}
+			},
+			"acciones": [
+				{
+					"id": "pedir_deseo",
+					"nombre": "Pedir un deseo",
+					"sonido": "sonidos/deseo.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["bosque", "castillo"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Fd",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/fuente_deseos.png",
+				"descripcion": "Huella en planta de «Fuente de los deseos»: un octógono de 1,40 por 1,40 metros, con la letra «Fd»."
+			}
+		},
+		{
+			"id": "estatua",
+			"nombre": "Estatua",
+			"categoria": "fantasia",
+			"subcategoria": "castillo_magia",
+			"etiquetas": ["estatua", "escultura", "monumento", "pedestal"],
+			"descripcion": "Estatua de piedra sobre un pedestal cuadrado. El pedestal llega a la cintura; arriba, la figura.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 0.2], [1.0, 0.8], [0.8, 1.0], [0.2, 1.0], [0.0, 0.8], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.5],
+				"fondo": [0.5, 0.8, 1.5],
+				"alto": [1.5, 2.2, 4.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "decoracion",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "bosque"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Es",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/estatua.png",
+				"descripcion": "Huella en planta de «Estatua»: un rectángulo con las esquinas cortadas de 0,80 por 0,80 metros, con la letra «Es»."
+			}
+		},
+		{
+			"id": "seta_gigante",
+			"nombre": "Seta gigante",
+			"categoria": "fantasia",
+			"subcategoria": "naturaleza_magica",
+			"etiquetas": ["seta", "hongo", "champiñón"],
+			"descripcion": "Seta de fantasía: un pie grueso y un sombrero ancho a la altura del pecho, donde uno puede sentarse.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.5],
+				"fondo": [0.6, 0.9, 1.5],
+				"alto": [0.5, 0.9, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["bosque"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["arbol_magico"],
+			"simbolo": {
+				"letra": "Sg",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/seta_gigante.png",
+				"descripcion": "Huella en planta de «Seta gigante»: un círculo de 0,90 por 0,90 metros, con la letra «Sg»."
+			}
+		},
+		{
+			"id": "puente",
+			"nombre": "Puentecillo",
+			"categoria": "fantasia",
+			"subcategoria": "refugios_caminos",
+			"etiquetas": ["puente", "pasarela", "puentecillo"],
+			"descripcion": "Puente de madera corto y estrecho. Se cruza por encima: los pasos suenan huecos.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 2.0],
+				"fondo": [1.5, 2.5, 5.0],
+				"alto": [0.2, 0.3, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"suelo": "madera",
+			"aviso": "Estás cruzando el puente.",
+			"funcion": "estructura",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque", "castillo"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["charca"],
+			"simbolo": {
+				"letra": "Pu",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/puente.png",
+				"descripcion": "Huella en planta de «Puentecillo»: un rectángulo de 1,20 por 2,50 metros, con la letra «Pu»."
+			}
+		},
+		{
+			"id": "charca",
+			"nombre": "Charca de ranas",
+			"categoria": "fantasia",
+			"subcategoria": "naturaleza_magica",
+			"etiquetas": ["charca", "estanque", "charco", "ranas"],
+			"descripcion": "Charca de poca agua. No corta el paso, pero si la pisas, chapoteas.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.8, 1.5, 3.0],
+				"alto": [0.02, 0.05, 0.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"suelo": "agua",
+			"funcion": "agua",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["puente"],
+			"simbolo": {
+				"letra": "Ch",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/charca.png",
+				"descripcion": "Huella en planta de «Charca de ranas»: un óvalo de 2,00 por 1,50 metros, con la letra «Ch»."
+			}
+		},
+		{
+			"id": "bandera_meta",
+			"nombre": "Bandera de meta",
+			"categoria": "metas",
+			"subcategoria": "metas_podios",
+			"etiquetas": ["bandera", "meta", "mástil", "llegada"],
+			"descripcion": "Mástil con una bandera que chasquea con el viento. Marca la meta: al llegar, has terminado.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.15, 0.2, 0.4],
+				"fondo": [0.15, 0.2, 0.4],
+				"alto": [2.0, 2.5, 4.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/bandera.flac",
+					"volumen": 0.4,
+					"radio": 12
+				}
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "logro/logro"
+				}
+			],
+			"contenedor": false,
+			"funcion": "referencia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["arco_meta", "podio"],
+			"simbolo": {
+				"letra": "Bm",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/bandera_meta.png",
+				"descripcion": "Huella en planta de «Bandera de meta»: un círculo de 0,20 por 0,20 metros, con la letra «Bm»."
+			}
+		},
+		{
+			"id": "arco_meta",
+			"nombre": "Arco de meta",
+			"categoria": "metas",
+			"subcategoria": "metas_podios",
+			"etiquetas": ["arco de meta", "meta", "llegada", "arco hinchable"],
+			"descripcion": "Arco hinchable de meta: dos columnas blandas a los lados y el paso por el medio.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.2, 0.0], [0.2, 0.42], [0.8, 0.42], [0.8, 0.0], [1.0, 0.0], [1.0, 1.0], [0.8, 1.0], [0.8, 0.58], [0.2, 0.58], [0.2, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.5, 3.5, 6.0],
+				"fondo": [0.6, 0.8, 1.2],
+				"alto": [2.5, 3.0, 4.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "¡Meta!",
+			"funcion": "referencia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["bandera_meta"],
+			"simbolo": {
+				"letra": "Am",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/arco_meta.png",
+				"descripcion": "Huella en planta de «Arco de meta»: dos columnas unidas por una banda fina en el suelo de 3,50 por 0,80 metros, con la letra «Am»."
+			}
+		},
+		{
+			"id": "podio",
+			"nombre": "Podio",
+			"categoria": "metas",
+			"subcategoria": "metas_podios",
+			"etiquetas": ["podio", "pódium", "cajón de ganadores"],
+			"descripcion": "Podio de tres cajones: el del centro, más alto y adelantado. Uno se sube al acabar.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.75], [0.67, 0.75], [0.67, 1.0], [0.33, 1.0], [0.33, 0.75], [0.0, 0.75]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.7],
+				"fondo": [0.6, 0.8, 1.2],
+				"alto": [0.3, 0.6, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "logro/medalla"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["bandera_meta"],
+			"simbolo": {
+				"letra": "Po",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/podio.png",
+				"descripcion": "Huella en planta de «Podio»: tres cajones juntos: el del centro sale más hacia delante de 1,80 por 0,80 metros, con la letra «Po»."
+			}
+		},
+		{
+			"id": "globo",
+			"nombre": "Globo",
+			"categoria": "metas",
+			"subcategoria": "blancos_juegos",
+			"etiquetas": ["globo", "globos"],
+			"descripcion": "Globo atado a un hilo, flotando a la altura de la cabeza. El bastón no lo toca; al rozarlo chirría y, si lo aprietas, explota.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.38], [0.962, 0.235], [0.854, 0.111], [0.691, 0.029], [0.5, 0.0], [0.309, 0.029], [0.146, 0.111], [0.038, 0.235], [0.0, 0.38], [0.08, 0.62], [0.5, 1.0], [0.92, 0.62]]
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.5],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.3, 0.4, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 1.4,
+			"detectable_baston": false,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "sonidos/globo.flac"
+			},
+			"estados": ["hinchado", "explotado"],
+			"acciones": [
+				{
+					"id": "explotar",
+					"nombre": "Explotar",
+					"de": "hinchado",
+					"a": "explotado",
+					"sonido": "sonidos/globo_explota.flac"
+				},
+				{
+					"id": "hinchar",
+					"nombre": "Hinchar",
+					"de": "explotado",
+					"a": "hinchado"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Gl",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/globo.png",
+				"descripcion": "Huella en planta de «Globo»: una gota, redonda detrás y en punta delante de 0,30 por 0,40 metros, colgado a 1,40 metros del suelo, con la letra «Gl»."
+			}
+		},
+		{
+			"id": "diana",
+			"nombre": "Diana",
+			"categoria": "metas",
+			"subcategoria": "blancos_juegos",
+			"etiquetas": ["diana", "blanco", "tiro"],
+			"descripcion": "Diana redonda sobre un trípode, a la altura del pecho.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.5, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.4, 0.6, 0.9],
+				"alto": [1.2, 1.5, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "logro/estrella_1"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Di",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/diana.png",
+				"descripcion": "Huella en planta de «Diana»: un triángulo con la punta hacia delante de 0,80 por 0,60 metros, con la letra «Di»."
+			}
+		},
+		{
+			"id": "senal_flecha",
+			"nombre": "Poste de flechas",
+			"categoria": "metas",
+			"subcategoria": "marcas_pistas",
+			"etiquetas": ["flechas", "señal", "indicador", "cruce de caminos"],
+			"descripcion": "Poste con flechas de madera que señalan caminos. Las flechas quedan a la altura de la cabeza.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.12, 0.2],
+				"fondo": [0.1, 0.12, 0.2],
+				"alto": [1.8, 2.2, 2.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos",
+					"sonido": "logro/pista"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Sf",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/senal_flecha.png",
+				"descripcion": "Huella en planta de «Poste de flechas»: un círculo de 0,12 por 0,12 metros, con la letra «Sf»."
+			}
+		},
+		{
+			"id": "estrella_suelo",
+			"nombre": "Estrella en el suelo",
+			"categoria": "metas",
+			"subcategoria": "marcas_pistas",
+			"etiquetas": ["estrella", "marca", "casilla", "punto de control"],
+			"descripcion": "Estrella pintada en el suelo. No se nota con el pie: sirve para marcar un punto por el que hay que pasar.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 1.0], [0.361, 0.648], [0.0, 0.618], [0.275, 0.37], [0.191, 0.0], [0.5, 0.198], [0.809, 0.0], [0.725, 0.37], [1.0, 0.618], [0.639, 0.648]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.5],
+				"fondo": [0.5, 0.8, 1.5],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"aviso": "Has pisado una estrella.",
+			"funcion": "referencia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["huellas_suelo"],
+			"simbolo": {
+				"letra": "Es",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/estrella_suelo.png",
+				"descripcion": "Huella en planta de «Estrella en el suelo»: una estrella de 5 puntas de 0,80 por 0,80 metros, con la letra «Es»."
+			}
+		},
+		{
+			"id": "taquilla",
+			"nombre": "Taquilla",
+			"categoria": "adultos",
+			"subcategoria": "guardar_cosas",
+			"etiquetas": ["taquilla", "casillero", "consigna"],
+			"descripcion": "Taquilla metálica estrecha y alta, con cerradura. Dentro se guardan las cosas antes de entrar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.5],
+				"fondo": [0.45, 0.5, 0.55],
+				"alto": [1.7, 1.8, 1.95]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["cualquiera", "polideportivo", "colegio"],
+			"estancias": ["vestuario", "cualquiera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/taquilla.png",
+				"descripcion": "Huella en planta de «Taquilla»: un rectángulo de 0,40 por 0,50 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "caja_fuerte",
+			"nombre": "Caja fuerte",
+			"categoria": "adultos",
+			"subcategoria": "guardar_cosas",
+			"etiquetas": ["caja fuerte", "caja de caudales", "combinación"],
+			"descripcion": "Caja fuerte de acero, baja y muy pesada. La rueda hace clic al girar y la puerta cede despacio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.5, 0.8],
+				"fondo": [0.35, 0.45, 0.7],
+				"alto": [0.3, 0.6, 1.2]
+			},
+			"colocacion": ["suelo", "pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/caja_fuerte.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda", "hotel", "oficina", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cf",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/caja_fuerte.png",
+				"descripcion": "Huella en planta de «Caja fuerte»: un rectángulo de 0,50 por 0,45 metros, con la letra «Cf»."
+			}
+		},
+		{
+			"id": "buzon",
+			"nombre": "Buzón de portal",
+			"categoria": "adultos",
+			"subcategoria": "guardar_cosas",
+			"etiquetas": ["buzón", "buzones", "portal", "correo"],
+			"descripcion": "Batería de buzones del portal, colgada a la altura del pecho. Sobresale poco; el bastón pasa por debajo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.9, 2.0],
+				"fondo": [0.12, 0.15, 0.3],
+				"alto": [0.3, 0.6, 1.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "calle:trampilla_buzon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "calle:trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["comunidad", "cualquiera"],
+			"estancias": ["portal", "entrada"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bu",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/buzon.png",
+				"descripcion": "Huella en planta de «Buzón de portal»: un rectángulo de 0,90 por 0,15 metros, colgado a 1,00 metros del suelo, con la letra «Bu»."
+			}
+		},
+		{
+			"id": "paquete",
+			"nombre": "Paquete",
+			"categoria": "adultos",
+			"subcategoria": "guardar_cosas",
+			"etiquetas": ["paquete", "caja", "envío", "mensajería"],
+			"descripcion": "Caja de cartón precintada, dejada en el suelo junto a una puerta. Ligera; cruje al cogerla.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.4, 0.8],
+				"fondo": [0.15, 0.3, 0.6],
+				"alto": [0.1, 0.25, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "calle:papel.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "calle:papel.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["vivienda", "comunidad", "oficina", "cualquiera"],
+			"estancias": ["entrada", "portal"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/paquete.png",
+				"descripcion": "Huella en planta de «Paquete»: un rectángulo de 0,40 por 0,30 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "maletin",
+			"nombre": "Maletín",
+			"categoria": "adultos",
+			"subcategoria": "guardar_cosas",
+			"etiquetas": ["maletín", "maletin", "cartera", "portafolios"],
+			"descripcion": "Maletín rígido apoyado en el suelo, junto a una silla. Los cierres hacen clac.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.5],
+				"fondo": [0.1, 0.12, 0.2],
+				"alto": [0.3, 0.33, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["oficina", "vivienda", "cualquiera"],
+			"estancias": ["despacho", "cualquiera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/maletin.png",
+				"descripcion": "Huella en planta de «Maletín»: un rectángulo de 0,45 por 0,12 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "cuenco_llaves",
+			"nombre": "Llavero en un cuenco",
+			"categoria": "adultos",
+			"subcategoria": "objetos_casa",
+			"etiquetas": ["llaves", "llavero", "cuenco", "vaciabolsillos"],
+			"descripcion": "Cuenco de cerámica con un manojo de llaves, sobre un pedestal estrecho a la altura de la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"uso": "sonidos/llaves.flac"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "sonidos/llaves.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda", "cualquiera"],
+			"estancias": ["entrada"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["paraguero", "percha_abrigo"],
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuenco_llaves.png",
+				"descripcion": "Huella en planta de «Llavero en un cuenco»: un círculo de 0,30 por 0,30 metros, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "paraguero",
+			"nombre": "Paraguas en el paragüero",
+			"categoria": "adultos",
+			"subcategoria": "objetos_casa",
+			"etiquetas": ["paraguas", "paragüero", "paraguero"],
+			"descripcion": "Paragüero de metal junto a la puerta, con un paraguas dentro. Hay que acordarse de cogerlo al salir.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.3],
+				"fondo": [0.2, 0.25, 0.3],
+				"alto": [0.5, 0.9, 1.0]
+			},
+			"colocacion": ["suelo", "esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda", "oficina", "cualquiera"],
+			"estancias": ["entrada"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["percha_abrigo"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/paraguero.png",
+				"descripcion": "Huella en planta de «Paraguas en el paragüero»: un círculo de 0,25 por 0,25 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "percha_abrigo",
+			"nombre": "Abrigo en la percha",
+			"categoria": "adultos",
+			"subcategoria": "objetos_casa",
+			"etiquetas": ["abrigo", "percha", "chaqueta", "colgador"],
+			"descripcion": "Abrigo colgado de una percha de pared, a la altura del hombro. Blando; abulta un palmo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [0.9, 1.1, 1.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.6,
+			"detectable_baston": false,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda", "oficina", "cualquiera"],
+			"estancias": ["entrada"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["paraguero", "cuenco_llaves"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/percha_abrigo.png",
+				"descripcion": "Huella en planta de «Abrigo en la percha»: un rectángulo de 0,50 por 0,20 metros, colgado a 0,60 metros del suelo, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "mesa_objetos",
+			"nombre": "Mesa de objetos",
+			"categoria": "adultos",
+			"subcategoria": "objetos_casa",
+			"etiquetas": ["mesa de objetos", "bandeja", "pertenencias"],
+			"descripcion": "Mesa pequeña con varias cosas encima para reconocer al tacto: una cartera, un móvil, unas gafas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.4, 0.5, 0.7],
+				"alto": [0.72, 0.75, 0.8]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["vivienda", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mo",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_objetos.png",
+				"descripcion": "Huella en planta de «Mesa de objetos»: un rectángulo de 0,80 por 0,50 metros, con la letra «Mo»."
+			}
+		},
+		{
+			"id": "saco_monedas",
+			"nombre": "Saco de monedas",
+			"categoria": "tesoros",
+			"subcategoria": "bolsas_huchas",
+			"etiquetas": ["saco de monedas", "bolsa de oro", "talega", "botín"],
+			"descripcion": "Saco de tela atado con un cordel, gordo y pesado. Al moverlo suenan las monedas de dentro y al tacto se notan los bultos redondos.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.96, 0.762], [0.843, 0.919], [0.65, 1.0], [0.35, 1.0], [0.157, 0.919], [0.04, 0.762], [0.0, 0.5], [0.04, 0.238], [0.157, 0.081], [0.35, 0.0], [0.65, 0.0], [0.843, 0.081], [0.96, 0.238]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.3, 0.45, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "sonidos/monedas.flac"
+			},
+			"acciones": [
+				{
+					"id": "agitar",
+					"nombre": "Agitar",
+					"sonido": "sonidos/monedas.flac"
+				},
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "premio/tesoro"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["cofre", "barril_pirata"],
+			"simbolo": {
+				"letra": "Sm",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/saco_monedas.png",
+				"descripcion": "Huella en planta de «Saco de monedas»: un rectángulo de esquinas redondeadas de 0,40 por 0,40 metros, con la letra «Sm»."
+			}
+		},
+		{
+			"id": "pinata",
+			"nombre": "Piñata colgada",
+			"categoria": "tesoros",
+			"subcategoria": "bolsas_huchas",
+			"etiquetas": ["piñata", "piñata de cumpleaños", "caramelos", "fiesta"],
+			"descripcion": "Figura de cartón y papel rizado colgada de una cuerda a la altura de la cabeza. Hay que darle con un palo hasta que se rompe y caen los caramelos y los premios.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 1.0], [0.315, 0.716], [0.0, 0.618], [0.2, 0.345], [0.191, 0.0], [0.5, 0.116], [0.809, 0.0], [0.8, 0.345], [1.0, 0.618], [0.685, 0.716]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.7],
+				"fondo": [0.4, 0.5, 0.7],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.45,
+			"detectable_baston": false,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "calle:papel.flac"
+			},
+			"estados": ["jue_entera", "jue_rota"],
+			"acciones": [
+				{
+					"id": "golpear",
+					"nombre": "Golpear",
+					"de": "jue_entera",
+					"a": "jue_rota",
+					"sonido": "hogar:juguetes.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pi",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/pinata.png",
+				"descripcion": "Huella en planta de «Piñata colgada»: una estrella de 5 puntas de 0,50 por 0,50 metros, colgado a 1,45 metros del suelo, con la letra «Pi»."
+			}
+		},
+		{
+			"id": "caja_musica",
+			"nombre": "Caja de música",
+			"categoria": "tesoros",
+			"subcategoria": "cofres_cajas",
+			"etiquetas": ["caja de música", "joyero musical", "cajita de música"],
+			"descripcion": "Cajita de madera con una manivela a un lado. Al abrir la tapa suena una melodía de campanitas que se va apagando; dentro hay un hueco forrado de tela.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.35],
+				"fondo": [0.15, 0.18, 0.25],
+				"alto": [0.1, 0.12, 0.18]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "sonidos/baliza_musical.flac",
+					"volumen": 0.35,
+					"radio": 8,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cofre_abrir.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cofre_cerrar.flac"
+				},
+				{
+					"id": "jue_dar_cuerda",
+					"nombre": "Dar cuerda",
+					"sonido": "sonidos/muelle.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/caja_musica.png",
+				"descripcion": "Huella en planta de «Caja de música»: un rectángulo de 0,25 por 0,18 metros, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "vasija",
+			"nombre": "Vasija antigua",
+			"categoria": "tesoros",
+			"subcategoria": "cofres_cajas",
+			"etiquetas": ["vasija", "ánfora", "tinaja", "jarrón antiguo"],
+			"descripcion": "Vasija de barro panzuda, a la altura del muslo, con dos asas y la boca estrecha. Suena hueca al golpearla y, si la agitas, algo rueda dentro.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.45, 0.6],
+				"fondo": [0.35, 0.45, 0.6],
+				"alto": [0.5, 0.7, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"acciones": [
+				{
+					"id": "agitar",
+					"nombre": "Agitar",
+					"sonido": "sonidos/monedas.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "cueva"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Va",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/vasija.png",
+				"descripcion": "Huella en planta de «Vasija antigua»: un círculo de 0,45 por 0,45 metros, con la letra «Va»."
+			}
+		},
+		{
+			"id": "barril_pirata",
+			"nombre": "Barril de pirata",
+			"categoria": "tesoros",
+			"subcategoria": "cofres_cajas",
+			"etiquetas": ["barril", "tonel", "barrica", "barril pirata"],
+			"descripcion": "Barril de duelas de madera con aros de hierro, a la altura de la cintura. Suena hueco al golpearlo; la tapa se levanta y dentro puede haber de todo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [0.7, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cofre_abrir.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cofre_cerrar.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["isla"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["canon_pirata", "timon_barco"],
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/barril_pirata.png",
+				"descripcion": "Huella en planta de «Barril de pirata»: un círculo de 0,60 por 0,60 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "huevo_dragon",
+			"nombre": "Huevo de dragón",
+			"categoria": "tesoros",
+			"subcategoria": "joyas_reliquias",
+			"etiquetas": ["huevo de dragón", "huevo mágico", "huevo gigante"],
+			"descripcion": "Huevo enorme, del tamaño de una sandía, de cáscara dura con escamas en relieve. Está tibio y, de vez en cuando, se mueve un poco por dentro.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.45, 0.6, 0.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/magia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["cueva", "castillo"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["nido", "dragon_dormido"],
+			"simbolo": {
+				"letra": "Hd",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/huevo_dragon.png",
+				"descripcion": "Huella en planta de «Huevo de dragón»: un óvalo de 0,40 por 0,40 metros, con la letra «Hd»."
+			}
+		},
+		{
+			"id": "corona_cojin",
+			"nombre": "Corona sobre un cojín",
+			"categoria": "tesoros",
+			"subcategoria": "joyas_reliquias",
+			"etiquetas": ["corona", "corona real", "cojín", "tesoro del rey"],
+			"descripcion": "Columna estrecha a la altura de la cintura con un cojín blando encima y, sobre él, una corona de metal frío con puntas. Al levantarla tintinean sus colgantes.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 0.2], [1.0, 0.8], [0.8, 1.0], [0.2, 1.0], [0.0, 0.8], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "premio/tesoro"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["castillo"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["trono"],
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/corona_cojin.png",
+				"descripcion": "Huella en planta de «Corona sobre un cojín»: un rectángulo con las esquinas cortadas de 0,50 por 0,50 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "gema_pedestal",
+			"nombre": "Gema sobre un pedestal",
+			"categoria": "tesoros",
+			"subcategoria": "joyas_reliquias",
+			"etiquetas": ["gema", "joya", "cristal mágico", "diamante", "pedestal"],
+			"descripcion": "Columna de piedra a la altura del pecho con una gema grande encima, fría, de caras lisas y aristas marcadas. Al cogerla suena un acorde brillante.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.75, 1.0], [0.25, 1.0], [0.0, 0.5], [0.25, 0.0], [0.75, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.5],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "premio/tesoro"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["castillo", "cueva"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["panel_simon"],
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/gema_pedestal.png",
+				"descripcion": "Huella en planta de «Gema sobre un pedestal»: un hexágono de 0,40 por 0,40 metros, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "mapa_tesoro",
+			"nombre": "Mapa del tesoro en un atril",
+			"categoria": "tesoros",
+			"subcategoria": "mensajes_mapas",
+			"etiquetas": ["mapa del tesoro", "pergamino", "mapa", "plano secreto"],
+			"descripcion": "Atril de madera inclinado con un pergamino enrollado y atado con una cinta. Al desenrollarlo cruje; el camino está marcado en relieve para seguirlo con el dedo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "calle:papel.flac"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos",
+					"sonido": "logro/pista"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["cofre"],
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mapa_tesoro.png",
+				"descripcion": "Huella en planta de «Mapa del tesoro en un atril»: un rectángulo de 0,50 por 0,40 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "botella_mensaje",
+			"nombre": "Botella con un mensaje",
+			"categoria": "tesoros",
+			"subcategoria": "mensajes_mapas",
+			"etiquetas": ["botella", "mensaje en una botella", "náufrago", "carta"],
+			"descripcion": "Botella de cristal tumbada en el suelo, tapada con un corcho y con un papel enrollado dentro. Al moverla suena el papel contra el cristal y rueda si nadie la sujeta.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.08, 0.1, 0.12],
+				"fondo": [0.25, 0.3, 0.35],
+				"alto": [0.08, 0.1, 0.12]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "golpe/cristal"
+				},
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos",
+					"sonido": "logro/pista"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["fantasia", "playa"],
+			"estancias": ["isla"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["caracola"],
+			"simbolo": {
+				"letra": "Bm",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/botella_mensaje.png",
+				"descripcion": "Huella en planta de «Botella con un mensaje»: un óvalo de 0,10 por 0,30 metros, con la letra «Bm»."
+			}
+		},
+		{
+			"id": "litofono",
+			"nombre": "Litófono de piedras",
+			"categoria": "sonoros",
+			"subcategoria": "instrumentos_juego",
+			"etiquetas": ["litófono", "piedras musicales", "piedras que suenan", "marimba de piedra"],
+			"descripcion": "Mesa baja de madera con cinco losas de piedra colocadas de mayor a menor. Golpeadas con la maza suenan como campanas secas: las grandes, grave; las pequeñas, agudo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 2.0],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.6, 0.75, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"uso": "sonidos/juego_litofono.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar_nota",
+					"nombre": "Tocar una nota",
+					"sonido": "sonidos/juego_litofono.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cueva", "cualquiera"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["xilofono"],
+			"simbolo": {
+				"letra": "Li",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/litofono.png",
+				"descripcion": "Huella en planta de «Litófono de piedras»: un trapecio, más estrecho por detrás de 1,40 por 0,50 metros, con la letra «Li»."
+			}
+		},
+		{
+			"id": "cuerno_caza",
+			"nombre": "Cuerno colgado de la pared",
+			"categoria": "sonoros",
+			"subcategoria": "campanas_timbres",
+			"etiquetas": ["cuerno", "cuerno de caza", "trompa", "olifante"],
+			"descripcion": "Cuerno curvo de latón colgado de un clavo a la altura del hombro, con una boquilla fría en la punta estrecha. Al soplarlo suena una llamada que se oye en todo el castillo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.15, 0.2, 0.25],
+				"alto": [0.2, 0.25, 0.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.3,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/juego_cuerno.flac"
+			},
+			"acciones": [
+				{
+					"id": "jue_soplar",
+					"nombre": "Soplar",
+					"sonido": "sonidos/juego_cuerno.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "bosque"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuerno_caza.png",
+				"descripcion": "Huella en planta de «Cuerno colgado de la pared»: un rectángulo de 0,50 por 0,20 metros, colgado a 1,30 metros del suelo, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "caracola",
+			"nombre": "Caracola que habla",
+			"categoria": "sonoros",
+			"subcategoria": "balizas_pistas_sonoras",
+			"etiquetas": ["caracola", "concha", "caracola de mar", "pista"],
+			"descripcion": "Caracola grande, rugosa por fuera y lisa y fría por dentro. Al acercarla al oído se oye el mar y, a veces, una pista susurrada.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.38], [0.962, 0.235], [0.854, 0.111], [0.691, 0.029], [0.5, 0.0], [0.309, 0.029], [0.146, 0.111], [0.038, 0.235], [0.0, 0.38], [0.08, 0.62], [0.5, 1.0], [0.92, 0.62]]
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.15, 0.2, 0.25],
+				"alto": [0.12, 0.15, 0.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "comun:playa_olas.flac",
+					"volumen": 0.2,
+					"radio": 3
+				}
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "logro/pista"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["fantasia", "playa"],
+			"estancias": ["isla"],
+			"obstaculo": "bajo",
+			"frecuencia": "ocasional",
+			"relacionados": ["botella_mensaje"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/caracola.png",
+				"descripcion": "Huella en planta de «Caracola que habla»: una gota, redonda detrás y en punta delante de 0,30 por 0,20 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "organillo",
+			"nombre": "Organillo de manivela",
+			"categoria": "sonoros",
+			"subcategoria": "instrumentos_juego",
+			"etiquetas": ["organillo", "organillero", "organillo de manivela", "chotis"],
+			"descripcion": "Caja de madera sobre un carrito de dos ruedas, a la altura de la cintura, con una manivela a un lado: al girarla suena un vals de feria. Si se empuja, rueda.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "comun:calle_tiovivo_organillo.flac",
+					"volumen": 0.5,
+					"radio": 15,
+					"estado": "girando"
+				}
+			},
+			"estados": ["parado", "girando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "parado",
+					"a": "girando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "girando",
+					"a": "parado"
+				},
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["fantasia", "calle", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Or",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/organillo.png",
+				"descripcion": "Huella en planta de «Organillo de manivela»: un rectángulo de 0,70 por 0,50 metros, con la letra «Or»."
+			}
+		},
+		{
+			"id": "trono",
+			"nombre": "Trono",
+			"categoria": "fantasia",
+			"subcategoria": "castillo_magia",
+			"etiquetas": ["trono", "sillón del rey", "sitial", "trono real"],
+			"descripcion": "Sillón enorme de madera tallada, con brazos anchos y el respaldo más alto que una persona, sobre una tarima de un escalón. Hay que subir el escalón para sentarse.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.85, 1.0], [0.85, 0.3], [0.15, 0.3], [0.15, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.3],
+				"fondo": [0.7, 0.8, 1.0],
+				"alto": [1.5, 1.8, 2.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["corona_cojin"],
+			"simbolo": {
+				"letra": "Tr",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/trono.png",
+				"descripcion": "Huella en planta de «Trono»: una U abierta por delante de 1,00 por 0,80 metros, con la letra «Tr»."
+			}
+		},
+		{
+			"id": "caldero_pociones",
+			"nombre": "Caldero de pociones al fuego",
+			"categoria": "fantasia",
+			"subcategoria": "castillo_magia",
+			"etiquetas": ["caldero", "marmita", "pócima", "poción", "bruja"],
+			"descripcion": "Caldero de hierro sobre tres patas y unas brasas, que burbujea sin parar. Da calor al acercarse: no lo toques. Para remover hay un cucharón largo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [0.6, 0.7, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/juego_caldero.flac",
+					"volumen": 0.45,
+					"radio": 8
+				}
+			},
+			"acciones": [
+				{
+					"id": "jue_remover",
+					"nombre": "Remover el caldero",
+					"sonido": "sonidos/magia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "cueva", "bosque"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "comun",
+			"relacionados": ["libro_hechizos"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/caldero_pociones.png",
+				"descripcion": "Huella en planta de «Caldero de pociones al fuego»: un círculo de 0,80 por 0,80 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "libro_hechizos",
+			"nombre": "Libro de hechizos en un atril",
+			"categoria": "fantasia",
+			"subcategoria": "castillo_magia",
+			"etiquetas": ["libro de hechizos", "grimorio", "libro mágico", "conjuros"],
+			"descripcion": "Libro enorme y pesado abierto sobre un atril de piedra, con tapas de cuero y hojas gruesas que crujen. Al pasar una página suena un hechizo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "calle:papel.flac"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos",
+					"sonido": "sonidos/magia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["caldero_pociones", "bola_cristal"],
+			"simbolo": {
+				"letra": "Lh",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/libro_hechizos.png",
+				"descripcion": "Huella en planta de «Libro de hechizos en un atril»: un rectángulo de 0,60 por 0,45 metros, con la letra «Lh»."
+			}
+		},
+		{
+			"id": "bola_cristal",
+			"nombre": "Bola de cristal sobre una mesita",
+			"categoria": "fantasia",
+			"subcategoria": "castillo_magia",
+			"etiquetas": ["bola de cristal", "adivina", "vidente", "bola mágica"],
+			"descripcion": "Mesita redonda cubierta con un paño de flecos y, encima, una bola de cristal fría y lisa sobre su soporte. Al rodearla con las manos zumba y susurra.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "jue_mirar_bola",
+					"nombre": "Mirar en la bola",
+					"sonido": "sonidos/juego_portal.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "bosque"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["libro_hechizos"],
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/bola_cristal.png",
+				"descripcion": "Huella en planta de «Bola de cristal sobre una mesita»: un círculo de 0,60 por 0,60 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "espada_roca",
+			"nombre": "Espada clavada en la roca",
+			"categoria": "fantasia",
+			"subcategoria": "castillo_magia",
+			"etiquetas": ["espada en la roca", "Excalibur", "espada mágica", "piedra"],
+			"descripcion": "Roca grande, a la altura de la rodilla, con una espada clavada hasta la mitad; la empuñadura queda a la altura del pecho. Solo sale si se ha superado la prueba.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.05, 0.3], [0.35, 0.0], [0.75, 0.1], [1.0, 0.4], [0.9, 0.8], [0.55, 1.0], [0.3, 0.85], [0.0, 0.7]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.8, 1.0, 1.4],
+				"alto": [1.0, 1.3, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["jue_clavada", "jue_sacada"],
+			"acciones": [
+				{
+					"id": "jue_sacar_espada",
+					"nombre": "Sacar la espada",
+					"de": "jue_clavada",
+					"a": "jue_sacada",
+					"sonido": "logro/medalla"
+				},
+				{
+					"id": "jue_clavar_espada",
+					"nombre": "Volver a clavar la espada",
+					"de": "jue_sacada",
+					"a": "jue_clavada",
+					"sonido": "golpe/metal"
+				}
+			],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque", "castillo"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Er",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/espada_roca.png",
+				"descripcion": "Huella en planta de «Espada clavada en la roca»: una roca de contorno irregular de 1,00 por 1,00 metros, con la letra «Er»."
+			}
+		},
+		{
+			"id": "canon_pirata",
+			"nombre": "Cañón pirata",
+			"categoria": "fantasia",
+			"subcategoria": "piratas",
+			"etiquetas": ["cañón", "cañón pirata", "cañón de barco", "artillería"],
+			"descripcion": "Cañón de hierro largo sobre una cureña de madera con cuatro ruedas. El tubo frío sobresale por delante; al dispararlo, la mecha chisporrotea, retumba y el cañón retrocede.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.45], [0.625, 0.45], [0.625, 1.0], [0.375, 1.0], [0.375, 0.45], [0.0, 0.45]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [1.4, 1.8, 2.2],
+				"alto": [0.7, 0.9, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/juego_canonazo.flac"
+			},
+			"acciones": [
+				{
+					"id": "jue_disparar",
+					"nombre": "Disparar el cañón",
+					"sonido": "sonidos/juego_canonazo.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["isla"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["barril_pirata", "timon_barco"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/canon_pirata.png",
+				"descripcion": "Huella en planta de «Cañón pirata»: una cureña ancha detrás y el tubo largo que sale hacia delante de 0,80 por 1,80 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "timon_barco",
+			"nombre": "Timón de barco",
+			"categoria": "fantasia",
+			"subcategoria": "piratas",
+			"etiquetas": ["timón", "rueda de timón", "gobernalle", "barco pirata"],
+			"descripcion": "Rueda de timón de madera con radios acabados en mangos, sobre un pie, a la altura del pecho. Gira traqueteando y sirve para elegir rumbo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.2],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.2, 1.4, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar",
+					"sonido": "comun:bici_volante_giro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["isla"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["canon_pirata", "loro_percha"],
+			"simbolo": {
+				"letra": "Tb",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/timon_barco.png",
+				"descripcion": "Huella en planta de «Timón de barco»: un rectángulo de 1,00 por 0,40 metros, con la letra «Tb»."
+			}
+		},
+		{
+			"id": "consola_nave",
+			"nombre": "Consola de mandos de la nave",
+			"categoria": "fantasia",
+			"subcategoria": "espacio",
+			"etiquetas": ["consola", "mandos", "cuadro de mandos", "puente de mando", "cabina"],
+			"descripcion": "Mesa de mandos curva a la altura de la cintura, llena de botones, palancas e interruptores de formas distintas que pitan al tocarlos. Dentro de la curva se sienta el piloto.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.402], [0.076, 0.606], [0.168, 0.774], [0.271, 0.898], [0.384, 0.974], [0.5, 1.0], [0.616, 0.974], [0.729, 0.898], [0.832, 0.774], [0.924, 0.606], [1.0, 0.402], [0.75, 0.0], [0.712, 0.102], [0.666, 0.186], [0.614, 0.248], [0.558, 0.286], [0.5, 0.299], [0.442, 0.286], [0.386, 0.248], [0.334, 0.186], [0.288, 0.102], [0.25, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.4],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.2,
+					"radio": 4
+				}
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["nave_espacial"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["escotilla_nave", "robot_guia"],
+			"simbolo": {
+				"letra": "Cn",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/consola_nave.png",
+				"descripcion": "Huella en planta de «Consola de mandos de la nave»: una banda curva que abomba hacia delante de 1,60 por 0,80 metros, con la letra «Cn»."
+			}
+		},
+		{
+			"id": "escotilla_nave",
+			"nombre": "Escotilla de la nave",
+			"categoria": "fantasia",
+			"subcategoria": "espacio",
+			"etiquetas": ["escotilla", "compuerta", "esclusa", "puerta de la nave"],
+			"descripcion": "Puerta redonda de metal grueso en su marco: pita dos veces, sisea al soltar la presión y se desliza hacia un lado. Cerrada no deja pasar; abierta, hay un escalón en el marco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.15, 0.0], [0.15, 0.4], [0.85, 0.4], [0.85, 0.0], [1.0, 0.0], [1.0, 1.0], [0.85, 1.0], [0.85, 0.6], [0.15, 0.6], [0.15, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.5],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.9, 2.1, 2.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/juego_escotilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/juego_escotilla.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["nave_espacial"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["consola_nave"],
+			"simbolo": {
+				"letra": "En",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/escotilla_nave.png",
+				"descripcion": "Huella en planta de «Escotilla de la nave»: dos jambas gruesas a los lados unidas por una hoja fina que cierra el paso de 1,20 por 0,40 metros, con la letra «En»."
+			}
+		},
+		{
+			"id": "meteorito",
+			"nombre": "Meteorito humeante",
+			"categoria": "fantasia",
+			"subcategoria": "espacio",
+			"etiquetas": ["meteorito", "roca espacial", "cráter", "piedra del cielo"],
+			"descripcion": "Roca negra y porosa caída del cielo, en un pequeño cráter. Todavía está caliente: humea y chisporrotea. No la toques hasta que se enfríe; el borde del cráter se tropieza.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.05, 0.3], [0.35, 0.0], [0.75, 0.1], [1.0, 0.4], [0.9, 0.8], [0.55, 1.0], [0.3, 0.85], [0.0, 0.7]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.5],
+				"fondo": [0.6, 0.9, 1.5],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "sonidos/merendero_brasas.flac",
+					"volumen": 0.3,
+					"radio": 5
+				}
+			},
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia"],
+			"estancias": ["nave_espacial", "bosque"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente", "desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Me",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/meteorito.png",
+				"descripcion": "Huella en planta de «Meteorito humeante»: una roca de contorno irregular de 0,90 por 0,90 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "dado_gigante",
+			"nombre": "Dado gigante",
+			"categoria": "metas",
+			"subcategoria": "blancos_juegos",
+			"etiquetas": ["dado", "dado gigante", "dado de espuma", "juego de la oca"],
+			"descripcion": "Cubo grande de espuma dura con puntos en relieve en cada cara, de uno a seis. Se lanza rodando y se tocan los puntos de la cara de arriba para contarlos.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.4, 0.5, 0.6]
+			},
+			"variantes": [
+				{
+					"id": "mediano",
+					"nombre": "Mediano",
+					"ancho": 0.4,
+					"fondo": 0.4,
+					"alto": 0.4
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 0.6
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"uso": "sonidos/juego_dado.flac"
+			},
+			"acciones": [
+				{
+					"id": "jue_tirar_dado",
+					"nombre": "Tirar el dado",
+					"sonido": "sonidos/juego_dado.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Dg",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/dado_gigante.png",
+				"descripcion": "Huella en planta de «Dado gigante»: un rectángulo de 0,50 por 0,50 metros, con la letra «Dg»."
+			}
+		},
+		{
+			"id": "rayuela",
+			"nombre": "Rayuela en relieve",
+			"categoria": "metas",
+			"subcategoria": "blancos_juegos",
+			"etiquetas": ["rayuela", "truquemé", "tejo", "avión", "casillas"],
+			"descripcion": "Casillas numeradas en el suelo con un cordón pegado en relieve en sus bordes, para saltar a la pata coja. El pie nota el cordón al pasar de una casilla a otra.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.5],
+				"fondo": [3.0, 3.5, 4.5],
+				"alto": [0.003, 0.005, 0.01]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "jue_saltar_casillas",
+					"nombre": "Saltar por las casillas",
+					"sonido": "logro/estrella_1"
+				}
+			],
+			"contenedor": false,
+			"aviso": "Rayuela: salta casilla a casilla.",
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera", "parque_infantil", "colegio"],
+			"estancias": ["cualquiera", "patio_recreo"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/rayuela.png",
+				"descripcion": "Huella en planta de «Rayuela en relieve»: un rectángulo de 1,20 por 3,50 metros, con la letra «Ra»."
+			}
+		},
+		{
+			"id": "huellas_suelo",
+			"nombre": "Huellas en el suelo",
+			"categoria": "metas",
+			"subcategoria": "marcas_pistas",
+			"etiquetas": ["huellas", "pisadas", "rastro", "pistas", "huellas de animal"],
+			"descripcion": "Hilera de huellas en relieve en el suelo (de pies, de patas o de garras) que llevan a algún sitio. Se notan con la suela y crujen al pisarlas.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [1.5, 3.0, 6.0],
+				"alto": [0.005, 0.01, 0.02]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "logro/pista"
+			},
+			"contenedor": false,
+			"aviso": "Huellas: síguelas.",
+			"funcion": "referencia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["estrella_suelo"],
+			"simbolo": {
+				"letra": "Hs",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/huellas_suelo.png",
+				"descripcion": "Huella en planta de «Huellas en el suelo»: un rectángulo de 0,40 por 3,00 metros, con la letra «Hs»."
+			}
+		},
+		{
+			"id": "llave_magica",
+			"nombre": "Llave mágica en su gancho",
+			"categoria": "acertijos",
+			"subcategoria": "llaves_puertas",
+			"etiquetas": ["llave", "llave mágica", "llave antigua", "llave dorada"],
+			"descripcion": "Llave grande y pesada de hierro, con un aro de adorno, colgada de un gancho sobre una columna baja. Al cogerla suena con un brillo: abre alguna puerta o algún cofre.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.4],
+				"fondo": [0.3, 0.35, 0.4],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "sonidos/llaves.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "cueva"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_magica", "cofre"],
+			"simbolo": {
+				"letra": "Lm",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/llave_magica.png",
+				"descripcion": "Huella en planta de «Llave mágica en su gancho»: un círculo de 0,35 por 0,35 metros, con la letra «Lm»."
+			}
+		},
+		{
+			"id": "puerta_magica",
+			"nombre": "Puerta mágica",
+			"categoria": "acertijos",
+			"subcategoria": "llaves_puertas",
+			"etiquetas": ["puerta mágica", "puerta encantada", "portón", "cerradura"],
+			"descripcion": "Puerta de madera con herrajes y una cerradura grande, en su marco de piedra, plantada en mitad del camino sin pared alrededor. Solo se abre con la llave; al cruzarla se oye un brillo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.15, 0.0], [0.15, 0.4], [0.85, 0.4], [0.85, 0.0], [1.0, 0.0], [1.0, 1.0], [0.85, 1.0], [0.85, 0.6], [0.15, 0.6], [0.15, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.5],
+				"fondo": [0.2, 0.3, 0.4],
+				"alto": [2.1, 2.3, 2.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/con_llave"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "bosque"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["llave_magica"],
+			"simbolo": {
+				"letra": "Pm",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_magica.png",
+				"descripcion": "Huella en planta de «Puerta mágica»: dos jambas gruesas a los lados unidas por una hoja fina que cierra el paso de 1,20 por 0,30 metros, con la letra «Pm»."
+			}
+		},
+		{
+			"id": "puerta_secreta",
+			"nombre": "Estantería con puerta secreta",
+			"categoria": "acertijos",
+			"subcategoria": "llaves_puertas",
+			"etiquetas": ["puerta secreta", "pasadizo", "estantería giratoria", "pasaje oculto"],
+			"descripcion": "Estantería llena de libros que, al tirar de uno concreto, gira sobre sí misma con un chirrido y deja un paso detrás. Por delante es una estantería normal.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [2.0, 2.2, 2.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "oficina_y_comercio:puerta_giratoria.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "oficina_y_comercio:puerta_giratoria.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ps",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_secreta.png",
+				"descripcion": "Huella en planta de «Estantería con puerta secreta»: un rectángulo de 1,20 por 0,40 metros, con la letra «Ps»."
+			}
+		},
+		{
+			"id": "rastrillo",
+			"nombre": "Reja levadiza del castillo",
+			"categoria": "acertijos",
+			"subcategoria": "llaves_puertas",
+			"etiquetas": ["rastrillo", "reja levadiza", "puerta del castillo", "verja"],
+			"descripcion": "Reja de hierro de la entrada del castillo, de barrotes gruesos acabados en punta. Bajada cierra el paso; al subir, la cadena chirría y traquetea, y queda por encima de la cabeza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.0],
+				"fondo": [0.1, 0.15, 0.2],
+				"alto": [2.5, 3.0, 3.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "comun:vehiculos_cadena.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "comun:vehiculos_cadena.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["puente_levadizo", "muralla_almenas"],
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/rastrillo.png",
+				"descripcion": "Huella en planta de «Reja levadiza del castillo»: un rectángulo de 3,00 por 0,15 metros, con la letra «Ra»."
+			}
+		},
+		{
+			"id": "puente_levadizo",
+			"nombre": "Puente levadizo",
+			"categoria": "acertijos",
+			"subcategoria": "llaves_puertas",
+			"etiquetas": ["puente levadizo", "foso", "puente del castillo", "cadenas"],
+			"descripcion": "Puente de tablones sobre el foso que cuelga de dos cadenas. Levantado es una pared de madera y delante está el foso; bajado se cruza y los pasos suenan huecos.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 3.5],
+				"fondo": [3.0, 4.0, 6.0],
+				"alto": [0.1, 0.15, 0.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "comun:vehiculos_cadena.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "golpe/madera"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"suelo": "madera",
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"relacionados": ["rastrillo"],
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/puente_levadizo.png",
+				"descripcion": "Huella en planta de «Puente levadizo»: un rectángulo de 2,50 por 4,00 metros, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "palanca",
+			"nombre": "Palanca en la pared",
+			"categoria": "acertijos",
+			"subcategoria": "mecanismos",
+			"etiquetas": ["palanca", "manivela", "interruptor secreto", "mecanismo"],
+			"descripcion": "Palanca de hierro en la pared, a la altura de la cintura, con un mango de madera. Al bajarla o subirla hace clac y algo se mueve en otro sitio.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.15, 0.2, 0.3],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [0.4, 0.5, 0.6]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["jue_arriba", "jue_abajo"],
+			"acciones": [
+				{
+					"id": "jue_tirar_palanca",
+					"nombre": "Bajar la palanca",
+					"de": "jue_arriba",
+					"a": "jue_abajo",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "jue_subir_palanca",
+					"nombre": "Subir la palanca",
+					"de": "jue_abajo",
+					"a": "jue_arriba",
+					"sonido": "comun:barra_abatible_clac.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "cueva"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_secreta", "rastrillo"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/palanca.png",
+				"descripcion": "Huella en planta de «Palanca en la pared»: un rectángulo de 0,20 por 0,20 metros, colgado a 0,90 metros del suelo, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "placa_presion",
+			"nombre": "Losa que se hunde",
+			"categoria": "acertijos",
+			"subcategoria": "mecanismos",
+			"etiquetas": ["losa de presión", "baldosa trampa", "placa de presión", "interruptor del suelo"],
+			"descripcion": "Losa cuadrada un poco más alta que las demás que se hunde con un clic al pisarla y pone algo en marcha: una trampa o una puerta. El pie nota la junta alrededor.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "comun:barra_abatible_clac.flac"
+			},
+			"contenedor": false,
+			"aviso": "Clic: la losa se ha hundido bajo tu pie.",
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "cueva"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["trampilla_suelo"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/placa_presion.png",
+				"descripcion": "Huella en planta de «Losa que se hunde»: un rectángulo de 0,60 por 0,60 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "panel_simon",
+			"nombre": "Panel de memoria de cuatro botones",
+			"categoria": "acertijos",
+			"subcategoria": "mecanismos",
+			"etiquetas": ["panel de memoria", "simón", "botones musicales", "juego de memoria", "acertijo"],
+			"descripcion": "Panel en la pared con cuatro botones grandes, cada uno con una forma en relieve (círculo, cuadrado, triángulo y estrella) y su propia nota. Hay que repetir la melodía que toca.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.1, 0.15, 0.2],
+				"alto": [0.5, 0.6, 0.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "sonidos/juego_simon.flac"
+				},
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "sonidos/juego_simon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "nave_espacial", "cueva"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"relacionados": ["gema_pedestal"],
+			"simbolo": {
+				"letra": "Ps",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_simon.png",
+				"descripcion": "Huella en planta de «Panel de memoria de cuatro botones»: un rectángulo de 0,60 por 0,15 metros, colgado a 0,90 metros del suelo, con la letra «Ps»."
+			}
+		},
+		{
+			"id": "reloj_arena",
+			"nombre": "Reloj de arena gigante",
+			"categoria": "acertijos",
+			"subcategoria": "mecanismos",
+			"etiquetas": ["reloj de arena", "ampolleta", "temporizador", "tiempo"],
+			"descripcion": "Reloj de arena sobre un pie, a la altura de la cintura: dos ampollas de cristal frías unidas por la cintura. Al darle la vuelta se oye caer la arena durante un minuto; cuando para, se acabó el tiempo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.45],
+				"fondo": [0.3, 0.35, 0.45],
+				"alto": [0.6, 0.8, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal",
+				"propio": {
+					"sonido": "sonidos/juego_reloj_arena.flac",
+					"volumen": 0.3,
+					"radio": 4,
+					"estado": "jue_cayendo"
+				}
+			},
+			"estados": ["vacio", "jue_cayendo"],
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar",
+					"de": "vacio",
+					"a": "jue_cayendo",
+					"sonido": "golpe/madera"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "jue_cayendo",
+				"segundos": 60,
+				"al_terminar": "vacio",
+				"sonido_al_terminar": "logro/logro"
+			},
+			"funcion": "juego",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "cueva"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/reloj_arena.png",
+				"descripcion": "Huella en planta de «Reloj de arena gigante»: un círculo de 0,35 por 0,35 metros, con la letra «Ra»."
+			}
+		},
+		{
+			"id": "portal_magico",
+			"nombre": "Portal mágico de piedras",
+			"categoria": "acertijos",
+			"subcategoria": "mecanismos",
+			"etiquetas": ["portal", "portal mágico", "puerta dimensional", "círculo de piedras", "teletransporte"],
+			"descripcion": "Dos grupos de piedras altas en pie, más altas que una persona, con un hueco entre ellas. Encendido, zumba y el aire vibra; al cruzarlo se viaja a otro lugar. Apagado, el hueco está cerrado por un hechizo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.2, 0.0], [0.2, 0.45], [0.8, 0.45], [0.8, 0.0], [1.0, 0.0], [1.0, 1.0], [0.8, 1.0], [0.8, 0.55], [0.2, 0.55], [0.2, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 2.5],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [2.2, 2.5, 3.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "sonidos/juego_portal.flac",
+					"volumen": 0.5,
+					"radio": 12,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/magia.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/magia.flac"
+				}
+			],
+			"paso_libre": ["encendido"],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque", "cueva", "castillo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pm",
+				"color": "#2874A6"
+			},
+			"imagen": {
+				"fichero": "imagenes/portal_magico.png",
+				"descripcion": "Huella en planta de «Portal mágico de piedras»: dos grupos de piedras altas a los lados y el paso por el medio de 2,00 por 0,50 metros, con la letra «Pm»."
+			}
+		},
+		{
+			"id": "dragon_dormido",
+			"nombre": "Dragón dormido",
+			"categoria": "personajes",
+			"subcategoria": "criaturas",
+			"etiquetas": ["dragón", "dragón dormido", "monstruo", "guardián del tesoro"],
+			"descripcion": "Dragón enorme dormido y enroscado, con la cola alrededor. Las escamas son duras y tibias; respira despacio y ronca. Si lo tocas, se despierta con un rugido.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [0.7, 0.05], [0.95, 0.3], [1.0, 0.6], [0.85, 0.9], [0.55, 1.0], [0.3, 0.95], [0.12, 0.85], [0.22, 0.7], [0.08, 0.6], [0.0, 0.4], [0.12, 0.15]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.0],
+				"fondo": [3.0, 4.5, 6.0],
+				"alto": [1.2, 1.6, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"propio": {
+					"sonido": "sonidos/juego_dragon_ronquido.flac",
+					"volumen": 0.55,
+					"radio": 15,
+					"estado": "jue_dormido"
+				}
+			},
+			"estados": ["jue_dormido", "jue_despierto"],
+			"acciones": [
+				{
+					"id": "jue_despertar",
+					"nombre": "Despertar",
+					"de": "jue_dormido",
+					"a": "jue_despierto",
+					"sonido": "sonidos/juego_rugido.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "animal",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cueva", "castillo"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente", "movil"],
+			"frecuencia": "comun",
+			"relacionados": ["huevo_dragon", "cofre"],
+			"simbolo": {
+				"letra": "Dd",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/dragon_dormido.png",
+				"descripcion": "Huella en planta de «Dragón dormido»: un cuerpo enroscado, casi redondo, con la cola que le da la vuelta de 3,00 por 4,50 metros, con la letra «Dd»."
+			}
+		},
+		{
+			"id": "buho_percha",
+			"nombre": "Búho en su percha",
+			"categoria": "personajes",
+			"subcategoria": "criaturas",
+			"etiquetas": ["búho", "lechuza", "búho sabio", "ave"],
+			"descripcion": "Búho sobre una percha de madera de pie, con la cabeza a la altura del pecho. Ulula de vez en cuando y, si le preguntas, da una pista. Plumas muy suaves; no le gusta que le toquen.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.5],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.4, 1.6, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/juego_buho.flac"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "sonidos/juego_buho.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "animal",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque", "castillo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/buho_percha.png",
+				"descripcion": "Huella en planta de «Búho en su percha»: un círculo de 0,40 por 0,40 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "loro_percha",
+			"nombre": "Loro en su percha",
+			"categoria": "personajes",
+			"subcategoria": "criaturas",
+			"etiquetas": ["loro", "cotorra", "papagayo", "loro pirata"],
+			"descripcion": "Loro sobre una percha de madera en forma de te, a la altura del pecho. Grazna, repite palabras y a veces chiva dónde está escondido algo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.35], [0.625, 0.35], [0.625, 1.0], [0.375, 1.0], [0.375, 0.35], [0.0, 0.35]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.3, 0.35, 0.4],
+				"alto": [1.4, 1.5, 1.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/juego_loro.flac"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "sonidos/juego_loro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "animal",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["isla"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["barril_pirata", "timon_barco"],
+			"simbolo": {
+				"letra": "Lp",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/loro_percha.png",
+				"descripcion": "Huella en planta de «Loro en su percha»: una te de 0,50 por 0,35 metros, con la letra «Lp»."
+			}
+		},
+		{
+			"id": "gato_negro",
+			"nombre": "Gato",
+			"categoria": "personajes",
+			"subcategoria": "criaturas",
+			"etiquetas": ["gato", "gato negro", "minino", "mascota"],
+			"descripcion": "Gato sentado o tumbado en el suelo, pequeño y blando. Maúlla, ronronea si lo acaricias y a veces se cambia de sitio: cuidado con no pisarlo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.38], [0.962, 0.235], [0.854, 0.111], [0.691, 0.029], [0.5, 0.0], [0.309, 0.029], [0.146, 0.111], [0.038, 0.235], [0.0, 0.38], [0.08, 0.62], [0.5, 1.0], [0.92, 0.62]]
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.3],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.25, 0.3, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"uso": "sonidos/juego_maullido.flac"
+			},
+			"acciones": [
+				{
+					"id": "jue_acariciar",
+					"nombre": "Acariciar",
+					"sonido": "sonidos/juego_maullido.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "animal",
+			"lugares": ["fantasia", "vivienda", "cualquiera"],
+			"estancias": ["cualquiera", "castillo"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Gn",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/gato_negro.png",
+				"descripcion": "Huella en planta de «Gato»: una gota, redonda detrás y en punta delante de 0,25 por 0,50 metros, con la letra «Gn»."
+			}
+		},
+		{
+			"id": "panal_colgado",
+			"nombre": "Panal silvestre colgado de una rama",
+			"categoria": "personajes",
+			"subcategoria": "criaturas",
+			"etiquetas": ["panal", "panal silvestre", "enjambre", "avispero", "miel", "abejas"],
+			"descripcion": "Panal de abejas silvestres colgado de una rama a la altura de la cabeza, con forma de gota y tacto de papel rugoso, que zumba sin parar. Mejor no tocarlo: dentro hay miel, y abejas. El bastón no lo encuentra; el zumbido, sí.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.5, 0.6, 0.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"propio": {
+					"sonido": "comun:abejas_colmena.flac",
+					"volumen": 0.5,
+					"radio": 8
+				}
+			},
+			"contenedor": true,
+			"funcion": "animal",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque"],
+			"obstaculo": "cabeza",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/panal_colgado.png",
+				"descripcion": "Huella en planta de «Panal silvestre colgado de una rama»: un círculo de 0,50 por 0,50 metros, colgado a 1,50 metros del suelo, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "armadura",
+			"nombre": "Armadura de caballero",
+			"categoria": "personajes",
+			"subcategoria": "figuras",
+			"etiquetas": ["armadura", "caballero", "yelmo", "coraza"],
+			"descripcion": "Armadura de caballero de pie sobre una peana, con una lanza en la mano. Metal frío y articulado: suena a lata al golpearla y la visera del yelmo se levanta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 0.15], [1.0, 0.85], [0.85, 1.0], [0.15, 1.0], [0.0, 0.85], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.8, 1.9, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "golpe/metal"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "golpe/metal"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["trono"],
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/armadura.png",
+				"descripcion": "Huella en planta de «Armadura de caballero»: un rectángulo con las esquinas cortadas de 0,70 por 0,60 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "robot_guia",
+			"nombre": "Robot guía",
+			"categoria": "personajes",
+			"subcategoria": "figuras",
+			"etiquetas": ["robot", "androide", "robot guía", "autómata"],
+			"descripcion": "Robot redondo con ruedas, de la altura de un niño. Zumba al girar la cabeza, pita como si hablara y lleva hacia la siguiente prueba. Puede moverse: escucha dónde está.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.1, 1.3, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/juego_robot.flac",
+					"volumen": 0.35,
+					"radio": 10
+				}
+			},
+			"acciones": [
+				{
+					"id": "saludar",
+					"nombre": "Saludar",
+					"sonido": "sonidos/juego_robot.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["nave_espacial", "cualquiera"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["consola_nave"],
+			"simbolo": {
+				"letra": "Rg",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/robot_guia.png",
+				"descripcion": "Huella en planta de «Robot guía»: un círculo de 0,60 por 0,60 metros, con la letra «Rg»."
+			}
+		},
+		{
+			"id": "muneco_nieve",
+			"nombre": "Muñeco de nieve",
+			"categoria": "personajes",
+			"subcategoria": "figuras",
+			"etiquetas": ["muñeco de nieve", "nieve", "invierno"],
+			"descripcion": "Muñeco de nieve de tres bolas, frío y húmedo, con una zanahoria por nariz y dos ramas por brazos. Al tocarlo se deshace un poco y a su alrededor el suelo resbala.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [1.0, 1.3, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "arena",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "golpe/tela"
+				}
+			],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque", "cualquiera"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo", "temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Mn",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/muneco_nieve.png",
+				"descripcion": "Huella en planta de «Muñeco de nieve»: un círculo de 0,60 por 0,60 metros, con la letra «Mn»."
+			}
+		},
+		{
+			"id": "fantasma",
+			"nombre": "Fantasma de sábana",
+			"categoria": "personajes",
+			"subcategoria": "figuras",
+			"etiquetas": ["fantasma", "espectro", "sábana", "casa encantada"],
+			"descripcion": "Sábana vieja que cuelga del techo como un fantasma, flotando desde la rodilla hasta por encima de la cabeza. Al rozarla se mueve y suena un lamento. El bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.38], [0.962, 0.235], [0.854, 0.111], [0.691, 0.029], [0.5, 0.0], [0.309, 0.029], [0.146, 0.111], [0.038, 0.235], [0.0, 0.38], [0.08, 0.62], [0.5, 1.0], [0.92, 0.62]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [1.0, 1.3, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.6,
+			"detectable_baston": false,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"propio": {
+					"sonido": "sonidos/juego_fantasma.flac",
+					"volumen": 0.4,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Fa",
+				"color": "#A04000"
+			},
+			"imagen": {
+				"fichero": "imagenes/fantasma.png",
+				"descripcion": "Huella en planta de «Fantasma de sábana»: una gota, redonda detrás y en punta delante de 0,60 por 0,60 metros, colgado a 0,60 metros del suelo, con la letra «Fa»."
+			}
+		},
+		{
+			"id": "telarana",
+			"nombre": "Telaraña gigante",
+			"categoria": "aventura",
+			"subcategoria": "colgantes",
+			"etiquetas": ["telaraña", "tela de araña", "araña", "hilos"],
+			"descripcion": "Telaraña tendida entre dos árboles o dos columnas, de hilos pegajosos desde la cintura hasta por encima de la cabeza. El bastón no la toca: se nota en la cara y en las manos.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.5],
+				"fondo": [0.05, 0.1, 0.2],
+				"alto": [1.0, 1.4, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.6,
+			"detectable_baston": false,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "roce/tela"
+			},
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cueva", "bosque", "castillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Te",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/telarana.png",
+				"descripcion": "Huella en planta de «Telaraña gigante»: un rectángulo de 1,50 por 0,10 metros, colgado a 0,60 metros del suelo, con la letra «Te»."
+			}
+		},
+		{
+			"id": "estalactita",
+			"nombre": "Estalactita",
+			"categoria": "aventura",
+			"subcategoria": "colgantes",
+			"etiquetas": ["estalactita", "roca colgante", "gotera de cueva"],
+			"descripcion": "Punta de roca fría y mojada que cuelga del techo de la cueva hasta la altura de la cabeza. Gotea sin parar: el plic, plic sirve para encontrarla y el suelo de debajo resbala.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.3, 0.5],
+				"fondo": [0.2, 0.3, 0.5],
+				"alto": [0.4, 0.6, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "comun:goteo_pescaderia.flac",
+					"volumen": 0.3,
+					"radio": 6
+				}
+			},
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cueva"],
+			"obstaculo": "cabeza",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Es",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/estalactita.png",
+				"descripcion": "Huella en planta de «Estalactita»: un círculo de 0,30 por 0,30 metros, colgado a 1,50 metros del suelo, con la letra «Es»."
+			}
+		},
+		{
+			"id": "liana",
+			"nombre": "Liana colgante",
+			"categoria": "aventura",
+			"subcategoria": "colgantes",
+			"etiquetas": ["liana", "enredadera", "cuerda de la selva", "bejuco"],
+			"descripcion": "Liana gruesa y rugosa que cuelga de un árbol hasta la altura de la rodilla y se balancea al empujarla. Agarrado a ella se cruza de un salto un río o un foso.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.15, 0.2],
+				"fondo": [0.1, 0.15, 0.2],
+				"alto": [1.5, 2.0, 2.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.4,
+			"detectable_baston": false,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "jue_balancearse",
+					"nombre": "Balancearse colgado",
+					"sonido": "calle:hojas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque", "isla"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Li",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/liana.png",
+				"descripcion": "Huella en planta de «Liana colgante»: un círculo de 0,15 por 0,15 metros, colgado a 0,40 metros del suelo, con la letra «Li»."
+			}
+		},
+		{
+			"id": "escalera_cuerda",
+			"nombre": "Escalera de cuerda",
+			"categoria": "aventura",
+			"subcategoria": "colgantes",
+			"etiquetas": ["escalera de cuerda", "escala", "escalerilla de barco", "cabaña del árbol"],
+			"descripcion": "Escalera de cuerda con peldaños de madera que cuelga de una rama o de la borda de un barco hasta el suelo. Se mueve mucho al subir y los peldaños se tambalean.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.05, 0.1, 0.15],
+				"alto": [2.0, 2.5, 3.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "escalera/subir"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse",
+					"de": "ocupado",
+					"a": "libre",
+					"sonido": "escalera/bajar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["bosque", "isla"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_cuerda.png",
+				"descripcion": "Huella en planta de «Escalera de cuerda»: un rectángulo de 0,50 por 0,10 metros, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "arenas_movedizas",
+			"nombre": "Arenas movedizas",
+			"categoria": "aventura",
+			"subcategoria": "trampas_suelo",
+			"etiquetas": ["arenas movedizas", "ciénaga", "pantano", "lodazal"],
+			"descripcion": "Charca de arena húmeda y blanda en la que los pies se hunden y cuesta sacarlos. Suena a chapoteo sordo. Para salir: despacio y hacia atrás.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [1.0, 2.0, 4.0],
+				"alto": [0.01, 0.02, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "arena",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"suelo": "arena",
+			"aviso": "¡Arenas movedizas! Sal despacio y hacia atrás.",
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["isla", "bosque"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Am",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/arenas_movedizas.png",
+				"descripcion": "Huella en planta de «Arenas movedizas»: un óvalo de 2,00 por 2,00 metros, con la letra «Am»."
+			}
+		},
+		{
+			"id": "rio_lava",
+			"nombre": "Río de lava",
+			"categoria": "aventura",
+			"subcategoria": "trampas_suelo",
+			"etiquetas": ["lava", "río de lava", "volcán", "magma"],
+			"descripcion": "Río de lava que cruza el camino: se oye burbujear y crepitar y el calor se nota en la cara a varios pasos. No se puede pisar: hay que buscar un puente o una liana.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.08], [0.125, 0.16], [0.25, 0.08], [0.375, 0.0], [0.5, 0.08], [0.625, 0.16], [0.75, 0.08], [0.875, 0.0], [1.0, 0.08], [1.0, 0.92], [0.875, 1.0], [0.75, 0.92], [0.625, 0.84], [0.5, 0.92], [0.375, 1.0], [0.25, 0.92], [0.125, 0.84], [0.0, 0.92]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 3.0],
+				"fondo": [3.0, 5.0, 10.0],
+				"alto": [0.05, 0.1, 0.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "sonidos/juego_caldero.flac",
+					"volumen": 0.5,
+					"radio": 12
+				}
+			},
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cueva"],
+			"obstaculo": "bajo",
+			"riesgos": ["caliente", "desnivel"],
+			"frecuencia": "ocasional",
+			"relacionados": ["puente", "liana"],
+			"simbolo": {
+				"letra": "Rl",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/rio_lava.png",
+				"descripcion": "Huella en planta de «Río de lava»: un rectángulo de bordes ondulados de 1,50 por 5,00 metros, con la letra «Rl»."
+			}
+		},
+		{
+			"id": "trampilla_suelo",
+			"nombre": "Trampilla en el suelo",
+			"categoria": "aventura",
+			"subcategoria": "trampas_suelo",
+			"etiquetas": ["trampilla", "escotillón", "sótano", "pasadizo"],
+			"descripcion": "Trampilla de tablones en el suelo, con una argolla de hierro para tirar. Cerrada se pisa y suena hueca; abierta deja un agujero con una escalera que baja.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [0.02, 0.03, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "golpe/madera"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "golpe/madera"
+				}
+			],
+			"paso_libre": ["cerrado"],
+			"contenedor": true,
+			"suelo": "madera",
+			"aviso": "Trampilla: si está abierta, hay un hueco en el suelo.",
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "cueva"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["placa_presion"],
+			"simbolo": {
+				"letra": "Ts",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/trampilla_suelo.png",
+				"descripcion": "Huella en planta de «Trampilla en el suelo»: un rectángulo de 0,80 por 0,80 metros, con la letra «Ts»."
+			}
+		},
+		{
+			"id": "hilo_cascabeles",
+			"nombre": "Hilo con cascabeles",
+			"categoria": "aventura",
+			"subcategoria": "trampas_suelo",
+			"etiquetas": ["hilo", "trampa de cascabeles", "cuerda trampa", "alarma"],
+			"descripcion": "Hilo tenso que cruza el paso a la altura del tobillo, con cascabeles colgados: si lo tocas, suenan y descubren que has pasado. El bastón lo encuentra si se arrastra pegado al suelo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.02, 0.03, 0.05],
+				"alto": [0.02, 0.03, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.15,
+			"detectable_baston": true,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "colegio:pandereta.flac"
+			},
+			"contenedor": false,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo", "cueva", "bosque"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Hc",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/hilo_cascabeles.png",
+				"descripcion": "Huella en planta de «Hilo con cascabeles»: un rectángulo de 2,00 por 0,03 metros, colgado a 0,15 metros del suelo, con la letra «Hc»."
+			}
+		},
+		{
+			"id": "entrada_cueva",
+			"nombre": "Boca de cueva",
+			"categoria": "aventura",
+			"subcategoria": "muros_cuevas",
+			"etiquetas": ["cueva", "gruta", "caverna", "boca de cueva"],
+			"descripcion": "Arco de roca rugosa y fría que se abre en una pared de piedra. Dentro el aire es húmedo y cada sonido hace eco; las paredes se siguen con la mano hasta el fondo, donde se puede esconder algo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.75, 1.0], [0.75, 0.3], [0.25, 0.3], [0.25, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 5.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [2.0, 2.5, 3.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "fantasia",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["cueva", "bosque"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["estalactita"],
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/entrada_cueva.png",
+				"descripcion": "Huella en planta de «Boca de cueva»: una U abierta por delante de 3,00 por 1,50 metros, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "muralla_almenas",
+			"nombre": "Tramo de muralla con almenas",
+			"categoria": "aventura",
+			"subcategoria": "muros_cuevas",
+			"etiquetas": ["muralla", "almenas", "muro del castillo", "adarve"],
+			"descripcion": "Muralla de piedra gruesa, más alta que una persona, con almenas arriba. Se sigue con la mano: piedras grandes, juntas hondas y frías. Sirve de pared para orientarse en el castillo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 8.0],
+				"fondo": [0.6, 0.8, 1.2],
+				"alto": [2.5, 3.5, 5.0]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["fantasia", "cualquiera"],
+			"estancias": ["castillo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["rastrillo"],
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#6E2C00"
+			},
+			"imagen": {
+				"fichero": "imagenes/muralla_almenas.png",
+				"descripcion": "Huella en planta de «Tramo de muralla con almenas»: un rectángulo de 4,00 por 0,80 metros, con la letra «Ma»."
+			}
+		}
+	]
+}

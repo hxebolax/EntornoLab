@@ -1,0 +1,6182 @@
+{
+	"formato": 1,
+	"id": "comunidad_y_edificio",
+	"nombre": "Comunidad y edificio",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Las zonas comunes de un edificio de viviendas: portal, escalera y rellanos, cuartos de instalaciones y de basuras, garaje sin vehículos, trastero, azotea, patio de luces y las zonas de recreo de una urbanización.",
+	"depende_de": ["comun", "hogar", "colegio", "calle", "transporte", "juego"],
+	"categorias": {
+		"portal": "Portal y conserjería",
+		"escalera": "Escalera, rellanos y ascensor",
+		"instalaciones": "Cuartos de instalaciones, basuras y bicicletas",
+		"garaje": "Garaje",
+		"trastero": "Trastero",
+		"azotea": "Azotea y patio de luces",
+		"urbanizacion": "Piscina y zonas de recreo de la urbanización"
+	},
+	"subcategorias": {
+		"buzones_y_llamada": "Buzones y portero automático",
+		"mobiliario_portal": "Mobiliario del portal",
+		"conserjeria": "Conserjería",
+		"aparcado_en_portal": "Lo que se deja aparcado en el portal",
+		"entrada_portal": "Puerta, peldaños y rampa",
+		"escalera_y_barandilla": "Escalera y barandilla",
+		"cosas_de_vecinos": "Lo que dejan los vecinos en el rellano",
+		"luz_y_registros": "Luz, registros y tuberías",
+		"ascensor_por_fuera": "Ascensor por fuera",
+		"electricidad": "Electricidad y telecomunicaciones",
+		"agua_y_calefaccion": "Agua y calefacción",
+		"cuarto_basuras": "Cuarto de basuras",
+		"cuarto_limpieza": "Cuarto de limpieza",
+		"cuarto_bicis": "Cuarto de bicicletas",
+		"columnas_y_suelo": "Columnas, rampas y suelo",
+		"plazas": "Plazas de aparcamiento",
+		"puertas_garaje": "Puertas y accesos del garaje",
+		"techo_y_ventilacion": "Techo, ventilación e incendios",
+		"guardado": "Estanterías, cajas y bultos",
+		"apoyado_y_colgado": "Cosas apoyadas y colgadas",
+		"tendederos": "Tendederos",
+		"cubierta": "Elementos de la cubierta",
+		"maquinas_azotea": "Máquinas y depósitos",
+		"patio_de_luces": "Patio de luces",
+		"piscina_comunitaria": "Piscina comunitaria",
+		"estar_en_el_jardin": "Pérgola, barbacoa y bancos",
+		"petanca_y_caminos": "Petanca y caminos",
+		"accesos_urbanizacion": "Accesos y servicios de la urbanización"
+	},
+	"estados": {
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"apagado": "Apagado",
+		"encendido": "Encendido",
+		"funcionando": "Funcionando"
+	},
+	"objetos": [
+		{
+			"id": "casillero_buzones",
+			"nombre": "Casillero de buzones de comunidad",
+			"categoria": "portal",
+			"subcategoria": "buzones_y_llamada",
+			"etiquetas": ["buzones", "casillero de buzones", "buzones de pared", "buzones del portal"],
+			"descripcion": "Bloque de buzones colgado de la pared, del pecho a la cabeza. Sobresale un palmo o más y el bastón pasa por debajo sin tocarlo. Cada puertecilla tiene su ranura y su cerradura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 1.2, 2.5],
+				"fondo": [0.1, 0.25, 0.4],
+				"alto": [0.4, 0.9, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "seis",
+					"nombre": "De seis vecinos",
+					"ancho": 0.75,
+					"fondo": 0.25,
+					"alto": 0.6
+				},
+				{
+					"id": "doce",
+					"nombre": "De doce vecinos",
+					"ancho": 1.2,
+					"fondo": 0.25,
+					"alto": 0.9
+				},
+				{
+					"id": "veinticuatro",
+					"nombre": "De veinticuatro vecinos",
+					"ancho": 2.4,
+					"fondo": 0.25,
+					"alto": 0.9
+				},
+				{
+					"id": "verticales",
+					"nombre": "De buzones verticales estrechos",
+					"ancho": 1.5,
+					"fondo": 0.1,
+					"alto": 0.4
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.75,
+			"detectable_baston": false,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "echar_carta",
+					"nombre": "Echar una carta",
+					"sonido": "calle:trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["portero_automatico", "tablon_comunidad"],
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/casillero_buzones.png",
+				"descripcion": "Huella en planta de «Casillero de buzones de comunidad»: un rectángulo de 1,20 por 0,25 metros, colgado a 0,75 metros del suelo, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "buzones_exentos",
+			"nombre": "Batería de buzones sobre patas",
+			"categoria": "portal",
+			"subcategoria": "buzones_y_llamada",
+			"etiquetas": ["buzones exentos", "buzones de pie", "mueble de buzones", "monolito de buzones"],
+			"descripcion": "Mueble de buzones apoyado en el suelo sobre patas o sobre un zócalo. El bastón encuentra las patas; el cuerpo de chapa empieza a la altura de la rodilla.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.0, 2.4],
+				"fondo": [0.25, 0.35, 0.5],
+				"alto": [1.2, 1.5, 1.8]
+			},
+			"variantes": [
+				{
+					"id": "de_portal",
+					"nombre": "De portal",
+					"ancho": 1.0,
+					"fondo": 0.35,
+					"alto": 1.5
+				},
+				{
+					"id": "de_urbanizacion",
+					"nombre": "De urbanización, largo",
+					"ancho": 2.4,
+					"fondo": 0.4,
+					"alto": 1.6
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "echar_carta",
+					"nombre": "Echar una carta",
+					"sonido": "calle:trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["comunidad", "jardin"],
+			"estancias": ["portal", "jardin"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Be",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/buzones_exentos.png",
+				"descripcion": "Huella en planta de «Batería de buzones sobre patas»: un rectángulo de 1,00 por 0,35 metros, con la letra «Be»."
+			}
+		},
+		{
+			"id": "taquillas_paqueteria",
+			"nombre": "Taquillas de paquetería del portal",
+			"categoria": "portal",
+			"subcategoria": "buzones_y_llamada",
+			"etiquetas": ["taquillas de paquetes", "buzón de paquetería", "buzón inteligente", "consigna de paquetes"],
+			"descripcion": "Armario metálico alto con puertas de varios tamaños donde el repartidor deja los paquetes. Tiene un teclado a la altura del pecho que pita al aceptar el código.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 2.0],
+				"fondo": [0.4, 0.5, 0.65],
+				"alto": [1.7, 1.9, 2.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:bip_validacion.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Tp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/taquillas_paqueteria.png",
+				"descripcion": "Huella en planta de «Taquillas de paquetería del portal»: un rectángulo de 0,90 por 0,50 metros, con la letra «Tp»."
+			}
+		},
+		{
+			"id": "portero_automatico",
+			"nombre": "Portero automático de la calle",
+			"categoria": "portal",
+			"subcategoria": "buzones_y_llamada",
+			"etiquetas": ["portero automático", "telefonillo", "timbres", "placa de timbres", "portero"],
+			"descripcion": "Placa de metal en la pared, junto a la puerta, con un botón por vivienda en columnas. Queda a la altura del pecho y el bastón no la toca. Al pulsar, suena el timbre arriba.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.15, 0.35],
+				"fondo": [0.03, 0.04, 0.08],
+				"alto": [0.2, 0.35, 0.7]
+			},
+			"variantes": [
+				{
+					"id": "pocos_vecinos",
+					"nombre": "De seis botones",
+					"ancho": 0.12,
+					"fondo": 0.04,
+					"alto": 0.25
+				},
+				{
+					"id": "muchos_vecinos",
+					"nombre": "De veinte botones en dos columnas",
+					"ancho": 0.25,
+					"fondo": 0.04,
+					"alto": 0.6
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.1,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/portero_automatico.flac"
+			},
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "sonidos/portero_automatico.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["comunidad"],
+			"estancias": ["portal", "acera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_portal"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/portero_automatico.png",
+				"descripcion": "Huella en planta de «Portero automático de la calle»: un rectángulo de 0,15 por 0,04 metros, colgado a 1,10 metros del suelo, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "videoportero",
+			"nombre": "Videoportero con teclado",
+			"categoria": "portal",
+			"subcategoria": "buzones_y_llamada",
+			"etiquetas": ["videoportero", "portero con teclado", "portero digital", "telefonillo con cámara"],
+			"descripcion": "Placa con un teclado de números en lugar de un botón por vivienda: se marca el piso y se pulsa la campana. La tecla del cinco tiene un punto en relieve. Sobresale poco de la pared.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.18, 0.3],
+				"fondo": [0.03, 0.05, 0.1],
+				"alto": [0.25, 0.32, 0.45]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.15,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/portero_automatico.flac"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "colegio:teclado.flac"
+				},
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "sonidos/portero_automatico.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["comunidad"],
+			"estancias": ["portal", "acera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_portal"],
+			"simbolo": {
+				"letra": "Vi",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/videoportero.png",
+				"descripcion": "Huella en planta de «Videoportero con teclado»: un rectángulo de 0,18 por 0,05 metros, colgado a 1,15 metros del suelo, con la letra «Vi»."
+			}
+		},
+		{
+			"id": "tablon_comunidad",
+			"nombre": "Tablón de anuncios de la comunidad con vitrina",
+			"categoria": "portal",
+			"subcategoria": "mobiliario_portal",
+			"etiquetas": ["tablón de la comunidad", "vitrina de anuncios", "tablón del portal", "avisos de la comunidad"],
+			"descripcion": "Caja plana con puerta de cristal colgada de la pared, donde el administrador pone las convocatorias. Sobresale a la altura del hombro y las esquinas son vivas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.2],
+				"fondo": [0.05, 0.08, 0.12],
+				"alto": [0.5, 0.7, 1.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.1,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["comunidad"],
+			"estancias": ["portal", "rellano"],
+			"obstaculo": "voladizo",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/tablon_comunidad.png",
+				"descripcion": "Huella en planta de «Tablón de anuncios de la comunidad con vitrina»: un rectángulo de 0,80 por 0,08 metros, colgado a 1,10 metros del suelo, con la letra «Tc»."
+			}
+		},
+		{
+			"id": "felpudo_encastrado",
+			"nombre": "Felpudo encastrado del portal",
+			"categoria": "portal",
+			"subcategoria": "entrada_portal",
+			"etiquetas": ["felpudo encastrado", "felpudo de aluminio", "limpiabarros", "alfombra del portal"],
+			"descripcion": "Felpudo grande de perfiles de aluminio y goma metido en un foso, a ras del suelo, nada más cruzar la puerta. Bajo el pie suena distinto y raspa: avisa de que ya estás dentro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.8, 3.0],
+				"fondo": [0.6, 1.2, 2.0],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "alfombra",
+			"funcion": "referencia",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_portal"],
+			"simbolo": {
+				"letra": "Fe",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/felpudo_encastrado.png",
+				"descripcion": "Huella en planta de «Felpudo encastrado del portal»: un rectángulo de 1,80 por 1,20 metros, con la letra «Fe»."
+			}
+		},
+		{
+			"id": "alfombra_pasillera",
+			"nombre": "Alfombra pasillera del portal",
+			"categoria": "portal",
+			"subcategoria": "mobiliario_portal",
+			"etiquetas": ["alfombra pasillera", "alfombra larga", "moqueta del portal", "alfombra roja"],
+			"descripcion": "Alfombra larga y estrecha que va de la puerta al ascensor. Se nota blanda bajo el pie y apaga los pasos: seguirla lleva al fondo del portal. El borde puede estar levantado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.5],
+				"fondo": [2.0, 4.0, 6.0],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"suelo": "moqueta",
+			"funcion": "referencia",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ap",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/alfombra_pasillera.png",
+				"descripcion": "Huella en planta de «Alfombra pasillera del portal»: un rectángulo de 1,00 por 4,00 metros, con la letra «Ap»."
+			}
+		},
+		{
+			"id": "espejo_portal",
+			"nombre": "Espejo de portal de cuerpo entero",
+			"categoria": "portal",
+			"subcategoria": "mobiliario_portal",
+			"etiquetas": ["espejo del portal", "espejo grande", "espejo de pared", "luna"],
+			"descripcion": "Espejo grande que cubre un paño de pared casi desde el suelo. Liso y frío al tacto; quien conserva algo de visión cree que el portal sigue. Al golpearlo suena a cristal.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.5, 3.0],
+				"fondo": [0.03, 0.04, 0.06],
+				"alto": [1.2, 1.8, 2.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.2,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ep",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/espejo_portal.png",
+				"descripcion": "Huella en planta de «Espejo de portal de cuerpo entero»: un rectángulo de 1,50 por 0,04 metros, colgado a 0,20 metros del suelo, con la letra «Ep»."
+			}
+		},
+		{
+			"id": "banco_portal",
+			"nombre": "Banco de mármol del portal",
+			"categoria": "portal",
+			"subcategoria": "mobiliario_portal",
+			"etiquetas": ["banco del portal", "banco de obra", "poyete del portal", "banco de mármol"],
+			"descripcion": "Banco de obra forrado de mármol, pegado a la pared y sin respaldo. Frío, duro y a la altura de la rodilla. Sirve para dejar las bolsas mientras se busca la llave.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.5],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [0.42, 0.45, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "marmol",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_portal.png",
+				"descripcion": "Huella en planta de «Banco de mármol del portal»: un rectángulo de 1,50 por 0,40 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "jardinera_portal",
+			"nombre": "Jardinera de obra del portal",
+			"categoria": "portal",
+			"subcategoria": "mobiliario_portal",
+			"etiquetas": ["jardinera del portal", "macetero de obra", "jardinera interior", "plantas del portal"],
+			"descripcion": "Jardinera de ladrillo dentro del portal, con plantas de hoja grande que cuelgan hacia el paso. Antes que el murete se notan las hojas en la mano o en la cara.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.3, 0.5, 0.8],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ladrillo",
+			"sonidos": {
+				"golpe": "golpe/ladrillo"
+			},
+			"contenedor": true,
+			"funcion": "vegetacion",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Jp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/jardinera_portal.png",
+				"descripcion": "Huella en planta de «Jardinera de obra del portal»: un rectángulo de 2,00 por 0,50 metros, con la letra «Jp»."
+			}
+		},
+		{
+			"id": "mostrador_conserjeria",
+			"nombre": "Mostrador de conserjería",
+			"categoria": "portal",
+			"subcategoria": "conserjeria",
+			"etiquetas": ["conserjería", "mostrador del conserje", "portería", "mostrador del portero"],
+			"descripcion": "Mostrador alto de madera detrás del cual se sienta el conserje. Queda a la altura del pecho. Suele haber una radio bajita puesta: se oye al entrar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.4],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [1.0, 1.1, 1.15]
+			},
+			"colocacion": ["pared", "suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "fuente/television",
+					"volumen": 0.2,
+					"radio": 6
+				}
+			},
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["garita_conserje", "taquillas_paqueteria"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_conserjeria.png",
+				"descripcion": "Huella en planta de «Mostrador de conserjería»: un rectángulo de 1,60 por 0,60 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "garita_conserje",
+			"nombre": "Garita de conserje acristalada",
+			"categoria": "portal",
+			"subcategoria": "conserjeria",
+			"etiquetas": ["garita del conserje", "portería", "cabina del portero", "chiscón"],
+			"descripcion": "Cabina pequeña con paredes de cristal de media altura para arriba y una ventanilla. Abajo es de madera; arriba, el cristal no se ve y suena distinto al tocarlo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.1], [1.0, 0.9], [0.9, 1.0], [0.1, 1.0], [0.0, 0.9], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.5],
+				"fondo": [1.0, 1.5, 2.2],
+				"alto": [2.0, 2.2, 2.5]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "control_acceso",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "ocasional",
+			"relacionados": ["mostrador_conserjeria"],
+			"simbolo": {
+				"letra": "Gc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/garita_conserje.png",
+				"descripcion": "Huella en planta de «Garita de conserje acristalada»: un rectángulo con las esquinas cortadas de 1,50 por 1,50 metros, con la letra «Gc»."
+			}
+		},
+		{
+			"id": "carrito_compra_tela",
+			"nombre": "Carrito de la compra aparcado",
+			"categoria": "portal",
+			"subcategoria": "aparcado_en_portal",
+			"etiquetas": ["carrito de la compra", "carro de la compra de tela", "carrito de dos ruedas"],
+			"descripcion": "Carrito de tela con dos ruedas y un asa alta, dejado junto a los buzones. Blando arriba, con el armazón de metal abajo; si lo empujas, rueda o se vuelca.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.33, 0.4, 0.5],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [0.9, 0.95, 1.05]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"contenedor": true,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["portal", "rellano"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/carrito_compra_tela.png",
+				"descripcion": "Huella en planta de «Carrito de la compra aparcado»: un rectángulo de 0,40 por 0,40 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "bici_pared_portal",
+			"nombre": "Bicicleta apoyada en la pared del portal",
+			"categoria": "portal",
+			"subcategoria": "aparcado_en_portal",
+			"etiquetas": ["bicicleta apoyada", "bici en el portal", "bicicleta en la pared"],
+			"descripcion": "Bicicleta apoyada de lado contra la pared. El manillar y un pedal sobresalen hacia el paso a la altura de la cadera y de la espinilla. Si la rozas, puede caerse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.35], [0.9, 0.35], [0.9, 1.0], [0.78, 1.0], [0.78, 0.35], [0.55, 0.35], [0.55, 0.6], [0.45, 0.6], [0.45, 0.35], [0.0, 0.35]]
+			},
+			"medidas": {
+				"ancho": [1.6, 1.75, 1.9],
+				"fondo": [0.4, 0.55, 0.7],
+				"alto": [0.95, 1.05, 1.15]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["portal", "rellano", "garaje"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/bici_pared_portal.png",
+				"descripcion": "Huella en planta de «Bicicleta apoyada en la pared del portal»: un cuerpo largo y fino pegado a la pared, con el manillar que sale hacia delante cerca de un extremo y un pedal en el centro de 1,75 por 0,55 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "peldanos_portal",
+			"nombre": "Peldaños de entrada al portal",
+			"categoria": "portal",
+			"subcategoria": "entrada_portal",
+			"etiquetas": ["peldaños del portal", "escalones de entrada", "escalón del portal", "escalinata"],
+			"descripcion": "Uno, dos o tres peldaños de mármol a todo lo ancho, entre la puerta y el ascensor. No cortan el paso, pero hay que subirlos; el canto suele ser resbaladizo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.5, 3.5],
+				"fondo": [0.28, 0.6, 0.95],
+				"alto": [0.14, 0.34, 0.54]
+			},
+			"variantes": [
+				{
+					"id": "un_peldano",
+					"nombre": "Un peldaño",
+					"ancho": 1.5,
+					"fondo": 0.3,
+					"alto": 0.17
+				},
+				{
+					"id": "dos_peldanos",
+					"nombre": "Dos peldaños",
+					"ancho": 1.5,
+					"fondo": 0.6,
+					"alto": 0.34
+				},
+				{
+					"id": "tres_peldanos",
+					"nombre": "Tres peldaños",
+					"ancho": 1.5,
+					"fondo": 0.9,
+					"alto": 0.51
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "marmol",
+			"sonidos": {
+				"golpe": "exterior/bordillo"
+			},
+			"contenedor": false,
+			"aviso": "Peldaños del portal.",
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["portal", "acera"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel", "resbaladizo"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["rampa_portal"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/peldanos_portal.png",
+				"descripcion": "Huella en planta de «Peldaños de entrada al portal»: un rectángulo de 1,50 por 0,60 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "rampa_portal",
+			"nombre": "Rampa de portal con barandilla",
+			"categoria": "portal",
+			"subcategoria": "entrada_portal",
+			"etiquetas": ["rampa del portal", "rampa de acceso", "rampa con pasamanos", "rampa accesible"],
+			"descripcion": "Rampa estrecha que salva los peldaños del portal, con un pasamanos de tubo a un lado. El suelo se inclina y es de goma rugosa; el pasamanos guía hasta arriba.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [1.2, 3.0, 6.0],
+				"alto": [0.05, 0.25, 0.4]
+			},
+			"variantes": [
+				{
+					"id": "corta",
+					"nombre": "Corta, de un peldaño",
+					"ancho": 1.0,
+					"fondo": 1.7,
+					"alto": 0.17
+				},
+				{
+					"id": "larga",
+					"nombre": "Larga, de tres peldaños",
+					"ancho": 1.2,
+					"fondo": 6.0,
+					"alto": 0.4
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"aviso": "Rampa del portal: el pasamanos queda a un lado.",
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["portal", "acera"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["peldanos_portal"],
+			"simbolo": {
+				"letra": "Rp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/rampa_portal.png",
+				"descripcion": "Huella en planta de «Rampa de portal con barandilla»: un rectángulo de 1,20 por 3,00 metros, con la letra «Rp»."
+			}
+		},
+		{
+			"id": "puerta_portal",
+			"nombre": "Puerta de portal pesada con muelle",
+			"categoria": "portal",
+			"subcategoria": "entrada_portal",
+			"etiquetas": ["puerta del portal", "puerta de la calle", "puerta de hierro y cristal", "puerta con muelle"],
+			"descripcion": "Puerta de hierro y cristal con un muelle arriba que la cierra sola. Pesa: hay que empujar con el cuerpo, y vuelve con fuerza. El portazo se oye en toda la escalera.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.95, 1.2],
+				"fondo": [0.05, 0.08, 0.12],
+				"alto": [2.0, 2.1, 2.6]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "comun:puerta_pesada_muelle.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "abierto",
+				"segundos": 8,
+				"al_terminar": "cerrado",
+				"sonido_al_terminar": "comun:puerta_pesada_muelle.flac"
+			},
+			"funcion": "barrera",
+			"lugares": ["comunidad"],
+			"estancias": ["portal", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "transparente"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["portero_automatico", "pulsador_abrepuertas", "felpudo_encastrado"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_portal.png",
+				"descripcion": "Huella en planta de «Puerta de portal pesada con muelle»: un rectángulo de 0,95 por 0,08 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "pulsador_abrepuertas",
+			"nombre": "Pulsador abrepuertas del portal",
+			"categoria": "portal",
+			"subcategoria": "entrada_portal",
+			"etiquetas": ["pulsador de salida", "botón de la puerta", "abrepuertas", "pulsador del portal"],
+			"descripcion": "Botón del tamaño de una moneda en la pared, a un paso de la puerta y a la altura del codo. Al pulsarlo zumba la cerradura: mientras zumba, la puerta se abre empujando.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.06, 0.08, 0.12],
+				"fondo": [0.03, 0.03, 0.05],
+				"alto": [0.06, 0.08, 0.12]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.05,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/abrepuertas_zumbido.flac"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "sonidos/abrepuertas_zumbido.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["comunidad"],
+			"estancias": ["portal"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_portal"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/pulsador_abrepuertas.png",
+				"descripcion": "Huella en planta de «Pulsador abrepuertas del portal»: un rectángulo de 0,08 por 0,03 metros, colgado a 1,05 metros del suelo, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "arranque_barandilla",
+			"nombre": "Arranque de barandilla de escalera",
+			"categoria": "escalera",
+			"subcategoria": "escalera_y_barandilla",
+			"etiquetas": ["arranque de barandilla", "pomo de la barandilla", "poste de la escalera", "pasamanos"],
+			"descripcion": "Primer tramo de la barandilla, con su poste y su pomo. Sale hacia el rellano más que el primer peldaño: es lo que la mano busca para saber dónde empieza la escalera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.06, 0.1, 0.2],
+				"fondo": [0.3, 0.6, 1.0],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "portal"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["hueco_bajo_escalera"],
+			"simbolo": {
+				"letra": "Ab",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/arranque_barandilla.png",
+				"descripcion": "Huella en planta de «Arranque de barandilla de escalera»: un rectángulo de 0,10 por 0,60 metros, con la letra «Ab»."
+			}
+		},
+		{
+			"id": "hueco_bajo_escalera",
+			"nombre": "Hueco bajo la escalera",
+			"categoria": "escalera",
+			"subcategoria": "escalera_y_barandilla",
+			"etiquetas": ["hueco de la escalera", "bajo la escalera", "zanca baja", "obstáculo en altura"],
+			"descripcion": "Parte baja de la losa inclinada de la escalera. El suelo está libre y el bastón no encuentra nada, pero el techo baja hasta la frente y luego hasta el pecho. Hay que rodearlo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.1, 1.6],
+				"fondo": [0.8, 1.5, 2.5],
+				"alto": [0.4, 0.8, 1.0]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"aviso": "Cuidado con la cabeza: estás bajo la escalera.",
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "portal", "garaje"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"relacionados": ["arranque_barandilla"],
+			"simbolo": {
+				"letra": "Hb",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/hueco_bajo_escalera.png",
+				"descripcion": "Huella en planta de «Hueco bajo la escalera»: un rectángulo de 1,10 por 1,50 metros, colgado a 1,20 metros del suelo, con la letra «Hb»."
+			}
+		},
+		{
+			"id": "ventana_rellano_abierta",
+			"nombre": "Ventana del rellano abierta hacia dentro",
+			"categoria": "escalera",
+			"subcategoria": "escalera_y_barandilla",
+			"etiquetas": ["ventana abierta", "hoja de ventana", "ventana del rellano", "obstáculo en altura"],
+			"descripcion": "Hoja de ventana abierta hacia el rellano. El canto queda a la altura de la cara y el bastón pasa por debajo. Cerrada no molesta; se nota el aire y el ruido de fuera cuando está abierta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 0.8],
+				"fondo": [0.03, 0.04, 0.06],
+				"alto": [0.7, 1.0, 1.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["abierto", "cerrado"],
+			"acciones": [
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				},
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"paso_libre": ["cerrado"],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "patio"],
+			"obstaculo": "voladizo",
+			"riesgos": ["temporal", "transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Vr",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/ventana_rellano_abierta.png",
+				"descripcion": "Huella en planta de «Ventana del rellano abierta hacia dentro»: un rectángulo de 0,60 por 0,04 metros, colgado a 1,00 metros del suelo, con la letra «Vr»."
+			}
+		},
+		{
+			"id": "armario_contadores_rellano",
+			"nombre": "Armario de contadores de rellano",
+			"categoria": "escalera",
+			"subcategoria": "luz_y_registros",
+			"etiquetas": ["armario de contadores", "registro del rellano", "patinillo", "cuarto de contadores de planta"],
+			"descripcion": "Registro de chapa en la pared del rellano, de suelo a techo, con los contadores de la planta. La puerta sobresale un poco y suena hueca; a veces se queda entreabierta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.2],
+				"fondo": [0.08, 0.15, 0.35],
+				"alto": [1.6, 2.0, 2.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ac",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_contadores_rellano.png",
+				"descripcion": "Huella en planta de «Armario de contadores de rellano»: un rectángulo de 0,80 por 0,15 metros, con la letra «Ac»."
+			}
+		},
+		{
+			"id": "pulsador_luz_escalera",
+			"nombre": "Pulsador de la luz de escalera con temporizador",
+			"categoria": "escalera",
+			"subcategoria": "luz_y_registros",
+			"etiquetas": ["luz de la escalera", "automático de escalera", "minutero", "pulsador de la luz"],
+			"descripcion": "Botón redondo junto a cada puerta y cada tramo. Enciende la luz de la escalera un minuto y se apaga sola. En los automáticos antiguos se oye el tictac mientras dura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.07, 0.08, 0.1],
+				"fondo": [0.03, 0.04, 0.05],
+				"alto": [0.07, 0.08, 0.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.1,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/reloj",
+					"volumen": 0.3,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "encendido",
+				"segundos": 60,
+				"al_terminar": "apagado",
+				"sonido_al_terminar": "hogar:interruptor.flac"
+			},
+			"funcion": "iluminacion",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "portal", "garaje"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/pulsador_luz_escalera.png",
+				"descripcion": "Huella en planta de «Pulsador de la luz de escalera con temporizador»: un círculo de 0,08 por 0,04 metros, colgado a 1,10 metros del suelo, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "bajante_vista",
+			"nombre": "Bajante vista",
+			"categoria": "escalera",
+			"subcategoria": "luz_y_registros",
+			"etiquetas": ["bajante", "tubo de desagüe", "tubería vertical", "canalón"],
+			"descripcion": "Tubo vertical grueso de plástico o de hierro, del suelo al techo, en un rincón. De vez en cuando se oye caer el agua por dentro: sirve para reconocer ese rincón.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.09, 0.125, 0.25],
+				"fondo": [0.09, 0.125, 0.25],
+				"alto": [2.2, 2.6, 4.0]
+			},
+			"colocacion": ["esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/bajante_desague.flac",
+					"volumen": 0.3,
+					"radio": 5
+				}
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "patio", "garaje", "cuarto_instalaciones"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bv",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/bajante_vista.png",
+				"descripcion": "Huella en planta de «Bajante vista»: un círculo de 0,12 por 0,12 metros, con la letra «Bv»."
+			}
+		},
+		{
+			"id": "macetas_vecino",
+			"nombre": "Macetas del vecino en el rellano",
+			"categoria": "escalera",
+			"subcategoria": "cosas_de_vecinos",
+			"etiquetas": ["macetas del rellano", "tiestos del vecino", "plantas del rellano"],
+			"descripcion": "Grupo de macetas de barro de varios tamaños junto a una puerta. Las hojas rozan primero; las macetas pequeñas se vuelcan con el bastón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.3, 0.0], [0.36, 0.12], [0.62, 0.0], [1.0, 0.0], [1.0, 0.7], [0.86, 0.95], [0.66, 1.0], [0.55, 0.72], [0.4, 0.62], [0.22, 0.85], [0.05, 0.8], [0.0, 0.5]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.8, 1.6],
+				"fondo": [0.25, 0.35, 0.6],
+				"alto": [0.3, 0.6, 1.3]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "vegetacion",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mv",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/macetas_vecino.png",
+				"descripcion": "Huella en planta de «Macetas del vecino en el rellano»: una mancha irregular pegada a la pared: varias macetas de distinto tamaño de 0,80 por 0,35 metros, con la letra «Mv»."
+			}
+		},
+		{
+			"id": "zapatos_vecino",
+			"nombre": "Zapatos del vecino junto a la puerta",
+			"categoria": "escalera",
+			"subcategoria": "cosas_de_vecinos",
+			"etiquetas": ["zapatos en el rellano", "botas del vecino", "calzado en la puerta"],
+			"descripcion": "Fila de zapatos y botas en el suelo, junto al felpudo de una vivienda. Bajos y blandos: el bastón los empuja y el pie tropieza con ellos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.8, 1.2],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.08, 0.15, 0.4]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Zv",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/zapatos_vecino.png",
+				"descripcion": "Huella en planta de «Zapatos del vecino junto a la puerta»: un rectángulo de 0,80 por 0,30 metros, con la letra «Zv»."
+			}
+		},
+		{
+			"id": "bolsa_basura_rellano",
+			"nombre": "Bolsa de basura en el rellano",
+			"categoria": "escalera",
+			"subcategoria": "cosas_de_vecinos",
+			"etiquetas": ["bolsa de basura", "basura del vecino", "bolsa en la puerta"],
+			"descripcion": "Bolsa de basura atada que un vecino ha dejado junto a su puerta para bajarla luego. Blanda, cruje al tocarla y huele.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.35, 0.5],
+				"fondo": [0.25, 0.35, 0.5],
+				"alto": [0.25, 0.4, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "calle:papel.flac"
+			},
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bb",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/bolsa_basura_rellano.png",
+				"descripcion": "Huella en planta de «Bolsa de basura en el rellano»: un círculo de 0,35 por 0,35 metros, con la letra «Bb»."
+			}
+		},
+		{
+			"id": "bombona_rellano",
+			"nombre": "Bombona de butano en el rellano",
+			"categoria": "escalera",
+			"subcategoria": "cosas_de_vecinos",
+			"etiquetas": ["bombona", "bombona de butano", "butano", "botella de gas"],
+			"descripcion": "Bombona de butano vacía que espera al repartidor. Cilindro de acero a la altura de la rodilla, con un asa arriba; al golpearla suena como una campana.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.28, 0.3, 0.32],
+				"fondo": [0.28, 0.3, 0.32],
+				"alto": [0.45, 0.6, 0.65]
+			},
+			"colocacion": ["pared", "suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "juego:campana.flac"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "portal", "terraza"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Br",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/bombona_rellano.png",
+				"descripcion": "Huella en planta de «Bombona de butano en el rellano»: un círculo de 0,30 por 0,30 metros, con la letra «Br»."
+			}
+		},
+		{
+			"id": "triciclo_rellano",
+			"nombre": "Triciclo y patinete de niño en el rellano",
+			"categoria": "escalera",
+			"subcategoria": "cosas_de_vecinos",
+			"etiquetas": ["triciclo", "patinete de niño", "correpasillos", "juguetes con ruedas"],
+			"descripcion": "Triciclo y patinete infantil dejados junto a la puerta. Bajos, con ruedas: se van rodando si los empujas y el manillar queda a la altura del muslo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.5, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.45, 0.6, 0.8],
+				"fondo": [0.4, 0.6, 0.8],
+				"alto": [0.45, 0.65, 0.9]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "hogar:juguetes.flac"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "portal"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Tr",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/triciclo_rellano.png",
+				"descripcion": "Huella en planta de «Triciclo y patinete de niño en el rellano»: un triángulo con la punta hacia delante de 0,60 por 0,60 metros, con la letra «Tr»."
+			}
+		},
+		{
+			"id": "botonera_ascensor",
+			"nombre": "Botonera de llamada del ascensor",
+			"categoria": "escalera",
+			"subcategoria": "ascensor_por_fuera",
+			"etiquetas": ["botón del ascensor", "botonera de llamada", "llamada del ascensor", "pulsador del ascensor"],
+			"descripcion": "Placa pequeña con uno o dos botones en la jamba de la puerta del ascensor, a la altura del codo. El botón tiene relieve y a veces braille; al pulsar se oye arrancar la máquina.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.08, 0.1, 0.15],
+				"fondo": [0.03, 0.03, 0.05],
+				"alto": [0.12, 0.2, 0.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.95,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "ascensor/llamada"
+			},
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "ascensor/llamada"
+				}
+			],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "portal", "garaje"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_ascensor_batiente", "banqueta_ascensor"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/botonera_ascensor.png",
+				"descripcion": "Huella en planta de «Botonera de llamada del ascensor»: un rectángulo de 0,10 por 0,03 metros, colgado a 0,95 metros del suelo, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "puerta_ascensor_batiente",
+			"nombre": "Puerta batiente de ascensor antiguo",
+			"categoria": "escalera",
+			"subcategoria": "ascensor_por_fuera",
+			"etiquetas": ["puerta del ascensor", "puerta de ascensor antiguo", "puerta de rellano del ascensor"],
+			"descripcion": "Puerta de hierro de los ascensores antiguos, que se abre tirando hacia el rellano. Pesa, vuelve sola y ocupa medio rellano al abrirse; tiene una mirilla de cristal estrecha.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.65, 0.75, 0.9],
+				"fondo": [0.04, 0.05, 0.08],
+				"alto": [1.95, 2.0, 2.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "ascensor/puerta"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "abierto",
+				"segundos": 6,
+				"al_terminar": "cerrado",
+				"sonido_al_terminar": "transporte:taquilla.flac"
+			},
+			"funcion": "barrera",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "portal"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["botonera_ascensor"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_ascensor_batiente.png",
+				"descripcion": "Huella en planta de «Puerta batiente de ascensor antiguo»: un rectángulo de 0,75 por 0,05 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "banqueta_ascensor",
+			"nombre": "Banqueta de espera del ascensor",
+			"categoria": "escalera",
+			"subcategoria": "ascensor_por_fuera",
+			"etiquetas": ["banco del rellano", "banqueta del ascensor", "banco de espera"],
+			"descripcion": "Banco corto y estrecho de madera frente al ascensor, sin respaldo, para esperar sentado. Ligero: se mueve si te apoyas de lado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [0.28, 0.32, 0.38],
+				"alto": [0.42, 0.45, 0.48]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["comunidad"],
+			"estancias": ["rellano", "portal"],
+			"obstaculo": "bajo",
+			"frecuencia": "ocasional",
+			"relacionados": ["botonera_ascensor"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/banqueta_ascensor.png",
+				"descripcion": "Huella en planta de «Banqueta de espera del ascensor»: un rectángulo de 0,90 por 0,32 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "contadores_luz",
+			"nombre": "Centralización de contadores de luz",
+			"categoria": "instalaciones",
+			"subcategoria": "electricidad",
+			"etiquetas": ["contadores de luz", "cuarto de contadores", "centralización de contadores", "contadores eléctricos"],
+			"descripcion": "Pared entera de módulos de plástico con un contador por vivienda. Lisa, con tapas precintadas; zumba bajito todo el tiempo. No hay nada que tocar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.18, 0.25, 0.4],
+				"alto": [1.6, 2.0, 2.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.2,
+					"radio": 4
+				}
+			},
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cuadro_electrico_saliente"],
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/contadores_luz.png",
+				"descripcion": "Huella en planta de «Centralización de contadores de luz»: un rectángulo de 2,00 por 0,25 metros, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "cuadro_electrico_saliente",
+			"nombre": "Cuadro eléctrico saliente",
+			"categoria": "instalaciones",
+			"subcategoria": "electricidad",
+			"etiquetas": ["cuadro eléctrico", "cuadro de luces", "caja de automáticos", "cuadro general"],
+			"descripcion": "Caja de chapa atornillada a la pared a la altura del pecho, con los interruptores dentro. Sobresale un palmo, tiene esquinas vivas y el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.6, 1.0],
+				"fondo": [0.1, 0.18, 0.25],
+				"alto": [0.4, 0.7, 1.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "garaje", "rellano", "trastero"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuadro_electrico_saliente.png",
+				"descripcion": "Huella en planta de «Cuadro eléctrico saliente»: un rectángulo de 0,60 por 0,18 metros, colgado a 1,00 metros del suelo, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "armario_telecomunicaciones",
+			"nombre": "Armario de telecomunicaciones",
+			"categoria": "instalaciones",
+			"subcategoria": "electricidad",
+			"etiquetas": ["armario de telecomunicaciones", "rack", "cuarto de telecos", "recinto de telecomunicaciones"],
+			"descripcion": "Armario metálico alto con los equipos de la antena y de la fibra. Tiene ventiladores: sopla aire tibio por las rejillas y se oye desde la puerta del cuarto.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.8],
+				"fondo": [0.3, 0.6, 0.8],
+				"alto": [1.2, 2.0, 2.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.25,
+					"radio": 5
+				}
+			},
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "azotea"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "At",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_telecomunicaciones.png",
+				"descripcion": "Huella en planta de «Armario de telecomunicaciones»: un rectángulo de 0,60 por 0,60 metros, con la letra «At»."
+			}
+		},
+		{
+			"id": "contadores_agua",
+			"nombre": "Batería de contadores de agua",
+			"categoria": "instalaciones",
+			"subcategoria": "agua_y_calefaccion",
+			"etiquetas": ["contadores de agua", "batería de contadores", "llaves de paso", "cuarto de contadores de agua"],
+			"descripcion": "Entramado de tubos de hierro pegado a la pared, con una fila de contadores y llaves de paso que sobresalen a distintas alturas. Frío y húmedo; se oye correr el agua.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.5, 3.0],
+				"fondo": [0.25, 0.35, 0.5],
+				"alto": [0.9, 1.3, 1.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.15,
+					"radio": 4
+				}
+			},
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["grupo_presion"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/contadores_agua.png",
+				"descripcion": "Huella en planta de «Batería de contadores de agua»: un rectángulo de 1,50 por 0,35 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "grupo_presion",
+			"nombre": "Grupo de presión de agua",
+			"categoria": "instalaciones",
+			"subcategoria": "agua_y_calefaccion",
+			"etiquetas": ["grupo de presión", "bombas de agua", "hidropresor", "calderín"],
+			"descripcion": "Dos bombas y un calderín sobre una bancada baja, llenos de tubos y volantes. Zumban fuerte cuando arrancan: el cuarto se reconoce desde el pasillo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.5, 0.7, 1.0],
+				"alto": [0.8, 1.2, 1.7]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/grupo_presion.flac",
+					"volumen": 0.45,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["contadores_agua"],
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/grupo_presion.png",
+				"descripcion": "Huella en planta de «Grupo de presión de agua»: un rectángulo de 1,20 por 0,70 metros, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "caldera_comunitaria",
+			"nombre": "Caldera comunitaria",
+			"categoria": "instalaciones",
+			"subcategoria": "agua_y_calefaccion",
+			"etiquetas": ["caldera", "caldera central", "calefacción central", "sala de calderas"],
+			"descripcion": "Caldera grande de la calefacción central. Un bloque de chapa que ruge cuando el quemador está encendido y que quema al tocarlo, igual que los tubos que salen de ella.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.4, 2.5],
+				"fondo": [0.8, 1.2, 2.2],
+				"alto": [1.2, 1.8, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "de_gas",
+					"nombre": "De gas, mural grande",
+					"ancho": 0.8,
+					"fondo": 0.8,
+					"alto": 1.4
+				},
+				{
+					"id": "de_gasoleo",
+					"nombre": "De gasóleo",
+					"ancho": 1.4,
+					"fondo": 1.2,
+					"alto": 1.8
+				},
+				{
+					"id": "de_biomasa",
+					"nombre": "De biomasa, con tolva",
+					"ancho": 2.5,
+					"fondo": 1.6,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:caldera_comunitaria.flac",
+					"volumen": 0.5,
+					"radio": 12
+				}
+			},
+			"contenedor": false,
+			"aviso": "Caldera: quema.",
+			"funcion": "climatizacion",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "comun",
+			"relacionados": ["deposito_gasoleo", "acumulador_agua_caliente"],
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/caldera_comunitaria.png",
+				"descripcion": "Huella en planta de «Caldera comunitaria»: un rectángulo de 1,40 por 1,20 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "deposito_gasoleo",
+			"nombre": "Depósito de gasóleo de la calefacción",
+			"categoria": "instalaciones",
+			"subcategoria": "agua_y_calefaccion",
+			"etiquetas": ["depósito de gasóleo", "tanque de gasoil", "depósito de combustible"],
+			"descripcion": "Depósito alargado de chapa, tumbado sobre patas, con las cabezas redondeadas. Suena hueco o lleno según el nivel y huele a gasóleo: el olor avisa antes que el bastón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.75, 0.0], [0.875, 0.067], [0.967, 0.25], [1.0, 0.5], [0.967, 0.75], [0.875, 0.933], [0.75, 1.0], [0.25, 1.0], [0.125, 0.933], [0.033, 0.75], [0.0, 0.5], [0.033, 0.25], [0.125, 0.067], [0.25, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 2.0, 3.0],
+				"fondo": [0.7, 0.9, 1.5],
+				"alto": [1.0, 1.5, 1.9]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["caldera_comunitaria"],
+			"simbolo": {
+				"letra": "Dg",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/deposito_gasoleo.png",
+				"descripcion": "Huella en planta de «Depósito de gasóleo de la calefacción»: un óvalo alargado, de lados rectos y extremos redondos de 2,00 por 0,90 metros, con la letra «Dg»."
+			}
+		},
+		{
+			"id": "acumulador_agua_caliente",
+			"nombre": "Depósito acumulador de agua caliente",
+			"categoria": "instalaciones",
+			"subcategoria": "agua_y_calefaccion",
+			"etiquetas": ["acumulador", "depósito de agua caliente", "termo comunitario", "interacumulador"],
+			"descripcion": "Cilindro alto forrado de aislante, de pie junto a la caldera. Blando por fuera y tibio; los tubos que entran y salen arriba y abajo sí queman.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.6],
+				"fondo": [0.6, 0.9, 1.6],
+				"alto": [1.5, 2.0, 2.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"relacionados": ["caldera_comunitaria"],
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/acumulador_agua_caliente.png",
+				"descripcion": "Huella en planta de «Depósito acumulador de agua caliente»: un círculo de 0,90 por 0,90 metros, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "fila_cubos_comunidad",
+			"nombre": "Fila de cubos de basura de la comunidad",
+			"categoria": "instalaciones",
+			"subcategoria": "cuarto_basuras",
+			"etiquetas": ["cubos de la comunidad", "cubos de basura", "cuarto de basuras", "cubos de reciclaje"],
+			"descripcion": "Varios cubos con ruedas alineados contra la pared, uno por cada tipo de residuo. Se distinguen por la tapa: lisa, con boca redonda o con ranura. Huele, y la tapa cae con un golpe hueco.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.77, 1.0], [0.77, 0.8], [0.743, 0.8], [0.743, 1.0], [0.513, 1.0], [0.513, 0.8], [0.487, 0.8], [0.487, 1.0], [0.257, 1.0], [0.257, 0.8], [0.23, 0.8], [0.23, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 2.4, 3.7],
+				"fondo": [0.7, 0.75, 0.8],
+				"alto": [1.0, 1.07, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "dos_cubos",
+					"nombre": "Dos cubos",
+					"ancho": 1.2,
+					"fondo": 0.75,
+					"alto": 1.07
+				},
+				{
+					"id": "cuatro_cubos",
+					"nombre": "Cuatro cubos",
+					"ancho": 2.4,
+					"fondo": 0.75,
+					"alto": 1.07
+				},
+				{
+					"id": "seis_cubos",
+					"nombre": "Seis cubos",
+					"ancho": 3.6,
+					"fondo": 0.75,
+					"alto": 1.07
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "patio", "acera"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["cartones_plegados", "vertedero_limpieza"],
+			"simbolo": {
+				"letra": "Fc",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/fila_cubos_comunidad.png",
+				"descripcion": "Huella en planta de «Fila de cubos de basura de la comunidad»: un peine: una barra con cuerpos que salen hacia delante de 2,40 por 0,75 metros, con la letra «Fc»."
+			}
+		},
+		{
+			"id": "cartones_plegados",
+			"nombre": "Cartones plegados apoyados en la pared",
+			"categoria": "instalaciones",
+			"subcategoria": "cuarto_basuras",
+			"etiquetas": ["cartones", "cajas plegadas", "cartón para reciclar", "montón de cartón"],
+			"descripcion": "Montón de cajas de cartón plegadas y apoyadas de canto en la pared del cuarto de basuras. Resbalan y se desparraman por el suelo si las tocas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.0, 1.5],
+				"fondo": [0.2, 0.4, 0.8],
+				"alto": [0.4, 0.9, 1.4]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "calle:papel.flac"
+			},
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "portal"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cartones_plegados.png",
+				"descripcion": "Huella en planta de «Cartones plegados apoyados en la pared»: un rectángulo de 1,00 por 0,40 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "cubo_fregona",
+			"nombre": "Cubo de fregar con fregona",
+			"categoria": "instalaciones",
+			"subcategoria": "cuarto_limpieza",
+			"etiquetas": ["cubo de fregar", "fregona", "mocho", "cubo y fregona"],
+			"descripcion": "Cubo de plástico con escurridor y la fregona metida, con el palo hacia arriba. El palo queda a la altura del pecho y se cae; alrededor el suelo suele estar mojado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.28, 0.38, 0.45],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [1.1, 1.3, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "portal", "rellano"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "movil", "resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["vertedero_limpieza", "escobas_apoyadas"],
+			"simbolo": {
+				"letra": "Cf",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cubo_fregona.png",
+				"descripcion": "Huella en planta de «Cubo de fregar con fregona»: un óvalo de 0,38 por 0,30 metros, con la letra «Cf»."
+			}
+		},
+		{
+			"id": "vertedero_limpieza",
+			"nombre": "Vertedero del cuarto de limpieza",
+			"categoria": "instalaciones",
+			"subcategoria": "cuarto_limpieza",
+			"etiquetas": ["vertedero", "pila vertedero", "pila de la limpieza", "pilón"],
+			"descripcion": "Pila de loza baja, a la altura de la rodilla, con una rejilla abatible para apoyar el cubo y un grifo alto encima. El grifo queda a la altura de la cintura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.42, 0.5, 0.6],
+				"fondo": [0.38, 0.45, 0.55],
+				"alto": [0.45, 0.5, 0.65]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.4,
+					"radio": 5,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["cubo_fregona"],
+			"simbolo": {
+				"letra": "Vl",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/vertedero_limpieza.png",
+				"descripcion": "Huella en planta de «Vertedero del cuarto de limpieza»: un rectángulo de 0,50 por 0,45 metros, con la letra «Vl»."
+			}
+		},
+		{
+			"id": "escobas_apoyadas",
+			"nombre": "Escobas y recogedor apoyados en la pared",
+			"categoria": "instalaciones",
+			"subcategoria": "cuarto_limpieza",
+			"etiquetas": ["escobas", "recogedor", "cepillo de barrer", "útiles de limpieza"],
+			"descripcion": "Dos o tres escobas y un recogedor de palo apoyados en un rincón. Los palos se escurren y caen al suelo con estrépito en cuanto se rozan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.5, 0.8],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [1.2, 1.4, 1.6]
+			},
+			"colocacion": ["esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "portal", "trastero"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ea",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/escobas_apoyadas.png",
+				"descripcion": "Huella en planta de «Escobas y recogedor apoyados en la pared»: un rectángulo de 0,50 por 0,20 metros, con la letra «Ea»."
+			}
+		},
+		{
+			"id": "ganchos_bicis",
+			"nombre": "Ganchos de pared para bicicletas",
+			"categoria": "instalaciones",
+			"subcategoria": "cuarto_bicis",
+			"etiquetas": ["ganchos de bicicletas", "colgadores de bicis", "ganchos de pared", "obstáculo en altura"],
+			"descripcion": "Fila de ganchos de acero atornillados a la pared por encima de la cabeza, para colgar las bicicletas de una rueda. Vacíos, sobresalen a la altura de la frente y el bastón no los avisa.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 1.5, 3.0],
+				"fondo": [0.15, 0.25, 0.35],
+				"alto": [0.1, 0.15, 0.25]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.7,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"aviso": "Ganchos a la altura de la cabeza.",
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "garaje", "trastero"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"relacionados": ["bici_colgada_gancho", "soporte_bicis_suelo"],
+			"simbolo": {
+				"letra": "Gb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/ganchos_bicis.png",
+				"descripcion": "Huella en planta de «Ganchos de pared para bicicletas»: un rectángulo de 1,50 por 0,25 metros, colgado a 1,70 metros del suelo, con la letra «Gb»."
+			}
+		},
+		{
+			"id": "bici_colgada_gancho",
+			"nombre": "Bicicleta colgada de un gancho por la rueda",
+			"categoria": "instalaciones",
+			"subcategoria": "cuarto_bicis",
+			"etiquetas": ["bicicleta colgada", "bici en vertical", "bicicleta en el gancho"],
+			"descripcion": "Bicicleta colgada en vertical de la pared: la rueda de arriba en el gancho y la de abajo cerca del suelo. Sale de la pared un metro; el manillar queda a la altura de la cara.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.9, 1.05, 1.2],
+				"alto": [1.6, 1.75, 1.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.2,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "garaje", "trastero"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["ganchos_bicis"],
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/bici_colgada_gancho.png",
+				"descripcion": "Huella en planta de «Bicicleta colgada de un gancho por la rueda»: un rectángulo de 0,60 por 1,05 metros, colgado a 0,20 metros del suelo, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "soporte_bicis_suelo",
+			"nombre": "Soporte de suelo para ruedas de bicicleta",
+			"categoria": "instalaciones",
+			"subcategoria": "cuarto_bicis",
+			"etiquetas": ["aparcabicis de suelo", "soporte de bicicletas", "aparcabicis de comunidad", "horquillas de ruedas"],
+			"descripcion": "Barra baja con horquillas de varilla donde se mete la rueda delantera. Vacío apenas levanta un palmo del suelo: el bastón lo encuentra, pero el pie tropieza y se engancha.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.94, 1.0], [0.94, 0.15], [0.765, 0.15], [0.765, 1.0], [0.705, 1.0], [0.705, 0.15], [0.53, 0.15], [0.53, 1.0], [0.47, 1.0], [0.47, 0.15], [0.295, 0.15], [0.295, 1.0], [0.235, 1.0], [0.235, 0.15], [0.06, 0.15], [0.06, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.5, 3.0],
+				"fondo": [0.3, 0.4, 0.55],
+				"alto": [0.2, 0.3, 0.45]
+			},
+			"variantes": [
+				{
+					"id": "tres_ruedas",
+					"nombre": "De tres bicicletas",
+					"ancho": 0.9,
+					"fondo": 0.4,
+					"alto": 0.3
+				},
+				{
+					"id": "cinco_ruedas",
+					"nombre": "De cinco bicicletas",
+					"ancho": 1.5,
+					"fondo": 0.4,
+					"alto": 0.3
+				},
+				{
+					"id": "diez_ruedas",
+					"nombre": "De diez bicicletas",
+					"ancho": 3.0,
+					"fondo": 0.4,
+					"alto": 0.3
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["cuarto_instalaciones", "garaje", "jardin", "patio"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["ganchos_bicis"],
+			"simbolo": {
+				"letra": "Sb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/soporte_bicis_suelo.png",
+				"descripcion": "Huella en planta de «Soporte de suelo para ruedas de bicicleta»: un peine: una barra con cuerpos que salen hacia delante de 1,50 por 0,40 metros, con la letra «Sb»."
+			}
+		},
+		{
+			"id": "columna_garaje_protegida",
+			"nombre": "Columna de garaje con protector de esquinas",
+			"categoria": "garaje",
+			"subcategoria": "columnas_y_suelo",
+			"etiquetas": ["columna de garaje", "pilar de garaje", "pilar con cantoneras", "protector de columna"],
+			"descripcion": "Pilar cuadrado o alargado de hormigón, forrado hasta la cintura con cantoneras de goma espuma. Abajo el golpe es blando; por encima de la cintura, hormigón áspero.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.4, 0.8],
+				"fondo": [0.25, 0.4, 1.0],
+				"alto": [2.2, 2.5, 3.5]
+			},
+			"variantes": [
+				{
+					"id": "cuadrada",
+					"nombre": "Cuadrada de 40",
+					"ancho": 0.4,
+					"fondo": 0.4,
+					"alto": 2.5
+				},
+				{
+					"id": "pantalla",
+					"nombre": "Alargada de 30 por 80",
+					"ancho": 0.3,
+					"fondo": 0.8,
+					"alto": 2.5
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["tope_rueda_plaza", "marca_plaza_garaje"],
+			"simbolo": {
+				"letra": "Cg",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna_garaje_protegida.png",
+				"descripcion": "Huella en planta de «Columna de garaje con protector de esquinas»: un rectángulo de 0,40 por 0,40 metros, con la letra «Cg»."
+			}
+		},
+		{
+			"id": "columna_garaje_redonda",
+			"nombre": "Columna redonda de garaje",
+			"categoria": "garaje",
+			"subcategoria": "columnas_y_suelo",
+			"etiquetas": ["columna redonda", "pilar redondo", "pilar circular de garaje"],
+			"descripcion": "Pilar redondo de hormigón liso, del suelo al techo. No tiene esquinas: se rodea con la mano sin perder el contacto.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.45, 0.8],
+				"fondo": [0.3, 0.45, 0.8],
+				"alto": [2.2, 2.5, 3.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cg",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna_garaje_redonda.png",
+				"descripcion": "Huella en planta de «Columna redonda de garaje»: un círculo de 0,45 por 0,45 metros, con la letra «Cg»."
+			}
+		},
+		{
+			"id": "rampa_garaje",
+			"nombre": "Rampa de garaje",
+			"categoria": "garaje",
+			"subcategoria": "columnas_y_suelo",
+			"etiquetas": ["rampa del garaje", "rampa de coches", "bajada al garaje", "rampa de acceso"],
+			"descripcion": "Tramo de rampa de hormigón rayado por donde suben y bajan los coches. La pendiente es fuerte y el suelo raspa; no hay acera. Si se oye un motor, hay que pegarse a la pared.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.8, 3.5, 6.0],
+				"fondo": [3.0, 6.0, 6.0],
+				"alto": [0.1, 0.3, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "hormigon",
+			"aviso": "Rampa de garaje: pendiente fuerte y pueden pasar coches.",
+			"funcion": "estructura",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "acera"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["rejilla_desague_garaje", "puerta_basculante_garaje"],
+			"simbolo": {
+				"letra": "Rg",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/rampa_garaje.png",
+				"descripcion": "Huella en planta de «Rampa de garaje»: un rectángulo de 3,50 por 6,00 metros, con la letra «Rg»."
+			}
+		},
+		{
+			"id": "rejilla_desague_garaje",
+			"nombre": "Rejilla de desagüe de garaje",
+			"categoria": "garaje",
+			"subcategoria": "columnas_y_suelo",
+			"etiquetas": ["rejilla de desagüe", "canaleta", "sumidero corrido", "rejilla del garaje"],
+			"descripcion": "Canal estrecho con rejilla de hierro que cruza el suelo de lado a lado, al pie de la rampa o ante la puerta. Suena a metal al pisarlo y la punta del bastón se cuela entre las barras.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 6.0],
+				"fondo": [0.12, 0.2, 0.3],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Rejilla: la punta del bastón se puede colar.",
+			"funcion": "referencia",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "patio"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["rampa_garaje"],
+			"simbolo": {
+				"letra": "Rd",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/rejilla_desague_garaje.png",
+				"descripcion": "Huella en planta de «Rejilla de desagüe de garaje»: un rectángulo de 3,00 por 0,20 metros, con la letra «Rd»."
+			}
+		},
+		{
+			"id": "baden_garaje",
+			"nombre": "Badén de garaje",
+			"categoria": "garaje",
+			"subcategoria": "columnas_y_suelo",
+			"etiquetas": ["badén", "resalto", "banda reductora", "guardia tumbado"],
+			"descripcion": "Lomo de goma atornillado al suelo de lado a lado del carril. Levanta tres dedos: el bastón lo nota y el pie tropieza si no se levanta.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 6.0],
+				"fondo": [0.3, 0.4, 0.9],
+				"alto": [0.03, 0.05, 0.07]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Badén.",
+			"funcion": "referencia",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "calzada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bg",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/baden_garaje.png",
+				"descripcion": "Huella en planta de «Badén de garaje»: un rectángulo de 3,00 por 0,40 metros, con la letra «Bg»."
+			}
+		},
+		{
+			"id": "mancha_aceite",
+			"nombre": "Mancha de aceite en el suelo del garaje",
+			"categoria": "garaje",
+			"subcategoria": "columnas_y_suelo",
+			"etiquetas": ["mancha de aceite", "aceite en el suelo", "suelo resbaladizo", "charco de aceite"],
+			"descripcion": "Mancha de aceite que ha dejado un coche en su plaza. No se nota con el bastón: el pie resbala de golpe. Huele a taller.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.1], [0.45, 0.0], [0.8, 0.12], [1.0, 0.4], [0.88, 0.7], [0.95, 0.95], [0.6, 1.0], [0.4, 0.82], [0.12, 0.9], [0.0, 0.55]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.8, 1.5],
+				"fondo": [0.3, 0.6, 1.2],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"aviso": "Suelo resbaladizo: mancha de aceite.",
+			"funcion": "trasto",
+			"lugares": ["comunidad", "aparcamiento", "taller"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo", "temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/mancha_aceite.png",
+				"descripcion": "Huella en planta de «Mancha de aceite en el suelo del garaje»: una mancha irregular en el suelo de 0,80 por 0,60 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "marca_plaza_garaje",
+			"nombre": "Marca de plaza de garaje",
+			"categoria": "garaje",
+			"subcategoria": "plazas",
+			"etiquetas": ["plaza de garaje", "plaza de aparcamiento", "líneas de la plaza", "plaza pintada"],
+			"descripcion": "Rectángulo pintado en el suelo que delimita una plaza. La pintura no se nota con el bastón ni con el pie: vacía se cruza sin darse cuenta. Sirve para repartir el garaje.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 2.4, 3.6],
+				"fondo": [2.2, 5.0, 5.5],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"variantes": [
+				{
+					"id": "normal",
+					"nombre": "Plaza normal",
+					"ancho": 2.4,
+					"fondo": 5.0,
+					"alto": 0.005
+				},
+				{
+					"id": "accesible",
+					"nombre": "Plaza accesible con franja",
+					"ancho": 3.6,
+					"fondo": 5.0,
+					"alto": 0.005
+				},
+				{
+					"id": "de_moto",
+					"nombre": "Plaza de moto",
+					"ancho": 1.2,
+					"fondo": 2.2,
+					"alto": 0.005
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "hormigon",
+			"funcion": "referencia",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["tope_rueda_plaza", "columna_garaje_protegida"],
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/marca_plaza_garaje.png",
+				"descripcion": "Huella en planta de «Marca de plaza de garaje»: un rectángulo de 2,40 por 5,00 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "tope_rueda_plaza",
+			"nombre": "Tope de rueda de plaza de garaje",
+			"categoria": "garaje",
+			"subcategoria": "plazas",
+			"etiquetas": ["tope de rueda", "tope de plaza", "tope de aparcamiento", "tope de goma"],
+			"descripcion": "Barra de goma dura atornillada al suelo al fondo de la plaza, para que el coche no toque la pared. Levanta un palmo escaso: con la plaza vacía es un tropezón seguro.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 1.65, 2.0],
+				"fondo": [0.12, 0.15, 0.2],
+				"alto": [0.08, 0.1, 0.15]
+			},
+			"variantes": [
+				{
+					"id": "corto",
+					"nombre": "Corto, para una rueda",
+					"ancho": 0.55,
+					"fondo": 0.15,
+					"alto": 0.1
+				},
+				{
+					"id": "largo",
+					"nombre": "Largo, para las dos ruedas",
+					"ancho": 1.8,
+					"fondo": 0.15,
+					"alto": 0.1
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["marca_plaza_garaje"],
+			"simbolo": {
+				"letra": "Tr",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/tope_rueda_plaza.png",
+				"descripcion": "Huella en planta de «Tope de rueda de plaza de garaje»: un rectángulo de 1,65 por 0,15 metros, con la letra «Tr»."
+			}
+		},
+		{
+			"id": "punto_recarga_pared",
+			"nombre": "Punto de recarga de pared de garaje",
+			"categoria": "garaje",
+			"subcategoria": "plazas",
+			"etiquetas": ["punto de recarga de pared", "cargador de coche eléctrico", "wallbox", "cargador del garaje"],
+			"descripcion": "Caja de plástico en la pared al fondo de la plaza, a la altura del pecho, con un cable grueso enrollado que cuelga y a veces cruza el suelo. Zumba cuando carga.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.4],
+				"fondo": [0.1, 0.15, 0.22],
+				"alto": [0.3, 0.4, 0.55]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.3,
+					"radio": 5,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "recargar",
+					"nombre": "Enchufar",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "transporte:bip_validacion.flac"
+				},
+				{
+					"id": "desenchufar",
+					"nombre": "Desenchufar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/punto_recarga_pared.png",
+				"descripcion": "Huella en planta de «Punto de recarga de pared de garaje»: un rectángulo de 0,25 por 0,15 metros, colgado a 1,00 metros del suelo, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "armario_sobre_capo",
+			"nombre": "Armario de plaza sobre el capó",
+			"categoria": "garaje",
+			"subcategoria": "plazas",
+			"etiquetas": ["armario de garaje", "armario sobre capó", "trastero de plaza", "baúl de garaje"],
+			"descripcion": "Armario de chapa al fondo de la plaza, levantado sobre dos patas laterales para que el morro del coche quepa debajo. Con la plaza vacía, el bastón pasa por debajo y el canto da en el pecho.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.6, 2.0, 2.4],
+				"fondo": [0.5, 0.8, 1.0],
+				"alto": [0.7, 0.9, 1.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.15,
+			"detectable_baston": false,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "As",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_sobre_capo.png",
+				"descripcion": "Huella en planta de «Armario de plaza sobre el capó»: un rectángulo de 2,00 por 0,80 metros, colgado a 1,15 metros del suelo, con la letra «As»."
+			}
+		},
+		{
+			"id": "trastero_jaula",
+			"nombre": "Trastero de jaula de malla en el garaje",
+			"categoria": "garaje",
+			"subcategoria": "plazas",
+			"etiquetas": ["trastero de jaula", "jaula del garaje", "trastero de malla", "jaula de almacenaje"],
+			"descripcion": "Jaula de malla metálica del suelo al techo, con puerta y candado, donde un vecino guarda sus cosas. La malla cede un poco y tintinea al tocarla; el bastón se cuela por los huecos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 2.0, 3.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [2.0, 2.2, 2.5]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:valla_obra.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:valla_obra.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Tj",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/trastero_jaula.png",
+				"descripcion": "Huella en planta de «Trastero de jaula de malla en el garaje»: un rectángulo de 2,00 por 1,50 metros, con la letra «Tj»."
+			}
+		},
+		{
+			"id": "puerta_basculante_garaje",
+			"nombre": "Puerta basculante de garaje",
+			"categoria": "garaje",
+			"subcategoria": "puertas_garaje",
+			"etiquetas": ["puerta del garaje", "puerta basculante", "portón del garaje", "puerta de cochera"],
+			"descripcion": "Puerta grande de chapa que se abre hacia arriba con un motor. Al abrir, la hoja sale hacia fuera a la altura del pecho antes de subir. Traquetea, tarda unos segundos y se cierra sola.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.4, 2.8, 5.0],
+				"fondo": [0.06, 0.1, 0.2],
+				"alto": [2.0, 2.2, 2.6]
+			},
+			"variantes": [
+				{
+					"id": "un_coche",
+					"nombre": "De un coche",
+					"ancho": 2.8,
+					"fondo": 0.1,
+					"alto": 2.2
+				},
+				{
+					"id": "doble",
+					"nombre": "De doble carril",
+					"ancho": 5.0,
+					"fondo": 0.1,
+					"alto": 2.3
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_garaje_basculante.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_garaje_basculante.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "abierto",
+				"segundos": 30,
+				"al_terminar": "cerrado",
+				"sonido_al_terminar": "sonidos/puerta_garaje_basculante.flac"
+			},
+			"aviso": "Puerta de garaje: pueden salir coches.",
+			"funcion": "barrera",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["poste_pulsador_salida", "aviso_salida_vehiculos", "rampa_garaje"],
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_basculante_garaje.png",
+				"descripcion": "Huella en planta de «Puerta basculante de garaje»: un rectángulo de 2,80 por 0,10 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "poste_pulsador_salida",
+			"nombre": "Poste con pulsador de salida del garaje",
+			"categoria": "garaje",
+			"subcategoria": "puertas_garaje",
+			"etiquetas": ["pulsador de salida", "poste de la llave", "mando de la puerta del garaje", "pulsador del garaje"],
+			"descripcion": "Poste delgado de metal a un lado del carril, antes de la puerta, con una llave y un pulsador a la altura de la ventanilla de un coche. Al pulsar se abre la puerta grande.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.15, 0.25],
+				"fondo": [0.1, 0.15, 0.25],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "hogar:interruptor.flac"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_basculante_garaje"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_pulsador_salida.png",
+				"descripcion": "Huella en planta de «Poste con pulsador de salida del garaje»: un rectángulo de 0,15 por 0,15 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "aviso_salida_vehiculos",
+			"nombre": "Luz y sirena de salida de vehículos",
+			"categoria": "garaje",
+			"subcategoria": "puertas_garaje",
+			"etiquetas": ["aviso de salida de vehículos", "sirena del garaje", "luz del garaje", "señal acústica de garaje"],
+			"descripcion": "Caja pequeña en la fachada, sobre la puerta del garaje, que pita y destella cuando la puerta se mueve. Queda por encima de la cabeza: no estorba, pero avisa de que va a salir un coche.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.2, 0.3],
+				"fondo": [0.1, 0.15, 0.25],
+				"alto": [0.15, 0.25, 0.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": false,
+			"altura_base": 2.3,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/aviso_garaje_pitido.flac",
+					"volumen": 0.5,
+					"radio": 14,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 20,
+				"al_terminar": "apagado"
+			},
+			"funcion": "senalizacion",
+			"lugares": ["comunidad", "aparcamiento", "calle"],
+			"estancias": ["garaje", "acera"],
+			"obstaculo": "aereo",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_basculante_garaje"],
+			"simbolo": {
+				"letra": "As",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/aviso_salida_vehiculos.png",
+				"descripcion": "Huella en planta de «Luz y sirena de salida de vehículos»: un rectángulo de 0,20 por 0,15 metros, colgado a 2,30 metros del suelo, con la letra «As»."
+			}
+		},
+		{
+			"id": "puerta_cortafuegos",
+			"nombre": "Puerta cortafuegos",
+			"categoria": "garaje",
+			"subcategoria": "puertas_garaje",
+			"etiquetas": ["puerta cortafuegos", "puerta de chapa", "puerta resistente al fuego", "puerta del garaje a la escalera"],
+			"descripcion": "Puerta de chapa gruesa, lisa y fría, con una manilla dura y un muelle fuerte. Hay que tirar o empujar con ganas y se cierra sola de un portazo que retumba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.1],
+				"fondo": [0.05, 0.06, 0.08],
+				"alto": [2.0, 2.1, 2.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "comun:puerta_pesada_muelle.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "abierto",
+				"segundos": 6,
+				"al_terminar": "cerrado",
+				"sonido_al_terminar": "comun:puerta_pesada_muelle.flac"
+			},
+			"funcion": "barrera",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "rellano", "cuarto_instalaciones", "trastero"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["vestibulo_independencia"],
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_cortafuegos.png",
+				"descripcion": "Huella en planta de «Puerta cortafuegos»: un rectángulo de 0,90 por 0,06 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "vestibulo_independencia",
+			"nombre": "Vestíbulo de independencia",
+			"categoria": "garaje",
+			"subcategoria": "puertas_garaje",
+			"etiquetas": ["vestíbulo de independencia", "vestíbulo previo", "esclusa del garaje", "entre dos puertas"],
+			"descripcion": "Cuartito vacío entre dos puertas cortafuegos, entre el garaje y la escalera. Cabe poco más que una persona y suena encerrado: hay que cerrar la primera puerta para abrir la segunda con comodidad.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.5],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [0.005, 0.01, 0.01]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "baldosa",
+			"aviso": "Vestíbulo entre dos puertas pesadas.",
+			"funcion": "referencia",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "rellano"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_cortafuegos"],
+			"simbolo": {
+				"letra": "Vi",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/vestibulo_independencia.png",
+				"descripcion": "Huella en planta de «Vestíbulo de independencia»: un rectángulo de 1,50 por 1,50 metros, con la letra «Vi»."
+			}
+		},
+		{
+			"id": "tuberias_bajas_garaje",
+			"nombre": "Tuberías bajas colgadas del techo del garaje",
+			"categoria": "garaje",
+			"subcategoria": "techo_y_ventilacion",
+			"etiquetas": ["tuberías bajas", "tubos del techo", "colector colgado", "obstáculo en altura"],
+			"descripcion": "Haz de tuberías que cruza el paso colgado del techo, más bajo que el resto. Queda a la altura de la frente de una persona alta y el bastón no lo encuentra. A veces gotea.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 6.0],
+				"fondo": [0.1, 0.3, 0.6],
+				"alto": [0.1, 0.2, 0.4]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 1.75,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"aviso": "Cuidado con la cabeza: tuberías bajas.",
+			"funcion": "estructura",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "cuarto_instalaciones", "trastero"],
+			"obstaculo": "cabeza",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Tb",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/tuberias_bajas_garaje.png",
+				"descripcion": "Huella en planta de «Tuberías bajas colgadas del techo del garaje»: un rectángulo de 3,00 por 0,30 metros, colgado a 1,75 metros del suelo, con la letra «Tb»."
+			}
+		},
+		{
+			"id": "conducto_ventilacion_bajo",
+			"nombre": "Conducto de ventilación de chapa bajo",
+			"categoria": "garaje",
+			"subcategoria": "techo_y_ventilacion",
+			"etiquetas": ["conducto de ventilación", "conducto de chapa", "tubo de extracción", "obstáculo en altura"],
+			"descripcion": "Conducto ancho de chapa colgado del techo, con rejillas por las que sopla o aspira aire. Más bajo que las vigas: suena hueco, como un tambor, si se toca con la mano levantada.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 6.0],
+				"fondo": [0.4, 0.6, 1.2],
+				"alto": [0.25, 0.4, 0.6]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 1.85,
+			"detectable_baston": false,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.2,
+					"radio": 6
+				}
+			},
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"relacionados": ["extractor_garaje"],
+			"simbolo": {
+				"letra": "Cv",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/conducto_ventilacion_bajo.png",
+				"descripcion": "Huella en planta de «Conducto de ventilación de chapa bajo»: un rectángulo de 3,00 por 0,60 metros, colgado a 1,85 metros del suelo, con la letra «Cv»."
+			}
+		},
+		{
+			"id": "extractor_garaje",
+			"nombre": "Extractor de humos del garaje",
+			"categoria": "garaje",
+			"subcategoria": "techo_y_ventilacion",
+			"etiquetas": ["extractor del garaje", "ventilador de extracción", "caja de ventilación", "extractor de humos"],
+			"descripcion": "Caja grande de chapa con un ventilador dentro, en un rincón o tras una reja. Ruge tanto que tapa los demás sonidos: sirve de referencia, pero cerca no se oyen los coches.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.0, 1.5],
+				"fondo": [0.6, 1.0, 1.5],
+				"alto": [0.7, 1.2, 2.0]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/extractor_garaje.flac",
+					"volumen": 0.55,
+					"radio": 15
+				}
+			},
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["conducto_ventilacion_bajo"],
+			"simbolo": {
+				"letra": "Eg",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/extractor_garaje.png",
+				"descripcion": "Huella en planta de «Extractor de humos del garaje»: un rectángulo de 1,00 por 1,00 metros, con la letra «Eg»."
+			}
+		},
+		{
+			"id": "espejo_convexo_garaje",
+			"nombre": "Espejo convexo de garaje",
+			"categoria": "garaje",
+			"subcategoria": "techo_y_ventilacion",
+			"etiquetas": ["espejo convexo", "espejo de garaje", "espejo de cruce", "obstáculo en altura"],
+			"descripcion": "Espejo redondo y abombado en un brazo, sujeto a la pared o a una columna en los cruces. Queda a la altura de la cabeza y sobresale: el bastón no lo detecta.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.6, 0.8],
+				"fondo": [0.2, 0.3, 0.45],
+				"alto": [0.45, 0.6, 0.8]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 1.8,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["comunidad", "aparcamiento", "calle"],
+			"estancias": ["garaje", "acera"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/espejo_convexo_garaje.png",
+				"descripcion": "Huella en planta de «Espejo convexo de garaje»: un óvalo de 0,60 por 0,30 metros, colgado a 1,80 metros del suelo, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "boca_incendio_equipada",
+			"nombre": "Boca de incendio equipada",
+			"categoria": "garaje",
+			"subcategoria": "techo_y_ventilacion",
+			"etiquetas": ["boca de incendio", "manguera de incendios", "armario de la manguera", "BIE"],
+			"descripcion": "Armario de chapa con puerta de cristal y una manguera enrollada dentro, colgado de la pared a la altura de la cintura. Sobresale un palmo y el bastón no lo toca.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.7, 0.8],
+				"fondo": [0.16, 0.22, 0.3],
+				"alto": [0.5, 0.65, 0.85]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["garaje", "rellano", "portal"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["extintor_carro"],
+			"simbolo": {
+				"letra": "Bi",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/boca_incendio_equipada.png",
+				"descripcion": "Huella en planta de «Boca de incendio equipada»: un rectángulo de 0,70 por 0,22 metros, colgado a 0,90 metros del suelo, con la letra «Bi»."
+			}
+		},
+		{
+			"id": "extintor_carro",
+			"nombre": "Extintor de carro",
+			"categoria": "garaje",
+			"subcategoria": "techo_y_ventilacion",
+			"etiquetas": ["extintor de carro", "extintor con ruedas", "extintor grande", "carro extintor"],
+			"descripcion": "Extintor grande sobre dos ruedas, con manguera y un asa para arrastrarlo. Llega a la cintura, es de acero y suena lleno; está de pie junto a una columna o a la pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.45, 0.6],
+				"fondo": [0.35, 0.5, 0.65],
+				"alto": [0.85, 1.0, 1.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["comunidad", "aparcamiento", "taller"],
+			"estancias": ["garaje", "cuarto_instalaciones"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/extintor_carro.png",
+				"descripcion": "Huella en planta de «Extintor de carro»: un círculo de 0,45 por 0,50 metros, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "estanteria_metalica_trastero",
+			"nombre": "Estantería metálica de trastero",
+			"categoria": "trastero",
+			"subcategoria": "guardado",
+			"etiquetas": ["estantería metálica", "estantería de ángulo ranurado", "baldas del trastero", "estantería de almacenaje"],
+			"descripcion": "Estantería de ángulos de acero atornillados, con baldas de chapa llenas de cajas. Los cantos son vivos y las cosas sobresalen de las baldas a distintas alturas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.5],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [1.5, 2.0, 2.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero", "garaje", "cuarto_instalaciones"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cajas_carton_apiladas"],
+			"simbolo": {
+				"letra": "Em",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/estanteria_metalica_trastero.png",
+				"descripcion": "Huella en planta de «Estantería metálica de trastero»: un rectángulo de 0,90 por 0,40 metros, con la letra «Em»."
+			}
+		},
+		{
+			"id": "cajas_carton_apiladas",
+			"nombre": "Cajas de cartón apiladas",
+			"categoria": "trastero",
+			"subcategoria": "guardado",
+			"etiquetas": ["cajas apiladas", "cajas de mudanza", "pila de cajas", "cajas de cartón"],
+			"descripcion": "Torre de cajas de mudanza, una sobre otra, no siempre bien alineadas. Suenan huecas o llenas; si se empuja la de abajo, la torre se tambalea.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 1.2],
+				"fondo": [0.4, 0.5, 0.8],
+				"alto": [0.35, 1.2, 1.9]
+			},
+			"variantes": [
+				{
+					"id": "dos_cajas",
+					"nombre": "Dos cajas",
+					"ancho": 0.6,
+					"fondo": 0.4,
+					"alto": 0.7
+				},
+				{
+					"id": "torre",
+					"nombre": "Torre de cuatro",
+					"ancho": 0.6,
+					"fondo": 0.5,
+					"alto": 1.4
+				}
+			],
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero", "garaje"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/cajas_carton_apiladas.png",
+				"descripcion": "Huella en planta de «Cajas de cartón apiladas»: un rectángulo de 0,60 por 0,50 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "maletas_apiladas",
+			"nombre": "Maletas apiladas",
+			"categoria": "trastero",
+			"subcategoria": "guardado",
+			"etiquetas": ["maletas apiladas", "maletas guardadas", "pila de maletas"],
+			"descripcion": "Dos o tres maletas rígidas tumbadas una encima de otra. Lisas, con ruedas y asas que sobresalen por un lado; suenan huecas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 0.8],
+				"fondo": [0.35, 0.45, 0.55],
+				"alto": [0.3, 0.75, 1.2]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/maletas_apiladas.png",
+				"descripcion": "Huella en planta de «Maletas apiladas»: un rectángulo de 0,70 por 0,45 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "bolsas_ropa_guardada",
+			"nombre": "Bolsas de ropa guardada",
+			"categoria": "trastero",
+			"subcategoria": "guardado",
+			"etiquetas": ["bolsas de ropa", "bolsas de rafia", "ropa de temporada", "fardos"],
+			"descripcion": "Bolsas grandes de rafia llenas de ropa y mantas, amontonadas en el suelo. Blandas: ceden al tocarlas y el bastón se hunde sin hacer ruido.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.974, 0.764], [0.897, 0.897], [0.764, 0.974], [0.5, 1.0], [0.236, 0.974], [0.103, 0.897], [0.026, 0.764], [0.0, 0.5], [0.026, 0.236], [0.103, 0.103], [0.236, 0.026], [0.5, 0.0], [0.764, 0.026], [0.897, 0.103], [0.974, 0.236]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 1.2],
+				"fondo": [0.4, 0.5, 0.8],
+				"alto": [0.3, 0.5, 0.8]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Br",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/bolsas_ropa_guardada.png",
+				"descripcion": "Huella en planta de «Bolsas de ropa guardada»: un rectángulo de esquinas redondeadas de 0,70 por 0,50 metros, con la letra «Br»."
+			}
+		},
+		{
+			"id": "neumaticos_apilados",
+			"nombre": "Neumáticos apilados",
+			"categoria": "trastero",
+			"subcategoria": "guardado",
+			"etiquetas": ["neumáticos", "ruedas de invierno", "ruedas apiladas", "cubiertas"],
+			"descripcion": "Columna de cuatro neumáticos de coche tumbados. Goma con dibujo por fuera y un hueco en el centro; huele a caucho y no suena al golpearla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.65, 0.75],
+				"fondo": [0.55, 0.65, 0.75],
+				"alto": [0.2, 0.85, 1.1]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad", "taller"],
+			"estancias": ["trastero", "garaje"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Na",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/neumaticos_apilados.png",
+				"descripcion": "Huella en planta de «Neumáticos apilados»: un círculo de 0,65 por 0,65 metros, con la letra «Na»."
+			}
+		},
+		{
+			"id": "muebles_tapados_sabana",
+			"nombre": "Muebles viejos tapados con una sábana",
+			"categoria": "trastero",
+			"subcategoria": "guardado",
+			"etiquetas": ["muebles viejos", "muebles tapados", "muebles guardados", "trastos con sábana"],
+			"descripcion": "Bulto grande e irregular cubierto con una tela: debajo hay sillas apiladas, una cómoda, un somier. Blando al primer toque y duro debajo; no se adivina la forma.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.22, 0.0], [0.78, 0.0], [1.0, 0.22], [1.0, 0.78], [0.78, 1.0], [0.22, 1.0], [0.0, 0.78], [0.0, 0.22]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.5],
+				"fondo": [0.5, 0.8, 1.2],
+				"alto": [0.8, 1.2, 1.8]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/muebles_tapados_sabana.png",
+				"descripcion": "Huella en planta de «Muebles viejos tapados con una sábana»: un rectángulo con las esquinas cortadas de 1,50 por 0,80 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "botes_pintura_suelo",
+			"nombre": "Botes de pintura en el suelo",
+			"categoria": "trastero",
+			"subcategoria": "guardado",
+			"etiquetas": ["botes de pintura", "latas de pintura", "garrafas", "botes en el suelo"],
+			"descripcion": "Media docena de botes y garrafas en el suelo, junto a la pared. Bajos y de hojalata: suenan al tocarlos con el bastón y ruedan si se vuelcan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.6, 1.0],
+				"fondo": [0.2, 0.3, 0.5],
+				"alto": [0.15, 0.25, 0.4]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero", "garaje"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/botes_pintura_suelo.png",
+				"descripcion": "Huella en planta de «Botes de pintura en el suelo»: un rectángulo de 0,60 por 0,30 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "arbol_navidad_caja",
+			"nombre": "Árbol de Navidad en su caja",
+			"categoria": "trastero",
+			"subcategoria": "apoyado_y_colgado",
+			"etiquetas": ["árbol de Navidad", "caja del árbol", "adornos de Navidad", "caja alargada"],
+			"descripcion": "Caja de cartón alargada, de pie en un rincón, con el árbol de Navidad desmontado dentro. Ligera: se cae de lado al menor empujón, y dentro tintinean los adornos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.45],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [1.0, 1.3, 1.8]
+			},
+			"colocacion": ["esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "hogar:juguetes.flac"
+			},
+			"contenedor": true,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "An",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/arbol_navidad_caja.png",
+				"descripcion": "Huella en planta de «Árbol de Navidad en su caja»: un rectángulo de 0,30 por 0,30 metros, con la letra «An»."
+			}
+		},
+		{
+			"id": "escalera_apoyada",
+			"nombre": "Escalera de mano apoyada en la pared",
+			"categoria": "trastero",
+			"subcategoria": "apoyado_y_colgado",
+			"etiquetas": ["escalera apoyada", "escalera de aluminio", "escalera larga", "escalera de mano"],
+			"descripcion": "Escalera de aluminio apoyada en la pared, con las patas separadas un paso. El bastón encuentra las patas; los largueros suben en diagonal y resbalan de lado si se empujan.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.38, 0.45, 0.55],
+				"fondo": [0.5, 0.8, 1.2],
+				"alto": [1.8, 2.5, 3.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["comunidad", "obra"],
+			"estancias": ["trastero", "garaje", "patio"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ea",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_apoyada.png",
+				"descripcion": "Huella en planta de «Escalera de mano apoyada en la pared»: un rectángulo de 0,45 por 0,80 metros, con la letra «Ea»."
+			}
+		},
+		{
+			"id": "colchon_de_pie",
+			"nombre": "Colchón de pie apoyado en la pared",
+			"categoria": "trastero",
+			"subcategoria": "apoyado_y_colgado",
+			"etiquetas": ["colchón guardado", "colchón de canto", "colchón viejo"],
+			"descripcion": "Colchón guardado de canto contra la pared. Alto como una persona y blando: se vence hacia ti si lo tocas por arriba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.35, 1.6],
+				"fondo": [0.18, 0.25, 0.35],
+				"alto": [1.8, 1.9, 2.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero", "portal"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cd",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/colchon_de_pie.png",
+				"descripcion": "Huella en planta de «Colchón de pie apoyado en la pared»: un rectángulo de 1,35 por 0,25 metros, con la letra «Cd»."
+			}
+		},
+		{
+			"id": "esquis_sombrilla_rincon",
+			"nombre": "Esquís y sombrilla apoyados en el rincón",
+			"categoria": "trastero",
+			"subcategoria": "apoyado_y_colgado",
+			"etiquetas": ["esquís", "sombrilla de playa", "cañas de pescar", "cosas largas en el rincón"],
+			"descripcion": "Cosas largas y finas de pie en un rincón: unos esquís, una sombrilla de playa, cañas de pescar. Se escurren y caen cruzadas en el suelo en cuanto se rozan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.966, 0.259], [0.866, 0.5], [0.707, 0.707], [0.5, 0.866], [0.259, 0.966], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.2, 0.3, 0.45],
+				"fondo": [0.2, 0.3, 0.45],
+				"alto": [1.5, 1.9, 2.3]
+			},
+			"colocacion": ["esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Es",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/esquis_sombrilla_rincon.png",
+				"descripcion": "Huella en planta de «Esquís y sombrilla apoyados en el rincón»: un cuarto de círculo, con el rincón atrás a la izquierda de 0,30 por 0,30 metros, con la letra «Es»."
+			}
+		},
+		{
+			"id": "bici_colgada_techo",
+			"nombre": "Bicicleta colgada del techo",
+			"categoria": "trastero",
+			"subcategoria": "apoyado_y_colgado",
+			"etiquetas": ["bicicleta colgada del techo", "bici en el techo", "obstáculo en altura"],
+			"descripcion": "Bicicleta colgada de dos ganchos del techo, tumbada sobre el paso. Las ruedas y los pedales quedan a la altura de la cabeza y el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.6, 1.75, 1.9],
+				"fondo": [0.45, 0.6, 0.7],
+				"alto": [0.5, 0.7, 1.0]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"aviso": "Cuidado con la cabeza: bicicleta colgada.",
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero", "garaje"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/bici_colgada_techo.png",
+				"descripcion": "Huella en planta de «Bicicleta colgada del techo»: un rectángulo de 1,75 por 0,60 metros, colgado a 1,50 metros del suelo, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "tirador_luz_trastero",
+			"nombre": "Tirador de la luz del trastero",
+			"categoria": "trastero",
+			"subcategoria": "apoyado_y_colgado",
+			"etiquetas": ["tirador de la luz", "cordón de la bombilla", "cadenita de la luz", "interruptor de cordón"],
+			"descripcion": "Cordón que cuelga de la bombilla del techo, con una bolita en la punta. Roza la cara al entrar: se busca con la mano levantada y se tira para encender.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.03, 0.04, 0.06],
+				"fondo": [0.03, 0.04, 0.06],
+				"alto": [0.3, 0.5, 0.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["comunidad"],
+			"estancias": ["trastero", "cuarto_instalaciones"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tl",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/tirador_luz_trastero.png",
+				"descripcion": "Huella en planta de «Tirador de la luz del trastero»: un círculo de 0,04 por 0,04 metros, colgado a 1,50 metros del suelo, con la letra «Tl»."
+			}
+		},
+		{
+			"id": "cuerdas_tender_azotea",
+			"nombre": "Cuerdas de tender de la azotea",
+			"categoria": "azotea",
+			"subcategoria": "tendederos",
+			"etiquetas": ["cuerdas de tender", "tendedero de cuerdas", "cuerdas de la ropa", "obstáculo en altura"],
+			"descripcion": "Varias cuerdas paralelas tensadas de poste a poste, a la altura del cuello o de la cara. Vacías no se oyen ni se tocan con el bastón: se encuentran con la garganta.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 4.0, 8.0],
+				"fondo": [0.4, 1.2, 2.5],
+				"alto": [0.05, 0.1, 0.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"aviso": "Cuerdas de tender a la altura del cuello.",
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea", "patio"],
+			"obstaculo": "cabeza",
+			"frecuencia": "muy_comun",
+			"relacionados": ["poste_tendedero", "sabanas_tendidas"],
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuerdas_tender_azotea.png",
+				"descripcion": "Huella en planta de «Cuerdas de tender de la azotea»: un rectángulo de 4,00 por 1,20 metros, colgado a 1,50 metros del suelo, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "poste_tendedero",
+			"nombre": "Poste de tendedero",
+			"categoria": "azotea",
+			"subcategoria": "tendederos",
+			"etiquetas": ["poste del tendedero", "poste de las cuerdas", "palo de tender", "poste en te"],
+			"descripcion": "Poste de tubo de hierro del que salen las cuerdas de tender, con un travesaño arriba. Encontrarlo con el bastón avisa de que las cuerdas empiezan ahí.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.04, 0.06, 0.12],
+				"fondo": [0.04, 0.06, 0.12],
+				"alto": [1.7, 1.9, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea", "patio", "jardin"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["cuerdas_tender_azotea"],
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_tendedero.png",
+				"descripcion": "Huella en planta de «Poste de tendedero»: un círculo de 0,06 por 0,06 metros, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "sabanas_tendidas",
+			"nombre": "Sábanas tendidas",
+			"categoria": "azotea",
+			"subcategoria": "tendederos",
+			"etiquetas": ["sábanas tendidas", "ropa tendida", "colada", "ropa en la cuerda"],
+			"descripcion": "Sábanas colgadas de la cuerda, del cuello a las rodillas. Húmedas y blandas: se apartan con la mano y se pasa, pero tapan los sonidos y chasquean con el viento.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 2.0, 2.6],
+				"fondo": [0.03, 0.05, 0.1],
+				"alto": [0.6, 1.0, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.6,
+			"detectable_baston": false,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"propio": {
+					"sonido": "juego:bandera.flac",
+					"volumen": 0.3,
+					"radio": 6
+				}
+			},
+			"contenedor": false,
+			"aviso": "Ropa tendida: apártala con la mano.",
+			"funcion": "trasto",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea", "patio", "jardin"],
+			"obstaculo": "voladizo",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"relacionados": ["cuerdas_tender_azotea"],
+			"simbolo": {
+				"letra": "St",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/sabanas_tendidas.png",
+				"descripcion": "Huella en planta de «Sábanas tendidas»: un rectángulo de 2,00 por 0,05 metros, colgado a 0,60 metros del suelo, con la letra «St»."
+			}
+		},
+		{
+			"id": "tendedero_aspa",
+			"nombre": "Tendedero de pie de aspa",
+			"categoria": "azotea",
+			"subcategoria": "tendederos",
+			"etiquetas": ["tendedero de aspa", "tendedero de paraguas", "tendedero giratorio", "obstáculo en altura"],
+			"descripcion": "Tendedero como un paraguas abierto del revés: un mástil clavado en el suelo y cuatro brazos con cuerdas a la altura de la cara. Gira al empujarlo; el bastón solo encuentra el mástil del centro.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 0.0], [1.0, 0.5], [0.5, 1.0], [0.0, 0.5]]
+			},
+			"medidas": {
+				"ancho": [1.4, 1.8, 2.6],
+				"fondo": [1.4, 1.8, 2.6],
+				"alto": [0.2, 0.4, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.4,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar",
+					"sonido": "comun:polea_tendedero.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad", "jardin", "vivienda"],
+			"estancias": ["azotea", "patio", "jardin"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/tendedero_aspa.png",
+				"descripcion": "Huella en planta de «Tendedero de pie de aspa»: un rombo de 1,80 por 1,80 metros, colgado a 1,40 metros del suelo, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "tendedero_ventana_bajo",
+			"nombre": "Tendedero de ventana de planta baja",
+			"categoria": "azotea",
+			"subcategoria": "patio_de_luces",
+			"etiquetas": ["tendedero de ventana", "tendedero de varillas", "tendedero exterior", "obstáculo en altura"],
+			"descripcion": "Bastidor de varillas de hierro que sale de una ventana baja hacia el patio. Queda a la altura del pecho, con las puntas hacia fuera, y el bastón pasa por debajo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.2],
+				"fondo": [0.4, 0.6, 0.8],
+				"alto": [0.05, 0.05, 0.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad", "calle"],
+			"estancias": ["patio", "acera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tv",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/tendedero_ventana_bajo.png",
+				"descripcion": "Huella en planta de «Tendedero de ventana de planta baja»: un rectángulo de 1,50 por 0,60 metros, colgado a 1,20 metros del suelo, con la letra «Tv»."
+			}
+		},
+		{
+			"id": "cuerdas_poleas_patio",
+			"nombre": "Cuerdas de tender con poleas entre ventanas",
+			"categoria": "azotea",
+			"subcategoria": "patio_de_luces",
+			"etiquetas": ["cuerdas con poleas", "tendedero de patio", "cuerdas del patio de luces", "garruchas"],
+			"descripcion": "Cuerdas que cruzan el patio de luces de ventana a ventana, por encima de la cabeza. No estorban, pero la ropa gotea y moja el suelo de debajo. Las poleas chirrían cuando un vecino tiende.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 6.0],
+				"fondo": [0.3, 0.6, 1.5],
+				"alto": [0.05, 0.1, 0.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 2.3,
+			"detectable_baston": false,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"uso": "comun:polea_tendedero.flac"
+			},
+			"acciones": [
+				{
+					"id": "tirar_cuerda",
+					"nombre": "Tirar de la cuerda",
+					"sonido": "comun:polea_tendedero.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["patio"],
+			"obstaculo": "aereo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuerdas_poleas_patio.png",
+				"descripcion": "Huella en planta de «Cuerdas de tender con poleas entre ventanas»: un rectángulo de 3,00 por 0,60 metros, colgado a 2,30 metros del suelo, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "sumidero_patio",
+			"nombre": "Sumidero de patio",
+			"categoria": "azotea",
+			"subcategoria": "patio_de_luces",
+			"etiquetas": ["sumidero", "desagüe del patio", "rejilla del sumidero", "sifón del patio"],
+			"descripcion": "Rejilla pequeña de hierro en el punto más bajo del patio. El suelo se inclina hacia ella desde todos los lados: notarlo bajo los pies dice dónde está el centro.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.2, 0.3],
+				"fondo": [0.12, 0.2, 0.3],
+				"alto": [0.005, 0.01, 0.02]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"funcion": "referencia",
+			"lugares": ["comunidad"],
+			"estancias": ["patio", "azotea", "cuarto_instalaciones"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Sp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/sumidero_patio.png",
+				"descripcion": "Huella en planta de «Sumidero de patio»: un rectángulo de 0,20 por 0,20 metros, con la letra «Sp»."
+			}
+		},
+		{
+			"id": "grifo_patio_manguera",
+			"nombre": "Grifo de patio con manguera enrollada",
+			"categoria": "azotea",
+			"subcategoria": "patio_de_luces",
+			"etiquetas": ["grifo del patio", "manguera enrollada", "grifo de riego", "grifo de jardín"],
+			"descripcion": "Grifo en la pared a la altura de la rodilla, con una manguera enrollada en un soporte o en el suelo. Debajo suele haber un charco; con el grifo abierto se oye el chorro.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.038, 0.383], [0.146, 0.707], [0.309, 0.924], [0.5, 1.0], [0.691, 0.924], [0.854, 0.707], [0.962, 0.383], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.35, 0.5, 0.7],
+				"fondo": [0.25, 0.4, 0.6],
+				"alto": [0.4, 0.8, 1.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.45,
+					"radio": 6,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["comunidad", "jardin"],
+			"estancias": ["patio", "jardin", "azotea", "garaje"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["manguera_extendida"],
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/grifo_patio_manguera.png",
+				"descripcion": "Huella en planta de «Grifo de patio con manguera enrollada»: un semicírculo, recto por detrás y redondo por delante de 0,50 por 0,40 metros, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "manguera_extendida",
+			"nombre": "Manguera extendida por el suelo",
+			"categoria": "azotea",
+			"subcategoria": "patio_de_luces",
+			"etiquetas": ["manguera en el suelo", "manguera de riego", "goma de regar"],
+			"descripcion": "Manguera de goma que serpentea por el suelo desde el grifo. Gruesa como dos dedos: el bastón salta sobre ella, el pie se engancha y el suelo alrededor está mojado.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.25, 0.0], [0.5, 0.45], [0.75, 0.7], [1.0, 0.7], [1.0, 1.0], [0.7, 1.0], [0.45, 0.75], [0.2, 0.3], [0.0, 0.3]]
+			},
+			"medidas": {
+				"ancho": [1.5, 4.0, 8.0],
+				"fondo": [0.3, 0.8, 2.0],
+				"alto": [0.02, 0.03, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Manguera en el suelo.",
+			"funcion": "trasto",
+			"lugares": ["comunidad", "jardin"],
+			"estancias": ["patio", "jardin", "azotea", "garaje"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["temporal", "resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["grifo_patio_manguera"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/manguera_extendida.png",
+				"descripcion": "Huella en planta de «Manguera extendida por el suelo»: una banda que serpentea de un lado a otro de 4,00 por 0,80 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "pila_lavar_patio",
+			"nombre": "Pila de lavar de patio",
+			"categoria": "azotea",
+			"subcategoria": "patio_de_luces",
+			"etiquetas": ["pila de lavar", "lavadero de piedra", "pilón de lavar", "pila del patio"],
+			"descripcion": "Pila de piedra o de cemento con el frente inclinado y estriado para restregar la ropa, sobre dos muretes. A la altura de la cadera; debajo queda hueco.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.7, 1.2],
+				"fondo": [0.45, 0.55, 0.7],
+				"alto": [0.75, 0.85, 0.9]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.4,
+					"radio": 5,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": true,
+			"funcion": "sanitario",
+			"lugares": ["comunidad", "vivienda"],
+			"estancias": ["patio", "azotea", "lavadero"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/pila_lavar_patio.png",
+				"descripcion": "Huella en planta de «Pila de lavar de patio»: un rectángulo de 0,70 por 0,55 metros, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "murete_azotea",
+			"nombre": "Murete de azotea",
+			"categoria": "azotea",
+			"subcategoria": "cubierta",
+			"etiquetas": ["murete", "peto de la azotea", "antepecho", "pretil"],
+			"descripcion": "Peto de ladrillo que cierra el borde de la azotea o separa una azotea de la del vecino. Si llega al pecho, protege; si solo llega a la rodilla, detrás puede haber caída.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 8.0],
+				"fondo": [0.12, 0.25, 0.4],
+				"alto": [0.4, 1.0, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "bajo",
+					"nombre": "Bajo, a la rodilla",
+					"ancho": 3.0,
+					"fondo": 0.25,
+					"alto": 0.45
+				},
+				{
+					"id": "antepecho",
+					"nombre": "Antepecho, al pecho",
+					"ancho": 3.0,
+					"fondo": 0.25,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ladrillo",
+			"sonidos": {
+				"golpe": "golpe/ladrillo"
+			},
+			"contenedor": false,
+			"aviso": "Borde de la azotea.",
+			"funcion": "barrera",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea", "terraza"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/murete_azotea.png",
+				"descripcion": "Huella en planta de «Murete de azotea»: un rectángulo de 3,00 por 0,25 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "claraboya_azotea",
+			"nombre": "Claraboya saliente en el suelo de la azotea",
+			"categoria": "azotea",
+			"subcategoria": "cubierta",
+			"etiquetas": ["claraboya", "lucernario", "tragaluz", "cúpula de la escalera"],
+			"descripcion": "Cúpula de plástico sobre un zócalo bajo, en mitad de la azotea: da luz a la escalera. Levanta un palmo o dos, suena hueca y no aguanta el peso de una persona.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.6, 1.0, 2.0],
+				"fondo": [0.6, 1.0, 2.0],
+				"alto": [0.2, 0.35, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Claraboya: no la pises.",
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel", "transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/claraboya_azotea.png",
+				"descripcion": "Huella en planta de «Claraboya saliente en el suelo de la azotea»: un rectángulo de esquinas redondeadas de 1,00 por 1,00 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "caseton_azotea",
+			"nombre": "Casetón de la escalera",
+			"categoria": "azotea",
+			"subcategoria": "cubierta",
+			"etiquetas": ["casetón", "torreón de la escalera", "caseta del ascensor", "cuarto de máquinas"],
+			"descripcion": "Caseta de ladrillo por la que la escalera sale a la azotea, con el cuarto de máquinas del ascensor encima. Es la referencia grande de la azotea: de ahí se sale y ahí se vuelve.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.2, 3.0, 5.0],
+				"fondo": [2.2, 3.5, 6.0],
+				"alto": [2.3, 2.8, 4.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ladrillo",
+			"sonidos": {
+				"golpe": "golpe/ladrillo"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "comun:puerta_pesada_muelle.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["escalera_gato"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/caseton_azotea.png",
+				"descripcion": "Huella en planta de «Casetón de la escalera»: un rectángulo de 3,00 por 3,50 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "chimenea_ventilacion",
+			"nombre": "Chimenea de ventilación",
+			"categoria": "azotea",
+			"subcategoria": "cubierta",
+			"etiquetas": ["chimenea de ventilación", "shunt", "aspirador estático", "torreta de ventilación"],
+			"descripcion": "Torreta de ladrillo de la altura de una persona, con un sombrerete metálico que gira con el viento y chirría. Por ella salen los olores de las cocinas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.6, 1.2],
+				"fondo": [0.35, 0.6, 1.0],
+				"alto": [0.8, 1.5, 2.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ladrillo",
+			"sonidos": {
+				"golpe": "golpe/ladrillo",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.2,
+					"radio": 5
+				}
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cv",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/chimenea_ventilacion.png",
+				"descripcion": "Huella en planta de «Chimenea de ventilación»: un rectángulo de 0,60 por 0,60 metros, con la letra «Cv»."
+			}
+		},
+		{
+			"id": "antena_con_vientos",
+			"nombre": "Antena con vientos",
+			"categoria": "azotea",
+			"subcategoria": "cubierta",
+			"etiquetas": ["antena", "mástil de la antena", "vientos de la antena", "cables tensores"],
+			"descripcion": "Mástil de antena sujeto con tres cables de acero que bajan en diagonal hasta anclajes en el suelo. Los cables cruzan el paso a cualquier altura, de los pies a la cabeza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.5, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 5.0],
+				"fondo": [1.5, 3.0, 5.0],
+				"alto": [3.0, 5.0, 8.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"aviso": "Cables de la antena: cruzan a cualquier altura.",
+			"funcion": "comunicacion",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ac",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/antena_con_vientos.png",
+				"descripcion": "Huella en planta de «Antena con vientos»: un triángulo con la punta hacia delante de 3,00 por 3,00 metros, con la letra «Ac»."
+			}
+		},
+		{
+			"id": "escalera_gato",
+			"nombre": "Escalera de gato",
+			"categoria": "azotea",
+			"subcategoria": "cubierta",
+			"etiquetas": ["escalera de gato", "escalera de pates", "escalera vertical", "escalera de mantenimiento"],
+			"descripcion": "Escalera vertical de barrotes de hierro anclada a la pared, para subir al casetón o a una cubierta. Sobresale un palmo; a veces empieza a media altura y el bastón no la toca.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.6],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [2.0, 3.0, 5.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea", "cuarto_instalaciones", "patio"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["caseton_azotea"],
+			"simbolo": {
+				"letra": "Eg",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_gato.png",
+				"descripcion": "Huella en planta de «Escalera de gato»: un rectángulo de 0,45 por 0,20 metros, con la letra «Eg»."
+			}
+		},
+		{
+			"id": "aire_acondicionado_suelo",
+			"nombre": "Unidad exterior de aire acondicionado en el suelo",
+			"categoria": "azotea",
+			"subcategoria": "maquinas_azotea",
+			"etiquetas": ["aire acondicionado", "compresor del aire", "unidad exterior", "máquina del aire"],
+			"descripcion": "Caja de chapa sobre tacos de goma, con una rejilla por la que sopla aire caliente. Zumba y vibra cuando está en marcha; llega a la rodilla o a la cadera. Debajo gotea.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.85, 1.1],
+				"fondo": [0.28, 0.35, 0.45],
+				"alto": [0.5, 0.65, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "un_ventilador",
+					"nombre": "De un ventilador",
+					"ancho": 0.85,
+					"fondo": 0.35,
+					"alto": 0.65
+				},
+				{
+					"id": "dos_ventiladores",
+					"nombre": "De dos ventiladores, alta",
+					"ancho": 0.95,
+					"fondo": 0.4,
+					"alto": 1.3
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:compresor_azotea.flac",
+					"volumen": 0.45,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea", "patio", "terraza"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/aire_acondicionado_suelo.png",
+				"descripcion": "Huella en planta de «Unidad exterior de aire acondicionado en el suelo»: un rectángulo de 0,85 por 0,35 metros, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "aire_acondicionado_mensulas",
+			"nombre": "Aire acondicionado sobre ménsulas a la altura de la cabeza",
+			"categoria": "azotea",
+			"subcategoria": "maquinas_azotea",
+			"etiquetas": ["aire acondicionado colgado", "compresor en la pared", "unidad exterior en ménsulas", "obstáculo en altura"],
+			"descripcion": "Unidad de aire acondicionado atornillada a la pared sobre dos escuadras, a la altura de la cara. El bastón pasa por debajo; solo avisan el zumbido y las gotas que caen al suelo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 1.0],
+				"fondo": [0.28, 0.32, 0.45],
+				"alto": [0.5, 0.55, 0.7]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:compresor_azotea.flac",
+					"volumen": 0.4,
+					"radio": 8
+				}
+			},
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["comunidad", "calle"],
+			"estancias": ["patio", "acera", "azotea"],
+			"obstaculo": "cabeza",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/aire_acondicionado_mensulas.png",
+				"descripcion": "Huella en planta de «Aire acondicionado sobre ménsulas a la altura de la cabeza»: un rectángulo de 0,80 por 0,32 metros, colgado a 1,50 metros del suelo, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "deposito_agua_azotea",
+			"nombre": "Depósito de agua de azotea",
+			"categoria": "azotea",
+			"subcategoria": "maquinas_azotea",
+			"etiquetas": ["depósito de agua", "aljibe de la azotea", "tinaco", "depósito de fibra"],
+			"descripcion": "Depósito redondo de fibra sobre una bancada, con tapa y tubos. Suena hueco o lleno según el nivel; se oye entrar el agua cuando se llena.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.3, 2.2],
+				"fondo": [0.9, 1.3, 2.2],
+				"alto": [1.0, 1.5, 2.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.15,
+					"radio": 4
+				}
+			},
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["comunidad"],
+			"estancias": ["azotea"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Da",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/deposito_agua_azotea.png",
+				"descripcion": "Huella en planta de «Depósito de agua de azotea»: un círculo de 1,30 por 1,30 metros, con la letra «Da»."
+			}
+		},
+		{
+			"id": "placas_solares_azotea",
+			"nombre": "Placas solares sobre soportes",
+			"categoria": "azotea",
+			"subcategoria": "maquinas_azotea",
+			"etiquetas": ["placas solares", "paneles solares", "captadores", "placas de la azotea"],
+			"descripcion": "Fila de paneles de cristal inclinados sobre una estructura de aluminio. El borde bajo queda a la altura de la espinilla y el alto a la del pecho; al sol, queman.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 6.0],
+				"fondo": [1.0, 1.7, 2.3],
+				"alto": [0.6, 1.0, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["comunidad", "vivienda"],
+			"estancias": ["azotea"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ps",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/placas_solares_azotea.png",
+				"descripcion": "Huella en planta de «Placas solares sobre soportes»: un rectángulo de 2,00 por 1,70 metros, con la letra «Ps»."
+			}
+		},
+		{
+			"id": "piscina_comunidad",
+			"nombre": "Piscina de comunidad",
+			"categoria": "urbanizacion",
+			"subcategoria": "piscina_comunitaria",
+			"etiquetas": ["piscina", "piscina comunitaria", "vaso de la piscina", "piscina de la urbanización"],
+			"descripcion": "Vaso de la piscina de la urbanización, a ras de suelo y con forma de riñón. El borde es una piedra redondeada y rugosa: al pisarla, detente. Se oye el agua de los rebosaderos.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.05, 0.3], [0.2, 0.08], [0.42, 0.0], [0.62, 0.1], [0.8, 0.05], [0.95, 0.2], [1.0, 0.5], [0.93, 0.8], [0.75, 0.97], [0.55, 1.0], [0.4, 0.85], [0.25, 0.9], [0.1, 0.8], [0.0, 0.55]]
+			},
+			"medidas": {
+				"ancho": [3.0, 8.0, 12.0],
+				"fondo": [2.5, 5.0, 8.0],
+				"alto": [0.05, 0.1, 0.3]
+			},
+			"variantes": [
+				{
+					"id": "infantil",
+					"nombre": "Infantil, de chapoteo",
+					"ancho": 3.0,
+					"fondo": 2.5,
+					"alto": 0.1
+				},
+				{
+					"id": "mediana",
+					"nombre": "Mediana",
+					"ancho": 8.0,
+					"fondo": 5.0,
+					"alto": 0.1
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 12.0,
+					"fondo": 7.0,
+					"alto": 0.1
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/fuente_agua",
+					"volumen": 0.3,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"suelo": "agua",
+			"aviso": "Borde de la piscina: detente.",
+			"funcion": "agua",
+			"lugares": ["comunidad", "piscina"],
+			"estancias": ["vaso_piscina", "jardin"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel", "resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["valla_piscina", "ducha_jardin_piscina", "lavapies_piscina"],
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/piscina_comunidad.png",
+				"descripcion": "Huella en planta de «Piscina de comunidad»: un riñón: un óvalo con una entrada en uno de los lados largos de 8,00 por 5,00 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "valla_piscina",
+			"nombre": "Valla de piscina",
+			"categoria": "urbanizacion",
+			"subcategoria": "piscina_comunitaria",
+			"etiquetas": ["valla de la piscina", "cerramiento de la piscina", "verja de la piscina", "barandilla de la piscina"],
+			"descripcion": "Valla de barrotes verticales que rodea la piscina, a la altura del pecho, para que no entren los niños solos. Se sigue con la mano hasta dar con la puerta.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 6.0],
+				"fondo": [0.04, 0.05, 0.1],
+				"alto": [1.1, 1.2, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["comunidad", "piscina"],
+			"estancias": ["vaso_piscina", "jardin"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["puerta_valla_piscina"],
+			"simbolo": {
+				"letra": "Vp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/valla_piscina.png",
+				"descripcion": "Huella en planta de «Valla de piscina»: un rectángulo de 2,00 por 0,05 metros, con la letra «Vp»."
+			}
+		},
+		{
+			"id": "puerta_valla_piscina",
+			"nombre": "Puerta de muelle de la valla de la piscina",
+			"categoria": "urbanizacion",
+			"subcategoria": "piscina_comunitaria",
+			"etiquetas": ["puerta de la piscina", "cancela de la piscina", "puerta con muelle", "puerta de la valla"],
+			"descripcion": "Puerta de barrotes en la valla, con el pestillo arriba del todo, fuera del alcance de los niños. Se abre hacia fuera y un muelle la cierra con un golpe de hierro.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.2],
+				"fondo": [0.04, 0.05, 0.1],
+				"alto": [1.1, 1.25, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "juego:llaves.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:valla_obra.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "abierto",
+				"segundos": 5,
+				"al_terminar": "cerrado",
+				"sonido_al_terminar": "hogar:valla_obra.flac"
+			},
+			"funcion": "control_acceso",
+			"lugares": ["comunidad", "piscina"],
+			"estancias": ["vaso_piscina", "jardin"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["valla_piscina", "lavapies_piscina"],
+			"simbolo": {
+				"letra": "Pv",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_valla_piscina.png",
+				"descripcion": "Huella en planta de «Puerta de muelle de la valla de la piscina»: un rectángulo de 0,90 por 0,05 metros, con la letra «Pv»."
+			}
+		},
+		{
+			"id": "lavapies_piscina",
+			"nombre": "Lavapiés de la piscina",
+			"categoria": "urbanizacion",
+			"subcategoria": "piscina_comunitaria",
+			"etiquetas": ["lavapiés", "pediluvio", "pileta de pies", "paso de agua"],
+			"descripcion": "Charco de obra de un palmo de hondo, justo detrás de la puerta de la piscina, que hay que cruzar. Se baja un escalón, se pisa agua fría y se sube otro.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 2.0],
+				"fondo": [0.9, 1.5, 2.5],
+				"alto": [0.05, 0.1, 0.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "agua",
+			"aviso": "Lavapiés: baja un escalón y pisa agua.",
+			"funcion": "agua",
+			"lugares": ["comunidad", "piscina"],
+			"estancias": ["vaso_piscina", "jardin"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel", "resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["ducha_jardin_piscina"],
+			"simbolo": {
+				"letra": "Lp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/lavapies_piscina.png",
+				"descripcion": "Huella en planta de «Lavapiés de la piscina»: un rectángulo de 1,20 por 1,50 metros, con la letra «Lp»."
+			}
+		},
+		{
+			"id": "ducha_jardin_piscina",
+			"nombre": "Ducha de jardín de la piscina",
+			"categoria": "urbanizacion",
+			"subcategoria": "piscina_comunitaria",
+			"etiquetas": ["ducha de jardín", "ducha de la piscina", "ducha exterior", "ducha de pulsador"],
+			"descripcion": "Poste de acero con una alcachofa arriba y un pulsador a la altura de la mano, sobre un plato de rejilla. Suelta agua fría unos segundos y se corta sola. El suelo de alrededor resbala.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [0.7, 0.9, 1.2],
+				"alto": [2.0, 2.2, 2.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:ducha.flac",
+					"volumen": 0.5,
+					"radio": 10,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "abierto",
+				"segundos": 15,
+				"al_terminar": "cerrado"
+			},
+			"funcion": "agua",
+			"lugares": ["comunidad", "piscina", "jardin"],
+			"estancias": ["vaso_piscina", "jardin"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["piscina_comunidad"],
+			"simbolo": {
+				"letra": "Dj",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/ducha_jardin_piscina.png",
+				"descripcion": "Huella en planta de «Ducha de jardín de la piscina»: un círculo de 0,90 por 0,90 metros, con la letra «Dj»."
+			}
+		},
+		{
+			"id": "aro_salvavidas_poste",
+			"nombre": "Aro salvavidas en su poste",
+			"categoria": "urbanizacion",
+			"subcategoria": "piscina_comunitaria",
+			"etiquetas": ["aro salvavidas", "salvavidas", "flotador de rescate", "poste del salvavidas"],
+			"descripcion": "Poste de madera con un aro salvavidas colgado a la altura del pecho y una cuerda enrollada. El aro es de plástico duro y hueco, y sobresale a los lados del poste.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.6], [0.6, 0.6], [0.6, 1.0], [0.4, 1.0], [0.4, 0.6], [0.0, 0.6]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.7, 0.8],
+				"fondo": [0.12, 0.2, 0.3],
+				"alto": [1.3, 1.6, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["comunidad", "piscina"],
+			"estancias": ["vaso_piscina", "jardin"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "As",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/aro_salvavidas_poste.png",
+				"descripcion": "Huella en planta de «Aro salvavidas en su poste»: una te de 0,70 por 0,20 metros, con la letra «As»."
+			}
+		},
+		{
+			"id": "tumbona_comunidad",
+			"nombre": "Tumbona de piscina de comunidad",
+			"categoria": "urbanizacion",
+			"subcategoria": "piscina_comunitaria",
+			"etiquetas": ["tumbona", "hamaca de piscina", "tumbona de plástico", "tumbona de jardín"],
+			"descripcion": "Tumbona de plástico, baja y larga, con el respaldo levantado. Los vecinos la mueven: cada día está en un sitio. Ligera, se desplaza con el bastón.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.75],
+				"fondo": [1.8, 1.9, 2.05],
+				"alto": [0.3, 0.35, 0.95]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"sonido": "hogar:sentarse.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "descanso",
+			"lugares": ["comunidad", "piscina", "jardin"],
+			"estancias": ["vaso_piscina", "jardin", "terraza"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/tumbona_comunidad.png",
+				"descripcion": "Huella en planta de «Tumbona de piscina de comunidad»: un rectángulo de 0,70 por 1,90 metros, con la letra «Tc»."
+			}
+		},
+		{
+			"id": "caseta_depuradora",
+			"nombre": "Caseta de la depuradora",
+			"categoria": "urbanizacion",
+			"subcategoria": "piscina_comunitaria",
+			"etiquetas": ["depuradora", "caseta de la depuradora", "cuarto de la bomba", "depuradora de la piscina"],
+			"descripcion": "Caseta baja de obra, medio enterrada junto a la piscina, con una tapa o una puerta de chapa. Dentro zumba la bomba todo el verano y huele a cloro: se la oye desde lejos.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 2.0, 3.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [0.6, 1.2, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ladrillo",
+			"sonidos": {
+				"golpe": "golpe/ladrillo",
+				"propio": {
+					"sonido": "sonidos/depuradora_piscina.flac",
+					"volumen": 0.5,
+					"radio": 12
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["comunidad", "piscina"],
+			"estancias": ["vaso_piscina", "jardin"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cd",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/caseta_depuradora.png",
+				"descripcion": "Huella en planta de «Caseta de la depuradora»: un rectángulo de 2,00 por 1,50 metros, con la letra «Cd»."
+			}
+		},
+		{
+			"id": "pergola_urbanizacion",
+			"nombre": "Pérgola de madera",
+			"categoria": "urbanizacion",
+			"subcategoria": "estar_en_el_jardin",
+			"etiquetas": ["pérgola", "cenador", "sombrajo", "emparrado"],
+			"descripcion": "Techo de vigas de madera y cañizo sobre cuatro postes. Debajo hay sombra, hace más fresco y el sonido cambia. Las vigas quedan por encima de la cabeza; los postes se ponen aparte.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 6.0],
+				"fondo": [2.0, 3.0, 5.0],
+				"alto": [0.15, 0.2, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 2.2,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad", "jardin", "parque"],
+			"estancias": ["jardin", "terraza", "merendero"],
+			"obstaculo": "aereo",
+			"frecuencia": "comun",
+			"relacionados": ["poste_pergola", "barbacoa_obra"],
+			"simbolo": {
+				"letra": "Pu",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/pergola_urbanizacion.png",
+				"descripcion": "Huella en planta de «Pérgola de madera»: un rectángulo de 3,00 por 3,00 metros, colgado a 2,20 metros del suelo, con la letra «Pu»."
+			}
+		},
+		{
+			"id": "poste_pergola",
+			"nombre": "Poste de pérgola",
+			"categoria": "urbanizacion",
+			"subcategoria": "estar_en_el_jardin",
+			"etiquetas": ["poste de la pérgola", "pie derecho", "poste de madera", "poste del porche"],
+			"descripcion": "Poste cuadrado de madera, grueso como una pierna, que sostiene la pérgola o un porche. Suele haber cuatro; a veces lleva una enredadera que roza antes.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.09, 0.12, 0.2],
+				"fondo": [0.09, 0.12, 0.2],
+				"alto": [2.1, 2.4, 2.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["comunidad", "jardin", "parque"],
+			"estancias": ["jardin", "terraza", "merendero"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["pergola_urbanizacion"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_pergola.png",
+				"descripcion": "Huella en planta de «Poste de pérgola»: un rectángulo de 0,12 por 0,12 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "barbacoa_obra",
+			"nombre": "Barbacoa de obra",
+			"categoria": "urbanizacion",
+			"subcategoria": "estar_en_el_jardin",
+			"etiquetas": ["barbacoa", "barbacoa de obra", "parrilla", "asador"],
+			"descripcion": "Barbacoa de ladrillo con una repisa a cada lado, la parrilla a la altura de la cintura y una campana con chimenea encima. Encendida, las brasas crepitan y huele a humo: quema.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 2.4],
+				"fondo": [0.5, 0.7, 0.95],
+				"alto": [1.5, 1.9, 2.4]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ladrillo",
+			"sonidos": {
+				"golpe": "golpe/ladrillo",
+				"propio": {
+					"sonido": "comun:barbacoa_brasas.flac",
+					"volumen": 0.45,
+					"radio": 8,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado"
+				}
+			],
+			"contenedor": true,
+			"aviso": "Barbacoa: si está encendida, quema.",
+			"funcion": "maquina",
+			"lugares": ["comunidad", "jardin", "parque"],
+			"estancias": ["jardin", "merendero", "terraza"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "comun",
+			"relacionados": ["banco_obra_ele", "pergola_urbanizacion"],
+			"simbolo": {
+				"letra": "Bo",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/barbacoa_obra.png",
+				"descripcion": "Huella en planta de «Barbacoa de obra»: un rectángulo de 1,40 por 0,70 metros, con la letra «Bo»."
+			}
+		},
+		{
+			"id": "banco_obra_ele",
+			"nombre": "Banco corrido de obra en ele",
+			"categoria": "urbanizacion",
+			"subcategoria": "estar_en_el_jardin",
+			"etiquetas": ["banco corrido", "banco de obra", "poyo de ladrillo", "banco en ele"],
+			"descripcion": "Banco de ladrillo que dobla la esquina, sin respaldo o con el muro por respaldo. Áspero y a la altura de la rodilla; en el ángulo de dentro suele ir una mesa.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.22], [0.2, 0.22], [0.2, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 5.0],
+				"fondo": [1.5, 2.5, 4.0],
+				"alto": [0.42, 0.45, 0.5]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ladrillo",
+			"sonidos": {
+				"golpe": "golpe/ladrillo"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["comunidad", "jardin", "parque"],
+			"estancias": ["jardin", "merendero", "patio"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["barbacoa_obra"],
+			"simbolo": {
+				"letra": "Bo",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_obra_ele.png",
+				"descripcion": "Huella en planta de «Banco corrido de obra en ele»: una ele de 3,00 por 2,50 metros, con la letra «Bo»."
+			}
+		},
+		{
+			"id": "pista_petanca",
+			"nombre": "Pista de petanca con bordillo",
+			"categoria": "urbanizacion",
+			"subcategoria": "petanca_y_caminos",
+			"etiquetas": ["pista de petanca", "petanca", "campo de bolos", "bolera de jardín"],
+			"descripcion": "Rectángulo largo de gravilla fina cerrado por un bordillo de madera de un palmo. Hay que pasar el pie por encima; dentro, el suelo cruje. Se oyen chocar las bolas de acero.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.5, 3.0, 4.0],
+				"fondo": [10.0, 12.0, 15.0],
+				"alto": [0.1, 0.15, 0.25]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/petanca_bolas.flac"
+			},
+			"acciones": [
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "sonidos/petanca_bolas.flac"
+				}
+			],
+			"contenedor": false,
+			"suelo": "grava",
+			"aviso": "Bordillo de la pista de petanca.",
+			"funcion": "deporte",
+			"lugares": ["comunidad", "parque"],
+			"estancias": ["jardin"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/pista_petanca.png",
+				"descripcion": "Huella en planta de «Pista de petanca con bordillo»: un rectángulo de 3,00 por 12,00 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "camino_losas_cesped",
+			"nombre": "Camino de losas en el césped",
+			"categoria": "urbanizacion",
+			"subcategoria": "petanca_y_caminos",
+			"etiquetas": ["camino de losas", "pasos japoneses", "sendero de piedra", "camino del jardín"],
+			"descripcion": "Hilera de losas de piedra puestas sobre el césped, de la puerta a la piscina. Bajo el pie se nota duro frente a la hierba blanda: seguirlo lleva sin perderse.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 1.2],
+				"fondo": [2.0, 4.0, 10.0],
+				"alto": [0.01, 0.03, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "acera",
+			"funcion": "referencia",
+			"lugares": ["comunidad", "jardin"],
+			"estancias": ["jardin"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/camino_losas_cesped.png",
+				"descripcion": "Huella en planta de «Camino de losas en el césped»: un rectángulo de 0,60 por 4,00 metros, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "caseta_jardinero",
+			"nombre": "Caseta del jardinero",
+			"categoria": "urbanizacion",
+			"subcategoria": "accesos_urbanizacion",
+			"etiquetas": ["caseta del jardinero", "caseta de herramientas", "cobertizo", "caseta de jardín"],
+			"descripcion": "Caseta de tablas con tejado a dos aguas donde se guardan el cortacésped y las herramientas. La madera suena hueca; el alero queda a la altura de la cabeza de una persona alta.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [1.2, 2.0, 3.0],
+				"alto": [1.9, 2.2, 2.6]
+			},
+			"colocacion": ["suelo", "pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["comunidad", "jardin"],
+			"estancias": ["jardin", "huerto"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cj",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/caseta_jardinero.png",
+				"descripcion": "Huella en planta de «Caseta del jardinero»: un rectángulo de 2,00 por 2,00 metros, con la letra «Cj»."
+			}
+		},
+		{
+			"id": "garita_vigilante",
+			"nombre": "Garita de vigilante de urbanización",
+			"categoria": "urbanizacion",
+			"subcategoria": "accesos_urbanizacion",
+			"etiquetas": ["garita", "caseta del vigilante", "control de acceso", "garita de seguridad"],
+			"descripcion": "Caseta pequeña de varios lados junto a la entrada de coches, con ventanas todo alrededor. El vigilante suele tener la radio puesta: se oye antes de llegar.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [1.5, 2.0, 3.0],
+				"alto": [2.3, 2.5, 2.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/television",
+					"volumen": 0.25,
+					"radio": 8
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "control_acceso",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["jardin", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["barrera_urbanizacion", "cancela_peatonal"],
+			"simbolo": {
+				"letra": "Gv",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/garita_vigilante.png",
+				"descripcion": "Huella en planta de «Garita de vigilante de urbanización»: un octógono de 2,00 por 2,00 metros, con la letra «Gv»."
+			}
+		},
+		{
+			"id": "barrera_urbanizacion",
+			"nombre": "Barrera levadiza de urbanización",
+			"categoria": "urbanizacion",
+			"subcategoria": "accesos_urbanizacion",
+			"etiquetas": ["barrera levadiza", "barrera de coches", "barrera de la urbanización", "pluma"],
+			"descripcion": "Brazo largo de aluminio que cruza el carril de coches a la altura de la cintura; sale de un armario con motor. El bastón pasa por debajo del brazo. Sube con un zumbido y baja solo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.1, 0.0], [0.1, 0.35], [1.0, 0.35], [1.0, 0.65], [0.1, 0.65], [0.1, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.5, 3.0, 6.0],
+				"fondo": [0.25, 0.35, 0.45],
+				"alto": [0.1, 0.15, 0.3]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/automatica"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/automatica"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "abierto",
+				"segundos": 10,
+				"al_terminar": "cerrado",
+				"sonido_al_terminar": "puerta/automatica"
+			},
+			"funcion": "control_acceso",
+			"lugares": ["comunidad", "aparcamiento"],
+			"estancias": ["calzada", "jardin"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["garita_vigilante"],
+			"simbolo": {
+				"letra": "Bu",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/barrera_urbanizacion.png",
+				"descripcion": "Huella en planta de «Barrera levadiza de urbanización»: un armario estrecho a la izquierda y un brazo largo y fino que sale de él hacia la derecha de 3,00 por 0,35 metros, colgado a 0,90 metros del suelo, con la letra «Bu»."
+			}
+		},
+		{
+			"id": "cancela_peatonal",
+			"nombre": "Cancela peatonal de la urbanización",
+			"categoria": "urbanizacion",
+			"subcategoria": "accesos_urbanizacion",
+			"etiquetas": ["cancela", "puerta de la verja", "puerta peatonal", "cancela de la urbanización"],
+			"descripcion": "Puerta de hierro de barrotes en la verja de la calle, con el portero automático en el pilar de al lado. Zumba cuando abren desde casa y se cierra sola con un golpe.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.85, 1.0, 1.3],
+				"fondo": [0.04, 0.06, 0.1],
+				"alto": [1.7, 2.0, 2.3]
+			},
+			"colocacion": ["acera", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/abrepuertas_zumbido.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:valla_obra.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "abierto",
+				"segundos": 7,
+				"al_terminar": "cerrado",
+				"sonido_al_terminar": "hogar:valla_obra.flac"
+			},
+			"funcion": "control_acceso",
+			"lugares": ["comunidad", "jardin"],
+			"estancias": ["acera", "jardin"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["garita_vigilante"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cancela_peatonal.png",
+				"descripcion": "Huella en planta de «Cancela peatonal de la urbanización»: un rectángulo de 1,00 por 0,06 metros, con la letra «Cp»."
+			}
+		}
+	]
+}

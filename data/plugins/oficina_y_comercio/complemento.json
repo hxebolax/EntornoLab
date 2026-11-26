@@ -1,0 +1,3719 @@
+{
+	"formato": 1,
+	"id": "oficina_y_comercio",
+	"nombre": "Oficina y comercio",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Mobiliario de oficinas, recepciones y salas de espera, y de supermercados y tiendas, con sus máquinas y sus obstáculos típicos.",
+	"depende_de": ["comun", "hogar", "colegio", "calle", "transporte"],
+	"categorias": {
+		"oficina": "Oficina",
+		"espera": "Recepción y sala de espera",
+		"maquinas": "Máquinas",
+		"supermercado": "Supermercado",
+		"tienda": "Tienda",
+		"edificio": "Accesos y elementos del edificio"
+	},
+	"subcategorias": {
+		"mesas_trabajo": "Mesas y puestos de trabajo",
+		"sillas_oficina": "Sillas de oficina",
+		"reuniones": "Reuniones y formación",
+		"archivo": "Archivo y armarios",
+		"complementos_oficina": "Separadores, papeleras y percheros",
+		"instalaciones_oficina": "Instalaciones y control horario",
+		"office_descanso": "Office",
+		"mostradores_recepcion": "Mostradores de recepción",
+		"asientos_espera": "Asientos, mesitas y plantas",
+		"colas_turnos": "Colas y turnos",
+		"reprografia": "Copias y papel",
+		"bebida_comida": "Café, agua y máquinas de comida",
+		"dinero": "Cajero automático",
+		"lineales": "Estanterías, murales y congelados",
+		"cajas_cobro": "Cajas y precios",
+		"carros_cestas": "Carros y cestas",
+		"reposicion": "Reposición, limpieza y trastienda",
+		"servicios_super": "Servicios y promociones",
+		"mostradores_tienda": "Mostradores de tienda",
+		"expositores_tienda": "Expositores, perchas y carteles",
+		"probadores_asientos": "Probadores y bancos",
+		"accesos": "Puertas, tornos y felpudos",
+		"estructura_edificio": "Columnas y seguridad"
+	},
+	"estados": {
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"parado": "Parado",
+		"girando": "Girando",
+		"desplegado": "Desplegado",
+		"plegado": "Plegado",
+		"apagado": "Apagado",
+		"encendido": "Encendido",
+		"funcionando": "Funcionando"
+	},
+	"objetos": [
+		{
+			"id": "mesa_despacho",
+			"nombre": "Mesa de despacho",
+			"categoria": "oficina",
+			"subcategoria": "mesas_trabajo",
+			"etiquetas": ["escritorio", "mesa de oficina", "mesa de trabajo", "despacho"],
+			"descripcion": "Mesa de oficina con ordenador y papeles; el cajón guarda cosas. La silla queda delante.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 1.8],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [0.72, 0.74, 0.76]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "De 1,20 m",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 0.74
+				},
+				{
+					"id": "normal",
+					"nombre": "De 1,40 m",
+					"ancho": 1.4,
+					"fondo": 0.7,
+					"alto": 0.74
+				},
+				{
+					"id": "grande",
+					"nombre": "De 1,60 m",
+					"ancho": 1.6,
+					"fondo": 0.8,
+					"alto": 0.74
+				},
+				{
+					"id": "direccion",
+					"nombre": "De dirección",
+					"ancho": 1.8,
+					"fondo": 0.8,
+					"alto": 0.74
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["oficina", "administracion", "banco"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["silla_giratoria", "silla_confidente", "archivador"],
+			"simbolo": {
+				"letra": "Md",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_despacho.png",
+				"descripcion": "Huella en planta de «Mesa de despacho»: un rectángulo de 1,40 por 0,70 metros, con la letra «Md»."
+			}
+		},
+		{
+			"id": "mesa_ele",
+			"nombre": "Mesa en L",
+			"categoria": "oficina",
+			"subcategoria": "mesas_trabajo",
+			"etiquetas": ["mesa en ele", "mesa con ala", "mesa de esquina"],
+			"descripcion": "Mesa de oficina con un ala que dobla en ángulo recto: rodea a quien se sienta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.45], [0.42, 0.45], [0.42, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.4, 1.6, 2.0],
+				"fondo": [1.2, 1.6, 2.0],
+				"alto": [0.72, 0.74, 0.76]
+			},
+			"colocacion": ["esquina", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla_giratoria", "archivador"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_ele.png",
+				"descripcion": "Huella en planta de «Mesa en L»: una ele de 1,60 por 1,60 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "silla_giratoria",
+			"nombre": "Silla de oficina",
+			"categoria": "oficina",
+			"subcategoria": "sillas_oficina",
+			"etiquetas": ["silla de oficina", "silla giratoria", "silla con ruedas"],
+			"descripcion": "Silla giratoria con ruedas y brazos. Si chocas con ella, rueda y gira.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.58, 0.64, 0.72],
+				"fondo": [0.58, 0.64, 0.72],
+				"alto": [0.9, 1.0, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "sonidos/silla_ruedas.flac"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/silla_ruedas.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["oficina", "administracion", "banco", "vivienda"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_despacho"],
+			"simbolo": {
+				"letra": "Sg",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_giratoria.png",
+				"descripcion": "Huella en planta de «Silla de oficina»: un círculo de 0,64 por 0,64 metros, con la letra «Sg»."
+			}
+		},
+		{
+			"id": "silla_confidente",
+			"nombre": "Silla de visita",
+			"categoria": "oficina",
+			"subcategoria": "sillas_oficina",
+			"etiquetas": ["silla de visita", "confidente"],
+			"descripcion": "Silla fija de cuatro patas para quien visita el despacho.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.55, 0.6],
+				"fondo": [0.5, 0.55, 0.6],
+				"alto": [0.8, 0.85, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["oficina", "administracion", "banco"],
+			"estancias": ["despacho"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["mesa_despacho"],
+			"simbolo": {
+				"letra": "Sc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_confidente.png",
+				"descripcion": "Huella en planta de «Silla de visita»: un rectángulo de 0,55 por 0,55 metros, con la letra «Sc»."
+			}
+		},
+		{
+			"id": "mesa_reuniones",
+			"nombre": "Mesa de reuniones",
+			"categoria": "oficina",
+			"subcategoria": "reuniones",
+			"etiquetas": ["mesa de juntas", "sala de reuniones", "mesa ovalada"],
+			"descripcion": "Mesa ovalada grande de sala de juntas, con sillas alrededor. Sin esquinas: se rodea siguiendo el borde.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.75, 0.0], [0.875, 0.067], [0.967, 0.25], [1.0, 0.5], [0.967, 0.75], [0.875, 0.933], [0.75, 1.0], [0.25, 1.0], [0.125, 0.933], [0.033, 0.75], [0.0, 0.5], [0.033, 0.25], [0.125, 0.067], [0.25, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.8, 2.4, 4.2],
+				"fondo": [0.9, 1.2, 1.5],
+				"alto": [0.72, 0.74, 0.76]
+			},
+			"variantes": [
+				{
+					"id": "seis_plazas",
+					"nombre": "De seis plazas",
+					"ancho": 1.8,
+					"fondo": 1.0,
+					"alto": 0.74
+				},
+				{
+					"id": "ocho_plazas",
+					"nombre": "De ocho plazas",
+					"ancho": 2.4,
+					"fondo": 1.2,
+					"alto": 0.74
+				},
+				{
+					"id": "doce_plazas",
+					"nombre": "De doce plazas",
+					"ancho": 3.6,
+					"fondo": 1.4,
+					"alto": 0.74
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["oficina"],
+			"estancias": ["sala_reuniones"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla_giratoria", "pizarra_caballete"],
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_reuniones.png",
+				"descripcion": "Huella en planta de «Mesa de reuniones»: un óvalo alargado, de lados rectos y extremos redondos de 2,40 por 1,20 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "archivador",
+			"nombre": "Archivador",
+			"categoria": "oficina",
+			"subcategoria": "archivo",
+			"etiquetas": ["archivador", "cajonera", "fichero", "buc"],
+			"descripcion": "Archivador metálico de cajones. Un cajón abierto sobresale medio metro a la altura de la rodilla o del pecho.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.47, 0.5],
+				"fondo": [0.55, 0.62, 0.65],
+				"alto": [0.7, 1.32, 1.4]
+			},
+			"variantes": [
+				{
+					"id": "dos_cajones",
+					"nombre": "De dos cajones",
+					"ancho": 0.47,
+					"fondo": 0.62,
+					"alto": 0.7
+				},
+				{
+					"id": "cuatro_cajones",
+					"nombre": "De cuatro cajones",
+					"ancho": 0.47,
+					"fondo": 0.62,
+					"alto": 1.32
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_despacho"],
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/archivador.png",
+				"descripcion": "Huella en planta de «Archivador»: un rectángulo de 0,47 por 0,62 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "armario_oficina",
+			"nombre": "Armario de oficina",
+			"categoria": "oficina",
+			"subcategoria": "archivo",
+			"etiquetas": ["armario", "armario metálico", "armario archivador"],
+			"descripcion": "Armario metálico alto de dos puertas, para carpetas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.2],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [1.0, 1.95, 2.0]
+			},
+			"variantes": [
+				{
+					"id": "bajo",
+					"nombre": "Bajo",
+					"ancho": 0.9,
+					"fondo": 0.45,
+					"alto": 1.0
+				},
+				{
+					"id": "alto",
+					"nombre": "Alto",
+					"ancho": 0.9,
+					"fondo": 0.45,
+					"alto": 1.95
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ao",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_oficina.png",
+				"descripcion": "Huella en planta de «Armario de oficina»: un rectángulo de 0,90 por 0,45 metros, con la letra «Ao»."
+			}
+		},
+		{
+			"id": "estanteria_oficina",
+			"nombre": "Estantería de oficina",
+			"categoria": "oficina",
+			"subcategoria": "archivo",
+			"etiquetas": ["estantería", "estanteria", "librería de oficina"],
+			"descripcion": "Estantería abierta con archivadores de palanca.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.2],
+				"fondo": [0.3, 0.35, 0.45],
+				"alto": [1.2, 1.95, 2.2]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Eo",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/estanteria_oficina.png",
+				"descripcion": "Huella en planta de «Estantería de oficina»: un rectángulo de 0,90 por 0,35 metros, con la letra «Eo»."
+			}
+		},
+		{
+			"id": "papelera",
+			"nombre": "Papelera",
+			"categoria": "oficina",
+			"subcategoria": "complementos_oficina",
+			"etiquetas": ["papelera", "cubo"],
+			"descripcion": "Papelera de rejilla junto a la mesa. Ligera: se vuelca al tropezar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.28, 0.35],
+				"fondo": [0.25, 0.28, 0.35],
+				"alto": [0.3, 0.33, 0.45]
+			},
+			"colocacion": ["suelo", "esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_despacho"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/papelera.png",
+				"descripcion": "Huella en planta de «Papelera»: un círculo de 0,28 por 0,28 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "perchero",
+			"nombre": "Perchero de pie",
+			"categoria": "oficina",
+			"subcategoria": "complementos_oficina",
+			"etiquetas": ["perchero", "colgador"],
+			"descripcion": "Poste metálico con brazos arriba para los abrigos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.5],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [1.6, 1.75, 1.9]
+			},
+			"colocacion": ["suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "colgar_ropa",
+					"nombre": "Colgar el abrigo"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["oficina"],
+			"estancias": ["despacho", "zona_trabajo", "recepcion"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/perchero.png",
+				"descripcion": "Huella en planta de «Perchero de pie»: un círculo de 0,40 por 0,40 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "mampara",
+			"nombre": "Mampara separadora",
+			"categoria": "oficina",
+			"subcategoria": "complementos_oficina",
+			"etiquetas": ["mampara", "biombo", "separador", "panel"],
+			"descripcion": "Panel separador entre puestos de trabajo: fino, alto hasta el hombro y forrado de tela.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.8],
+				"fondo": [0.04, 0.06, 0.4],
+				"alto": [1.1, 1.4, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["mesa_bench"],
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mampara.png",
+				"descripcion": "Huella en planta de «Mampara separadora»: un rectángulo de 1,20 por 0,06 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "pizarra_caballete",
+			"nombre": "Pizarra de caballete",
+			"categoria": "oficina",
+			"subcategoria": "reuniones",
+			"etiquetas": ["rotafolio", "papelógrafo", "caballete"],
+			"descripcion": "Pizarra con bloc de papel sobre un trípode. Las patas se abren abajo más que el tablero.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.25, 0.0], [0.75, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.65, 0.7, 0.75],
+				"fondo": [0.5, 0.6, 0.75],
+				"alto": [1.7, 1.9, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["oficina"],
+			"estancias": ["sala_reuniones"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["mesa_reuniones"],
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/pizarra_caballete.png",
+				"descripcion": "Huella en planta de «Pizarra de caballete»: un trapecio, más estrecho por detrás de 0,70 por 0,60 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "mostrador_recepcion",
+			"nombre": "Mostrador de recepción",
+			"categoria": "espera",
+			"subcategoria": "mostradores_recepcion",
+			"etiquetas": ["mostrador", "recepción", "atención al público", "ventanilla"],
+			"descripcion": "Mostrador recto y alto, a la altura del pecho, con una persona detrás.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.4, 2.0, 3.6],
+				"fondo": [0.7, 0.8, 0.9],
+				"alto": [1.05, 1.1, 1.15]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "De 1,40 m",
+					"ancho": 1.4,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "normal",
+					"nombre": "De 2 m",
+					"ancho": 2.0,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "grande",
+					"nombre": "De 3 m",
+					"ancho": 3.0,
+					"fondo": 0.8,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["oficina", "hotel", "administracion", "centro_salud"],
+			"estancias": ["recepcion"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["sillas_espera"],
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_recepcion.png",
+				"descripcion": "Huella en planta de «Mostrador de recepción»: un rectángulo de 2,00 por 0,80 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "mostrador_curvo",
+			"nombre": "Mostrador de recepción curvo",
+			"categoria": "espera",
+			"subcategoria": "mostradores_recepcion",
+			"etiquetas": ["mostrador curvo", "recepción curva", "mostrador semicircular"],
+			"descripcion": "Mostrador en arco que abomba hacia quien llega. Se sigue con la mano sin encontrar esquinas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.017, 0.259], [0.067, 0.5], [0.146, 0.707], [0.25, 0.866], [0.371, 0.966], [0.5, 1.0], [0.629, 0.966], [0.75, 0.866], [0.854, 0.707], [0.933, 0.5], [0.983, 0.259], [1.0, 0.0], [0.84, 0.0], [0.828, 0.176], [0.794, 0.34], [0.74, 0.481], [0.67, 0.589], [0.588, 0.657], [0.5, 0.68], [0.412, 0.657], [0.33, 0.589], [0.26, 0.481], [0.206, 0.34], [0.172, 0.176], [0.16, 0.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.8, 4.0],
+				"fondo": [1.0, 1.4, 2.0],
+				"alto": [1.05, 1.1, 1.15]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["oficina", "hotel", "administracion"],
+			"estancias": ["recepcion", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["sillas_espera"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_curvo.png",
+				"descripcion": "Huella en planta de «Mostrador de recepción curvo»: una banda curva que abomba hacia delante de 2,80 por 1,40 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "sillas_espera",
+			"nombre": "Sillas de sala de espera en fila",
+			"categoria": "espera",
+			"subcategoria": "asientos_espera",
+			"etiquetas": ["bancada", "sillas de espera", "asientos en fila"],
+			"descripcion": "Fila de asientos unidos por una barra, pegados a la pared. No se mueven.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.1, 1.7, 2.9],
+				"fondo": [0.55, 0.6, 0.7],
+				"alto": [0.78, 0.8, 0.85]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 1.15,
+					"fondo": 0.6,
+					"alto": 0.8
+				},
+				{
+					"id": "tres_plazas",
+					"nombre": "De tres plazas",
+					"ancho": 1.7,
+					"fondo": 0.6,
+					"alto": 0.8
+				},
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De cuatro plazas",
+					"ancho": 2.3,
+					"fondo": 0.6,
+					"alto": 0.8
+				},
+				{
+					"id": "cinco_plazas",
+					"nombre": "De cinco plazas",
+					"ancho": 2.9,
+					"fondo": 0.6,
+					"alto": 0.8
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["oficina", "administracion", "centro_salud", "banco"],
+			"estancias": ["sala_espera"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesita", "dispensador_turno"],
+			"simbolo": {
+				"letra": "Se",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillas_espera.png",
+				"descripcion": "Huella en planta de «Sillas de sala de espera en fila»: un rectángulo de 1,70 por 0,60 metros, con la letra «Se»."
+			}
+		},
+		{
+			"id": "mesita",
+			"nombre": "Mesita de revistas",
+			"categoria": "espera",
+			"subcategoria": "asientos_espera",
+			"etiquetas": ["mesita", "mesa baja", "revistero"],
+			"descripcion": "Mesa baja y cuadrada con revistas, en medio de la sala de espera. A la altura de la rodilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 1.0],
+				"fondo": [0.5, 0.6, 0.6],
+				"alto": [0.4, 0.45, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["oficina"],
+			"estancias": ["sala_espera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["sillas_espera"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesita.png",
+				"descripcion": "Huella en planta de «Mesita de revistas»: un rectángulo de 0,60 por 0,60 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "planta",
+			"nombre": "Planta de interior",
+			"categoria": "espera",
+			"subcategoria": "asientos_espera",
+			"etiquetas": ["planta", "maceta", "macetero"],
+			"descripcion": "Macetero grande con una planta alta. Primero rozan las hojas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.45, 0.7],
+				"fondo": [0.35, 0.45, 0.7],
+				"alto": [1.0, 1.5, 2.0]
+			},
+			"colocacion": ["suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "planta",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "vegetacion",
+			"lugares": ["oficina"],
+			"estancias": ["sala_espera", "recepcion", "zona_trabajo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/planta.png",
+				"descripcion": "Huella en planta de «Planta de interior»: un círculo de 0,45 por 0,45 metros, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "dispensador_turno",
+			"nombre": "Dispensador de turno",
+			"categoria": "espera",
+			"subcategoria": "colas_turnos",
+			"etiquetas": ["turno", "su turno", "tique", "número"],
+			"descripcion": "Poste con una máquina que da un papel con tu número de turno.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.45],
+				"fondo": [0.3, 0.35, 0.45],
+				"alto": [1.1, 1.3, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "transporte:teclas_cajero.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["administracion", "banco", "tienda", "supermercado", "centro_salud"],
+			"estancias": ["sala_espera", "ventanilla"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["sillas_espera"],
+			"simbolo": {
+				"letra": "Dt",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/dispensador_turno.png",
+				"descripcion": "Huella en planta de «Dispensador de turno»: un círculo de 0,35 por 0,35 metros, con la letra «Dt»."
+			}
+		},
+		{
+			"id": "postes_cinta",
+			"nombre": "Postes con cinta",
+			"categoria": "espera",
+			"subcategoria": "colas_turnos",
+			"etiquetas": ["catenaria", "postes separadores", "cinta de cola", "fila"],
+			"descripcion": "Dos postes unidos por una cinta a la altura de la cintura, para ordenar la cola. El bastón pasa por debajo de la cinta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.17, 0.0], [0.17, 0.4], [0.83, 0.4], [0.83, 0.0], [1.0, 0.0], [1.0, 1.0], [0.83, 1.0], [0.83, 0.6], [0.17, 0.6], [0.17, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [0.3, 0.35, 0.4],
+				"alto": [0.9, 0.95, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["oficina", "administracion", "banco", "aeropuerto", "cine_teatro"],
+			"estancias": ["sala_espera", "ventanilla", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/postes_cinta.png",
+				"descripcion": "Huella en planta de «Postes con cinta»: dos postes unidos por una cinta fina de 2,00 por 0,35 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "fotocopiadora",
+			"nombre": "Fotocopiadora",
+			"categoria": "maquinas",
+			"subcategoria": "reprografia",
+			"etiquetas": ["fotocopiadora", "copiadora", "multifunción", "impresora"],
+			"descripcion": "Fotocopiadora grande, a la altura del pecho. Al copiar, zumba de un lado a otro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.65, 1.2],
+				"fondo": [0.6, 0.7, 0.75],
+				"alto": [1.0, 1.15, 1.25]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/fotocopiadora.flac"
+			},
+			"acciones": [
+				{
+					"id": "copiar",
+					"nombre": "Hacer una copia",
+					"sonido": "sonidos/fotocopiadora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["oficina", "administracion", "colegio"],
+			"estancias": ["zona_trabajo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["destructora_papel"],
+			"simbolo": {
+				"letra": "Fo",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/fotocopiadora.png",
+				"descripcion": "Huella en planta de «Fotocopiadora»: un rectángulo de 0,65 por 0,70 metros, con la letra «Fo»."
+			}
+		},
+		{
+			"id": "maquina_cafe",
+			"nombre": "Máquina de café",
+			"categoria": "maquinas",
+			"subcategoria": "bebida_comida",
+			"etiquetas": ["máquina de café", "cafetera", "vending de café"],
+			"descripcion": "Máquina de café de monedas, alta como un armario. Zumba siempre y, al pedir, muele y echa el café.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.7, 1.83, 1.85]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/maquina_cafe.flac",
+				"propio": {
+					"sonido": "fuente/maquina_expendedora",
+					"volumen": 0.35,
+					"radio": 6
+				}
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar",
+					"sonido": "sonidos/maquina_cafe.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["oficina", "hospital", "estacion", "colegio"],
+			"estancias": ["sala_espera", "zona_trabajo", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["maquina_expendedora"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/maquina_cafe.png",
+				"descripcion": "Huella en planta de «Máquina de café»: un rectángulo de 0,60 por 0,70 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "maquina_expendedora",
+			"nombre": "Máquina expendedora",
+			"categoria": "maquinas",
+			"subcategoria": "bebida_comida",
+			"etiquetas": ["expendedora", "vending", "máquina de bebidas", "máquina de refrescos"],
+			"descripcion": "Máquina de bebidas y aperitivos con frente de cristal. Zumba todo el rato: se oye desde lejos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [0.75, 0.85, 0.9],
+				"alto": [1.7, 1.83, 1.85]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/maquina_expendedora",
+					"volumen": 0.5,
+					"radio": 8
+				}
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar",
+					"sonido": "transporte:teclas_cajero.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "pago",
+			"lugares": ["oficina", "hospital", "estacion", "polideportivo"],
+			"estancias": ["sala_espera", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["maquina_cafe"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/maquina_expendedora.png",
+				"descripcion": "Huella en planta de «Máquina expendedora»: un rectángulo de 0,90 por 0,85 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "dispensador_agua",
+			"nombre": "Dispensador de agua",
+			"categoria": "maquinas",
+			"subcategoria": "bebida_comida",
+			"etiquetas": ["agua", "garrafa", "fuente de agua", "botellón"],
+			"descripcion": "Columna estrecha con una garrafa de agua encima. Al servir, la garrafa hace glu, glu.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.33, 0.4],
+				"fondo": [0.3, 0.35, 0.4],
+				"alto": [1.0, 1.3, 1.45]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/garrafa.flac"
+			},
+			"acciones": [
+				{
+					"id": "beber",
+					"nombre": "Beber",
+					"sonido": "sonidos/garrafa.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo", "sala_espera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Da",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/dispensador_agua.png",
+				"descripcion": "Huella en planta de «Dispensador de agua»: un rectángulo de 0,33 por 0,35 metros, con la letra «Da»."
+			}
+		},
+		{
+			"id": "cajero",
+			"nombre": "Cajero automático",
+			"categoria": "maquinas",
+			"subcategoria": "dinero",
+			"etiquetas": ["cajero", "cajero automático", "banco", "atm"],
+			"descripcion": "Cajero automático empotrado o exento: pantalla y teclado a la altura del pecho. Los botones pitan.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.9],
+				"fondo": [0.3, 0.6, 0.9],
+				"alto": [1.4, 1.6, 2.0]
+			},
+			"colocacion": ["pared", "suelo", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:teclas_cajero.flac"
+			},
+			"acciones": [
+				{
+					"id": "sacar_dinero",
+					"nombre": "Sacar dinero",
+					"sonido": "transporte:teclas_cajero.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["banco", "calle", "centro_comercial", "supermercado", "estacion"],
+			"estancias": ["cajeros", "vestibulo", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cajero.png",
+				"descripcion": "Huella en planta de «Cajero automático»: un rectángulo de 0,60 por 0,60 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "gondola",
+			"nombre": "Góndola de supermercado",
+			"categoria": "supermercado",
+			"subcategoria": "lineales",
+			"etiquetas": ["góndola", "gondola", "lineal", "estantería de supermercado", "pasillo"],
+			"descripcion": "Estantería larga de doble cara, llena de productos. Entre dos góndolas queda un pasillo: se sigue con la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 4.0, 6.0],
+				"fondo": [0.7, 0.9, 1.1],
+				"alto": [1.4, 1.8, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "un_modulo",
+					"nombre": "De un módulo (1 m)",
+					"ancho": 1.0,
+					"fondo": 0.9,
+					"alto": 1.8
+				},
+				{
+					"id": "tres_modulos",
+					"nombre": "De tres módulos (4 m)",
+					"ancho": 4.0,
+					"fondo": 0.9,
+					"alto": 1.8
+				},
+				{
+					"id": "cinco_modulos",
+					"nombre": "De cinco módulos (6 m)",
+					"ancho": 6.0,
+					"fondo": 0.9,
+					"alto": 1.8
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["supermercado"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["carrito_suelto"],
+			"simbolo": {
+				"letra": "Go",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/gondola.png",
+				"descripcion": "Huella en planta de «Góndola de supermercado»: un rectángulo de 4,00 por 0,90 metros, con la letra «Go»."
+			}
+		},
+		{
+			"id": "gondola_pared",
+			"nombre": "Estantería mural de supermercado",
+			"categoria": "supermercado",
+			"subcategoria": "lineales",
+			"etiquetas": ["mural", "lineal de pared", "estantes"],
+			"descripcion": "Estantería de una sola cara pegada a la pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 6.0],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.8, 2.0, 2.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["supermercado"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/gondola_pared.png",
+				"descripcion": "Huella en planta de «Estantería mural de supermercado»: un rectángulo de 3,00 por 0,50 metros, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "caja_registradora",
+			"nombre": "Caja con cinta",
+			"categoria": "supermercado",
+			"subcategoria": "cajas_cobro",
+			"etiquetas": ["caja", "caja registradora", "línea de cajas", "cinta"],
+			"descripcion": "Caja de supermercado: la cinta larga donde se deja la compra y, al fondo, el puesto de quien cobra. Se pasa por el lado libre.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.28], [0.45, 0.28], [0.45, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.4],
+				"fondo": [2.4, 3.0, 3.6],
+				"alto": [0.85, 0.9, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/caja_registradora.flac",
+				"propio": {
+					"sonido": "sonidos/cinta_caja.flac",
+					"volumen": 0.35,
+					"radio": 7
+				}
+			},
+			"acciones": [
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "sonidos/caja_registradora.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["supermercado"],
+			"estancias": ["cajas"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["caja_autopago"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/caja_registradora.png",
+				"descripcion": "Huella en planta de «Caja con cinta»: una ele: la cinta larga a un lado y el puesto de la cajera detrás de 1,20 por 3,00 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "caja_autopago",
+			"nombre": "Caja de autopago",
+			"categoria": "supermercado",
+			"subcategoria": "cajas_cobro",
+			"etiquetas": ["autopago", "autocobro", "caja rápida"],
+			"descripcion": "Puesto para cobrarse uno mismo: pantalla táctil, lector y una báscula para las bolsas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.1, 1.3],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.3, 1.5, 1.7]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "sonidos/caja_registradora.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["supermercado", "centro_comercial"],
+			"estancias": ["cajas"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["caja_registradora"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/caja_autopago.png",
+				"descripcion": "Huella en planta de «Caja de autopago»: un rectángulo de 1,10 por 0,70 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "carritos",
+			"nombre": "Carritos apilados",
+			"categoria": "supermercado",
+			"subcategoria": "carros_cestas",
+			"etiquetas": ["carros", "carritos", "carro de la compra"],
+			"descripcion": "Fila de carros de la compra metidos unos en otros. Alambre de metal: traquetea al tocarlo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.65],
+				"fondo": [1.5, 3.0, 6.0],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "cinco",
+					"nombre": "Cinco carros",
+					"ancho": 0.6,
+					"fondo": 1.9,
+					"alto": 1.05
+				},
+				{
+					"id": "diez",
+					"nombre": "Diez carros",
+					"ancho": 0.6,
+					"fondo": 3.0,
+					"alto": 1.05
+				},
+				{
+					"id": "veinte",
+					"nombre": "Veinte carros",
+					"ancho": 0.6,
+					"fondo": 5.2,
+					"alto": 1.05
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "carga",
+			"lugares": ["supermercado", "centro_comercial"],
+			"estancias": ["vestibulo", "sala_ventas"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["cestas"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/carritos.png",
+				"descripcion": "Huella en planta de «Carritos apilados»: un rectángulo de 0,60 por 3,00 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "carrito_suelto",
+			"nombre": "Carrito suelto",
+			"categoria": "supermercado",
+			"subcategoria": "carros_cestas",
+			"etiquetas": ["carro", "carrito", "carro abandonado"],
+			"descripcion": "Un carro de la compra abandonado en medio del pasillo. Rueda si lo empujas.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.65],
+				"fondo": [0.9, 1.0, 1.1],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["supermercado", "centro_comercial"],
+			"estancias": ["sala_ventas", "vestibulo"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/carrito_suelto.png",
+				"descripcion": "Huella en planta de «Carrito suelto»: un trapecio, más estrecho por detrás de 0,60 por 1,00 metros, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "cestas",
+			"nombre": "Cestas apiladas",
+			"categoria": "supermercado",
+			"subcategoria": "carros_cestas",
+			"etiquetas": ["cestas", "cesta de la compra"],
+			"descripcion": "Pila de cestas de plástico junto a la entrada.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.5],
+				"fondo": [0.28, 0.32, 0.4],
+				"alto": [0.4, 0.7, 1.0]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["supermercado", "tienda"],
+			"estancias": ["vestibulo", "sala_ventas"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["carritos"],
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cestas.png",
+				"descripcion": "Huella en planta de «Cestas apiladas»: un rectángulo de 0,45 por 0,32 metros, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "arcon_congelados",
+			"nombre": "Arcón de congelados",
+			"categoria": "supermercado",
+			"subcategoria": "lineales",
+			"etiquetas": ["congelados", "arcón", "isla de congelados"],
+			"descripcion": "Arcón bajo y largo con tapas correderas de cristal. Zumba y sale frío de él.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.06, 0.0], [0.94, 0.0], [1.0, 0.06], [1.0, 0.94], [0.94, 1.0], [0.06, 1.0], [0.0, 0.94], [0.0, 0.06]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 2.5],
+				"fondo": [0.8, 0.9, 1.0],
+				"alto": [0.8, 0.9, 0.95]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.5,
+					"radio": 7
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["supermercado"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "medio",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ac",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/arcon_congelados.png",
+				"descripcion": "Huella en planta de «Arcón de congelados»: un rectángulo con las esquinas cortadas de 2,00 por 0,90 metros, con la letra «Ac»."
+			}
+		},
+		{
+			"id": "palet",
+			"nombre": "Palé con mercancía",
+			"categoria": "supermercado",
+			"subcategoria": "reposicion",
+			"etiquetas": ["palé", "palet", "cajas", "reposición"],
+			"descripcion": "Palé de madera con cajas apiladas, dejado en el pasillo para reponer. Obstáculo que no suele estar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.8, 1.0],
+				"fondo": [1.2, 1.2, 1.2],
+				"alto": [0.15, 1.2, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["supermercado", "almacen", "tienda"],
+			"estancias": ["sala_ventas", "almacen"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["escalera_reposicion"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/palet.png",
+				"descripcion": "Huella en planta de «Palé con mercancía»: un rectángulo de 0,80 por 1,20 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "senal_suelo_mojado",
+			"nombre": "Señal de suelo mojado",
+			"categoria": "supermercado",
+			"subcategoria": "reposicion",
+			"etiquetas": ["suelo mojado", "señal", "cartel", "cuidado"],
+			"descripcion": "Caballete de plástico que avisa de suelo mojado. Pequeño y ligero: se cae con un golpe hueco.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.28, 0.3, 0.35],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [0.55, 0.62, 0.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["supermercado", "oficina", "centro_comercial", "hospital", "estacion"],
+			"estancias": ["sala_ventas", "pasillo", "vestibulo"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ss",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/senal_suelo_mojado.png",
+				"descripcion": "Huella en planta de «Señal de suelo mojado»: un triángulo pequeño de 0,30 por 0,40 metros, con la letra «Ss»."
+			}
+		},
+		{
+			"id": "mostrador_vitrina",
+			"nombre": "Mostrador con vitrina",
+			"categoria": "tienda",
+			"subcategoria": "mostradores_tienda",
+			"etiquetas": ["mostrador", "vitrina", "expositor de cristal"],
+			"descripcion": "Mostrador de tienda con una vitrina de cristal delante: al tocarlo suena a cristal.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 3.0],
+				"fondo": [0.6, 0.7, 0.9],
+				"alto": [0.9, 1.0, 1.3]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["tienda", "centro_comercial"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "medio",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mv",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_vitrina.png",
+				"descripcion": "Huella en planta de «Mostrador con vitrina»: un rectángulo de 1,50 por 0,70 metros, con la letra «Mv»."
+			}
+		},
+		{
+			"id": "expositor_giratorio",
+			"nombre": "Expositor giratorio",
+			"categoria": "tienda",
+			"subcategoria": "expositores_tienda",
+			"etiquetas": ["expositor", "giratorio", "postales", "torre"],
+			"descripcion": "Expositor redondo que gira, con postales o gafas. Si lo empujas, da vueltas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.7],
+				"fondo": [0.4, 0.5, 0.7],
+				"alto": [1.5, 1.7, 1.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["parado", "girando"],
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar",
+					"de": "parado",
+					"a": "girando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "girando",
+					"a": "parado"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["tienda", "centro_comercial"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Eg",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/expositor_giratorio.png",
+				"descripcion": "Huella en planta de «Expositor giratorio»: un octógono de 0,50 por 0,50 metros, con la letra «Eg»."
+			}
+		},
+		{
+			"id": "perchero_ropa",
+			"nombre": "Perchero de ropa",
+			"categoria": "tienda",
+			"subcategoria": "expositores_tienda",
+			"etiquetas": ["burra", "perchero", "colgador de ropa"],
+			"descripcion": "Barra con ruedas llena de ropa colgada. Blanda al tocar; por debajo de la ropa pasa el bastón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.0],
+				"fondo": [0.5, 0.55, 0.6],
+				"alto": [1.4, 1.6, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["tienda", "centro_comercial"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/perchero_ropa.png",
+				"descripcion": "Huella en planta de «Perchero de ropa»: un rectángulo de 1,50 por 0,55 metros, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "perchero_circular",
+			"nombre": "Perchero circular de ropa",
+			"categoria": "tienda",
+			"subcategoria": "expositores_tienda",
+			"etiquetas": ["perchero redondo", "circular"],
+			"descripcion": "Perchero redondo cargado de ropa, en medio de la tienda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.2],
+				"fondo": [0.9, 1.0, 1.2],
+				"alto": [1.3, 1.4, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["tienda", "centro_comercial"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/perchero_circular.png",
+				"descripcion": "Huella en planta de «Perchero circular de ropa»: un círculo de 1,00 por 1,00 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "probador",
+			"nombre": "Probador",
+			"categoria": "tienda",
+			"subcategoria": "probadores_asientos",
+			"etiquetas": ["probador", "cabina", "vestidor"],
+			"descripcion": "Cabina de tres paredes finas con una cortina delante. Con la cortina corrida se puede entrar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.94, 1.0], [0.94, 0.06], [0.06, 0.06], [0.06, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.1, 1.5],
+				"fondo": [1.0, 1.2, 1.5],
+				"alto": [2.0, 2.1, 2.4]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cortina.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cortina.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "estructura",
+			"lugares": ["tienda", "centro_comercial"],
+			"estancias": ["probador"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["banco_tienda"],
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/probador.png",
+				"descripcion": "Huella en planta de «Probador»: una U de paredes finas, abierta por delante, donde va la cortina de 1,10 por 1,20 metros, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "maniqui",
+			"nombre": "Maniquí",
+			"categoria": "tienda",
+			"subcategoria": "expositores_tienda",
+			"etiquetas": ["maniquí", "maniqui", "figura"],
+			"descripcion": "Maniquí de pie sobre una base redonda. Del tamaño de una persona, pero no contesta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [1.6, 1.8, 1.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["tienda", "centro_comercial"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/maniqui.png",
+				"descripcion": "Huella en planta de «Maniquí»: un óvalo de 0,45 por 0,40 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "banco_tienda",
+			"nombre": "Banco",
+			"categoria": "tienda",
+			"subcategoria": "probadores_asientos",
+			"etiquetas": ["banco", "banqueta", "asiento"],
+			"descripcion": "Banco acolchado sin respaldo para sentarse a probarse zapatos o a esperar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.8],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [0.42, 0.45, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["tienda", "centro_comercial"],
+			"estancias": ["sala_ventas", "probador"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["probador"],
+			"simbolo": {
+				"letra": "Bt",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_tienda.png",
+				"descripcion": "Huella en planta de «Banco»: un rectángulo de 1,20 por 0,45 metros, con la letra «Bt»."
+			}
+		},
+		{
+			"id": "cartel_caballete",
+			"nombre": "Cartel caballete",
+			"categoria": "tienda",
+			"subcategoria": "expositores_tienda",
+			"etiquetas": ["caballete", "cartel", "pizarra de bar", "menú"],
+			"descripcion": "Cartel de dos caras en forma de tijera, plantado delante de la puerta del comercio.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["suelo", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["tienda", "bar", "calle"],
+			"estancias": ["acera", "sala_ventas"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cartel_caballete.png",
+				"descripcion": "Huella en planta de «Cartel caballete»: un rectángulo de 0,60 por 0,60 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "puerta_giratoria",
+			"nombre": "Puerta giratoria",
+			"categoria": "edificio",
+			"subcategoria": "accesos",
+			"etiquetas": ["puerta giratoria", "molinete"],
+			"descripcion": "Puerta giratoria: un tambor redondo de cristal con hojas que dan vueltas. Como obstáculo es un cilindro; hay que entrar acompasando el paso.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.8, 2.0, 3.0],
+				"fondo": [1.8, 2.0, 3.0],
+				"alto": [2.2, 2.3, 2.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["parado", "girando"],
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"de": "parado",
+					"a": "girando",
+					"sonido": "sonidos/puerta_giratoria.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "girando",
+					"a": "parado"
+				}
+			],
+			"paso_libre": ["girando"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["oficina", "hotel", "centro_comercial", "banco"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "transparente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pg",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_giratoria.png",
+				"descripcion": "Huella en planta de «Puerta giratoria»: un círculo de 2,00 por 2,00 metros, con la letra «Pg»."
+			}
+		},
+		{
+			"id": "torno",
+			"nombre": "Torno de entrada",
+			"categoria": "edificio",
+			"subcategoria": "accesos",
+			"etiquetas": ["torno", "molinete", "control de acceso"],
+			"descripcion": "Torno de trípode: un cuerpo metálico estrecho con un brazo que cierra el paso hasta que cede.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.35], [0.35, 0.35], [0.35, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.75, 0.8, 1.0],
+				"fondo": [0.9, 1.1, 1.3],
+				"alto": [0.95, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "pasar",
+					"nombre": "Pasar",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:torno.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["oficina", "estacion", "polideportivo", "gimnasio"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["trabajo_y_taller/reloj_fichar"],
+			"simbolo": {
+				"letra": "To",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/torno.png",
+				"descripcion": "Huella en planta de «Torno de entrada»: una ele de 0,80 por 1,10 metros, con la letra «To»."
+			}
+		},
+		{
+			"id": "arco_seguridad",
+			"nombre": "Arcos antihurto",
+			"categoria": "edificio",
+			"subcategoria": "accesos",
+			"etiquetas": ["arco", "antihurto", "alarma"],
+			"descripcion": "Dos paneles finos y altos a los lados de la puerta de la tienda. Se pasa entre ellos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.06, 0.0], [0.06, 0.45], [0.94, 0.45], [0.94, 0.0], [1.0, 0.0], [1.0, 1.0], [0.94, 1.0], [0.94, 0.55], [0.06, 0.55], [0.06, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.8],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.4, 1.6, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Arcos de seguridad: pasas entre dos paneles.",
+			"funcion": "control_acceso",
+			"lugares": ["tienda", "supermercado", "centro_comercial", "biblioteca"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "As",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/arco_seguridad.png",
+				"descripcion": "Huella en planta de «Arcos antihurto»: dos paneles finos unidos por una banda en el suelo de 1,20 por 0,40 metros, con la letra «As»."
+			}
+		},
+		{
+			"id": "columna",
+			"nombre": "Columna",
+			"categoria": "edificio",
+			"subcategoria": "estructura_edificio",
+			"etiquetas": ["columna", "pilar"],
+			"descripcion": "Columna redonda en medio de la sala. Dura; no avisa hasta que se toca.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.45, 0.9],
+				"fondo": [0.3, 0.45, 0.9],
+				"alto": [2.4, 3.0, 5.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["oficina", "tienda", "supermercado", "centro_comercial"],
+			"estancias": ["vestibulo", "sala_ventas", "zona_trabajo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Co",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna.png",
+				"descripcion": "Huella en planta de «Columna»: un círculo de 0,45 por 0,45 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "extintor",
+			"nombre": "Extintor colgado",
+			"categoria": "edificio",
+			"subcategoria": "estructura_edificio",
+			"etiquetas": ["extintor", "matafuegos", "incendios"],
+			"descripcion": "Extintor colgado de la pared a un metro del suelo. El bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.13, 0.15, 0.18],
+				"fondo": [0.13, 0.15, 0.2],
+				"alto": [0.45, 0.5, 0.6]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["oficina", "tienda", "supermercado"],
+			"estancias": ["vestibulo", "pasillo", "zona_trabajo", "sala_ventas"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ex",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/extintor.png",
+				"descripcion": "Huella en planta de «Extintor colgado»: un círculo de 0,15 por 0,15 metros, colgado a 1,00 metros del suelo, con la letra «Ex»."
+			}
+		},
+		{
+			"id": "felpudo_entrada",
+			"nombre": "Felpudo de entrada",
+			"categoria": "edificio",
+			"subcategoria": "accesos",
+			"etiquetas": ["felpudo", "alfombra de entrada"],
+			"descripcion": "Felpudo ancho detrás de la puerta. Se nota bajo los pies: acabas de entrar.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.8, 3.0],
+				"fondo": [0.6, 1.0, 2.0],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"suelo": "moqueta",
+			"funcion": "referencia",
+			"lugares": ["oficina", "tienda", "supermercado", "banco"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["tiendas/enfundador_paraguas"],
+			"simbolo": {
+				"letra": "Fe",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/felpudo_entrada.png",
+				"descripcion": "Huella en planta de «Felpudo de entrada»: un rectángulo de 1,80 por 1,00 metros, con la letra «Fe»."
+			}
+		},
+		{
+			"id": "mesa_bench",
+			"nombre": "Bancada de puestos compartidos",
+			"categoria": "oficina",
+			"subcategoria": "mesas_trabajo",
+			"etiquetas": ["bench", "bancada", "puestos compartidos", "mesa operativa", "open space"],
+			"descripcion": "Mesa larga y doble donde se trabaja en dos filas, cara a cara, separados por una mampara baja a lo largo del centro. Solo tiene patas en los extremos: el bastón entra por debajo hasta las sillas del otro lado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.47], [0.98, 0.47], [0.98, 0.53], [1.0, 0.53], [1.0, 1.0], [0.0, 1.0], [0.0, 0.53], [0.02, 0.53], [0.02, 0.47], [0.0, 0.47]]
+			},
+			"medidas": {
+				"ancho": [2.4, 2.8, 4.8],
+				"fondo": [1.4, 1.6, 1.7],
+				"alto": [0.72, 0.74, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "cuatro_puestos",
+					"nombre": "De cuatro puestos",
+					"ancho": 2.8,
+					"fondo": 1.6,
+					"alto": 0.74
+				},
+				{
+					"id": "seis_puestos",
+					"nombre": "De seis puestos",
+					"ancho": 4.2,
+					"fondo": 1.6,
+					"alto": 0.74
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"sonido": "sonidos/silla_ruedas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["silla_giratoria", "mampara", "papelera"],
+			"simbolo": {
+				"letra": "Mb",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_bench.png",
+				"descripcion": "Huella en planta de «Bancada de puestos compartidos»: un tablero largo y doble, con una mampara baja a lo largo del centro de 2,80 por 1,60 metros, con la letra «Mb»."
+			}
+		},
+		{
+			"id": "mesa_elevable",
+			"nombre": "Mesa elevable",
+			"categoria": "oficina",
+			"subcategoria": "mesas_trabajo",
+			"etiquetas": ["mesa elevable", "mesa regulable", "mesa de pie", "standing desk"],
+			"descripcion": "Mesa de despacho sobre dos columnas con motor: un botón la sube a la altura del pecho para trabajar de pie y otro la baja. La altura cambia de un rato a otro y al moverse zumba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.4, 1.8],
+				"fondo": [0.7, 0.8, 0.9],
+				"alto": [0.65, 0.74, 1.25]
+			},
+			"variantes": [
+				{
+					"id": "sentado",
+					"nombre": "A la altura de sentarse",
+					"ancho": 1.4,
+					"fondo": 0.8,
+					"alto": 0.74
+				},
+				{
+					"id": "de_pie",
+					"nombre": "Subida para trabajar de pie",
+					"ancho": 1.4,
+					"fondo": 0.8,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "ofi_subir_mesa",
+					"nombre": "Subir la mesa",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				},
+				{
+					"id": "ofi_bajar_mesa",
+					"nombre": "Bajar la mesa",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["silla_giratoria"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_elevable.png",
+				"descripcion": "Huella en planta de «Mesa elevable»: un rectángulo de 1,40 por 0,80 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "cubiculo",
+			"nombre": "Cubículo de oficina",
+			"categoria": "oficina",
+			"subcategoria": "mesas_trabajo",
+			"etiquetas": ["cubículo", "box", "puesto cerrado", "cabina de trabajo"],
+			"descripcion": "Puesto de trabajo encerrado por tres paneles de tela a la altura del hombro, abierto por delante. Dentro, la mesa en ele y la silla; fuera, un pasillo entre cubículos iguales que se sigue con la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.96, 1.0], [0.96, 0.04], [0.04, 0.04], [0.04, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.4, 1.6, 2.0],
+				"fondo": [1.4, 1.6, 2.0],
+				"alto": [1.2, 1.4, 1.6]
+			},
+			"colocacion": ["suelo", "pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"sonido": "sonidos/silla_ruedas.flac"
+				},
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["oficina"],
+			"estancias": ["zona_trabajo"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["silla_giratoria", "archivador"],
+			"simbolo": {
+				"letra": "Cu",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cubiculo.png",
+				"descripcion": "Huella en planta de «Cubículo de oficina»: una U abierta por delante de 1,60 por 1,60 metros, con la letra «Cu»."
+			}
+		},
+		{
+			"id": "mampara_vidrio",
+			"nombre": "Mampara de vidrio de despacho",
+			"categoria": "oficina",
+			"subcategoria": "complementos_oficina",
+			"etiquetas": ["mampara de vidrio", "tabique de cristal", "cristalera", "pecera", "puerta de cristal"],
+			"descripcion": "Pared de cristal del suelo al techo que separa un despacho o una sala de reuniones, con perfiles de aluminio y una puerta de vidrio. Se choca con ella sin haberla notado; el bastón da un golpe seco y agudo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 6.0],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [2.4, 2.7, 3.0]
+			},
+			"variantes": [
+				{
+					"id": "tramo",
+					"nombre": "Tramo de 1 m",
+					"ancho": 1.0,
+					"fondo": 0.1,
+					"alto": 2.7
+				},
+				{
+					"id": "con_puerta",
+					"nombre": "De 3 m con puerta",
+					"ancho": 3.0,
+					"fondo": 0.1,
+					"alto": 2.7
+				},
+				{
+					"id": "frente",
+					"nombre": "Frente de 6 m",
+					"ancho": 6.0,
+					"fondo": 0.1,
+					"alto": 2.7
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["oficina"],
+			"estancias": ["despacho", "sala_reuniones", "zona_trabajo"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"relacionados": ["mesa_reuniones"],
+			"simbolo": {
+				"letra": "Mv",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mampara_vidrio.png",
+				"descripcion": "Huella en planta de «Mampara de vidrio de despacho»: un rectángulo de 3,00 por 0,10 metros, con la letra «Mv»."
+			}
+		},
+		{
+			"id": "mesa_abatible_formacion",
+			"nombre": "Mesas abatibles de formación",
+			"categoria": "oficina",
+			"subcategoria": "reuniones",
+			"etiquetas": ["mesa abatible", "mesa de formación", "mesa plegable con ruedas", "mesa nido de aula"],
+			"descripcion": "Mesas estrechas sobre ruedas cuyo tablero se abate en vertical para guardarlas encajadas unas en otras. Abiertas forman filas en la sala; plegadas, una hilera alta contra la pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.4, 1.8],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.72, 0.74, 1.4]
+			},
+			"variantes": [
+				{
+					"id": "abierta",
+					"nombre": "Abierta",
+					"ancho": 1.4,
+					"fondo": 0.6,
+					"alto": 0.74
+				},
+				{
+					"id": "plegada",
+					"nombre": "Plegada en vertical",
+					"ancho": 1.4,
+					"fondo": 0.65,
+					"alto": 1.35
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["desplegado", "plegado"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "transporte:carrito.flac"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["oficina", "colegio", "universidad", "administracion"],
+			"estancias": ["sala_reuniones", "aula", "salon_actos"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["mesa_reuniones"],
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_abatible_formacion.png",
+				"descripcion": "Huella en planta de «Mesas abatibles de formación»: un rectángulo de 1,40 por 0,60 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "rack_servidores",
+			"nombre": "Armario de servidores",
+			"categoria": "oficina",
+			"subcategoria": "instalaciones_oficina",
+			"etiquetas": ["rack", "armario rack", "servidores", "CPD", "armario de comunicaciones"],
+			"descripcion": "Armario metálico alto y hondo, con la puerta de rejilla, lleno de aparatos con lucecitas. Sus ventiladores rugen sin parar y sale aire caliente por detrás: se oye desde el pasillo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.6, 0.8],
+				"fondo": [0.6, 1.0, 1.2],
+				"alto": [0.5, 2.0, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "mural",
+					"nombre": "Mural, colgado",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 0.6
+				},
+				{
+					"id": "medio",
+					"nombre": "Medio",
+					"ancho": 0.6,
+					"fondo": 1.0,
+					"alto": 1.2
+				},
+				{
+					"id": "completo",
+					"nombre": "Completo",
+					"ancho": 0.6,
+					"fondo": 1.0,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/oficina_servidores.flac",
+					"volumen": 0.5,
+					"radio": 8
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["oficina", "colegio", "universidad", "banco"],
+			"estancias": ["cuarto_instalaciones", "zona_trabajo"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Rs",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/rack_servidores.png",
+				"descripcion": "Huella en planta de «Armario de servidores»: un rectángulo de 0,60 por 1,00 metros, con la letra «Rs»."
+			}
+		},
+		{
+			"id": "split_aire",
+			"nombre": "Aire acondicionado de pared",
+			"categoria": "oficina",
+			"subcategoria": "instalaciones_oficina",
+			"etiquetas": ["split", "aire acondicionado", "climatizador", "bomba de calor"],
+			"descripcion": "Aparato alargado colgado en lo alto de la pared, por encima de la cabeza. No se toca, pero encendido sopla aire frío hacia abajo y zumba: marca esa pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.1],
+				"fondo": [0.2, 0.25, 0.3],
+				"alto": [0.25, 0.3, 0.35]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 2.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.25,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["oficina", "tienda", "colegio", "vivienda"],
+			"estancias": ["zona_trabajo", "despacho", "sala_reuniones", "sala_ventas"],
+			"obstaculo": "aereo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Sa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/split_aire.png",
+				"descripcion": "Huella en planta de «Aire acondicionado de pared»: un rectángulo de 0,90 por 0,25 metros, colgado a 2,20 metros del suelo, con la letra «Sa»."
+			}
+		},
+		{
+			"id": "cocina_office",
+			"nombre": "Módulo de office",
+			"categoria": "oficina",
+			"subcategoria": "office_descanso",
+			"etiquetas": ["office", "kitchenette", "cocina de office", "zona de café", "minicocina"],
+			"descripcion": "Mueble de cocina compacto: fregadero, una nevera pequeña debajo y un armario arriba con el microondas. Alrededor siempre hay alguien con un café; el suelo junto al fregadero puede estar mojado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 2.4],
+				"fondo": [0.6, 0.62, 0.65],
+				"alto": [0.9, 2.1, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "compacto",
+					"nombre": "Compacto, de 1,20 m",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 2.1
+				},
+				{
+					"id": "normal",
+					"nombre": "De 1,80 m",
+					"ancho": 1.8,
+					"fondo": 0.62,
+					"alto": 2.1
+				},
+				{
+					"id": "grande",
+					"nombre": "De 2,40 m",
+					"ancho": 2.4,
+					"fondo": 0.62,
+					"alto": 2.1
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.3,
+					"radio": 4
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				},
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "electrodomestico",
+			"lugares": ["oficina"],
+			"estancias": ["cocina", "zona_trabajo"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["maquina_cafe", "dispensador_agua"],
+			"simbolo": {
+				"letra": "Co",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cocina_office.png",
+				"descripcion": "Huella en planta de «Módulo de office»: un rectángulo de 1,80 por 0,62 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "destructora_papel",
+			"nombre": "Destructora de papel",
+			"categoria": "maquinas",
+			"subcategoria": "reprografia",
+			"etiquetas": ["destructora", "trituradora de papel", "destructora de documentos"],
+			"descripcion": "Papelera alta con un cabezal encima y una ranura por donde se meten los papeles. Al meter uno arranca con un rugido de cuchillas y se para sola.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.6],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [0.6, 0.7, 0.9]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/oficina_destructora.flac"
+			},
+			"acciones": [
+				{
+					"id": "ofi_destruir",
+					"nombre": "Destruir papeles",
+					"sonido": "sonidos/oficina_destructora.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["oficina", "administracion", "banco"],
+			"estancias": ["zona_trabajo", "despacho"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["fotocopiadora", "papelera"],
+			"simbolo": {
+				"letra": "Dp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/destructora_papel.png",
+				"descripcion": "Huella en planta de «Destructora de papel»: un rectángulo de 0,40 por 0,30 metros, con la letra «Dp»."
+			}
+		},
+		{
+			"id": "verificador_precios",
+			"nombre": "Lector de precios",
+			"categoria": "supermercado",
+			"subcategoria": "cajas_cobro",
+			"etiquetas": ["verificador de precios", "consultor de precios", "lector de códigos", "comprobador de precios"],
+			"descripcion": "Pantallita con un lector de códigos sujeta a una columna o al final de un pasillo, a la altura del pecho. Al pasar un producto pita y dice o muestra el precio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.35],
+				"fondo": [0.1, 0.15, 0.2],
+				"alto": [0.3, 0.35, 0.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "ofi_consultar_precio",
+					"nombre": "Pasar el código por el lector",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["supermercado", "tienda", "centro_comercial"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"relacionados": ["gondola"],
+			"simbolo": {
+				"letra": "Vp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/verificador_precios.png",
+				"descripcion": "Huella en planta de «Lector de precios»: un rectángulo de 0,30 por 0,15 metros, colgado a 1,20 metros del suelo, con la letra «Vp»."
+			}
+		},
+		{
+			"id": "mural_refrigerado",
+			"nombre": "Mural refrigerado abierto",
+			"categoria": "supermercado",
+			"subcategoria": "lineales",
+			"etiquetas": ["mural refrigerado", "mural de lácteos", "lineal de frío", "vitrina refrigerada abierta"],
+			"descripcion": "Estantería refrigerada sin puertas contra la pared, con lácteos o fruta cortada. Por delante cae una cortina de aire frío que se nota en la cara y zumba todo el rato.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.25, 2.5, 3.75],
+				"fondo": [0.85, 0.95, 1.1],
+				"alto": [1.9, 2.0, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "un_modulo",
+					"nombre": "De un módulo",
+					"ancho": 1.25,
+					"fondo": 0.95,
+					"alto": 2.0
+				},
+				{
+					"id": "dos_modulos",
+					"nombre": "De dos módulos",
+					"ancho": 2.5,
+					"fondo": 0.95,
+					"alto": 2.0
+				},
+				{
+					"id": "tres_modulos",
+					"nombre": "De tres módulos",
+					"ancho": 3.75,
+					"fondo": 0.95,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.5,
+					"radio": 8
+				}
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["supermercado", "tienda"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["armario_refrigerado", "arcon_congelados"],
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mural_refrigerado.png",
+				"descripcion": "Huella en planta de «Mural refrigerado abierto»: un rectángulo de 2,50 por 0,95 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "armario_refrigerado",
+			"nombre": "Armario refrigerado con puertas de cristal",
+			"categoria": "supermercado",
+			"subcategoria": "lineales",
+			"etiquetas": ["armario refrigerado", "nevera de bebidas", "armario de congelados", "cámara expositora"],
+			"descripcion": "Frigorífico alto de bebidas o de congelados con puertas de cristal que se abren hacia el pasillo. El cristal está frío y empañado; zumba y la puerta se cierra sola.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.3, 2.0],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.9, 2.0, 2.1]
+			},
+			"variantes": [
+				{
+					"id": "una_puerta",
+					"nombre": "De una puerta",
+					"ancho": 0.6,
+					"fondo": 0.7,
+					"alto": 2.0
+				},
+				{
+					"id": "dos_puertas",
+					"nombre": "De dos puertas",
+					"ancho": 1.3,
+					"fondo": 0.7,
+					"alto": 2.0
+				},
+				{
+					"id": "tres_puertas",
+					"nombre": "De tres puertas",
+					"ancho": 2.0,
+					"fondo": 0.75,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.45,
+					"radio": 6
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["supermercado", "tienda", "bar"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["mural_refrigerado"],
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_refrigerado.png",
+				"descripcion": "Huella en planta de «Armario refrigerado con puertas de cristal»: un rectángulo de 1,30 por 0,70 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "mesa_degustacion",
+			"nombre": "Mesa de degustación de promoción",
+			"categoria": "supermercado",
+			"subcategoria": "servicios_super",
+			"etiquetas": ["degustación", "stand de promoción", "mesa de promoción", "punto de degustación"],
+			"descripcion": "Mesita con faldón y una persona detrás que ofrece probar algo, puesta en mitad del pasillo unos días. Huele a comida y la promotora habla a quien pasa.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.4, 0.6, 0.8],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mostrador",
+			"lugares": ["supermercado", "centro_comercial"],
+			"estancias": ["sala_ventas", "galeria_comercial"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"relacionados": ["gondola"],
+			"simbolo": {
+				"letra": "Md",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_degustacion.png",
+				"descripcion": "Huella en planta de «Mesa de degustación de promoción»: un rectángulo de 0,80 por 0,60 metros, con la letra «Md»."
+			}
+		},
+		{
+			"id": "escalera_reposicion",
+			"nombre": "Escalera de reposición con ruedas",
+			"categoria": "supermercado",
+			"subcategoria": "reposicion",
+			"etiquetas": ["escalera de reposición", "escalera de almacén", "escalera con plataforma", "escalera rodante"],
+			"descripcion": "Escalera de metal de varios peldaños con una plataforma arriba y barandillas, sobre ruedas. Rueda si la empujas vacía; al subirse, se frena y ya no se mueve.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.225, 0.0], [0.775, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.7, 0.8],
+				"fondo": [0.9, 1.2, 1.6],
+				"alto": [1.2, 1.6, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "tres_peldanos",
+					"nombre": "De tres peldaños",
+					"ancho": 0.6,
+					"fondo": 0.9,
+					"alto": 1.4
+				},
+				{
+					"id": "cinco_peldanos",
+					"nombre": "De cinco peldaños",
+					"ancho": 0.7,
+					"fondo": 1.3,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "escalera/subir"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse",
+					"sonido": "escalera/bajar"
+				},
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["supermercado", "tienda", "almacen"],
+			"estancias": ["sala_ventas", "almacen", "trastienda"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal", "desnivel"],
+			"frecuencia": "ocasional",
+			"relacionados": ["palet"],
+			"simbolo": {
+				"letra": "Er",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_reposicion.png",
+				"descripcion": "Huella en planta de «Escalera de reposición con ruedas»: un trapecio, más estrecho por detrás de 0,70 por 1,20 metros, con la letra «Er»."
+			}
+		},
+		{
+			"id": "prensa_carton",
+			"nombre": "Prensa de cartón",
+			"categoria": "supermercado",
+			"subcategoria": "reposicion",
+			"etiquetas": ["prensa de cartón", "compactadora", "empacadora", "embaladora de cartón"],
+			"descripcion": "Máquina del tamaño de un armario en la trastienda, con una puerta enrejada por donde se mete el cartón. En marcha la placa baja con un zumbido hidráulico y un golpe sordo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.1, 1.3],
+				"fondo": [0.7, 0.8, 1.0],
+				"alto": [1.9, 2.1, 2.5]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:prensa_industrial.flac",
+					"volumen": 0.5,
+					"radio": 8,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["supermercado", "tienda", "almacen", "centro_comercial"],
+			"estancias": ["trastienda", "almacen", "muelle_carga"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/prensa_carton.png",
+				"descripcion": "Huella en planta de «Prensa de cartón»: un rectángulo de 1,10 por 0,80 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "exprimidora_naranjas",
+			"nombre": "Exprimidora de naranjas de autoservicio",
+			"categoria": "supermercado",
+			"subcategoria": "servicios_super",
+			"etiquetas": ["exprimidora", "zumo de naranja", "exprimidor automático", "zumo recién exprimido"],
+			"descripcion": "Máquina sobre un mueble, más alta que una persona, con una cesta de naranjas arriba y una cúpula de plástico. Al pulsar, las naranjas caen rodando, las cuchillas las parten y el zumo gotea en la botella.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.6, 1.8, 2.0]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/oficina_exprimidora.flac"
+			},
+			"acciones": [
+				{
+					"id": "ofi_exprimir",
+					"nombre": "Exprimir zumo",
+					"sonido": "sonidos/oficina_exprimidora.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["supermercado"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "ocasional",
+			"relacionados": ["mural_refrigerado"],
+			"simbolo": {
+				"letra": "En",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/exprimidora_naranjas.png",
+				"descripcion": "Huella en planta de «Exprimidora de naranjas de autoservicio»: un rectángulo de 0,70 por 0,60 metros, con la letra «En»."
+			}
+		},
+		{
+			"id": "maquina_reciclaje_envases",
+			"nombre": "Máquina de devolución de envases",
+			"categoria": "supermercado",
+			"subcategoria": "servicios_super",
+			"etiquetas": ["devolución de envases", "reciclaje de envases", "máquina de reciclaje", "retorno de envases", "SDDR"],
+			"descripcion": "Máquina grande empotrada en la pared junto a la entrada, con un agujero redondo a la altura del pecho donde se meten latas y botellas. Una cinta las arrastra, las aplasta con un crujido y pita al dar el vale.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 2.0],
+				"fondo": [0.7, 0.9, 1.0],
+				"alto": [1.8, 1.9, 2.0]
+			},
+			"variantes": [
+				{
+					"id": "una_boca",
+					"nombre": "De una boca",
+					"ancho": 0.9,
+					"fondo": 0.9,
+					"alto": 1.9
+				},
+				{
+					"id": "doble",
+					"nombre": "Doble, latas y botellas",
+					"ancho": 1.9,
+					"fondo": 0.9,
+					"alto": 1.9
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/oficina_reciclaje_envases.flac",
+				"propio": {
+					"sonido": "fuente/maquina_expendedora",
+					"volumen": 0.25,
+					"radio": 5
+				}
+			},
+			"acciones": [
+				{
+					"id": "ofi_devolver_envase",
+					"nombre": "Meter un envase",
+					"sonido": "sonidos/oficina_reciclaje_envases.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["supermercado", "centro_comercial"],
+			"estancias": ["vestibulo", "sala_ventas"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["carritos"],
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/maquina_reciclaje_envases.png",
+				"descripcion": "Huella en planta de «Máquina de devolución de envases»: un rectángulo de 1,00 por 0,90 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "reja_tijera",
+			"nombre": "Reja de tijera",
+			"categoria": "edificio",
+			"subcategoria": "accesos",
+			"etiquetas": ["reja de tijera", "reja plegable", "cierre de ballesta", "reja de seguridad"],
+			"descripcion": "Reja de barras metálicas que se pliega como un acordeón a un lado de la entrada de la tienda. Recogida es un bulto estrecho junto al marco; extendida, cierra el paso y suena a hierro.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.25, 0.6], [0.5, 0.0], [0.75, 0.6], [1.0, 0.0], [1.0, 0.4], [0.75, 1.0], [0.5, 0.4], [0.25, 1.0], [0.0, 0.4]]
+			},
+			"medidas": {
+				"ancho": [0.35, 2.0, 3.5],
+				"fondo": [0.08, 0.12, 0.2],
+				"alto": [2.0, 2.3, 2.6]
+			},
+			"variantes": [
+				{
+					"id": "recogida",
+					"nombre": "Recogida a un lado",
+					"ancho": 0.35,
+					"fondo": 0.15,
+					"alto": 2.3
+				},
+				{
+					"id": "cerrada",
+					"nombre": "Extendida, cerrando",
+					"ancho": 2.0,
+					"fondo": 0.1,
+					"alto": 2.3
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"estados": ["desplegado", "plegado"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "hogar:valla_obra.flac"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "hogar:valla_obra.flac"
+				}
+			],
+			"paso_libre": ["plegado"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["tienda", "servicios", "calle"],
+			"estancias": ["vestibulo", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Rt",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/reja_tijera.png",
+				"descripcion": "Huella en planta de «Reja de tijera»: un zigzag fino de barras cruzadas de 2,00 por 0,12 metros, con la letra «Rt»."
+			}
+		}
+	]
+}

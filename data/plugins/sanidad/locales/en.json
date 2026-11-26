@@ -1,0 +1,1097 @@
+{
+	"nombre": "Healthcare",
+	"descripcion": "Health centre, hospital, emergency department, pharmacy, dentist and rehabilitation: waiting rooms, consulting rooms, wards, corridors with trolleys and wheelchairs, and the equipment that makes sounds.",
+	"categorias": {
+		"admision": "Reception and waiting room",
+		"consulta": "Consulting room",
+		"hospitalizacion": "Hospital ward",
+		"pasillos": "Corridors and mobile equipment",
+		"urgencias": "Emergency, radiology and blood tests",
+		"farmacia": "Pharmacy",
+		"dentista": "Dentist",
+		"rehabilitacion": "Rehabilitation and physiotherapy"
+	},
+	"subcategorias": {
+		"asientos_espera": "Waiting seats",
+		"mostradores_admision": "Reception desks",
+		"turnos_avisos": "Queue tickets and calls",
+		"higiene_manos": "Hand hygiene",
+		"para_la_espera": "While you wait",
+		"mesa_asientos_consulta": "Consulting desk and seats",
+		"camillas_consulta": "Examination couches",
+		"medida_diagnostico": "Measuring and diagnostic equipment",
+		"material_consulta": "Supplies and washing",
+		"camas_hospital": "Beds and cots",
+		"muebles_habitacion": "Ward room furniture",
+		"aparatos_cabecera": "Bedside equipment",
+		"control_planta": "Nurses' station",
+		"movilidad_personal": "Wheelchairs, walkers and crutches",
+		"camillas_carros": "Trolleys and carts",
+		"pared_pasillo": "Corridor walls and doors",
+		"limpieza_residuos": "Cleaning and waste",
+		"triaje_boxes": "Triage and bays",
+		"radiologia": "Radiology",
+		"extracciones_tratamiento": "Blood tests and treatments",
+		"mostradores_farmacia": "Pharmacy counters",
+		"expositores_rebotica": "Displays and dispensary",
+		"servicios_farmacia": "Customer services",
+		"fachada_farmacia": "Shop front",
+		"equipo_dental": "Chair and furniture",
+		"rayos_dental": "Dental X-ray",
+		"marcha_equilibrio": "Gait and balance",
+		"camillas_fisioterapia": "Treatment couches",
+		"aparatos_ejercicio": "Exercise equipment",
+		"material_fisioterapia": "Loose equipment"
+	},
+	"estados": {
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"apagado": "Off",
+		"encendido": "On",
+		"san_recogido": "Upright",
+		"san_reclinado": "Reclined",
+		"funcionando": "Running"
+	},
+	"objetos": {
+		"bancada_espera": {
+			"nombre": "Health centre beam seating",
+			"descripcion": "Perforated metal seats joined on a beam, against the wall. Cold and hard; the armrests at the ends help you count the places.",
+			"etiquetas": ["beam seating", "waiting room seats", "tandem seating"],
+			"variantes": {
+				"dos_plazas": "Two seats",
+				"tres_plazas": "Three seats",
+				"cuatro_plazas": "Four seats",
+				"cinco_plazas": "Five seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Health centre beam seating”: a rectangle, 1.70 by 0.65 metres, marked with the letters “Be”."
+		},
+		"silla_alta_cadera": {
+			"nombre": "High-seat hip chair",
+			"descripcion": "Chair with a higher seat than usual and firm arms, for people who cannot bend at the hip. You sit almost standing.",
+			"etiquetas": ["high-seat chair", "hip chair", "orthopaedic chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “High-seat hip chair”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Sa”."
+		},
+		"mostrador_admision": {
+			"nombre": "Patient reception desk",
+			"descripcion": "Long appointments desk, standing height with a lower, recessed section for wheelchairs. There is usually a glass screen on top with a gap to talk through.",
+			"etiquetas": ["reception desk", "admissions desk", "appointments desk"],
+			"variantes": {
+				"dos_puestos": "Two positions",
+				"tres_puestos": "Three positions"
+			},
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Patient reception desk”: a rectangle with a recess at the front: the low section, where a wheelchair fits, 2.40 by 0.80 metres, marked with the letters “Ma”."
+		},
+		"linea_confidencialidad": {
+			"nombre": "Privacy waiting line",
+			"descripcion": "Raised adhesive strip on the floor, a couple of steps from the counter: wait here until the person ahead has finished. You feel it underfoot and with the cane.",
+			"etiquetas": ["waiting line", "privacy line", "wait here strip"],
+			"aviso": "Waiting line: wait here for your turn.",
+			"imagen": "Footprint of “Privacy waiting line”: a rectangle, 1.20 by 0.10 metres, marked with the letters “Lc”."
+		},
+		"quiosco_citas": {
+			"nombre": "Health card check-in kiosk",
+			"descripcion": "Free-standing machine by the entrance: put your health card in the slot at waist height, it beeps and prints a slip with your queue number.",
+			"etiquetas": ["check-in kiosk", "self check-in", "queue kiosk"],
+			"acciones": {
+				"san_pedir_cita": "Get a queue ticket with your health card"
+			},
+			"imagen": "Footprint of “Health card check-in kiosk”: a trapezoid, narrower at the back, 0.55 by 0.50 metres, marked with the letters “Qc”."
+		},
+		"pantalla_turnos": {
+			"nombre": "Queue call display",
+			"descripcion": "Screen hung from the ceiling or the wall, above head height. Every so often it chimes and announces a number and a room: it helps you locate the waiting room.",
+			"etiquetas": ["queue display", "patient call screen", "now serving display"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Queue call display”: a rectangle, 1.00 by 0.12 metres, hanging 1.90 metres above the floor, marked with the letters “Pt”."
+		},
+		"gel_pared": {
+			"nombre": "Wall hand gel dispenser",
+			"descripcion": "Small plastic box screwed to the wall at chest height, with a lever underneath. It sticks out a hand's width and the cane misses it.",
+			"etiquetas": ["hand gel dispenser", "hand sanitiser", "sanitiser dispenser"],
+			"acciones": {
+				"san_echar_gel": "Use the hand gel"
+			},
+			"imagen": "Footprint of “Wall hand gel dispenser”: a rectangle, 0.12 by 0.12 metres, hanging 1.00 metres above the floor, marked with the letters “Gp”."
+		},
+		"gel_pie": {
+			"nombre": "Pedal-operated gel stand",
+			"descripcion": "Thin metal column on a heavy base, with the gel bottle on top and a pedal at the bottom. It usually stands right in the way, by the door.",
+			"etiquetas": ["gel stand", "pedal sanitiser", "sanitiser station"],
+			"acciones": {
+				"san_echar_gel": "Use the hand gel"
+			},
+			"imagen": "Footprint of “Pedal-operated gel stand”: a rectangle with cut corners, 0.35 by 0.35 metres, marked with the letters “Gp”."
+		},
+		"revistero_pared": {
+			"nombre": "Waiting room wall leaflet rack",
+			"descripcion": "Wire or acrylic rack hung on the wall, holding leaflets and magazines, from waist to chest. It sticks out and the cane passes under it.",
+			"etiquetas": ["leaflet rack", "magazine rack", "brochure holder"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Waiting room wall leaflet rack”: a rectangle, 0.50 by 0.12 metres, hanging 0.90 metres above the floor, marked with the letters “Rp”."
+		},
+		"rincon_infantil": {
+			"nombre": "Waiting room children's corner",
+			"descripcion": "Low plastic table with small chairs attached and a bead maze on wires, in the paediatric waiting area. Below hip height: easy to trip over.",
+			"etiquetas": ["children's corner", "play table", "bead maze"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Waiting room children's corner”: a rectangle with rounded corners, 1.20 by 1.20 metres, marked with the letters “Ri”."
+		},
+		"tensiometro_espera": {
+			"nombre": "Self-service blood pressure station",
+			"descripcion": "Station with a seat and, to one side, a sleeve you put your arm into. Press the button and the cuff squeezes, lets the air out and beeps three times.",
+			"etiquetas": ["blood pressure station", "blood pressure kiosk", "BP monitor"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"san_tomar_tension": "Take your blood pressure"
+			},
+			"imagen": "Footprint of “Self-service blood pressure station”: a rectangle, 0.70 by 1.00 metres, marked with the letters “Te”."
+		},
+		"mesa_consulta": {
+			"nombre": "Doctor's consulting desk",
+			"descripcion": "The doctor's desk, with the computer on one side and drawers. The patient sits opposite; the couch is usually behind.",
+			"etiquetas": ["consulting desk", "doctor's desk", "surgery desk"],
+			"variantes": {
+				"pequena": "Small",
+				"normal": "Standard",
+				"grande": "Large"
+			},
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Doctor's consulting desk”: a rectangle, 1.40 by 0.80 metres, marked with the letters “Mc”."
+		},
+		"sillas_paciente": {
+			"nombre": "Patient and companion chairs",
+			"descripcion": "Two matching chairs side by side in front of the doctor's desk. Light: they shift when you pull them out.",
+			"etiquetas": ["patient chairs", "consulting room chairs"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Patient and companion chairs”: a rectangle, 1.15 by 0.55 metres, marked with the letters “Sp”."
+		},
+		"taburete_medico": {
+			"nombre": "Doctor's rolling stool",
+			"descripcion": "Round backless stool on five castors: push it and it rolls away. It stands by the couch or the dental chair.",
+			"etiquetas": ["rolling stool", "doctor's stool", "clinic stool"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Doctor's rolling stool”: a circle, 0.40 by 0.40 metres, marked with the letters “Tm”."
+		},
+		"camilla_exploracion": {
+			"nombre": "Examination couch",
+			"descripcion": "Tall, narrow padded couch on metal legs, covered with paper that crackles. Walk around its sides; there is a gap underneath.",
+			"etiquetas": ["examination couch", "examination table", "exam bed"],
+			"variantes": {
+				"fija": "Fixed",
+				"electrica": "Electric, adjustable",
+				"pediatrica": "Paediatric"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Examination couch”: a rectangle, 0.65 by 1.90 metres, marked with the letters “Ce”."
+		},
+		"camilla_ginecologica": {
+			"nombre": "Gynaecological chair",
+			"descripcion": "Examination chair with two metal leg rests spreading forward at hip height. The leg rests stick out and the cane passes underneath.",
+			"etiquetas": ["gynaecological chair", "gynaecology couch"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Gynaecological chair”: a body at the back and two leg rests spreading towards the front, 0.90 by 1.70 metres, marked with the letters “Cg”."
+		},
+		"escalerilla_camilla": {
+			"nombre": "Two-step couch stool",
+			"descripcion": "Two rubber-topped metal steps at the foot of the couch, for climbing on. Low and loose: easy to trip over, and they shift.",
+			"etiquetas": ["step stool", "two-step stool", "couch steps"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Two-step couch stool”: a rectangle, 0.45 by 0.50 metres, marked with the letters “Ec”."
+		},
+		"biombo_clinico": {
+			"nombre": "Wheeled medical screen",
+			"descripcion": "Screen of fabric panels on a tubular frame, in a zigzag, hiding the couch. Light: it gives and rolls if you lean on it.",
+			"etiquetas": ["medical screen", "folding screen", "privacy screen"],
+			"variantes": {
+				"dos_hojas": "Two panels",
+				"tres_hojas": "Three panels",
+				"cuatro_hojas": "Four panels"
+			},
+			"imagen": "Footprint of “Wheeled medical screen”: a zigzag of three panels, 1.60 by 0.40 metres, marked with the letters “Bc”."
+		},
+		"bascula_tallimetro": {
+			"nombre": "Scales with height rod",
+			"descripcion": "Low metal platform with a column and a measuring rod rising above head height. The platform rocks a little when you step on it.",
+			"etiquetas": ["scales", "weighing scales", "height rod", "stadiometer"],
+			"acciones": {
+				"san_pesarse": "Weigh yourself"
+			},
+			"imagen": "Footprint of “Scales with height rod”: a rectangle, 0.35 by 0.55 metres, marked with the letters “Bt”."
+		},
+		"pesabebes": {
+			"nombre": "Baby scales on a cabinet",
+			"descripcion": "Waist-high cabinet with a curved plastic tray on top, where the baby is laid to be weighed. Drawers underneath.",
+			"etiquetas": ["baby scales", "infant scales"],
+			"acciones": {
+				"san_pesarse": "Weigh yourself",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Baby scales on a cabinet”: a rectangle, 0.90 by 0.60 metres, marked with the letters “Pe”."
+		},
+		"negatoscopio": {
+			"nombre": "Wall X-ray viewer",
+			"descripcion": "Flat light box hung on the wall at face height, for viewing X-rays. It hums quietly when on. The cane passes under it.",
+			"etiquetas": ["X-ray viewer", "light box", "negatoscope"],
+			"variantes": {
+				"un_cuerpo": "Single panel",
+				"dos_cuerpos": "Double panel",
+				"cuatro_cuerpos": "Four panels"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Wall X-ray viewer”: a rectangle, 0.80 by 0.10 metres, hanging 1.30 metres above the floor, marked with the letters “Ne”."
+		},
+		"estacion_diagnostico": {
+			"nombre": "Wall diagnostic station",
+			"descripcion": "Panel on the wall above the couch, holding the blood pressure monitor, the otoscope and their coiled cables hanging down. At shoulder height; the cane does not touch it.",
+			"etiquetas": ["diagnostic station", "wall-mounted blood pressure monitor", "wall otoscope"],
+			"acciones": {
+				"san_tomar_tension": "Take your blood pressure"
+			},
+			"imagen": "Footprint of “Wall diagnostic station”: a rectangle, 0.70 by 0.12 metres, hanging 1.20 metres above the floor, marked with the letters “Ed”."
+		},
+		"ecografo": {
+			"nombre": "Ultrasound machine on wheels",
+			"descripcion": "A machine the size of a tall cart, with a keyboard at waist height and a screen on an arm above. A fan blows when it is on.",
+			"etiquetas": ["ultrasound machine", "ultrasound scanner"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Ultrasound machine on wheels”: a rectangle, 0.60 by 0.90 metres, marked with the letters “Ec”."
+		},
+		"lampara_exploracion": {
+			"nombre": "Examination lamp on an arm",
+			"descripcion": "Wheeled base and a pole with a flexible arm ending in the lamp head, at head height. The base is detected; the arm is not.",
+			"etiquetas": ["examination lamp", "exam light", "gooseneck lamp"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Examination lamp on an arm”: a rounded base at the back and an arm reaching forward to the lamp head, 0.60 by 0.90 metres, marked with the letters “Le”."
+		},
+		"cabina_audiometria": {
+			"nombre": "Audiometry booth",
+			"descripcion": "Soundproof box the size of a large cupboard, with a thick door and a step at the entrance. Inside you hear nothing from outside.",
+			"etiquetas": ["audiometry booth", "hearing test booth", "soundproof booth"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Audiometry booth”: a rectangle, 1.20 by 1.20 metres, marked with the letters “Ca”."
+		},
+		"lavamanos_clinico": {
+			"nombre": "Wall-hung clinical basin",
+			"descripcion": "Small basin hung on the wall, with no pedestal and a long elbow-operated tap. There is a gap underneath: the cane gives no warning.",
+			"etiquetas": ["clinical basin", "hand wash basin", "elbow tap sink"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Wall-hung clinical basin”: a rectangle, 0.50 by 0.42 metres, hanging 0.65 metres above the floor, marked with the letters “Lc”."
+		},
+		"vitrina_material": {
+			"nombre": "Medical supplies cabinet",
+			"descripcion": "Tall metal cabinet with glass doors and shelves of bandages and bottles. Smooth and cold; the glass rattles when struck.",
+			"etiquetas": ["medical cabinet", "instrument cabinet", "supplies cabinet"],
+			"variantes": {
+				"una_puerta": "Single door",
+				"dos_puertas": "Double door"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Medical supplies cabinet”: a rectangle, 0.80 by 0.40 metres, marked with the letters “Vm”."
+		},
+		"carro_curas": {
+			"nombre": "Dressing trolley",
+			"descripcion": "Steel trolley with two trays and a drawer, at waist height. Bump into it and the instruments rattle and the trolley rolls.",
+			"etiquetas": ["dressing trolley", "treatment trolley", "instrument trolley"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Dressing trolley”: a rectangle, 0.60 by 0.45 metres, marked with the letters “Cc”."
+		},
+		"frigorifico_vacunas": {
+			"nombre": "Vaccine fridge",
+			"descripcion": "Small metal fridge with a lock, where vaccines and insulin are kept. It hums all the time and the temperature alarm sometimes beeps.",
+			"etiquetas": ["vaccine fridge", "medical fridge", "pharmacy refrigerator"],
+			"variantes": {
+				"bajo": "Under-counter",
+				"columna": "Upright"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Vaccine fridge”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Fv”."
+		},
+		"cama_hospital": {
+			"nombre": "Adjustable hospital bed",
+			"descripcion": "Tall metal bed on braked wheels, with drop-down side rails and a handset that raises the head end with a whirr. The head goes against the wall.",
+			"etiquetas": ["hospital bed", "adjustable bed", "profiling bed"],
+			"variantes": {
+				"normal": "Standard",
+				"bariatrica": "Bariatric, wide"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up",
+				"san_subir_cabecero": "Raise the head of the bed",
+				"san_llamar_enfermera": "Call the nurse"
+			},
+			"imagen": "Footprint of “Adjustable hospital bed”: a long rectangle with slightly wider head and foot boards, 1.00 by 2.20 metres, marked with the letters “Ch”."
+		},
+		"cuna_hospital": {
+			"nombre": "Hospital cot",
+			"descripcion": "Wheeled metal cot with high bars, up to an adult's chest. One side drops with a click.",
+			"etiquetas": ["hospital cot", "paediatric cot", "hospital crib"],
+			"imagen": "Footprint of “Hospital cot”: a rectangle, 0.75 by 1.50 metres, marked with the letters “Ch”."
+		},
+		"incubadora": {
+			"nombre": "Incubator",
+			"descripcion": "Clear plastic dome on a wheeled cabinet, at chest height. It blows warm air and beeps softly with the baby's heartbeat.",
+			"etiquetas": ["incubator", "neonatal incubator"],
+			"imagen": "Footprint of “Incubator”: a rectangle with rounded corners, 0.65 by 1.10 metres, marked with the letters “In”."
+		},
+		"mesilla_hospitalaria": {
+			"nombre": "Hospital bedside locker",
+			"descripcion": "Wheeled plastic locker by the head of the bed, with a drawer, a door and a fold-up tray on one side. It moves if you lean on it.",
+			"etiquetas": ["bedside locker", "hospital bedside cabinet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Hospital bedside locker”: a rectangle, 0.45 by 0.45 metres, marked with the letters “Mh”."
+		},
+		"mesa_cama": {
+			"nombre": "Overbed table",
+			"descripcion": "Narrow top on a side column with C-shaped feet: the feet slide under the bed and the top hangs over it. The cane goes in under the top.",
+			"etiquetas": ["overbed table", "hospital tray table"],
+			"imagen": "Footprint of “Overbed table”: a C: the column on one side and two wheeled feet that slide under the bed, 0.80 by 0.42 metres, marked with the letters “Mc”."
+		},
+		"sillon_acompanante": {
+			"nombre": "Reclining visitor's armchair",
+			"descripcion": "Vinyl armchair with arms, beside the bed. Reclined, a footrest comes out at the front and it takes up nearly twice the room: its size changes from day to day.",
+			"etiquetas": ["visitor's chair", "reclining chair", "patient recliner"],
+			"variantes": {
+				"recogido": "Upright",
+				"reclinado": "Reclined, footrest out"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"san_reclinar": "Recline",
+				"san_incorporar": "Sit it upright"
+			},
+			"imagen": "Footprint of “Reclining visitor's armchair”: a rectangle, 0.75 by 0.85 metres, marked with the letters “Sa”."
+		},
+		"armario_habitacion": {
+			"nombre": "Hospital room wardrobe",
+			"descripcion": "Tall, narrow wardrobe with one or two doors, by the entrance to the room: one per bed. The door opens into the passage.",
+			"etiquetas": ["hospital wardrobe", "patient locker"],
+			"variantes": {
+				"una_puerta": "Single door",
+				"dos_puertas": "Double door"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Hospital room wardrobe”: a rectangle, 0.50 by 0.55 metres, marked with the letters “Ah”."
+		},
+		"cortina_cama": {
+			"nombre": "Bed divider curtain",
+			"descripcion": "Curtain hanging from a ceiling track, dividing two beds. Soft: it gives when touched and the rings rattle as you draw it. Drawn back, you can pass.",
+			"etiquetas": ["bed curtain", "cubicle curtain", "privacy curtain"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Bed divider curtain”: a rectangle, 2.00 by 0.08 metres, marked with the letters “Cc”."
+		},
+		"tv_hospital": {
+			"nombre": "Ward television on a wall arm",
+			"descripcion": "Television hung on an arm sticking out of the wall, above head height, at the foot of the bed. When on, you hear it from the corridor.",
+			"etiquetas": ["hospital television", "ward TV", "wall-mounted TV"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Ward television on a wall arm”: a rectangle, 0.60 by 0.40 metres, hanging 1.70 metres above the floor, marked with the letters “Th”."
+		},
+		"portasueros": {
+			"nombre": "Drip stand on wheels",
+			"descripcion": "Thin metal pole on five wheeled legs, with the drip bags hanging at the top. The cane hits the legs before the pole; it rolls if pushed.",
+			"etiquetas": ["drip stand", "IV pole", "infusion stand"],
+			"imagen": "Footprint of “Drip stand on wheels”: a 5-pointed star, 0.55 by 0.55 metres, marked with the letters “Po”."
+		},
+		"bomba_infusion": {
+			"nombre": "Infusion pump stand",
+			"descripcion": "A heavy drip stand with one or more boxes at mid height metering the drip. It clicks every second and beeps three times when the bag runs out. A cable runs to the socket.",
+			"etiquetas": ["infusion pump", "IV pump", "drip pump"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Infusion pump stand”: a pentagon: five wheeled legs, 0.60 by 0.60 metres, marked with the letters “Bi”."
+		},
+		"monitor_constantes": {
+			"nombre": "Vital signs monitor on a stand",
+			"descripcion": "A screen the size of a shoebox on a wheeled stand, with leads running to the patient. It beeps with every heartbeat: you hear it from the door.",
+			"etiquetas": ["vital signs monitor", "patient monitor", "heart monitor"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Vital signs monitor on a stand”: a circle, 0.50 by 0.50 metres, marked with the letters “Mc”."
+		},
+		"cabecero_tecnico": {
+			"nombre": "Bedhead services panel",
+			"descripcion": "Aluminium trunking across the wall above the bedhead, with sockets, a light, oxygen outlets and the nurse call button. It is at the head height of a standing person.",
+			"etiquetas": ["bedhead panel", "bedhead trunking", "medical gas outlets", "nurse call"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"san_llamar_enfermera": "Call the nurse"
+			},
+			"imagen": "Footprint of “Bedhead services panel”: a rectangle, 1.80 by 0.12 metres, hanging 1.45 metres above the floor, marked with the letters “Ct”."
+		},
+		"control_enfermeria": {
+			"nombre": "Nurses' station",
+			"descripcion": "Large U-shaped counter in the middle of the ward, tall on the outside, with the staff inside. Call bells and phones ring: it is the landmark for finding your way along the corridor.",
+			"etiquetas": ["nurses' station", "ward desk"],
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Nurses' station”: a U open at the back, where the staff go in, 3.50 by 2.00 metres, marked with the letters “Ce”."
+		},
+		"silla_ruedas_abierta": {
+			"nombre": "Parked wheelchair",
+			"descripcion": "An empty, open wheelchair left in the corridor. The footrests stick out at the front, close to the floor, and the handles at the back at waist height. If the brakes are off, it rolls.",
+			"etiquetas": ["wheelchair", "parked wheelchair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Parked wheelchair”: a wide body at the back, with the large wheels, narrowing at the front to the footrests, 0.65 by 1.05 metres, marked with the letters “Sr”."
+		},
+		"silla_ruedas_plegada": {
+			"nombre": "Folded wheelchair",
+			"descripcion": "A closed wheelchair leaning against the wall: a long, narrow bundle of tubes and two large wheels. It tips over if you catch it.",
+			"etiquetas": ["folded wheelchair", "collapsed wheelchair"],
+			"imagen": "Footprint of “Folded wheelchair”: a rectangle, 0.30 by 1.05 metres, marked with the letters “Sr”."
+		},
+		"sillas_ruedas_prestamo": {
+			"nombre": "Row of loan wheelchairs",
+			"descripcion": "Wheelchairs nested into one another by the hospital entrance, like supermarket trolleys, with a chain and a coin lock.",
+			"etiquetas": ["loan wheelchairs", "courtesy wheelchairs", "coin-operated wheelchairs"],
+			"variantes": {
+				"tres_sillas": "Three chairs",
+				"cinco_sillas": "Five chairs",
+				"ocho_sillas": "Eight chairs"
+			},
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Row of loan wheelchairs”: a rectangle, 0.70 by 2.50 metres, marked with the letters “Sr”."
+		},
+		"andador": {
+			"nombre": "Walking frame",
+			"descripcion": "Light tubular frame on four legs, or on wheels with brakes, open at the back. Left beside a chair or a bed: the cane catches it and it shifts.",
+			"etiquetas": ["walking frame", "walker", "rollator", "zimmer frame"],
+			"variantes": {
+				"fijo": "Fixed, four legs",
+				"con_ruedas": "Rollator with seat"
+			},
+			"imagen": "Footprint of “Walking frame”: a thin U open at the back, where the person stands, 0.60 by 0.60 metres, marked with the letters “An”."
+		},
+		"muletas_pared": {
+			"nombre": "Crutches leaning on the wall",
+			"descripcion": "A pair of aluminium crutches leaning on the wall or a chair, their tips out from the skirting. Brush them and they clatter to the floor.",
+			"etiquetas": ["crutches", "elbow crutches"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Crutches leaning on the wall”: a trapezoid, narrower at the back, 0.30 by 0.25 metres, marked with the letters “Mp”."
+		},
+		"camilla_traslado": {
+			"nombre": "Transfer trolley in the corridor",
+			"descripcion": "Tall wheeled trolley with its rails down, parked against the corridor wall. It narrows the way and is in a different place every day.",
+			"etiquetas": ["transfer trolley", "patient trolley", "gurney", "stretcher trolley"],
+			"imagen": "Footprint of “Transfer trolley in the corridor”: a rectangle with rounded corners, 0.70 by 2.10 metres, marked with the letters “Ct”."
+		},
+		"carro_medicacion": {
+			"nombre": "Medication trolley",
+			"descripcion": "Closed trolley of small drawers, one per patient, with a top at chest height. Heavy; it rolls with a rattle of drawers.",
+			"etiquetas": ["medication trolley", "drug trolley", "medicine cart"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Medication trolley”: a rectangle, 0.75 by 0.55 metres, marked with the letters “Cm”."
+		},
+		"carro_lenceria": {
+			"nombre": "Linen trolley",
+			"descripcion": "Tall shelved trolley full of folded sheets and towels, covered with a fabric hood. Soft at the sides and taller than a seated person.",
+			"etiquetas": ["linen trolley", "linen cart", "laundry trolley"],
+			"imagen": "Footprint of “Linen trolley”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Cl”."
+		},
+		"carro_ropa_sucia": {
+			"nombre": "Soiled linen bag trolley",
+			"descripcion": "Wheeled metal hoop with a fabric sack hanging from it and a pedal lid. Light and waist high.",
+			"etiquetas": ["soiled linen trolley", "laundry bag trolley", "linen skip"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Soiled linen bag trolley”: a circle, 0.50 by 0.50 metres, marked with the letters “Cr”."
+		},
+		"carro_comidas": {
+			"nombre": "Ward meal trolley",
+			"descripcion": "Steel cabinet on wheels carrying the meal trays, hot on one side and cold on the other. It hums, smells of food and the metal may be hot.",
+			"etiquetas": ["meal trolley", "food trolley", "heated tray trolley"],
+			"variantes": {
+				"sencillo": "Single",
+				"doble": "Double"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Ward meal trolley”: a rectangle, 0.80 by 0.75 metres, marked with the letters “Cc”."
+		},
+		"carro_limpieza_hospital": {
+			"nombre": "Hospital cleaning trolley",
+			"descripcion": "Plastic trolley with two buckets, a rubbish bag and mop handles sticking out above and to the sides. The floor around it is often wet.",
+			"etiquetas": ["cleaning trolley", "janitor cart", "mop trolley"],
+			"imagen": "Footprint of “Hospital cleaning trolley”: a rectangle, 0.60 by 1.20 metres, marked with the letters “Cl”."
+		},
+		"carro_paradas": {
+			"nombre": "Crash trolley",
+			"descripcion": "Drawer trolley with the defibrillator on top, a hard board at the back and a small cylinder at the side. It is always in the same place, by the nurses' station, and is not to be touched.",
+			"etiquetas": ["crash trolley", "crash cart", "resuscitation trolley"],
+			"imagen": "Footprint of “Crash trolley”: a rectangle, 0.70 by 0.60 metres, marked with the letters “Cp”."
+		},
+		"bombona_oxigeno": {
+			"nombre": "Oxygen cylinder on its trolley",
+			"descripcion": "Heavy, cold steel cylinder standing on a two-wheeled cart. When open, it hisses and bubbles in the humidifier bottle.",
+			"etiquetas": ["oxygen cylinder", "oxygen bottle", "oxygen tank"],
+			"acciones": {
+				"san_abrir_oxigeno": "Turn the oxygen on",
+				"san_cerrar_oxigeno": "Turn the oxygen off"
+			},
+			"imagen": "Footprint of “Oxygen cylinder on its trolley”: a circle, 0.30 by 0.30 metres, marked with the letters “Bo”."
+		},
+		"contenedor_sanitario": {
+			"nombre": "Clinical waste bin",
+			"descripcion": "Rigid plastic bin with a pedal lid and a lock, for contaminated material. The lid drops with a hollow thud.",
+			"etiquetas": ["clinical waste bin", "biohazard bin", "sharps container"],
+			"variantes": {
+				"de_30": "30 litres",
+				"de_60": "60 litres",
+				"con_ruedas": "120 litres, wheeled"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Clinical waste bin”: a rectangle with cut corners, 0.40 by 0.40 metres, marked with the letters “Cs”."
+		},
+		"lavamanos_quirurgico": {
+			"nombre": "Surgical scrub sink",
+			"descripcion": "Long, deep steel trough with two or three tall taps worked by knee or sensor. The water drums on the metal and echoes.",
+			"etiquetas": ["scrub sink", "surgical sink", "scrub trough"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Surgical scrub sink”: a rectangle, 1.60 by 0.55 metres, marked with the letters “Lq”."
+		},
+		"desfibrilador_pared": {
+			"nombre": "Defibrillator in a wall cabinet",
+			"descripcion": "Small cabinet hung on the wall at chest height, with the defibrillator inside. It sticks out a hand's width; opening it sets off a shrill alarm.",
+			"etiquetas": ["defibrillator", "AED", "defibrillator cabinet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Defibrillator in a wall cabinet”: a rectangle, 0.40 by 0.20 metres, hanging 1.10 metres above the floor, marked with the letters “Dp”."
+		},
+		"pasamanos_pasillo": {
+			"nombre": "Hospital corridor handrail",
+			"descripcion": "Wide plastic rail along the wall at hip height, which also acts as a bumper against trolleys. Follow it with your hand; it breaks at every door.",
+			"etiquetas": ["corridor handrail", "wall handrail", "crash rail"],
+			"variantes": {
+				"tramo_corto": "1.50 m length",
+				"tramo_medio": "3 m length",
+				"tramo_largo": "6 m length"
+			},
+			"imagen": "Footprint of “Hospital corridor handrail”: a rectangle, 3.00 by 0.10 metres, hanging 0.80 metres above the floor, marked with the letters “Pp”."
+		},
+		"puerta_vaiven": {
+			"nombre": "Hospital swing doors",
+			"descripcion": "Two wide leaves that push open both ways, with a metal kick plate at the bottom for trolley knocks. They swing back on their own: mind whoever is behind you.",
+			"etiquetas": ["swing doors", "double swing doors", "crash doors"],
+			"acciones": {
+				"empujar": "Push",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Hospital swing doors”: a rectangle, 1.60 by 0.08 metres, marked with the letters “Pv”."
+		},
+		"mostrador_triaje": {
+			"nombre": "Triage desk",
+			"descripcion": "Low desk-counter for sitting to talk to the nurse who decides the order of entry. The computer is on one side and a chair in front.",
+			"etiquetas": ["triage desk", "emergency reception", "triage counter"],
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Triage desk”: a rectangle, 1.60 by 0.70 metres, marked with the letters “Mt”."
+		},
+		"silla_triaje": {
+			"nombre": "Triage chair",
+			"descripcion": "Wipe-clean plastic chair with wide arms, where you sit to have your blood pressure and temperature taken as soon as you arrive.",
+			"etiquetas": ["triage chair", "observation chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"san_tomar_tension": "Take your blood pressure"
+			},
+			"imagen": "Footprint of “Triage chair”: a rectangle, 0.65 by 0.70 metres, marked with the letters “St”."
+		},
+		"box_cortina": {
+			"nombre": "Curtained emergency bay",
+			"descripcion": "A space closed on three sides by curtains hanging from the ceiling, open at the front. A trolley fits inside. The walls are fabric: they give and cannot be leaned on.",
+			"etiquetas": ["emergency bay", "curtained cubicle", "treatment bay"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Curtained emergency bay”: a U open at the front, 2.50 by 2.80 metres, marked with the letters “Bc”."
+		},
+		"camilla_observacion": {
+			"nombre": "Observation trolley",
+			"descripcion": "Wide trolley with the backrest raised, side rails up and a drip pole at one corner. Higher than a bed: you need help to get on.",
+			"etiquetas": ["observation trolley", "emergency stretcher", "A&E trolley"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Observation trolley”: a rectangle, 0.80 by 2.10 metres, marked with the letters “Co”."
+		},
+		"sillon_extracciones": {
+			"nombre": "Blood test chair",
+			"descripcion": "Chair with two wide padded armrests sticking out to the sides, to stretch your arm out while blood is taken.",
+			"etiquetas": ["blood test chair", "phlebotomy chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Blood test chair”: a backrest behind and two wide armrests sticking out sideways at the front, 0.90 by 0.80 metres, marked with the letters “Se”."
+		},
+		"puesto_dialisis": {
+			"nombre": "Haemodialysis station",
+			"descripcion": "A long reclining chair and, beside its head, a chest-high machine with tubes running to the arm. The pump turns with a regular click and sometimes beeps.",
+			"etiquetas": ["haemodialysis station", "dialysis machine", "dialysis chair"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Haemodialysis station”: an L shape, 1.50 by 1.90 metres, marked with the letters “Pd”."
+		},
+		"mesa_rayos": {
+			"nombre": "X-ray table",
+			"descripcion": "Long, hard, cold table at hip height in the middle of the X-ray room. The tube hangs above it. When it fires you hear a rising hum and a beep.",
+			"etiquetas": ["X-ray table", "radiography table"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up",
+				"san_radiografia": "Take the X-ray"
+			},
+			"imagen": "Footprint of “X-ray table”: a rectangle, 0.80 by 2.20 metres, marked with the letters “Mr”."
+		},
+		"tubo_rayos_techo": {
+			"nombre": "Ceiling-mounted X-ray tube",
+			"descripcion": "Heavy metal head hanging from a ceiling column and moving on rails. It is at head height and the cane does not find it.",
+			"etiquetas": ["X-ray tube", "ceiling tube stand", "overhead tube"],
+			"imagen": "Footprint of “Ceiling-mounted X-ray tube”: a rectangle, 0.50 by 0.60 metres, hanging 1.50 metres above the floor, marked with the letters “Tr”."
+		},
+		"bucky_mural": {
+			"nombre": "Wall X-ray stand",
+			"descripcion": "Metal column against the wall with a flat panel that slides up and down: you stand with your chest pressed against it. A foot sticks out at the base.",
+			"etiquetas": ["wall stand", "chest stand", "wall bucky"],
+			"acciones": {
+				"san_radiografia": "Take the X-ray"
+			},
+			"imagen": "Footprint of “Wall X-ray stand”: a rectangle, 0.65 by 0.40 metres, marked with the letters “Bm”."
+		},
+		"mampara_plomada": {
+			"nombre": "Lead X-ray screen",
+			"descripcion": "Thick, very heavy panel with a glass window, behind which the radiographer stands. It does not move when pushed and sounds solid.",
+			"etiquetas": ["lead screen", "radiation shield", "X-ray barrier"],
+			"imagen": "Footprint of “Lead X-ray screen”: a rectangle, 1.20 by 0.30 metres, marked with the letters “Mp”."
+		},
+		"resonancia": {
+			"nombre": "MRI scanner",
+			"descripcion": "A huge machine with a tunnel through the middle and a narrow table coming out at the front. When running it hammers loudly, audible from the corridor. No metal nearby.",
+			"etiquetas": ["MRI scanner", "MRI machine", "CT scanner"],
+			"variantes": {
+				"resonancia": "MRI, long tunnel",
+				"tac": "CT, short ring"
+			},
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop",
+				"tumbarse": "Lie down"
+			},
+			"imagen": "Footprint of “MRI scanner”: a T shape, 2.30 by 3.80 metres, marked with the letters “Re”."
+		},
+		"mamografo": {
+			"nombre": "Mammography unit",
+			"descripcion": "Tall column with a rotating arm and two plates at chest height, one fixed and one that presses. The arm sticks out towards whoever approaches.",
+			"etiquetas": ["mammography unit", "mammogram machine"],
+			"acciones": {
+				"san_radiografia": "Take the X-ray"
+			},
+			"imagen": "Footprint of “Mammography unit”: a narrow column at the back and a wide arm at the front, 0.70 by 1.20 metres, marked with the letters “Ma”."
+		},
+		"mostrador_farmacia": {
+			"nombre": "Pharmacy counter",
+			"descripcion": "Continuous counter at waist height, with small displays on top and the till. The drawer units are behind it. You reach it by crossing the whole shop.",
+			"etiquetas": ["pharmacy counter", "chemist's counter", "dispensing counter"],
+			"variantes": {
+				"un_puesto": "One position",
+				"dos_puestos": "Two positions",
+				"tres_puestos": "Three positions"
+			},
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Pharmacy counter”: a rectangle, 2.00 by 0.60 metres, marked with the letters “Mf”."
+		},
+		"puesto_farmacia_isla": {
+			"nombre": "Island pharmacy service point",
+			"descripcion": "A free-standing individual counter with rounded corners, one per pharmacist. There are several, set apart, and you can walk round them.",
+			"etiquetas": ["island counter", "pharmacy service pod"],
+			"acciones": {
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Island pharmacy service point”: a rectangle with rounded corners, 0.70 by 0.60 metres, marked with the letters “Pf”."
+		},
+		"cajoneras_medicamentos": {
+			"nombre": "Pharmacy drawer units",
+			"descripcion": "Metal columns of long, narrow drawers that pull right out, behind the counter. An open drawer juts into the way at any height.",
+			"etiquetas": ["pharmacy drawers", "medicine drawer units", "dispensary drawers"],
+			"variantes": {
+				"una_columna": "One column",
+				"dos_columnas": "Two columns",
+				"cuatro_columnas": "Four columns"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Pharmacy drawer units”: a rectangle, 1.20 by 1.00 metres, marked with the letters “Cm”."
+		},
+		"gondola_parafarmacia": {
+			"nombre": "Health and beauty gondola",
+			"descripcion": "Low shelving unit with two faces, in the middle of the pharmacy, holding creams and bottles. It reaches chest height: you can talk over it.",
+			"etiquetas": ["pharmacy gondola", "health and beauty display"],
+			"imagen": "Footprint of “Health and beauty gondola”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Gp”."
+		},
+		"bascula_farmacia": {
+			"nombre": "Talking pharmacy scales",
+			"descripcion": "Coin-operated scales with a platform and a tall column from which the height rod comes down to touch your head. It beeps, whirrs and prints a slip; some speak the weight aloud.",
+			"etiquetas": ["pharmacy scales", "coin-operated scales", "talking scales"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Talking pharmacy scales”: a rectangle, 0.50 by 0.60 metres, marked with the letters “Bf”."
+		},
+		"punto_sigre": {
+			"nombre": "Expired medicines drop-off point",
+			"descripcion": "Waist-high cardboard or metal container with an opening on top for dropping in old medicine boxes. It usually stands by the counter.",
+			"etiquetas": ["medicine take-back bin", "expired medicines bin"],
+			"acciones": {
+				"san_tirar_medicamentos": "Drop off expired medicines"
+			},
+			"imagen": "Footprint of “Expired medicines drop-off point”: a rectangle, 0.45 by 0.45 metres, marked with the letters “Ps”."
+		},
+		"cruz_farmacia": {
+			"nombre": "Pharmacy cross sign",
+			"descripcion": "Illuminated cross projecting from the shop front over the pavement. It hums slightly. Low ones are at the head height of a tall person.",
+			"etiquetas": ["pharmacy cross", "green cross sign", "projecting sign"],
+			"variantes": {
+				"pequena": "60 cm",
+				"normal": "90 cm",
+				"grande": "1.20 m"
+			},
+			"imagen": "Footprint of “Pharmacy cross sign”: a rectangle, 0.15 by 0.90 metres, hanging 2.30 metres above the floor, marked with the letters “Cf”."
+		},
+		"dispensador_guardia": {
+			"nombre": "Pharmacy night hatch",
+			"descripcion": "Metal drawer in the shop front at waist height, through which medicines are handed out at night with the door shut. There is a bell beside it and it sticks out a hand's width.",
+			"etiquetas": ["night hatch", "night dispensing drawer", "pharmacy hatch"],
+			"acciones": {
+				"llamar": "Call",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Pharmacy night hatch”: a rectangle, 0.50 by 0.25 metres, hanging 0.90 metres above the floor, marked with the letters “Dg”."
+		},
+		"sillon_dental": {
+			"nombre": "Dental chair",
+			"descripcion": "A long chair that tilts back, with an instrument arm on one side, the lamp above and the spittoon on the other side. The drill whistles very high when working.",
+			"etiquetas": ["dental chair", "dentist's chair", "dental unit"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop",
+				"tumbarse": "Lie down"
+			},
+			"imagen": "Footprint of “Dental chair”: a long chair with an instrument arm on one side and the lamp and spittoon on the other, 1.50 by 2.00 metres, marked with the letters “Sd”."
+		},
+		"escupidera_dental": {
+			"nombre": "Dental spittoon",
+			"descripcion": "Small ceramic bowl on a column beside the chair, with a trickle of water always running and a tap to fill the cup.",
+			"etiquetas": ["spittoon", "cuspidor", "rinse bowl"],
+			"acciones": {
+				"san_enjuagarse": "Rinse your mouth"
+			},
+			"imagen": "Footprint of “Dental spittoon”: a circle, 0.35 by 0.35 metres, marked with the letters “Ed”."
+		},
+		"mueble_clinico_dental": {
+			"nombre": "Dental surgery cabinetry",
+			"descripcion": "A run of base units with instrument drawers and a small sink, at waist height, against the wall behind the chair.",
+			"etiquetas": ["dental cabinetry", "surgery cabinet", "clinic worktop"],
+			"variantes": {
+				"de_120": "1.20 m",
+				"de_200": "2 m",
+				"de_300": "3 m"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Dental surgery cabinetry”: a rectangle, 2.00 by 0.50 metres, marked with the letters “Mc”."
+		},
+		"rayos_pared_dental": {
+			"nombre": "Dental wall X-ray unit",
+			"descripcion": "Jointed arm fixed to the wall, with a tube at its end. Folded, it sticks out little; unfolded, it reaches the chair at face height.",
+			"etiquetas": ["dental X-ray unit", "intraoral X-ray", "wall X-ray arm"],
+			"variantes": {
+				"plegado": "Folded",
+				"desplegado": "Extended"
+			},
+			"acciones": {
+				"san_radiografia": "Take the X-ray"
+			},
+			"imagen": "Footprint of “Dental wall X-ray unit”: a rectangle, 0.30 by 0.50 metres, hanging 1.20 metres above the floor, marked with the letters “Rp”."
+		},
+		"ortopantomografo": {
+			"nombre": "Panoramic dental X-ray machine",
+			"descripcion": "Tall column with an arm that turns around the head: you stand, bite on a piece and grip two handles. The arm is at face height.",
+			"etiquetas": ["panoramic X-ray machine", "orthopantomograph", "OPG"],
+			"acciones": {
+				"san_radiografia": "Take the X-ray"
+			},
+			"imagen": "Footprint of “Panoramic dental X-ray machine”: a narrow column at the back and a wide arm at the front, 1.00 by 1.20 metres, marked with the letters “Or”."
+		},
+		"paralelas_marcha": {
+			"nombre": "Gait training parallel bars",
+			"descripcion": "Two metal bars at hip height, parallel, over a long platform. You enter at one end and walk between them holding both.",
+			"etiquetas": ["parallel bars", "gait bars", "walking rails"],
+			"variantes": {
+				"de_2": "2 m",
+				"de_3": "3 m",
+				"de_4": "4 m"
+			},
+			"imagen": "Footprint of “Gait training parallel bars”: a U open at the front, 0.80 by 3.00 metres, marked with the letters “Pm”."
+		},
+		"escalera_rampa": {
+			"nombre": "Exercise stairs and ramp",
+			"descripcion": "Wooden unit with three or four steps on one side, a landing on top and a ramp on the other, all with handrails. For practising going up and down.",
+			"etiquetas": ["exercise stairs", "training stairs", "rehabilitation steps and ramp"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Exercise stairs and ramp”: a rectangle, 0.90 by 3.20 metres, marked with the letters “Er”."
+		},
+		"platos_equilibrio": {
+			"nombre": "Balance board on the floor",
+			"descripcion": "Wooden disc the size of a manhole cover with a half ball underneath: step on it and it tilts in any direction.",
+			"etiquetas": ["balance board", "wobble board"],
+			"aviso": "Balance board: it tilts when you step on it.",
+			"imagen": "Footprint of “Balance board on the floor”: a circle, 0.40 by 0.40 metres, marked with the letters “Pe”."
+		},
+		"pista_obstaculos_marcha": {
+			"nombre": "Gait track with low hurdles",
+			"descripcion": "A row of plastic bars and little hurdles a hand high, laid on the floor for learning to lift your feet. You have to step over each one.",
+			"etiquetas": ["gait track", "step-over hurdles", "obstacle course"],
+			"imagen": "Footprint of “Gait track with low hurdles”: a comb: a bar with bodies sticking out to the front, 0.80 by 3.00 metres, marked with the letters “Po”."
+		},
+		"camilla_fisioterapia": {
+			"nombre": "Physiotherapy couch",
+			"descripcion": "Wide, well-padded couch with a face hole at one end, raised and lowered by a pedal. It is sometimes very low, at knee height.",
+			"etiquetas": ["physiotherapy couch", "treatment table", "massage table"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Physiotherapy couch”: a rectangle, 0.70 by 1.95 metres, marked with the letters “Cf”."
+		},
+		"camilla_bobath": {
+			"nombre": "Wide neurological treatment plinth",
+			"descripcion": "Large padded platform, almost square and low, with room for the patient lying down and the physiotherapist kneeling. Soft on top and hard at the edge.",
+			"etiquetas": ["Bobath plinth", "mat table", "treatment platform"],
+			"variantes": {
+				"de_120": "1.20 m wide",
+				"de_200": "2 m wide"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Wide neurological treatment plinth”: a rectangle, 2.00 by 2.00 metres, marked with the letters “Cb”."
+		},
+		"jaula_poleoterapia": {
+			"nombre": "Pulley therapy cage",
+			"descripcion": "Cage of metal mesh on three sides and overhead, with a couch inside, from which pulleys, ropes and weights hang. The mesh rattles when touched.",
+			"etiquetas": ["pulley cage", "suspension therapy frame"],
+			"imagen": "Footprint of “Pulley therapy cage”: a U open at the front, 2.00 by 2.00 metres, marked with the letters “Jp”."
+		},
+		"bicicleta_clinica": {
+			"nombre": "Clinical exercise bike",
+			"descripcion": "Fixed bike with a wide saddle, a tall handlebar and a cross-shaped base. Pedal and you hear the flywheel turning with a whoosh.",
+			"etiquetas": ["exercise bike", "cycle ergometer", "static bike"],
+			"acciones": {
+				"san_pedalear": "Pedal",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Clinical exercise bike”: a narrow body with a foot bar across the back and the handlebars across the front, 0.60 by 1.10 metres, marked with the letters “Bc”."
+		},
+		"pedalier": {
+			"nombre": "Pedal exerciser",
+			"descripcion": "A pair of pedals on a small tubular frame, on the floor in front of a chair. Low and loose: easy to trip over.",
+			"etiquetas": ["pedal exerciser", "mini exercise bike"],
+			"acciones": {
+				"san_pedalear": "Pedal"
+			},
+			"imagen": "Footprint of “Pedal exerciser”: a rectangle, 0.45 by 0.50 metres, marked with the letters “Pe”."
+		},
+		"rueda_hombro": {
+			"nombre": "Wall shoulder wheel",
+			"descripcion": "Large metal wheel with a crank handle, fixed to the wall at shoulder height. It sticks out two hands' width and the cane passes under it.",
+			"etiquetas": ["shoulder wheel", "wall wheel"],
+			"acciones": {
+				"girar": "Spin"
+			},
+			"imagen": "Footprint of “Wall shoulder wheel”: a rectangle, 0.90 by 0.30 metres, hanging 0.90 metres above the floor, marked with the letters “Rh”."
+		},
+		"banco_cuadriceps": {
+			"nombre": "Quadriceps bench",
+			"descripcion": "High seat with a backrest and two weighted lever arms hanging at the front, at shin height. The arms swing if you touch them.",
+			"etiquetas": ["quadriceps bench", "knee extension bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Quadriceps bench”: a T shape, 1.00 by 1.20 metres, marked with the letters “Bc”."
+		},
+		"mesa_manos": {
+			"nombre": "Hand therapy table",
+			"descripcion": "Table with a round cut-out where the patient sits in, and on top boards with pegs, screws, springs and putty for exercising the fingers.",
+			"etiquetas": ["hand therapy table", "occupational therapy table"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Hand therapy table”: a rectangle with a round cut-out at the front, where the patient sits, 1.20 by 0.70 metres, marked with the letters “Mm”."
+		},
+		"espejo_postura": {
+			"nombre": "Mobile posture mirror",
+			"descripcion": "Full-length mirror in a wheeled frame, at the end of the parallel bars. Smooth and cold: to someone with low vision the room seems to go on.",
+			"etiquetas": ["posture mirror", "mobile mirror"],
+			"imagen": "Footprint of “Mobile posture mirror”: a rectangle, 0.70 by 0.50 metres, marked with the letters “Ep”."
+		},
+		"cunas_rulos": {
+			"nombre": "Physiotherapy wedges and rolls",
+			"descripcion": "Covered foam wedges, rolls and cushions piled on the floor. Soft and light: they do no harm, but your foot sinks in and twists.",
+			"etiquetas": ["foam wedges", "bolsters", "positioning cushions"],
+			"imagen": "Footprint of “Physiotherapy wedges and rolls”: an irregular heap, 0.60 by 0.60 metres, marked with the letters “Cr”."
+		},
+		"pelota_fisioterapia": {
+			"nombre": "Large physiotherapy ball",
+			"descripcion": "Inflated rubber ball reaching the knee or the thigh. Touch it and it rolls away; it bounces with a hollow sound.",
+			"etiquetas": ["physio ball", "Swiss ball", "exercise ball"],
+			"variantes": {
+				"de_55": "55 cm",
+				"de_65": "65 cm",
+				"de_75": "75 cm"
+			},
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Large physiotherapy ball”: a circle, 0.65 by 0.65 metres, marked with the letters “Pf”."
+		},
+		"bano_parafina": {
+			"nombre": "Paraffin wax bath",
+			"descripcion": "Lidded metal tank on a small cart, full of hot wax for the hands. The metal is hot and it smells of candles.",
+			"etiquetas": ["paraffin bath", "wax bath"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Paraffin wax bath”: a rectangle, 0.50 by 0.35 metres, marked with the letters “Bp”."
+		},
+		"carro_electroterapia": {
+			"nombre": "Electrotherapy trolley",
+			"descripcion": "Small trolley with a current or ultrasound device on top and leads hanging over to the couch. It hums while working and beeps three times when the time is up.",
+			"etiquetas": ["electrotherapy trolley", "ultrasound therapy unit", "TENS machine"],
+			"acciones": {
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Electrotherapy trolley”: a rectangle with cut corners, 0.50 by 0.50 metres, marked with the letters “Ce”."
+		}
+	}
+}

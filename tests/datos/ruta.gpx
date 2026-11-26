@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="EntornoLab (datos ficticios de prueba)" xmlns="http://www.topografix.com/GPX/1/1">
+	<wpt lat="40.0000378" lon="-3.7007044"><name>Casa</name></wpt>
+	<wpt lat="40.044966" lon="-3.641301"><name>Muy lejos</name></wpt>
+	<trk><name>Ruta al parque</name><trkseg>
+		<trkpt lat="40.0000378" lon="-3.7007044"></trkpt>
+		<trkpt lat="40.0000378" lon="-3.7002348"></trkpt>
+		<trkpt lat="39.9999622" lon="-3.7002348"></trkpt>
+		<trkpt lat="39.9999622" lon="-3.7000704"></trkpt>
+		<trkpt lat="39.9996403" lon="-3.7000704"></trkpt>
+	</trkseg></trk>
+</gpx>

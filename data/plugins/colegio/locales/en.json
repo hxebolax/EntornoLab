@@ -1,0 +1,787 @@
+{
+	"nombre": "School",
+	"descripcion": "School furniture: classroom, library, canteen, gym, playground, music, computer room and corridors.",
+	"categorias": {
+		"aula": "Classroom",
+		"biblioteca": "Library and computer room",
+		"comedor": "Canteen",
+		"gimnasio": "Gym and playground",
+		"musica": "Music",
+		"pasillo": "Corridors and common areas",
+		"talleres": "Art room",
+		"aseos": "Pupils' toilets",
+		"apoyo": "Support classroom and sensory room"
+	},
+	"subcategorias": {
+		"mesas_alumnos": "Pupils' tables and chairs",
+		"puesto_profesor": "Teacher's station",
+		"paredes_aula": "Boards and things hanging in the classroom",
+		"clima_aula": "Ventilation and air",
+		"almacen_aula": "Classroom cupboards and shelves",
+		"residuos_aula": "Bins and recycling",
+		"suelo_aula": "Corners and things on the floor",
+		"libros_biblioteca": "Books and reading",
+		"informatica": "Computers and printer",
+		"mesas_comedor": "Canteen tables",
+		"servicio_comedor": "Serving and water",
+		"aparatos_gimnasia": "Gym apparatus",
+		"juegos_pelota": "Hoops, goals and balls",
+		"vestuario_escolar": "Changing room",
+		"juegos_patio": "Playground play",
+		"huerto_escolar": "School garden and nature",
+		"instrumentos_musica": "Instruments",
+		"atriles_tarimas": "Stands, platforms and risers",
+		"taquillas_bancos": "Lockers, pegs and benches",
+		"avisos_pasillo": "Notices, cabinets and safety",
+		"estructura_pasillo": "Columns and pillars",
+		"plastica": "Art room",
+		"aseos_escolares": "Urinals and cubicles",
+		"sala_sensorial": "Sensory room",
+		"ayudas_aula": "Classroom assistive equipment"
+	},
+	"estados": {
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"apagado": "Off",
+		"encendido": "On",
+		"desplegado": "Unfolded",
+		"plegado": "Folded"
+	},
+	"objetos": {
+		"pupitre": {
+			"nombre": "School desk",
+			"descripcion": "Pupil's desk with its chair behind. A classroom has many, in rows with aisles between them.",
+			"etiquetas": ["school desk", "pupil desk"],
+			"variantes": {
+				"infantil": "Nursery size",
+				"primaria": "Primary size",
+				"secundaria": "Secondary size"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “School desk”: a rectangle, 0.70 by 0.50 metres, marked with the letters “Pu”."
+		},
+		"pupitre_doble": {
+			"nombre": "Double school desk",
+			"descripcion": "Desk for two pupils, with two chairs.",
+			"etiquetas": ["double desk", "two-seater desk"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Double school desk”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Pd”."
+		},
+		"mesa_del_profesor": {
+			"nombre": "Teacher's desk",
+			"descripcion": "Large desk with drawers, in front of the board and facing the pupils' desks.",
+			"etiquetas": ["teacher's desk"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Teacher's desk”: a rectangle, 1.40 by 0.70 metres, marked with the letters “Md”."
+		},
+		"silla": {
+			"nombre": "Pupil's chair",
+			"descripcion": "Light school chair, tubular steel and plywood. It scrapes noisily when moved.",
+			"etiquetas": ["school chair", "pupil chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Pupil's chair”: a rectangle, 0.42 by 0.42 metres, marked with the letters “Si”."
+		},
+		"pizarra": {
+			"nombre": "Board",
+			"descripcion": "Board hung on the wall, from waist height to above the head, with a chalk ledge that sticks out.",
+			"etiquetas": ["blackboard", "whiteboard", "board"],
+			"variantes": {
+				"pequena": "Small",
+				"normal": "Standard",
+				"doble": "Double"
+			},
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Board”: a rectangle, 2.40 by 0.08 metres, hanging 0.90 metres above the floor, marked with the letters “Pi”."
+		},
+		"armario": {
+			"nombre": "Classroom cupboard",
+			"descripcion": "Tall two-door cupboard where materials are kept.",
+			"etiquetas": ["cupboard", "storage cupboard"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Classroom cupboard”: a rectangle, 0.90 by 0.45 metres, marked with the letters “Ar”."
+		},
+		"estanteria_baja": {
+			"nombre": "Low classroom shelves",
+			"descripcion": "Low shelving with pigeonholes for the pupils' trays.",
+			"etiquetas": ["shelves", "pigeonholes", "tray unit"],
+			"imagen": "Footprint of “Low classroom shelves”: a rectangle, 1.00 by 0.40 metres, marked with the letters “Eb”."
+		},
+		"papelera": {
+			"nombre": "Waste bin",
+			"descripcion": "Small plastic bin. It tips over if you push it.",
+			"etiquetas": ["bin", "waste bin", "wastepaper basket"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Waste bin”: a circle, 0.30 by 0.30 metres, marked with the letters “Pa”."
+		},
+		"reciclaje": {
+			"nombre": "Classroom recycling bins",
+			"descripcion": "Three bins side by side for paper, packaging and general waste, with swing lids.",
+			"etiquetas": ["recycling bins"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Classroom recycling bins”: a rectangle, 0.90 by 0.35 metres, marked with the letters “Re”."
+		},
+		"mesa_redonda": {
+			"nombre": "Round group table",
+			"descripcion": "Round table for group work, with chairs around it.",
+			"etiquetas": ["round table", "group table"],
+			"variantes": {
+				"infantil": "Nursery size",
+				"normal": "Standard"
+			},
+			"imagen": "Footprint of “Round group table”: a circle, 1.20 by 1.20 metres, marked with the letters “Mr”."
+		},
+		"mesa_hexagonal": {
+			"nombre": "Hexagonal group table",
+			"descripcion": "Six-sided table, one side per pupil.",
+			"etiquetas": ["hexagonal table"],
+			"imagen": "Footprint of “Hexagonal group table”: a hexagon, 1.30 by 1.13 metres, marked with the letters “Mh”."
+		},
+		"alfombra_asamblea": {
+			"nombre": "Circle-time rug",
+			"descripcion": "Large round rug in the nursery circle-time corner. You walk on it: steps sound muffled.",
+			"etiquetas": ["rug", "carpet", "circle time"],
+			"imagen": "Footprint of “Circle-time rug”: a circle, 2.50 by 2.50 metres, marked with the letters “Aa”."
+		},
+		"mochilas": {
+			"nombre": "Schoolbags on the floor",
+			"descripcion": "Schoolbags left in the aisle between desks. A low, soft obstacle: here today, gone tomorrow.",
+			"etiquetas": ["schoolbag", "backpack", "rucksack"],
+			"imagen": "Footprint of “Schoolbags on the floor”: a rectangle with rounded corners, 0.60 by 0.40 metres, marked with the letters “Mo”."
+		},
+		"estanteria_biblioteca": {
+			"nombre": "Library shelving",
+			"descripcion": "Free-standing double-sided shelving full of books. Between two of them there is a narrow aisle.",
+			"etiquetas": ["library shelves", "bookcase", "stacks"],
+			"variantes": {
+				"un_cuerpo": "One bay",
+				"dos_cuerpos": "Two bays",
+				"tres_cuerpos": "Three bays"
+			},
+			"imagen": "Footprint of “Library shelving”: a rectangle, 1.80 by 0.50 metres, marked with the letters “Eb”."
+		},
+		"mesa_lectura": {
+			"nombre": "Reading table",
+			"descripcion": "Long library table for several readers.",
+			"etiquetas": ["reading table", "library table"],
+			"imagen": "Footprint of “Reading table”: a rectangle, 1.80 by 0.90 metres, marked with the letters “Ml”."
+		},
+		"mesa_ordenador": {
+			"nombre": "Computer desk",
+			"descripcion": "Desk with a screen, keyboard and the tower underneath. The computer hums softly when on.",
+			"etiquetas": ["computer desk", "pc", "workstation"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Computer desk”: a rectangle, 1.00 by 0.70 metres, marked with the letters “Mo”."
+		},
+		"impresora": {
+			"nombre": "Printer",
+			"descripcion": "Large printer on its stand, at waist height.",
+			"etiquetas": ["printer", "scanner"],
+			"acciones": {
+				"imprimir": "Print"
+			},
+			"imagen": "Footprint of “Printer”: a rectangle, 0.55 by 0.55 metres, marked with the letters “Im”."
+		},
+		"carrito": {
+			"nombre": "Book trolley",
+			"descripcion": "Wheeled trolley loaded with books or laptops. It turns up in any corridor and rolls if pushed.",
+			"etiquetas": ["trolley", "book cart", "laptop trolley"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Book trolley”: a rectangle, 0.50 by 0.90 metres, marked with the letters “Ca”."
+		},
+		"mesa_comedor": {
+			"nombre": "Canteen table with benches",
+			"descripcion": "Long canteen table with a fixed bench on each side, all in one piece. You get in by stepping over the bench.",
+			"etiquetas": ["canteen table", "dining table with benches"],
+			"variantes": {
+				"seis_plazas": "Six seats",
+				"ocho_plazas": "Eight seats",
+				"diez_plazas": "Ten seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Canteen table with benches”: a long rectangle: the table in the middle and a fixed bench along each side, 2.40 by 1.50 metres, marked with the letters “Mc”."
+		},
+		"linea_bandejas": {
+			"nombre": "Serving counter",
+			"descripcion": "Long steel counter with a rail in front to slide your tray along.",
+			"etiquetas": ["serving counter", "servery", "self-service line"],
+			"imagen": "Footprint of “Serving counter”: a rectangle, 3.00 by 0.90 metres, marked with the letters “Lb”."
+		},
+		"carro_bandejas": {
+			"nombre": "Tray trolley",
+			"descripcion": "Tall metal trolley with runners where used trays are left.",
+			"etiquetas": ["tray trolley", "tray rack"],
+			"imagen": "Footprint of “Tray trolley”: a rectangle, 0.60 by 0.70 metres, marked with the letters “Cb”."
+		},
+		"fuente_agua": {
+			"nombre": "Drinking fountain",
+			"descripcion": "Steel fountain at waist height. Press the button and a jet comes out to drink from.",
+			"etiquetas": ["drinking fountain", "water fountain"],
+			"acciones": {
+				"beber": "Drink"
+			},
+			"imagen": "Footprint of “Drinking fountain”: a rectangle, 0.35 by 0.35 metres, marked with the letters “Fa”."
+		},
+		"colchoneta": {
+			"nombre": "Gym mat",
+			"descripcion": "Thick mat on the floor. You step onto it: the floor gives and steps make no sound.",
+			"etiquetas": ["gym mat", "crash mat"],
+			"variantes": {
+				"fina": "Thin",
+				"gruesa": "Thick",
+				"quitamiedos": "Crash mat"
+			},
+			"imagen": "Footprint of “Gym mat”: a rectangle, 2.00 by 1.00 metres, marked with the letters “Co”."
+		},
+		"potro": {
+			"nombre": "Vaulting horse",
+			"descripcion": "Vaulting horse: a padded body on four legs, at chest height.",
+			"etiquetas": ["vaulting horse", "vaulting box", "buck"],
+			"imagen": "Footprint of “Vaulting horse”: a rectangle with rounded corners, 0.40 by 1.60 metres, marked with the letters “Po”."
+		},
+		"plinto": {
+			"nombre": "Vaulting box",
+			"descripcion": "Stacked wooden boxes, wider at the bottom than at the top, with a padded lid.",
+			"etiquetas": ["vaulting box", "plinth"],
+			"imagen": "Footprint of “Vaulting box”: a rectangle with cut corners, 0.80 by 1.40 metres, marked with the letters “Pl”."
+		},
+		"espalderas": {
+			"nombre": "Wall bars",
+			"descripcion": "Horizontal wooden bars fixed to the wall, from the floor to over two metres. They stick out a hand's width.",
+			"etiquetas": ["wall bars"],
+			"variantes": {
+				"simple": "Single",
+				"doble": "Double",
+				"triple": "Triple"
+			},
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Wall bars”: a rectangle, 0.90 by 0.15 metres, marked with the letters “Es”."
+		},
+		"banco_sueco": {
+			"nombre": "Gym bench",
+			"descripcion": "Long, low, narrow wooden bench. At shin height: easy to trip over.",
+			"etiquetas": ["gym bench", "swedish bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Gym bench”: a rectangle, 2.50 by 0.25 metres, marked with the letters “Bs”."
+		},
+		"canasta": {
+			"nombre": "Basketball hoop",
+			"descripcion": "Basketball hoop: a wide, heavy base on the floor and a post rising to the backboard, well above head height.",
+			"etiquetas": ["basketball hoop", "basket", "backboard"],
+			"variantes": {
+				"minibasket": "Mini-basketball",
+				"reglamentaria": "Regulation"
+			},
+			"acciones": {
+				"encestar": "Shoot a basket"
+			},
+			"imagen": "Footprint of “Basketball hoop”: a T shape, 1.20 by 1.60 metres, marked with the letters “Ca”."
+		},
+		"porteria": {
+			"nombre": "Goal",
+			"descripcion": "Futsal goal: two posts and a crossbar, with the net behind. You can walk in from the front.",
+			"etiquetas": ["goal", "goalposts", "football goal"],
+			"variantes": {
+				"pequena": "Small",
+				"futbol_sala": "Futsal"
+			},
+			"acciones": {
+				"chutar": "Shoot at goal"
+			},
+			"imagen": "Footprint of “Goal”: a U open at the front: the two posts and the net behind, 3.00 by 1.00 metres, marked with the letters “Po”."
+		},
+		"mesa_pimpon": {
+			"nombre": "Table tennis table",
+			"descripcion": "Table tennis table with its net across the middle. Large, hard-edged, at hip height.",
+			"etiquetas": ["table tennis", "ping pong"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Table tennis table”: a rectangle, 1.52 by 2.74 metres, marked with the letters “Mp”."
+		},
+		"banco_vestuario": {
+			"nombre": "Changing room bench",
+			"descripcion": "Slatted bench with a rail of coat hooks above it, at head height.",
+			"etiquetas": ["changing room bench", "bench with hooks"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Changing room bench”: a rectangle, 1.50 by 0.40 metres, marked with the letters “Bv”."
+		},
+		"tobogan": {
+			"nombre": "Slide",
+			"descripcion": "Playground slide: the ladder at the back and the metal chute coming down to the front.",
+			"etiquetas": ["slide", "playground slide"],
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Slide”: a trapezoid, narrower at the back, 0.60 by 3.00 metres, marked with the letters “To”."
+		},
+		"arenero": {
+			"nombre": "Sandpit",
+			"descripcion": "Low enclosure full of sand. Step over the edge to get in; inside, your steps sink.",
+			"etiquetas": ["sandpit", "sandbox"],
+			"imagen": "Footprint of “Sandpit”: a rectangle with cut corners, 3.00 by 3.00 metres, marked with the letters “Ar”."
+		},
+		"piano": {
+			"nombre": "Upright piano",
+			"descripcion": "Upright piano in the music room. Touch it and three notes sound.",
+			"etiquetas": ["piano", "upright piano"],
+			"acciones": {
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Upright piano”: a rectangle, 1.50 by 0.60 metres, marked with the letters “Pi”."
+		},
+		"instrumentos": {
+			"nombre": "Instrument rack",
+			"descripcion": "Low shelves with tambourines, triangles and drums. Jog it and everything rattles.",
+			"etiquetas": ["instruments", "percussion", "tambourine"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Instrument rack”: a rectangle, 1.20 by 0.45 metres, marked with the letters “In”."
+		},
+		"atril": {
+			"nombre": "Music stand",
+			"descripcion": "Metal music stand: a tripod at the bottom and the tray at chest height. Light and easily knocked over.",
+			"etiquetas": ["music stand"],
+			"imagen": "Footprint of “Music stand”: a triangle (the three legs), 0.50 by 0.50 metres, marked with the letters “At”."
+		},
+		"tarima": {
+			"nombre": "Platform",
+			"descripcion": "Wooden platform a hand's width high. You step up onto it: it is a step, and footsteps on it sound hollow.",
+			"etiquetas": ["platform", "stage", "dais"],
+			"aviso": "Platform: mind the step.",
+			"imagen": "Footprint of “Platform”: a rectangle, 3.00 by 1.50 metres, marked with the letters “Ta”."
+		},
+		"taquillas": {
+			"nombre": "Lockers",
+			"descripcion": "Row of tall sheet-metal lockers against the wall. They clang when hit.",
+			"etiquetas": ["lockers", "locker"],
+			"variantes": {
+				"una": "One column",
+				"tres": "Three columns",
+				"seis": "Six columns",
+				"nueve": "Nine columns"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Lockers”: a rectangle, 0.90 by 0.50 metres, marked with the letters “Ta”."
+		},
+		"percheros": {
+			"nombre": "Wall coat hooks",
+			"descripcion": "Rail of hooks on the corridor wall, at shoulder height, bulky with coats and bags.",
+			"etiquetas": ["coat hooks", "coat pegs"],
+			"acciones": {
+				"colgar_ropa": "Hang your coat"
+			},
+			"imagen": "Footprint of “Wall coat hooks”: a rectangle, 1.50 by 0.25 metres, hanging 1.10 metres above the floor, marked with the letters “Pe”."
+		},
+		"banco_pasillo": {
+			"nombre": "Corridor bench",
+			"descripcion": "Wooden bench against the corridor wall.",
+			"etiquetas": ["bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Corridor bench”: a rectangle, 1.50 by 0.40 metres, marked with the letters “Bp”."
+		},
+		"tablon": {
+			"nombre": "Noticeboard",
+			"descripcion": "Framed cork noticeboard hung at mid height. It barely sticks out from the wall.",
+			"etiquetas": ["noticeboard", "bulletin board"],
+			"imagen": "Footprint of “Noticeboard”: a rectangle, 1.20 by 0.04 metres, hanging 1.00 metres above the floor, marked with the letters “Ta”."
+		},
+		"columna": {
+			"nombre": "Column",
+			"descripcion": "Concrete column in the way. Hard and cold; no warning until you touch it.",
+			"etiquetas": ["column", "pillar"],
+			"variantes": {
+				"redonda_fina": "Slim",
+				"normal": "Standard",
+				"gruesa": "Thick"
+			},
+			"imagen": "Footprint of “Column”: a circle, 0.40 by 0.40 metres, marked with the letters “Co”."
+		},
+		"pilar_cuadrado": {
+			"nombre": "Square pillar",
+			"descripcion": "Square brick pillar with four sharp corners.",
+			"etiquetas": ["pillar", "square column"],
+			"imagen": "Footprint of “Square pillar”: a rectangle, 0.40 by 0.40 metres, marked with the letters “Pc”."
+		},
+		"extintor": {
+			"nombre": "Wall fire extinguisher",
+			"descripcion": "Fire extinguisher hung on the wall one metre up. The cane passes under it.",
+			"etiquetas": ["fire extinguisher", "extinguisher"],
+			"imagen": "Footprint of “Wall fire extinguisher”: a circle, 0.15 by 0.15 metres, hanging 1.00 metres above the floor, marked with the letters “Ex”."
+		},
+		"vitrina_trofeos": {
+			"nombre": "Trophy cabinet",
+			"descripcion": "Glass cabinet with cups and medals inside. The glass chinks when touched.",
+			"etiquetas": ["trophy cabinet", "display case"],
+			"imagen": "Footprint of “Trophy cabinet”: a rectangle, 1.20 by 0.40 metres, marked with the letters “Vt”."
+		},
+		"mapa_mural": {
+			"nombre": "Pull-down wall map",
+			"descripcion": "Canvas map hanging from a roller above the board; pulled down, its lower edge with a wooden rod is at chest height and swings when brushed. The cane does not find it.",
+			"etiquetas": ["wall map", "pull-down map", "roller map"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Pull-down wall map”: a rectangle, 1.40 by 0.05 metres, hanging 1.00 metres above the floor, marked with the letters “Mm”."
+		},
+		"reloj_aula": {
+			"nombre": "Classroom wall clock",
+			"descripcion": "Round clock hung above the door or the board, well above head height. You cannot touch it, but in silence its tick is audible and tells you which wall the door is on.",
+			"etiquetas": ["wall clock", "classroom clock"],
+			"imagen": "Footprint of “Classroom wall clock”: a circle, 0.30 by 0.05 metres, hanging 2.20 metres above the floor, marked with the letters “Ra”."
+		},
+		"panel_interactivo_ruedas": {
+			"nombre": "Interactive display on a wheeled stand",
+			"descripcion": "Huge touch screen on a metal stand with two long feet reaching forward. The feet, at floor level, stick out further than the screen; when on, a fan whirs.",
+			"etiquetas": ["interactive display", "interactive panel", "smart board", "touch screen"],
+			"variantes": {
+				"de_65": "65 inch",
+				"de_75": "75 inch",
+				"de_86": "86 inch"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Interactive display on a wheeled stand”: a U open at the front, 1.95 by 0.80 metres, marked with the letters “Pi”."
+		},
+		"ventilador_techo": {
+			"nombre": "Ceiling fan",
+			"descripcion": "Blades turning, hung from the ceiling well above head height. You cannot touch them, but you hear them spinning and feel the draught on your face: they mark the middle of the room.",
+			"etiquetas": ["ceiling fan", "fan"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Ceiling fan”: a 4-pointed star, 1.30 by 1.30 metres, hanging 2.50 metres above the floor, marked with the letters “Vt”."
+		},
+		"purificador_aire": {
+			"nombre": "Air purifier",
+			"descripcion": "Plastic column at hip height in a corner of the classroom, with a grille on top that blows air. It hums steadily and softly; if switched off, the room sounds different.",
+			"etiquetas": ["air purifier", "air cleaner", "HEPA filter"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Air purifier”: a rectangle with rounded corners, 0.40 by 0.30 metres, marked with the letters “Pa”."
+		},
+		"mesa_trapecio": {
+			"nombre": "Trapezoid table",
+			"descripcion": "Pupils' table shaped like a trapezoid: one long side, one short and two slanted. Two together make a hexagon; the slanted corners are confusing when you trace the edge by hand.",
+			"etiquetas": ["trapezoid table", "trapezoidal table", "modular table"],
+			"variantes": {
+				"infantil": "Nursery size",
+				"primaria": "Primary size",
+				"secundaria": "Secondary size"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Trapezoid table”: a trapezoid, narrower at the back, 1.20 by 0.60 metres, marked with the letters “Mt”."
+		},
+		"cordel_dibujos": {
+			"nombre": "String of hanging drawings",
+			"descripcion": "String stretched from wall to wall across the classroom, with drawings held by pegs. It hangs at face height and the papers brush your head; the cane passes underneath with no warning.",
+			"etiquetas": ["drawing line", "art washing line", "hanging artwork"],
+			"acciones": {
+				"col_tender_dibujo": "Hang a drawing"
+			},
+			"imagen": "Footprint of “String of hanging drawings”: a rectangle, 4.00 by 0.10 metres, hanging 1.60 metres above the floor, marked with the letters “Cd”."
+		},
+		"triangulo_pikler": {
+			"nombre": "Pikler climbing triangle",
+			"descripcion": "Two wooden slatted ladders joined at the top like a tent, at a child's chest height. Children climb up one side and down the other; the spread legs are easy to trip on.",
+			"etiquetas": ["Pikler triangle", "climbing triangle", "wooden climber"],
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Pikler climbing triangle”: an open V: two slatted ladders meeting at the top, 0.80 by 0.75 metres, marked with the letters “Tp”."
+		},
+		"teclado_soporte": {
+			"nombre": "Keyboard on an X-stand",
+			"descripcion": "Electric keyboard resting on a tubular X-shaped stand. The stand is light and folds if pushed; the legs of the X stick out underneath.",
+			"etiquetas": ["keyboard", "electronic keyboard", "digital piano", "X-stand"],
+			"variantes": {
+				"cinco_octavas": "Five octaves",
+				"piano_digital": "88-key digital piano"
+			},
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"tocar_nota": "Play a note"
+			},
+			"imagen": "Footprint of “Keyboard on an X-stand”: a rectangle, 1.20 by 0.40 metres, marked with the letters “Ts”."
+		},
+		"gradas_coro": {
+			"nombre": "Choir risers",
+			"descripcion": "Three wide wooden steps in a fan shape, where the choir sings standing up. Each step rises a hand's width and sounds hollow underfoot; the top edge has no railing.",
+			"etiquetas": ["choir risers", "choral risers", "choir stand"],
+			"variantes": {
+				"dos_alturas": "Two tiers",
+				"tres_alturas": "Three tiers"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"bajar": "Climb down"
+			},
+			"imagen": "Footprint of “Choir risers”: a curved band bulging towards the front, 3.50 by 1.50 metres, marked with the letters “Gc”."
+		},
+		"mesa_plegable_taburetes": {
+			"nombre": "Folding table with stools",
+			"descripcion": "Canteen table with round stools fixed to its frame, on wheels: it folds upright to clear the room. Open, the stools stick out on both sides at knee height.",
+			"etiquetas": ["mobile folding table", "table with stools", "cafeteria folding table"],
+			"variantes": {
+				"abierta": "Open",
+				"plegada": "Folded upright"
+			},
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold",
+				"sentarse": "Sit down"
+			},
+			"imagen": "Footprint of “Folding table with stools”: a table top with round stools sticking out on both sides, 2.40 by 1.60 metres, marked with the letters “Mp”."
+		},
+		"balones_sueltos": {
+			"nombre": "Loose balls on the floor",
+			"descripcion": "Balls left rolling around the court or playground. You step on them and they slip away, and the cane sends them rolling off: here today, somewhere else tomorrow.",
+			"etiquetas": ["balls", "loose balls", "footballs"],
+			"acciones": {
+				"chutar": "Shoot at goal",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Loose balls on the floor”: a few scattered patches, 1.00 by 1.00 metres, marked with the letters “Bs”."
+		},
+		"baul_recreo": {
+			"nombre": "Playground toy chest",
+			"descripcion": "Large hard plastic or wooden chest against the playground wall, holding skipping ropes, hoops, balls and chalk. The lid is heavy and slams shut.",
+			"etiquetas": ["playground storage chest", "toy chest", "outdoor toy box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Playground toy chest”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Br”."
+		},
+		"bancal_huerto": {
+			"nombre": "School garden raised bed",
+			"descripcion": "Bottomless box of planks at knee height, filled with soil and plants. The wooden edge is found with the cane; inside, the soil is soft and sometimes wet.",
+			"etiquetas": ["raised bed", "school garden bed", "planter box"],
+			"variantes": {
+				"pequeno": "1 by 1 m",
+				"largo": "2 by 1 m",
+				"alto": "Tall, 3 m"
+			},
+			"acciones": {
+				"col_regar": "Water the plants"
+			},
+			"imagen": "Footprint of “School garden raised bed”: a rectangle, 2.00 by 1.00 metres, marked with the letters “Bh”."
+		},
+		"compostera": {
+			"nombre": "Compost bin",
+			"descripcion": "Plastic or slatted box the size of a large bin, with a lid on top and a hatch at the bottom. It smells of damp earth and the lid sounds hollow.",
+			"etiquetas": ["compost bin", "composter", "compost heap"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"col_echar_restos": "Add fruit scraps"
+			},
+			"imagen": "Footprint of “Compost bin”: a rectangle with cut corners, 0.80 by 0.80 metres, marked with the letters “Co”."
+		},
+		"estacion_meteorologica": {
+			"nombre": "School weather station",
+			"descripcion": "Metal mast on spread legs, with the rain gauge halfway up and the anemometer cups at the top, which spin and click when it is windy.",
+			"etiquetas": ["weather station", "anemometer", "rain gauge", "weather vane"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “School weather station”: a cross: the mast in the middle and the legs spreading to four sides, 0.80 by 0.80 metres, marked with the letters “Em”."
+		},
+		"deposito_lluvia": {
+			"nombre": "Rain water butt",
+			"descripcion": "Large barrel under the gutter, with a tap at the bottom to fill watering cans. Knocking it, it sounds fuller or emptier; the ground around it is usually wet.",
+			"etiquetas": ["water butt", "rain barrel", "rainwater tank"],
+			"variantes": {
+				"bidon": "Round barrel",
+				"cubo_ibc": "1000-litre IBC tote"
+			},
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Rain water butt”: a circle, 0.60 by 0.60 metres, marked with the letters “Dl”."
+		},
+		"comedero_pajaros": {
+			"nombre": "Hanging bird feeder",
+			"descripcion": "Little house or tube of seed hung from a branch or hook at head height. It swings when brushed; nearby you hear birds coming to feed.",
+			"etiquetas": ["bird feeder", "bird table", "birdhouse"],
+			"imagen": "Footprint of “Hanging bird feeder”: a house-shaped pentagon, 0.25 by 0.25 metres, hanging 1.50 metres above the floor, marked with the letters “Cp”."
+		},
+		"timbre_escolar": {
+			"nombre": "School bell",
+			"descripcion": "Round metal bell screwed high on the corridor or playground wall. It rings loudly at the start and end of every lesson and break: from almost anywhere you can tell where it is.",
+			"etiquetas": ["school bell", "class bell", "break bell"],
+			"acciones": {
+				"col_tocar_timbre": "Ring the bell"
+			},
+			"imagen": "Footprint of “School bell”: a semicircle, straight at the back and round at the front, 0.20 by 0.10 metres, hanging 2.30 metres above the floor, marked with the letters “Te”."
+		},
+		"cajon_objetos_perdidos": {
+			"nombre": "Lost property box",
+			"descripcion": "Large plastic box or a rail in a corner of the caretaker's area, full of forgotten sweatshirts, lunch boxes and bottles. Soft to touch; there is always something inside.",
+			"etiquetas": ["lost property", "lost and found", "lost property box"],
+			"variantes": {
+				"caja": "Box",
+				"perchero": "Rail with clothes"
+			},
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Lost property box”: a rectangle, 0.70 by 0.50 metres, marked with the letters “Co”."
+		},
+		"contenedor_tapones": {
+			"nombre": "Bottle cap heart bin",
+			"descripcion": "Heart-shaped wire mesh cage, taller than a child, filled with plastic bottle caps for charity. Drop one in and you hear it rattle down among the rest.",
+			"etiquetas": ["bottle cap collection", "cap heart", "charity cap bin"],
+			"acciones": {
+				"col_echar_tapon": "Drop a bottle cap in"
+			},
+			"imagen": "Footprint of “Bottle cap heart bin”: a heart pointing to the front, 0.90 by 0.40 metres, marked with the letters “Ct”."
+		},
+		"secadero_dibujos": {
+			"nombre": "Art drying rack",
+			"descripcion": "Wire rack on wheels at chest height, with many thin mesh shelves where painted drawings are left to dry. The shelves lift on springs and bounce.",
+			"etiquetas": ["drying rack", "art drying rack", "paint drying rack"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Art drying rack”: a rectangle, 0.70 by 0.55 metres, marked with the letters “Sd”."
+		},
+		"pila_plastica": {
+			"nombre": "Art room deep sink",
+			"descripcion": "Deep steel or ceramic sink on a cabinet, with two taps, for washing brushes and pots. The floor around it is usually splashed and slippery.",
+			"etiquetas": ["art sink", "deep sink", "utility sink"],
+			"variantes": {
+				"infantil": "Low, for infants",
+				"normal": "Standard"
+			},
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Art room deep sink”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Pp”."
+		},
+		"urinarios_fila": {
+			"nombre": "Row of urinals",
+			"descripcion": "Ceramic urinals hung on the wall in a row, with dividers between them sticking out at hip height. You count them by the dividers; the floor in front may be wet.",
+			"etiquetas": ["urinals", "urinal", "urinal row"],
+			"variantes": {
+				"dos": "Two urinals",
+				"cuatro": "Four urinals",
+				"seis": "Six urinals"
+			},
+			"acciones": {
+				"tirar_cadena": "Flush"
+			},
+			"imagen": "Footprint of “Row of urinals”: a comb: a bar with bodies sticking out to the front, 2.00 by 0.45 metres, marked with the letters “Uf”."
+		},
+		"cabinas_inodoro": {
+			"nombre": "Toilet cubicles",
+			"descripcion": "Row of compact laminate cubicles, each with a door and a gap at the bottom between the panel and the floor. The doors open inwards and close with a clicking latch.",
+			"etiquetas": ["toilet cubicles", "toilet stalls", "cubicles"],
+			"variantes": {
+				"una": "One cubicle",
+				"tres": "Three cubicles",
+				"cinco": "Five cubicles"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tirar_cadena": "Flush"
+			},
+			"imagen": "Footprint of “Toilet cubicles”: a comb: a bar with bodies sticking out to the front, 2.70 by 1.40 metres, marked with the letters “Ci”."
+		},
+		"columpio_sensorial": {
+			"nombre": "Ceiling sensory swing",
+			"descripcion": "Lycra pod or platform hung by a rope from a ceiling hook, at knee height. It sways and turns in any direction; there is a mat underneath.",
+			"etiquetas": ["sensory swing", "therapy swing", "lycra swing", "platform swing"],
+			"variantes": {
+				"lycra": "Lycra pod",
+				"plataforma": "Square platform"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"col_balancearse": "Swing"
+			},
+			"imagen": "Footprint of “Ceiling sensory swing”: a circle, 1.20 by 1.20 metres, hanging 0.40 metres above the floor, marked with the letters “Cs”."
+		},
+		"cortina_fibras_opticas": {
+			"nombre": "Fibre optic curtain",
+			"descripcion": "Bundle of hundreds of thin, cool strands hanging from the ceiling to the floor in a corner of the sensory room. It does not block the way: you walk through and the strands slide over your face and arms.",
+			"etiquetas": ["fibre optic curtain", "fibre optic spray", "sensory curtain"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"pasar": "Go through"
+			},
+			"aviso": "Fibre curtain: you walk through it.",
+			"imagen": "Footprint of “Fibre optic curtain”: a rectangle, 0.80 by 0.50 metres, marked with the letters “Cf”."
+		},
+		"bipedestador": {
+			"nombre": "Standing frame",
+			"descripcion": "Frame with a wide U-shaped base and a tray at the front at chest height, where a pupil who cannot stand unaided spends time upright held by straps. Heavy; the base sticks out at floor level.",
+			"etiquetas": ["standing frame", "stander", "prone stander"],
+			"acciones": {
+				"col_ponerse_de_pie": "Stand in the frame"
+			},
+			"imagen": "Footprint of “Standing frame”: a small tray at the front and a U-shaped base open at the back, where the child stands, 0.65 by 0.85 metres, marked with the letters “Bi”."
+		}
+	}
+}

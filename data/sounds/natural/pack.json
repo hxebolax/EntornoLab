@@ -1,0 +1,12 @@
+{
+	"id": "natural",
+	"nombre": "Natural",
+	"descripcion": "Instrumentos acústicos y objetos con cuerpo: marimba, xilófono y campanas en lugar de tonos electrónicos, y pasos, golpes, puertas y agua hechos con modelos físicos.",
+	"autor": "EntornoLab, con el Generador de sonidos de su autor",
+	"licencia": "GPL-3.0-or-later, como el programa (sonidos generados por procedimiento; sin grabaciones de terceros)",
+	"version": "1.0",
+	"igualar": true,
+	"generado": "Generador de Sonidos 1.0.0 con Python 3.15.0, solo con su motor procedural (sonido.exe renderizar), sin inteligencia artificial. Receta en receta.json; herramienta: tools/generar_paquete_sonidos.py.",
+	"sonidos": 198,
+	"heredados": []
+}

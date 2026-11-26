@@ -1,0 +1,130 @@
+VIDEOJUEGOS ACCESIBLES, COGNICIÓN ESPACIAL Y ORIENTACIÓN Y MOVILIDAD
+Informe narrativo de investigación. 26 de noviembre de 2026.
+
+1. RESUMEN
+Existe evidencia experimental de que las personas ciegas pueden aprender la distribución de un edificio desconocido mediante un videojuego acústico y utilizar posteriormente ese conocimiento para desplazarse por el edificio real. No es necesario que el jugador tenga experiencia visual previa. La evidencia más directamente relacionada con niños y jóvenes procede de AudioDoom y de los experimentos con adolescentes de AbES. También hay investigaciones con mandos Wii, interfaces hápticas y joystick. El resultado no implica que cualquier videojuego mejore automáticamente la movilidad, ni que pueda sustituir el aprendizaje con bastón, perro guía o profesionales de rehabilitación.
+
+2. CONCEPTOS FUNDAMENTALES
+Un mapa cognitivo es una representación mental de relaciones espaciales. Puede incluir conexiones entre habitaciones, distancias, direcciones y referencias ambientales sin necesidad de imágenes visuales. El conocimiento de hitos permite reconocer referencias; el de rutas permite encadenar desplazamientos; el configuracional permite relacionar lugares y deducir caminos alternativos. La perspectiva egocéntrica representa el entorno respecto al cuerpo; la alocéntrica representa las relaciones entre elementos independientemente de la orientación corporal. La transferencia cercana ocurre cuando el entorno entrenado corresponde al entorno real. La transferencia lejana supondría mejorar la movilidad en otros lugares no entrenados; esta última no queda demostrada por los estudios de edificios concretos.
+
+3. ABES: AUDIO-BASED ENVIRONMENT SIMULATOR
+Equipo asociado a Harvard Medical School, Massachusetts Eye and Ear, Boston University y Universidad de Chile. Investigadores destacados: Lotfi B. Merabet, Erin C. Connors y Jaime Sánchez.
+El proyecto recreó a partir de planos un edificio real de dos plantas del Carroll Center for the Blind, en Newton, Massachusetts. El jugador explora con teclado y escucha indicaciones espaciales. La misión consiste en encontrar joyas repartidas por el edificio, sacarlas y evitar personajes que pueden recuperarlas. La motivación para recorrer zonas diversas permite aprender incidentalmente la distribución espacial.
+
+3.1. Enhancing Navigation Skills through Audio Gaming (2010).
+Trabajo inicial de diseño y evaluación cognitiva presentado en CHI. Los resultados apuntan a la utilidad de la interfaz acústica para la orientación y la resolución de tareas espaciales físicas.
+Texto completo: https://pmc.ncbi.nlm.nih.gov/articles/PMC4259046/
+DOI: https://doi.org/10.1145/1753846.1754091
+
+3.2. Teaching the Blind to Find Their Way by Playing Video Games (2012).
+Prueba de concepto en PLOS ONE. Participantes con ceguera temprana aprendieron una distribución arquitectónica sin que el objetivo explícito del juego fuera memorizarla. Después se evaluó la navegación en el edificio correspondiente. Trabajo especialmente relevante porque mide conducta física y no solamente puntuaciones del juego.
+Texto completo: https://pmc.ncbi.nlm.nih.gov/articles/PMC3446956/
+DOI: https://doi.org/10.1371/journal.pone.0044958
+
+3.3. Development of an Audio-Based Virtual Gaming Environment to Assist with Navigation Skills in the Blind (2013).
+Connors, Yazzolino, Sánchez y Merabet. Journal of Visualized Experiments. Describe el procedimiento experimental y la aplicación. Es una buena referencia para reproducir una metodología de entrenamiento. Incluye pruebas de desplazamiento entre puntos y salida del edificio.
+Texto completo: https://pmc.ncbi.nlm.nih.gov/articles/PMC3641639/
+DOI: https://doi.org/10.3791/50272
+
+3.4. Action video game play and transfer of navigation and spatial cognition skills in adolescents who are blind (2014).
+ESTUDIO PRIORITARIO PARA LA CONSULTA SOBRE MENORES.
+Publicado en Frontiers in Human Neuroscience. Adolescentes con ceguera de inicio temprano exploraron una representación virtual acústica mediante teclado; posteriormente realizaron tareas de orientación en el edificio físico. Los investigadores observaron una elevada capacidad de aplicar allí la información espacial aprendida y una asociación positiva entre rendimiento en el juego y rendimiento de navegación.
+La asociación no demuestra por sí sola causalidad ni permite afirmar que todos los niños obtendrán el mismo beneficio. Tampoco equivale a demostrar movilidad urbana autónoma.
+Texto completo: https://pmc.ncbi.nlm.nih.gov/articles/PMC3949101/
+DOI: https://doi.org/10.3389/fnhum.2014.00133
+
+3.5. Virtual environments for the transfer of navigation skills in the blind: a comparison of directed instruction vs. video game based learning approaches (2014).
+Comparó exploración lúdica libre, instrucción dirigida y un grupo que jugó en una distribución diferente de la que debía recorrer físicamente. Los dos primeros grupos adquirieron conocimientos útiles; el grupo con escenario distinto no presentó la misma transferencia. El aprendizaje mediante exploración jugable ofreció ventajas para encontrar caminos alternativos y atajos. El estudio no detectó un efecto significativo de la experiencia visual previa sobre el rendimiento general después del entrenamiento.
+Es una de las referencias más importantes para diseñar una intervención con grupo de control. Parte de los datos del piloto anterior se incorporaron al análisis, por lo que no deben contarse todas estas publicaciones como ensayos independientes.
+Texto completo: https://pmc.ncbi.nlm.nih.gov/articles/PMC4013463/
+DOI: https://doi.org/10.3389/fnhum.2014.00223
+
+4. AUDIO DOOM Y AUDIOCHILE: UNIVERSIDAD DE CHILE
+
+4.1. Virtual environment interaction through 3D audio by blind children (1999).
+Jaime Sánchez y Mauricio Lumbreras. CyberPsychology & Behavior, volumen 2, páginas 101-111.
+AudioDoom permitió a escolares ciegos explorar espacios acústicos desde una perspectiva de primera persona. Los participantes representaron después lo aprendido mediante construcciones con bloques LEGO. Es una manera interesante de evaluar conocimientos espaciales en niños sin pedirles que dibujen un plano visual. Demuestra la viabilidad de investigar representaciones mentales a través del juego; no es una prueba directa de desplazamiento en un barrio real.
+https://pubmed.ncbi.nlm.nih.gov/19178246/
+https://doi.org/10.1089/cpb.1999.2.101
+
+4.2. 3D sound interactive environments for blind children problem solving skills.
+Jaime Sánchez y Mauricio Sáenz. Proyecto AudioChile. Entorno educativo interactivo vinculado a la geografía y cultura chilenas. Los sonidos tridimensionales ayudan a ubicar personajes, objetos y obstáculos. Su evaluación de usabilidad destaca el papel del sonido en la atención y motivación. Pertinente para educación infantil, pero no debe confundirse con un ensayo que pruebe transferencia a calles reales.
+PDF: https://repositorio.uchile.cl/bitstream/handle/2250/124981/Sanchez_Jaime.pdf?isAllowed=y&sequence=1
+
+5. BLINDAID: REALIDAD VIRTUAL HÁPTICA Y ACÚSTICA
+Orly Lahav, David W. Schloerb, Mandayam A. Srinivasan y colaboradores. MIT y Universidad de Tel Aviv.
+BlindAid permite reconocer estructuras virtuales mediante señales sonoras y un dispositivo háptico. A diferencia de un mando que simplemente vibra, una interfaz de fuerza puede simular resistencia al contacto con geometría virtual.
+
+5.1. A Virtual Environment for People Who Are Blind – A Usability Study (2012).
+Estudio preliminar con cuatro participantes totalmente ciegos. Los resultados respaldan la posibilidad de construir representaciones espaciales mediante el sistema. Por su tamaño, debe interpretarse como evidencia exploratoria.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3864668/
+
+5.2. Rehabilitation program integrating virtual environment to improve orientation and mobility skills for people who are blind (2015).
+Computers & Education, volumen 80, páginas 1-14. Integración del simulador en un programa de rehabilitación de orientación y movilidad. Especialmente relevante para su incorporación a la práctica profesional, no solo como entretenimiento.
+https://doi.org/10.1016/j.compedu.2014.08.003
+PDF: https://www.tau.ac.il/education/muse/orly/Publications_files/Lahavo_Comp%26Edu2015.pdf
+
+6. MANDOS DE CONSOLA: WIICI
+
+6.1. Using Wii technology to explore real spaces via virtual environments for people who are blind (2014).
+Lahav, Gedalevitz, Battersby, Brown, Evett y Merritt. Universidad de Tel Aviv y Nottingham Trent University. El mando Wii se utilizó para simular desplazamientos y exploración espacial, con retroalimentación sonora y háptica. Se evaluaron mapas mentales y tareas de orientación en escenarios físicos.
+https://doi.org/10.1108/JAT-02-2014-0009
+Repositorio: https://ntu-repository.worktribe.com/output/581990/using-wii-technology-to-explore-real-spaces-via-virtual-environments-for-people-who-are-blind
+
+6.2. Virtual environment navigation with look-around mode to explore new real spaces by people who are blind (2018; publicación electrónica 2017).
+Mismo equipo. Estudia la capacidad de explorar anticipadamente lugares mediante tecnología Nintendo Wii y un modo de inspección del entorno. Es particularmente pertinente para diseñar el equivalente a mirar alrededor sin desplazarse.
+https://pubmed.ncbi.nlm.nih.gov/28637136/
+https://doi.org/10.1080/09638288.2017.1286391
+No se ha verificado un ensayo equivalente con mando Xbox en esta búsqueda. La adaptación a dicho mando es una propuesta técnica, no un resultado ya validado.
+
+7. REALIDAD VIRTUAL ACÚSTICA Y PROYECTO RASPUTIN
+Spatial Knowledge via Auditory Information for Blind Individuals: Spatial Cognition Studies and the Use of Audio-VR (2022).
+Compara aprendizaje acústico durante desplazamiento físico y durante exploración virtual activa mediante joystick. Los resultados sugieren que ambas modalidades pueden conservar relaciones topológicas y métricas en la representación mental. La potencia estadística fue limitada y el entorno era un recorrido lineal de pasillo. El proyecto RASPUTIN plantea investigar la familiarización previa con oficinas, museos y otros edificios. No debe interpretarse su objetivo como resultado ya demostrado en todos esos lugares.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9268803/
+
+8. REVISIÓN DE LITERATURA
+Balan, Oana; Moldoveanu, Alin; Moldoveanu, Florica (2015). Navigational audio games: an effective approach toward improving spatial contextual learning for blind people. International Journal on Disability and Human Development, 14(2), 109-118.
+Revisión narrativa de sistemas de navegación sonora, interacción, sonidos espaciales y aprendizaje. Útil para descubrir trabajos adicionales. No es un metaanálisis capaz de cuantificar un efecto general.
+https://doi.org/10.1515/ijdhd-2014-0018
+
+9. QUÉ SE PUEDE AFIRMAR Y QUÉ NO
+La evidencia más convincente aquí localizada se refiere a edificios concretos. Hay trabajos con escolares, adolescentes y adultos, incluidos participantes con ceguera temprana y adquirida. No se verificó un ensayo específico con niños que aprendan un barrio completo mediante mando Xbox y luego recorran sus calles de manera autónoma. Tampoco se verificaron efectos duraderos a meses o años, ni resultados separados para todas las patologías visuales, edades, grados de resto visual o discapacidades asociadas. La ausencia de evidencia localizada no significa que esos trabajos no existan.
+
+10. PROPUESTA DE DESARROLLO DE UN VIDEOJUEGO ACCESIBLE
+Las siguientes son recomendaciones de ingeniería, no resultados clínicos de los artículos anteriores.
+A. Escenarios: habitación, vivienda, colegio, centro comercial, estación y barrio. Representar dimensiones, conexiones, puertas, escaleras, aceras, pasos peatonales y puntos de referencia. Mantener versiones de los planos y fechas de actualización.
+B. Motor espacial: coordenadas métricas, orientación, velocidad configurable, colisiones y grafo de conectividad. En interiores incorporar plantas y alturas. Una cuadrícula puede facilitar el primer prototipo; una malla permite geometría más fiel.
+C. Audio: usar sonidos de pasos según superficie, puertas y referencias localizadas, panoramización estéreo, distancia, reverberación y oclusión. HRTF opcional con calibración, porque las confusiones delante/detrás y verticales varían entre personas. Separar sonidos ambientales realistas de ayudas artificiales. No proporcionar pistas falsas de distancia.
+D. Interfaz: teclado completamente configurable, mando opcional con zonas muertas ajustables, modo paso a paso y movimiento continuo opcional. Botones para posición, orientación, inspección, pausa y retorno al punto inicial. Menús compatibles con NVDA y JAWS, foco inicial, controles accesibles sin ratón. Voz interrumpible, niveles de sonido independientes, sin depender de un único canal sensorial.
+E. Baja visión: ampliación, alto contraste configurable, tamaño de texto, reducción de movimiento, representación visual opcional y ausencia de destellos. Para discapacidad auditiva asociada ofrecer alternativas hápticas, Braille o texto accesible.
+F. Jugabilidad: recuperar objetos, entregar paquetes, encontrar aulas y salir por diferentes puertas. Evitar que ganar dependa exclusivamente de seguir una baliza directa. Reducir progresivamente las ayudas. Incorporar vuelta al inicio, rutas alternativas y exploración libre. No penalizar a niños por necesitar pausas.
+G. Tecnología posible: Python, pygame-ce para el prototipo y SDL para mandos; motor de audio espacial mediante OpenAL Soft u otra biblioteca apropiada; mapas JSON con coordenadas, habitaciones, materiales, conexiones y sonidos. Considerar Godot para proyectos tridimensionales verificando antes la accesibilidad de interfaz. Para exteriores se puede evaluar OpenStreetMap y datos municipales, sujetos a licencias, vigencia y comprobación in situ. Los planos interiores no deberían publicarse sin autorización.
+H. Aplicación a exteriores: una simulación puede enseñar la disposición de manzanas y la relación entre esquinas. No puede garantizar que el tráfico, obras, semáforos, obstáculos temporales o condiciones acústicas coincidan el día de la visita. No usarla como autorización para cruzar una calzada.
+
+11. EJEMPLO DE EXPERIENCIA EDUCATIVA
+Crear una vivienda virtual con entrada, pasillo, salón, cocina, dormitorio y baño. El jugador empieza en la entrada y debe encontrar objetos cotidianos para preparar una visita. Después se le pide localizar el baño desde el dormitorio y regresar por otro camino, si la distribución permite una alternativa. Finalmente un profesional evalúa la orientación en la vivienda real con las ayudas de movilidad habituales. En una segunda fase se puede utilizar un colegio o una manzana peatonal previamente revisada. No es suficiente medir si el jugador llegó a la meta en el videojuego; hay que comprobar comprensión espacial fuera de él.
+
+12. PROPUESTA DE ESTUDIO EXPERIMENTAL CON MENORES
+Diseñar el estudio junto con profesionales de orientación y movilidad, especialistas en desarrollo infantil y personas ciegas. Obtener aprobación ética, consentimiento de familias y asentimiento de menores. Minimizar datos personales y evitar grabaciones innecesarias.
+Comparar tres condiciones: juego de exploración, enseñanza dirigida del mismo plano y actividad de control equivalente en duración. Igualar dificultad, tiempo y exposición. Registrar experiencia previa, edad, visión funcional, habilidades de movilidad, experiencia con videojuegos y necesidades de accesibilidad. Determinar tamaño muestral mediante cálculo de potencia, no mediante un número arbitrario. Cuando sea posible asignar aleatoriamente y utilizar evaluadores que desconozcan el grupo.
+Medidas: rutas completadas, errores, ayuda solicitada, longitud y tiempo del recorrido, reconocimiento de referencias, estimación de distancias, dirección hacia lugares no visibles, retorno al origen, capacidad de deducir rutas nuevas, confianza y carga cognitiva. En menores utilizar también representación oral o con piezas táctiles. Evaluar retención días o semanas después y transferencia a un segundo entorno si se quiere investigar generalización.
+La prueba física debe realizarse con supervisión adecuada, manteniendo las ayudas habituales de movilidad y criterios de interrupción de seguridad. La eficacia no debe confundirse con navegar sin bastón.
+
+13. BÚSQUEDAS PARA CONTINUAR INVESTIGANDO
+Bases: PubMed, Google Scholar, ACM Digital Library, IEEE Xplore, ERIC y repositorios universitarios.
+Consultas recomendadas:
+- blind children audio games spatial cognition real world transfer
+- adolescents who are blind AbES navigation
+- visual impairment virtual environment orientation mobility children outdoor
+- blind pedestrian virtual neighborhood spatial learning gamepad
+- low vision children virtual reality wayfinding
+- auditory virtual reality cognitive mapping RASPUTIN
+- Lahav BlindAid Wiici look-around mode
+- Sánchez AudioDoom AudioChile niños ciegos cognición espacial
+- serious games orientation and mobility systematic review visual impairment
+PubMed: https://pubmed.ncbi.nlm.nih.gov/
+Google Scholar: https://scholar.google.com/
+
+14. CONCLUSIÓN Y LIMITACIONES DE ESTE INFORME
+La mejor puerta de entrada es el artículo de AbES con adolescentes de 2014, seguido por la comparación experimental de aprendizaje guiado y lúdico del mismo año. AudioDoom proporciona antecedentes infantiles y Wiici aporta una referencia de mando físico. La idea de un editor de viviendas y barrios accesibles para familiarización anticipada es técnicamente plausible y científicamente motivada, pero cada nueva implementación necesita validación.
+Este documento es una revisión narrativa de fuentes localizadas en búsquedas web, no una revisión sistemática exhaustiva. Se consultaron resultados bibliográficos y extractos de artículos; no se verificaron todos los textos íntegros, tamaños muestrales, porcentajes exactos ni disponibilidad actual de ejecutables o código fuente. Se evita inventar esas cifras o enlaces. Los enlaces DOI, PubMed y repositorios permiten ampliar y contrastar cada trabajo. No se ha identificado de forma inequívoca el estudio concreto mencionado en la conversación original.

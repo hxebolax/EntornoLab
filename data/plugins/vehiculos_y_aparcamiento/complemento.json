@@ -1,0 +1,4636 @@
+{
+	"formato": 1,
+	"id": "vehiculos_y_aparcamiento",
+	"nombre": "Vehículos y aparcamiento",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Vehículos parados como obstáculo (con sus puertas, portones, rampas y voladizos), remolques, contenedores y máquinas de obra, y lo que hay en un aparcamiento y en una gasolinera: plazas, topes, barreras, pago, lavado y aire.",
+	"depende_de": ["comun", "hogar", "calle", "transporte", "juego"],
+	"categorias": {
+		"turismos": "Coches, furgonetas y caravanas",
+		"pesados": "Camiones y autobuses",
+		"servicio": "Emergencias y limpieza",
+		"dos_ruedas": "Bicicletas, motos y triciclos",
+		"remolques_obra": "Remolques y contenedores de obra",
+		"plazas": "Plazas, topes y suelo del aparcamiento",
+		"control": "Barreras, pago y control",
+		"gasolinera": "Gasolinera, lavado y aire"
+	},
+	"subcategorias": {
+		"coches_altos": "Coches y todoterrenos",
+		"puertas_salientes": "Puertas abiertas y salientes de coche",
+		"furgonetas": "Furgonetas y furgones",
+		"caravanas": "Caravanas y autocaravanas",
+		"ligeros": "Vehículos ligeros",
+		"camiones": "Camiones",
+		"autobuses": "Autobuses y autocares",
+		"salientes_pesados": "Voladizos de camión y autobús",
+		"emergencias": "Vehículos de emergencias",
+		"limpieza": "Vehículos de limpieza",
+		"bicicletas": "Bicicletas y triciclos",
+		"motos": "Motos y ciclomotores",
+		"remolques": "Remolques",
+		"contenedores_obra": "Contenedores y casetas de obra",
+		"maquinaria_obra": "Maquinaria de obra en la calle",
+		"marcas_plaza": "Marcas de plaza",
+		"topes_cierres": "Topes, bordillos y cierres",
+		"aparcabicis": "Aparcamiento de bicis, motos y patinetes",
+		"pavimento": "Rampas y juntas del suelo",
+		"cubiertas": "Marquesinas y recintos",
+		"barreras": "Barreras y cancelas",
+		"pago_tiques": "Tiques y pago",
+		"vigilancia": "Gálibo, espejos y avisos",
+		"surtidores": "Surtidores",
+		"lavado": "Lavado",
+		"aire_aspirado": "Aire y aspirado"
+	},
+	"estados": {
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"apagado": "Apagado",
+		"funcionando": "Funcionando",
+		"cerrado": "Cerrado",
+		"abierto": "Abierto"
+	},
+	"objetos": [
+		{
+			"id": "todoterreno_alto",
+			"nombre": "Todoterreno alto",
+			"categoria": "turismos",
+			"subcategoria": "coches_altos",
+			"etiquetas": ["todoterreno", "cuatro por cuatro", "4x4", "todocamino grande"],
+			"descripcion": "Todoterreno grande y alto. El capó llega al pecho y los retrovisores quedan a la altura del hombro; por debajo hay mucho hueco y el bastón entra hasta las ruedas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.07], [1.0, 0.85], [0.9, 0.96], [0.72, 1.0], [0.28, 1.0], [0.1, 0.96], [0.0, 0.85], [0.0, 0.07]]
+			},
+			"medidas": {
+				"ancho": [1.9, 1.98, 2.1],
+				"fondo": [4.5, 4.9, 5.4],
+				"alto": [1.8, 1.9, 2.0]
+			},
+			"variantes": [
+				{
+					"id": "medio",
+					"nombre": "Todoterreno medio",
+					"ancho": 1.95,
+					"fondo": 4.7,
+					"alto": 1.85
+				},
+				{
+					"id": "grande",
+					"nombre": "Todoterreno grande",
+					"ancho": 2.05,
+					"fondo": 5.2,
+					"alto": 1.95
+				}
+			],
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/todoterreno_alto.png",
+				"descripcion": "Huella en planta de «Todoterreno alto»: la silueta de un vehículo, con el morro delante de 1,98 por 4,90 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "camioneta_caja_abierta",
+			"nombre": "Camioneta con caja abierta",
+			"categoria": "turismos",
+			"subcategoria": "coches_altos",
+			"etiquetas": ["camioneta", "pick-up", "picap", "ranchera de carga"],
+			"descripcion": "Camioneta con una cabina delante y, detrás, una caja de chapa abierta por arriba, con el borde a la altura del pecho. El portón trasero puede estar bajado y sobresalir un palmo largo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.76], [0.96, 0.76], [0.96, 0.97], [0.85, 1.0], [0.15, 1.0], [0.04, 0.97], [0.04, 0.76], [0.0, 0.76]]
+			},
+			"medidas": {
+				"ancho": [1.85, 1.95, 2.1],
+				"fondo": [5.2, 5.4, 5.9],
+				"alto": [1.75, 1.85, 1.95]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/camioneta_caja_abierta.png",
+				"descripcion": "Huella en planta de «Camioneta con caja abierta»: una caja larga detrás y una cabina algo más estrecha delante de 1,95 por 5,40 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "cuadriciclo",
+			"nombre": "Cuadriciclo sin carné",
+			"categoria": "turismos",
+			"subcategoria": "coches_altos",
+			"etiquetas": ["cuadriciclo", "coche sin carné", "microcoche"],
+			"descripcion": "Coche muy pequeño y estrecho, de plástico: suena hueco al tocarlo. Cabe atravesado en una plaza y a veces aparca sobre la acera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.07], [1.0, 0.85], [0.9, 0.96], [0.72, 1.0], [0.28, 1.0], [0.1, 0.96], [0.0, 0.85], [0.0, 0.07]]
+			},
+			"medidas": {
+				"ancho": [1.3, 1.5, 1.55],
+				"fondo": [2.4, 3.0, 3.3],
+				"alto": [1.4, 1.5, 1.6]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cu",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuadriciclo.png",
+				"descripcion": "Huella en planta de «Cuadriciclo sin carné»: la silueta de un vehículo, con el morro delante de 1,50 por 3,00 metros, con la letra «Cu»."
+			}
+		},
+		{
+			"id": "taxi_parado",
+			"nombre": "Taxi parado con el motor en marcha",
+			"categoria": "turismos",
+			"subcategoria": "coches_altos",
+			"etiquetas": ["taxi", "taxi libre", "coche de punto"],
+			"descripcion": "Taxi que espera con el motor al ralentí: se oye ronronear desde unos metros. La puerta trasera está en el costado; se abre tirando de la manilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.07], [1.0, 0.85], [0.9, 0.96], [0.72, 1.0], [0.28, 1.0], [0.1, 0.96], [0.0, 0.85], [0.0, 0.07]]
+			},
+			"medidas": {
+				"ancho": [1.75, 1.82, 1.9],
+				"fondo": [4.4, 4.65, 4.9],
+				"alto": [1.45, 1.5, 1.7]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_ralenti_gasolina.flac",
+					"volumen": 0.35,
+					"radio": 9
+				}
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "comun:vehiculos_puerta_coche.flac"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse",
+					"de": "ocupado",
+					"a": "libre",
+					"sonido": "comun:vehiculos_puerta_coche.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "parada", "estacion", "aeropuerto", "hospital"],
+			"estancias": ["calzada", "parada"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tp",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/taxi_parado.png",
+				"descripcion": "Huella en planta de «Taxi parado con el motor en marcha»: la silueta de un vehículo, con el morro delante de 1,82 por 4,65 metros, con la letra «Tp»."
+			}
+		},
+		{
+			"id": "coche_electrico_cargando",
+			"nombre": "Coche eléctrico cargando",
+			"categoria": "turismos",
+			"subcategoria": "coches_altos",
+			"etiquetas": ["coche eléctrico", "vehículo eléctrico", "coche enchufado"],
+			"descripcion": "Coche eléctrico enchufado. No hace ruido de motor: solo se oye un zumbido fino del cargador. Del costado sale un cable grueso hasta el poste.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.07], [1.0, 0.85], [0.9, 0.96], [0.72, 1.0], [0.28, 1.0], [0.1, 0.96], [0.0, 0.85], [0.0, 0.07]]
+			},
+			"medidas": {
+				"ancho": [1.75, 1.85, 2.0],
+				"fondo": [4.0, 4.5, 5.0],
+				"alto": [1.45, 1.6, 1.7]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.2,
+					"radio": 4
+				}
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["cable_recarga_suelo"],
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/coche_electrico_cargando.png",
+				"descripcion": "Huella en planta de «Coche eléctrico cargando»: la silueta de un vehículo, con el morro delante de 1,85 por 4,50 metros, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "cable_recarga_suelo",
+			"nombre": "Cable de recarga por el suelo",
+			"categoria": "turismos",
+			"subcategoria": "puertas_salientes",
+			"etiquetas": ["cable de recarga", "manguera de carga", "cable por el suelo"],
+			"descripcion": "Cable grueso de goma que cruza el paso del poste de recarga al coche. No corta el camino, pero el pie y el bastón se enganchan en él.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.08], [0.125, 0.16], [0.25, 0.08], [0.375, 0.0], [0.5, 0.08], [0.625, 0.16], [0.75, 0.08], [0.875, 0.0], [1.0, 0.08], [1.0, 0.92], [0.875, 1.0], [0.75, 0.92], [0.625, 0.84], [0.5, 0.92], [0.375, 1.0], [0.25, 0.92], [0.125, 0.84], [0.0, 0.92]]
+			},
+			"medidas": {
+				"ancho": [1.0, 2.5, 5.0],
+				"fondo": [0.03, 0.05, 0.1],
+				"alto": [0.02, 0.03, 0.05]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Cable por el suelo: levanta los pies.",
+			"funcion": "trasto",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["coche_electrico_cargando"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cable_recarga_suelo.png",
+				"descripcion": "Huella en planta de «Cable de recarga por el suelo»: un rectángulo de bordes ondulados de 2,50 por 0,05 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "porton_trasero_abierto",
+			"nombre": "Portón trasero abierto",
+			"categoria": "turismos",
+			"subcategoria": "puertas_salientes",
+			"etiquetas": ["portón", "portón del maletero", "maletero abierto", "monovolumen", "obstáculo en altura"],
+			"descripcion": "Portón de un monovolumen o de un todocamino levantado: una chapa con cristal que vuela hacia atrás a la altura de la frente. El bastón pasa por debajo sin tocarla.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.1, 1.3, 1.5],
+				"fondo": [0.8, 1.0, 1.2],
+				"alto": [0.1, 0.2, 0.4]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 1.75,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/porton_trasero_abierto.png",
+				"descripcion": "Huella en planta de «Portón trasero abierto»: un rectángulo de 1,30 por 1,00 metros, colgado a 1,75 metros del suelo, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "puerta_coche_abierta",
+			"nombre": "Puerta de coche abierta hacia la acera",
+			"categoria": "turismos",
+			"subcategoria": "puertas_salientes",
+			"etiquetas": ["puerta de coche", "puerta abierta", "portezuela"],
+			"descripcion": "Puerta de un coche abierta de par en par, atravesada en el paso. El canto es fino y de chapa; la parte de abajo queda a un palmo del suelo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.2],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.9, 1.1, 1.3]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.25,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"sonido": "comun:vehiculos_puerta_coche.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_coche_abierta.png",
+				"descripcion": "Huella en planta de «Puerta de coche abierta hacia la acera»: un rectángulo de 1,00 por 0,10 metros, colgado a 0,25 metros del suelo, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "portabicicletas_trasero",
+			"nombre": "Portabicicletas trasero con bicicletas",
+			"categoria": "turismos",
+			"subcategoria": "puertas_salientes",
+			"etiquetas": ["portabicicletas", "portabicis", "bicis en el coche"],
+			"descripcion": "Bicicletas colgadas detrás de un coche, atravesadas: las ruedas y los manillares sobresalen por los dos lados a la altura de la cintura y el pecho. Debajo no hay nada.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.4, 1.7, 1.9],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.8, 1.0, 1.2]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.6,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "voladizo",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/portabicicletas_trasero.png",
+				"descripcion": "Huella en planta de «Portabicicletas trasero con bicicletas»: un rectángulo de 1,70 por 0,60 metros, colgado a 0,60 metros del suelo, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "carga_saliente_baca",
+			"nombre": "Carga que sobresale de la baca",
+			"categoria": "turismos",
+			"subcategoria": "puertas_salientes",
+			"etiquetas": ["baca", "carga saliente", "escalera en el techo", "obstáculo en altura"],
+			"descripcion": "Escalera o tablones atados al techo de un coche, que sobresalen por detrás a la altura de la cara. El bastón no los encuentra.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.45, 0.6],
+				"fondo": [0.8, 1.2, 2.0],
+				"alto": [0.1, 0.15, 0.3]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 1.6,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "carga",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/carga_saliente_baca.png",
+				"descripcion": "Huella en planta de «Carga que sobresale de la baca»: un rectángulo de 0,45 por 1,20 metros, colgado a 1,60 metros del suelo, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "bola_remolque",
+			"nombre": "Bola de enganche de remolque",
+			"categoria": "turismos",
+			"subcategoria": "puertas_salientes",
+			"etiquetas": ["bola de remolque", "enganche", "gancho de remolque"],
+			"descripcion": "Gancho de hierro con una bola que sale por detrás de un coche a la altura de la espinilla. Pequeño y duro: es fácil dejarse la pierna en él.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.08, 0.1, 0.25],
+				"fondo": [0.15, 0.2, 0.35],
+				"alto": [0.1, 0.12, 0.2]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.35,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Br",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/bola_remolque.png",
+				"descripcion": "Huella en planta de «Bola de enganche de remolque»: un rectángulo de 0,10 por 0,20 metros, colgado a 0,35 metros del suelo, con la letra «Br»."
+			}
+		},
+		{
+			"id": "coche_con_remolque",
+			"nombre": "Coche con remolque",
+			"categoria": "turismos",
+			"subcategoria": "coches_altos",
+			"etiquetas": ["coche con remolque", "remolque enganchado", "carro"],
+			"descripcion": "Coche con un remolque enganchado. Entre los dos queda la lanza: una barra baja, a la altura de la espinilla, que no deja pasar por el hueco.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.05, 0.0], [0.95, 0.0], [0.95, 0.36], [0.56, 0.36], [0.56, 0.44], [1.0, 0.44], [1.0, 0.95], [0.85, 1.0], [0.15, 1.0], [0.0, 0.95], [0.0, 0.44], [0.44, 0.44], [0.44, 0.36], [0.05, 0.36]]
+			},
+			"medidas": {
+				"ancho": [1.6, 1.8, 2.0],
+				"fondo": [6.0, 7.0, 8.5],
+				"alto": [1.5, 1.6, 2.0]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/coche_con_remolque.png",
+				"descripcion": "Huella en planta de «Coche con remolque»: un coche delante y un remolque detrás, unidos por una lanza estrecha de 1,80 por 7,00 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "furgoneta_puertas_abiertas",
+			"nombre": "Furgoneta de reparto con las puertas traseras abiertas",
+			"categoria": "turismos",
+			"subcategoria": "furgonetas",
+			"etiquetas": ["furgoneta abierta", "reparto", "carga y descarga", "puertas traseras"],
+			"descripcion": "Furgoneta descargando: las dos puertas de atrás están abiertas y salen rectas hacia fuera, altas y finas. Entre ellas queda la boca de carga, con el suelo a la altura de la rodilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.06, 0.0], [0.06, 0.2], [0.94, 0.2], [0.94, 0.0], [1.0, 0.0], [1.0, 0.93], [0.88, 1.0], [0.12, 1.0], [0.0, 0.93]]
+			},
+			"medidas": {
+				"ancho": [1.95, 2.05, 2.2],
+				"fondo": [5.6, 6.3, 7.4],
+				"alto": [1.9, 2.5, 2.8]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "acera", "muelle_carga"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["carretilla_bebidas"],
+			"simbolo": {
+				"letra": "Fp",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/furgoneta_puertas_abiertas.png",
+				"descripcion": "Huella en planta de «Furgoneta de reparto con las puertas traseras abiertas»: una furgoneta con las dos puertas traseras abiertas hacia atrás, que dejan un hueco entre ellas de 2,05 por 6,30 metros, con la letra «Fp»."
+			}
+		},
+		{
+			"id": "furgon_capitone",
+			"nombre": "Furgón de caja con capitoné",
+			"categoria": "turismos",
+			"subcategoria": "furgonetas",
+			"etiquetas": ["furgón", "furgón de mudanzas", "camión pequeño", "capitoné"],
+			"descripcion": "Furgón grande: una caja cuadrada de chapa lisa, alta como una pared, que vuela por encima de la cabina. Cuando maniobra marcha atrás, pita.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.76], [0.96, 0.76], [0.96, 0.97], [0.85, 1.0], [0.15, 1.0], [0.04, 0.97], [0.04, 0.76], [0.0, 0.76]]
+			},
+			"medidas": {
+				"ancho": [2.1, 2.2, 2.4],
+				"fondo": [6.0, 6.8, 7.5],
+				"alto": [2.9, 3.2, 3.5]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_marcha_atras.flac",
+					"volumen": 0.6,
+					"radio": 20,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "muelle_carga"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Fc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/furgon_capitone.png",
+				"descripcion": "Huella en planta de «Furgón de caja con capitoné»: una caja larga detrás y una cabina algo más estrecha delante de 2,20 por 6,80 metros, con la letra «Fc»."
+			}
+		},
+		{
+			"id": "puesto_rodante_comida",
+			"nombre": "Furgón de comida con el mostrador abierto",
+			"categoria": "turismos",
+			"subcategoria": "furgonetas",
+			"etiquetas": ["furgón de comida", "gastroneta", "food truck", "churrería ambulante"],
+			"descripcion": "Furgón de comida parado: por un costado sale una repisa a la altura del pecho y, encima, una trampilla levantada que hace de tejadillo. Huele a fritura y se oye la plancha.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.72, 0.0], [0.72, 0.2], [1.0, 0.2], [1.0, 0.8], [0.72, 0.8], [0.72, 0.95], [0.6, 1.0], [0.1, 1.0], [0.0, 0.95]]
+			},
+			"medidas": {
+				"ancho": [2.9, 3.2, 3.6],
+				"fondo": [4.5, 6.0, 7.5],
+				"alto": [2.6, 3.0, 3.3]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar",
+					"sonido": "juego:monedas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "parque", "ocio"],
+			"estancias": ["plaza", "calzada"],
+			"obstaculo": "voladizo",
+			"riesgos": ["temporal", "caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/puesto_rodante_comida.png",
+				"descripcion": "Huella en planta de «Furgón de comida con el mostrador abierto»: un furgón con el mostrador y su tejadillo saliendo por el costado derecho de 3,20 por 6,00 metros, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "caravana",
+			"nombre": "Caravana",
+			"categoria": "turismos",
+			"subcategoria": "caravanas",
+			"etiquetas": ["caravana", "rulot", "roulotte", "remolque vivienda"],
+			"descripcion": "Remolque vivienda de paredes lisas de plástico y chapa. Por delante sale la lanza: una uve de hierro baja, con una rueda pequeña, que llega a la rodilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.78], [0.58, 0.78], [0.53, 1.0], [0.47, 1.0], [0.42, 0.78], [0.0, 0.78]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.3, 2.5],
+				"fondo": [4.5, 6.0, 8.0],
+				"alto": [2.4, 2.6, 2.8]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["aparcamiento", "naturaleza", "playa", "calle"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/caravana.png",
+				"descripcion": "Huella en planta de «Caravana»: una caja con una lanza en punta que sale por delante de 2,30 por 6,00 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "autocaravana_toldo",
+			"nombre": "Autocaravana con el toldo desplegado",
+			"categoria": "turismos",
+			"subcategoria": "caravanas",
+			"etiquetas": ["autocaravana", "camper", "toldo de autocaravana", "casa rodante"],
+			"descripcion": "Autocaravana aparcada con el toldo abierto hacia un lado. El borde del toldo queda a la altura de la cabeza y lo sujetan dos patas finas y unos vientos en diagonal; debajo suele haber mesa y sillas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.45, 0.0], [0.45, 0.25], [1.0, 0.25], [1.0, 0.8], [0.45, 0.8], [0.45, 0.96], [0.35, 1.0], [0.1, 1.0], [0.0, 0.96]]
+			},
+			"medidas": {
+				"ancho": [4.3, 4.8, 5.3],
+				"fondo": [5.4, 7.0, 7.5],
+				"alto": [2.7, 3.0, 3.3]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["aparcamiento", "naturaleza", "playa"],
+			"estancias": ["calzada", "plaza_aparcamiento", "acera"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "At",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/autocaravana_toldo.png",
+				"descripcion": "Huella en planta de «Autocaravana con el toldo desplegado»: la autocaravana a la izquierda y el toldo desplegado a la derecha de 4,80 por 7,00 metros, con la letra «At»."
+			}
+		},
+		{
+			"id": "carrito_golf",
+			"nombre": "Carrito de golf",
+			"categoria": "turismos",
+			"subcategoria": "ligeros",
+			"etiquetas": ["carrito de golf", "buggy", "coche eléctrico de servicio"],
+			"descripcion": "Cochecito eléctrico abierto, sin puertas, con un techo sobre cuatro barras. No hace ruido al moverse.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.984, 0.84], [0.935, 0.935], [0.84, 0.984], [0.5, 1.0], [0.16, 0.984], [0.065, 0.935], [0.016, 0.84], [0.0, 0.5], [0.016, 0.16], [0.065, 0.065], [0.16, 0.016], [0.5, 0.0], [0.84, 0.016], [0.935, 0.065], [0.984, 0.16]]
+			},
+			"medidas": {
+				"ancho": [1.1, 1.2, 1.4],
+				"fondo": [2.3, 2.4, 3.4],
+				"alto": [1.7, 1.8, 1.95]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 1.2,
+					"fondo": 2.4,
+					"alto": 1.8
+				},
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De cuatro plazas",
+					"ancho": 1.2,
+					"fondo": 3.2,
+					"alto": 1.9
+				}
+			],
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["hotel", "polideportivo", "aparcamiento", "parque"],
+			"estancias": ["sendero", "plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cg",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/carrito_golf.png",
+				"descripcion": "Huella en planta de «Carrito de golf»: un rectángulo de esquinas redondeadas de 1,20 por 2,40 metros, con la letra «Cg»."
+			}
+		},
+		{
+			"id": "quad",
+			"nombre": "Quad aparcado",
+			"categoria": "turismos",
+			"subcategoria": "ligeros",
+			"etiquetas": ["quad", "cuatrimoto", "moto de cuatro ruedas"],
+			"descripcion": "Moto de cuatro ruedas gordas y blandas, con manillar ancho. Baja y cuadrada; lo primero que se toca son los neumáticos.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 0.2], [1.0, 0.8], [0.8, 1.0], [0.2, 1.0], [0.0, 0.8], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.15, 1.25],
+				"fondo": [1.7, 2.0, 2.2],
+				"alto": [1.0, 1.15, 1.3]
+			},
+			"colocacion": ["suelo", "calzada", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["naturaleza", "playa", "calle"],
+			"estancias": ["sendero", "calzada"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Qu",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/quad.png",
+				"descripcion": "Huella en planta de «Quad aparcado»: un rectángulo con las esquinas cortadas de 1,15 por 2,00 metros, con la letra «Qu»."
+			}
+		},
+		{
+			"id": "camion_reparto",
+			"nombre": "Camión de reparto de caja cerrada",
+			"categoria": "pesados",
+			"subcategoria": "camiones",
+			"etiquetas": ["camión", "camión de reparto", "camión de caja", "carga y descarga"],
+			"descripcion": "Camión con una caja larga de chapa. La caja empieza a la altura del pecho: por debajo, entre las ruedas, el bastón entra sin tocar nada. Al dar marcha atrás, pita.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.76], [0.96, 0.76], [0.96, 0.97], [0.85, 1.0], [0.15, 1.0], [0.04, 0.97], [0.04, 0.76], [0.0, 0.76]]
+			},
+			"medidas": {
+				"ancho": [2.4, 2.5, 2.55],
+				"fondo": [7.0, 8.5, 11.0],
+				"alto": [3.2, 3.6, 4.0]
+			},
+			"variantes": [
+				{
+					"id": "dos_ejes",
+					"nombre": "De dos ejes",
+					"ancho": 2.5,
+					"fondo": 7.5,
+					"alto": 3.5
+				},
+				{
+					"id": "tres_ejes",
+					"nombre": "De tres ejes",
+					"ancho": 2.55,
+					"fondo": 10.0,
+					"alto": 3.8
+				}
+			],
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_marcha_atras.flac",
+					"volumen": 0.65,
+					"radio": 22,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "muelle_carga"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["plataforma_elevadora_camion", "retrovisor_camion", "carretilla_bebidas"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/camion_reparto.png",
+				"descripcion": "Huella en planta de «Camión de reparto de caja cerrada»: una caja larga detrás y una cabina algo más estrecha delante de 2,50 por 8,50 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "plataforma_elevadora_camion",
+			"nombre": "Plataforma elevadora de camión",
+			"categoria": "pesados",
+			"subcategoria": "salientes_pesados",
+			"etiquetas": ["plataforma elevadora", "trampilla elevadora", "compuerta del camión"],
+			"descripcion": "Chapa grande y horizontal que cuelga detrás de un camión a la altura de la cintura mientras descargan. Tiene el canto de hierro y el bastón pasa por debajo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 2.4, 2.5],
+				"fondo": [1.4, 1.8, 2.2],
+				"alto": [0.06, 0.1, 0.15]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "sonidos/vehiculos_plataforma_hidraulica.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "carga",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "muelle_carga"],
+			"obstaculo": "voladizo",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["camion_reparto"],
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/plataforma_elevadora_camion.png",
+				"descripcion": "Huella en planta de «Plataforma elevadora de camión»: un rectángulo de 2,40 por 1,80 metros, colgado a 1,00 metros del suelo, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "retrovisor_camion",
+			"nombre": "Retrovisor saliente de camión o autobús",
+			"categoria": "pesados",
+			"subcategoria": "salientes_pesados",
+			"etiquetas": ["retrovisor", "espejo del camión", "espejo del autobús", "obstáculo en altura"],
+			"descripcion": "Espejo grande en un brazo que sale del costado de la cabina, a la altura de la cara. Si el vehículo está pegado a la acera, invade el paso.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.45],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [0.3, 0.45, 0.7]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "parada"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"relacionados": ["camion_reparto", "autobus_urbano_parado"],
+			"simbolo": {
+				"letra": "Rc",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/retrovisor_camion.png",
+				"descripcion": "Huella en planta de «Retrovisor saliente de camión o autobús»: un rectángulo de 0,30 por 0,20 metros, colgado a 1,50 metros del suelo, con la letra «Rc»."
+			}
+		},
+		{
+			"id": "camion_mudanzas_rampa",
+			"nombre": "Camión de mudanzas con rampa",
+			"categoria": "pesados",
+			"subcategoria": "camiones",
+			"etiquetas": ["camión de mudanzas", "mudanza", "rampa de carga"],
+			"descripcion": "Camión de mudanzas con las puertas abiertas y una rampa de chapa que baja desde la caja hasta el suelo. La rampa es estrecha, resuena al pisarla y no tiene barandilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [0.65, 0.25], [1.0, 0.25], [1.0, 0.97], [0.88, 1.0], [0.12, 1.0], [0.0, 0.97], [0.0, 0.25], [0.35, 0.25]]
+			},
+			"medidas": {
+				"ancho": [2.4, 2.5, 2.55],
+				"fondo": [9.0, 11.0, 13.5],
+				"alto": [3.3, 3.6, 4.0]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "muelle_carga"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "desnivel"],
+			"frecuencia": "ocasional",
+			"relacionados": ["montamuebles"],
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/camion_mudanzas_rampa.png",
+				"descripcion": "Huella en planta de «Camión de mudanzas con rampa»: un camión con una rampa estrecha que sale por detrás hasta el suelo de 2,50 por 11,00 metros, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "camion_hormigonera",
+			"nombre": "Camión hormigonera",
+			"categoria": "pesados",
+			"subcategoria": "camiones",
+			"etiquetas": ["hormigonera", "camión hormigonera", "cuba de hormigón"],
+			"descripcion": "Camión con una cuba que gira despacio: se oye la grava rodar dentro. Por detrás sobresale una canaleta de hierro a la altura del pecho, manchada de hormigón.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.42, 0.0], [0.58, 0.0], [0.58, 0.12], [1.0, 0.12], [1.0, 0.97], [0.88, 1.0], [0.12, 1.0], [0.0, 0.97], [0.0, 0.12], [0.42, 0.12]]
+			},
+			"medidas": {
+				"ancho": [2.5, 2.5, 2.55],
+				"fondo": [8.0, 9.0, 10.0],
+				"alto": [3.7, 3.9, 4.0]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_hormigonera.flac",
+					"volumen": 0.55,
+					"radio": 18
+				}
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "obra"],
+			"estancias": ["calzada", "zona_obra"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "resbaladizo"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ch",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/camion_hormigonera.png",
+				"descripcion": "Huella en planta de «Camión hormigonera»: un camión con una canaleta estrecha que sobresale por detrás de 2,50 por 9,00 metros, con la letra «Ch»."
+			}
+		},
+		{
+			"id": "camion_grua_estabilizadores",
+			"nombre": "Camión grúa con los estabilizadores sacados",
+			"categoria": "pesados",
+			"subcategoria": "camiones",
+			"etiquetas": ["camión grúa", "camión pluma", "grúa autocargante", "estabilizadores"],
+			"descripcion": "Camión grúa trabajando. De cada costado salen dos patas de hierro que se apoyan en el suelo sobre tacos, a un paso largo del camión; el brazo cuelga la carga por encima.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.25, 0.0], [0.75, 0.0], [0.75, 0.2], [1.0, 0.2], [1.0, 0.28], [0.75, 0.28], [0.75, 0.6], [1.0, 0.6], [1.0, 0.68], [0.75, 0.68], [0.75, 1.0], [0.25, 1.0], [0.25, 0.68], [0.0, 0.68], [0.0, 0.6], [0.25, 0.6], [0.25, 0.28], [0.0, 0.28], [0.0, 0.2], [0.25, 0.2]]
+			},
+			"medidas": {
+				"ancho": [4.5, 5.5, 7.0],
+				"fondo": [8.0, 10.0, 12.0],
+				"alto": [3.5, 3.8, 4.0]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:vehiculos_ralenti_diesel.flac",
+					"volumen": 0.5,
+					"radio": 16
+				}
+			},
+			"contenedor": false,
+			"aviso": "Camión grúa trabajando: hay patas de hierro a los lados y carga por encima.",
+			"funcion": "vehiculo",
+			"lugares": ["calle", "obra"],
+			"estancias": ["calzada", "zona_obra"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cg",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/camion_grua_estabilizadores.png",
+				"descripcion": "Huella en planta de «Camión grúa con los estabilizadores sacados»: un camión con cuatro patas que salen a los lados, dos por cada costado de 5,50 por 10,00 metros, con la letra «Cg»."
+			}
+		},
+		{
+			"id": "autobus_urbano_parado",
+			"nombre": "Autobús urbano parado",
+			"categoria": "pesados",
+			"subcategoria": "autobuses",
+			"etiquetas": ["autobús", "autobus", "bus urbano", "autobús de línea"],
+			"descripcion": "Autobús parado con el motor en marcha: una pared larga de chapa y cristal. Las puertas están en el costado y se abren con un soplido de aire.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.04, 0.0], [0.96, 0.0], [1.0, 0.04], [1.0, 0.96], [0.96, 1.0], [0.04, 1.0], [0.0, 0.96], [0.0, 0.04]]
+			},
+			"medidas": {
+				"ancho": [2.5, 2.55, 2.55],
+				"fondo": [9.5, 12.0, 13.0],
+				"alto": [2.9, 3.1, 3.4]
+			},
+			"variantes": [
+				{
+					"id": "corto",
+					"nombre": "Corto, de 10 metros",
+					"ancho": 2.55,
+					"fondo": 10.0,
+					"alto": 3.1
+				},
+				{
+					"id": "normal",
+					"nombre": "De 12 metros",
+					"ancho": 2.55,
+					"fondo": 12.0,
+					"alto": 3.1
+				}
+			],
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:vehiculos_ralenti_diesel.flac",
+					"volumen": 0.45,
+					"radio": 15
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/automatica"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/automatica"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "parada", "estacion"],
+			"estancias": ["calzada", "parada"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["retrovisor_camion", "autobus_articulado_trasero"],
+			"simbolo": {
+				"letra": "Au",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/autobus_urbano_parado.png",
+				"descripcion": "Huella en planta de «Autobús urbano parado»: un rectángulo con las esquinas cortadas de 2,55 por 12,00 metros, con la letra «Au»."
+			}
+		},
+		{
+			"id": "autobus_articulado_trasero",
+			"nombre": "Autobús articulado: coche trasero con fuelle",
+			"categoria": "pesados",
+			"subcategoria": "autobuses",
+			"etiquetas": ["autobús articulado", "autobús oruga", "fuelle", "acordeón"],
+			"descripcion": "Mitad trasera de un autobús articulado. Va detrás del autobús normal, unida por un fuelle de goma blanda y arrugada, más estrecho: juntos pasan de dieciocho metros.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.85], [0.9, 0.87], [0.9, 1.0], [0.1, 1.0], [0.1, 0.87], [0.0, 0.85]]
+			},
+			"medidas": {
+				"ancho": [2.5, 2.55, 2.55],
+				"fondo": [7.0, 8.0, 8.5],
+				"alto": [2.9, 3.1, 3.4]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/automatica"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/automatica"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "parada", "estacion"],
+			"estancias": ["calzada", "parada"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["autobus_urbano_parado"],
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/autobus_articulado_trasero.png",
+				"descripcion": "Huella en planta de «Autobús articulado: coche trasero con fuelle»: un rectángulo largo que se estrecha delante, en el fuelle de 2,55 por 8,00 metros, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "autocar",
+			"nombre": "Autocar",
+			"categoria": "pesados",
+			"subcategoria": "autobuses",
+			"etiquetas": ["autocar", "autobús de viaje", "autobús discrecional", "bus escolar"],
+			"descripcion": "Autocar de viaje, más alto que un autobús urbano: las ventanas quedan por encima de la cabeza y abajo, en los costados, están los maleteros. Una sola puerta delante, con escalones.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.04, 0.0], [0.96, 0.0], [1.0, 0.04], [1.0, 0.96], [0.96, 1.0], [0.04, 1.0], [0.0, 0.96], [0.0, 0.04]]
+			},
+			"medidas": {
+				"ancho": [2.5, 2.55, 2.55],
+				"fondo": [10.5, 13.0, 15.0],
+				"alto": [3.5, 3.7, 4.0]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:vehiculos_ralenti_diesel.flac",
+					"volumen": 0.45,
+					"radio": 15
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/automatica"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/automatica"
+				}
+			],
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "estacion", "aparcamiento", "hotel", "colegio"],
+			"estancias": ["calzada", "parada", "plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["trampilla_maletero_autocar"],
+			"simbolo": {
+				"letra": "Au",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/autocar.png",
+				"descripcion": "Huella en planta de «Autocar»: un rectángulo con las esquinas cortadas de 2,55 por 13,00 metros, con la letra «Au»."
+			}
+		},
+		{
+			"id": "trampilla_maletero_autocar",
+			"nombre": "Trampilla de maletero de autocar abierta",
+			"categoria": "pesados",
+			"subcategoria": "salientes_pesados",
+			"etiquetas": ["maletero del autocar", "trampilla", "bodega", "obstáculo en altura"],
+			"descripcion": "Tapa del maletero de un autocar levantada hacia fuera: una chapa ancha que vuela desde el costado a la altura de la cara mientras se cargan las maletas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 2.5],
+				"fondo": [0.7, 0.9, 1.1],
+				"alto": [0.08, 0.1, 0.2]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "estacion", "aparcamiento", "hotel"],
+			"estancias": ["acera", "parada"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["autocar"],
+			"simbolo": {
+				"letra": "Tm",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/trampilla_maletero_autocar.png",
+				"descripcion": "Huella en planta de «Trampilla de maletero de autocar abierta»: un rectángulo de 2,00 por 0,90 metros, colgado a 1,50 metros del suelo, con la letra «Tm»."
+			}
+		},
+		{
+			"id": "microbus_rampa_lateral",
+			"nombre": "Microbús adaptado con la rampa sacada",
+			"categoria": "pesados",
+			"subcategoria": "autobuses",
+			"etiquetas": ["microbús", "microbus", "transporte adaptado", "minibús"],
+			"descripcion": "Microbús de transporte adaptado con la puerta lateral abierta y una rampa de chapa que baja hasta la acera. La rampa tiene los bordes levantados un dedo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.72, 0.0], [0.72, 0.4], [1.0, 0.4], [1.0, 0.6], [0.72, 0.6], [0.72, 0.95], [0.62, 1.0], [0.1, 1.0], [0.0, 0.95]]
+			},
+			"medidas": {
+				"ancho": [3.0, 3.3, 3.6],
+				"fondo": [6.0, 7.5, 8.5],
+				"alto": [2.6, 2.8, 3.0]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:vehiculos_ralenti_diesel.flac",
+					"volumen": 0.35,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "residencia", "hospital", "colegio"],
+			"estancias": ["calzada", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/microbus_rampa_lateral.png",
+				"descripcion": "Huella en planta de «Microbús adaptado con la rampa sacada»: un microbús con una rampa que sale por el costado derecho de 3,30 por 7,50 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "tractor",
+			"nombre": "Tractor",
+			"categoria": "pesados",
+			"subcategoria": "camiones",
+			"etiquetas": ["tractor", "tractor agrícola", "maquinaria agrícola"],
+			"descripcion": "Tractor agrícola: dos ruedas traseras enormes, de goma con tacos, más altas que una persona, y un morro estrecho. Los estribos de la cabina quedan a la altura de la rodilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.5], [0.7, 0.5], [0.7, 0.8], [0.85, 0.8], [0.85, 1.0], [0.15, 1.0], [0.15, 0.8], [0.3, 0.8], [0.3, 0.5], [0.0, 0.5]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.4, 2.8],
+				"fondo": [3.8, 4.5, 5.5],
+				"alto": [2.6, 2.9, 3.2]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "comun:vehiculos_ralenti_diesel.flac",
+					"volumen": 0.55,
+					"radio": 18,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["naturaleza", "calle", "jardin"],
+			"estancias": ["sendero", "calzada"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Tr",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/tractor.png",
+				"descripcion": "Huella en planta de «Tractor»: ancho detrás, por las ruedas grandes, y estrecho delante, por el morro de 2,40 por 4,50 metros, con la letra «Tr»."
+			}
+		},
+		{
+			"id": "carretilla_bebidas",
+			"nombre": "Carretilla de reparto de bebidas",
+			"categoria": "pesados",
+			"subcategoria": "salientes_pesados",
+			"etiquetas": ["carretilla", "carretilla de reparto", "cajas de bebidas", "barriles"],
+			"descripcion": "Carretilla de dos ruedas cargada de cajas de botellas hasta el pecho, dejada en mitad de la acera frente a un bar. Si la empujas, las botellas tintinean y puede volcar.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.125, 0.0], [0.875, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.1, 1.4, 1.7]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "juego:llaves.flac"
+			},
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["calle", "bar", "restaurante"],
+			"estancias": ["acera", "terraza_bar"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"relacionados": ["camion_reparto"],
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/carretilla_bebidas.png",
+				"descripcion": "Huella en planta de «Carretilla de reparto de bebidas»: un trapecio, más estrecho por detrás de 0,50 por 0,60 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "ambulancia_porton",
+			"nombre": "Ambulancia con el portón abierto",
+			"categoria": "servicio",
+			"subcategoria": "emergencias",
+			"etiquetas": ["ambulancia", "uvi móvil", "soporte vital", "emergencias"],
+			"descripcion": "Ambulancia parada con el motor en marcha y las puertas de atrás abiertas. Por detrás sobresalen el estribo y la camilla, a la altura de la rodilla y la cadera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [0.7, 0.0], [0.7, 0.15], [1.0, 0.15], [1.0, 0.94], [0.88, 1.0], [0.12, 1.0], [0.0, 0.94], [0.0, 0.15], [0.3, 0.15]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.1, 2.3],
+				"fondo": [6.3, 7.2, 8.5],
+				"alto": [2.5, 2.7, 3.0]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:vehiculos_ralenti_diesel.flac",
+					"volumen": 0.4,
+					"radio": 12
+				}
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "hospital", "centro_salud"],
+			"estancias": ["calzada", "urgencias"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ap",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/ambulancia_porton.png",
+				"descripcion": "Huella en planta de «Ambulancia con el portón abierto»: un furgón con un saliente centrado detrás: el estribo y la camilla de 2,10 por 7,20 metros, con la letra «Ap»."
+			}
+		},
+		{
+			"id": "coche_bomberos",
+			"nombre": "Coche de bomberos",
+			"categoria": "servicio",
+			"subcategoria": "emergencias",
+			"etiquetas": ["coche de bomberos", "camión de bomberos", "autobomba", "bomberos"],
+			"descripcion": "Camión de bomberos parado con el motor en marcha. Los costados son persianas de chapa ondulada, a veces subidas, con herramientas dentro; alrededor puede haber mangueras por el suelo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.76], [0.96, 0.76], [0.96, 0.97], [0.85, 1.0], [0.15, 1.0], [0.04, 0.97], [0.04, 0.76], [0.0, 0.76]]
+			},
+			"medidas": {
+				"ancho": [2.4, 2.5, 2.55],
+				"fondo": [7.0, 8.0, 10.0],
+				"alto": [3.1, 3.3, 3.6]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:vehiculos_ralenti_diesel.flac",
+					"volumen": 0.55,
+					"radio": 18
+				}
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"relacionados": ["manguera_bomberos"],
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/coche_bomberos.png",
+				"descripcion": "Huella en planta de «Coche de bomberos»: una caja larga detrás y una cabina algo más estrecha delante de 2,50 por 8,00 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "manguera_bomberos",
+			"nombre": "Manguera de bomberos por el suelo",
+			"categoria": "servicio",
+			"subcategoria": "emergencias",
+			"etiquetas": ["manguera", "manguera de bomberos", "manguera de riego"],
+			"descripcion": "Manguera gruesa y dura, llena de agua, que cruza la calle haciendo curvas. No corta el paso, pero es como un bordillo redondo: hay que pasarla por encima. El suelo está mojado.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.08], [0.125, 0.16], [0.25, 0.08], [0.375, 0.0], [0.5, 0.08], [0.625, 0.16], [0.75, 0.08], [0.875, 0.0], [1.0, 0.08], [1.0, 0.92], [0.875, 1.0], [0.75, 0.92], [0.625, 0.84], [0.5, 0.92], [0.375, 1.0], [0.25, 0.92], [0.125, 0.84], [0.0, 0.92]]
+			},
+			"medidas": {
+				"ancho": [2.0, 6.0, 15.0],
+				"fondo": [0.07, 0.1, 0.15],
+				"alto": [0.05, 0.07, 0.1]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"aviso": "Manguera por el suelo: pásala por encima.",
+			"funcion": "trasto",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "acera"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["temporal", "desnivel", "resbaladizo"],
+			"frecuencia": "ocasional",
+			"relacionados": ["coche_bomberos"],
+			"simbolo": {
+				"letra": "Mb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/manguera_bomberos.png",
+				"descripcion": "Huella en planta de «Manguera de bomberos por el suelo»: un rectángulo de bordes ondulados de 6,00 por 0,10 metros, con la letra «Mb»."
+			}
+		},
+		{
+			"id": "coche_patrulla",
+			"nombre": "Coche patrulla parado",
+			"categoria": "servicio",
+			"subcategoria": "emergencias",
+			"etiquetas": ["coche patrulla", "coche de policía", "policía local", "zeta"],
+			"descripcion": "Coche de policía parado con el motor en marcha, muchas veces subido a la acera o atravesado. En el techo lleva una barra de luces; dentro se oye la emisora.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.07], [1.0, 0.85], [0.9, 0.96], [0.72, 1.0], [0.28, 1.0], [0.1, 0.96], [0.0, 0.85], [0.0, 0.07]]
+			},
+			"medidas": {
+				"ancho": [1.8, 1.85, 2.0],
+				"fondo": [4.4, 4.7, 5.0],
+				"alto": [1.6, 1.7, 1.9]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_ralenti_gasolina.flac",
+					"volumen": 0.3,
+					"radio": 8
+				}
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/coche_patrulla.png",
+				"descripcion": "Huella en planta de «Coche patrulla parado»: la silueta de un vehículo, con el morro delante de 1,85 por 4,70 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "barredora",
+			"nombre": "Barredora",
+			"categoria": "servicio",
+			"subcategoria": "limpieza",
+			"etiquetas": ["barredora", "máquina barredora", "limpieza viaria"],
+			"descripcion": "Máquina barredora: se oye de lejos, con sus cepillos que raspan y la turbina que aspira. Los cepillos redondos sobresalen por delante a ras de suelo y lanzan agua y polvo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [0.9, 0.7], [1.0, 0.75], [1.0, 0.95], [0.85, 1.0], [0.6, 0.92], [0.4, 0.92], [0.15, 1.0], [0.0, 0.95], [0.0, 0.75], [0.1, 0.7]]
+			},
+			"medidas": {
+				"ancho": [1.3, 1.8, 2.5],
+				"fondo": [3.2, 4.5, 6.5],
+				"alto": [2.0, 2.4, 3.0]
+			},
+			"variantes": [
+				{
+					"id": "de_aceras",
+					"nombre": "De aceras",
+					"ancho": 1.3,
+					"fondo": 3.5,
+					"alto": 2.0
+				},
+				{
+					"id": "de_calzada",
+					"nombre": "De calzada",
+					"ancho": 2.3,
+					"fondo": 6.0,
+					"alto": 2.9
+				}
+			],
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_barredora.flac",
+					"volumen": 0.65,
+					"radio": 22
+				}
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/barredora.png",
+				"descripcion": "Huella en planta de «Barredora»: un cuerpo con dos cepillos redondos que sobresalen por las esquinas de delante de 1,80 por 4,50 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "camion_basura",
+			"nombre": "Camión de la basura",
+			"categoria": "servicio",
+			"subcategoria": "limpieza",
+			"etiquetas": ["camión de la basura", "recogida de basura", "camión de residuos"],
+			"descripcion": "Camión de la basura. Parado, es una pared de chapa con una tolva abierta detrás, a la altura de la cintura. Trabajando, hace mucho ruido: el elevador gime y el contenedor vuelca.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [0.9, 0.12], [1.0, 0.12], [1.0, 0.97], [0.88, 1.0], [0.12, 1.0], [0.0, 0.97], [0.0, 0.12], [0.1, 0.12]]
+			},
+			"medidas": {
+				"ancho": [2.4, 2.5, 2.55],
+				"fondo": [7.5, 9.5, 10.5],
+				"alto": [3.4, 3.7, 3.9]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_camion_basura.flac",
+					"volumen": 0.7,
+					"radio": 25,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/camion_basura.png",
+				"descripcion": "Huella en planta de «Camión de la basura»: un camión con la tolva de carga, algo más estrecha, detrás de 2,50 por 9,50 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "carro_barrendero",
+			"nombre": "Carro de barrendero",
+			"categoria": "servicio",
+			"subcategoria": "limpieza",
+			"etiquetas": ["carro de barrendero", "carrito de limpieza viaria", "cubos de barrer"],
+			"descripcion": "Carro con dos cubos de plástico, ruedas y un mango, del que sobresalen el cepillo y el recogedor. El barrendero lo deja en la acera mientras trabaja.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [1.0, 1.2, 1.4],
+				"alto": [1.0, 1.1, 1.5]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_barrendero.png",
+				"descripcion": "Huella en planta de «Carro de barrendero»: un rectángulo de 0,70 por 1,20 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "bici_caballete",
+			"nombre": "Bicicleta suelta sobre su pata de cabra",
+			"categoria": "dos_ruedas",
+			"subcategoria": "bicicletas",
+			"etiquetas": ["bicicleta suelta", "bici con pata de cabra", "bici apoyada"],
+			"descripcion": "Bicicleta sin atar, apoyada solo en su pata. Si la rozas, se cae con estrépito: el manillar gira y el pedal queda a la altura de la espinilla.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [0.75, 0.25], [1.0, 0.3], [1.0, 0.4], [0.7, 0.45], [0.65, 1.0], [0.35, 1.0], [0.3, 0.45], [0.0, 0.4], [0.0, 0.3], [0.25, 0.25]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.62, 0.7],
+				"fondo": [1.6, 1.8, 1.95],
+				"alto": [0.95, 1.05, 1.2]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/bici_caballete.png",
+				"descripcion": "Huella en planta de «Bicicleta suelta sobre su pata de cabra»: un cuerpo estrecho y largo con el manillar atravesado de 0,62 por 1,80 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "bici_carga",
+			"nombre": "Bicicleta de carga",
+			"categoria": "dos_ruedas",
+			"subcategoria": "bicicletas",
+			"etiquetas": ["bici de carga", "bicicleta de reparto", "cargo bike", "bakfiets"],
+			"descripcion": "Bicicleta larga con un cajón grande de madera delante, donde van niños o paquetes. El cajón llega a la cadera y es lo primero que se encuentra.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [0.7, 0.5], [1.0, 0.52], [1.0, 1.0], [0.0, 1.0], [0.0, 0.52], [0.3, 0.5]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.0],
+				"fondo": [2.1, 2.5, 2.7],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/bici_carga.png",
+				"descripcion": "Huella en planta de «Bicicleta de carga»: estrecha detrás y con un cajón ancho delante de 0,90 por 2,50 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "bici_remolque_infantil",
+			"nombre": "Bicicleta con remolque infantil",
+			"categoria": "dos_ruedas",
+			"subcategoria": "bicicletas",
+			"etiquetas": ["remolque de bicicleta", "carrito de bici", "remolque infantil"],
+			"descripcion": "Bicicleta con un remolque de tela enganchado detrás, bajo y más ancho que ella. Entre los dos hay una barra a ras de suelo; un banderín fino sube desde el remolque.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.38], [0.56, 0.38], [0.56, 0.46], [0.65, 0.48], [0.65, 0.62], [0.95, 0.64], [0.95, 0.7], [0.65, 0.72], [0.6, 1.0], [0.4, 1.0], [0.35, 0.72], [0.05, 0.7], [0.05, 0.64], [0.35, 0.62], [0.35, 0.48], [0.44, 0.46], [0.44, 0.38], [0.0, 0.38]]
+			},
+			"medidas": {
+				"ancho": [0.75, 0.8, 0.9],
+				"fondo": [3.0, 3.3, 3.6],
+				"alto": [0.9, 1.05, 1.15]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Br",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/bici_remolque_infantil.png",
+				"descripcion": "Huella en planta de «Bicicleta con remolque infantil»: una bicicleta delante y un remolque ancho y bajo detrás de 0,80 por 3,30 metros, con la letra «Br»."
+			}
+		},
+		{
+			"id": "triciclo_adaptado",
+			"nombre": "Triciclo adaptado de adulto",
+			"categoria": "dos_ruedas",
+			"subcategoria": "bicicletas",
+			"etiquetas": ["triciclo", "triciclo de adulto", "triciclo adaptado", "bicicleta de tres ruedas"],
+			"descripcion": "Triciclo de adulto: una rueda delante y dos detrás, con una cesta grande entre ellas. No se cae al tocarlo; por detrás es tan ancho como una silla de ruedas.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.4], [0.65, 0.45], [0.9, 0.7], [0.9, 0.76], [0.6, 0.78], [0.58, 1.0], [0.42, 1.0], [0.4, 0.78], [0.1, 0.76], [0.1, 0.7], [0.35, 0.45], [0.0, 0.4]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 0.9],
+				"fondo": [1.6, 1.8, 2.0],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "parque", "residencia"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/triciclo_adaptado.png",
+				"descripcion": "Huella en planta de «Triciclo adaptado de adulto»: ancho detrás, por las dos ruedas y la cesta, y estrecho delante de 0,80 por 1,80 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "bicicleta_tumbada",
+			"nombre": "Bicicleta tirada en el suelo",
+			"categoria": "dos_ruedas",
+			"subcategoria": "bicicletas",
+			"etiquetas": ["bicicleta caída", "bici tirada", "bici en el suelo"],
+			"descripcion": "Bicicleta caída en mitad del paso: un enredo bajo de ruedas, pedales y manillar que no llega a la rodilla. El bastón se mete entre los radios.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.3], [0.3, 0.0], [0.5, 0.25], [0.75, 0.05], [1.0, 0.4], [0.85, 0.75], [0.6, 0.7], [0.45, 1.0], [0.15, 0.9], [0.25, 0.6]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.75, 1.95],
+				"fondo": [0.8, 1.0, 1.15],
+				"alto": [0.25, 0.35, 0.6]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["calle", "parque", "colegio"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bt",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/bicicleta_tumbada.png",
+				"descripcion": "Huella en planta de «Bicicleta tirada en el suelo»: una mancha irregular de ruedas, cuadro y manillar de 1,75 por 1,00 metros, con la letra «Bt»."
+			}
+		},
+		{
+			"id": "moto_grande_maletas",
+			"nombre": "Moto grande con maletas",
+			"categoria": "dos_ruedas",
+			"subcategoria": "motos",
+			"etiquetas": ["moto grande", "moto con maletas", "moto de carretera", "trail"],
+			"descripcion": "Moto grande de carretera con dos maletas rígidas a los lados y un baúl detrás: por atrás es tan ancha como una puerta. El motor y el escape pueden quemar.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [0.7, 0.0], [0.7, 0.05], [1.0, 0.08], [1.0, 0.3], [0.7, 0.33], [0.68, 0.62], [0.98, 0.66], [0.98, 0.72], [0.66, 0.76], [0.6, 1.0], [0.4, 1.0], [0.34, 0.76], [0.02, 0.72], [0.02, 0.66], [0.32, 0.62], [0.3, 0.33], [0.0, 0.3], [0.0, 0.08], [0.3, 0.05]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.1],
+				"fondo": [2.2, 2.4, 2.6],
+				"alto": [1.3, 1.45, 1.6]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mg",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/moto_grande_maletas.png",
+				"descripcion": "Huella en planta de «Moto grande con maletas»: un cuerpo estrecho con dos maletas anchas detrás y el manillar delante de 1,00 por 2,40 metros, con la letra «Mg»."
+			}
+		},
+		{
+			"id": "ciclomotor_reparto",
+			"nombre": "Ciclomotor de reparto con cajón",
+			"categoria": "dos_ruedas",
+			"subcategoria": "motos",
+			"etiquetas": ["ciclomotor de reparto", "moto de reparto", "repartidor", "cajón de reparto"],
+			"descripcion": "Ciclomotor de reparto de comida con un cajón cuadrado detrás, a la altura del pecho. Lo dejan un momento en la acera, muchas veces con el motor en marcha.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [0.85, 0.3], [0.65, 0.32], [0.7, 0.6], [1.0, 0.64], [1.0, 0.72], [0.68, 0.76], [0.62, 1.0], [0.38, 1.0], [0.32, 0.76], [0.0, 0.72], [0.0, 0.64], [0.3, 0.6], [0.35, 0.32], [0.15, 0.3]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [1.8, 1.95, 2.1],
+				"alto": [1.3, 1.5, 1.7]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/vehiculos_ralenti_gasolina.flac",
+					"volumen": 0.3,
+					"radio": 7
+				}
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "bar", "restaurante"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "caliente"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/ciclomotor_reparto.png",
+				"descripcion": "Huella en planta de «Ciclomotor de reparto con cajón»: un cuerpo estrecho con un cajón cuadrado detrás y el manillar delante de 0,70 por 1,95 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "remolque_suelto",
+			"nombre": "Remolque suelto con lanza",
+			"categoria": "remolques_obra",
+			"subcategoria": "remolques",
+			"etiquetas": ["remolque", "remolque de carga", "carro", "lanza del remolque"],
+			"descripcion": "Remolque de carga desenganchado. La caja llega a la cintura, pero por delante sale la lanza: una barra de hierro a un palmo del suelo, apoyada en una ruedecilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.78], [0.58, 0.78], [0.53, 1.0], [0.47, 1.0], [0.42, 0.78], [0.0, 0.78]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [2.5, 3.3, 4.5],
+				"alto": [0.5, 0.9, 1.6]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "aparcamiento", "obra", "naturaleza"],
+			"estancias": ["calzada", "zona_obra"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rs",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/remolque_suelto.png",
+				"descripcion": "Huella en planta de «Remolque suelto con lanza»: una caja con una lanza en punta que sale por delante de 1,50 por 3,30 metros, con la letra «Rs»."
+			}
+		},
+		{
+			"id": "montamuebles",
+			"nombre": "Montamuebles de mudanzas",
+			"categoria": "remolques_obra",
+			"subcategoria": "remolques",
+			"etiquetas": ["montamuebles", "elevador de mudanzas", "escalera elevadora"],
+			"descripcion": "Elevador de mudanzas: un remolque pequeño del que sale una escalera de aluminio inclinada hasta un balcón. La escalera cruza la acera en diagonal, a la altura de la cabeza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.35], [0.65, 0.35], [0.65, 1.0], [0.35, 1.0], [0.35, 0.35], [0.0, 0.35]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.2],
+				"fondo": [3.5, 5.0, 8.0],
+				"alto": [3.0, 9.0, 14.0]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_ralenti_gasolina.flac",
+					"volumen": 0.4,
+					"radio": 10
+				}
+			},
+			"contenedor": false,
+			"aviso": "Montamuebles: una escalera inclinada cruza por encima.",
+			"funcion": "carga",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"relacionados": ["camion_mudanzas_rampa"],
+			"simbolo": {
+				"letra": "Mo",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/montamuebles.png",
+				"descripcion": "Huella en planta de «Montamuebles de mudanzas»: una te de 1,80 por 5,00 metros, con la letra «Mo»."
+			}
+		},
+		{
+			"id": "cuba_escombros",
+			"nombre": "Cuba de escombros",
+			"categoria": "remolques_obra",
+			"subcategoria": "contenedores_obra",
+			"etiquetas": ["cuba de escombros", "contenedor de obra", "cuba", "bañera de obra"],
+			"descripcion": "Contenedor de obra de chapa gruesa, con los extremos inclinados y el borde a la altura del pecho. De los costados salen los ganchos por donde lo cuelga el camión.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.08, 0.0], [0.92, 0.0], [1.0, 0.12], [1.0, 0.2], [0.94, 0.2], [0.94, 0.8], [1.0, 0.8], [1.0, 0.88], [0.92, 1.0], [0.08, 1.0], [0.0, 0.88], [0.0, 0.8], [0.06, 0.8], [0.06, 0.2], [0.0, 0.2], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.0],
+				"fondo": [2.6, 3.4, 4.2],
+				"alto": [0.9, 1.3, 1.6]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "De 3 metros cúbicos",
+					"ancho": 1.6,
+					"fondo": 2.8,
+					"alto": 1.0
+				},
+				{
+					"id": "mediana",
+					"nombre": "De 5 metros cúbicos",
+					"ancho": 1.8,
+					"fondo": 3.4,
+					"alto": 1.3
+				},
+				{
+					"id": "grande",
+					"nombre": "De 7 metros cúbicos",
+					"ancho": 1.9,
+					"fondo": 3.8,
+					"alto": 1.55
+				}
+			],
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle", "obra"],
+			"estancias": ["calzada", "zona_obra"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuba_escombros.png",
+				"descripcion": "Huella en planta de «Cuba de escombros»: un rectángulo de extremos achaflanados con los ganchos saliendo por los costados de 1,80 por 3,40 metros, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "contenedor_maritimo",
+			"nombre": "Contenedor marítimo",
+			"categoria": "remolques_obra",
+			"subcategoria": "contenedores_obra",
+			"etiquetas": ["contenedor marítimo", "contenedor de barco", "contenedor almacén"],
+			"descripcion": "Caja enorme de chapa ondulada, alta como una habitación, usada de almacén en una obra. Al golpearla retumba; las puertas, en un extremo, tienen barras de cierre verticales.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.44, 2.44, 2.5],
+				"fondo": [6.06, 6.06, 12.19],
+				"alto": [2.59, 2.59, 2.9]
+			},
+			"variantes": [
+				{
+					"id": "veinte_pies",
+					"nombre": "De 20 pies",
+					"ancho": 2.44,
+					"fondo": 6.06,
+					"alto": 2.59
+				},
+				{
+					"id": "cuarenta_pies",
+					"nombre": "De 40 pies",
+					"ancho": 2.44,
+					"fondo": 12.19,
+					"alto": 2.59
+				}
+			],
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["obra", "puerto", "almacen", "aparcamiento"],
+			"estancias": ["zona_obra", "muelle_carga"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_maritimo.png",
+				"descripcion": "Huella en planta de «Contenedor marítimo»: un rectángulo de 2,44 por 6,06 metros, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "caseta_obra",
+			"nombre": "Caseta de obra",
+			"categoria": "remolques_obra",
+			"subcategoria": "contenedores_obra",
+			"etiquetas": ["caseta de obra", "módulo prefabricado", "barracón", "oficina de obra"],
+			"descripcion": "Caseta prefabricada de chapa, con una puerta y un escalón suelto delante. Es la oficina o el vestuario de la obra; el aire acondicionado zumba en una pared.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.3, 2.4, 2.5],
+				"fondo": [4.0, 6.0, 8.0],
+				"alto": [2.5, 2.6, 2.9]
+			},
+			"colocacion": ["suelo", "calzada", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.3,
+					"radio": 6
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/abrir"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/cerrar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "estructura",
+			"lugares": ["obra", "calle"],
+			"estancias": ["zona_obra"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Co",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/caseta_obra.png",
+				"descripcion": "Huella en planta de «Caseta de obra»: un rectángulo de 2,40 por 6,00 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "deposito_gasoil",
+			"nombre": "Depósito de gasoil de obra",
+			"categoria": "remolques_obra",
+			"subcategoria": "contenedores_obra",
+			"etiquetas": ["depósito de gasoil", "depósito de combustible", "tanque de gasóleo"],
+			"descripcion": "Depósito de chapa tumbado sobre una bandeja, con una manguera y una pistola de surtidor colgando. Huele a gasoil y el suelo de alrededor resbala.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.984, 0.84], [0.935, 0.935], [0.84, 0.984], [0.5, 1.0], [0.16, 0.984], [0.065, 0.935], [0.016, 0.84], [0.0, 0.5], [0.016, 0.16], [0.065, 0.065], [0.16, 0.016], [0.5, 0.0], [0.84, 0.016], [0.935, 0.065], [0.984, 0.16]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.3, 1.6],
+				"fondo": [1.5, 2.2, 3.0],
+				"alto": [1.2, 1.5, 1.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["obra", "taller"],
+			"estancias": ["zona_obra"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Dg",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/deposito_gasoil.png",
+				"descripcion": "Huella en planta de «Depósito de gasoil de obra»: un rectángulo de esquinas redondeadas de 1,30 por 2,20 metros, con la letra «Dg»."
+			}
+		},
+		{
+			"id": "silo_mortero",
+			"nombre": "Silo de mortero",
+			"categoria": "remolques_obra",
+			"subcategoria": "contenedores_obra",
+			"etiquetas": ["silo de mortero", "silo de obra", "silo de cemento"],
+			"descripcion": "Cilindro de chapa muy alto sobre cuatro patas, plantado en la calzada junto a una obra. Entre las patas cuelga la boca de descarga, a la altura del pecho, y hay mangueras por el suelo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 1.0], [0.0, 1.0], [0.0, 0.0], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [2.2, 2.5, 3.0],
+				"fondo": [2.2, 2.5, 3.0],
+				"alto": [5.0, 7.0, 9.0]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["obra", "calle"],
+			"estancias": ["calzada", "zona_obra"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Sm",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/silo_mortero.png",
+				"descripcion": "Huella en planta de «Silo de mortero»: un cuadrado: las cuatro patas del silo de 2,50 por 2,50 metros, con la letra «Sm»."
+			}
+		},
+		{
+			"id": "grupo_electrogeno",
+			"nombre": "Grupo electrógeno remolcable",
+			"categoria": "remolques_obra",
+			"subcategoria": "maquinaria_obra",
+			"etiquetas": ["grupo electrógeno", "generador", "generador de obra"],
+			"descripcion": "Generador de obra sobre un remolque: una caja de chapa a la altura del pecho, con una lanza baja delante. En marcha hace un ruido de motor fuerte y continuo y echa aire caliente.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.78], [0.58, 0.78], [0.53, 1.0], [0.47, 1.0], [0.42, 0.78], [0.0, 0.78]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.4, 1.7],
+				"fondo": [2.5, 3.2, 4.0],
+				"alto": [1.4, 1.7, 2.0]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:vehiculos_ralenti_diesel.flac",
+					"volumen": 0.65,
+					"radio": 20,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["obra", "calle"],
+			"estancias": ["calzada", "zona_obra"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ge",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/grupo_electrogeno.png",
+				"descripcion": "Huella en planta de «Grupo electrógeno remolcable»: una caja con una lanza en punta que sale por delante de 1,40 por 3,20 metros, con la letra «Ge»."
+			}
+		},
+		{
+			"id": "miniexcavadora",
+			"nombre": "Miniexcavadora parada",
+			"categoria": "remolques_obra",
+			"subcategoria": "maquinaria_obra",
+			"etiquetas": ["miniexcavadora", "excavadora", "retroexcavadora pequeña", "máquina de obra"],
+			"descripcion": "Excavadora pequeña sobre orugas de goma. El brazo, doblado, sale por delante con el cazo apoyado en el suelo; el codo del brazo queda a la altura de la cabeza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.5], [0.625, 0.5], [0.625, 1.0], [0.375, 1.0], [0.375, 0.5], [0.0, 0.5]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.0],
+				"fondo": [3.5, 4.5, 5.5],
+				"alto": [2.2, 2.5, 2.8]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["obra", "calle", "jardin"],
+			"estancias": ["zona_obra", "calzada"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mi",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/miniexcavadora.png",
+				"descripcion": "Huella en planta de «Miniexcavadora parada»: una te de 1,50 por 4,50 metros, con la letra «Mi»."
+			}
+		},
+		{
+			"id": "plaza_bateria",
+			"nombre": "Plaza de aparcamiento en batería",
+			"categoria": "plazas",
+			"subcategoria": "marcas_plaza",
+			"etiquetas": ["plaza de aparcamiento", "plaza en batería", "aparcamiento en batería"],
+			"descripcion": "Marcas pintadas de una plaza perpendicular al pasillo. No se notan al pisarlas: sirven para colocar los coches, uno al lado del otro, de morro o de culo.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.2, 2.5, 3.0],
+				"fondo": [4.5, 5.0, 5.5],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"variantes": [
+				{
+					"id": "estrecha",
+					"nombre": "Estrecha",
+					"ancho": 2.3,
+					"fondo": 4.5,
+					"alto": 0.005
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 2.5,
+					"fondo": 5.0,
+					"alto": 0.005
+				},
+				{
+					"id": "amplia",
+					"nombre": "Amplia",
+					"ancho": 3.0,
+					"fondo": 5.5,
+					"alto": 0.005
+				}
+			],
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "asfalto",
+			"funcion": "referencia",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "garaje"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["tope_rueda"],
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/plaza_bateria.png",
+				"descripcion": "Huella en planta de «Plaza de aparcamiento en batería»: un rectángulo de 2,50 por 5,00 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "plaza_linea",
+			"nombre": "Plaza de aparcamiento en línea",
+			"categoria": "plazas",
+			"subcategoria": "marcas_plaza",
+			"etiquetas": ["plaza en línea", "aparcamiento en cordón", "aparcamiento en fila"],
+			"descripcion": "Marcas de una plaza en cordón, a lo largo del bordillo. Los coches quedan uno detrás de otro, pegados a la acera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [4.5, 5.0, 6.0],
+				"fondo": [2.0, 2.2, 2.5],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "asfalto",
+			"funcion": "referencia",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/plaza_linea.png",
+				"descripcion": "Huella en planta de «Plaza de aparcamiento en línea»: un rectángulo de 5,00 por 2,20 metros, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "plaza_espiga",
+			"nombre": "Plaza de aparcamiento en espiga",
+			"categoria": "plazas",
+			"subcategoria": "marcas_plaza",
+			"etiquetas": ["plaza en espiga", "aparcamiento en oblicuo", "aparcamiento en diagonal"],
+			"descripcion": "Marcas de una plaza inclinada respecto al pasillo. Los coches quedan en diagonal: sus esquinas forman dientes de sierra al seguirlos con el bastón.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [1.0, 0.0], [0.7, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [3.5, 4.0, 5.0],
+				"fondo": [4.3, 4.8, 5.3],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "asfalto",
+			"funcion": "referencia",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "calzada"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/plaza_espiga.png",
+				"descripcion": "Huella en planta de «Plaza de aparcamiento en espiga»: un romboide inclinado de 4,00 por 4,80 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "plaza_movilidad_reducida",
+			"nombre": "Plaza reservada de movilidad reducida",
+			"categoria": "plazas",
+			"subcategoria": "marcas_plaza",
+			"etiquetas": ["plaza de movilidad reducida", "plaza reservada", "plaza pmr", "plaza accesible", "zona de transferencia"],
+			"descripcion": "Plaza reservada, más ancha que las demás: al lado tiene una franja libre para abrir la puerta del todo y sacar una silla de ruedas, unida a la acera por un rebaje.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.2, 3.7, 6.0],
+				"fondo": [5.0, 5.0, 6.5],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"variantes": [
+				{
+					"id": "en_bateria",
+					"nombre": "En batería, con franja lateral",
+					"ancho": 3.7,
+					"fondo": 5.0,
+					"alto": 0.005
+				},
+				{
+					"id": "en_linea",
+					"nombre": "En línea, con franja trasera",
+					"ancho": 2.2,
+					"fondo": 6.5,
+					"alto": 0.005
+				},
+				{
+					"id": "doble",
+					"nombre": "Dos plazas con franja compartida",
+					"ancho": 5.9,
+					"fondo": 5.0,
+					"alto": 0.005
+				}
+			],
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "asfalto",
+			"aviso": "Plaza reservada de movilidad reducida.",
+			"funcion": "referencia",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "garaje", "calzada"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pm",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/plaza_movilidad_reducida.png",
+				"descripcion": "Huella en planta de «Plaza reservada de movilidad reducida»: un rectángulo de 3,70 por 5,00 metros, con la letra «Pm»."
+			}
+		},
+		{
+			"id": "tope_rueda",
+			"nombre": "Tope de rueda",
+			"categoria": "plazas",
+			"subcategoria": "topes_cierres",
+			"etiquetas": ["tope de rueda", "tope de aparcamiento", "tope de plaza"],
+			"descripcion": "Barra baja de goma o de hormigón atornillada al fondo de la plaza, de un palmo de alto. Con el coche fuera, queda sola en el suelo: se tropieza con ella.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.0],
+				"fondo": [0.12, 0.15, 0.2],
+				"alto": [0.08, 0.1, 0.15]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Tope de rueda: levanta el pie.",
+			"funcion": "barrera",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "garaje"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["plaza_bateria"],
+			"simbolo": {
+				"letra": "Tr",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/tope_rueda.png",
+				"descripcion": "Huella en planta de «Tope de rueda»: un rectángulo de 1,80 por 0,15 metros, con la letra «Tr»."
+			}
+		},
+		{
+			"id": "isleta_aparcamiento",
+			"nombre": "Isleta con bordillo del aparcamiento",
+			"categoria": "plazas",
+			"subcategoria": "topes_cierres",
+			"etiquetas": ["isleta", "bordillo de isleta", "mediana del aparcamiento"],
+			"descripcion": "Isleta alargada de extremos redondos entre filas de plazas, rodeada de un bordillo de un palmo y rellena de tierra, grava o plantas. Hay que subirla o rodearla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.75, 0.0], [0.875, 0.067], [0.967, 0.25], [1.0, 0.5], [0.967, 0.75], [0.875, 0.933], [0.75, 1.0], [0.25, 1.0], [0.125, 0.933], [0.033, 0.75], [0.0, 0.5], [0.033, 0.25], [0.125, 0.067], [0.25, 0.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 5.0, 10.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [0.12, 0.15, 0.25]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ia",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/isleta_aparcamiento.png",
+				"descripcion": "Huella en planta de «Isleta con bordillo del aparcamiento»: un óvalo alargado, de lados rectos y extremos redondos de 5,00 por 1,50 metros, con la letra «Ia»."
+			}
+		},
+		{
+			"id": "bolardo_abatible_plaza",
+			"nombre": "Bolardo abatible de plaza reservada",
+			"categoria": "plazas",
+			"subcategoria": "topes_cierres",
+			"etiquetas": ["bolardo abatible", "guardaplazas", "barrera de plaza", "arco abatible"],
+			"descripcion": "Arco de hierro en el centro de una plaza reservada, a la altura de la rodilla. Con su llave se tumba hasta el suelo y deja pasar; levantado, guarda la plaza.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.7],
+				"fondo": [0.08, 0.1, 0.4],
+				"alto": [0.45, 0.6, 0.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "comun:vehiculos_cadena.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "comun:vehiculos_cadena.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "garaje"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/bolardo_abatible_plaza.png",
+				"descripcion": "Huella en planta de «Bolardo abatible de plaza reservada»: un rectángulo de 0,50 por 0,10 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "cepo_rueda",
+			"nombre": "Cepo en la rueda",
+			"categoria": "plazas",
+			"subcategoria": "topes_cierres",
+			"etiquetas": ["cepo", "cepo de rueda", "inmovilizador"],
+			"descripcion": "Cepo de hierro sujeto a la rueda de un coche mal aparcado: una pieza triangular que sobresale del costado a la altura de la espinilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.5, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.4, 0.5, 0.6]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "comun:vehiculos_cadena.flac"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["calzada", "plaza_aparcamiento"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cepo_rueda.png",
+				"descripcion": "Huella en planta de «Cepo en la rueda»: un triángulo con la punta hacia delante de 0,50 por 0,30 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "guardarrail_bajo",
+			"nombre": "Guardarraíl bajo",
+			"categoria": "plazas",
+			"subcategoria": "topes_cierres",
+			"etiquetas": ["guardarraíl", "quitamiedos", "bionda", "barrera de seguridad"],
+			"descripcion": "Banda de chapa ondulada sobre postes cortos, a la altura de la rodilla o del muslo, que cierra el borde del aparcamiento. Se puede seguir con el bastón; los cantos cortan.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 12.0],
+				"fondo": [0.2, 0.3, 0.4],
+				"alto": [0.5, 0.7, 0.8]
+			},
+			"variantes": [
+				{
+					"id": "un_tramo",
+					"nombre": "De un tramo",
+					"ancho": 4.0,
+					"fondo": 0.3,
+					"alto": 0.7
+				},
+				{
+					"id": "tres_tramos",
+					"nombre": "De tres tramos",
+					"ancho": 12.0,
+					"fondo": 0.3,
+					"alto": 0.7
+				}
+			],
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["aparcamiento", "calle"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Gb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/guardarrail_bajo.png",
+				"descripcion": "Huella en planta de «Guardarraíl bajo»: un rectángulo de 4,00 por 0,30 metros, con la letra «Gb»."
+			}
+		},
+		{
+			"id": "cadena_entre_postes",
+			"nombre": "Cadena entre postes",
+			"categoria": "plazas",
+			"subcategoria": "topes_cierres",
+			"etiquetas": ["cadena", "cadena de cierre", "cadena entre bolardos"],
+			"descripcion": "Cadena que cuelga floja entre dos postes cortos y cierra un aparcamiento o un paso. Queda a la altura de la rodilla o del muslo y el bastón puede pasar por debajo sin tocarla.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 5.0],
+				"fondo": [0.05, 0.08, 0.15],
+				"alto": [0.05, 0.08, 0.3]
+			},
+			"colocacion": ["suelo", "acera", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "comun:vehiculos_cadena.flac"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["aparcamiento", "calle", "comunidad"],
+			"estancias": ["plaza_aparcamiento", "acera"],
+			"obstaculo": "voladizo",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cadena_entre_postes.png",
+				"descripcion": "Huella en planta de «Cadena entre postes»: un rectángulo de 2,50 por 0,08 metros, colgado a 0,50 metros del suelo, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "pilar_marquesina_solar",
+			"nombre": "Pilar de marquesina de aparcamiento",
+			"categoria": "plazas",
+			"subcategoria": "cubiertas",
+			"etiquetas": ["marquesina de aparcamiento", "pilar de marquesina", "cubierta de plazas", "placas solares"],
+			"descripcion": "Pilar de hierro de la marquesina que da sombra a las plazas, plantado sobre un dado de hormigón que sobresale a la altura de la espinilla. Arriba, las placas solares zumban un poco.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 0.2], [1.0, 0.8], [0.8, 1.0], [0.2, 1.0], [0.0, 0.8], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [2.3, 2.7, 3.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pm",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/pilar_marquesina_solar.png",
+				"descripcion": "Huella en planta de «Pilar de marquesina de aparcamiento»: un rectángulo con las esquinas cortadas de 0,60 por 0,60 metros, con la letra «Pm»."
+			}
+		},
+		{
+			"id": "recinto_carritos",
+			"nombre": "Recinto de carritos del aparcamiento",
+			"categoria": "plazas",
+			"subcategoria": "cubiertas",
+			"etiquetas": ["recinto de carritos", "cochera de carros", "aparcacarros"],
+			"descripcion": "Caseta abierta por delante donde se dejan los carros del supermercado: dos barandillas de tubo a los lados y un techo. Dentro, los carros encajados traquetean.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.96, 1.0], [0.96, 0.04], [0.04, 0.04], [0.04, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 3.0],
+				"fondo": [4.0, 5.0, 6.0],
+				"alto": [2.0, 2.3, 2.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["supermercado", "centro_comercial", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/recinto_carritos.png",
+				"descripcion": "Huella en planta de «Recinto de carritos del aparcamiento»: una U abierta por delante de 2,50 por 5,00 metros, con la letra «Rc»."
+			}
+		},
+		{
+			"id": "anclajes_motos",
+			"nombre": "Aparcamiento de motos con anclajes",
+			"categoria": "plazas",
+			"subcategoria": "aparcabicis",
+			"etiquetas": ["aparcamiento de motos", "anclajes de moto", "barra antirrobo", "aparcamotos"],
+			"descripcion": "Fila de barras de hierro bajas, a media espinilla, donde se encadenan las motos. Sin motos, las barras quedan solas y se tropieza con ellas.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.95, 1.0], [0.95, 0.1], [0.683, 0.1], [0.683, 1.0], [0.633, 1.0], [0.633, 0.1], [0.367, 0.1], [0.367, 1.0], [0.317, 1.0], [0.317, 0.1], [0.05, 0.1], [0.05, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 8.0],
+				"fondo": [0.5, 0.7, 1.0],
+				"alto": [0.3, 0.4, 0.6]
+			},
+			"colocacion": ["suelo", "calzada", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "comun:vehiculos_cadena.flac"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "calzada", "garaje"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Am",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/anclajes_motos.png",
+				"descripcion": "Huella en planta de «Aparcamiento de motos con anclajes»: un peine: una barra con cuerpos que salen hacia delante de 4,00 por 0,70 metros, con la letra «Am»."
+			}
+		},
+		{
+			"id": "taquilla_bicicleta",
+			"nombre": "Taquilla individual de bicicleta",
+			"categoria": "plazas",
+			"subcategoria": "aparcabicis",
+			"etiquetas": ["taquilla de bicicleta", "jaula de bicis", "bicibox", "consigna de bicicletas"],
+			"descripcion": "Armario de chapa en forma de cuña donde cabe una bicicleta: ancho por la puerta y estrecho por el fondo. Varios juntos forman un abanico o una fila.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [0.7, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.1],
+				"fondo": [1.9, 2.0, 2.2],
+				"alto": [1.2, 1.4, 1.6]
+			},
+			"colocacion": ["suelo", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["aparcamiento", "estacion", "calle"],
+			"estancias": ["plaza_aparcamiento", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Tb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/taquilla_bicicleta.png",
+				"descripcion": "Huella en planta de «Taquilla individual de bicicleta»: un trapecio, más estrecho por detrás de 0,90 por 2,00 metros, con la letra «Tb»."
+			}
+		},
+		{
+			"id": "bancada_bicis_dos_pisos",
+			"nombre": "Bancada de bicicletas de dos pisos",
+			"categoria": "plazas",
+			"subcategoria": "aparcabicis",
+			"etiquetas": ["aparcabicis de dos pisos", "bancada de bicis", "aparcabicis doble altura"],
+			"descripcion": "Aparcabicis de dos alturas: abajo, bicicletas en sus canales; arriba, otra fila sobre raíles que se sacan y se bajan. Los raíles y los manillares de arriba quedan a la altura de la cabeza.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.92, 1.0], [0.92, 0.12], [0.816, 0.12], [0.816, 1.0], [0.736, 1.0], [0.736, 0.12], [0.632, 0.12], [0.632, 1.0], [0.552, 1.0], [0.552, 0.12], [0.448, 0.12], [0.448, 1.0], [0.368, 1.0], [0.368, 0.12], [0.264, 0.12], [0.264, 1.0], [0.184, 1.0], [0.184, 0.12], [0.08, 0.12], [0.08, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 6.0],
+				"fondo": [1.9, 2.0, 2.2],
+				"alto": [2.4, 2.7, 2.9]
+			},
+			"variantes": [
+				{
+					"id": "seis_bicis",
+					"nombre": "Seis bicicletas",
+					"ancho": 1.5,
+					"fondo": 2.0,
+					"alto": 2.7
+				},
+				{
+					"id": "doce_bicis",
+					"nombre": "Doce bicicletas",
+					"ancho": 3.0,
+					"fondo": 2.0,
+					"alto": 2.7
+				},
+				{
+					"id": "veinticuatro_bicis",
+					"nombre": "Veinticuatro bicicletas",
+					"ancho": 6.0,
+					"fondo": 2.0,
+					"alto": 2.7
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["aparcamiento", "estacion", "universidad"],
+			"estancias": ["plaza_aparcamiento", "garaje"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/bancada_bicis_dos_pisos.png",
+				"descripcion": "Huella en planta de «Bancada de bicicletas de dos pisos»: un peine: una barra con cuerpos que salen hacia delante de 3,00 por 2,00 metros, con la letra «Bb»."
+			}
+		},
+		{
+			"id": "estacion_bici_publica",
+			"nombre": "Estación de bicicleta pública",
+			"categoria": "plazas",
+			"subcategoria": "aparcabicis",
+			"etiquetas": ["bicicleta pública", "estación de bicis", "bici de alquiler", "anclajes de bici"],
+			"descripcion": "Fila de anclajes de bicicleta pública: postes bajos cada medio metro largo, con bicicletas enganchadas en algunos, y un tótem en un extremo. Al soltar una bici, pita.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.93, 1.0], [0.93, 0.15], [0.845, 0.15], [0.845, 1.0], [0.775, 1.0], [0.775, 0.15], [0.69, 0.15], [0.69, 1.0], [0.62, 1.0], [0.62, 0.15], [0.535, 0.15], [0.535, 1.0], [0.465, 1.0], [0.465, 0.15], [0.38, 0.15], [0.38, 1.0], [0.31, 1.0], [0.31, 0.15], [0.225, 0.15], [0.225, 1.0], [0.155, 1.0], [0.155, 0.15], [0.07, 0.15], [0.07, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 7.5, 15.0],
+				"fondo": [1.7, 1.9, 2.1],
+				"alto": [0.9, 1.1, 1.5]
+			},
+			"variantes": [
+				{
+					"id": "cinco_anclajes",
+					"nombre": "De cinco anclajes",
+					"ancho": 3.75,
+					"fondo": 1.9,
+					"alto": 1.1
+				},
+				{
+					"id": "diez_anclajes",
+					"nombre": "De diez anclajes",
+					"ancho": 7.5,
+					"fondo": 1.9,
+					"alto": 1.1
+				},
+				{
+					"id": "veinte_anclajes",
+					"nombre": "De veinte anclajes",
+					"ancho": 15.0,
+					"fondo": 1.9,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "desbloquear_bici",
+					"nombre": "Desbloquear una bicicleta",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "estacion", "parque"],
+			"estancias": ["acera", "calzada", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Eb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/estacion_bici_publica.png",
+				"descripcion": "Huella en planta de «Estación de bicicleta pública»: un peine: una barra con cuerpos que salen hacia delante de 7,50 por 1,90 metros, con la letra «Eb»."
+			}
+		},
+		{
+			"id": "estacion_patinetes",
+			"nombre": "Estación de patinetes compartidos",
+			"categoria": "plazas",
+			"subcategoria": "aparcabicis",
+			"etiquetas": ["estación de patinetes", "base de patinetes", "aparcapatinetes"],
+			"descripcion": "Base fija con raíles bajos donde se encajan los patinetes de alquiler, todos en fila y de pie. Los manillares quedan a la altura del pecho; los raíles vacíos, a ras de suelo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.91, 1.0], [0.91, 0.25], [0.818, 0.25], [0.818, 1.0], [0.728, 1.0], [0.728, 0.25], [0.636, 0.25], [0.636, 1.0], [0.546, 1.0], [0.546, 0.25], [0.454, 0.25], [0.454, 1.0], [0.364, 1.0], [0.364, 0.25], [0.272, 0.25], [0.272, 1.0], [0.182, 1.0], [0.182, 0.25], [0.09, 0.25], [0.09, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 6.0],
+				"fondo": [1.1, 1.2, 1.4],
+				"alto": [1.1, 1.2, 1.3]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle", "estacion"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ep",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/estacion_patinetes.png",
+				"descripcion": "Huella en planta de «Estación de patinetes compartidos»: un peine: una barra con cuerpos que salen hacia delante de 3,00 por 1,20 metros, con la letra «Ep»."
+			}
+		},
+		{
+			"id": "rampa_aparcamiento",
+			"nombre": "Rampa de entrada al aparcamiento",
+			"categoria": "plazas",
+			"subcategoria": "pavimento",
+			"etiquetas": ["rampa de aparcamiento", "rampa de garaje", "rampa de coches"],
+			"descripcion": "Rampa de hormigón rayado por la que suben y bajan los coches. El suelo se inclina mucho y no hay acera: se oye el eco del garaje y los motores que vienen.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [3.0, 3.5, 7.0],
+				"fondo": [6.0, 10.0, 20.0],
+				"alto": [0.05, 0.1, 0.15]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "hormigon",
+			"aviso": "Rampa de coches: aquí no hay acera y pueden venir vehículos.",
+			"funcion": "estructura",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel", "resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["canaleta_rejilla"],
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/rampa_aparcamiento.png",
+				"descripcion": "Huella en planta de «Rampa de entrada al aparcamiento»: un rectángulo de 3,50 por 10,00 metros, con la letra «Ra»."
+			}
+		},
+		{
+			"id": "junta_dilatacion",
+			"nombre": "Junta de dilatación metálica",
+			"categoria": "plazas",
+			"subcategoria": "pavimento",
+			"etiquetas": ["junta de dilatación", "junta metálica", "chapa del suelo"],
+			"descripcion": "Tira de metal que cruza el suelo del aparcamiento de lado a lado. Al pisarla suena distinta y con lluvia resbala; los coches la hacen sonar con un golpe doble.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.5, 5.0, 10.0],
+				"fondo": [0.1, 0.2, 0.4],
+				"alto": [0.005, 0.01, 0.03]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"funcion": "referencia",
+			"lugares": ["aparcamiento", "estacion", "aeropuerto"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Jd",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/junta_dilatacion.png",
+				"descripcion": "Huella en planta de «Junta de dilatación metálica»: un rectángulo de 5,00 por 0,20 metros, con la letra «Jd»."
+			}
+		},
+		{
+			"id": "canaleta_rejilla",
+			"nombre": "Canaleta de desagüe con rejilla",
+			"categoria": "plazas",
+			"subcategoria": "pavimento",
+			"etiquetas": ["canaleta", "rejilla de desagüe", "sumidero corrido", "imbornal lineal"],
+			"descripcion": "Canal estrecho con rejilla de hierro que cruza el pie de la rampa para recoger el agua. La punta del bastón se cuela entre las barras y, si falta un tramo, queda un hueco.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 3.5, 7.0],
+				"fondo": [0.12, 0.2, 0.3],
+				"alto": [0.005, 0.02, 0.04]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Rejilla de desagüe: la punta del bastón se puede colar.",
+			"funcion": "referencia",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["rampa_aparcamiento"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/canaleta_rejilla.png",
+				"descripcion": "Huella en planta de «Canaleta de desagüe con rejilla»: un rectángulo de 3,50 por 0,20 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "banda_reductora_goma",
+			"nombre": "Banda reductora de goma",
+			"categoria": "plazas",
+			"subcategoria": "pavimento",
+			"etiquetas": ["banda reductora", "resalto de goma", "banda sonora", "guardia tumbado de goma"],
+			"descripcion": "Lomo de goma atornillado al suelo de lado a lado del carril, de tres dedos de alto. Se nota bajo el pie como un escalón redondo; los coches lo pasan con un golpe sordo.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 6.0],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.03, 0.05, 0.07]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Resalto en el suelo.",
+			"funcion": "referencia",
+			"lugares": ["aparcamiento", "calle"],
+			"estancias": ["plaza_aparcamiento", "calzada", "garaje"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Br",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/banda_reductora_goma.png",
+				"descripcion": "Huella en planta de «Banda reductora de goma»: un rectángulo de 3,00 por 0,40 metros, con la letra «Br»."
+			}
+		},
+		{
+			"id": "barrera_aparcamiento",
+			"nombre": "Barrera de aparcamiento",
+			"categoria": "control",
+			"subcategoria": "barreras",
+			"etiquetas": ["barrera", "barrera de aparcamiento", "barrera levadiza", "pluma"],
+			"descripcion": "Brazo largo y ligero que cruza el carril a la altura de la cintura; sale de un armario de metal en un lado. El bastón pasa por debajo. Al abrirse sube con un zumbido y un golpe.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.5, 3.0, 6.0],
+				"fondo": [0.08, 0.1, 0.35],
+				"alto": [0.08, 0.1, 0.15]
+			},
+			"variantes": [
+				{
+					"id": "tres_metros",
+					"nombre": "De 3 metros",
+					"ancho": 3.0,
+					"fondo": 0.1,
+					"alto": 0.1
+				},
+				{
+					"id": "cuatro_y_medio",
+					"nombre": "De 4,5 metros",
+					"ancho": 4.5,
+					"fondo": 0.1,
+					"alto": 0.1
+				},
+				{
+					"id": "seis_metros",
+					"nombre": "De 6 metros",
+					"ancho": 6.0,
+					"fondo": 0.1,
+					"alto": 0.1
+				}
+			],
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/aparcamiento_barrera.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/aparcamiento_barrera.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "garaje"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["columna_tiques", "lector_matricula"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/barrera_aparcamiento.png",
+				"descripcion": "Huella en planta de «Barrera de aparcamiento»: un rectángulo de 3,00 por 0,10 metros, colgado a 0,90 metros del suelo, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "cancela_corredera",
+			"nombre": "Cancela corredera motorizada",
+			"categoria": "control",
+			"subcategoria": "barreras",
+			"etiquetas": ["cancela corredera", "puerta corredera de vehículos", "verja automática", "portón"],
+			"descripcion": "Puerta de barrotes que corre de lado sobre un raíl en el suelo para cerrar la entrada de vehículos. Al moverse zumba y rueda; el raíl, de un dedo de alto, se queda siempre.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [3.0, 4.0, 8.0],
+				"fondo": [0.06, 0.1, 0.5],
+				"alto": [1.5, 1.8, 2.2]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["aparcamiento", "comunidad", "fabrica", "almacen"],
+			"estancias": ["plaza_aparcamiento", "garaje", "muelle_carga"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/cancela_corredera.png",
+				"descripcion": "Huella en planta de «Cancela corredera motorizada»: un rectángulo de 4,00 por 0,10 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "columna_tiques",
+			"nombre": "Columna de tiques del aparcamiento",
+			"categoria": "control",
+			"subcategoria": "pago_tiques",
+			"etiquetas": ["columna de tiques", "expendedor de tiques", "máquina de entrada", "lector de salida"],
+			"descripcion": "Columna de metal a la altura de la ventanilla del coche, junto a la barrera. Tiene un botón grande, una ranura por donde sale el tique y un interfono; pita y habla.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 0.15], [1.0, 0.85], [0.85, 1.0], [0.15, 1.0], [0.0, 0.85], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.5],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.1, 1.25, 1.5]
+			},
+			"variantes": [
+				{
+					"id": "de_entrada",
+					"nombre": "De entrada",
+					"ancho": 0.35,
+					"fondo": 0.4,
+					"alto": 1.25
+				},
+				{
+					"id": "de_salida",
+					"nombre": "De salida",
+					"ancho": 0.35,
+					"fondo": 0.4,
+					"alto": 1.25
+				}
+			],
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/aparcamiento_tique.flac"
+			},
+			"acciones": [
+				{
+					"id": "tique_aparcamiento",
+					"nombre": "Coger el tique",
+					"sonido": "sonidos/aparcamiento_tique.flac"
+				},
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "garaje"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["barrera_aparcamiento", "cajero_aparcamiento"],
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna_tiques.png",
+				"descripcion": "Huella en planta de «Columna de tiques del aparcamiento»: un rectángulo con las esquinas cortadas de 0,35 por 0,40 metros, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "cajero_aparcamiento",
+			"nombre": "Cajero del aparcamiento",
+			"categoria": "control",
+			"subcategoria": "pago_tiques",
+			"etiquetas": ["cajero de aparcamiento", "máquina de pago", "cajero automático del parking"],
+			"descripcion": "Máquina de pago junto a la salida de peatones: se mete el tique, se paga con monedas o tarjeta y lo devuelve validado. Tiene teclas, ranuras y un cajetín abajo para el cambio.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.4, 0.5, 0.7],
+				"alto": [1.5, 1.7, 1.9]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:teclas_cajero.flac"
+			},
+			"acciones": [
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "transporte:teclas_cajero.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "pago",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "garaje", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["columna_tiques"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/cajero_aparcamiento.png",
+				"descripcion": "Huella en planta de «Cajero del aparcamiento»: un rectángulo de 0,70 por 0,50 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "lector_matricula",
+			"nombre": "Poste lector de matrículas",
+			"categoria": "control",
+			"subcategoria": "vigilancia",
+			"etiquetas": ["lector de matrícula", "cámara de matrículas", "poste de cámara"],
+			"descripcion": "Poste delgado con una cámara, antes de la barrera. Fino y solo en mitad de la isleta: es fácil no encontrarlo con el bastón.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.2, 0.3],
+				"fondo": [0.12, 0.2, 0.3],
+				"alto": [1.0, 1.2, 2.2]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento", "garaje"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["barrera_aparcamiento"],
+			"simbolo": {
+				"letra": "Lm",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/lector_matricula.png",
+				"descripcion": "Huella en planta de «Poste lector de matrículas»: un círculo de 0,20 por 0,20 metros, con la letra «Lm»."
+			}
+		},
+		{
+			"id": "garita_control",
+			"nombre": "Garita de control",
+			"categoria": "control",
+			"subcategoria": "vigilancia",
+			"etiquetas": ["garita", "caseta de control", "caseta del vigilante", "cabina de cobro"],
+			"descripcion": "Caseta pequeña de chapa y cristal donde está el vigilante, en la isleta entre la entrada y la salida. Tiene una ventanilla corredera a la altura del pecho.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.12], [1.0, 0.88], [0.88, 1.0], [0.12, 1.0], [0.0, 0.88], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.5],
+				"fondo": [1.2, 2.0, 3.0],
+				"alto": [2.3, 2.5, 2.8]
+			},
+			"colocacion": ["suelo", "calzada"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "transporte:interfono.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["aparcamiento", "fabrica", "hospital"],
+			"estancias": ["plaza_aparcamiento", "garaje"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["barrera_aparcamiento"],
+			"simbolo": {
+				"letra": "Gc",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/garita_control.png",
+				"descripcion": "Huella en planta de «Garita de control»: un rectángulo con las esquinas cortadas de 1,50 por 2,00 metros, con la letra «Gc»."
+			}
+		},
+		{
+			"id": "arco_galibo",
+			"nombre": "Arco de gálibo",
+			"categoria": "control",
+			"subcategoria": "vigilancia",
+			"etiquetas": ["gálibo", "arco de gálibo", "limitador de altura", "barra de altura"],
+			"descripcion": "Barra horizontal colgada de dos cadenas sobre la entrada, para avisar a los vehículos altos. Queda a la altura de la coronilla: una persona alta la toca con la cabeza.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.5, 3.0, 6.0],
+				"fondo": [0.08, 0.1, 0.2],
+				"alto": [0.1, 0.15, 0.3]
+			},
+			"colocacion": ["calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 2.0,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "comun:vehiculos_cadena.flac"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["garaje", "plaza_aparcamiento"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ag",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/arco_galibo.png",
+				"descripcion": "Huella en planta de «Arco de gálibo»: un rectángulo de 3,00 por 0,10 metros, colgado a 2,00 metros del suelo, con la letra «Ag»."
+			}
+		},
+		{
+			"id": "espejo_convexo",
+			"nombre": "Espejo convexo de esquina",
+			"categoria": "control",
+			"subcategoria": "vigilancia",
+			"etiquetas": ["espejo convexo", "espejo de tráfico", "espejo de garaje"],
+			"descripcion": "Espejo redondo y abombado en un brazo, en la esquina de una rampa o de una salida, para que los conductores vean. Sobresale de la pared a la altura de la cabeza.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.038, 0.383], [0.146, 0.707], [0.309, 0.924], [0.5, 1.0], [0.691, 0.924], [0.854, 0.707], [0.962, 0.383], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.9],
+				"fondo": [0.15, 0.25, 0.4],
+				"alto": [0.5, 0.6, 0.9]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 1.7,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["aparcamiento", "calle", "comunidad"],
+			"estancias": ["garaje", "plaza_aparcamiento", "acera"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/espejo_convexo.png",
+				"descripcion": "Huella en planta de «Espejo convexo de esquina»: un semicírculo, recto por detrás y redondo por delante de 0,60 por 0,25 metros, colgado a 1,70 metros del suelo, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "avisador_salida_vehiculos",
+			"nombre": "Avisador de salida de vehículos",
+			"categoria": "control",
+			"subcategoria": "vigilancia",
+			"etiquetas": ["avisador de garaje", "señal acústica de salida", "semáforo de garaje", "luz de salida de vehículos"],
+			"descripcion": "Caja con luz y pitido encima de la puerta de un garaje. Cuando va a salir un coche, pita con dos tonos agudos seguidos: hay que pararse y dejarlo cruzar la acera.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.4],
+				"fondo": [0.1, 0.15, 0.25],
+				"alto": [0.2, 0.3, 0.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": false,
+			"altura_base": 2.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/aparcamiento_avisador_salida.flac",
+					"volumen": 0.6,
+					"radio": 15,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["aparcamiento", "calle", "comunidad"],
+			"estancias": ["acera", "garaje"],
+			"obstaculo": "aereo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["rampa_aparcamiento"],
+			"simbolo": {
+				"letra": "As",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/avisador_salida_vehiculos.png",
+				"descripcion": "Huella en planta de «Avisador de salida de vehículos»: un rectángulo de 0,25 por 0,15 metros, colgado a 2,20 metros del suelo, con la letra «As»."
+			}
+		},
+		{
+			"id": "surtidor_combustible",
+			"nombre": "Surtidor de combustible",
+			"categoria": "gasolinera",
+			"subcategoria": "surtidores",
+			"etiquetas": ["surtidor", "surtidor de gasolina", "bomba de gasolina", "gasolinera"],
+			"descripcion": "Surtidor de gasolinera sobre una isleta de un palmo de alto: un armario con mangueras de goma colgando a los dos lados y las pistolas a la altura de la cintura. Huele a gasolina.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.987, 0.863], [0.945, 0.945], [0.863, 0.987], [0.5, 1.0], [0.137, 0.987], [0.055, 0.945], [0.013, 0.863], [0.0, 0.5], [0.013, 0.137], [0.055, 0.055], [0.137, 0.013], [0.5, 0.0], [0.863, 0.013], [0.945, 0.055], [0.987, 0.137]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.6],
+				"fondo": [0.4, 0.6, 0.8],
+				"alto": [1.6, 2.1, 2.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "repostar_combustible",
+					"nombre": "Repostar",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo", "desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["arco_protector_surtidor", "poste_aire_agua"],
+			"simbolo": {
+				"letra": "Sc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/surtidor_combustible.png",
+				"descripcion": "Huella en planta de «Surtidor de combustible»: un rectángulo de esquinas redondeadas de 1,20 por 0,60 metros, con la letra «Sc»."
+			}
+		},
+		{
+			"id": "arco_protector_surtidor",
+			"nombre": "Arco protector de surtidor",
+			"categoria": "gasolinera",
+			"subcategoria": "surtidores",
+			"etiquetas": ["arco protector", "protector de surtidor", "barra de protección"],
+			"descripcion": "Tubo de hierro grueso doblado en arco y clavado en el suelo, a la altura de la rodilla, en las esquinas de la isleta de los surtidores. Macizo: no se mueve.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.8, 1.2],
+				"fondo": [0.06, 0.09, 0.15],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["aparcamiento", "almacen"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["surtidor_combustible"],
+			"simbolo": {
+				"letra": "Ap",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/arco_protector_surtidor.png",
+				"descripcion": "Huella en planta de «Arco protector de surtidor»: un rectángulo de 0,80 por 0,09 metros, con la letra «Ap»."
+			}
+		},
+		{
+			"id": "jaula_bombonas",
+			"nombre": "Jaula de bombonas de butano",
+			"categoria": "gasolinera",
+			"subcategoria": "surtidores",
+			"etiquetas": ["jaula de bombonas", "bombonas de butano", "expositor de gas"],
+			"descripcion": "Jaula de malla de hierro con bombonas dentro, junto a la tienda de la gasolinera. Al tocarla, la malla vibra y las bombonas suenan a chapa hueca.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.5],
+				"fondo": [0.5, 0.8, 1.0],
+				"alto": [1.6, 1.8, 2.0]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["aparcamiento", "tienda"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Jb",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/jaula_bombonas.png",
+				"descripcion": "Huella en planta de «Jaula de bombonas de butano»: un rectángulo de 1,50 por 0,80 metros, con la letra «Jb»."
+			}
+		},
+		{
+			"id": "tunel_lavado",
+			"nombre": "Túnel de lavado",
+			"categoria": "gasolinera",
+			"subcategoria": "lavado",
+			"etiquetas": ["túnel de lavado", "lavado automático", "lavacoches", "puente de lavado"],
+			"descripcion": "Pórtico de lavado: dos paredes con rodillos y chorros entre las que pasa el coche. En marcha es muy ruidoso, salpica y el suelo de la entrada y la salida está mojado.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.88, 1.0], [0.88, 0.1], [0.12, 0.1], [0.12, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [4.0, 4.5, 5.0],
+				"fondo": [8.0, 10.0, 14.0],
+				"alto": [3.0, 3.5, 4.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/aparcamiento_tunel_lavado.flac",
+					"volumen": 0.7,
+					"radio": 25,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 120,
+				"al_terminar": "apagado"
+			},
+			"funcion": "maquina",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tl",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/tunel_lavado.png",
+				"descripcion": "Huella en planta de «Túnel de lavado»: una U abierta por delante de 4,50 por 10,00 metros, con la letra «Tl»."
+			}
+		},
+		{
+			"id": "box_lavado_manual",
+			"nombre": "Box de lavado a presión",
+			"categoria": "gasolinera",
+			"subcategoria": "lavado",
+			"etiquetas": ["box de lavado", "lavado a presión", "lavado manual", "pista de lavado"],
+			"descripcion": "Cabina abierta por delante con paredes de chapa, donde cada uno lava su coche con una lanza de agua a presión. El suelo es una rejilla mojada y jabonosa.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.96, 1.0], [0.96, 0.04], [0.04, 0.04], [0.04, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [3.5, 4.0, 5.0],
+				"fondo": [5.0, 6.0, 7.0],
+				"alto": [2.8, 3.2, 4.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:ducha.flac",
+					"volumen": 0.55,
+					"radio": 14,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "juego:monedas.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 90,
+				"al_terminar": "apagado"
+			},
+			"funcion": "maquina",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bl",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/box_lavado_manual.png",
+				"descripcion": "Huella en planta de «Box de lavado a presión»: una U abierta por delante de 4,00 por 6,00 metros, con la letra «Bl»."
+			}
+		},
+		{
+			"id": "aspirador_gasolinera",
+			"nombre": "Aspirador de gasolinera",
+			"categoria": "gasolinera",
+			"subcategoria": "aire_aspirado",
+			"etiquetas": ["aspirador de gasolinera", "aspiradora de coches", "aspirador de monedas"],
+			"descripcion": "Columna gruesa de metal con una manguera larga y arrugada colgada de un gancho. Con una moneda, ruge un minuto; la manguera suele quedar tirada por el suelo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [1.4, 1.7, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.7,
+					"radio": 14,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "juego:monedas.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 60,
+				"al_terminar": "apagado"
+			},
+			"funcion": "maquina",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["poste_aire_agua"],
+			"simbolo": {
+				"letra": "Ag",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/aspirador_gasolinera.png",
+				"descripcion": "Huella en planta de «Aspirador de gasolinera»: un círculo de 0,60 por 0,60 metros, con la letra «Ag»."
+			}
+		},
+		{
+			"id": "poste_aire_agua",
+			"nombre": "Poste de aire y agua",
+			"categoria": "gasolinera",
+			"subcategoria": "aire_aspirado",
+			"etiquetas": ["aire y agua", "compresor de aire", "inflador de neumáticos", "manómetro"],
+			"descripcion": "Poste con la manguera del aire para las ruedas y un grifo de agua. Al usarlo, el compresor petardea y pita cuando llega a la presión.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.25, 0.35, 0.5],
+				"alto": [1.2, 1.4, 1.7]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/vehiculos_compresor_aire.flac",
+					"volumen": 0.55,
+					"radio": 12,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "hinchar_rueda",
+					"nombre": "Hinchar una rueda",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 40,
+				"al_terminar": "apagado"
+			},
+			"funcion": "maquina",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["surtidor_combustible", "aspirador_gasolinera"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_aire_agua.png",
+				"descripcion": "Huella en planta de «Poste de aire y agua»: un rectángulo de 0,40 por 0,35 metros, con la letra «Pa»."
+			}
+		}
+	]
+}

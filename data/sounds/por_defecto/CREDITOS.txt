@@ -1,0 +1,21 @@
+PAQUETE DE SONIDOS «SINTÉTICO (POR DEFECTO)» DE ENTORNOLAB
+
+Los sonidos de serie de EntornoLab: limpios, cortos y muy distintos entre sí.
+
+Trae todos los sonidos del catálogo (198). Son la referencia de los demás paquetes: lo que
+otro paquete no trae suena con el sonido de aquí, y el nivel de cada sonido de aquí (niveles.json)
+es al que se igualan los de los demás.
+
+CÓMO SE HIZO
+  Todos se sintetizan con numpy en app/audio/sintesis.py; no hay grabaciones ni se ha usado
+  inteligencia artificial. Para regenerarlos:
+      .venv\Scripts\python.exe tools\sintetizar_sonidos.py
+  Es determinista: cada sonido usa una semilla derivada de su nombre.
+
+LICENCIA
+  Son parte de EntornoLab y van con su misma licencia (GPL-3.0-or-later). No tienen derechos de
+  terceros.
+
+SUSTITUIR UN SONIDO
+  No hace falta tocar esta carpeta: cree un paquete propio (vea LEEME.md, en la carpeta de sonidos)
+  con solo los sonidos que quiera cambiar.

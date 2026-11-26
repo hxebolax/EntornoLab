@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Problema de seguridad o de privacidad
+    url: https://github.com/hxebolax/EntornoLab/security/policy
+    about: No lo publique en una incidencia. Avise en privado como explica SECURITY.md.

@@ -1,0 +1,1056 @@
+{
+	"nombre": "Temporary obstacles",
+	"descripcion": "What changes from one day to the next and cannot be learnt by heart: roadworks, removals and deliveries, rubbish and street washing, cafés and shops spilling onto the pavement, markets and festivals, storm debris, people standing about and the cleaning and maintenance clutter of a building.",
+	"categorias": {
+		"obras": "Works on the pavement and the road",
+		"reparto": "Removals and deliveries",
+		"limpieza": "Rubbish, cleaning and water",
+		"comercio": "Shops and cafés spilling into the way",
+		"fiestas": "Markets, festivals and races",
+		"tormenta": "Storms, pruning and fallen things",
+		"gente": "People, animals and parked trolleys",
+		"interior": "Inside a building"
+	},
+	"subcategorias": {
+		"vallado": "Barriers, tapes and beacons",
+		"zanjas": "Trenches, holes and footbridges",
+		"acopios": "Stacked materials",
+		"maquinas_obra": "Machines, cables and tools",
+		"andamios": "Scaffolding and work on façades",
+		"mudanza": "Removals",
+		"mercancia": "Goods on the pavement",
+		"carros_reparto": "Delivery trolleys and ramps",
+		"basura_suelta": "Loose rubbish and bins",
+		"enseres": "Old furniture and appliances",
+		"suelo_resbaladizo": "Water, ice and slippery ground",
+		"terraza_movida": "Terrace furniture out of place",
+		"reclamos": "Signs and goods on the pavement",
+		"puertas_abiertas": "Doors, shutters and mats",
+		"puestos": "Stalls and booths",
+		"escenarios": "Stages, stands and barriers",
+		"carreras": "Races and tables in the street",
+		"adornos": "Decorations, lights and bonfires",
+		"ramas_caidas": "Fallen branches and trees",
+		"restos_caidos": "Cables, awnings and rubble",
+		"agua_nieve": "Water, mud and snow",
+		"personas": "People and animals standing about",
+		"artistas": "Buskers and street selling",
+		"carritos": "Trolleys left by the door",
+		"limpieza_interior": "Cleaning",
+		"mantenimiento": "Maintenance and painting",
+		"reposicion": "Restocking and parcels",
+		"trastos_interior": "Moved furniture and clutter",
+		"abierto_colgado": "Things left open or hanging"
+	},
+	"estados": {
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"abierto": "Open",
+		"cerrado": "Closed",
+		"apagado": "Off",
+		"encendido": "On",
+		"funcionando": "Running",
+		"parado": "Stopped"
+	},
+	"objetos": {
+		"barrera_new_jersey": {
+			"nombre": "Water-filled plastic barrier",
+			"descripcion": "Long hollow plastic block filled with water or sand, wider at the bottom. Several are usually locked in a row: you can follow them with the cane like a high kerb.",
+			"etiquetas": ["water-filled barrier", "jersey barrier", "plastic barrier"],
+			"variantes": {
+				"baja": "Low",
+				"normal": "Standard",
+				"alta": "Tall"
+			},
+			"imagen": "Footprint of “Water-filled plastic barrier”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Bn”."
+		},
+		"fila_vallas_pies": {
+			"nombre": "Run of barriers with protruding feet",
+			"descripcion": "Several works barriers hooked together in a line. A good hand guide, but every couple of steps a flat metal foot sticks out a hand's width into the path and trips you.",
+			"etiquetas": ["barrier run", "fence feet", "pedestrian barriers"],
+			"variantes": {
+				"tres_vallas": "Three barriers",
+				"cinco_vallas": "Five barriers",
+				"malla_alta": "Tall mesh panels"
+			},
+			"imagen": "Footprint of “Run of barriers with protruding feet”: a long thin bar with feet crossing it and sticking out on both sides, 7.50 by 0.60 metres, marked with the letters “Fv”."
+		},
+		"cinta_balizamiento": {
+			"nombre": "Barrier tape stretched at waist height",
+			"descripcion": "Plastic tape tied between two posts or lamp posts at waist height. The cane passes underneath without touching it; in the wind it flutters and buzzes.",
+			"etiquetas": ["barrier tape", "hazard tape", "caution tape"],
+			"imagen": "Footprint of “Barrier tape stretched at waist height”: a rectangle, 3.00 by 0.05 metres, hanging 0.90 metres above the floor, marked with the letters “Cb”."
+		},
+		"malla_naranja": {
+			"nombre": "Orange safety netting",
+			"descripcion": "Soft plastic netting held on rods driven into the ground, waist high. It gives when pushed and the cane tip catches in the holes.",
+			"etiquetas": ["orange netting", "safety mesh", "barrier fencing"],
+			"imagen": "Footprint of “Orange safety netting”: a rectangle, 5.00 by 0.10 metres, marked with the letters “Mn”."
+		},
+		"zona_acotada_fachada": {
+			"nombre": "Area cordoned off with cones and tape",
+			"descripcion": "A stretch of pavement closed with cones and tape while a tree is pruned or a façade cleaned. The cane finds the cones but not the tape between them. Go round the outside.",
+			"etiquetas": ["cordoned area", "tree pruning zone", "closed pavement"],
+			"aviso": "Cordoned area: no way through, something may fall from above.",
+			"imagen": "Footprint of “Area cordoned off with cones and tape”: a rectangle with cut corners, 4.00 by 2.50 metres, marked with the letters “Za”."
+		},
+		"senal_obra_tripode": {
+			"nombre": "Roadworks sign on a low tripod",
+			"descripcion": "Triangular metal sign on a folding tripod, knee to hip high. The legs splay into the path; knock it and it falls with a clatter.",
+			"etiquetas": ["roadworks sign", "tripod sign", "temporary sign"],
+			"imagen": "Footprint of “Roadworks sign on a low tripod”: a triangle pointing to the front, 0.90 by 0.70 metres, marked with the letters “So”."
+		},
+		"senal_contrapeso": {
+			"nombre": "Temporary sign on a weighted base",
+			"descripcion": "Thin post stuck in a long rubber block left on the pavement. The block trips you and the plate on top may be at face height.",
+			"etiquetas": ["temporary sign", "weighted base", "rubber base sign"],
+			"imagen": "Footprint of “Temporary sign on a weighted base”: a rectangle, 0.40 by 0.80 metres, marked with the letters “Sc”."
+		},
+		"baliza_luminosa": {
+			"nombre": "Flashing warning beacon",
+			"descripcion": "Works lamp that flashes, on a round base on the ground. Up close you hear the click of each flash.",
+			"etiquetas": ["warning beacon", "flashing lamp", "road lamp"],
+			"imagen": "Footprint of “Flashing warning beacon”: a circle, 0.25 by 0.25 metres, marked with the letters “Bl”."
+		},
+		"zanja_abierta": {
+			"nombre": "Unprotected open trench",
+			"descripcion": "Long, narrow trench dug in the pavement with no barriers. The cane stops finding ground: a hole knee deep or more, with loose earth at the edge.",
+			"etiquetas": ["open trench", "unfenced trench", "excavation"],
+			"aviso": "Open trench! The ground ends here: stop and go round.",
+			"imagen": "Footprint of “Unprotected open trench”: a rectangle, 0.60 by 3.00 metres, marked with the letters “Za”."
+		},
+		"pasarela_zanja": {
+			"nombre": "Metal footbridge over a trench",
+			"descripcion": "Sheet-metal platform with a handrail on each side for crossing a trench. There is a small step on and off, it sounds hollow and takes one person at a time.",
+			"etiquetas": ["trench footbridge", "pedestrian walkway", "trench crossing"],
+			"aviso": "Works footbridge: a step, a metal floor and a handrail on each side.",
+			"imagen": "Footprint of “Metal footbridge over a trench”: a rectangle, 1.00 by 2.50 metres, marked with the letters “Pz”."
+		},
+		"plancha_acero": {
+			"nombre": "Steel plate over a trench",
+			"descripcion": "Thick steel sheet laid on the ground to cover a trench. It has an edge two fingers high, booms and rocks underfoot and is very slippery when wet.",
+			"etiquetas": ["steel plate", "road plate", "trench cover"],
+			"aviso": "Works plate: slippery and it rocks.",
+			"imagen": "Footprint of “Steel plate over a trench”: a rectangle, 1.50 by 2.00 metres, marked with the letters “Pa”."
+		},
+		"arqueta_abierta": {
+			"nombre": "Open inspection chamber with no cover",
+			"descripcion": "A chamber in the ground with its cover removed. A square hole one step wide; the cover is usually propped up next to it.",
+			"etiquetas": ["open manhole", "uncovered chamber", "missing cover"],
+			"variantes": {
+				"pequena": "Small",
+				"mediana": "Medium",
+				"pozo": "Manhole shaft"
+			},
+			"aviso": "Open chamber! There is a hole in the ground: stop.",
+			"imagen": "Footprint of “Open inspection chamber with no cover”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Aa”."
+		},
+		"socavon": {
+			"nombre": "Sinkhole in the pavement",
+			"descripcion": "A collapse in the ground with ragged edges and broken, loose slabs around it. You turn an ankle before you even reach the hole.",
+			"etiquetas": ["sinkhole", "subsidence", "large pothole"],
+			"aviso": "Sinkhole: the ground has sunk and is loose.",
+			"imagen": "Footprint of “Sinkhole in the pavement”: an irregular patch, 1.20 by 1.00 metres, marked with the letters “So”."
+		},
+		"acera_levantada": {
+			"nombre": "Stretch of pavement dug up",
+			"descripcion": "A stretch of pavement with the slabs taken up: you step down a little onto sand or packed earth, with the odd loose lump.",
+			"etiquetas": ["dug-up pavement", "missing slabs", "temporary surface"],
+			"aviso": "Pavement dug up: a small step down onto sand.",
+			"imagen": "Footprint of “Stretch of pavement dug up”: a rectangle, 2.00 by 1.50 metres, marked with the letters “Al”."
+		},
+		"tunel_andamio": {
+			"nombre": "Pedestrian tunnel under scaffolding",
+			"descripcion": "Covered way under scaffolding: a plank floor that sounds hollow, tubes on both sides and a low roof. The sound changes as you go in, as in a corridor.",
+			"etiquetas": ["scaffold tunnel", "covered walkway", "hoarding tunnel"],
+			"aviso": "Scaffold tunnel: narrow way, plank floor and low roof.",
+			"imagen": "Footprint of “Pedestrian tunnel under scaffolding”: a rectangle, 1.20 by 6.00 metres, marked with the letters “Ta”."
+		},
+		"monton_arena": {
+			"nombre": "Heap of builder's sand",
+			"descripcion": "A heap of sand tipped on the pavement or by the kerb. The cane sinks into it and your feet slip on the sand spread around.",
+			"etiquetas": ["sand heap", "pile of sand", "gravel heap"],
+			"imagen": "Footprint of “Heap of builder's sand”: a heap with a rounded, uneven outline, 1.80 by 1.50 metres, marked with the letters “Ma”."
+		},
+		"monton_adoquines": {
+			"nombre": "Pile of lifted cobbles",
+			"descripcion": "Cobbles or slabs pulled up and piled anyhow. Hard, sharp-edged, with a few rolled away from the pile.",
+			"etiquetas": ["cobble pile", "lifted setts", "pile of slabs"],
+			"imagen": "Footprint of “Pile of lifted cobbles”: an irregular patch, 1.50 by 1.20 metres, marked with the letters “Ma”."
+		},
+		"pale_baldosas": {
+			"nombre": "Pallet of paving slabs on the pavement",
+			"descripcion": "Wooden pallet loaded with slabs or bricks strapped together, hip high. Solid, with sharp corners; a loose strap can cut.",
+			"etiquetas": ["pallet of slabs", "pallet of bricks", "building materials"],
+			"variantes": {
+				"europeo": "Euro pallet",
+				"americano": "Standard pallet",
+				"medio": "Half pallet"
+			},
+			"imagen": "Footprint of “Pallet of paving slabs on the pavement”: a rectangle, 1.00 by 1.20 metres, marked with the letters “Pb”."
+		},
+		"sacos_escombro": {
+			"nombre": "Stacked rubble sacks",
+			"descripcion": "Small woven sacks full of rubble, stacked against the wall or by the door of a flat being refurbished. Soft outside, hard inside; they shed dust.",
+			"etiquetas": ["rubble sacks", "rubble bags", "builder's sacks"],
+			"imagen": "Footprint of “Stacked rubble sacks”: a rectangle with rounded corners, 1.20 by 0.60 metres, marked with the letters “Se”."
+		},
+		"bordillos_apilados": {
+			"nombre": "Stacked kerbstones",
+			"descripcion": "Concrete kerbstones stacked two or three high, at knee height. Heavy, they do not move; they hurt your shins.",
+			"etiquetas": ["stacked kerbs", "kerbstones", "concrete units"],
+			"imagen": "Footprint of “Stacked kerbstones”: a rectangle, 1.00 by 0.60 metres, marked with the letters “Ba”."
+		},
+		"tubos_acopiados": {
+			"nombre": "Works pipes lying on the ground",
+			"descripcion": "Long plastic pipes left along the pavement. Low and round: step on them and they roll.",
+			"etiquetas": ["pipes", "ducting", "conduit"],
+			"imagen": "Footprint of “Works pipes lying on the ground”: a rectangle, 0.80 by 4.00 metres, marked with the letters “Ta”."
+		},
+		"bobina_cable": {
+			"nombre": "Cable drum",
+			"descripcion": "Big wooden reel wound with cable, standing on its two discs. Unless chocked, it rolls when pushed.",
+			"etiquetas": ["cable drum", "cable reel", "wooden spool"],
+			"variantes": {
+				"pequena": "Small",
+				"mediana": "Medium",
+				"grande": "Large"
+			},
+			"imagen": "Footprint of “Cable drum”: a rectangle, 0.80 by 1.25 metres, marked with the letters “Bc”."
+		},
+		"pasacables": {
+			"nombre": "Rubber cable ramp",
+			"descripcion": "Rubber hump across the path protecting cables or hoses. You walk over it: a bump three fingers high that trips shuffling feet.",
+			"etiquetas": ["cable ramp", "cable protector", "cable cover"],
+			"aviso": "Cable ramp: a hump on the ground.",
+			"imagen": "Footprint of “Rubber cable ramp”: a rectangle, 2.00 by 0.30 metres, marked with the letters “Pa”."
+		},
+		"cables_mangueras_suelo": {
+			"nombre": "Works cables and hoses across the ground",
+			"descripcion": "Loose cables and hoses crossing the pavement from a doorway to the machine. They do not block the way, but they catch your foot.",
+			"etiquetas": ["trailing cables", "hoses", "air hose"],
+			"aviso": "Cables on the ground: lift your feet.",
+			"imagen": "Footprint of “Works cables and hoses across the ground”: a rectangle with wavy edges, 4.00 by 0.40 metres, marked with the letters “Cm”."
+		},
+		"generador_obra": {
+			"nombre": "Site generator",
+			"descripcion": "Generator set: a metal box with handles that putters non-stop and blows hot air. You hear it from far off and it drowns the other street sounds.",
+			"etiquetas": ["generator", "genset", "portable generator"],
+			"imagen": "Footprint of “Site generator”: a rectangle, 0.90 by 0.60 metres, marked with the letters “Go”."
+		},
+		"compresor_martillo": {
+			"nombre": "Compressor with pneumatic drill",
+			"descripcion": "Wheeled compressor with a tow bar sticking out at the front and a worker breaking up the ground nearby. The noise masks the traffic: this is a place to ask for help.",
+			"etiquetas": ["compressor", "pneumatic drill", "jackhammer"],
+			"imagen": "Footprint of “Compressor with pneumatic drill”: a T shape, 1.50 by 2.20 metres, marked with the letters “Cm”."
+		},
+		"foco_obra": {
+			"nombre": "Site floodlight on a tripod",
+			"descripcion": "Floodlight on a tall tripod with widely spread legs. The legs take up more room than you expect and the lamp burns if touched.",
+			"etiquetas": ["site floodlight", "work light", "tripod light"],
+			"imagen": "Footprint of “Site floodlight on a tripod”: a 3-pointed star, 1.00 by 1.00 metres, marked with the letters “Fo”."
+		},
+		"carretilla_obra": {
+			"nombre": "Wheelbarrow",
+			"descripcion": "One-wheeled barrow left on the pavement. The metal tub is at knee height and the two handles stick out behind at hand height.",
+			"etiquetas": ["wheelbarrow", "builder's barrow"],
+			"imagen": "Footprint of “Wheelbarrow”: a tub with two handles to the back and a wheel at the pointed front, 0.60 by 1.40 metres, marked with the letters “Co”."
+		},
+		"plataforma_tijera": {
+			"nombre": "Scissor lift",
+			"descripcion": "A machine with a basket that rises on a scissor arm. At the bottom it is a metal box with four outriggers sticking out at the corners; people are working above.",
+			"etiquetas": ["scissor lift", "aerial platform", "cherry picker"],
+			"imagen": "Footprint of “Scissor lift”: a rectangle with a support sticking out at each corner, 1.80 by 2.80 metres, marked with the letters “Pt”."
+		},
+		"andamio_con_red": {
+			"nombre": "Scaffolding wrapped in netting down to the ground",
+			"descripcion": "Scaffolding covered with netting or sheeting that reaches the ground. It feels like a soft wall that gives and rustles; there is no way under it.",
+			"etiquetas": ["netted scaffolding", "sheeted scaffold", "debris netting"],
+			"imagen": "Footprint of “Scaffolding wrapped in netting down to the ground”: a rectangle, 5.00 by 1.00 metres, marked with the letters “Ac”."
+		},
+		"puntal_marquesina": {
+			"nombre": "Raking scaffold strut",
+			"descripcion": "A tube running diagonally from the scaffold down to the pavement. The cane finds its foot, but one step earlier the tube is already at chest or face height.",
+			"etiquetas": ["raking strut", "scaffold brace", "diagonal tube"],
+			"imagen": "Footprint of “Raking scaffold strut”: a rectangle, 0.10 by 1.20 metres, marked with the letters “Pm”."
+		},
+		"bajante_escombros": {
+			"nombre": "Rubble chute",
+			"descripcion": "Wide chute of chained plastic buckets hanging down the façade and ending at head height. When rubble is tipped in, it rumbles and gives off dust.",
+			"etiquetas": ["rubble chute", "debris chute"],
+			"imagen": "Footprint of “Rubble chute”: a circle, 0.50 by 0.50 metres, hanging 1.50 metres above the floor, marked with the letters “Be”."
+		},
+		"polea_cubo": {
+			"nombre": "Pulley with a bucket going up and down",
+			"descripcion": "A bucket on a rope hauled up and down the façade with a pulley. It swings at body height; you hear the wheel squeak before you reach it.",
+			"etiquetas": ["pulley", "gin wheel", "hoist bucket"],
+			"imagen": "Footprint of “Pulley with a bucket going up and down”: a circle, 0.40 by 0.40 metres, hanging 1.00 metres above the floor, marked with the letters “Pc”."
+		},
+		"cuerda_colgando": {
+			"nombre": "Rope hanging down the façade",
+			"descripcion": "A rope or cable hanging from a balcony or a scaffold and stopping at chest height. It weighs nothing, but tangles round your neck or cane.",
+			"etiquetas": ["hanging rope", "dangling cable"],
+			"imagen": "Footprint of “Rope hanging down the façade”: a circle, 0.05 by 0.05 metres, hanging 1.00 metres above the floor, marked with the letters “Cc”."
+		},
+		"escalera_fachada": {
+			"nombre": "Ladder leaning against the façade",
+			"descripcion": "Long ladder leaning on the wall with its feet a step out from the façade. Walking close to the wall you go under it and meet the rails at shoulder height.",
+			"etiquetas": ["leaning ladder", "extension ladder"],
+			"imagen": "Footprint of “Ladder leaning against the façade”: a rectangle, 0.45 by 1.20 metres, marked with the letters “Ef”."
+		},
+		"muebles_mudanza": {
+			"nombre": "Removal furniture on the pavement",
+			"descripcion": "Several pieces of furniture left on the pavement while they are carried up or loaded: bulks of different heights wrapped in blankets, with corners where you least expect them.",
+			"etiquetas": ["removal furniture", "furniture on pavement", "house move"],
+			"imagen": "Footprint of “Removal furniture on the pavement”: several straight-sided bulks of different sizes pushed together, 2.50 by 1.20 metres, marked with the letters “Mm”."
+		},
+		"cajas_mudanza": {
+			"nombre": "Stacked removal boxes",
+			"descripcion": "A tower of cardboard boxes by a doorway. Light: push it and it topples.",
+			"etiquetas": ["removal boxes", "moving boxes", "cardboard boxes"],
+			"imagen": "Footprint of “Stacked removal boxes”: a rectangle, 1.00 by 0.50 metres, marked with the letters “Cm”."
+		},
+		"plataforma_camion": {
+			"nombre": "Lorry tail lift left open",
+			"descripcion": "The tail lift of a delivery lorry, open flat at waist or chest height and reaching over the pavement. The cane passes underneath; the edge is sheet metal.",
+			"etiquetas": ["tail lift", "lorry tailgate", "loading platform"],
+			"imagen": "Footprint of “Lorry tail lift left open”: a rectangle, 2.40 by 1.60 metres, hanging 1.00 metres above the floor, marked with the letters “Pc”."
+		},
+		"rampa_furgoneta": {
+			"nombre": "Van ramp resting on the kerb",
+			"descripcion": "Sheet-metal ramp running from the back of a van down to the pavement. A short, steep slope that rings like metal; from the side it is a step that trips you.",
+			"etiquetas": ["van ramp", "loading ramp"],
+			"aviso": "Delivery ramp across the path: a metal slope.",
+			"imagen": "Footprint of “Van ramp resting on the kerb”: a trapezoid, narrower at the back, 0.90 by 2.20 metres, marked with the letters “Rf”."
+		},
+		"carretilla_reparto": {
+			"nombre": "Sack truck loaded with boxes",
+			"descripcion": "Two-wheeled sack truck with a stack of boxes, left standing by a shop door. Narrow and tall; touch it and it may tip.",
+			"etiquetas": ["sack truck", "hand truck", "delivery trolley"],
+			"imagen": "Footprint of “Sack truck loaded with boxes”: a rectangle, 0.50 by 0.60 metres, marked with the letters “Cr”."
+		},
+		"transpaleta_pale": {
+			"nombre": "Delivery pallet with pallet truck",
+			"descripcion": "A loaded, shrink-wrapped pallet with the pallet truck still under it. The handle sticks out in front at waist height and the forks show at ground level.",
+			"etiquetas": ["pallet truck", "pallet jack", "delivery pallet"],
+			"imagen": "Footprint of “Delivery pallet with pallet truck”: a T shape, 0.80 by 1.90 metres, marked with the letters “Tp”."
+		},
+		"jaula_reparto": {
+			"nombre": "Roll cage",
+			"descripcion": "Tall wire-mesh trolley full of goods, taller than a person. It rolls if pushed and rattles like wire.",
+			"etiquetas": ["roll cage", "roll container", "cage trolley"],
+			"imagen": "Footprint of “Roll cage”: a rectangle, 0.72 by 0.80 metres, marked with the letters “Jr”."
+		},
+		"barriles_cerveza": {
+			"nombre": "Beer kegs on the pavement",
+			"descripcion": "Metal kegs the drayman leaves at the bar door, knee high. They ring hollow; when empty, they roll.",
+			"etiquetas": ["beer kegs", "kegs", "barrels"],
+			"variantes": {
+				"dos": "Two kegs",
+				"cuatro": "Four kegs",
+				"apilados": "Stacked two high"
+			},
+			"imagen": "Footprint of “Beer kegs on the pavement”: an elongated oval with straight sides and round ends, 0.80 by 0.40 metres, marked with the letters “Bc”."
+		},
+		"bombonas_butano": {
+			"nombre": "Gas cylinders on the pavement",
+			"descripcion": "Gas cylinders the delivery man stands by the doorway, at knee height. Thick steel; struck, they ring like a dull bell.",
+			"etiquetas": ["gas cylinders", "butane bottles", "gas bottles"],
+			"imagen": "Footprint of “Gas cylinders on the pavement”: a rectangle with rounded corners, 0.60 by 0.30 metres, marked with the letters “Bb”."
+		},
+		"cajas_bebida": {
+			"nombre": "Stacked drinks crates",
+			"descripcion": "Plastic crates of bottles stacked in a column at a bar door. The bottles clink when brushed; the column is unsteady.",
+			"etiquetas": ["drinks crates", "bottle crates"],
+			"imagen": "Footprint of “Stacked drinks crates”: a rectangle, 0.80 by 0.30 metres, marked with the letters “Cb”."
+		},
+		"reparto_puerta_cerrada": {
+			"nombre": "Delivery left at a closed shop door",
+			"descripcion": "Bread baskets, bundles of newspapers or trays left before dawn in front of the shutter. Low, ankle to knee high, right on the threshold.",
+			"etiquetas": ["bread baskets", "early delivery", "newspaper bundles"],
+			"imagen": "Footprint of “Delivery left at a closed shop door”: a rectangle, 1.00 by 0.50 metres, marked with the letters “Rp”."
+		},
+		"bolsas_basura_monton": {
+			"nombre": "Heap of rubbish bags",
+			"descripcion": "Rubbish bags left on the ground next to a full container. Soft, crackly, smelly, and sometimes leaking something slippery.",
+			"etiquetas": ["rubbish bags", "bin bags", "pile of rubbish"],
+			"imagen": "Footprint of “Heap of rubbish bags”: an irregular patch, 1.50 by 1.00 metres, marked with the letters “Bb”."
+		},
+		"bolsa_basura_suelta": {
+			"nombre": "Stray rubbish bag on the pavement",
+			"descripcion": "A single rubbish bag in the middle of the pavement. Low and soft: the cane pushes it almost without feeling it.",
+			"etiquetas": ["rubbish bag", "bin bag", "stray bag"],
+			"imagen": "Footprint of “Stray rubbish bag on the pavement”: a teardrop, round at the back and pointed at the front, 0.45 by 0.45 metres, marked with the letters “Bb”."
+		},
+		"contenedor_volcado": {
+			"nombre": "Wheelie bin knocked over",
+			"descripcion": "A wheelie bin lying on the pavement, lid open and rubbish spilt in front. Knee high and across the path.",
+			"etiquetas": ["overturned bin", "bin knocked over", "spilt rubbish"],
+			"imagen": "Footprint of “Wheelie bin knocked over”: a rectangle, 0.60 by 1.30 metres, marked with the letters “Cv”."
+		},
+		"cubos_comunidad_fila": {
+			"nombre": "Building's bins put out for collection",
+			"descripcion": "A row of wheelie bins the caretaker puts at the edge of the pavement in the evening and takes in next morning. They make a hollow plastic wall at chest height.",
+			"etiquetas": ["bins out for collection", "row of wheelie bins"],
+			"variantes": {
+				"dos": "Two bins",
+				"cuatro": "Four bins",
+				"ocho": "Eight bins"
+			},
+			"imagen": "Footprint of “Building's bins put out for collection”: a rectangle, 2.40 by 0.75 metres, marked with the letters “Cc”."
+		},
+		"carrito_barrendero": {
+			"nombre": "Street sweeper's cart, parked",
+			"descripcion": "Two-wheeled cart with a big bin, and brooms and a shovel whose handles stick out above and to the sides.",
+			"etiquetas": ["street sweeper's cart", "sweeper barrow"],
+			"imagen": "Footprint of “Street sweeper's cart, parked”: a rectangle, 0.70 by 1.20 metres, marked with the letters “Cb”."
+		},
+		"cristales_rotos": {
+			"nombre": "Broken glass on the ground",
+			"descripcion": "A broken bottle or pane scattered over the pavement. It does not block the way: it crunches and tinkles underfoot. Dangerous for a guide dog and for hands.",
+			"etiquetas": ["broken glass", "shattered bottle", "glass shards"],
+			"aviso": "Broken glass on the ground.",
+			"imagen": "Footprint of “Broken glass on the ground”: an irregular patch, 0.80 by 0.60 metres, marked with the letters “Cr”."
+		},
+		"colchon_fachada": {
+			"nombre": "Old mattress leaning against the wall",
+			"descripcion": "A mattress on its edge, leaning on the wall by the containers. Soft and tall; the wind blows it over and across the pavement.",
+			"etiquetas": ["old mattress", "dumped mattress"],
+			"imagen": "Footprint of “Old mattress leaning against the wall”: a rectangle, 1.90 by 0.40 metres, marked with the letters “Cf”."
+		},
+		"sofa_viejo": {
+			"nombre": "Old sofa left for collection",
+			"descripcion": "A sofa left on the pavement for bulky-waste collection. Soft, knee high, with its cushions loose on the ground.",
+			"etiquetas": ["old sofa", "dumped settee", "bulky waste"],
+			"imagen": "Footprint of “Old sofa left for collection”: a rectangle, 1.90 by 0.90 metres, marked with the letters “Sv”."
+		},
+		"frigorifico_tumbado": {
+			"nombre": "Old fridge lying on its side",
+			"descripcion": "A fridge lying on the pavement, knee high. Smooth metal that sounds hollow; the door may be open and in the way.",
+			"etiquetas": ["old fridge", "dumped appliance", "white goods"],
+			"imagen": "Footprint of “Old fridge lying on its side”: a rectangle, 0.60 by 1.80 metres, marked with the letters “Ft”."
+		},
+		"trastos_viejos_monton": {
+			"nombre": "Old junk piled up for collection",
+			"descripcion": "Dismantled furniture, boards, a bed base and drawers piled anyhow by the containers. Boards stick out at mid height and may have nails.",
+			"etiquetas": ["old junk", "bulky waste pile", "dumped furniture"],
+			"imagen": "Footprint of “Old junk piled up for collection”: a heap with a rounded, uneven outline, 2.00 by 1.20 metres, marked with the letters “Tv”."
+		},
+		"manguera_baldeo": {
+			"nombre": "Street-washing hose across the pavement",
+			"descripcion": "Thick hose the cleaning crew runs from the hydrant. A round hump on the ground; everything around is wet and you can hear the jet.",
+			"etiquetas": ["washing hose", "street-washing hose"],
+			"aviso": "Hose on the ground and wet pavement.",
+			"imagen": "Footprint of “Street-washing hose across the pavement”: a rectangle with wavy edges, 4.00 by 0.20 metres, marked with the letters “Mb”."
+		},
+		"balsa_agua": {
+			"nombre": "Standing water after rain",
+			"descripcion": "A very large puddle filling the pavement from side to side, or the dip of a crossing. You wade through: ankle-deep water and a slippery bottom.",
+			"etiquetas": ["standing water", "large puddle", "flooded pavement"],
+			"aviso": "Standing water: a large puddle.",
+			"imagen": "Footprint of “Standing water after rain”: a heap with a rounded, uneven outline, 3.50 by 2.50 metres, marked with the letters “Ba”."
+		},
+		"placa_hielo": {
+			"nombre": "Patch of ice",
+			"descripcion": "Frozen water on the pavement, in the shade or by a fountain. You neither hear it nor feel it with the cane: your foot suddenly goes.",
+			"etiquetas": ["ice patch", "black ice", "icy pavement"],
+			"aviso": "Ice! The ground is very slippery: take short steps.",
+			"imagen": "Footprint of “Patch of ice”: an oval, 1.50 by 1.00 metres, marked with the letters “Ph”."
+		},
+		"hojas_mojadas": {
+			"nombre": "Wet leaves on the ground",
+			"descripcion": "A layer of soaked fallen leaves covering the pavement in autumn. Soft and slippery; it hides the kerb and the tactile paving.",
+			"etiquetas": ["wet leaves", "fallen leaves", "leaf litter"],
+			"aviso": "Wet leaves: slippery.",
+			"imagen": "Footprint of “Wet leaves on the ground”: an irregular patch, 2.50 by 1.50 metres, marked with the letters “Hm”."
+		},
+		"silla_terraza_suelta": {
+			"nombre": "Stray terrace chair on the pavement",
+			"descripcion": "A café chair someone has pulled away from its table and left in the middle of the path. Light, metal or plastic: it shifts and scrapes when touched.",
+			"etiquetas": ["stray chair", "café chair", "terrace chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Stray terrace chair on the pavement”: a rectangle, 0.55 by 0.55 metres, marked with the letters “St”."
+		},
+		"terraza_apilada": {
+			"nombre": "Stacked terrace chairs and tables",
+			"descripcion": "A tower of café chairs and tables stacked and chained together, left on the pavement when the terrace is closed. Legs and arms stick out at different heights.",
+			"etiquetas": ["stacked chairs", "stacked terrace furniture"],
+			"imagen": "Footprint of “Stacked terrace chairs and tables”: a rectangle, 1.20 by 0.70 metres, marked with the letters “Ta”."
+		},
+		"sombrilla_tumbada": {
+			"nombre": "Closed parasol lying on the ground",
+			"descripcion": "A folded terrace parasol lying along the pavement. A long, low roll of fabric with the pole inside.",
+			"etiquetas": ["folded parasol", "parasol on the ground"],
+			"imagen": "Footprint of “Closed parasol lying on the ground”: a rectangle, 0.25 by 2.50 metres, marked with the letters “St”."
+		},
+		"vela_publicitaria": {
+			"nombre": "Feather flag",
+			"descripcion": "Flexible pole on a cross foot, with a tall, narrow cloth flapping at face height. The cane finds the foot; the cloth whips in the wind and you hear it snap.",
+			"etiquetas": ["feather flag", "sail banner", "advertising flag"],
+			"imagen": "Footprint of “Feather flag”: a cross, 0.60 by 0.60 metres, marked with the letters “Vp”."
+		},
+		"atril_carta": {
+			"nombre": "Restaurant menu stand",
+			"descripcion": "Thin post on a heavy base, with the menu on a sloping tray at chest height. The tray overhangs the base.",
+			"etiquetas": ["menu stand", "menu lectern", "menu holder"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Restaurant menu stand”: a rectangle, 0.45 by 0.40 metres, marked with the letters “Ac”."
+		},
+		"figura_publicitaria": {
+			"nombre": "Advertising figure by the door",
+			"descripcion": "A person-sized fibreglass figure (a chef, a giant ice cream) standing by a shop entrance. Hollow and light; it wobbles.",
+			"etiquetas": ["advertising figure", "shop mascot", "fibreglass figure"],
+			"imagen": "Footprint of “Advertising figure by the door”: a circle, 0.60 by 0.60 metres, marked with the letters “Fp”."
+		},
+		"cajas_fruta_vacias": {
+			"nombre": "Stacked empty fruit crates",
+			"descripcion": "A column of empty thin-wood or plastic crates by the greengrocer's door. Very light: one touch brings it down.",
+			"etiquetas": ["empty fruit crates", "stacked crates"],
+			"imagen": "Footprint of “Stacked empty fruit crates”: a rectangle, 0.50 by 0.40 metres, marked with the letters “Cf”."
+		},
+		"perchero_rebajas": {
+			"nombre": "Sale rail on the pavement",
+			"descripcion": "A wheeled rail full of hanging clothes put out by the shop door. The clothes brush you first; underneath, the cane passes freely as far as the wheels.",
+			"etiquetas": ["sale rail", "clothes rail outside", "garment rail"],
+			"imagen": "Footprint of “Sale rail on the pavement”: a rectangle, 1.40 by 0.50 metres, marked with the letters “Pr”."
+		},
+		"cajon_ofertas": {
+			"nombre": "Bargain bin by the shop door",
+			"descripcion": "A big bin or basket on legs, full of jumbled goods, hip high and one step out from the shop front.",
+			"etiquetas": ["bargain bin", "dump bin", "sale basket"],
+			"imagen": "Footprint of “Bargain bin by the shop door”: a rectangle, 0.80 by 0.60 metres, marked with the letters “Co”."
+		},
+		"macetas_puerta": {
+			"nombre": "Flowerpots put out by the door",
+			"descripcion": "A row of small flowerpots on the ground beside a shop door. Low, ankle to knee high; they sound like earthenware.",
+			"etiquetas": ["flowerpots", "pots by the door"],
+			"imagen": "Footprint of “Flowerpots put out by the door”: a rectangle with rounded corners, 1.20 by 0.30 metres, marked with the letters “Mp”."
+		},
+		"alfombra_arrugada": {
+			"nombre": "Rucked-up shop doormat",
+			"descripcion": "A big entrance mat that has shifted and rucked up, or has a curled corner. It does not block the way, but it catches your toe and the cane tip.",
+			"etiquetas": ["rucked mat", "loose entrance mat", "curled rug"],
+			"aviso": "Rucked mat: lift your feet.",
+			"imagen": "Footprint of “Rucked-up shop doormat”: a rectangle, 1.50 by 0.90 metres, marked with the letters “Aa”."
+		},
+		"persiana_medio_abrir": {
+			"nombre": "Half-raised metal shutter",
+			"descripcion": "A shop shutter raised only to forehead height. The cane goes under without touching it; the edge is a steel section.",
+			"etiquetas": ["half-open shutter", "roller shutter", "shop shutter"],
+			"imagen": "Footprint of “Half-raised metal shutter”: a rectangle, 2.50 by 0.08 metres, hanging 1.50 metres above the floor, marked with the letters “Pm”."
+		},
+		"puerta_cristal_acera": {
+			"nombre": "Glass door open onto the pavement",
+			"descripcion": "The glass leaf of a shop door open outwards, at right angles to the façade. Walking close to the wall you hit its thin, cold edge; it can be neither seen nor heard.",
+			"etiquetas": ["open glass door", "outward-opening door"],
+			"acciones": {
+				"cerrar": "Close",
+				"abrir": "Open"
+			},
+			"imagen": "Footprint of “Glass door open onto the pavement”: a rectangle, 0.05 by 0.90 metres, marked with the letters “Pc”."
+		},
+		"viento_puesto": {
+			"nombre": "Awning guy rope tied to a weight",
+			"descripcion": "A taut rope running diagonally from a stall awning down to a water drum or block on the ground. The cane finds the weight; the almost invisible rope crosses earlier at chest height.",
+			"etiquetas": ["guy rope", "guy line", "awning weight"],
+			"imagen": "Footprint of “Awning guy rope tied to a weight”: a teardrop, round at the back and pointed at the front, 0.30 by 1.20 metres, marked with the letters “Vp”."
+		},
+		"mesa_puesto": {
+			"nombre": "Stall table on trestles",
+			"descripcion": "Long board on trestles, covered with goods hanging over the edge. The trestles are set in: the cane goes under the board before touching them.",
+			"etiquetas": ["stall table", "trestle table"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Stall table on trestles”: a rectangle, 2.00 by 0.80 metres, marked with the letters “Mp”."
+		},
+		"cajas_puesto": {
+			"nombre": "Boxes and bags on the ground by a stall",
+			"descripcion": "Boxes, bags and goods spread on the ground in front of or beside a stall. Low and untidy: it changes every time the trader restocks.",
+			"etiquetas": ["stall boxes", "goods on the ground"],
+			"imagen": "Footprint of “Boxes and bags on the ground by a stall”: an irregular patch, 1.20 by 0.80 metres, marked with the letters “Cp”."
+		},
+		"genero_colgado": {
+			"nombre": "Goods hanging from a stall awning",
+			"descripcion": "Clothes, bags or strings of goods hanging from the awning edge at face height. Soft, but they hit your head with no warning from the cane.",
+			"etiquetas": ["hanging goods", "hanging clothes", "stall awning"],
+			"imagen": "Footprint of “Goods hanging from a stall awning”: a rectangle, 2.00 by 0.40 metres, hanging 1.50 metres above the floor, marked with the letters “Gc”."
+		},
+		"carpa_plegable": {
+			"nombre": "Pop-up gazebo with weights",
+			"descripcion": "Square canopy on four legs, with a weight on each leg sticking outwards. The folding roof bars are at head height along the edges.",
+			"etiquetas": ["pop-up gazebo", "folding marquee", "canopy tent"],
+			"variantes": {
+				"dos_por_dos": "2 × 2",
+				"tres_por_tres": "3 × 3",
+				"tres_por_seis": "3 × 6"
+			},
+			"imagen": "Footprint of “Pop-up gazebo with weights”: a rectangle with a support sticking out at each corner, 3.00 by 3.00 metres, marked with the letters “Cp”."
+		},
+		"caseta_feria": {
+			"nombre": "Wooden fair booth",
+			"descripcion": "Board booth with a counter at the front and a hinged flap above, like those at Christmas markets. The open flap is at head height.",
+			"etiquetas": ["fair booth", "wooden stall", "Christmas market hut"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Wooden fair booth”: a house-shaped pentagon, 3.00 by 2.00 metres, marked with the letters “Cf”."
+		},
+		"puesto_castanas": {
+			"nombre": "Roast chestnut stand",
+			"descripcion": "A steel drum of embers with a small table beside it. It burns if touched; you know it from afar by the smell and the crackle of the embers.",
+			"etiquetas": ["chestnut stand", "roast chestnuts", "chestnut seller"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Roast chestnut stand”: an oval, 1.00 by 0.80 metres, marked with the letters “Pc”."
+		},
+		"churreria_ambulante": {
+			"nombre": "Mobile churro stall",
+			"descripcion": "Long trailer with a high counter on one side, a drop-down awning and a generator that never stops. There is a queue in front and the ground is sticky with oil and sugar.",
+			"etiquetas": ["churro stall", "food trailer", "fairground stall"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Mobile churro stall”: a rectangle with cut corners, 4.50 by 2.30 metres, marked with the letters “Ca”."
+		},
+		"carrito_helados": {
+			"nombre": "Ice cream cart",
+			"descripcion": "A cart with two big wheels, a cold box and a small canopy. The seller moves it around during the day.",
+			"etiquetas": ["ice cream cart", "vendor cart"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Ice cream cart”: a rectangle, 0.80 by 1.50 metres, marked with the letters “Ch”."
+		},
+		"cabina_aseo_portatil": {
+			"nombre": "Portable toilet cabin",
+			"descripcion": "Plastic cabin with a door that slams, set on the pavement or square for a festival or building works. Hollow when struck; you know it by the smell.",
+			"etiquetas": ["portable toilet", "chemical toilet", "portaloo"],
+			"variantes": {
+				"normal": "Standard",
+				"adaptada": "Accessible"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Portable toilet cabin”: a rectangle, 1.20 by 1.20 metres, marked with the letters “Ca”."
+		},
+		"escenario_provisional": {
+			"nombre": "Temporary stage",
+			"descripcion": "A high platform set up in the square on a tubular frame, with steps at one side. The edge is at chest height and underneath are crossed bars.",
+			"etiquetas": ["temporary stage", "festival stage", "platform"],
+			"imagen": "Footprint of “Temporary stage”: a rectangle, 8.00 by 6.00 metres, marked with the letters “Ep”."
+		},
+		"torre_sonido": {
+			"nombre": "Speaker tower with ballast",
+			"descripcion": "Metal lattice tower with loudspeakers on top and four outriggers in a cross, loaded with drums. Cables run from it across the ground.",
+			"etiquetas": ["speaker tower", "lighting tower", "truss tower"],
+			"imagen": "Footprint of “Speaker tower with ballast”: a cross, 1.50 by 1.50 metres, marked with the letters “Ts”."
+		},
+		"sillas_procesion": {
+			"nombre": "Rows of chairs set out for the procession",
+			"descripcion": "Rows of folding chairs tied together that take over the pavement hours before a procession or parade. They leave a narrow way along the wall.",
+			"etiquetas": ["procession chairs", "parade seating", "rows of folding chairs"],
+			"variantes": {
+				"una_fila": "One row",
+				"dos_filas": "Two rows",
+				"tres_filas": "Three rows"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Rows of chairs set out for the procession”: a rectangle, 5.00 by 0.55 metres, marked with the letters “Sp”."
+		},
+		"tribuna_desmontable": {
+			"nombre": "Demountable grandstand",
+			"descripcion": "A stand of tubes and planks put up in the street. Behind and at the sides it is a forest of crossed tubes at every height; in front, steps.",
+			"etiquetas": ["grandstand", "temporary stand", "bleachers"],
+			"imagen": "Footprint of “Demountable grandstand”: a trapezoid, narrower at the back, 8.00 by 5.00 metres, marked with the letters “Td”."
+		},
+		"pata_arco_hinchable": {
+			"nombre": "Inflatable arch leg with blower",
+			"descripcion": "A fat, soft column of air-filled fabric, one of the two legs of a race start arch. A blower hums at its foot and guy ropes run from it to weights.",
+			"etiquetas": ["inflatable arch leg", "race arch", "blower"],
+			"imagen": "Footprint of “Inflatable arch leg with blower”: a circle, 1.20 by 1.20 metres, marked with the letters “Pa”."
+		},
+		"alfombra_cronometraje": {
+			"nombre": "Finish-line timing mat",
+			"descripcion": "A rubber mat with cables across the road at the start and finish of a race. You step on it: it is soft and beeps when a race number crosses.",
+			"etiquetas": ["timing mat", "finish line", "chip mat"],
+			"imagen": "Footprint of “Finish-line timing mat”: a rectangle, 4.00 by 1.00 metres, marked with the letters “Ac”."
+		},
+		"mesa_avituallamiento": {
+			"nombre": "Race refreshment table",
+			"descripcion": "Folding tables in a row at the roadside with cups and bottles. All around, the ground is littered with cups, bottle tops and water.",
+			"etiquetas": ["refreshment table", "water station", "aid station"],
+			"variantes": {
+				"una": "One table",
+				"dos": "Two tables",
+				"cuatro": "Four tables"
+			},
+			"acciones": {
+				"beber": "Drink"
+			},
+			"imagen": "Footprint of “Race refreshment table”: a rectangle, 3.60 by 0.75 metres, marked with the letters “Ma”."
+		},
+		"mesa_petitoria": {
+			"nombre": "Collection or petition table",
+			"descripcion": "A folding table with a cloth skirt, a collecting tin and one or two people sitting behind, set up on a busy corner. They usually call out to passers-by.",
+			"etiquetas": ["collection table", "petition table", "charity stand"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Collection or petition table”: a rectangle, 1.20 by 1.20 metres, marked with the letters “Mp”."
+		},
+		"barra_fiestas": {
+			"nombre": "Temporary festival bar",
+			"descripcion": "A long bar of planks on barrels or trestles, set up in the street during the festival. Elbow high; the ground in front is wet and sticky.",
+			"etiquetas": ["festival bar", "pop-up bar", "street bar"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Temporary festival bar”: a rectangle, 4.00 by 0.60 metres, marked with the letters “Bf”."
+		},
+		"jaula_vidrio_fiestas": {
+			"nombre": "Festival glass-collection cage",
+			"descripcion": "Wheeled wire-mesh cage for bottles, placed around the streets at festival time. It rattles like wire and, when a bottle goes in, like glass.",
+			"etiquetas": ["glass cage", "bottle cage", "festival bottle bin"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Festival glass-collection cage”: a rectangle, 1.20 by 1.00 metres, marked with the letters “Jv”."
+		},
+		"guirnalda_baja": {
+			"nombre": "Low-hanging string of lights",
+			"descripcion": "A string of bulbs or bunting stretched from side to side that has sagged and crosses the path at forehead height. The cane does not touch it.",
+			"etiquetas": ["string lights", "bunting", "festoon lights"],
+			"imagen": "Footprint of “Low-hanging string of lights”: a rectangle, 5.00 by 0.10 metres, hanging 1.60 metres above the floor, marked with the letters “Gb”."
+		},
+		"arbol_navidad_plaza": {
+			"nombre": "Fenced Christmas tree in the square",
+			"descripcion": "A very tall metal cone covered in lights in the middle of the square, ringed with low barriers. It stands where on other days you would walk straight across.",
+			"etiquetas": ["Christmas tree", "light tree", "festive cone"],
+			"imagen": "Footprint of “Fenced Christmas tree in the square”: an octagon, 5.00 by 5.00 metres, marked with the letters “An”."
+		},
+		"hoguera_vallada": {
+			"nombre": "Fenced bonfire or festival monument",
+			"descripcion": "A tall pile of wood, or a cardboard monument due to be burnt, ringed with barriers at a junction or square. Once lit, you hear it crackle and feel the heat from afar.",
+			"etiquetas": ["bonfire", "festival monument", "falla"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Fenced bonfire or festival monument”: a circle, 6.00 by 6.00 metres, marked with the letters “Hv”."
+		},
+		"rama_caida": {
+			"nombre": "Large fallen branch on the pavement",
+			"descripcion": "A thick branch brought down by a storm, with thin branches and leaves going every way. The cane tangles and the tips scratch at leg and hand height.",
+			"etiquetas": ["fallen branch", "broken bough"],
+			"imagen": "Footprint of “Large fallen branch on the pavement”: a branch with several arms going off in different directions, 3.00 by 2.00 metres, marked with the letters “Rc”."
+		},
+		"arbol_caido": {
+			"nombre": "Fallen tree across the street",
+			"descripcion": "A whole tree lying from side to side: the trunk at hip height, the crown a tangle and, at the other end, the root plate lifted with a hole beside it.",
+			"etiquetas": ["fallen tree", "uprooted tree"],
+			"aviso": "Fallen tree: no way through.",
+			"imagen": "Footprint of “Fallen tree across the street”: a trunk lying down, roots on the left and the wide crown on the right, 8.00 by 3.50 metres, marked with the letters “Ac”."
+		},
+		"restos_poda": {
+			"nombre": "Heap of pruning branches and leaves",
+			"descripcion": "Freshly cut branches heaped on the pavement or road, waiting for the lorry. Soft and springy; the leaves rustle in the breeze.",
+			"etiquetas": ["pruning heap", "tree cuttings", "brash pile"],
+			"imagen": "Footprint of “Heap of pruning branches and leaves”: a heap with a rounded, uneven outline, 2.50 by 1.50 metres, marked with the letters “Rp”."
+		},
+		"toldo_roto": {
+			"nombre": "Torn awning hanging down",
+			"descripcion": "An awning ripped by the wind: the canvas and a bar hang from the façade down to chest height and swing. You can hear the cloth snap.",
+			"etiquetas": ["torn awning", "hanging canvas", "broken awning"],
+			"imagen": "Footprint of “Torn awning hanging down”: a rectangle, 2.00 by 0.60 metres, hanging 1.20 metres above the floor, marked with the letters “Tr”."
+		},
+		"cable_caido": {
+			"nombre": "Fallen overhead cable",
+			"descripcion": "A cable that has come away from the façade or a pole and hangs diagonally to the ground. It may be live: do not touch it, not even with the cane.",
+			"etiquetas": ["fallen cable", "downed wire", "loose power line"],
+			"aviso": "Fallen cable! Do not touch it: give it a wide berth.",
+			"imagen": "Footprint of “Fallen overhead cable”: a rectangle, 0.10 by 3.00 metres, marked with the letters “Cc”."
+		},
+		"cascotes_acotados": {
+			"nombre": "Fallen masonry, cordoned off",
+			"descripcion": "Pieces of cornice or tiles fallen at the foot of a façade, ringed with barriers. Outside the barriers loose lumps lie on the ground.",
+			"etiquetas": ["fallen masonry", "fallen cornice", "falling debris"],
+			"aviso": "Falling masonry: move away from the wall.",
+			"imagen": "Footprint of “Fallen masonry, cordoned off”: a rectangle with cut corners, 2.50 by 2.00 metres, marked with the letters “Ca”."
+		},
+		"macetero_volcado": {
+			"nombre": "Overturned planter",
+			"descripcion": "A big pot blown over by the wind, with soil and plant spilt in front. The wet soil is slippery.",
+			"etiquetas": ["overturned planter", "fallen flowerpot"],
+			"imagen": "Footprint of “Overturned planter”: a teardrop, round at the back and pointed at the front, 0.60 by 1.20 metres, marked with the letters “Mv”."
+		},
+		"senal_derribada": {
+			"nombre": "Knocked-down road sign",
+			"descripcion": "A sign post lying across the pavement after wind or a collision. Low, metal, with the plate at one end and the torn-out base at the other.",
+			"etiquetas": ["knocked-down sign", "fallen post"],
+			"imagen": "Footprint of “Knocked-down road sign”: a rectangle, 0.60 by 2.80 metres, marked with the letters “Sd”."
+		},
+		"valla_tumbada": {
+			"nombre": "Works barrier blown flat",
+			"descripcion": "A metal barrier fallen flat on the pavement. It is barely a hand high: your foot goes between the bars and the cane catches.",
+			"etiquetas": ["fallen barrier", "barrier blown over"],
+			"imagen": "Footprint of “Works barrier blown flat”: a rectangle, 2.50 by 1.10 metres, marked with the letters “Vt”."
+		},
+		"alcorque_inundado": {
+			"nombre": "Flooded tree pit",
+			"descripcion": "A tree pit full of water after rain or watering. It seems firm ground, but your foot sinks into a hand's depth of water and mud.",
+			"etiquetas": ["flooded tree pit", "waterlogged tree pit"],
+			"aviso": "Flooded tree pit: water and mud.",
+			"imagen": "Footprint of “Flooded tree pit”: a rectangle, 1.00 by 1.00 metres, marked with the letters “Ai”."
+		},
+		"arrastre_barro": {
+			"nombre": "Mud and gravel washed down by the storm",
+			"descripcion": "A tongue of mud, gravel and twigs left on the pavement by the rain. You walk on it: it crunches, slides and hides the kerb.",
+			"etiquetas": ["mud wash", "washed-down gravel", "silt"],
+			"aviso": "Mud and gravel: slippery.",
+			"imagen": "Footprint of “Mud and gravel washed down by the storm”: an irregular patch, 3.00 by 1.50 metres, marked with the letters “Ab”."
+		},
+		"nieve_amontonada": {
+			"nombre": "Snow piled at the edge",
+			"descripcion": "A bank of cleared snow left along the kerb or against the wall. Soft outside, hard inside once it freezes; it hides the kerb and the dropped kerbs.",
+			"etiquetas": ["snow bank", "pile of snow", "cleared snow"],
+			"imagen": "Footprint of “Snow piled at the edge”: a rectangle with rounded corners, 3.00 by 0.80 metres, marked with the letters “Na”."
+		},
+		"cola_de_gente": {
+			"nombre": "Queue of people outside a shop",
+			"descripcion": "A line of people waiting on the pavement, crossing it from door to kerb. You hear the murmur; ask to get through and the line opens.",
+			"etiquetas": ["queue", "line of people", "people waiting"],
+			"imagen": "Footprint of “Queue of people outside a shop”: a rectangle with wavy edges, 0.80 by 6.00 metres, marked with the letters “Cd”."
+		},
+		"grupo_charlando": {
+			"nombre": "Group of people standing chatting",
+			"descripcion": "A knot of several people standing in the middle of the pavement. You hear the voices from afar; they do not move unless warned.",
+			"etiquetas": ["group of people", "knot of people", "people chatting"],
+			"imagen": "Footprint of “Group of people standing chatting”: a circle, 1.80 by 1.80 metres, marked with the letters “Gc”."
+		},
+		"persona_parada": {
+			"nombre": "Person standing in the middle of the pavement",
+			"descripcion": "Someone standing still in the way, looking at a phone or waiting. Silent: the cane touches their feet. A simple “excuse me” does it.",
+			"etiquetas": ["standing person", "pedestrian", "person on phone"],
+			"variantes": {
+				"con_movil": "Looking at a phone",
+				"repartidor": "Courier holding a box",
+				"con_bolsas": "With bags on the ground"
+			},
+			"imagen": "Footprint of “Person standing in the middle of the pavement”: an oval, 0.60 by 0.50 metres, marked with the letters “Pp”."
+		},
+		"persona_sentada_suelo": {
+			"nombre": "Person sitting on the ground",
+			"descripcion": "Someone sitting on the pavement, back to the wall and legs stretched into the path. Low and soft: the cane meets their feet.",
+			"etiquetas": ["person sitting on the ground", "seated person"],
+			"imagen": "Footprint of “Person sitting on the ground”: a rectangle with rounded corners, 0.60 by 1.20 metres, marked with the letters “Ps”."
+		},
+		"vecinos_al_fresco": {
+			"nombre": "Neighbours sitting out by their door",
+			"descripcion": "Several chairs brought out onto the pavement in a ring in front of a doorway, with neighbours chatting. The kerb side is left clear; you hear them from afar.",
+			"etiquetas": ["neighbours sitting out", "chairs outside the door"],
+			"imagen": "Footprint of “Neighbours sitting out by their door”: a curved band bulging towards the front, 2.50 by 1.20 metres, marked with the letters “Va”."
+		},
+		"perro_atado": {
+			"nombre": "Dog tied up on a stretched lead",
+			"descripcion": "A dog tied to a lamp post or ring while its owner shops. The lead crosses the path at ankle height and the dog moves, pants and barks.",
+			"etiquetas": ["tied-up dog", "dog on a lead", "waiting dog"],
+			"imagen": "Footprint of “Dog tied up on a stretched lead”: a teardrop, round at the back and pointed at the front, 0.50 by 1.50 metres, marked with the letters “Pa”."
+		},
+		"musico_callejero": {
+			"nombre": "Busker with an open instrument case",
+			"descripcion": "A musician playing standing or seated, with the instrument case open on the ground one step in front. The music guides you from afar and masks the traffic up close.",
+			"etiquetas": ["busker", "street musician", "guitar case"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Busker with an open instrument case”: a T shape, 1.50 by 1.50 metres, marked with the letters “Mc”."
+		},
+		"estatua_humana": {
+			"nombre": "Living statue on a plinth",
+			"descripcion": "A motionless performer standing on a box, with a tin for coins in front. Completely silent until someone drops a coin; a ring of people gathers round.",
+			"etiquetas": ["living statue", "mime", "street performer"],
+			"acciones": {
+				"echar_moneda": "Drop a coin in"
+			},
+			"imagen": "Footprint of “Living statue on a plinth”: a house-shaped pentagon, 0.60 by 0.80 metres, marked with the letters “Eh”."
+		},
+		"manta_venta": {
+			"nombre": "Street seller's blanket on the ground",
+			"descripcion": "A sheet spread on the ground with goods on it and cords at the corners. Do not step on it: feet tangle and the goods slide.",
+			"etiquetas": ["seller's blanket", "street vendor sheet"],
+			"aviso": "Seller's blanket on the ground: go round it.",
+			"imagen": "Footprint of “Street seller's blanket on the ground”: a rectangle, 2.00 by 1.50 metres, marked with the letters “Mv”."
+		},
+		"cochecito_bebe": {
+			"nombre": "Pushchair left by a shop door",
+			"descripcion": "A pushchair parked by a shop entrance. The handle is at waist height; unless the brake is on, it rolls.",
+			"etiquetas": ["pushchair", "pram", "buggy", "stroller"],
+			"imagen": "Footprint of “Pushchair left by a shop door”: a rectangle with cut corners, 0.60 by 1.00 metres, marked with the letters “Cb”."
+		},
+		"carro_compra_puerta": {
+			"nombre": "Shopping trolley bag left by the door",
+			"descripcion": "A two-wheeled shopping trolley with a fabric bag, leaning by a shop door. Narrow and light: it falls over when brushed.",
+			"etiquetas": ["shopping trolley bag", "wheeled shopping bag"],
+			"imagen": "Footprint of “Shopping trolley bag left by the door”: a rectangle, 0.40 by 0.35 metres, marked with the letters “Cc”."
+		},
+		"suelo_recien_fregado": {
+			"nombre": "Stretch of freshly mopped floor",
+			"descripcion": "A patch of wet floor that has not dried yet. The cane does not find it: it smells of bleach and your shoes slip or squeak.",
+			"etiquetas": ["wet floor", "freshly mopped floor"],
+			"aviso": "Wet floor: slippery.",
+			"imagen": "Footprint of “Stretch of freshly mopped floor”: an irregular patch, 2.00 by 2.00 metres, marked with the letters “Sr”."
+		},
+		"carro_limpieza": {
+			"nombre": "Cleaning trolley left in the corridor",
+			"descripcion": "A trolley with buckets, a big hanging rubbish bag and broom handles sticking up. It takes up half the corridor by the door being cleaned.",
+			"etiquetas": ["cleaning trolley", "janitor's cart"],
+			"imagen": "Footprint of “Cleaning trolley left in the corridor”: a rectangle, 0.60 by 1.20 metres, marked with the letters “Cl”."
+		},
+		"fregadora_suelos": {
+			"nombre": "Floor scrubber machine",
+			"descripcion": "A machine pushed around the lobby by an operator: it hums, scrubs and leaves a wet strip behind. When stopped, it is a hip-high plastic bulk with a cable or handle at the back.",
+			"etiquetas": ["floor scrubber", "scrubber dryer", "floor polisher"],
+			"acciones": {
+				"parar": "Stop",
+				"poner": "Start"
+			},
+			"imagen": "Footprint of “Floor scrubber machine”: a rectangle with rounded corners, 0.60 by 1.20 metres, marked with the letters “Fs”."
+		},
+		"cubo_gotera": {
+			"nombre": "Bucket under a leak",
+			"descripcion": "A bucket set on the floor to catch water dripping from the ceiling. Low, in the middle of the way, with the floor splashed around it.",
+			"etiquetas": ["leak bucket", "drip bucket"],
+			"imagen": "Footprint of “Bucket under a leak”: a circle, 0.30 by 0.30 metres, marked with the letters “Cg”."
+		},
+		"andamio_pintor": {
+			"nombre": "Painter's mobile scaffold tower",
+			"descripcion": "A wheeled tube tower with a platform on top, in the middle of a corridor or lobby. Cross bars run at several heights and a painter is on top.",
+			"etiquetas": ["mobile scaffold tower", "painter's tower"],
+			"imagen": "Footprint of “Painter's mobile scaffold tower”: a rectangle, 0.80 by 2.00 metres, marked with the letters “Ap”."
+		},
+		"plastico_pintor": {
+			"nombre": "Painter's dust sheet on the floor",
+			"descripcion": "A plastic sheet spread out to protect the floor. It crackles underfoot, slides and tangles round your feet and the cane tip.",
+			"etiquetas": ["dust sheet", "plastic sheeting", "floor protection"],
+			"aviso": "Painter's sheet on the floor: slippery.",
+			"imagen": "Footprint of “Painter's dust sheet on the floor”: a rectangle, 3.00 by 2.00 metres, marked with the letters “Pp”."
+		},
+		"cubos_pintura": {
+			"nombre": "Paint tubs and rollers",
+			"descripcion": "Big paint tubs, trays and rollers left on the floor by the wall being painted. Low; tip them and paint goes everywhere.",
+			"etiquetas": ["paint tubs", "paint pots", "rollers"],
+			"imagen": "Footprint of “Paint tubs and rollers”: a heap with a rounded, uneven outline, 0.80 by 0.50 metres, marked with the letters “Cp”."
+		},
+		"caja_herramientas_suelo": {
+			"nombre": "Open toolbox on the floor",
+			"descripcion": "An open toolbox with its trays spread out and the odd tool loose around it, where the maintenance worker is busy.",
+			"etiquetas": ["toolbox", "open toolbox", "tools on the floor"],
+			"imagen": "Footprint of “Open toolbox on the floor”: a rectangle, 0.50 by 0.30 metres, marked with the letters “Ch”."
+		},
+		"alargador_cruzado": {
+			"nombre": "Extension lead across the corridor",
+			"descripcion": "A thin cable run from a socket to a machine, right across the corridor. It makes no sound and does not block the way: it catches your foot.",
+			"etiquetas": ["extension lead", "trailing cable", "power cord"],
+			"aviso": "Cable across the floor: lift your feet.",
+			"imagen": "Footprint of “Extension lead across the corridor”: a rectangle, 2.00 by 0.05 metres, marked with the letters “Ac”."
+		},
+		"trampilla_registro_abierta": {
+			"nombre": "Open floor access hatch",
+			"descripcion": "A floor cover lifted to inspect services. It leaves a square hole a hand deep, with the cover propped beside it.",
+			"etiquetas": ["open floor hatch", "access hatch", "lifted floor tile"],
+			"aviso": "Open hatch! There is a hole in the floor.",
+			"imagen": "Footprint of “Open floor access hatch”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Tr”."
+		},
+		"cajas_reposicion": {
+			"nombre": "Restocking boxes in a shop aisle",
+			"descripcion": "Open cardboard boxes on the floor while shelves are being restocked. Low, knee high, and in a different aisle every day.",
+			"etiquetas": ["restocking boxes", "boxes in the aisle"],
+			"imagen": "Footprint of “Restocking boxes in a shop aisle”: a rectangle, 0.60 by 0.40 metres, marked with the letters “Cr”."
+		},
+		"carro_reposicion": {
+			"nombre": "Stock trolley loaded with boxes",
+			"descripcion": "A low wheeled platform with a tall handle, loaded with boxes, stopped in the middle of an aisle. The platform sticks out in front at ankle height.",
+			"etiquetas": ["stock trolley", "platform trolley", "flatbed trolley"],
+			"imagen": "Footprint of “Stock trolley loaded with boxes”: a rectangle, 0.60 by 1.00 metres, marked with the letters “Cr”."
+		},
+		"paquetes_entrada": {
+			"nombre": "Courier parcels piled in the entrance",
+			"descripcion": "A pile of parcels the courier leaves in the hallway or by reception. Boxes of all sizes, light, that spill over.",
+			"etiquetas": ["parcels", "courier parcels", "deliveries"],
+			"imagen": "Footprint of “Courier parcels piled in the entrance”: several straight-sided bulks of different sizes pushed together, 1.00 by 0.60 metres, marked with the letters “Pe”."
+		},
+		"mueble_fuera_sitio": {
+			"nombre": "Piece of furniture moved out of place",
+			"descripcion": "A piece of furniture pulled away from the wall for cleaning, building work or a move and left in the middle of the way, where there was never anything.",
+			"etiquetas": ["moved furniture", "furniture out of place"],
+			"variantes": {
+				"bajo": "Low unit",
+				"alto": "Tall unit",
+				"mesa_auxiliar": "Side table"
+			},
+			"imagen": "Footprint of “Piece of furniture moved out of place”: a rectangle, 1.00 by 0.50 metres, marked with the letters “Mf”."
+		},
+		"sillas_con_cinta": {
+			"nombre": "“No entry” tape between two chairs",
+			"descripcion": "Two chairs set apart with a tape tied from back to back to close off a corridor. The cane may pass between them touching nothing: the tape is at hip height.",
+			"etiquetas": ["no-entry tape", "improvised barrier", "chairs and tape"],
+			"imagen": "Footprint of ““No entry” tape between two chairs”: two squares joined by a thin strip, 2.00 by 0.50 metres, marked with the letters “Sc”."
+		},
+		"alfombra_enrollada": {
+			"nombre": "Rolled-up carpet on the floor",
+			"descripcion": "A carpet rolled up and left along a corridor for cleaning or building work. A soft roll at ankle height.",
+			"etiquetas": ["rolled carpet", "rolled-up rug"],
+			"imagen": "Footprint of “Rolled-up carpet on the floor”: a rectangle, 0.30 by 2.00 metres, marked with the letters “Ae”."
+		},
+		"paraguas_abierto": {
+			"nombre": "Open umbrella drying on the floor",
+			"descripcion": "An open umbrella left on the entrance floor to dry. Light, with the rib tips at knee height; it rolls when touched and leaves a puddle.",
+			"etiquetas": ["open umbrella", "drying umbrella"],
+			"imagen": "Footprint of “Open umbrella drying on the floor”: an octagon, 1.00 by 1.00 metres, marked with the letters “Pa”."
+		},
+		"arbol_navidad_vestibulo": {
+			"nombre": "Christmas tree in the lobby",
+			"descripcion": "A Christmas tree that appears in December in a corner or the middle of the lobby. The branches prickle and brush you before you reach the base; cables and parcels lie around it.",
+			"etiquetas": ["Christmas tree", "festive tree"],
+			"imagen": "Footprint of “Christmas tree in the lobby”: a circle, 1.20 by 1.20 metres, marked with the letters “An”."
+		},
+		"decoracion_colgada_baja": {
+			"nombre": "Low-hanging decorations",
+			"descripcion": "Garlands, mobiles or card signs hung from the ceiling down to forehead height. Light: they do not hurt, but they startle and tangle.",
+			"etiquetas": ["hanging decorations", "garlands", "paper chains"],
+			"imagen": "Footprint of “Low-hanging decorations”: a rectangle, 1.50 by 0.30 metres, hanging 1.60 metres above the floor, marked with the letters “Dc”."
+		},
+		"puerta_alta_abierta": {
+			"nombre": "High cupboard door left open",
+			"descripcion": "The door of a wall cupboard someone has left open: its edge is at face height and the cane passes underneath.",
+			"etiquetas": ["open cupboard door", "wall cabinet door"],
+			"acciones": {
+				"cerrar": "Close",
+				"abrir": "Open"
+			},
+			"imagen": "Footprint of “High cupboard door left open”: a rectangle, 0.04 by 0.45 metres, hanging 1.40 metres above the floor, marked with the letters “Pa”."
+		},
+		"ventana_abierta_paso": {
+			"nombre": "Window leaf open into the path",
+			"descripcion": "A casement window open into the corridor or out over the pavement. Its glass and aluminium edge is at chest and face height; there is nothing below it.",
+			"etiquetas": ["open window", "casement window", "window leaf"],
+			"acciones": {
+				"cerrar": "Close",
+				"abrir": "Open"
+			},
+			"imagen": "Footprint of “Window leaf open into the path”: a rectangle, 0.05 by 0.60 metres, hanging 1.00 metres above the floor, marked with the letters “Va”."
+		}
+	}
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Plano FICTICIO de prueba de EntornoLab. Una unidad son 10 centimetros. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 100 60">
+	<script>alert("esto no se ejecuta nunca")</script>
+	<defs><rect id="molde" x="0" y="0" width="500" height="500"/></defs>
+	<g inkscape:groupmode="layer" inkscape:label="salas">
+		<rect x="0" y="0" width="40" height="30"/>
+		<polygon points="40,0 80,0 80,30 40,30"/>
+		<path d="M 0 30 h 80 v 20 h -80 z"/>
+	</g>
+	<g id="muros" transform="translate(10,0)">
+		<line x1="80" y1="0" x2="80" y2="50"/>
+		<polyline points="70,50 80,50"/>
+	</g>
+	<g id="rotulos">
+		<text x="10" y="15" font-size="4">Cocina</text>
+		<text x="50" y="15" font-size="4"><tspan x="50" y="15">Salón</tspan></text>
+		<text x="20" y="40" font-size="4">Pasillo</text>
+	</g>
+	<image xlink:href="http://example.invalid/no-se-descarga.png" x="0" y="0" width="10" height="10"/>
+	<use xlink:href="#molde"/>
+</svg>

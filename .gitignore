@@ -1,0 +1,43 @@
+# Entorno virtual y artefactos de Python.
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Compilación y empaquetado.
+build/
+dist/
+
+# OJO: __pip__/ SÍ se versiona. Contiene la rueda propia de basskit (el motor de sonido BASS con
+# bass.dll), que requirements.txt instala desde ahí. No añadir aquí «*.whl» ni «__pip__/».
+
+# Material de consulta: se versionan los textos (adjuntos/*.txt y adjuntos/Informe_EntornoLab.md),
+# no los repositorios de referencia ni las fuentes de sonido descargadas (pesan y tienen sus licencias).
+adjuntos/RepositoriosOrientacion/
+adjuntos/fuentes_sonido/
+
+# Datos generados en data/ al usar la aplicación: personales, nunca se versionan.
+# Se nombran una a una (y NO «data/*») para que lo que sí se versiona no haya
+# que rescatarlo con excepciones: data/bin, data/sounds, data/locales,
+# data/docs, data/icons, data/plugins y data/ejemplos.
+data/config/
+data/logs/
+data/db/
+data/sessions/
+data/entornos/
+data/cache/
+data/temp/
+data/backups/
+data/downloads/
+data/diagnostico/
+
+# Catálogos de traducción compilados: se generan con entorno.bat idiomas.
+data/locales/**/*.mo
+
+# Claves de firma de las versiones: nunca se versionan.
+tools/claves/

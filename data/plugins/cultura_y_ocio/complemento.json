@@ -1,0 +1,6577 @@
+{
+	"formato": 1,
+	"id": "cultura_y_ocio",
+	"nombre": "Cultura y ocio",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Museo y sala de exposiciones, cine, teatro y auditorio, biblioteca, sala de conciertos y discoteca, bolera y recreativos, y centro cívico.",
+	"depende_de": ["hogar", "colegio", "oficina_y_comercio", "calle", "transporte", "juego"],
+	"categorias": {
+		"museo": "Museo y exposiciones",
+		"cine": "Cine",
+		"teatro": "Teatro y auditorio",
+		"biblioteca": "Biblioteca",
+		"conciertos": "Sala de conciertos y discoteca",
+		"recreativos": "Bolera y recreativos",
+		"civico": "Centro cívico"
+	},
+	"subcategorias": {
+		"vitrinas": "Vitrinas y peanas",
+		"obras": "Obras y montajes",
+		"barreras_sala": "Barreras y distancias",
+		"paneles_info": "Paneles e información",
+		"guias_tactiles": "Guías y estaciones táctiles",
+		"servicios_museo": "Entrada, descanso y tienda",
+		"venta_cine": "Vestíbulo y venta",
+		"butacas_cine": "Butacas y pasillos",
+		"proyeccion": "Pantalla, proyección y sonido",
+		"sala_teatro": "Sala y palcos",
+		"caja_escenica": "Escenario y telones",
+		"orquesta": "Orquesta e instrumentos",
+		"sonido_luces": "Sonido, luces y cables",
+		"camerinos": "Camerinos y guardarropa",
+		"estantes_biblio": "Estanterías y archivo",
+		"puestos_biblio": "Puestos de lectura y estudio",
+		"prestamo": "Préstamo y devolución",
+		"prensa_biblio": "Prensa y novedades",
+		"infantil_biblio": "Zona infantil y de descanso",
+		"cabina_pista": "Cabina y pista",
+		"equipo_sala": "Altavoces y luces",
+		"bolera": "Bolera",
+		"maquinas_juego": "Máquinas recreativas",
+		"juegos_mesa": "Mesas de juego",
+		"polivalente": "Sala polivalente",
+		"talleres": "Talleres",
+		"participacion": "Participación y anuncios"
+	},
+	"estados": {
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"apagado": "Apagado",
+		"encendido": "Encendido",
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"funcionando": "Funcionando",
+		"desplegado": "Desplegado",
+		"plegado": "Plegado"
+	},
+	"objetos": [
+		{
+			"id": "vitrina_mesa",
+			"nombre": "Vitrina de mesa",
+			"categoria": "museo",
+			"subcategoria": "vitrinas",
+			"etiquetas": ["vitrina horizontal", "vitrina pupitre", "mesa vitrina"],
+			"descripcion": "Mesa con una tapa de cristal a la altura de la cintura. La mano se apoya en el cristal frío; debajo quedan las patas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.5, 0.6, 0.9],
+				"alto": [0.85, 0.95, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "Pequeña",
+					"ancho": 0.8,
+					"fondo": 0.5,
+					"alto": 0.95
+				},
+				{
+					"id": "mediana",
+					"nombre": "Mediana",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 0.95
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 1.8,
+					"fondo": 0.8,
+					"alto": 0.95
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "medio",
+			"riesgos": ["transparente"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["banco_museo", "atril_informativo"],
+			"simbolo": {
+				"letra": "Vm",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/vitrina_mesa.png",
+				"descripcion": "Huella en planta de «Vitrina de mesa»: un rectángulo de 1,20 por 0,60 metros, con la letra «Vm»."
+			}
+		},
+		{
+			"id": "vitrina_vertical",
+			"nombre": "Vitrina vertical de cristal",
+			"categoria": "museo",
+			"subcategoria": "vitrinas",
+			"etiquetas": ["vitrina de columna", "vitrina exenta", "urna alta de cristal"],
+			"descripcion": "Columna de cristal por los cuatro lados, más alta que una persona. Lisa y fría; se rodea entera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 1.5],
+				"fondo": [0.4, 0.6, 1.0],
+				"alto": [1.8, 2.0, 2.3]
+			},
+			"variantes": [
+				{
+					"id": "columna",
+					"nombre": "De columna",
+					"ancho": 0.5,
+					"fondo": 0.5,
+					"alto": 2.0
+				},
+				{
+					"id": "exenta",
+					"nombre": "Exenta ancha",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Vv",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/vitrina_vertical.png",
+				"descripcion": "Huella en planta de «Vitrina vertical de cristal»: un rectángulo de 0,60 por 0,60 metros, con la letra «Vv»."
+			}
+		},
+		{
+			"id": "vitrina_mural_volada",
+			"nombre": "Vitrina mural en voladizo",
+			"categoria": "museo",
+			"subcategoria": "vitrinas",
+			"etiquetas": ["vitrina de pared", "vitrina colgada", "vitrina volada"],
+			"descripcion": "Caja de cristal colgada de la pared a la altura del pecho. El bastón pasa por debajo: la encuentran antes el hombro o la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.2, 2.0],
+				"fondo": [0.2, 0.3, 0.45],
+				"alto": [0.5, 0.8, 1.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "voladizo",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Vm",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/vitrina_mural_volada.png",
+				"descripcion": "Huella en planta de «Vitrina mural en voladizo»: un rectángulo de 1,20 por 0,30 metros, colgado a 0,90 metros del suelo, con la letra «Vm»."
+			}
+		},
+		{
+			"id": "peana_escultura",
+			"nombre": "Peana con escultura",
+			"categoria": "museo",
+			"subcategoria": "vitrinas",
+			"etiquetas": ["peana", "pedestal", "plinto de exposición", "busto"],
+			"descripcion": "Bloque liso hasta la cintura con una escultura encima. Si se empuja la peana, la pieza puede moverse: se rodea sin tocar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.5, 0.9],
+				"fondo": [0.3, 0.5, 0.9],
+				"alto": [1.2, 1.6, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cordon_bajo"],
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/peana_escultura.png",
+				"descripcion": "Huella en planta de «Peana con escultura»: un rectángulo de 0,50 por 0,50 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "peana_urna",
+			"nombre": "Peana con urna de cristal",
+			"categoria": "museo",
+			"subcategoria": "vitrinas",
+			"etiquetas": ["urna", "campana de cristal", "fanal"],
+			"descripcion": "Pie redondo de madera con una campana de cristal encima que protege una pieza pequeña. Abajo suena a madera; arriba, a cristal.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.5, 0.7],
+				"fondo": [0.35, 0.5, 0.7],
+				"alto": [1.3, 1.5, 1.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pu",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/peana_urna.png",
+				"descripcion": "Huella en planta de «Peana con urna de cristal»: un círculo de 0,50 por 0,50 metros, con la letra «Pu»."
+			}
+		},
+		{
+			"id": "tarima_obras",
+			"nombre": "Tarima baja de exposición",
+			"categoria": "museo",
+			"subcategoria": "vitrinas",
+			"etiquetas": ["plataforma de exposición", "tarima de obras", "zócalo expositivo"],
+			"descripcion": "Plataforma de un palmo de alto sobre la que se colocan piezas grandes. El bastón la toca abajo: es un tropiezo si no se espera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.8, 1.5, 3.0],
+				"alto": [0.1, 0.15, 0.3]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "To",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/tarima_obras.png",
+				"descripcion": "Huella en planta de «Tarima baja de exposición»: un rectángulo de 2,00 por 1,50 metros, con la letra «To»."
+			}
+		},
+		{
+			"id": "escultura_exenta",
+			"nombre": "Escultura grande exenta",
+			"categoria": "museo",
+			"subcategoria": "obras",
+			"etiquetas": ["escultura", "escultura de hierro", "obra exenta"],
+			"descripcion": "Escultura de metal de forma irregular, con brazos que salen a distintas alturas. El bastón toca la base, pero un saliente puede quedar a la altura de la cara.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.1], [0.45, 0.0], [0.6, 0.2], [0.95, 0.15], [1.0, 0.5], [0.8, 0.6], [0.85, 0.95], [0.5, 1.0], [0.4, 0.75], [0.1, 0.85], [0.0, 0.45]]
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.8, 1.5, 3.0],
+				"alto": [1.5, 2.5, 4.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["museo", "parque"],
+			"estancias": ["sala_exposicion", "vestibulo", "plaza"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ee",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/escultura_exenta.png",
+				"descripcion": "Huella en planta de «Escultura grande exenta»: una silueta irregular con salientes de 2,00 por 1,50 metros, con la letra «Ee»."
+			}
+		},
+		{
+			"id": "esqueleto_montado",
+			"nombre": "Esqueleto montado sobre tarima",
+			"categoria": "museo",
+			"subcategoria": "obras",
+			"etiquetas": ["esqueleto", "fósil", "dinosaurio", "esqueleto de ballena"],
+			"descripcion": "Esqueleto de un animal grande sobre una tarima baja. La cola y el cuello sobresalen de la tarima a la altura de la cabeza: el bastón toca la tarima, no los huesos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.45], [0.18, 0.3], [0.3, 0.1], [0.55, 0.0], [0.7, 0.15], [0.85, 0.35], [1.0, 0.4], [1.0, 0.55], [0.82, 0.62], [0.7, 0.9], [0.5, 1.0], [0.3, 0.85], [0.15, 0.65], [0.0, 0.6]]
+			},
+			"medidas": {
+				"ancho": [2.5, 4.0, 6.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [2.0, 3.0, 5.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "cabeza",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Em",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/esqueleto_montado.png",
+				"descripcion": "Huella en planta de «Esqueleto montado sobre tarima»: una silueta alargada: cola fina a un lado, cuerpo ancho en el centro y cuello al otro de 4,00 por 1,50 metros, con la letra «Em»."
+			}
+		},
+		{
+			"id": "movil_colgante",
+			"nombre": "Móvil colgante",
+			"categoria": "museo",
+			"subcategoria": "obras",
+			"etiquetas": ["móvil", "escultura colgante", "obra suspendida"],
+			"descripcion": "Piezas ligeras que cuelgan del techo y giran despacio con el aire, a la altura de la cabeza. El bastón no lo encuentra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 2.0, 4.0],
+				"fondo": [0.8, 2.0, 4.0],
+				"alto": [0.4, 0.8, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.7,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/movil_colgante.png",
+				"descripcion": "Huella en planta de «Móvil colgante»: un círculo de 2,00 por 2,00 metros, colgado a 1,70 metros del suelo, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "instalacion_suelo",
+			"nombre": "Instalación de suelo",
+			"categoria": "museo",
+			"subcategoria": "obras",
+			"etiquetas": ["instalación", "obra en el suelo", "arte en el suelo"],
+			"descripcion": "Obra de arte extendida por el suelo: piedras, arena u objetos pequeños. No tiene barrera y no se debe pisar: se rodea.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.25], [0.35, 0.05], [0.6, 0.0], [0.9, 0.2], [1.0, 0.55], [0.85, 0.9], [0.55, 1.0], [0.25, 0.9], [0.0, 0.6]]
+			},
+			"medidas": {
+				"ancho": [1.0, 2.5, 5.0],
+				"fondo": [1.0, 2.0, 4.0],
+				"alto": [0.02, 0.08, 0.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "grava",
+			"aviso": "Obra de arte en el suelo: no la pises, rodéala.",
+			"funcion": "decoracion",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Is",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/instalacion_suelo.png",
+				"descripcion": "Huella en planta de «Instalación de suelo»: una mancha redondeada e irregular de 2,50 por 2,00 metros, con la letra «Is»."
+			}
+		},
+		{
+			"id": "maqueta_mesa",
+			"nombre": "Maqueta sobre mesa",
+			"categoria": "museo",
+			"subcategoria": "obras",
+			"etiquetas": ["maqueta", "maqueta de edificio", "diorama"],
+			"descripcion": "Mesa grande con una maqueta protegida por una tapa de plástico transparente. Se rodea por los cuatro lados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 3.0],
+				"fondo": [0.8, 1.2, 2.0],
+				"alto": [0.9, 1.1, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "medio",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mm",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/maqueta_mesa.png",
+				"descripcion": "Huella en planta de «Maqueta sobre mesa»: un rectángulo de 1,50 por 1,20 metros, con la letra «Mm»."
+			}
+		},
+		{
+			"id": "cuadro_barrera",
+			"nombre": "Cuadro grande con barrera baja",
+			"categoria": "museo",
+			"subcategoria": "barreras_sala",
+			"etiquetas": ["barrera de distancia", "barra de protección", "quitamiedos de cuadro"],
+			"descripcion": "Cuadro grande en la pared con una barra baja delante, a la altura de la espinilla, que marca la distancia. El bastón la toca; la mano no.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.03, 0.0], [0.03, 0.92], [0.97, 0.92], [0.97, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 5.0],
+				"fondo": [0.6, 0.8, 1.2],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "bajo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuadro_barrera.png",
+				"descripcion": "Huella en planta de «Cuadro grande con barrera baja»: una barra baja delante y dos costados finos hasta la pared de 2,50 por 0,80 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "cordon_bajo",
+			"nombre": "Cordón separador bajo",
+			"categoria": "museo",
+			"subcategoria": "barreras_sala",
+			"etiquetas": ["cordón de sala", "cuerda de distancia", "separador elástico"],
+			"descripcion": "Cordón elástico fino tendido entre postecillos a la altura de la espinilla. Cede al tocarlo y cuesta detectarlo: el bastón puede pasar por encima.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "bajo",
+			"riesgos": ["transparente"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cordon_bajo.png",
+				"descripcion": "Huella en planta de «Cordón separador bajo»: un rectángulo de 2,00 por 0,10 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "catenaria_terciopelo",
+			"nombre": "Catenaria de terciopelo",
+			"categoria": "museo",
+			"subcategoria": "barreras_sala",
+			"etiquetas": ["cordón de terciopelo", "postes con cordón", "catenaria de cordón"],
+			"descripcion": "Dos postes de metal con base redonda unidos por un cordón grueso de terciopelo que cuelga en curva. Entre poste y poste, el bastón puede pasar por debajo del cordón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.2, 0.0], [0.2, 0.4], [0.8, 0.4], [0.8, 0.0], [1.0, 0.0], [1.0, 1.0], [0.8, 1.0], [0.8, 0.6], [0.2, 0.6], [0.2, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [0.3, 0.32, 0.36],
+				"alto": [0.9, 0.95, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["museo", "cine_teatro"],
+			"estancias": ["sala_exposicion", "vestibulo", "taquilla"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/catenaria_terciopelo.png",
+				"descripcion": "Huella en planta de «Catenaria de terciopelo»: dos postes unidos por un cordón de 1,50 por 0,32 metros, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "cortina_sala_oscura",
+			"nombre": "Cortina de sala oscura",
+			"categoria": "museo",
+			"subcategoria": "barreras_sala",
+			"etiquetas": ["cortina opaca", "cortinón", "cortina de entrada"],
+			"descripcion": "Cortina gruesa y pesada que cierra la entrada de una sala de proyección. Se aparta con la mano para pasar; detrás hay oscuridad y sonido.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.4, 2.4],
+				"fondo": [0.1, 0.15, 0.3],
+				"alto": [2.0, 2.3, 3.0]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["museo", "cine_teatro"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cortina_sala_oscura.png",
+				"descripcion": "Huella en planta de «Cortina de sala oscura»: un rectángulo de 1,40 por 0,15 metros, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "panel_expositor",
+			"nombre": "Panel expositor autoportante",
+			"categoria": "museo",
+			"subcategoria": "paneles_info",
+			"etiquetas": ["panel de exposición", "panel autoportante", "bastidor expositor"],
+			"descripcion": "Tablero alto y fino que se sostiene sobre dos pies atravesados. Los pies sobresalen a cada lado: el bastón los toca antes que el panel.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.05, 0.0], [0.05, 0.43], [0.95, 0.43], [0.95, 0.0], [1.0, 0.0], [1.0, 1.0], [0.95, 1.0], [0.95, 0.57], [0.05, 0.57], [0.05, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 2.4],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [1.8, 2.0, 2.4]
+			},
+			"variantes": [
+				{
+					"id": "de_100",
+					"nombre": "De 1 m",
+					"ancho": 1.0,
+					"fondo": 0.4,
+					"alto": 2.0
+				},
+				{
+					"id": "de_120",
+					"nombre": "De 1,20 m",
+					"ancho": 1.2,
+					"fondo": 0.4,
+					"alto": 2.0
+				},
+				{
+					"id": "de_240",
+					"nombre": "De 2,40 m",
+					"ancho": 2.4,
+					"fondo": 0.5,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["museo", "ocio", "biblioteca"],
+			"estancias": ["sala_exposicion", "vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_expositor.png",
+				"descripcion": "Huella en planta de «Panel expositor autoportante»: un panel fino con un pie atravesado en cada extremo de 1,20 por 0,40 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "panel_zigzag",
+			"nombre": "Panel en zigzag",
+			"categoria": "museo",
+			"subcategoria": "paneles_info",
+			"etiquetas": ["biombo expositor", "paneles en acordeón", "panel plegable"],
+			"descripcion": "Varios paneles altos unidos en zigzag, como un biombo. Al seguirlo con la mano la superficie entra y sale formando picos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.25, 0.85], [0.5, 0.0], [0.75, 0.85], [1.0, 0.0], [1.0, 0.15], [0.75, 1.0], [0.5, 0.15], [0.25, 1.0], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 5.0],
+				"fondo": [0.5, 0.8, 1.2],
+				"alto": [1.8, 2.0, 2.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["museo", "ocio", "biblioteca"],
+			"estancias": ["sala_exposicion", "vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pz",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_zigzag.png",
+				"descripcion": "Huella en planta de «Panel en zigzag»: una banda en zigzag, como un biombo de 3,00 por 0,80 metros, con la letra «Pz»."
+			}
+		},
+		{
+			"id": "atril_informativo",
+			"nombre": "Atril informativo inclinado",
+			"categoria": "museo",
+			"subcategoria": "paneles_info",
+			"etiquetas": ["cartela de pie", "atril de sala", "panel inclinado"],
+			"descripcion": "Placa inclinada sobre un pie, a la altura de la cintura, con el texto de la sala; a veces en braille. La placa vuela por delante del pie.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 1.0],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [0.8, 0.9, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ai",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/atril_informativo.png",
+				"descripcion": "Huella en planta de «Atril informativo inclinado»: un rectángulo de 0,60 por 0,40 metros, con la letra «Ai»."
+			}
+		},
+		{
+			"id": "totem_interactivo_museo",
+			"nombre": "Tótem interactivo de museo",
+			"categoria": "museo",
+			"subcategoria": "paneles_info",
+			"etiquetas": ["pantalla táctil", "quiosco interactivo", "punto interactivo"],
+			"descripcion": "Columna plana con una pantalla táctil a la altura del pecho. Al tocarla responde con un pitido.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.9],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.6, 1.8, 2.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ti",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/totem_interactivo_museo.png",
+				"descripcion": "Huella en planta de «Tótem interactivo de museo»: un rectángulo de 0,60 por 0,40 metros, con la letra «Ti»."
+			}
+		},
+		{
+			"id": "proyector_tripode",
+			"nombre": "Proyector en trípode",
+			"categoria": "museo",
+			"subcategoria": "paneles_info",
+			"etiquetas": ["proyector", "cañón de vídeo", "videoproyector"],
+			"descripcion": "Proyector sobre un trípode de tres patas abiertas, con el cable por el suelo. Encendido, sopla un ventilador. Si se engancha una pata, cae.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.5, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [1.0, 1.3, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/proyector_cine.flac",
+					"volumen": 0.3,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["museo", "ocio"],
+			"estancias": ["sala_exposicion", "salon_actos"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/proyector_tripode.png",
+				"descripcion": "Huella en planta de «Proyector en trípode»: un triángulo con la punta hacia delante de 0,80 por 0,80 metros, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "maqueta_tactil",
+			"nombre": "Maqueta táctil",
+			"categoria": "museo",
+			"subcategoria": "guias_tactiles",
+			"etiquetas": ["maqueta para tocar", "maqueta tiflológica", "maqueta en bronce"],
+			"descripcion": "Maqueta de bronce hecha para tocarla: el edificio o la pieza en pequeño, con relieves y braille en el borde. Está a la altura de las manos.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.99, 0.813], [0.959, 0.904], [0.904, 0.959], [0.813, 0.99], [0.5, 1.0], [0.187, 0.99], [0.096, 0.959], [0.041, 0.904], [0.01, 0.813], [0.0, 0.5], [0.01, 0.187], [0.041, 0.096], [0.096, 0.041], [0.187, 0.01], [0.5, 0.0], [0.813, 0.01], [0.904, 0.041], [0.959, 0.096], [0.99, 0.187]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.8],
+				"fondo": [0.6, 0.8, 1.2],
+				"alto": [0.75, 0.8, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar"
+				},
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion", "vestibulo", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/maqueta_tactil.png",
+				"descripcion": "Huella en planta de «Maqueta táctil»: un rectángulo de esquinas redondeadas de 1,20 por 0,80 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "estacion_tactil_audio",
+			"nombre": "Estación táctil con audio",
+			"categoria": "museo",
+			"subcategoria": "guias_tactiles",
+			"etiquetas": ["estación táctil", "reproducción en relieve", "punto de audiodescripción"],
+			"descripcion": "Atril con una reproducción en relieve para tocar y un botón grande: al pulsarlo, una voz describe la obra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.85, 0.95, 1.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/audioguia_locucion.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar"
+				},
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "sonidos/audioguia_locucion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Et",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/estacion_tactil_audio.png",
+				"descripcion": "Huella en planta de «Estación táctil con audio»: un trapecio, más estrecho por detrás de 0,80 por 0,50 metros, con la letra «Et»."
+			}
+		},
+		{
+			"id": "punto_audioguias",
+			"nombre": "Punto de recogida de audioguías",
+			"categoria": "museo",
+			"subcategoria": "guias_tactiles",
+			"etiquetas": ["audioguías", "audioguía", "mostrador de audioguías"],
+			"descripcion": "Mueble con casilleros donde se cargan las audioguías. Se coge una, se cuelga del cuello y habla al marcar un número.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.4, 0.5, 0.7],
+				"alto": [1.0, 1.2, 1.5]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "sonidos/audioguia_locucion.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["museo"],
+			"estancias": ["vestibulo", "recepcion"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/punto_audioguias.png",
+				"descripcion": "Huella en planta de «Punto de recogida de audioguías»: un rectángulo de 1,20 por 0,50 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "cargador_signoguias",
+			"nombre": "Cargador mural de signoguías",
+			"categoria": "museo",
+			"subcategoria": "guias_tactiles",
+			"etiquetas": ["signoguías", "signoguía", "guías en lengua de signos"],
+			"descripcion": "Bandeja colgada de la pared a un metro del suelo con las signoguías, unas pantallas pequeñas con vídeos en lengua de signos. El bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 1.0],
+				"fondo": [0.12, 0.15, 0.2],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["museo"],
+			"estancias": ["vestibulo", "recepcion"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/cargador_signoguias.png",
+				"descripcion": "Huella en planta de «Cargador mural de signoguías»: un rectángulo de 0,60 por 0,15 metros, colgado a 1,00 metros del suelo, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "banco_museo",
+			"nombre": "Banco de sala de museo",
+			"categoria": "museo",
+			"subcategoria": "servicios_museo",
+			"etiquetas": ["banco sin respaldo", "banco de galería", "banqueta de museo"],
+			"descripcion": "Banco ancho y acolchado, sin respaldo ni brazos, en el centro de la sala. Uno se sienta por cualquiera de los lados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.994, 0.873], [0.974, 0.938], [0.938, 0.974], [0.873, 0.994], [0.5, 1.0], [0.127, 0.994], [0.062, 0.974], [0.026, 0.938], [0.006, 0.873], [0.0, 0.5], [0.006, 0.127], [0.026, 0.062], [0.062, 0.026], [0.127, 0.006], [0.5, 0.0], [0.873, 0.006], [0.938, 0.026], [0.974, 0.062], [0.994, 0.127]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 2.4],
+				"fondo": [0.45, 0.55, 0.9],
+				"alto": [0.42, 0.45, 0.48]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 1.2,
+					"fondo": 0.5,
+					"alto": 0.45
+				},
+				{
+					"id": "tres_plazas",
+					"nombre": "De tres plazas",
+					"ancho": 1.8,
+					"fondo": 0.55,
+					"alto": 0.45
+				},
+				{
+					"id": "doble",
+					"nombre": "Doble, de dos caras",
+					"ancho": 1.8,
+					"fondo": 0.9,
+					"alto": 0.45
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "bajo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["vitrina_mesa", "cuadro_barrera"],
+			"simbolo": {
+				"letra": "Bm",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_museo.png",
+				"descripcion": "Huella en planta de «Banco de sala de museo»: un rectángulo de esquinas redondeadas de 1,80 por 0,55 metros, con la letra «Bm»."
+			}
+		},
+		{
+			"id": "banco_circular_museo",
+			"nombre": "Banco circular con respaldo central",
+			"categoria": "museo",
+			"subcategoria": "servicios_museo",
+			"etiquetas": ["borne", "confidente redondo", "asiento circular"],
+			"descripcion": "Asiento redondo y tapizado con un respaldo en forma de cono en el centro. Uno se sienta mirando hacia fuera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.2],
+				"fondo": [1.2, 1.6, 2.2],
+				"alto": [0.8, 0.9, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["museo"],
+			"estancias": ["sala_exposicion"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_circular_museo.png",
+				"descripcion": "Huella en planta de «Banco circular con respaldo central»: un círculo de 1,60 por 1,60 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "carro_asientos_plegables",
+			"nombre": "Carro de asientos plegables",
+			"categoria": "museo",
+			"subcategoria": "servicios_museo",
+			"etiquetas": ["asientos portátiles", "banquetas plegables", "carro de banquetas"],
+			"descripcion": "Carro con ruedas del que cuelgan asientos plegables ligeros para los visitantes. Se coge uno y se lleva por las salas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.8, 1.0, 1.3],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["museo"],
+			"estancias": ["vestibulo", "sala_exposicion"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_asientos_plegables.png",
+				"descripcion": "Huella en planta de «Carro de asientos plegables»: un rectángulo de 0,60 por 1,00 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "mostrador_entradas_museo",
+			"nombre": "Mostrador de entradas del museo",
+			"categoria": "museo",
+			"subcategoria": "servicios_museo",
+			"etiquetas": ["venta de entradas", "mostrador de acogida", "información del museo"],
+			"descripcion": "Mostrador largo de la entrada, alto para atender de pie y con un tramo más bajo, a 80 centímetros, en un extremo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.6, 2.4, 4.0],
+				"fondo": [0.7, 0.8, 1.0],
+				"alto": [1.0, 1.1, 1.15]
+			},
+			"variantes": [
+				{
+					"id": "corto",
+					"nombre": "Corto",
+					"ancho": 1.6,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 2.4,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "largo",
+					"nombre": "Largo",
+					"ancho": 3.6,
+					"fondo": 0.9,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["museo"],
+			"estancias": ["taquilla", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["punto_audioguias", "consigna_museo"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_entradas_museo.png",
+				"descripcion": "Huella en planta de «Mostrador de entradas del museo»: un rectángulo de 2,40 por 0,80 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "consigna_museo",
+			"nombre": "Consigna de bolsos del museo",
+			"categoria": "museo",
+			"subcategoria": "servicios_museo",
+			"etiquetas": ["consigna de museo", "casilleros de visitantes", "taquillas de consigna"],
+			"descripcion": "Bloque de casilleros pequeños de chapa para dejar el bolso, la mochila y el paraguas antes de entrar. Cada puerta cierra con llave.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 2.4],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [1.5, 1.8, 2.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "transporte:taquilla.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "transporte:taquilla.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["museo"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/consigna_museo.png",
+				"descripcion": "Huella en planta de «Consigna de bolsos del museo»: un rectángulo de 1,20 por 0,45 metros, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "arco_detector_museo",
+			"nombre": "Arco detector de la entrada",
+			"categoria": "museo",
+			"subcategoria": "servicios_museo",
+			"etiquetas": ["detector de metales", "arco de seguridad", "control de entrada"],
+			"descripcion": "Marco de plástico por el que se pasa de uno en uno, entre dos columnas. Si llevas metal, pita. Se cruza despacio y por el centro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [2.0, 2.2, 2.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "pasar",
+					"nombre": "Pasar",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"aviso": "Arco detector: pasa despacio por el centro.",
+			"funcion": "seguridad",
+			"lugares": ["museo"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ad",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/arco_detector_museo.png",
+				"descripcion": "Huella en planta de «Arco detector de la entrada»: un rectángulo de 0,90 por 0,60 metros, con la letra «Ad»."
+			}
+		},
+		{
+			"id": "mesa_tienda_museo",
+			"nombre": "Mesa isla de la tienda del museo",
+			"categoria": "museo",
+			"subcategoria": "servicios_museo",
+			"etiquetas": ["isla de tienda", "mesa de recuerdos", "tienda del museo"],
+			"descripcion": "Mesa ancha en medio de la tienda, cubierta de libros, láminas y recuerdos apilados. Los montones pueden caerse si se roza el borde.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.08, 0.0], [0.92, 0.0], [1.0, 0.08], [1.0, 0.92], [0.92, 1.0], [0.08, 1.0], [0.0, 0.92], [0.0, 0.08]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 2.0],
+				"fondo": [0.8, 1.0, 1.4],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["museo"],
+			"estancias": ["sala_ventas"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_tienda_museo.png",
+				"descripcion": "Huella en planta de «Mesa isla de la tienda del museo»: un rectángulo con las esquinas cortadas de 1,40 por 1,00 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "taquilla_cine",
+			"nombre": "Taquilla de cine",
+			"categoria": "cine",
+			"subcategoria": "venta_cine",
+			"etiquetas": ["taquilla de cine", "ventanilla de entradas", "cabina de venta"],
+			"descripcion": "Cabina cerrada con una ventanilla de cristal y un hueco para pasar el dinero y las entradas. Se habla a través de un micrófono.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.12], [1.0, 0.88], [0.88, 1.0], [0.12, 1.0], [0.0, 0.88], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 3.0],
+				"fondo": [0.8, 1.2, 2.0],
+				"alto": [2.2, 2.4, 2.8]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["cine_teatro"],
+			"estancias": ["taquilla", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Tc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/taquilla_cine.png",
+				"descripcion": "Huella en planta de «Taquilla de cine»: un rectángulo con las esquinas cortadas de 1,80 por 1,20 metros, con la letra «Tc»."
+			}
+		},
+		{
+			"id": "mostrador_palomitas",
+			"nombre": "Mostrador de palomitas",
+			"categoria": "cine",
+			"subcategoria": "venta_cine",
+			"etiquetas": ["palomitas", "palomitera", "bar del cine", "ambigú"],
+			"descripcion": "Mostrador con la máquina de palomitas encima: se oye estallar el maíz y huele desde lejos. El cristal de la máquina quema.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 5.0],
+				"fondo": [0.7, 0.8, 1.0],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/palomitera.flac",
+					"volumen": 0.45,
+					"radio": 12
+				}
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mostrador",
+			"lugares": ["cine_teatro"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["taquilla_cine"],
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_palomitas.png",
+				"descripcion": "Huella en planta de «Mostrador de palomitas»: un rectángulo de 3,00 por 0,80 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "cartelera_luminosa",
+			"nombre": "Cartelera luminosa de pared",
+			"categoria": "cine",
+			"subcategoria": "venta_cine",
+			"etiquetas": ["cartelera", "cartel de película", "caja de luz"],
+			"descripcion": "Caja plana con el cartel de la película, colgada de la pared de la cintura para arriba. Sobresale un palmo y el bastón no la avisa.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.08, 0.12, 0.2],
+				"alto": [1.2, 1.5, 1.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.7,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["cine_teatro"],
+			"estancias": ["vestibulo", "pasillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/cartelera_luminosa.png",
+				"descripcion": "Huella en planta de «Cartelera luminosa de pared»: un rectángulo de 1,00 por 0,12 metros, colgado a 0,70 metros del suelo, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "figura_carton_estreno",
+			"nombre": "Figura de cartón de estreno",
+			"categoria": "cine",
+			"subcategoria": "venta_cine",
+			"etiquetas": ["display de cartón", "figura troquelada", "expositor de película"],
+			"descripcion": "Figura grande de cartón que anuncia una película, de pie en medio del vestíbulo. Ligera: se vuelca al chocar y cambia de sitio cada semana.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.35], [0.85, 0.4], [0.9, 1.0], [0.1, 1.0], [0.15, 0.4], [0.0, 0.35]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.5, 3.0],
+				"fondo": [0.3, 0.5, 1.0],
+				"alto": [1.5, 1.9, 2.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "carton",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["cine_teatro"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Fc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/figura_carton_estreno.png",
+				"descripcion": "Huella en planta de «Figura de cartón de estreno»: una lámina detrás con un pie más estrecho hacia delante de 1,50 por 0,50 metros, con la letra «Fc»."
+			}
+		},
+		{
+			"id": "atril_control_entradas",
+			"nombre": "Atril de control de entradas",
+			"categoria": "cine",
+			"subcategoria": "venta_cine",
+			"etiquetas": ["control de entradas", "corte de entradas", "lector de entradas"],
+			"descripcion": "Poste con un lector donde el acomodador comprueba la entrada antes de pasar a las salas. Pita al leerla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "validar",
+					"nombre": "Validar el billete",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["cine_teatro", "museo"],
+			"estancias": ["vestibulo", "pasillo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ac",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/atril_control_entradas.png",
+				"descripcion": "Huella en planta de «Atril de control de entradas»: un rectángulo de 0,50 por 0,40 metros, con la letra «Ac»."
+			}
+		},
+		{
+			"id": "contenedor_gafas_3d",
+			"nombre": "Contenedor de gafas 3D",
+			"categoria": "cine",
+			"subcategoria": "venta_cine",
+			"etiquetas": ["gafas 3D", "devolución de gafas", "cubo de gafas"],
+			"descripcion": "Cubo alto de plástico a la salida de la sala, con una boca ancha arriba para devolver las gafas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "hogar:juguetes.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["cine_teatro"],
+			"estancias": ["pasillo", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cg",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_gafas_3d.png",
+				"descripcion": "Huella en planta de «Contenedor de gafas 3D»: un rectángulo de 0,50 por 0,50 metros, con la letra «Cg»."
+			}
+		},
+		{
+			"id": "fila_butacas_cine",
+			"nombre": "Fila de butacas de cine",
+			"categoria": "cine",
+			"subcategoria": "butacas_cine",
+			"etiquetas": ["butacas de cine", "fila de butacas", "fila de asientos de cine"],
+			"descripcion": "Butacas mullidas unidas en fila, con brazos y portavasos, todas mirando a la pantalla. Se entra de lado por el pasillo entre filas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.1, 3.4, 5.9],
+				"fondo": [0.7, 0.75, 0.9],
+				"alto": [0.95, 1.05, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De 2 plazas",
+					"ancho": 1.2,
+					"fondo": 0.75,
+					"alto": 1.05
+				},
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De 4 plazas",
+					"ancho": 2.3,
+					"fondo": 0.75,
+					"alto": 1.05
+				},
+				{
+					"id": "seis_plazas",
+					"nombre": "De 6 plazas",
+					"ancho": 3.4,
+					"fondo": 0.75,
+					"alto": 1.05
+				},
+				{
+					"id": "ocho_plazas",
+					"nombre": "De 8 plazas",
+					"ancho": 4.5,
+					"fondo": 0.75,
+					"alto": 1.05
+				},
+				{
+					"id": "diez_plazas",
+					"nombre": "De 10 plazas",
+					"ancho": 5.6,
+					"fondo": 0.75,
+					"alto": 1.05
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["escalon_iluminado", "pantalla_cine", "espacio_silla_ruedas"],
+			"simbolo": {
+				"letra": "Fb",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/fila_butacas_cine.png",
+				"descripcion": "Huella en planta de «Fila de butacas de cine»: un rectángulo de 3,40 por 0,75 metros, con la letra «Fb»."
+			}
+		},
+		{
+			"id": "butaca_cine_suelta",
+			"nombre": "Butaca de cine suelta",
+			"categoria": "cine",
+			"subcategoria": "butacas_cine",
+			"etiquetas": ["butaca de cine", "asiento de cine", "butaca reclinable"],
+			"descripcion": "Una sola butaca de cine, ancha y mullida, con brazos. El asiento está levantado y baja al sentarse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.95],
+				"fondo": [0.7, 0.75, 0.95],
+				"alto": [0.95, 1.05, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 0.6,
+					"fondo": 0.75,
+					"alto": 1.05
+				},
+				{
+					"id": "reclinable",
+					"nombre": "Reclinable ancha",
+					"ancho": 0.9,
+					"fondo": 0.95,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/butaca_cine_suelta.png",
+				"descripcion": "Huella en planta de «Butaca de cine suelta»: un rectángulo de 0,60 por 0,75 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "espacio_silla_ruedas",
+			"nombre": "Espacio reservado para silla de ruedas",
+			"categoria": "cine",
+			"subcategoria": "butacas_cine",
+			"etiquetas": ["plaza de silla de ruedas", "espacio reservado", "plaza adaptada"],
+			"descripcion": "Hueco llano entre las butacas, marcado en el suelo, para colocar una silla de ruedas. No hay asiento: es un vacío en la fila.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [1.2, 1.3, 1.5],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"suelo": "moqueta",
+			"funcion": "referencia",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas", "salon_actos"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Es",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/espacio_silla_ruedas.png",
+				"descripcion": "Huella en planta de «Espacio reservado para silla de ruedas»: un rectángulo de 0,90 por 1,30 metros, con la letra «Es»."
+			}
+		},
+		{
+			"id": "escalon_iluminado",
+			"nombre": "Escalón iluminado de pasillo",
+			"categoria": "cine",
+			"subcategoria": "butacas_cine",
+			"etiquetas": ["escalón de sala", "peldaño iluminado", "peldaño de pasillo"],
+			"descripcion": "Escalón ancho y de poco fondo del pasillo de la sala, con moqueta y un perfil de goma en el canto. Hay uno por cada fila.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 2.0],
+				"fondo": [0.28, 0.3, 0.4],
+				"alto": [0.12, 0.15, 0.18]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "exterior/bordillo"
+			},
+			"contenedor": false,
+			"suelo": "moqueta",
+			"aviso": "Escalón del pasillo de la sala.",
+			"funcion": "estructura",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ei",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalon_iluminado.png",
+				"descripcion": "Huella en planta de «Escalón iluminado de pasillo»: un rectángulo de 1,20 por 0,30 metros, con la letra «Ei»."
+			}
+		},
+		{
+			"id": "alzadores_apilados",
+			"nombre": "Alzadores para niños apilados",
+			"categoria": "cine",
+			"subcategoria": "butacas_cine",
+			"etiquetas": ["alzadores", "elevadores infantiles", "cojines elevadores"],
+			"descripcion": "Pila de cojines duros de plástico junto a la puerta de la sala, para que los niños vean la pantalla. Se coge uno; la pila se tambalea.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.4, 0.45, 0.6],
+				"alto": [0.5, 0.9, 1.3]
+			},
+			"colocacion": ["suelo", "pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["cine_teatro"],
+			"estancias": ["pasillo", "sala_butacas"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/alzadores_apilados.png",
+				"descripcion": "Huella en planta de «Alzadores para niños apilados»: un rectángulo de 0,50 por 0,45 metros, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "pantalla_cine",
+			"nombre": "Pantalla de cine",
+			"categoria": "cine",
+			"subcategoria": "proyeccion",
+			"etiquetas": ["pantalla", "pantalla de proyección", "lienzo de cine"],
+			"descripcion": "Pantalla enorme que ocupa la pared del fondo, levantada un metro del suelo. El sonido de la película sale de detrás de ella: marca hacia dónde miran las butacas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.4, 5.0, 6.0],
+				"fondo": [0.1, 0.3, 0.6],
+				"alto": [1.5, 2.8, 5.0]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "De sala pequeña",
+					"ancho": 4.0,
+					"fondo": 0.3,
+					"alto": 2.2
+				},
+				{
+					"id": "mediana",
+					"nombre": "De sala mediana",
+					"ancho": 5.0,
+					"fondo": 0.3,
+					"alto": 2.8
+				},
+				{
+					"id": "grande",
+					"nombre": "Tramo de 6 m",
+					"ancho": 6.0,
+					"fondo": 0.4,
+					"alto": 3.4
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/television",
+					"volumen": 0.6,
+					"radio": 20
+				}
+			},
+			"contenedor": false,
+			"funcion": "referencia",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["fila_butacas_cine"],
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/pantalla_cine.png",
+				"descripcion": "Huella en planta de «Pantalla de cine»: un rectángulo de 5,00 por 0,30 metros, colgado a 1,00 metros del suelo, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "proyector_cabina",
+			"nombre": "Proyector de cabina de cine",
+			"categoria": "cine",
+			"subcategoria": "proyeccion",
+			"etiquetas": ["proyector de cine", "cabina de proyección", "proyector de película"],
+			"descripcion": "Máquina grande sobre un pedestal en la cabina, apuntando a la sala por un ventanuco. En marcha tabletea y sopla aire caliente.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [1.2, 1.5, 2.0],
+				"alto": [1.5, 1.7, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/proyector_cine.flac",
+					"volumen": 0.4,
+					"radio": 6,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas", "cuarto_instalaciones"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/proyector_cabina.png",
+				"descripcion": "Huella en planta de «Proyector de cabina de cine»: un rectángulo de 0,90 por 1,50 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "altavoz_envolvente",
+			"nombre": "Altavoz envolvente de pared",
+			"categoria": "cine",
+			"subcategoria": "proyeccion",
+			"etiquetas": ["altavoz de pared", "altavoz surround", "caja acústica de sala"],
+			"descripcion": "Caja de altavoz atornillada a la pared lateral, por encima de la cabeza, inclinada hacia las butacas. Sobresale un palmo largo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.2, 0.25, 0.35],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.8,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas", "salon_actos"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ae",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/altavoz_envolvente.png",
+				"descripcion": "Huella en planta de «Altavoz envolvente de pared»: un rectángulo de 0,40 por 0,25 metros, colgado a 1,80 metros del suelo, con la letra «Ae»."
+			}
+		},
+		{
+			"id": "fila_butacas_patio",
+			"nombre": "Fila de butacas de patio",
+			"categoria": "teatro",
+			"subcategoria": "sala_teatro",
+			"etiquetas": ["butacas de teatro", "patio de butacas", "butacas de platea", "fila de auditorio"],
+			"descripcion": "Butacas de teatro de madera y terciopelo unidas en fila, con el asiento abatible: está levantado y hay que bajarlo con la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 5.5],
+				"fondo": [0.5, 0.65, 0.8],
+				"alto": [0.85, 0.95, 1.05]
+			},
+			"variantes": [
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De 4 plazas",
+					"ancho": 2.0,
+					"fondo": 0.65,
+					"alto": 0.95
+				},
+				{
+					"id": "seis_plazas",
+					"nombre": "De 6 plazas",
+					"ancho": 3.0,
+					"fondo": 0.65,
+					"alto": 0.95
+				},
+				{
+					"id": "ocho_plazas",
+					"nombre": "De 8 plazas",
+					"ancho": 4.0,
+					"fondo": 0.65,
+					"alto": 0.95
+				},
+				{
+					"id": "diez_plazas",
+					"nombre": "De 10 plazas",
+					"ancho": 5.0,
+					"fondo": 0.65,
+					"alto": 0.95
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas", "salon_actos"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["borde_escenario"],
+			"simbolo": {
+				"letra": "Fb",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/fila_butacas_patio.png",
+				"descripcion": "Huella en planta de «Fila de butacas de patio»: un rectángulo de 3,00 por 0,65 metros, con la letra «Fb»."
+			}
+		},
+		{
+			"id": "palco_teatro",
+			"nombre": "Palco de teatro",
+			"categoria": "teatro",
+			"subcategoria": "sala_teatro",
+			"etiquetas": ["palco", "platea alta", "antepecho de palco"],
+			"descripcion": "Recinto pequeño con un antepecho acolchado delante, hasta la cintura, y un tabique a cada lado. Se entra por detrás. Al otro lado del antepecho está el vacío.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.06, 0.0], [0.06, 0.88], [0.94, 0.88], [0.94, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [1.5, 2.0, 2.5],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["cine_teatro"],
+			"estancias": ["sala_butacas"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/palco_teatro.png",
+				"descripcion": "Huella en planta de «Palco de teatro»: un antepecho delante y dos tabiques a los lados, abierto por detrás de 2,00 por 2,00 metros, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "mostrador_guardarropa",
+			"nombre": "Mostrador de guardarropa",
+			"categoria": "teatro",
+			"subcategoria": "camerinos",
+			"etiquetas": ["guardarropa de teatro", "guardarropía", "ropero de teatro"],
+			"descripcion": "Mostrador ancho tras el que cuelgan los abrigos en barras. Se entrega la prenda y dan una ficha con un número.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [0.6, 0.7, 0.9],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "colgar_ropa",
+					"nombre": "Colgar el abrigo",
+					"sonido": "juego:llaves.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["cine_teatro", "museo", "ocio"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mg",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_guardarropa.png",
+				"descripcion": "Huella en planta de «Mostrador de guardarropa»: un rectángulo de 2,00 por 0,70 metros, con la letra «Mg»."
+			}
+		},
+		{
+			"id": "borde_escenario",
+			"nombre": "Borde de escenario",
+			"categoria": "teatro",
+			"subcategoria": "caja_escenica",
+			"etiquetas": ["boca del escenario", "corbata", "proscenio", "filo del escenario"],
+			"descripcion": "El filo del escenario: al otro lado hay una caída de un metro hacia la sala o hacia el foso. No hay barandilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 5.0, 12.0],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.005, 0.01, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"suelo": "madera",
+			"aviso": "Borde del escenario: detente, hay una caída.",
+			"funcion": "referencia",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario", "salon_actos"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Be",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/borde_escenario.png",
+				"descripcion": "Huella en planta de «Borde de escenario»: un rectángulo de 5,00 por 0,40 metros, con la letra «Be»."
+			}
+		},
+		{
+			"id": "foso_orquesta",
+			"nombre": "Foso de orquesta",
+			"categoria": "teatro",
+			"subcategoria": "caja_escenica",
+			"etiquetas": ["foso", "foso de músicos", "foso del escenario"],
+			"descripcion": "Hueco hondo entre el escenario y la primera fila, donde tocan los músicos. Recto por el lado del escenario y curvo hacia el público.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.024, 0.309], [0.095, 0.588], [0.206, 0.809], [0.345, 0.951], [0.5, 1.0], [0.655, 0.951], [0.794, 0.809], [0.905, 0.588], [0.976, 0.309], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 5.0, 6.0],
+				"fondo": [1.5, 2.5, 4.0],
+				"alto": [0.05, 0.1, 0.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"aviso": "Foso de orquesta: no hay paso, hay un hueco hondo.",
+			"funcion": "estructura",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Fo",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/foso_orquesta.png",
+				"descripcion": "Huella en planta de «Foso de orquesta»: un semicírculo, recto por detrás y redondo por delante de 5,00 por 2,50 metros, con la letra «Fo»."
+			}
+		},
+		{
+			"id": "telon_boca",
+			"nombre": "Telón de boca",
+			"categoria": "teatro",
+			"subcategoria": "caja_escenica",
+			"etiquetas": ["telón", "cortina de escenario", "telón de teatro"],
+			"descripcion": "Cortina enorme y pesada que cierra el escenario. Cerrada, es una pared blanda de tela; abierta, se recoge a los lados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [3.0, 5.0, 6.0],
+				"fondo": [0.2, 0.3, 0.5],
+				"alto": [3.0, 5.0, 8.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "oficina_y_comercio:cortina.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario", "salon_actos"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Tb",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/telon_boca.png",
+				"descripcion": "Huella en planta de «Telón de boca»: un rectángulo de 5,00 por 0,30 metros, con la letra «Tb»."
+			}
+		},
+		{
+			"id": "pata_bambalinas",
+			"nombre": "Pata lateral de bambalinas",
+			"categoria": "teatro",
+			"subcategoria": "caja_escenica",
+			"etiquetas": ["bambalinas", "pata de escenario", "bastidor lateral", "entre cajas"],
+			"descripcion": "Paño alto y estrecho de tela negra que cuelga a un lado del escenario para tapar los laterales. Entre pata y pata se entra y se sale de escena.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.5, 2.5],
+				"fondo": [0.1, 0.15, 0.3],
+				"alto": [3.0, 5.0, 8.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/pata_bambalinas.png",
+				"descripcion": "Huella en planta de «Pata lateral de bambalinas»: un rectángulo de 1,50 por 0,15 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "concha_apuntador",
+			"nombre": "Concha del apuntador",
+			"categoria": "teatro",
+			"subcategoria": "caja_escenica",
+			"etiquetas": ["concha", "apuntador", "caja del apuntador"],
+			"descripcion": "Capota baja de madera en el centro del borde del escenario, abierta hacia los actores. Queda a la altura de la espinilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.038, 0.383], [0.146, 0.707], [0.309, 0.924], [0.5, 1.0], [0.691, 0.924], [0.854, 0.707], [0.962, 0.383], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.2],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "bajo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/concha_apuntador.png",
+				"descripcion": "Huella en planta de «Concha del apuntador»: un semicírculo, recto por detrás y redondo por delante de 1,00 por 0,60 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "escalera_escenario",
+			"nombre": "Escalera de acceso al escenario",
+			"categoria": "teatro",
+			"subcategoria": "caja_escenica",
+			"etiquetas": ["escalerilla de escenario", "peldaños del escenario", "subida al escenario"],
+			"descripcion": "Escalerilla de cuatro o cinco peldaños de madera, arrimada al frente del escenario. No siempre tiene pasamanos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 2.0],
+				"fondo": [0.6, 1.0, 1.5],
+				"alto": [0.5, 0.9, 1.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario", "salon_actos"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ee",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_escenario.png",
+				"descripcion": "Huella en planta de «Escalera de acceso al escenario»: un rectángulo de 1,20 por 1,00 metros, con la letra «Ee»."
+			}
+		},
+		{
+			"id": "barra_tiros",
+			"nombre": "Barra de tiros y contrapesos",
+			"categoria": "teatro",
+			"subcategoria": "caja_escenica",
+			"etiquetas": ["tiros", "contrapesos", "cuerdas del telar", "maniobra"],
+			"descripcion": "Fila de cuerdas gruesas que suben hasta el techo junto a la pared lateral, sujetas a una barandilla de hierro. Con ellas se suben y bajan los decorados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 6.0],
+				"fondo": [0.4, 0.5, 0.8],
+				"alto": [3.0, 5.0, 8.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bt",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/barra_tiros.png",
+				"descripcion": "Huella en planta de «Barra de tiros y contrapesos»: un rectángulo de 3,00 por 0,50 metros, con la letra «Bt»."
+			}
+		},
+		{
+			"id": "baul_gira",
+			"nombre": "Baúl de gira con ruedas",
+			"categoria": "teatro",
+			"subcategoria": "sonido_luces",
+			"etiquetas": ["flight case", "baúl de equipo", "caja de transporte de sonido"],
+			"descripcion": "Cajón reforzado con cantos de metal y ruedas, donde viaja el equipo de sonido y luces. Aparece entre bastidores y cambia de sitio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.2, 2.0],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.5, 0.7, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "juego:cofre_abrir.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "juego:cofre_cerrar.flac"
+				},
+				{
+					"id": "empujar",
+					"nombre": "Empujar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bg",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/baul_gira.png",
+				"descripcion": "Huella en planta de «Baúl de gira con ruedas»: un rectángulo de 1,20 por 0,60 metros, con la letra «Bg»."
+			}
+		},
+		{
+			"id": "tarima_director",
+			"nombre": "Tarima de director con atril",
+			"categoria": "teatro",
+			"subcategoria": "orquesta",
+			"etiquetas": ["podio de director", "atril de director", "tarima de orquesta"],
+			"descripcion": "Tarima cuadrada de un escalón con una barandilla detrás y un atril ancho delante. El director se sube a ella de cara a la orquesta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.1, 1.5],
+				"fondo": [0.9, 1.1, 1.5],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["corro_atriles"],
+			"simbolo": {
+				"letra": "Td",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/tarima_director.png",
+				"descripcion": "Huella en planta de «Tarima de director con atril»: un rectángulo de 1,10 por 1,10 metros, con la letra «Td»."
+			}
+		},
+		{
+			"id": "corro_atriles",
+			"nombre": "Semicírculo de sillas y atriles de orquesta",
+			"categoria": "teatro",
+			"subcategoria": "orquesta",
+			"etiquetas": ["atriles de músico", "sillas de orquesta", "sección de cuerda"],
+			"descripcion": "Sillas en arco, cada una con su atril fino de metal delante. Los atriles son ligeros y se vuelcan; el arco se abre hacia el director.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.024, 0.309], [0.095, 0.588], [0.206, 0.809], [0.345, 0.951], [0.5, 1.0], [0.655, 0.951], [0.794, 0.809], [0.905, 0.588], [0.976, 0.309], [1.0, 0.0], [0.8, 0.0], [0.785, 0.185], [0.743, 0.353], [0.676, 0.485], [0.593, 0.571], [0.5, 0.6], [0.407, 0.571], [0.324, 0.485], [0.257, 0.353], [0.215, 0.185], [0.2, 0.0]]
+			},
+			"medidas": {
+				"ancho": [2.5, 4.0, 6.0],
+				"fondo": [1.2, 1.8, 3.0],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/corro_atriles.png",
+				"descripcion": "Huella en planta de «Semicírculo de sillas y atriles de orquesta»: una banda curva que abomba hacia delante de 4,00 por 1,80 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "arpa",
+			"nombre": "Arpa",
+			"categoria": "teatro",
+			"subcategoria": "orquesta",
+			"etiquetas": ["arpa de concierto", "arpa de pedales", "instrumento de cuerda"],
+			"descripcion": "Arpa de concierto: un triángulo alto de madera con las cuerdas tensas. Al pasar los dedos suena una cascada de notas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.5, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.55, 0.6],
+				"fondo": [0.9, 1.0, 1.1],
+				"alto": [1.7, 1.85, 1.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/arpa_glissando.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar_nota",
+					"nombre": "Tocar una nota",
+					"sonido": "sonidos/arpa_glissando.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/arpa.png",
+				"descripcion": "Huella en planta de «Arpa»: un triángulo con la punta hacia delante de 0,55 por 1,00 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "timbales_orquesta",
+			"nombre": "Timbales de orquesta",
+			"categoria": "teatro",
+			"subcategoria": "orquesta",
+			"etiquetas": ["timbales", "timbal de concierto", "calderos"],
+			"descripcion": "Tres o cuatro calderos grandes de cobre colocados en arco alrededor del timbalero. El parche queda a la altura de la cintura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.222], [0.059, 0.479], [0.144, 0.696], [0.25, 0.862], [0.371, 0.965], [0.5, 1.0], [0.629, 0.965], [0.75, 0.862], [0.856, 0.696], [0.941, 0.479], [1.0, 0.222], [0.725, 0.0], [0.699, 0.116], [0.66, 0.213], [0.612, 0.288], [0.558, 0.334], [0.5, 0.35], [0.442, 0.334], [0.388, 0.288], [0.34, 0.213], [0.301, 0.116], [0.275, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 3.5],
+				"fondo": [0.8, 1.2, 1.6],
+				"alto": [0.8, 0.85, 0.95]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "juego:tambor.flac"
+			},
+			"acciones": [
+				{
+					"id": "golpear",
+					"nombre": "Golpear",
+					"sonido": "juego:tambor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "To",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/timbales_orquesta.png",
+				"descripcion": "Huella en planta de «Timbales de orquesta»: una banda curva que abomba hacia delante de 2,50 por 1,20 metros, con la letra «To»."
+			}
+		},
+		{
+			"id": "contrabajo_apoyado",
+			"nombre": "Contrabajo en su soporte",
+			"categoria": "teatro",
+			"subcategoria": "orquesta",
+			"etiquetas": ["contrabajo", "violón", "bajo de orquesta"],
+			"descripcion": "Contrabajo de pie en un soporte, tan alto como una persona. La caja de madera es hueca y resuena al rozarla; el mástil queda a la altura de la cara.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.38], [0.962, 0.235], [0.854, 0.111], [0.691, 0.029], [0.5, 0.0], [0.309, 0.029], [0.146, 0.111], [0.038, 0.235], [0.0, 0.38], [0.08, 0.62], [0.5, 1.0], [0.92, 0.62]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [0.45, 0.55, 0.7],
+				"alto": [1.8, 1.9, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/contrabajo_pizzicato.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar_nota",
+					"nombre": "Tocar una nota",
+					"sonido": "sonidos/contrabajo_pizzicato.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/contrabajo_apoyado.png",
+				"descripcion": "Huella en planta de «Contrabajo en su soporte»: una gota, redonda detrás y en punta delante de 0,70 por 0,55 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "bateria",
+			"nombre": "Batería",
+			"categoria": "teatro",
+			"subcategoria": "orquesta",
+			"etiquetas": ["batería de música", "tambores y platos", "set de batería"],
+			"descripcion": "Corro de tambores y platos sobre patas de metal, con un asiento detrás. Los platos sobresalen a la altura del pecho y suenan al menor roce.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [0.7, 0.0], [0.95, 0.25], [1.0, 0.6], [0.8, 0.9], [0.5, 1.0], [0.2, 0.9], [0.0, 0.6], [0.05, 0.25]]
+			},
+			"medidas": {
+				"ancho": [1.4, 1.6, 2.0],
+				"fondo": [1.2, 1.4, 1.8],
+				"alto": [1.1, 1.3, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/bateria_ritmo.flac"
+			},
+			"acciones": [
+				{
+					"id": "golpear",
+					"nombre": "Golpear",
+					"sonido": "sonidos/bateria_ritmo.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/bateria.png",
+				"descripcion": "Huella en planta de «Batería»: un corro redondeado de tambores y platos, con el asiento detrás de 1,60 por 1,40 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "amplificador_guitarra",
+			"nombre": "Amplificador de guitarra",
+			"categoria": "teatro",
+			"subcategoria": "sonido_luces",
+			"etiquetas": ["amplificador", "ampli", "combo de guitarra"],
+			"descripcion": "Caja pesada con una rejilla de tela delante, en el suelo del escenario. Encendido, zumba bajito todo el rato.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.45, 0.6, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "combo",
+					"nombre": "Combo",
+					"ancho": 0.6,
+					"fondo": 0.3,
+					"alto": 0.5
+				},
+				{
+					"id": "cabezal_pantalla",
+					"nombre": "Cabezal con pantalla",
+					"ancho": 0.75,
+					"fondo": 0.36,
+					"alto": 1.2
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.3,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ag",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/amplificador_guitarra.png",
+				"descripcion": "Huella en planta de «Amplificador de guitarra»: un rectángulo de 0,60 por 0,30 metros, con la letra «Ag»."
+			}
+		},
+		{
+			"id": "monitor_cuna",
+			"nombre": "Monitor de escenario en cuña",
+			"categoria": "teatro",
+			"subcategoria": "sonido_luces",
+			"etiquetas": ["monitor de escenario", "cuña", "monitor de suelo"],
+			"descripcion": "Altavoz bajo en forma de cuña, en el suelo al borde del escenario, apuntando hacia arriba. Queda por debajo de la rodilla: tropiezo seguro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [0.3, 0.35, 0.42]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "bajo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/monitor_cuna.png",
+				"descripcion": "Huella en planta de «Monitor de escenario en cuña»: un trapecio, más estrecho por detrás de 0,60 por 0,40 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "mesa_mezclas",
+			"nombre": "Mesa de mezclas",
+			"categoria": "teatro",
+			"subcategoria": "sonido_luces",
+			"etiquetas": ["control de sonido", "mesa de sonido", "mezclador"],
+			"descripcion": "Mesa llena de botones y mandos deslizantes desde la que el técnico controla el sonido, al fondo de la sala. Por detrás salen manojos de cables.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 2.5],
+				"fondo": [0.8, 1.0, 1.2],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["sala_butacas", "escenario", "salon_actos"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["obstaculos_temporales/pasacables"],
+			"simbolo": {
+				"letra": "Mm",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_mezclas.png",
+				"descripcion": "Huella en planta de «Mesa de mezclas»: un rectángulo de 1,80 por 1,00 metros, con la letra «Mm»."
+			}
+		},
+		{
+			"id": "tripode_foco",
+			"nombre": "Trípode de foco",
+			"categoria": "teatro",
+			"subcategoria": "sonido_luces",
+			"etiquetas": ["foco de pie", "torre de foco", "trípode de iluminación"],
+			"descripcion": "Tres patas muy abiertas en el suelo y un tubo que sube hasta un foco. Las patas invaden el paso; el foco, arriba, quema.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.5, 1.0], [0.0, 0.0], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.6],
+				"fondo": [1.0, 1.2, 1.6],
+				"alto": [2.0, 3.0, 4.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "caliente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tf",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/tripode_foco.png",
+				"descripcion": "Huella en planta de «Trípode de foco»: un triángulo de tres patas abiertas de 1,20 por 1,20 metros, con la letra «Tf»."
+			}
+		},
+		{
+			"id": "pie_microfono",
+			"nombre": "Pie de micrófono",
+			"categoria": "teatro",
+			"subcategoria": "sonido_luces",
+			"etiquetas": ["soporte de micrófono", "micrófono de pie", "jirafa de micrófono"],
+			"descripcion": "Base redonda y pesada con un tubo muy fino. El bastón puede pasar de largo sin tocarlo. El brazo de jirafa sobresale a la altura de la cara.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.6],
+				"fondo": [0.25, 0.3, 0.6],
+				"alto": [0.9, 1.5, 2.1]
+			},
+			"variantes": [
+				{
+					"id": "recto",
+					"nombre": "Recto",
+					"ancho": 0.28,
+					"fondo": 0.28,
+					"alto": 1.5
+				},
+				{
+					"id": "jirafa",
+					"nombre": "De jirafa",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 1.8
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario", "salon_actos"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "transparente"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pm",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/pie_microfono.png",
+				"descripcion": "Huella en planta de «Pie de micrófono»: un círculo de 0,30 por 0,30 metros, con la letra «Pm»."
+			}
+		},
+		{
+			"id": "cables_sueltos",
+			"nombre": "Cables sueltos por el suelo",
+			"categoria": "teatro",
+			"subcategoria": "sonido_luces",
+			"etiquetas": ["cables", "rollo de cable", "mangueras de sonido"],
+			"descripcion": "Cables de sonido sin proteger, con algún rollo, cruzados por el suelo del escenario. Se enredan en el pie y en la punta del bastón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.1], [0.3, 0.0], [0.45, 0.3], [0.8, 0.2], [1.0, 0.45], [0.9, 0.8], [0.6, 0.7], [0.5, 1.0], [0.2, 0.9], [0.25, 0.5], [0.05, 0.4]]
+			},
+			"medidas": {
+				"ancho": [0.5, 1.5, 4.0],
+				"fondo": [0.3, 0.8, 2.0],
+				"alto": [0.02, 0.03, 0.08]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Cables por el suelo: cuidado con los pies.",
+			"funcion": "trasto",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/cables_sueltos.png",
+				"descripcion": "Huella en planta de «Cables sueltos por el suelo»: un reguero irregular de 1,50 por 0,80 metros, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "tocador_camerino",
+			"nombre": "Tocador de camerino",
+			"categoria": "teatro",
+			"subcategoria": "camerinos",
+			"etiquetas": ["tocador con bombillas", "espejo de camerino", "mesa de maquillaje"],
+			"descripcion": "Mesa estrecha contra la pared con un espejo grande rodeado de bombillas. Encendidas, las bombillas queman al tocarlas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 2.4],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.8, 1.9, 2.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["apagado", "encendido", "cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["cine_teatro"],
+			"estancias": ["vestuario"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tc",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/tocador_camerino.png",
+				"descripcion": "Huella en planta de «Tocador de camerino»: un rectángulo de 1,20 por 0,50 metros, con la letra «Tc»."
+			}
+		},
+		{
+			"id": "burro_vestuario",
+			"nombre": "Burro de vestuario de teatro",
+			"categoria": "teatro",
+			"subcategoria": "camerinos",
+			"etiquetas": ["burra de vestuario", "perchero de trajes", "carro de vestuario"],
+			"descripcion": "Perchero alto con ruedas, de dos barras, cargado de trajes largos. Blando por los lados; abajo solo hay ruedas y un travesaño.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.0],
+				"fondo": [0.55, 0.6, 0.7],
+				"alto": [1.7, 1.9, 2.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["cine_teatro"],
+			"estancias": ["vestuario", "escenario", "pasillo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bv",
+				"color": "#922B21"
+			},
+			"imagen": {
+				"fichero": "imagenes/burro_vestuario.png",
+				"descripcion": "Huella en planta de «Burro de vestuario de teatro»: un rectángulo de 1,80 por 0,60 metros, con la letra «Bv»."
+			}
+		},
+		{
+			"id": "estanteria_doble_cara",
+			"nombre": "Estantería de doble cara",
+			"categoria": "biblioteca",
+			"subcategoria": "estantes_biblio",
+			"etiquetas": ["estantería de doble cara", "estantería exenta", "cuerpo de estanterías", "pasillo de libros"],
+			"descripcion": "Estantería metálica exenta con libros por las dos caras. Colocadas en paralelo forman pasillos estrechos; se sigue con la mano el canto de los libros.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 2.7, 5.4],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.5, 2.0, 2.3]
+			},
+			"variantes": [
+				{
+					"id": "un_modulo",
+					"nombre": "De 1 módulo",
+					"ancho": 0.9,
+					"fondo": 0.6,
+					"alto": 2.0
+				},
+				{
+					"id": "dos_modulos",
+					"nombre": "De 2 módulos",
+					"ancho": 1.8,
+					"fondo": 0.6,
+					"alto": 2.0
+				},
+				{
+					"id": "tres_modulos",
+					"nombre": "De 3 módulos",
+					"ancho": 2.7,
+					"fondo": 0.6,
+					"alto": 2.0
+				},
+				{
+					"id": "cuatro_modulos",
+					"nombre": "De 4 módulos",
+					"ancho": 3.6,
+					"fondo": 0.6,
+					"alto": 2.0
+				},
+				{
+					"id": "seis_modulos",
+					"nombre": "De 6 módulos",
+					"ancho": 5.4,
+					"fondo": 0.6,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["biblioteca"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_lectura_lamparas", "taburete_rodante_biblioteca"],
+			"simbolo": {
+				"letra": "Ed",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/estanteria_doble_cara.png",
+				"descripcion": "Huella en planta de «Estantería de doble cara»: un rectángulo de 2,70 por 0,60 metros, con la letra «Ed»."
+			}
+		},
+		{
+			"id": "armario_compacto",
+			"nombre": "Armario compacto sobre raíles",
+			"categoria": "biblioteca",
+			"subcategoria": "estantes_biblio",
+			"etiquetas": ["compacto", "archivo compacto", "estantería móvil de archivo"],
+			"descripcion": "Bloque de estanterías pegadas que corren sobre raíles al girar un volante: se abre un pasillo y se cierra otro. Los raíles sobresalen del suelo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.0],
+				"fondo": [2.0, 3.0, 6.0],
+				"alto": [2.0, 2.2, 2.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["biblioteca", "administracion", "oficina"],
+			"estancias": ["almacen", "sala_lectura"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ac",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_compacto.png",
+				"descripcion": "Huella en planta de «Armario compacto sobre raíles»: un rectángulo de 3,00 por 3,00 metros, con la letra «Ac»."
+			}
+		},
+		{
+			"id": "fichero_fichas",
+			"nombre": "Fichero de fichas de biblioteca",
+			"categoria": "biblioteca",
+			"subcategoria": "estantes_biblio",
+			"etiquetas": ["fichero de cajones", "catálogo de fichas", "fichero de madera"],
+			"descripcion": "Mueble de madera con muchos cajoncitos estrechos y largos, cada uno con su tirador y su etiqueta. Dentro van las fichas en fila.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.5],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [1.0, 1.3, 1.6]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["biblioteca"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ff",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/fichero_fichas.png",
+				"descripcion": "Huella en planta de «Fichero de fichas de biblioteca»: un rectángulo de 1,00 por 0,50 metros, con la letra «Ff»."
+			}
+		},
+		{
+			"id": "planero",
+			"nombre": "Planero de mapas",
+			"categoria": "biblioteca",
+			"subcategoria": "estantes_biblio",
+			"etiquetas": ["planero", "mueble de mapas", "cajonera de planos"],
+			"descripcion": "Mueble metálico ancho y hondo, de cajones muy planos, para guardar mapas y láminas extendidos. Llega a la cintura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.3, 1.5],
+				"fondo": [0.8, 0.95, 1.1],
+				"alto": [0.8, 0.9, 1.1]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["biblioteca", "museo"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/planero.png",
+				"descripcion": "Huella en planta de «Planero de mapas»: un rectángulo de 1,30 por 0,95 metros, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "taburete_rodante_biblioteca",
+			"nombre": "Taburete rodante de biblioteca",
+			"categoria": "biblioteca",
+			"subcategoria": "estantes_biblio",
+			"etiquetas": ["taburete elefante", "taburete rodante", "escalón rodante"],
+			"descripcion": "Taburete bajo y redondo de plástico, con ruedas escondidas: rueda si se empuja y se clava al pisarlo. Se queda olvidado en los pasillos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.44, 0.5],
+				"fondo": [0.4, 0.44, 0.5],
+				"alto": [0.4, 0.43, 0.45]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "empujar",
+					"nombre": "Empujar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["biblioteca", "oficina", "tienda"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Tr",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/taburete_rodante_biblioteca.png",
+				"descripcion": "Huella en planta de «Taburete rodante de biblioteca»: un círculo de 0,44 por 0,44 metros, con la letra «Tr»."
+			}
+		},
+		{
+			"id": "escalera_rodante_biblioteca",
+			"nombre": "Escalera de biblioteca con ruedas",
+			"categoria": "biblioteca",
+			"subcategoria": "estantes_biblio",
+			"etiquetas": ["escalera rodante", "escalera de estanterías", "escalera con pasamanos"],
+			"descripcion": "Escalera de tres o cuatro peldaños con pasamanos y ruedas, para llegar a los estantes altos. Más ancha abajo que arriba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.125, 0.0], [0.875, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.65, 0.8],
+				"fondo": [0.8, 1.0, 1.4],
+				"alto": [1.5, 1.8, 2.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["biblioteca", "almacen"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Er",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_rodante_biblioteca.png",
+				"descripcion": "Huella en planta de «Escalera de biblioteca con ruedas»: un trapecio, más estrecho por detrás de 0,65 por 1,00 metros, con la letra «Er»."
+			}
+		},
+		{
+			"id": "mesa_lectura_lamparas",
+			"nombre": "Mesa de lectura larga con lámparas",
+			"categoria": "biblioteca",
+			"subcategoria": "puestos_biblio",
+			"etiquetas": ["mesa de lectura larga", "mesa corrida de biblioteca", "mesa de sala de lectura"],
+			"descripcion": "Mesa muy larga con una fila de lámparas bajas en el centro y sillas a los dos lados. Las lámparas están tibias y tienen un interruptor de cadenilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.4, 3.6, 6.0],
+				"fondo": [1.0, 1.2, 1.4],
+				"alto": [0.74, 0.76, 0.78]
+			},
+			"variantes": [
+				{
+					"id": "seis_plazas",
+					"nombre": "De 6 plazas",
+					"ancho": 2.4,
+					"fondo": 1.2,
+					"alto": 0.76
+				},
+				{
+					"id": "ocho_plazas",
+					"nombre": "De 8 plazas",
+					"ancho": 3.6,
+					"fondo": 1.2,
+					"alto": 0.76
+				},
+				{
+					"id": "doce_plazas",
+					"nombre": "De 12 plazas",
+					"ancho": 5.4,
+					"fondo": 1.2,
+					"alto": 0.76
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["biblioteca"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["estanteria_doble_cara"],
+			"simbolo": {
+				"letra": "Ml",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_lectura_lamparas.png",
+				"descripcion": "Huella en planta de «Mesa de lectura larga con lámparas»: un rectángulo de 3,60 por 1,20 metros, con la letra «Ml»."
+			}
+		},
+		{
+			"id": "puesto_estudio",
+			"nombre": "Puesto de estudio con separadores",
+			"categoria": "biblioteca",
+			"subcategoria": "puestos_biblio",
+			"etiquetas": ["cabina de estudio", "puesto individual", "mesa con separadores"],
+			"descripcion": "Mesa individual con paneles al frente y a los lados que aíslan del vecino. Varios puestos seguidos forman una fila de cabinas abiertas por detrás.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 4.8],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.1, 1.2, 1.25]
+			},
+			"variantes": [
+				{
+					"id": "individual",
+					"nombre": "Individual",
+					"ancho": 0.9,
+					"fondo": 0.7,
+					"alto": 1.2
+				},
+				{
+					"id": "doble",
+					"nombre": "De 2 puestos",
+					"ancho": 1.8,
+					"fondo": 0.7,
+					"alto": 1.2
+				},
+				{
+					"id": "cuatro_puestos",
+					"nombre": "De 4 puestos",
+					"ancho": 3.6,
+					"fondo": 0.7,
+					"alto": 1.2
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["biblioteca", "universidad"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/puesto_estudio.png",
+				"descripcion": "Huella en planta de «Puesto de estudio con separadores»: un rectángulo de 0,90 por 0,70 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "puesto_consulta_catalogo",
+			"nombre": "Puesto de consulta del catálogo",
+			"categoria": "biblioteca",
+			"subcategoria": "puestos_biblio",
+			"etiquetas": ["opac", "ordenador de consulta", "terminal del catálogo"],
+			"descripcion": "Atril alto con una pantalla y un teclado para buscar libros de pie. No tiene asiento; el teclado queda a la altura del codo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.5, 0.55, 0.7],
+				"alto": [1.1, 1.3, 1.5]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "colegio:teclado.flac"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["biblioteca"],
+			"estancias": ["sala_lectura", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/puesto_consulta_catalogo.png",
+				"descripcion": "Huella en planta de «Puesto de consulta del catálogo»: un rectángulo de 0,70 por 0,55 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "globo_terraqueo",
+			"nombre": "Globo terráqueo de pie",
+			"categoria": "biblioteca",
+			"subcategoria": "puestos_biblio",
+			"etiquetas": ["globo terráqueo", "bola del mundo", "esfera terrestre"],
+			"descripcion": "Esfera grande sobre un pie de madera, a la altura del pecho. Gira al empujarla y tiene los continentes en relieve.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.9],
+				"fondo": [0.5, 0.6, 0.9],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar"
+				},
+				{
+					"id": "tocar",
+					"nombre": "Tocar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["biblioteca", "colegio", "museo"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Gt",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/globo_terraqueo.png",
+				"descripcion": "Huella en planta de «Globo terráqueo de pie»: un círculo de 0,60 por 0,60 metros, con la letra «Gt»."
+			}
+		},
+		{
+			"id": "mostrador_prestamo",
+			"nombre": "Mostrador de préstamo",
+			"categoria": "biblioteca",
+			"subcategoria": "prestamo",
+			"etiquetas": ["mostrador de biblioteca", "préstamo", "información de biblioteca"],
+			"descripcion": "Mostrador en ele junto a la entrada: un tramo alto para atender de pie y otro bajo, a 80 centímetros, para sentarse o acercarse en silla de ruedas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.45], [0.3, 0.45], [0.3, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.5],
+				"fondo": [1.2, 1.6, 2.2],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"colocacion": ["suelo", "esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "sacar_libro_prestamo",
+					"nombre": "Sacar un libro en préstamo",
+					"sonido": "transporte:bip_validacion.flac"
+				},
+				{
+					"id": "devolver_libro",
+					"nombre": "Devolver un libro",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["biblioteca"],
+			"estancias": ["recepcion", "sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["buzon_devolucion", "maquina_autoprestamo", "expositor_novedades"],
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_prestamo.png",
+				"descripcion": "Huella en planta de «Mostrador de préstamo»: una ele de 3,00 por 1,60 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "buzon_devolucion",
+			"nombre": "Buzón de devolución de libros",
+			"categoria": "biblioteca",
+			"subcategoria": "prestamo",
+			"etiquetas": ["buzón de libros", "devolución de libros", "buzón de biblioteca"],
+			"descripcion": "Cajón metálico con una trampilla a la altura del pecho por la que se echan los libros devueltos; caen con un golpe sordo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.9],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "calle:trampilla_buzon.flac"
+			},
+			"acciones": [
+				{
+					"id": "devolver_libro",
+					"nombre": "Devolver un libro",
+					"sonido": "calle:trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["biblioteca"],
+			"estancias": ["recepcion", "vestibulo", "entrada"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bd",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/buzon_devolucion.png",
+				"descripcion": "Huella en planta de «Buzón de devolución de libros»: un rectángulo de 0,60 por 0,60 metros, con la letra «Bd»."
+			}
+		},
+		{
+			"id": "maquina_autoprestamo",
+			"nombre": "Máquina de autopréstamo",
+			"categoria": "biblioteca",
+			"subcategoria": "prestamo",
+			"etiquetas": ["autopréstamo", "máquina de préstamo", "autoservicio de préstamo"],
+			"descripcion": "Mueble con una bandeja donde se apoyan los libros y una pantalla encima. Pita dos veces cuando el préstamo queda anotado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.2, 1.4, 1.6]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "sacar_libro_prestamo",
+					"nombre": "Sacar un libro en préstamo",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["biblioteca"],
+			"estancias": ["recepcion", "sala_lectura"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/maquina_autoprestamo.png",
+				"descripcion": "Huella en planta de «Máquina de autopréstamo»: un rectángulo de 0,70 por 0,60 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "expositor_novedades",
+			"nombre": "Expositor de novedades",
+			"categoria": "biblioteca",
+			"subcategoria": "prensa_biblio",
+			"etiquetas": ["novedades", "expositor de libros", "mueble de novedades"],
+			"descripcion": "Mueble escalonado de cuatro caras con los libros nuevos de frente, cerca de la entrada. Más ancho abajo que arriba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 0.2], [1.0, 0.8], [0.8, 1.0], [0.2, 1.0], [0.0, 0.8], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [0.7, 0.9, 1.2],
+				"alto": [1.2, 1.4, 1.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["biblioteca", "tienda"],
+			"estancias": ["sala_lectura", "recepcion"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "En",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/expositor_novedades.png",
+				"descripcion": "Huella en planta de «Expositor de novedades»: un rectángulo con las esquinas cortadas de 0,90 por 0,90 metros, con la letra «En»."
+			}
+		},
+		{
+			"id": "revistero_inclinado",
+			"nombre": "Revistero inclinado de pared",
+			"categoria": "biblioteca",
+			"subcategoria": "prensa_biblio",
+			"etiquetas": ["revistero", "expositor de revistas", "mueble de revistas"],
+			"descripcion": "Mueble alto con baldas inclinadas donde las revistas se apoyan de frente. Cada balda se levanta y detrás hay números atrasados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.2],
+				"fondo": [0.3, 0.4, 0.45],
+				"alto": [1.6, 1.9, 2.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["biblioteca"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ri",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/revistero_inclinado.png",
+				"descripcion": "Huella en planta de «Revistero inclinado de pared»: un rectángulo de 1,00 por 0,40 metros, con la letra «Ri»."
+			}
+		},
+		{
+			"id": "hemeroteca_barras",
+			"nombre": "Colgador de periódicos en barra",
+			"categoria": "biblioteca",
+			"subcategoria": "prensa_biblio",
+			"etiquetas": ["hemeroteca", "periódicos en barra", "prensa diaria"],
+			"descripcion": "Bastidor del que cuelgan los periódicos del día, cada uno sujeto en una varilla de madera. El papel cruje al rozarlo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.0, 1.2, 1.5]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "papel",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "expositor",
+			"lugares": ["biblioteca", "bar", "ocio"],
+			"estancias": ["sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Hb",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/hemeroteca_barras.png",
+				"descripcion": "Huella en planta de «Colgador de periódicos en barra»: un rectángulo de 1,00 por 0,50 metros, con la letra «Hb»."
+			}
+		},
+		{
+			"id": "asiento_curvo_lectura",
+			"nombre": "Asiento curvo modular de lectura",
+			"categoria": "biblioteca",
+			"subcategoria": "infantil_biblio",
+			"etiquetas": ["asiento serpiente", "banco curvo tapizado", "módulo de lectura"],
+			"descripcion": "Asiento tapizado largo y curvo, sin brazos, formado por módulos unidos. Se sigue con la mano el respaldo, que va girando.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.31], [0.071, 0.544], [0.161, 0.737], [0.265, 0.881], [0.38, 0.97], [0.5, 1.0], [0.62, 0.97], [0.735, 0.881], [0.839, 0.737], [0.929, 0.544], [1.0, 0.31], [0.775, 0.0], [0.736, 0.128], [0.687, 0.234], [0.629, 0.314], [0.566, 0.363], [0.5, 0.379], [0.434, 0.363], [0.371, 0.314], [0.313, 0.234], [0.264, 0.128], [0.225, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.8, 2.4, 3.6],
+				"fondo": [0.9, 1.2, 1.8],
+				"alto": [0.7, 0.8, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["biblioteca", "museo", "universidad"],
+			"estancias": ["sala_lectura", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ac",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/asiento_curvo_lectura.png",
+				"descripcion": "Huella en planta de «Asiento curvo modular de lectura»: una banda curva que abomba hacia delante de 2,40 por 1,20 metros, con la letra «Ac»."
+			}
+		},
+		{
+			"id": "cubeta_cuentos",
+			"nombre": "Cubeta de cuentos infantil",
+			"categoria": "biblioteca",
+			"subcategoria": "infantil_biblio",
+			"etiquetas": ["cubeta de álbumes", "cajón de cuentos", "bebeteca"],
+			"descripcion": "Cajón bajo con ruedas, abierto por arriba y dividido en casillas, donde los cuentos se hojean desde arriba. A la altura de un niño pequeño.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.6, 0.8, 1.2],
+				"alto": [0.4, 0.55, 0.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["biblioteca", "guarderia", "colegio"],
+			"estancias": ["sala_lectura", "aula_infantil"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/cubeta_cuentos.png",
+				"descripcion": "Huella en planta de «Cubeta de cuentos infantil»: un rectángulo de 0,80 por 0,80 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "rincon_cojines",
+			"nombre": "Rincón infantil con cojines",
+			"categoria": "biblioteca",
+			"subcategoria": "infantil_biblio",
+			"etiquetas": ["rincón de lectura", "cojines de lectura", "zona blanda"],
+			"descripcion": "Rincón con una colchoneta y cojines grandes amontonados para leer tumbado. Blando y bajo: se hunde el pie.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.966, 0.259], [0.866, 0.5], [0.707, 0.707], [0.5, 0.866], [0.259, 0.966], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 4.0],
+				"fondo": [1.5, 2.5, 4.0],
+				"alto": [0.15, 0.3, 0.5]
+			},
+			"colocacion": ["esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "colegio:colchoneta.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["biblioteca", "guarderia", "colegio"],
+			"estancias": ["sala_lectura", "aula_infantil"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/rincon_cojines.png",
+				"descripcion": "Huella en planta de «Rincón infantil con cojines»: un cuarto de círculo, con el rincón atrás a la izquierda de 2,50 por 2,50 metros, con la letra «Rc»."
+			}
+		},
+		{
+			"id": "grada_cuentacuentos",
+			"nombre": "Grada de cuentacuentos",
+			"categoria": "biblioteca",
+			"subcategoria": "infantil_biblio",
+			"etiquetas": ["grada infantil", "escalones de cuentos", "anfiteatro infantil"],
+			"descripcion": "Dos o tres escalones anchos y forrados, en media luna, donde los niños se sientan a escuchar. Se sube por cualquier punto del frente.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.038, 0.383], [0.146, 0.707], [0.309, 0.924], [0.5, 1.0], [0.691, 0.924], [0.854, 0.707], [0.962, 0.383], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.4, 4.0],
+				"fondo": [0.9, 1.2, 1.8],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "colegio:colchoneta.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["biblioteca", "guarderia", "colegio"],
+			"estancias": ["sala_lectura", "aula_infantil"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Gc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/grada_cuentacuentos.png",
+				"descripcion": "Huella en planta de «Grada de cuentacuentos»: un semicírculo, recto por detrás y redondo por delante de 2,40 por 1,20 metros, con la letra «Gc»."
+			}
+		},
+		{
+			"id": "cabina_dj",
+			"nombre": "Cabina de DJ",
+			"categoria": "conciertos",
+			"subcategoria": "cabina_pista",
+			"etiquetas": ["cabina del pinchadiscos", "mesa de DJ", "platos de DJ"],
+			"descripcion": "Mesa alta con los platos y la mesa de mezclas, cerrada por delante y con dos alas a los lados. El pinchadiscos está dentro, de pie. De aquí sale la música.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.14, 0.0], [0.14, 0.45], [0.86, 0.45], [0.86, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 2.0, 3.0],
+				"fondo": [0.9, 1.2, 1.8],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "sonidos/musica_discoteca.flac",
+					"volumen": 0.5,
+					"radio": 15,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["ocio", "bar"],
+			"estancias": ["escenario"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["torre_altavoces", "pista_baile"],
+			"simbolo": {
+				"letra": "Cd",
+				"color": "#2E4053"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabina_dj.png",
+				"descripcion": "Huella en planta de «Cabina de DJ»: una mesa ancha delante con dos alas hacia atrás de 2,00 por 1,20 metros, con la letra «Cd»."
+			}
+		},
+		{
+			"id": "pista_baile",
+			"nombre": "Pista de baile",
+			"categoria": "conciertos",
+			"subcategoria": "cabina_pista",
+			"etiquetas": ["pista", "pista de discoteca", "zona de baile"],
+			"descripcion": "Zona despejada con el suelo de madera lisa, distinto del resto de la sala. Sin muebles: lo que se mueve en ella es gente.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [3.0, 5.0, 10.0],
+				"fondo": [3.0, 5.0, 10.0],
+				"alto": [0.01, 0.02, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"suelo": "madera",
+			"funcion": "referencia",
+			"lugares": ["ocio", "bar", "hotel"],
+			"estancias": ["escenario", "salon_actos"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#2E4053"
+			},
+			"imagen": {
+				"fichero": "imagenes/pista_baile.png",
+				"descripcion": "Huella en planta de «Pista de baile»: un rectángulo de 5,00 por 5,00 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "podio_baile",
+			"nombre": "Podio de baile",
+			"categoria": "conciertos",
+			"subcategoria": "cabina_pista",
+			"etiquetas": ["podio de discoteca", "tarima de gogó", "plataforma de baile"],
+			"descripcion": "Plataforma pequeña y alta, de ocho lados, para bailar subido. Llega por la rodilla o la cadera y no tiene barandilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 2.0],
+				"fondo": [1.0, 1.2, 2.0],
+				"alto": [0.5, 0.8, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#2E4053"
+			},
+			"imagen": {
+				"fichero": "imagenes/podio_baile.png",
+				"descripcion": "Huella en planta de «Podio de baile»: un octógono de 1,20 por 1,20 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "valla_antiavalancha",
+			"nombre": "Valla antiavalancha",
+			"categoria": "conciertos",
+			"subcategoria": "cabina_pista",
+			"etiquetas": ["valla de conciertos", "barrera de escenario", "valla de foso"],
+			"descripcion": "Valla de metal maciza delante del escenario, hasta el pecho, con una plataforma en el suelo por el lado del público y un escalón por el otro.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 3.6],
+				"fondo": [1.0, 1.2, 1.3],
+				"alto": [1.1, 1.2, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "un_tramo",
+					"nombre": "De 1 tramo",
+					"ancho": 1.2,
+					"fondo": 1.2,
+					"alto": 1.2
+				},
+				{
+					"id": "dos_tramos",
+					"nombre": "De 2 tramos",
+					"ancho": 2.4,
+					"fondo": 1.2,
+					"alto": 1.2
+				},
+				{
+					"id": "tres_tramos",
+					"nombre": "De 3 tramos",
+					"ancho": 3.6,
+					"fondo": 1.2,
+					"alto": 1.2
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["ocio", "cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Va",
+				"color": "#2E4053"
+			},
+			"imagen": {
+				"fichero": "imagenes/valla_antiavalancha.png",
+				"descripcion": "Huella en planta de «Valla antiavalancha»: un rectángulo de 1,20 por 1,20 metros, con la letra «Va»."
+			}
+		},
+		{
+			"id": "torre_altavoces",
+			"nombre": "Torre de altavoces",
+			"categoria": "conciertos",
+			"subcategoria": "equipo_sala",
+			"etiquetas": ["torre de sonido", "columna de altavoces", "equipo de sonido"],
+			"descripcion": "Cajas grandes de altavoces apiladas a un lado del escenario. Con la música puesta, el aire vibra delante: no conviene quedarse pegado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.6, 0.7, 1.0],
+				"alto": [1.5, 2.0, 3.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "sonidos/musica_discoteca.flac",
+					"volumen": 0.7,
+					"radio": 22,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["cine_teatro", "ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#2E4053"
+			},
+			"imagen": {
+				"fichero": "imagenes/torre_altavoces.png",
+				"descripcion": "Huella en planta de «Torre de altavoces»: un rectángulo de 0,80 por 0,70 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "bafle_tripode",
+			"nombre": "Bafle sobre trípode",
+			"categoria": "conciertos",
+			"subcategoria": "equipo_sala",
+			"etiquetas": ["bafle", "altavoz con trípode", "caja acústica de pie"],
+			"descripcion": "Altavoz subido a un trípode: abajo, tres patas abiertas y un tubo; arriba, una caja que queda a la altura de la cabeza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.5, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.2],
+				"fondo": [0.8, 0.9, 1.2],
+				"alto": [1.8, 2.0, 2.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["ocio", "cine_teatro"],
+			"estancias": ["escenario", "salon_actos"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bt",
+				"color": "#2E4053"
+			},
+			"imagen": {
+				"fichero": "imagenes/bafle_tripode.png",
+				"descripcion": "Huella en planta de «Bafle sobre trípode»: un triángulo con la punta hacia delante de 0,90 por 0,90 metros, con la letra «Bt»."
+			}
+		},
+		{
+			"id": "torre_luces",
+			"nombre": "Torre de luces de celosía",
+			"categoria": "conciertos",
+			"subcategoria": "equipo_sala",
+			"etiquetas": ["torre de luces", "truss", "torre de iluminación"],
+			"descripcion": "Columna de tubos de aluminio en celosía que sostiene los focos, sobre una base con cuatro brazos en cruz que se extienden por el suelo.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [0.65, 0.35], [1.0, 0.35], [1.0, 0.65], [0.65, 0.65], [0.65, 1.0], [0.35, 1.0], [0.35, 0.65], [0.0, 0.65], [0.0, 0.35], [0.35, 0.35]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [1.2, 1.5, 2.0],
+				"alto": [3.0, 4.0, 6.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["ocio", "cine_teatro"],
+			"estancias": ["escenario"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tl",
+				"color": "#2E4053"
+			},
+			"imagen": {
+				"fichero": "imagenes/torre_luces.png",
+				"descripcion": "Huella en planta de «Torre de luces de celosía»: una cruz de 1,50 por 1,50 metros, con la letra «Tl»."
+			}
+		},
+		{
+			"id": "bola_espejos",
+			"nombre": "Bola de espejos",
+			"categoria": "conciertos",
+			"subcategoria": "equipo_sala",
+			"etiquetas": ["bola de discoteca", "bola de cristales", "esfera de espejos"],
+			"descripcion": "Esfera cubierta de espejitos que cuelga del techo sobre la pista y gira despacio, por encima de las cabezas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.5, 1.0],
+				"fondo": [0.3, 0.5, 1.0],
+				"alto": [0.3, 0.5, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 2.3,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["ocio"],
+			"estancias": ["escenario"],
+			"obstaculo": "aereo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Be",
+				"color": "#2E4053"
+			},
+			"imagen": {
+				"fichero": "imagenes/bola_espejos.png",
+				"descripcion": "Huella en planta de «Bola de espejos»: un círculo de 0,50 por 0,50 metros, colgado a 2,30 metros del suelo, con la letra «Be»."
+			}
+		},
+		{
+			"id": "pista_bolos",
+			"nombre": "Pista de bolos",
+			"categoria": "recreativos",
+			"subcategoria": "bolera",
+			"etiquetas": ["pista de bolera", "calle de bolos", "pista con canal"],
+			"descripcion": "Pista larga y estrecha de madera aceitada, con un canal hundido a cada lado. Resbala mucho: no se pisa más allá de la línea de falta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 1.7, 1.9],
+				"fondo": [4.0, 18.3, 19.2],
+				"alto": [0.01, 0.02, 0.05]
+			},
+			"variantes": [
+				{
+					"id": "tramo",
+					"nombre": "Tramo de 6 m",
+					"ancho": 1.7,
+					"fondo": 6.0,
+					"alto": 0.02
+				},
+				{
+					"id": "mini",
+					"nombre": "Minibolera de 12 m",
+					"ancho": 1.5,
+					"fondo": 12.0,
+					"alto": 0.02
+				},
+				{
+					"id": "reglamentaria",
+					"nombre": "Reglamentaria",
+					"ancho": 1.7,
+					"fondo": 18.3,
+					"alto": 0.02
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/bolos_derribo.flac"
+			},
+			"acciones": [
+				{
+					"id": "lanzar_bola_bolos",
+					"nombre": "Lanzar la bola",
+					"sonido": "sonidos/bolos_derribo.flac"
+				}
+			],
+			"contenedor": false,
+			"suelo": "madera",
+			"aviso": "Pista de bolos: resbala, vuelve atrás.",
+			"funcion": "deporte",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["linea_falta_bolos", "retorno_bolas", "consola_puntuacion", "banco_curvo_bolera"],
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/pista_bolos.png",
+				"descripcion": "Huella en planta de «Pista de bolos»: un rectángulo de 1,70 por 18,30 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "linea_falta_bolos",
+			"nombre": "Línea de falta de la bolera",
+			"categoria": "recreativos",
+			"subcategoria": "bolera",
+			"etiquetas": ["línea de falta", "raya de falta", "límite de la pista"],
+			"descripcion": "Raya que cruza el suelo donde acaba la zona de carrera y empieza la pista aceitada. Hasta aquí se puede llegar con la bola.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.1, 1.9],
+				"fondo": [0.05, 0.1, 0.2],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Línea de falta: no sigas, la pista resbala.",
+			"funcion": "referencia",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Lf",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/linea_falta_bolos.png",
+				"descripcion": "Huella en planta de «Línea de falta de la bolera»: un rectángulo de 1,10 por 0,10 metros, con la letra «Lf»."
+			}
+		},
+		{
+			"id": "retorno_bolas",
+			"nombre": "Retorno de bolas",
+			"categoria": "recreativos",
+			"subcategoria": "bolera",
+			"etiquetas": ["retorno de bolas", "devolución de bolas", "subebolas"],
+			"descripcion": "Mueble bajo y alargado entre dos pistas: las bolas vuelven por debajo del suelo, suben y se quedan en fila. Se oye rodar y chocar las bolas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [1.2, 1.5, 2.0],
+				"alto": [0.6, 0.7, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/bolera_retorno.flac",
+					"volumen": 0.45,
+					"radio": 10
+				}
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "colegio:pimpon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Rb",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/retorno_bolas.png",
+				"descripcion": "Huella en planta de «Retorno de bolas»: un rectángulo de esquinas redondeadas de 0,60 por 1,50 metros, con la letra «Rb»."
+			}
+		},
+		{
+			"id": "estante_bolas",
+			"nombre": "Estante de bolas",
+			"categoria": "recreativos",
+			"subcategoria": "bolera",
+			"etiquetas": ["estante de bolas", "bolas de la casa", "rack de bolas"],
+			"descripcion": "Estantería metálica de barras con las bolas de la casa ordenadas por peso. Las bolas pesan: si una cae, rueda lejos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 2.4],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.0, 1.3, 1.6]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Eb",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/estante_bolas.png",
+				"descripcion": "Huella en planta de «Estante de bolas»: un rectángulo de 1,80 por 0,50 metros, con la letra «Eb»."
+			}
+		},
+		{
+			"id": "consola_puntuacion",
+			"nombre": "Consola de puntuación",
+			"categoria": "recreativos",
+			"subcategoria": "bolera",
+			"etiquetas": ["marcador de bolera", "consola de la pista", "teclado de puntuación"],
+			"descripcion": "Pedestal con un teclado y una pantalla pequeña al principio de la pista, donde se escriben los nombres de los jugadores.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "colegio:teclado.flac"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/consola_puntuacion.png",
+				"descripcion": "Huella en planta de «Consola de puntuación»: un rectángulo de 0,50 por 0,45 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "banco_curvo_bolera",
+			"nombre": "Banco curvo de bolera",
+			"categoria": "recreativos",
+			"subcategoria": "bolera",
+			"etiquetas": ["banco de bolera", "asiento de jugadores", "banco de espera de pista"],
+			"descripcion": "Banco corrido y curvo, de plástico duro, donde los jugadores esperan su turno. Rodea una mesita y se abre hacia la pista.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.109], [0.052, 0.399], [0.134, 0.648], [0.241, 0.839], [0.366, 0.959], [0.5, 1.0], [0.634, 0.959], [0.759, 0.839], [0.866, 0.648], [0.948, 0.399], [1.0, 0.109], [0.825, 0.0], [0.791, 0.188], [0.738, 0.35], [0.668, 0.475], [0.587, 0.553], [0.5, 0.579], [0.413, 0.553], [0.332, 0.475], [0.262, 0.35], [0.209, 0.188], [0.175, 0.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 3.5],
+				"fondo": [1.0, 1.3, 1.8],
+				"alto": [0.75, 0.8, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_curvo_bolera.png",
+				"descripcion": "Huella en planta de «Banco curvo de bolera»: una banda curva que abomba hacia delante de 2,50 por 1,30 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "mostrador_zapatos_bolera",
+			"nombre": "Mostrador de alquiler de zapatos",
+			"categoria": "recreativos",
+			"subcategoria": "bolera",
+			"etiquetas": ["alquiler de zapatos", "mostrador de bolera", "caja de la bolera"],
+			"descripcion": "Mostrador de la bolera tras el que hay casilleros llenos de zapatos ordenados por número. Aquí se cambia el calzado y se paga la partida.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 2.5, 4.0],
+				"fondo": [0.6, 0.7, 0.9],
+				"alto": [1.0, 1.05, 1.1]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "oficina_y_comercio:caja_registradora.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["ocio"],
+			"estancias": ["recepcion", "sala_juegos"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mz",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_zapatos_bolera.png",
+				"descripcion": "Huella en planta de «Mostrador de alquiler de zapatos»: un rectángulo de 2,50 por 0,70 metros, con la letra «Mz»."
+			}
+		},
+		{
+			"id": "maquina_recreativa",
+			"nombre": "Máquina recreativa",
+			"categoria": "recreativos",
+			"subcategoria": "maquinas_juego",
+			"etiquetas": ["recreativa", "arcade", "máquina de marcianos", "videojuego de salón"],
+			"descripcion": "Mueble alto con una pantalla, una palanca y botones a la altura de la cintura. Aunque nadie juegue, repite su musiquilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.65, 0.8],
+				"fondo": [0.75, 0.85, 1.0],
+				"alto": [1.6, 1.75, 1.9]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "sonidos/recreativa_melodia.flac",
+					"volumen": 0.4,
+					"radio": 9
+				}
+			},
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "juego:monedas.flac"
+				},
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["ocio", "bar", "centro_comercial"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/maquina_recreativa.png",
+				"descripcion": "Huella en planta de «Máquina recreativa»: un rectángulo de 0,65 por 0,85 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "pinball",
+			"nombre": "Máquina de pinball",
+			"categoria": "recreativos",
+			"subcategoria": "maquinas_juego",
+			"etiquetas": ["pinball", "máquina del millón", "flipper", "petaco"],
+			"descripcion": "Mesa inclinada con tapa de cristal sobre cuatro patas y un cabezal alto al fondo. Tiene un botón en cada costado; al jugar, chasquea y suenan campanas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.75, 0.8],
+				"fondo": [1.3, 1.4, 1.5],
+				"alto": [1.7, 1.9, 2.0]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal",
+				"uso": "sonidos/pinball_campanas.flac"
+			},
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "juego:monedas.flac"
+				},
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "sonidos/pinball_campanas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["ocio", "bar"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pi",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/pinball.png",
+				"descripcion": "Huella en planta de «Máquina de pinball»: un rectángulo de 0,75 por 1,40 metros, con la letra «Pi»."
+			}
+		},
+		{
+			"id": "simulador_coche",
+			"nombre": "Simulador de coche",
+			"categoria": "recreativos",
+			"subcategoria": "maquinas_juego",
+			"etiquetas": ["simulador de carreras", "máquina de coches", "simulador de conducción"],
+			"descripcion": "Asiento bajo con volante y pedales delante de una pantalla grande. Se entra por un lado y uno se deja caer en el asiento, como en un coche.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.35], [0.8, 0.35], [0.8, 1.0], [0.2, 1.0], [0.2, 0.35], [0.0, 0.35]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.2],
+				"fondo": [1.6, 1.8, 2.2],
+				"alto": [1.5, 1.9, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "juego:monedas.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "trafico/coche"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["ocio", "centro_comercial"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Sc",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/simulador_coche.png",
+				"descripcion": "Huella en planta de «Simulador de coche»: una te de 1,00 por 1,80 metros, con la letra «Sc»."
+			}
+		},
+		{
+			"id": "grua_peluches",
+			"nombre": "Grúa de peluches",
+			"categoria": "recreativos",
+			"subcategoria": "maquinas_juego",
+			"etiquetas": ["grúa de premios", "máquina de gancho", "pinza de peluches"],
+			"descripcion": "Cabina de cristal llena de peluches, con una pinza colgada dentro y una palanca fuera. El premio cae a un cajón que hay abajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.75, 0.8, 0.9],
+				"fondo": [0.75, 0.85, 0.95],
+				"alto": [1.8, 1.9, 2.0]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "juego:monedas.flac"
+				},
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "juego:muelle.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["ocio", "centro_comercial", "bar"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/grua_peluches.png",
+				"descripcion": "Huella en planta de «Grúa de peluches»: un rectángulo de 0,80 por 0,85 metros, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "canasta_recreativa",
+			"nombre": "Canasta recreativa",
+			"categoria": "recreativos",
+			"subcategoria": "maquinas_juego",
+			"etiquetas": ["canasta de feria", "máquina de baloncesto", "tiro a canasta"],
+			"descripcion": "Jaula alargada de red con un aro al fondo y balones que vuelven rodando por una rampa hasta las manos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [2.0, 2.4, 2.6],
+				"alto": [2.3, 2.5, 2.7]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "red",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"uso": "colegio:balon.flac"
+			},
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "juego:monedas.flac"
+				},
+				{
+					"id": "encestar",
+					"nombre": "Lanzar a canasta",
+					"sonido": "colegio:balon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/canasta_recreativa.png",
+				"descripcion": "Huella en planta de «Canasta recreativa»: un rectángulo de 0,90 por 2,40 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "maquina_baile",
+			"nombre": "Máquina de baile",
+			"categoria": "recreativos",
+			"subcategoria": "maquinas_juego",
+			"etiquetas": ["máquina de bailar", "plataforma de baile", "dance dance"],
+			"descripcion": "Plataforma metálica de un escalón con flechas para pisar y una barra detrás para agarrarse, frente a un mueble con pantalla y altavoces.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.3], [0.925, 0.3], [0.925, 1.0], [0.075, 1.0], [0.075, 0.3], [0.0, 0.3]]
+			},
+			"medidas": {
+				"ancho": [1.7, 1.8, 2.0],
+				"fondo": [1.8, 2.2, 2.5],
+				"alto": [2.0, 2.2, 2.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/musica_discoteca.flac",
+					"volumen": 0.45,
+					"radio": 10,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "juego:monedas.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 90,
+				"al_terminar": "apagado"
+			},
+			"funcion": "juego",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Mb",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/maquina_baile.png",
+				"descripcion": "Huella en planta de «Máquina de baile»: una te de 1,80 por 2,20 metros, con la letra «Mb»."
+			}
+		},
+		{
+			"id": "cambio_monedas",
+			"nombre": "Máquina de cambio de monedas",
+			"categoria": "recreativos",
+			"subcategoria": "maquinas_juego",
+			"etiquetas": ["cambio de monedas", "máquina de cambio", "cambiador de billetes"],
+			"descripcion": "Caja metálica en la pared con una ranura para el billete y una cazoleta abajo donde caen las monedas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.3, 0.35, 0.5],
+				"alto": [1.4, 1.6, 1.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "juego:monedas.flac"
+			},
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"sonido": "juego:monedas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["ocio", "servicios"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/cambio_monedas.png",
+				"descripcion": "Huella en planta de «Máquina de cambio de monedas»: un rectángulo de 0,50 por 0,35 metros, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "hockey_aire",
+			"nombre": "Mesa de hockey de aire",
+			"categoria": "recreativos",
+			"subcategoria": "juegos_mesa",
+			"etiquetas": ["hockey de aire", "air hockey", "mesa de discos"],
+			"descripcion": "Mesa grande de borde alto y redondeado. En marcha, sopla aire por el tablero con un zumbido y el disco chasquea contra las bandas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.994, 0.873], [0.974, 0.938], [0.938, 0.974], [0.873, 0.994], [0.5, 1.0], [0.127, 0.994], [0.062, 0.974], [0.026, 0.938], [0.006, 0.873], [0.0, 0.5], [0.006, 0.127], [0.026, 0.062], [0.062, 0.026], [0.127, 0.006], [0.5, 0.0], [0.873, 0.006], [0.938, 0.026], [0.974, 0.062], [0.994, 0.127]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.25, 1.4],
+				"fondo": [2.1, 2.4, 2.5],
+				"alto": [0.78, 0.8, 0.85]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/hockey_aire.flac",
+					"volumen": 0.5,
+					"radio": 9,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "echar_moneda",
+					"nombre": "Echar una moneda",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "juego:monedas.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 120,
+				"al_terminar": "apagado"
+			},
+			"funcion": "juego",
+			"lugares": ["ocio"],
+			"estancias": ["sala_juegos"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ha",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/hockey_aire.png",
+				"descripcion": "Huella en planta de «Mesa de hockey de aire»: un rectángulo de esquinas redondeadas de 1,25 por 2,40 metros, con la letra «Ha»."
+			}
+		},
+		{
+			"id": "mesa_ajedrez",
+			"nombre": "Mesa de ajedrez",
+			"categoria": "recreativos",
+			"subcategoria": "juegos_mesa",
+			"etiquetas": ["ajedrez", "tablero de ajedrez", "mesa de damas"],
+			"descripcion": "Mesa pequeña y cuadrada con el tablero marcado en relieve en la tapa y las piezas colocadas. Un asiento a cada lado.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 0.9],
+				"fondo": [0.7, 0.8, 0.9],
+				"alto": [0.72, 0.74, 0.76]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "hogar:juguetes.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["ocio", "parque", "biblioteca", "residencia"],
+			"estancias": ["sala_juegos", "sala_comun", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_ajedrez.png",
+				"descripcion": "Huella en planta de «Mesa de ajedrez»: un rectángulo de 0,80 por 0,80 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "ajedrez_gigante",
+			"nombre": "Ajedrez gigante de suelo",
+			"categoria": "recreativos",
+			"subcategoria": "juegos_mesa",
+			"etiquetas": ["ajedrez de jardín", "ajedrez gigante", "piezas gigantes"],
+			"descripcion": "Tablero pintado en el suelo con piezas de plástico huecas que llegan a la rodilla o a la cadera. Las piezas son ligeras y se mueven con la mano.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.4, 3.0, 4.0],
+				"fondo": [2.4, 3.0, 4.0],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "hogar:juguetes.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["ocio", "parque", "hotel"],
+			"estancias": ["sala_juegos", "plaza", "patio"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ag",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/ajedrez_gigante.png",
+				"descripcion": "Huella en planta de «Ajedrez gigante de suelo»: un rectángulo de 3,00 por 3,00 metros, con la letra «Ag»."
+			}
+		},
+		{
+			"id": "mesas_plegables_apiladas",
+			"nombre": "Mesas plegables apiladas",
+			"categoria": "civico",
+			"subcategoria": "polivalente",
+			"etiquetas": ["mesas plegadas", "carro de mesas", "tableros apilados"],
+			"descripcion": "Mesas plegadas y apoyadas de canto en un carro o contra la pared. Largas, finas y pesadas: si resbalan, caen como una losa.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.8, 1.85, 2.5],
+				"fondo": [0.4, 0.6, 0.9],
+				"alto": [0.8, 0.9, 1.3]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["ocio", "colegio"],
+			"estancias": ["salon_actos"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesas_plegables_apiladas.png",
+				"descripcion": "Huella en planta de «Mesas plegables apiladas»: un rectángulo de 1,85 por 0,60 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "escenario_modular",
+			"nombre": "Escenario modular de tarimas",
+			"categoria": "civico",
+			"subcategoria": "polivalente",
+			"etiquetas": ["escenario modular", "practicables", "tarimas de escenario"],
+			"descripcion": "Tarimas de dos metros por uno unidas sobre patas de metal, con hueco debajo. El borde no tiene barandilla ni aviso.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 6.0],
+				"fondo": [1.0, 2.0, 4.0],
+				"alto": [0.2, 0.4, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "bajo",
+					"nombre": "Bajo, de 20 cm",
+					"ancho": 4.0,
+					"fondo": 2.0,
+					"alto": 0.2
+				},
+				{
+					"id": "medio",
+					"nombre": "De 40 cm",
+					"ancho": 4.0,
+					"fondo": 2.0,
+					"alto": 0.4
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande, de 60 cm",
+					"ancho": 6.0,
+					"fondo": 3.0,
+					"alto": 0.6
+				},
+				{
+					"id": "alto",
+					"nombre": "Alto, de 1 m",
+					"ancho": 6.0,
+					"fondo": 4.0,
+					"alto": 1.0
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["ocio", "colegio", "cine_teatro"],
+			"estancias": ["salon_actos", "escenario", "plaza"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Em",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/escenario_modular.png",
+				"descripcion": "Huella en planta de «Escenario modular de tarimas»: un rectángulo de 4,00 por 2,00 metros, con la letra «Em»."
+			}
+		},
+		{
+			"id": "atril_orador",
+			"nombre": "Atril de orador",
+			"categoria": "civico",
+			"subcategoria": "polivalente",
+			"etiquetas": ["atril de conferencias", "atril de conferenciante", "púlpito de orador"],
+			"descripcion": "Mueble estrecho de madera, cerrado por delante hasta el pecho, con la tapa inclinada y un micrófono flexible encima.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.125, 0.0], [0.875, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.1, 1.2, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["ocio", "cine_teatro", "universidad", "administracion"],
+			"estancias": ["salon_actos"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ao",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/atril_orador.png",
+				"descripcion": "Huella en planta de «Atril de orador»: un trapecio, más estrecho por detrás de 0,60 por 0,50 metros, con la letra «Ao»."
+			}
+		},
+		{
+			"id": "pantalla_portatil",
+			"nombre": "Pantalla de proyección con trípode",
+			"categoria": "civico",
+			"subcategoria": "polivalente",
+			"etiquetas": ["pantalla portátil", "pantalla enrollable", "pantalla de trípode"],
+			"descripcion": "Lienzo ancho que cuelga de un mástil sobre un trípode. Abajo solo están las patas, en el centro; el lienzo empieza a la altura de la cintura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.12], [0.65, 0.12], [0.65, 1.0], [0.35, 1.0], [0.35, 0.12], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.4],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [2.0, 2.2, 2.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["desplegado", "plegado"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["ocio", "colegio", "oficina"],
+			"estancias": ["salon_actos", "aula", "sala_reuniones"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/pantalla_portatil.png",
+				"descripcion": "Huella en planta de «Pantalla de proyección con trípode»: una te de 1,80 por 0,80 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "caballete_pintura",
+			"nombre": "Caballete de pintura",
+			"categoria": "civico",
+			"subcategoria": "talleres",
+			"etiquetas": ["caballete de pintor", "caballete de estudio", "lienzo en caballete"],
+			"descripcion": "Tres patas de madera abiertas que sostienen un lienzo a la altura del pecho. La pata de atrás se abre mucho: es fácil engancharla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [0.6, 0.7, 0.9],
+				"alto": [1.6, 1.8, 2.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["ocio", "colegio", "museo"],
+			"estancias": ["aula"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/caballete_pintura.png",
+				"descripcion": "Huella en planta de «Caballete de pintura»: un trapecio, más estrecho por detrás de 0,60 por 0,70 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "torno_alfarero",
+			"nombre": "Torno de alfarero",
+			"categoria": "civico",
+			"subcategoria": "talleres",
+			"etiquetas": ["torno de cerámica", "torno de barro", "rueda de alfarero"],
+			"descripcion": "Plato redondo que gira dentro de una cubeta, con un asiento bajo pegado. En marcha zumba; alrededor el suelo está mojado de barro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.974, 0.764], [0.897, 0.897], [0.764, 0.974], [0.5, 1.0], [0.236, 0.974], [0.103, 0.897], [0.026, 0.764], [0.0, 0.5], [0.026, 0.236], [0.103, 0.103], [0.236, 0.026], [0.5, 0.0], [0.764, 0.026], [0.897, 0.103], [0.974, 0.236]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 1.0],
+				"fondo": [0.7, 0.9, 1.1],
+				"alto": [0.5, 0.55, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.35,
+					"radio": 5,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando", "libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["ocio", "colegio", "taller"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/torno_alfarero.png",
+				"descripcion": "Huella en planta de «Torno de alfarero»: un rectángulo de esquinas redondeadas de 0,70 por 0,90 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "horno_ceramica",
+			"nombre": "Horno de cerámica",
+			"categoria": "civico",
+			"subcategoria": "talleres",
+			"etiquetas": ["horno de alfarería", "horno de barro", "mufla"],
+			"descripcion": "Cilindro grueso de ocho caras, forrado de chapa, con la tapa arriba. Cuando cuece, quema por fuera durante horas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [0.7, 0.9, 1.2],
+				"alto": [0.8, 1.0, 1.5]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "herramienta",
+			"lugares": ["ocio", "colegio", "taller"],
+			"estancias": ["aula"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Hc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/horno_ceramica.png",
+				"descripcion": "Huella en planta de «Horno de cerámica»: un octógono de 0,90 por 0,90 metros, con la letra «Hc»."
+			}
+		},
+		{
+			"id": "telar",
+			"nombre": "Telar de bajo lizo",
+			"categoria": "civico",
+			"subcategoria": "talleres",
+			"etiquetas": ["telar de pedales", "telar de madera", "telar artesanal"],
+			"descripcion": "Armazón grande de madera con hilos tensos, pedales abajo y un banco delante. Cruje y golpea cuando se teje.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.5, 2.0],
+				"fondo": [1.0, 1.3, 1.6],
+				"alto": [1.3, 1.5, 1.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "golpear",
+					"nombre": "Golpear",
+					"sonido": "golpe/madera"
+				}
+			],
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["ocio", "museo", "taller"],
+			"estancias": ["aula", "sala_exposicion"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Te",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/telar.png",
+				"descripcion": "Huella en planta de «Telar de bajo lizo»: un rectángulo de 1,50 por 1,30 metros, con la letra «Te»."
+			}
+		},
+		{
+			"id": "mesa_urna_votacion",
+			"nombre": "Mesa con urna de votación",
+			"categoria": "civico",
+			"subcategoria": "participacion",
+			"etiquetas": ["urna", "urna electoral", "mesa electoral"],
+			"descripcion": "Mesa larga con una caja transparente encima que tiene una ranura en la tapa. Detrás se sientan tres personas; el voto se echa por la ranura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.4],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "calle:papel.flac"
+			},
+			"acciones": [
+				{
+					"id": "votar_urna",
+					"nombre": "Echar el voto",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["ocio", "colegio", "administracion"],
+			"estancias": ["salon_actos"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"relacionados": ["administracion_y_servicios/cabina_votacion"],
+			"simbolo": {
+				"letra": "Mu",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_urna_votacion.png",
+				"descripcion": "Huella en planta de «Mesa con urna de votación»: un rectángulo de 1,60 por 0,70 metros, con la letra «Mu»."
+			}
+		},
+		{
+			"id": "expositor_folletos_asociaciones",
+			"nombre": "Expositor de folletos de asociaciones",
+			"categoria": "civico",
+			"subcategoria": "participacion",
+			"etiquetas": ["expositor de folletos", "portafolletos", "expositor de asociaciones"],
+			"descripcion": "Torre estrecha de bolsillos de plástico llenos de folletos, sobre un pie. Ligera: se vuelca con poco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.6],
+				"fondo": [0.3, 0.35, 0.4],
+				"alto": [1.4, 1.6, 1.8]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["ocio", "biblioteca", "administracion", "museo"],
+			"estancias": ["vestibulo", "recepcion"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ef",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/expositor_folletos_asociaciones.png",
+				"descripcion": "Huella en planta de «Expositor de folletos de asociaciones»: un rectángulo de 0,30 por 0,35 metros, con la letra «Ef»."
+			}
+		},
+		{
+			"id": "cartel_enrollable",
+			"nombre": "Cartel enrollable de pie",
+			"categoria": "civico",
+			"subcategoria": "participacion",
+			"etiquetas": ["roll-up", "enrollable", "cartel de lona", "banner"],
+			"descripcion": "Lona alta y estrecha que sale de una base alargada en el suelo y se tensa con una varilla por detrás. Muy ligera: el aire o un roce la tumban.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.85, 1.2],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.8, 2.0, 2.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["ocio", "museo", "biblioteca", "cine_teatro"],
+			"estancias": ["vestibulo", "salon_actos", "sala_exposicion"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cartel_enrollable.png",
+				"descripcion": "Huella en planta de «Cartel enrollable de pie»: un rectángulo de 0,85 por 0,40 metros, con la letra «Ce»."
+			}
+		}
+	]
+}

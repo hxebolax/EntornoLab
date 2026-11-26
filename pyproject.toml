@@ -1,0 +1,77 @@
+# Metadatos, ruff y pytest. La compilación NO usa este archivo: la hace setup_cx.py.
+
+[project]
+name = "entornolab"
+# Debe coincidir con APP_VERSION de app/core/version.py (lo comprueba una prueba).
+version = "0.1.0"
+description = "EntornoLab: aplicación accesible de Windows, portable y sin conexión, para aprender lugares antes de visitarlos. Estudio del profesional (wxPython) y audiojuego del alumno con sonido 3D (pygame)."
+requires-python = ">=3.15"
+
+[tool.ruff]
+# Las funciones de traducción las publica app/core/i18n.py en builtins.
+builtins = ["_", "_n", "N_", "ngettext", "n_", "pgettext", "npgettext"]
+line-length = 140
+# Debe coincidir con la versión mínima de requires-python.
+target-version = "py315"
+extend-exclude = ["build", "data", "adjuntos"]
+
+[tool.ruff.format]
+indent-style = "tab"
+
+[tool.ruff.lint]
+# Errores reales, excepciones silenciadas y llamadas de registro mal formadas.
+select = ["E9", "F", "B", "BLE", "S110", "LOG", "G"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+# Solo las pruebas propias: sin esto, pytest recorre el entorno virtual, build
+# o el material de consulta de adjuntos y recoge pruebas ajenas que fallan.
+testpaths = ["tests"]
+pythonpath = ["."]
+norecursedirs = [".*", "venv", "build", "dist", "data", "adjuntos", "__pycache__", "htmlcov"]
+# -q: salida breve (se oye mejor con lector de pantalla).
+# -ra: resumen de lo saltado y lo fallido al final (se oye todo junto).
+# --strict-markers: un marcador mal escrito es un error, no una prueba que se
+#   ejecuta cuando no debía.
+# -m: por defecto no se ejecutan las pruebas que salen a Internet ni las que
+#   muestran ventanas o envían teclas reales. Otro -m en la línea de órdenes
+#   sustituye a este (pytest -m red, pytest -m interfaz, pytest -m "").
+#   Tampoco las de rendimiento: miden tiempos y solo valen con el equipo libre,
+#   no mezcladas con el resto de la batería (pytest -m rendimiento).
+addopts = ["-q", "-ra", "--strict-markers", "-m", "not red and not interfaz and not rendimiento"]
+markers = [
+	"lento: prueba lenta (más de un segundo); se excluye con -m 'not lento'",
+	"rendimiento: mide tiempos de respuesta; no se ejecuta por defecto, sino sola y con el equipo libre (usa -m rendimiento)",
+	"red: necesita Internet; no se ejecuta por defecto (usa -m red)",
+	"interfaz: muestra ventanas o envía teclas reales; no se ejecuta por defecto (usa -m interfaz)",
+]
+# Una prueba marcada xfail que empieza a pasar es una alarma: el fallo se
+# corrigió y hay que quitar la marca.
+xfail_strict = true
+filterwarnings = [
+	# Una excepción en un hilo o en un destructor hace fallar la prueba en
+	# lugar de quedar como un aviso que nadie lee.
+	"error::pytest.PytestUnhandledThreadExceptionWarning",
+	"error::pytest.PytestUnraisableExceptionWarning",
+	# Avisos de obsolescencia de nuestro propio código: se ven siempre.
+	"default::DeprecationWarning",
+]
+# Registro capturado por caplog y mostrado cuando una prueba falla.
+log_level = "DEBUG"
+
+[tool.coverage.run]
+source = ["app"]
+branch = true
+omit = ["tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_also = [
+	"if __name__ == .__main__.:",
+	"if TYPE_CHECKING:",
+	"raise NotImplementedError",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"

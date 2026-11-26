@@ -1,0 +1,1525 @@
+{
+	"nombre": "Park and nature",
+	"descripcion": "Playground with moving equipment, outdoor gym, dog park, picnic area, trails, water, trees and hedges, garden, vegetable plot and beach.",
+	"categorias": {
+		"infantil": "Playground",
+		"activo": "Outdoor gym and dog park",
+		"merendero": "Picnic area and park furniture",
+		"sendero": "Trails, rocks and terrain",
+		"agua": "Water",
+		"vegetacion": "Trees, hedges and plants",
+		"huerto": "Garden and vegetable plot",
+		"playa": "Beach"
+	},
+	"subcategorias": {
+		"columpios": "Swings",
+		"toboganes_torres": "Slides, towers and climbers",
+		"balancines_giros": "Seesaws, spinners and bouncers",
+		"paneles_juego": "Sensory and water play",
+		"recinto_infantil": "Surfaces, fencing and benches",
+		"biosaludables": "Outdoor gym equipment",
+		"agility": "Agility course",
+		"recinto_canino": "Dog park fencing and fountain",
+		"mesas_picnic": "Picnic tables and benches",
+		"fuego_agua": "Barbecues, fountains and sinks",
+		"refugios_paneles": "Shelters, panels and markers",
+		"pasos_sendero": "Boardwalks, bridges and steps",
+		"barreras_sendero": "Gates, barriers and posts",
+		"tropiezos": "Trip hazards and branches",
+		"rocas_relieve": "Rocks, banks and ditches",
+		"miradores": "Viewpoints and hides",
+		"aguas_quietas": "Ponds and tanks",
+		"aguas_corrientes": "Streams, waterfalls and channels",
+		"obras_agua": "Wells, jetties and boats",
+		"arboles": "Trees",
+		"troncos": "Stumps and fallen trees",
+		"setos": "Hedges",
+		"arbustos_flores": "Shrubs, flowers and lawn",
+		"pergolas": "Pergolas and trellises",
+		"bancales": "Beds and crops",
+		"casetas_huerto": "Sheds, greenhouse and tanks",
+		"aperos_riego": "Tools and watering",
+		"animales_huerto": "Beehives and hen house",
+		"descanso_jardin": "Garden rest and ornament",
+		"sombra_playa": "Loungers, parasols and shades",
+		"servicios_playa": "Beach services and access",
+		"objetos_arena": "Things on the sand",
+		"embarcaciones": "Beached boats",
+		"orilla_dunas": "Shoreline, dunes and rocks"
+	},
+	"estados": {
+		"pq_vaiven": "Swinging",
+		"parado": "Stopped",
+		"girando": "Turning",
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"encendido": "On",
+		"apagado": "Off"
+	},
+	"objetos": {
+		"columpio_doble": {
+			"nombre": "Double swing",
+			"descripcion": "Frame with two seats hanging on chains. The legs splay at each end; the seats swing hard to the front and back. You hear it creak: never cross its path, go round one end.",
+			"etiquetas": ["swing", "swings", "double swing", "swing set"],
+			"variantes": {
+				"metalico": "Metal frame",
+				"madera": "Timber frame"
+			},
+			"acciones": {
+				"parar": "Stop",
+				"pq_columpiarse": "Swing"
+			},
+			"imagen": "Footprint of “Double swing”: an H on its side: splayed legs at each end and the beam with the seats in between, 3.20 by 1.90 metres, marked with the letters “Cd”."
+		},
+		"zona_vaiven_columpio": {
+			"nombre": "Swing clearance zone",
+			"descripcion": "Strip of soft ground in front of and behind the swing: this is where the seats travel. Standing on it you may be hit; step off and go round by the legs.",
+			"etiquetas": ["swing zone", "swing path", "safety zone", "impact area"],
+			"aviso": "Swing zone: you may be hit here. Step out and go round.",
+			"imagen": "Footprint of “Swing clearance zone”: a rectangle, 3.50 by 7.00 metres, marked with the letters “Zv”."
+		},
+		"columpio_nido": {
+			"nombre": "Basket swing",
+			"descripcion": "Frame with a round rope basket, as big as a small table, hung on four chains. It is heavy and sweeps a wide path; several children can lie in it.",
+			"etiquetas": ["basket swing", "nest swing", "bird's nest swing"],
+			"acciones": {
+				"parar": "Stop",
+				"pq_columpiarse": "Swing"
+			},
+			"imagen": "Footprint of “Basket swing”: an H on its side: splayed legs at each end and the beam with the seats in between, 3.00 by 2.20 metres, marked with the letters “Cn”."
+		},
+		"columpio_bebe": {
+			"nombre": "Baby swing",
+			"descripcion": "Small single frame with an enclosed cradle seat and a front bar. The seat is at an adult's hip height and swings gently.",
+			"etiquetas": ["baby swing", "cradle swing", "toddler swing"],
+			"acciones": {
+				"parar": "Stop",
+				"pq_columpiarse": "Swing"
+			},
+			"imagen": "Footprint of “Baby swing”: an H on its side: splayed legs at each end and the beam with the seats in between, 1.90 by 1.60 metres, marked with the letters “Cb”."
+		},
+		"columpio_adaptado": {
+			"nombre": "Wheelchair swing",
+			"descripcion": "Sheet-metal platform hung from a tall frame, with a fold-down ramp at the front for the wheelchair. At rest the ramp touches the ground; in use the whole platform swings.",
+			"etiquetas": ["wheelchair swing", "accessible swing", "platform swing"],
+			"acciones": {
+				"parar": "Stop",
+				"pq_columpiarse": "Swing"
+			},
+			"imagen": "Footprint of “Wheelchair swing”: a rectangle, 2.60 by 3.40 metres, marked with the letters “Ca”."
+		},
+		"tobogan_parque": {
+			"nombre": "Playground slide with ladder",
+			"descripcion": "Free-standing slide: a steep ladder with handrails at the back, a small platform on top and the smooth chute to the front, ending almost at ground level. Children shoot out of the exit: do not stand in front of it.",
+			"etiquetas": ["playground slide", "slide", "slide with ladder"],
+			"variantes": {
+				"pequeno": "Small",
+				"mediano": "Medium",
+				"grande": "Large"
+			},
+			"acciones": {
+				"subir": "Climb on",
+				"pq_deslizarse": "Slide down"
+			},
+			"imagen": "Footprint of “Playground slide with ladder”: a long strip with a bulge: the ladder at the back, the wider platform and the chute to the front, 1.10 by 3.80 metres, marked with the letters “Tp”."
+		},
+		"tobogan_tubo": {
+			"nombre": "Tube slide",
+			"descripcion": "Tower with a closed plastic tube curving down. It sounds hollow when struck and you hear children sliding inside. The exit mouth is at the front, at knee height.",
+			"etiquetas": ["tube slide", "tunnel slide", "spiral slide"],
+			"acciones": {
+				"subir": "Climb on",
+				"pq_deslizarse": "Slide down"
+			},
+			"imagen": "Footprint of “Tube slide”: a teardrop, round at the back and pointed at the front, 2.50 by 3.00 metres, marked with the letters “Tt”."
+		},
+		"torre_multijuego": {
+			"nombre": "Multi-play tower with bridge",
+			"descripcion": "Two roofed timber towers joined by a wobbly hanging bridge. Under the platforms the space is at adult head height: duck if you go in.",
+			"etiquetas": ["play tower", "multi-play unit", "climbing frame", "play structure"],
+			"acciones": {
+				"subir": "Climb on",
+				"pq_trepar": "Climb"
+			},
+			"imagen": "Footprint of “Multi-play tower with bridge”: two square towers joined by a narrower bridge, 5.50 by 3.00 metres, marked with the letters “Tm”."
+		},
+		"red_piramidal": {
+			"nombre": "Pyramid climbing net",
+			"descripcion": "Very tall central mast with taut ropes running down to four ground anchors, forming a net pyramid. The low ropes are thin and the cane may slip between them.",
+			"etiquetas": ["climbing net", "rope pyramid", "spider web climber"],
+			"acciones": {
+				"pq_trepar": "Climb"
+			},
+			"imagen": "Footprint of “Pyramid climbing net”: a 4-pointed star, 4.50 by 4.50 metres, marked with the letters “Rp”."
+		},
+		"rocodromo_infantil": {
+			"nombre": "Children's climbing wall",
+			"descripcion": "Low wavy wall with resin holds sticking out like fists. You can trail it with your hand, but mind the holds at face height.",
+			"etiquetas": ["climbing wall", "bouldering wall", "traverse wall"],
+			"acciones": {
+				"pq_trepar": "Climb"
+			},
+			"imagen": "Footprint of “Children's climbing wall”: a rectangle with wavy edges, 3.00 by 0.50 metres, marked with the letters “Ri”."
+		},
+		"barras_mono": {
+			"nombre": "Monkey bars",
+			"descripcion": "Horizontal ladder of rungs at adult head height, on four corner posts. The cane passes underneath without touching it: you hit it with your forehead.",
+			"etiquetas": ["monkey bars", "overhead ladder", "overhead obstacle"],
+			"imagen": "Footprint of “Monkey bars”: a rectangle, 0.90 by 2.50 metres, hanging 1.70 metres above the floor, marked with the letters “Bm”."
+		},
+		"barra_equilibrio_parque": {
+			"nombre": "Zigzag balance beam",
+			"descripcion": "Low V-shaped log, a hand's width off the ground, to walk along. Your hand will not find it: it is a trip hazard at shin height.",
+			"etiquetas": ["balance beam", "balance log", "balancing trail"],
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Zigzag balance beam”: an open V, 3.00 by 0.80 metres, marked with the letters “Be”."
+		},
+		"casita_parque": {
+			"nombre": "Playground playhouse",
+			"descripcion": "Child-sized wooden hut with a doorway and glassless windows. The roof eaves are at an adult's chest height.",
+			"etiquetas": ["playhouse", "wendy house", "play hut"],
+			"imagen": "Footprint of “Playground playhouse”: a house-shaped pentagon, 1.50 by 1.50 metres, marked with the letters “Cp”."
+		},
+		"tirolina_cable": {
+			"nombre": "Zip line cable with seat",
+			"descripcion": "Taut cable between two distant posts, with a seat hanging from a pulley. Cable and seat cross at head and chest height, and at speed: the cane gives no warning. You hear the pulley whirr.",
+			"etiquetas": ["zip line", "zip wire", "flying fox", "overhead obstacle"],
+			"acciones": {
+				"pq_lanzarse": "Ride the zip line"
+			},
+			"imagen": "Footprint of “Zip line cable with seat”: a rectangle, 0.40 by 12.00 metres, hanging 1.50 metres above the floor, marked with the letters “Tc”."
+		},
+		"tirolina_plataforma": {
+			"nombre": "Zip line launch platform",
+			"descripcion": "Wooden ramp rising to knee height at the foot of the zip line post. Children launch from here, always in the same direction.",
+			"etiquetas": ["zip line platform", "launch ramp", "take-off mound"],
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Zip line launch platform”: a trapezoid, narrower at the back, 1.50 by 2.00 metres, marked with the letters “Tp”."
+		},
+		"balancin_doble": {
+			"nombre": "Two-seat seesaw",
+			"descripcion": "Long beam tilting on a central pivot, with a seat and a handle at each end. One end is on the ground and the other at chest height; they swap suddenly.",
+			"etiquetas": ["seesaw", "teeter-totter", "see-saw"],
+			"acciones": {
+				"pq_balancearse": "Rock up and down"
+			},
+			"imagen": "Footprint of “Two-seat seesaw”: a rectangle, 0.40 by 3.00 metres, marked with the letters “Bd”."
+		},
+		"balancin_muelle": {
+			"nombre": "Spring rocker",
+			"descripcion": "Plastic figure (a pony, a motorbike) on a thick spring anchored to the ground. Push it and it nods and springs back; handles and footrests stick out.",
+			"etiquetas": ["spring rocker", "spring rider", "springer"],
+			"variantes": {
+				"caballito": "Pony",
+				"moto": "Motorbike",
+				"pato": "Small duck"
+			},
+			"acciones": {
+				"pq_balancearse": "Rock up and down"
+			},
+			"imagen": "Footprint of “Spring rocker”: an oval, 0.40 by 0.90 metres, marked with the letters “Bm”."
+		},
+		"carrusel_suelo": {
+			"nombre": "Ground roundabout",
+			"descripcion": "Round ground-level platform with grab bars that spins when pushed. When turning, the bars sweep past at hip height and can hit you; you hear the bearing.",
+			"etiquetas": ["roundabout", "merry-go-round", "spinner"],
+			"acciones": {
+				"girar": "Spin",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Ground roundabout”: a circle, 1.80 by 1.80 metres, marked with the letters “Cs”."
+		},
+		"cama_elastica_suelo": {
+			"nombre": "In-ground trampoline",
+			"descripcion": "Bouncy mat flush with the ground, framed in rubber. It does not block the way, but the ground gives and springs back underfoot: it throws you off balance.",
+			"etiquetas": ["in-ground trampoline", "ground trampoline", "bouncer"],
+			"acciones": {
+				"pq_saltar": "Jump"
+			},
+			"aviso": "Trampoline: the ground gives and bounces.",
+			"imagen": "Footprint of “In-ground trampoline”: a rectangle, 1.50 by 1.50 metres, marked with the letters “Ce”."
+		},
+		"mesa_agua_infantil": {
+			"nombre": "Water play table",
+			"descripcion": "Steel channels at a child's waist height, with a hand pump, sluices and water wheels. The ground around is wet and slippery.",
+			"etiquetas": ["water play table", "water table", "water channels"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Water play table”: a rectangle, 1.50 by 0.80 metres, marked with the letters “Ma”."
+		},
+		"panel_sensorial": {
+			"nombre": "Sensory play panel",
+			"descripcion": "Upright board between two posts, with spinning wheels, sliding beads, textures and a raised maze to trace with a finger.",
+			"etiquetas": ["sensory panel", "play panel", "tactile panel"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Sensory play panel”: a rectangle, 1.20 by 0.15 metres, marked with the letters “Ps”."
+		},
+		"panel_musical_tubos": {
+			"nombre": "Tubular chimes panel",
+			"descripcion": "Row of metal tubes of different lengths hung in a frame, with a mallet on a cord. Strike them and they ring like bells, low to high.",
+			"etiquetas": ["tubular chimes", "musical panel", "outdoor chimes"],
+			"acciones": {
+				"golpear": "Strike"
+			},
+			"imagen": "Footprint of “Tubular chimes panel”: a rectangle, 1.50 by 0.30 metres, marked with the letters “Pm”."
+		},
+		"tubos_parlantes": {
+			"nombre": "Talking tube",
+			"descripcion": "Post with a funnel at a child's face height. A buried pipe links it to a twin several metres away: speak into one and you are heard at the other.",
+			"etiquetas": ["talking tube", "speaking tube", "talk tube"],
+			"acciones": {
+				"pq_hablar_tubo": "Speak into the tube",
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Talking tube”: a circle, 0.30 by 0.30 metres, marked with the letters “Tp”."
+		},
+		"arenero_parque": {
+			"nombre": "Park sandpit with kerb",
+			"descripcion": "Pit of fine sand ringed by a wooden kerb a hand's width high. It does not block the way: step over the kerb and your feet sink in.",
+			"etiquetas": ["sandpit", "sandbox", "sand play area"],
+			"aviso": "Sandpit kerb: lift your foot.",
+			"imagen": "Footprint of “Park sandpit with kerb”: a hexagon, 4.00 by 4.00 metres, marked with the letters “Ap”."
+		},
+		"suelo_caucho": {
+			"nombre": "Rubber safety surfacing",
+			"descripcion": "Soft rubber surfacing under the play equipment. It does not block the way: steps sound muffled and the foot sinks slightly. Where the rubber starts, the play area starts.",
+			"etiquetas": ["rubber surfacing", "safety surfacing", "wet pour", "rubber tiles"],
+			"imagen": "Footprint of “Rubber safety surfacing”: a rectangle, 6.00 by 5.00 metres, marked with the letters “Sc”."
+		},
+		"vallado_infantil": {
+			"nombre": "Low playground fence",
+			"descripcion": "Hip-high slatted fence enclosing the play area. Follow it with your hand or cane until you reach the gate.",
+			"etiquetas": ["playground fence", "play area fencing", "picket fence"],
+			"variantes": {
+				"tramo_corto": "One-metre panel",
+				"tramo": "Two-metre panel",
+				"tramo_largo": "Four-metre run"
+			},
+			"imagen": "Footprint of “Low playground fence”: a rectangle, 2.00 by 0.08 metres, marked with the letters “Vi”."
+		},
+		"puerta_muelle_infantil": {
+			"nombre": "Self-closing playground gate",
+			"descripcion": "Metal gate in the fence, with the latch on top, out of children's reach. It is sprung: it shuts by itself behind you with a bang.",
+			"etiquetas": ["playground gate", "self-closing gate", "spring gate"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Self-closing playground gate”: a rectangle, 1.00 by 0.08 metres, marked with the letters “Pm”."
+		},
+		"banco_vigilancia": {
+			"nombre": "Curved playground watch bench",
+			"descripcion": "Long slatted bench curved to face the play equipment, where carers sit. A good meeting point: you can hear the whole enclosure from it.",
+			"etiquetas": ["parents' bench", "curved bench", "watch bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Curved playground watch bench”: a curved band bulging towards the front, 3.50 by 1.40 metres, marked with the letters “Bv”."
+		},
+		"bio_rueda_hombros": {
+			"nombre": "Shoulder wheel",
+			"descripcion": "Post with a large wheel on each side at shoulder height, turned by hand. The wheels stick out from the post: the cane finds the post, your shoulder finds the wheel.",
+			"etiquetas": ["shoulder wheel", "arm wheel", "outdoor gym wheel"],
+			"acciones": {
+				"pq_ejercicio": "Do the exercise"
+			},
+			"imagen": "Footprint of “Shoulder wheel”: a rectangle, 1.20 by 0.50 metres, marked with the letters “Br”."
+		},
+		"bio_pedales": {
+			"nombre": "Pedal bench",
+			"descripcion": "Metal bench with a backrest and, in front, pedals fixed to the ground to work your legs while seated. The pedals are at shin level.",
+			"etiquetas": ["pedal bench", "pedal exerciser", "seated pedals"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"pq_ejercicio": "Do the exercise"
+			},
+			"imagen": "Footprint of “Pedal bench”: a T shape, 0.60 by 1.30 metres, marked with the letters “Bp”."
+		},
+		"bio_esqui": {
+			"nombre": "Cross-country skier",
+			"descripcion": "Machine with two foot plates and two long poles: everything swings back and forth. When in use, the poles sweep to the front and back.",
+			"etiquetas": ["cross-country skier", "air walker", "elliptical"],
+			"acciones": {
+				"pq_ejercicio": "Do the exercise"
+			},
+			"imagen": "Footprint of “Cross-country skier”: a rectangle, 0.60 by 1.30 metres, marked with the letters “Be”."
+		},
+		"bio_volante": {
+			"nombre": "Tai chi wheels",
+			"descripcion": "Central post with two wheels, one flat and one upright, at chest height. They spin freely when touched.",
+			"etiquetas": ["tai chi wheels", "steering wheel", "spinner wheels"],
+			"acciones": {
+				"pq_ejercicio": "Do the exercise"
+			},
+			"imagen": "Footprint of “Tai chi wheels”: a circle, 1.00 by 1.00 metres, marked with the letters “Bv”."
+		},
+		"bio_cintura": {
+			"nombre": "Three-station waist twister",
+			"descripcion": "Post with three handles and, on the ground, three round plates that swivel underfoot. The plates stand a hand's width proud: a trip hazard, and they slip if you step on without holding.",
+			"etiquetas": ["waist twister", "twist station", "hip twister"],
+			"acciones": {
+				"pq_ejercicio": "Do the exercise"
+			},
+			"imagen": "Footprint of “Three-station waist twister”: a triangle pointing to the front, 1.50 by 1.50 metres, marked with the letters “Bc”."
+		},
+		"bio_paralelas": {
+			"nombre": "Low parallel bars",
+			"descripcion": "Two long parallel metal bars at hip height, to walk between while leaning on your hands. You enter at the ends; from the sides they block the way.",
+			"etiquetas": ["parallel bars", "walking bars", "low bars"],
+			"acciones": {
+				"pq_ejercicio": "Do the exercise"
+			},
+			"imagen": "Footprint of “Low parallel bars”: a rectangle, 0.65 by 2.50 metres, marked with the letters “Bp”."
+		},
+		"bio_escalera_rampa": {
+			"nombre": "Exercise steps and ramp",
+			"descripcion": "Three steps up, a landing and a ramp down, with handrails on both sides. For practising stairs; it sounds like hollow sheet metal underfoot.",
+			"etiquetas": ["exercise steps", "steps and ramp", "training stairs"],
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Exercise steps and ramp”: a rectangle, 0.90 by 2.80 metres, marked with the letters “Be”."
+		},
+		"vallado_canino": {
+			"nombre": "Dog park fence",
+			"descripcion": "Wire mesh chest high or taller, stretched between posts. It rattles when struck; dogs run loose on the other side.",
+			"etiquetas": ["dog park fence", "mesh fence", "dog run fencing"],
+			"variantes": {
+				"tramo": "2.5-metre panel",
+				"tramo_largo": "Five-metre run"
+			},
+			"imagen": "Footprint of “Dog park fence”: a rectangle, 2.50 by 0.06 metres, marked with the letters “Vc”."
+		},
+		"esclusa_canina": {
+			"nombre": "Dog park double gate",
+			"descripcion": "Entrance cage with two gates in a row: open the first, shut it, then the second, so no dog escapes. There is room inside for one person and a dog.",
+			"etiquetas": ["double gate", "airlock gate", "dog park entrance"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Dog park double gate”: a rectangle, 1.50 by 2.00 metres, marked with the letters “Ec”."
+		},
+		"fuente_perros": {
+			"nombre": "Fountain with dog bowl",
+			"descripcion": "Push-button fountain with a metal bowl at ground level for dogs. There is always a puddle around it.",
+			"etiquetas": ["dog fountain", "dog drinking bowl", "pet fountain"],
+			"acciones": {
+				"beber": "Drink"
+			},
+			"imagen": "Footprint of “Fountain with dog bowl”: a narrow pillar at the back (with the spout) and a wide trough at the front, 0.40 by 0.65 metres, marked with the letters “Fp”."
+		},
+		"agility_rampa": {
+			"nombre": "Agility A-frame",
+			"descripcion": "Two wide boards leaning together like a roof, with slats for the dog to climb up and down. The ridge is above head height.",
+			"etiquetas": ["A-frame", "agility ramp", "dog ramp"],
+			"imagen": "Footprint of “Agility A-frame”: a rectangle, 0.95 by 2.80 metres, marked with the letters “Ar”."
+		},
+		"agility_tunel": {
+			"nombre": "Agility tunnel",
+			"descripcion": "Hooped canvas tube curved on the ground for dogs to run through. It is soft and gives when touched; a dog may shoot out of either mouth.",
+			"etiquetas": ["agility tunnel", "dog tunnel", "pipe tunnel"],
+			"imagen": "Footprint of “Agility tunnel”: a curved band bulging towards the front, 3.50 by 1.80 metres, marked with the letters “At”."
+		},
+		"agility_slalom": {
+			"nombre": "Agility weave poles",
+			"descripcion": "Twelve thin plastic poles in a straight line, two hands apart, up to hip height. They are so thin the cane may pass between two without touching.",
+			"etiquetas": ["weave poles", "slalom poles", "agility weaves"],
+			"variantes": {
+				"seis_postes": "Six poles",
+				"doce_postes": "Twelve poles"
+			},
+			"imagen": "Footprint of “Agility weave poles”: a rectangle, 0.06 by 6.60 metres, marked with the letters “As”."
+		},
+		"agility_aro": {
+			"nombre": "Agility tyre jump",
+			"descripcion": "Large hoop hung inside a frame at knee height for the dog to jump through. The frame's feet spread across the ground.",
+			"etiquetas": ["tyre jump", "hoop jump", "agility hoop"],
+			"imagen": "Footprint of “Agility tyre jump”: a rectangle, 1.20 by 0.70 metres, marked with the letters “Aa”."
+		},
+		"agility_balancin": {
+			"nombre": "Dog seesaw",
+			"descripcion": "Long narrow plank tilting on a low pivot. One end touches the ground and the other is at knee height; step on it and it drops with a bang.",
+			"etiquetas": ["dog seesaw", "agility teeter", "teeter board"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Dog seesaw”: a rectangle, 0.35 by 3.60 metres, marked with the letters “Ab”."
+		},
+		"agility_salto": {
+			"nombre": "Agility hurdle",
+			"descripcion": "Light bar resting between two stands at shin or knee height. Touch it and it clatters to the ground.",
+			"etiquetas": ["agility hurdle", "dog jump", "bar jump"],
+			"imagen": "Footprint of “Agility hurdle”: a rectangle, 1.40 by 0.50 metres, marked with the letters “As”."
+		},
+		"agility_mesa": {
+			"nombre": "Agility pause table",
+			"descripcion": "Low square platform at shin height where the dog jumps on and waits. A trip hazard unless the cane finds it.",
+			"etiquetas": ["pause table", "agility table", "dog platform"],
+			"imagen": "Footprint of “Agility pause table”: a rectangle, 0.90 by 0.90 metres, marked with the letters “Am”."
+		},
+		"mesa_picnic": {
+			"nombre": "Picnic table with attached benches",
+			"descripcion": "Plank table with a bench on each side, all in one piece. To sit you swing a leg over the bench; at the ends the top overhangs and the cane goes underneath.",
+			"etiquetas": ["picnic table", "picnic bench", "bench table"],
+			"variantes": {
+				"seis_plazas": "Six-seater",
+				"ocho_plazas": "Eight-seater"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Picnic table with attached benches”: three joined bands: a bench at the back, the table top in the middle and another bench at the front, 1.80 by 1.50 metres, marked with the letters “Mp”."
+		},
+		"mesa_picnic_adaptada": {
+			"nombre": "Accessible picnic table with overhang",
+			"descripcion": "Picnic table whose benches are shorter than the top: at one end the top sticks out with no bench and clear space beneath for a wheelchair.",
+			"etiquetas": ["accessible picnic table", "wheelchair picnic table"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Accessible picnic table with overhang”: two short benches and a table top that sticks out on the right, with no bench, for a wheelchair, 2.40 by 1.50 metres, marked with the letters “Mp”."
+		},
+		"mesa_picnic_piedra": {
+			"nombre": "Round stone picnic table",
+			"descripcion": "Round stone table on a thick foot, ringed by curved backless stone benches. Cold and hard; a narrow gap between benches lets you in.",
+			"etiquetas": ["stone picnic table", "round stone table"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Round stone picnic table”: a circle, 2.20 by 2.20 metres, marked with the letters “Mp”."
+		},
+		"banco_medio_tronco": {
+			"nombre": "Half-log bench",
+			"descripcion": "Half a log lying on two blocks, backless, bark side down. Low, rough and very heavy.",
+			"etiquetas": ["log bench", "half-log bench", "rustic bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Half-log bench”: a rectangle, 2.00 by 0.45 metres, marked with the letters “Bm”."
+		},
+		"deposito_cenizas": {
+			"nombre": "Barbecue ash bin",
+			"descripcion": "Lidded sheet-metal drum beside the barbecues for the embers. It can stay hot on the outside for hours.",
+			"etiquetas": ["ash bin", "ember bin", "ash drum"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Barbecue ash bin”: a circle, 0.50 by 0.50 metres, marked with the letters “Dc”."
+		},
+		"fuente_pilon": {
+			"nombre": "Spout fountain with trough",
+			"descripcion": "Stone pillar with a spout pouring water non-stop into a long trough at knee height. You hear it from afar; the ground around is wet.",
+			"etiquetas": ["spout fountain", "trough fountain", "village fountain"],
+			"acciones": {
+				"beber": "Drink"
+			},
+			"imagen": "Footprint of “Spout fountain with trough”: a narrow pillar at the back (with the spout) and a wide trough at the front, 1.50 by 0.90 metres, marked with the letters “Fp”."
+		},
+		"pila_merendero": {
+			"nombre": "Picnic area sink",
+			"descripcion": "Long concrete sink with two push taps, for washing up. Waist high; it drips and leaves puddles.",
+			"etiquetas": ["picnic sink", "outdoor sink", "wash-up sink"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Picnic area sink”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Pm”."
+		},
+		"refugio_merendero": {
+			"nombre": "Picnic shelter",
+			"descripcion": "Roofed timber shelter, closed at the back and sides and open at the front, with a bench running inside. The sound changes inside: you sense the roof.",
+			"etiquetas": ["picnic shelter", "gazebo", "shelter"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Picnic shelter”: a U open at the front, 4.00 by 3.00 metres, marked with the letters “Rm”."
+		},
+		"papelera_madera_parque": {
+			"nombre": "Wooden park litter bin",
+			"descripcion": "Slatted wooden litter bin with a metal bucket inside and a wide mouth, at hip height.",
+			"etiquetas": ["park litter bin", "wooden bin", "slatted bin"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Wooden park litter bin”: an octagon, 0.50 by 0.50 metres, marked with the letters “Pm”."
+		},
+		"panel_ruta": {
+			"nombre": "Trail information board",
+			"descripcion": "Large board between two wooden posts, with a small roof jutting out at head height. It shows the trail map, sometimes in relief.",
+			"etiquetas": ["trail board", "information board", "interpretation panel"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Trail information board”: a rectangle, 1.50 by 0.40 metres, marked with the letters “Pr”."
+		},
+		"hito_km": {
+			"nombre": "Distance marker stone",
+			"descripcion": "Dressed stone set at the edge of the path, knee high, with the kilometre number carved in: read it with your fingers.",
+			"etiquetas": ["distance marker", "kilometre stone", "milestone"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Distance marker stone”: a rectangle, 0.30 by 0.20 metres, marked with the letters “Hk”."
+		},
+		"pasarela_madera": {
+			"nombre": "Boardwalk with handrail",
+			"descripcion": "Plank path raised a hand's width above the ground, with handrails at the sides. Steps sound like hollow wood; the handrail guides you to the end.",
+			"etiquetas": ["boardwalk", "wooden walkway", "duckboards"],
+			"aviso": "Boardwalk: follow the handrail.",
+			"imagen": "Footprint of “Boardwalk with handrail”: a rectangle, 1.50 by 6.00 metres, marked with the letters “Pm”."
+		},
+		"puente_madera_sendero": {
+			"nombre": "Timber footbridge",
+			"descripcion": "Narrow plank bridge, slightly humped, with handrails. It rises as you step on and drops as you leave; you hear water below.",
+			"etiquetas": ["footbridge", "timber bridge", "plank bridge"],
+			"aviso": "Timber bridge: it rises, then drops.",
+			"imagen": "Footprint of “Timber footbridge”: a rectangle, 1.50 by 5.00 metres, marked with the letters “Pm”."
+		},
+		"vado_piedras": {
+			"nombre": "Stepping stones ford",
+			"descripcion": "Row of flat stones for crossing the water one by one. They are a stride apart and wet: between stones your foot lands in water.",
+			"etiquetas": ["stepping stones", "ford", "stone crossing"],
+			"aviso": "Stepping stones: wet and spaced apart.",
+			"imagen": "Footprint of “Stepping stones ford”: a rectangle with wavy edges, 1.20 by 3.00 metres, marked with the letters “Vp”."
+		},
+		"escalones_traviesas": {
+			"nombre": "Sleeper steps",
+			"descripcion": "Sloping stretch of trail with steps made of timber sleepers backed with earth. Each step has a different rise and depth: feel for each one.",
+			"etiquetas": ["sleeper steps", "timber steps", "trail steps"],
+			"aviso": "Uneven sleeper steps.",
+			"imagen": "Footprint of “Sleeper steps”: a rectangle, 1.50 by 3.00 metres, marked with the letters “Et”."
+		},
+		"tramo_grava": {
+			"nombre": "Gravel stretch",
+			"descripcion": "Stretch of path covered in loose gravel. It does not block the way: it crunches underfoot and drags on the cane. It tells you that you are still on the path.",
+			"etiquetas": ["gravel", "gravel path", "chippings"],
+			"imagen": "Footprint of “Gravel stretch”: a rectangle, 2.00 by 4.00 metres, marked with the letters “Tg”."
+		},
+		"portilla_ganado": {
+			"nombre": "Livestock gate",
+			"descripcion": "Board or tube gate closing the path to keep livestock in. Push to open and leave it shut; the fastening is usually a wire loop or a bolt.",
+			"etiquetas": ["livestock gate", "field gate", "farm gate"],
+			"variantes": {
+				"peatonal": "Pedestrian",
+				"de_carro": "Cart width"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Livestock gate”: a rectangle, 1.20 by 0.10 metres, marked with the letters “Pg”."
+		},
+		"paso_canadiense": {
+			"nombre": "Cattle grid",
+			"descripcion": "Grid of iron tubes laid over a pit across the path. You walk on it, but there are gaps between tubes: a foot or the cane tip can slip through.",
+			"etiquetas": ["cattle grid", "cattle guard", "stock grid"],
+			"aviso": "Cattle grid: gaps between the tubes.",
+			"imagen": "Footprint of “Cattle grid”: a rectangle, 3.00 by 2.00 metres, marked with the letters “Pc”."
+		},
+		"talanquera": {
+			"nombre": "Timber post-and-rail fence",
+			"descripcion": "Fence of round posts with two timber rails at hip height along the trail edge. It marks the side of the drop or the river: trail it with your hand.",
+			"etiquetas": ["post-and-rail fence", "timber rail", "rustic fence"],
+			"imagen": "Footprint of “Timber post-and-rail fence”: a rectangle, 2.50 by 0.12 metres, marked with the letters “Ta”."
+		},
+		"barrera_forestal": {
+			"nombre": "Single-bar forest barrier",
+			"descripcion": "Horizontal iron tube closing the track to cars at hip height, supported only at its ends. The cane passes underneath without touching it and it catches you at the waist.",
+			"etiquetas": ["forest barrier", "track barrier", "swing bar"],
+			"imagen": "Footprint of “Single-bar forest barrier”: a rectangle, 4.00 by 0.10 metres, hanging 0.85 metres above the floor, marked with the letters “Bf”."
+		},
+		"muro_piedra_seca": {
+			"nombre": "Dry stone wall",
+			"descripcion": "Wall of loose stones with no mortar, broad and of uneven height, between knee and chest. A good line to follow; the odd stone shifts when leant on.",
+			"etiquetas": ["dry stone wall", "stone wall", "field wall"],
+			"imagen": "Footprint of “Dry stone wall”: a rectangle, 4.00 by 0.60 metres, marked with the letters “Mp”."
+		},
+		"mojon_piedra": {
+			"nombre": "Stone cairn",
+			"descripcion": "Cone-shaped pile of stacked stones, knee high, marking where the trail goes. Knock it and it collapses.",
+			"etiquetas": ["cairn", "stone pile", "trail marker"],
+			"imagen": "Footprint of “Stone cairn”: a circle, 0.35 by 0.35 metres, marked with the letters “Mp”."
+		},
+		"flechas_sendero": {
+			"nombre": "Trail signpost with arrows",
+			"descripcion": "Thin post with arrow-shaped boards jutting sideways at face height. The cane, if anything, finds the post; the arrow tips give no warning.",
+			"etiquetas": ["trail signpost", "fingerpost", "waymarker", "overhead obstacle"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Trail signpost with arrows”: a rectangle, 0.90 by 0.15 metres, hanging 1.50 metres above the floor, marked with the letters “Fs”."
+		},
+		"raiz_camino": {
+			"nombre": "Root across the path",
+			"descripcion": "Thick root surfacing and crossing the trail, hard and slippery. It does not block the way: it is a trip hazard at ankle height.",
+			"etiquetas": ["root", "tree root", "trip hazard"],
+			"aviso": "Root on the path: lift your foot.",
+			"imagen": "Footprint of “Root across the path”: a rectangle with wavy edges, 1.50 by 0.20 metres, marked with the letters “Rc”."
+		},
+		"tronco_caido": {
+			"nombre": "Fallen log across the trail",
+			"descripcion": "Log lying right across the path at shin or knee height. Step over it or go round its end.",
+			"etiquetas": ["fallen log", "log", "tree trunk"],
+			"variantes": {
+				"delgado": "Thin",
+				"grueso": "Thick"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Fallen log across the trail”: a rectangle, 3.00 by 0.40 metres, marked with the letters “Tc”."
+		},
+		"rama_baja": {
+			"nombre": "Low branch over the trail",
+			"descripcion": "Thick branch crossing the path at forehead height. The cane will not find it: keep a hand in front of your face.",
+			"etiquetas": ["low branch", "overhanging branch", "overhead obstacle"],
+			"imagen": "Footprint of “Low branch over the trail”: a rectangle, 2.00 by 0.15 metres, hanging 1.50 metres above the floor, marked with the letters “Rb”."
+		},
+		"barrizal": {
+			"nombre": "Muddy patch",
+			"descripcion": "Stretch of soft mud that never dries out. It does not block the way, but your foot sinks, squelches and slips.",
+			"etiquetas": ["mud", "muddy patch", "bog"],
+			"aviso": "Mud: slippery.",
+			"imagen": "Footprint of “Muddy patch”: an irregular patch, 2.00 by 1.50 metres, marked with the letters “Ba”."
+		},
+		"zarzal": {
+			"nombre": "Bramble thicket",
+			"descripcion": "Tangle of brambles with long stems reaching into the trail. They prick and snag clothes: the first thing you touch is a stray stem at arm height.",
+			"etiquetas": ["brambles", "bramble thicket", "briars"],
+			"aviso": "Brambles: they prick.",
+			"imagen": "Footprint of “Bramble thicket”: an irregular patch, 2.00 by 1.00 metres, marked with the letters “Za”."
+		},
+		"talud_tierra": {
+			"nombre": "Earth bank",
+			"descripcion": "Short, steep earth slope at the side of the path. The cane runs up it; you cannot walk across.",
+			"etiquetas": ["bank", "embankment", "slope"],
+			"imagen": "Footprint of “Earth bank”: a trapezoid, narrower at the back, 4.00 by 1.50 metres, marked with the letters “Tt”."
+		},
+		"cuneta": {
+			"nombre": "Path ditch",
+			"descripcion": "Narrow grassy ditch running alongside the path. It does not block the way, but the ground drops a hand's width at once: easy to twist an ankle.",
+			"etiquetas": ["ditch", "roadside ditch", "drainage ditch"],
+			"aviso": "Ditch: the ground drops.",
+			"imagen": "Footprint of “Path ditch”: a rectangle, 0.60 by 5.00 metres, marked with the letters “Cu”."
+		},
+		"roca_redonda": {
+			"nombre": "Large round boulder",
+			"descripcion": "Rounded boulder, smooth and cold, chest high. You can trail your hand round it without meeting a corner.",
+			"etiquetas": ["boulder", "rock", "large stone"],
+			"imagen": "Footprint of “Large round boulder”: a circle, 1.50 by 1.50 metres, marked with the letters “Rr”."
+		},
+		"grupo_rocas": {
+			"nombre": "Irregular rock cluster",
+			"descripcion": "Several rocks together at different heights, with edges and gaps between them. The outline goes in and out: do not trust it at speed.",
+			"etiquetas": ["rocks", "rock cluster", "outcrop"],
+			"imagen": "Footprint of “Irregular rock cluster”: a jagged outline with nooks and bumps, 3.00 by 2.00 metres, marked with the letters “Gr”."
+		},
+		"piedra_sentarse": {
+			"nombre": "Sitting stone",
+			"descripcion": "Stone with a flat top at knee height, worn smooth by sitters. It usually marks a junction or a resting spot.",
+			"etiquetas": ["sitting stone", "seat stone", "flat rock"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Sitting stone”: a rectangle with cut corners, 0.80 by 0.60 metres, marked with the letters “Ps”."
+		},
+		"barandilla_mirador": {
+			"nombre": "Curved viewpoint railing",
+			"descripcion": "Half-moon railing at the edge of the viewpoint, chest high. There is a drop behind it: this is the limit. A bench usually faces it and the wind blows harder.",
+			"etiquetas": ["viewpoint railing", "lookout rail", "belvedere"],
+			"aviso": "Viewpoint railing: there is a drop beyond.",
+			"imagen": "Footprint of “Curved viewpoint railing”: a curved band bulging towards the front, 5.00 by 2.50 metres, marked with the letters “Bm”."
+		},
+		"mesa_orientacion": {
+			"nombre": "Tactile orientation table",
+			"descripcion": "Sloping half-moon stone lectern with the landscape in relief and the names of the hills in braille. Read it with both hands, left to right.",
+			"etiquetas": ["orientation table", "toposcope", "viewpoint indicator"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Tactile orientation table”: a semicircle, straight at the back and round at the front, 1.20 by 0.70 metres, marked with the letters “Mo”."
+		},
+		"observatorio_aves": {
+			"nombre": "Bird hide",
+			"descripcion": "Board hut with a long slot at eye level and a bench running inside. You enter by the open front; keep quiet inside: you hear the birds.",
+			"etiquetas": ["bird hide", "bird blind", "observation hut"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Bird hide”: a U open at the front, 3.00 by 2.00 metres, marked with the letters “Oa”."
+		},
+		"estanque_parque": {
+			"nombre": "Park pond with low edge",
+			"descripcion": "Sheet of still water ringed by a stone kerb a hand's width high. No railing: beyond the kerb the ground ends and there is water. It smells damp and there are often ducks.",
+			"etiquetas": ["pond", "park pond", "duck pond"],
+			"aviso": "Edge of the pond: stop, water ahead.",
+			"imagen": "Footprint of “Park pond with low edge”: a rectangle with rounded corners, 6.00 by 4.00 metres, marked with the letters “Ep”."
+		},
+		"alberca_riego": {
+			"nombre": "Irrigation tank",
+			"descripcion": "Open masonry tank with waist-high walls and water inside. Trail the wall with your hand; do not sit on the rim.",
+			"etiquetas": ["irrigation tank", "water tank", "reservoir"],
+			"aviso": "Water tank: deep water inside.",
+			"imagen": "Footprint of “Irrigation tank”: a rectangle, 3.00 by 2.00 metres, marked with the letters “Ar”."
+		},
+		"chorros_suelo": {
+			"nombre": "Walk-through ground jets",
+			"descripcion": "Circle of paving with flush nozzles that shoot water upwards, on and off. It does not block the way: you get wet and the ground is slippery.",
+			"etiquetas": ["ground jets", "splash pad", "dry fountain"],
+			"aviso": "Water jets: you will get wet.",
+			"imagen": "Footprint of “Walk-through ground jets”: a circle, 4.00 by 4.00 metres, marked with the letters “Cs”."
+		},
+		"arroyo": {
+			"nombre": "Stream",
+			"descripcion": "Band of shallow water running between stones. You hear it from afar and it works as a guide: the sound comes from a line, not a point. The bank drops sharply and is slippery.",
+			"etiquetas": ["stream", "brook", "creek"],
+			"aviso": "Stream: the ground drops into water.",
+			"imagen": "Footprint of “Stream”: a rectangle with wavy edges, 1.50 by 8.00 metres, marked with the letters “Ar”."
+		},
+		"cascada_pequena": {
+			"nombre": "Small waterfall",
+			"descripcion": "Water dropping over a step of rocks. It makes a loud, steady roar that masks other sounds; the rocks around are wet and it splashes.",
+			"etiquetas": ["waterfall", "cascade", "falls"],
+			"imagen": "Footprint of “Small waterfall”: a jagged outline with nooks and bumps, 2.00 by 1.50 metres, marked with the letters “Cp”."
+		},
+		"acequia": {
+			"nombre": "Irrigation channel",
+			"descripcion": "Narrow, straight concrete channel with running water. It does not block the way, but it is a gap two hands deep: cross it in one stride or over a slab.",
+			"etiquetas": ["irrigation channel", "irrigation ditch", "water channel"],
+			"aviso": "Irrigation channel: a gap with water. Cross it in one stride.",
+			"imagen": "Footprint of “Irrigation channel”: a rectangle, 0.60 by 6.00 metres, marked with the letters “Ac”."
+		},
+		"abrevadero": {
+			"nombre": "Stone drinking trough",
+			"descripcion": "Long stone trough at knee height, full of water, where livestock drink. A spout drips at one end.",
+			"etiquetas": ["drinking trough", "water trough", "stone trough"],
+			"imagen": "Footprint of “Stone drinking trough”: a rectangle, 2.50 by 0.70 metres, marked with the letters “Ab”."
+		},
+		"pozo_brocal": {
+			"nombre": "Well with parapet",
+			"descripcion": "Round stone parapet at waist height, with an iron arch above carrying the pulley and bucket. The mouth usually has a grille; your voice echoes inside.",
+			"etiquetas": ["well", "water well", "well head"],
+			"acciones": {
+				"pq_sacar_agua": "Draw water with the bucket"
+			},
+			"imagen": "Footprint of “Well with parapet”: an octagon, 1.20 by 1.20 metres, marked with the letters “Pb”."
+		},
+		"embarcadero": {
+			"nombre": "Wooden jetty",
+			"descripcion": "Plank walkway running out over the water on piles, with no handrail. Steps sound hollow; there is water on both sides and at the end.",
+			"etiquetas": ["jetty", "wooden pier", "landing stage"],
+			"aviso": "Jetty with no handrail: water at the sides and the end.",
+			"imagen": "Footprint of “Wooden jetty”: a rectangle, 1.50 by 6.00 metres, marked with the letters “Em”."
+		},
+		"barca_varada": {
+			"nombre": "Beached rowing boat",
+			"descripcion": "Wooden boat pulled up on the shore, resting on its side. The bow is pointed and the gunwale is at knee height; inside are thwarts and oars.",
+			"etiquetas": ["rowing boat", "dinghy", "beached boat"],
+			"imagen": "Footprint of “Beached rowing boat”: a boat: square stern at the back and pointed bow at the front, 1.40 by 3.50 metres, marked with the letters “Bv”."
+		},
+		"platano_sombra": {
+			"nombre": "London plane tree",
+			"descripcion": "Large park tree with a thick trunk and smooth bark that peels off in thin, papery plates. The roots lift the ground around it and spiky balls fall in autumn; in the wind the large leaves rustle high above.",
+			"etiquetas": ["plane tree", "London plane", "park tree", "large tree", "trunk"],
+			"variantes": {
+				"joven": "Young",
+				"adulto": "Mature",
+				"centenario": "Ancient"
+			},
+			"imagen": "Footprint of “London plane tree”: a circle, 0.70 by 0.70 metres, marked with the letters “Ps”."
+		},
+		"pino_pinonero": {
+			"nombre": "Stone pine",
+			"descripcion": "Straight trunk with thick, cracked bark in scales you can feel with your fingers; it is sticky with resin and smells of it. The umbrella crown is very high; the ground around is springy with dry needles and cones roll underfoot.",
+			"etiquetas": ["pine", "stone pine", "umbrella pine", "pine wood", "resin"],
+			"imagen": "Footprint of “Stone pine”: a circle, 0.50 by 0.50 metres, marked with the letters “Pp”."
+		},
+		"olivo": {
+			"nombre": "Olive tree",
+			"descripcion": "Low, wide, twisted trunk full of hollows and knots big enough for a hand. The branches start low and the crown is at head height: approach with a hand in front. In autumn fallen olives stain and slip.",
+			"etiquetas": ["olive tree", "ancient olive", "olive grove", "gnarled tree"],
+			"variantes": {
+				"joven": "Young",
+				"centenario": "Ancient"
+			},
+			"imagen": "Footprint of “Olive tree”: a twisted trunk with several limbs and hollows, 0.80 by 0.80 metres, marked with the letters “Ol”."
+		},
+		"palmera": {
+			"nombre": "Date palm",
+			"descripcion": "Straight, branchless trunk covered in hard scales that scrape like a giant pine cone. The fronds are far above and rattle like dry paper in the wind; fallen dates squash and slip.",
+			"etiquetas": ["palm tree", "date palm", "palm"],
+			"imagen": "Footprint of “Date palm”: a circle, 0.60 by 0.60 metres, marked with the letters “Pa”."
+		},
+		"sauce_lloron": {
+			"nombre": "Weeping willow curtain",
+			"descripcion": "Long thin branches hanging from high up almost to the ground, like a round curtain. You part them with your hand and they do no harm; inside, sound is muffled and the trunk stands in the middle. There is usually water nearby.",
+			"etiquetas": ["weeping willow", "willow", "hanging branches"],
+			"imagen": "Footprint of “Weeping willow curtain”: a round crown with a lobed edge, 8.00 by 8.00 metres, hanging 0.60 metres above the floor, marked with the letters “Sl”."
+		},
+		"arbol_frutal": {
+			"nombre": "Fruit tree",
+			"descripcion": "Small tree with a thin trunk, its crown at head height and the fruit hanging lower still. Depending on the season it smells of blossom or ripe fruit, and fallen fruit squashes underfoot.",
+			"etiquetas": ["fruit tree", "orange tree", "apple tree", "lemon tree", "fig tree"],
+			"variantes": {
+				"naranjo": "Orange tree",
+				"manzano": "Apple tree",
+				"higuera": "Fig tree"
+			},
+			"acciones": {
+				"coger": "Take",
+				"pq_oler": "Smell"
+			},
+			"imagen": "Footprint of “Fruit tree”: a circle, 0.20 by 0.20 metres, marked with the letters “Af”."
+		},
+		"encina": {
+			"nombre": "Holm oak",
+			"descripcion": "Broad tree with a short trunk and hard bark cracked into little squares. The crown is dense and casts deep shade; acorns and dry, slightly prickly leaves crunch beneath it. You hear birds inside.",
+			"etiquetas": ["holm oak", "evergreen oak", "oak", "acorns"],
+			"imagen": "Footprint of “Holm oak”: a circle, 0.70 by 0.70 metres, marked with the letters “En”."
+		},
+		"copa_baja": {
+			"nombre": "Low tree crown",
+			"descripcion": "Branches and leaves of a tree hanging down to forehead height. The cane passes underneath without touching anything: the first thing you feel is leaves on your face. Place it over a tree trunk.",
+			"etiquetas": ["low crown", "low branches", "tree canopy", "foliage", "overhead obstacle"],
+			"imagen": "Footprint of “Low tree crown”: a round crown with a lobed edge, 4.00 by 4.00 metres, hanging 1.50 metres above the floor, marked with the letters “Cb”."
+		},
+		"arbol_joven_tutores": {
+			"nombre": "Young tree with stakes",
+			"descripcion": "Newly planted tree with a trunk as thin as a wrist, tied with rubber straps to three wooden stakes driven in around it. The stakes and low crossbars are what the cane finds; the bare earth around is slightly sunken.",
+			"etiquetas": ["young tree", "staked tree", "newly planted tree", "tree stakes"],
+			"imagen": "Footprint of “Young tree with stakes”: a triangle pointing to the front, 0.80 by 0.80 metres, marked with the letters “Aj”."
+		},
+		"tocon": {
+			"nombre": "Tree stump",
+			"descripcion": "What remains of a felled tree: a wooden cylinder at knee height, rough bark on the sides and a flat, ringed cut on top. Roots poke out around it and trip you.",
+			"etiquetas": ["stump", "tree stump", "cut trunk"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Tree stump”: a circle, 0.60 by 0.60 metres, marked with the letters “To”."
+		},
+		"tocones_equilibrio": {
+			"nombre": "Row of balancing stumps",
+			"descripcion": "Winding row of log rounds set upright, each at a different height, for hopping from one to the next. There are stride-wide gaps between them: loose trip hazards at shin height.",
+			"etiquetas": ["balancing stumps", "stepping logs", "log rounds"],
+			"acciones": {
+				"pq_saltar": "Jump"
+			},
+			"imagen": "Footprint of “Row of balancing stumps”: a rectangle with wavy edges, 1.50 by 3.00 metres, marked with the letters “Te”."
+		},
+		"pila_lena": {
+			"nombre": "Woodpile",
+			"descripcion": "Cut logs stacked against a wall or between two posts, chest high. The face is uneven, with ends sticking out; it smells of wood and resin, and a loose log may roll when touched.",
+			"etiquetas": ["woodpile", "log pile", "stacked firewood"],
+			"imagen": "Footprint of “Woodpile”: a rectangle, 2.00 by 0.60 metres, marked with the letters “Pl”."
+		},
+		"rama_desgajada": {
+			"nombre": "Large broken-off branch",
+			"descripcion": "Thick branch that fell from a tree in a storm: at one end it is a hard pole at shin height and at the other it opens into a tangle of twigs and leaves that snag.",
+			"etiquetas": ["fallen branch", "broken branch", "brushwood"],
+			"imagen": "Footprint of “Large broken-off branch”: a narrow trunk on the left ending in a wide crown of branches on the right, 4.00 by 2.00 metres, marked with the letters “Rd”."
+		},
+		"bordura_boj": {
+			"nombre": "Box edging",
+			"descripcion": "Very low clipped hedge edging the flower beds and garden paths. Shin high, dense and firm, with a strong, distinctive smell. A good guide, but it trips anyone not expecting it.",
+			"etiquetas": ["box edging", "box hedge", "low hedge", "parterre edging"],
+			"acciones": {
+				"pq_oler": "Smell"
+			},
+			"imagen": "Footprint of “Box edging”: a rectangle, 3.00 by 0.30 metres, marked with the letters “Bb”."
+		},
+		"laberinto_setos": {
+			"nombre": "Hedge maze section",
+			"descripcion": "Wall of tall clipped hedge, higher than a person, with branches jutting forward to form dead-end corridors. Trail it with your hand; at a dead end, turn back.",
+			"etiquetas": ["hedge maze", "maze", "tall hedge", "hedge corridors"],
+			"imagen": "Footprint of “Hedge maze section”: a comb: a bar with bodies sticking out to the front, 6.00 by 3.00 metres, marked with the letters “Ls”."
+		},
+		"seto_espino": {
+			"nombre": "Hawthorn field hedge",
+			"descripcion": "Unclipped field hedge of thorny shrubs tangled with old wire, separating two plots. It is uneven, prickly and snags clothing; you hear birds inside.",
+			"etiquetas": ["field hedge", "hawthorn hedge", "hedgerow", "boundary hedge"],
+			"aviso": "Hawthorn hedge: it pricks.",
+			"imagen": "Footprint of “Hawthorn field hedge”: an irregular patch, 5.00 by 1.20 metres, marked with the letters “Se”."
+		},
+		"arbusto_redondo": {
+			"nombre": "Round shrub",
+			"descripcion": "Dense, rounded bush, waist or chest high. The leaves give when touched, but the branches inside are firm; the cane slips in among them.",
+			"etiquetas": ["shrub", "bush", "rounded shrub"],
+			"variantes": {
+				"pequeno": "Small",
+				"mediano": "Medium",
+				"grande": "Large"
+			},
+			"imagen": "Footprint of “Round shrub”: an irregular patch, 1.20 by 1.20 metres, marked with the letters “Ar”."
+		},
+		"rosaleda": {
+			"nombre": "Rose bed",
+			"descripcion": "Group of waist-high rose bushes with thorny stems. They smell sweet when in bloom. Do not put your hand in carelessly: they prick.",
+			"etiquetas": ["rose bed", "roses", "rose garden", "rose bushes"],
+			"acciones": {
+				"pq_oler": "Smell"
+			},
+			"aviso": "Roses: they prick.",
+			"imagen": "Footprint of “Rose bed”: an irregular patch, 2.00 by 1.20 metres, marked with the letters “Ro”."
+		},
+		"macizo_flores": {
+			"nombre": "Flower bed",
+			"descripcion": "Bed of seasonal flowers in soft soil, edged with a low kerb. The flowers are below knee height: your foot is in the bed before you notice.",
+			"etiquetas": ["flower bed", "bedding plants", "border"],
+			"acciones": {
+				"pq_oler": "Smell"
+			},
+			"imagen": "Footprint of “Flower bed”: a rectangle with rounded corners, 2.50 by 1.50 metres, marked with the letters “Mf”."
+		},
+		"lavanda_fila": {
+			"nombre": "Row of lavender",
+			"descripcion": "Row of knee-high lavender bushes with swaying spikes. Brushing them releases a strong scent that stays on your clothes; in summer bees hum among them.",
+			"etiquetas": ["lavender", "aromatic plants", "rosemary", "herbs"],
+			"acciones": {
+				"pq_oler": "Smell"
+			},
+			"imagen": "Footprint of “Row of lavender”: a rectangle, 3.00 by 0.70 metres, marked with the letters “Lf”."
+		},
+		"cesped_pradera": {
+			"nombre": "Lawn",
+			"descripcion": "Expanse of short, soft grass. It does not block the way: footsteps go quiet and the cane brushes. Where the grass ends, the path begins.",
+			"etiquetas": ["lawn", "grass", "meadow", "green"],
+			"imagen": "Footprint of “Lawn”: a rectangle, 8.00 by 8.00 metres, marked with the letters “Cp”."
+		},
+		"canaveral": {
+			"nombre": "Reed bed",
+			"descripcion": "Thick clump of tall canes, taller than a person, by the water. The canes are hollow and thin; in the wind they knock together and the dry leaves whisper. The ground around is usually damp.",
+			"etiquetas": ["reed bed", "reeds", "giant cane", "rushes"],
+			"imagen": "Footprint of “Reed bed”: an irregular patch, 3.00 by 2.00 metres, marked with the letters “Ca”."
+		},
+		"chumbera": {
+			"nombre": "Prickly pear",
+			"descripcion": "Cactus of flat, fleshy pads stacked on each other, covered in fine spines that stick in at the slightest touch. Chest high and spreading sideways: give it a wide berth.",
+			"etiquetas": ["prickly pear", "opuntia", "cactus"],
+			"aviso": "Prickly pear: fine spines, do not touch.",
+			"imagen": "Footprint of “Prickly pear”: an irregular patch, 2.00 by 1.50 metres, marked with the letters “Ch”."
+		},
+		"emparrado": {
+			"nombre": "Vine arbour",
+			"descripcion": "Roof of wires and beams covered by a grapevine, on corner posts. Bunches of grapes hang down to forehead height; in summer it smells of grapes and wasps buzz; underneath is cool shade.",
+			"etiquetas": ["vine arbour", "grapevine", "pergola vine", "overhead obstacle"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Vine arbour”: a rectangle, 4.00 by 4.00 metres, hanging 1.85 metres above the floor, marked with the letters “Em”."
+		},
+		"arco_rosales": {
+			"nombre": "Rose arch",
+			"descripcion": "Iron arch over a path, covered in climbing roses. Its two feet stand either side of the way; above, thorny stems hang down to face height. Go through the middle with your head slightly bowed.",
+			"etiquetas": ["rose arch", "garden arch", "climbing roses", "arbour arch"],
+			"acciones": {
+				"pq_oler": "Smell"
+			},
+			"imagen": "Footprint of “Rose arch”: a rectangle, 1.50 by 0.60 metres, hanging 1.75 metres above the floor, marked with the letters “Ar”."
+		},
+		"celosia_enredadera": {
+			"nombre": "Trellis with climber",
+			"descripcion": "Upright panel of criss-cross slats covered in jasmine or ivy. You can trail it with your hand like a soft wall; at night the jasmine smells strongly.",
+			"etiquetas": ["trellis", "climber", "jasmine", "ivy", "screen"],
+			"acciones": {
+				"pq_oler": "Smell"
+			},
+			"imagen": "Footprint of “Trellis with climber”: a rectangle, 2.00 by 0.25 metres, marked with the letters “Ce”."
+		},
+		"surcos_huerto": {
+			"nombre": "Vegetable plot furrows",
+			"descripcion": "Tilled soil in parallel ridges with vegetables on top and a deep furrow between each, where the irrigation water runs. Your foot twists and sinks; walk along the trodden paths.",
+			"etiquetas": ["furrows", "ridges", "vegetable plot", "tilled soil"],
+			"acciones": {
+				"pq_cavar": "Dig"
+			},
+			"aviso": "Furrows: the ground goes up and down.",
+			"imagen": "Footprint of “Vegetable plot furrows”: a rectangle, 4.00 by 5.00 metres, marked with the letters “Sh”."
+		},
+		"bancal_elevado": {
+			"nombre": "Raised timber bed",
+			"descripcion": "Plank box full of soil at hip height, for growing without bending. The wooden rim makes a handrest; inside it smells of damp earth and tomato leaves.",
+			"etiquetas": ["raised bed", "raised planter", "grow box"],
+			"variantes": {
+				"bajo": "Low",
+				"alto": "Hip height"
+			},
+			"acciones": {
+				"pq_cavar": "Dig",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Raised timber bed”: a rectangle, 2.00 by 1.00 metres, marked with the letters “Be”."
+		},
+		"mesa_cultivo": {
+			"nombre": "Accessible growing table",
+			"descripcion": "Tray of soil on legs at table height, with clear space underneath for your legs or a wheelchair. The edge is rounded and you garden sitting down.",
+			"etiquetas": ["growing table", "accessible planter", "table planter"],
+			"acciones": {
+				"pq_cavar": "Dig",
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Accessible growing table”: a rectangle, 1.50 by 0.80 metres, marked with the letters “Mc”."
+		},
+		"tomateras_entutoradas": {
+			"nombre": "Staked tomato plants",
+			"descripcion": "Row of tomato plants tied to canes crossed like a roof. The cane tips poke out at the top at face height; the leaves smell strongly of tomato and stain your fingers.",
+			"etiquetas": ["tomato plants", "tomato canes", "bean poles", "staked plants"],
+			"acciones": {
+				"coger": "Take",
+				"pq_oler": "Smell"
+			},
+			"imagen": "Footprint of “Staked tomato plants”: a rectangle, 3.00 by 0.80 metres, marked with the letters “Te”."
+		},
+		"espantapajaros": {
+			"nombre": "Scarecrow",
+			"descripcion": "Post driven into the plot with a crossbar at shoulder height, dressed in old clothes and a hat. The cane finds the post; the rag arms and hanging tins hit your face and clatter in the wind.",
+			"etiquetas": ["scarecrow", "field dummy"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Scarecrow”: a rectangle, 1.20 by 0.30 metres, marked with the letters “Es”."
+		},
+		"invernadero_tunel": {
+			"nombre": "Polytunnel",
+			"descripcion": "Tunnel of metal hoops covered in plastic sheeting, with a zipped or canvas door at one end. Outside, the plastic crackles and booms in the wind; inside it is warm and smells of damp and soil.",
+			"etiquetas": ["polytunnel", "greenhouse", "hoop house", "grow tunnel"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Polytunnel”: a rectangle with rounded corners, 4.00 by 8.00 metres, marked with the letters “It”."
+		},
+		"compostador": {
+			"nombre": "Compost bin",
+			"descripcion": "Large bottomless plastic bin with a lid on top and a hatch at the bottom to take out compost. It smells of fermenting grass; inside it is warm and you may hear insects.",
+			"etiquetas": ["compost bin", "composter", "compost heap"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Compost bin”: an octagon, 0.80 by 0.80 metres, marked with the letters “Co”."
+		},
+		"deposito_agua_huerto": {
+			"nombre": "Caged water tank",
+			"descripcion": "Thousand-litre cube-shaped plastic tank inside a cage of metal bars, on a pallet. There is a lever tap at the bottom; knocked, it sounds hollow or full depending on the water left.",
+			"etiquetas": ["water tank", "IBC tank", "rainwater tank"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Caged water tank”: a rectangle, 1.20 by 1.00 metres, marked with the letters “Da”."
+		},
+		"cajonera_semillero": {
+			"nombre": "Cold frame",
+			"descripcion": "Low wooden box with a sloping glass or plastic lid to protect seedlings. Knee high; the lid lifts up and is warm in the sun.",
+			"etiquetas": ["cold frame", "seedling frame", "seed bed"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Cold frame”: a rectangle, 1.20 by 0.60 metres, marked with the letters “Cs”."
+		},
+		"armarios_aperos": {
+			"nombre": "Allotment tool lockers",
+			"descripcion": "Row of narrow metal lockers, one per plot, each with its own padlock. They boom when shut and hold tools, boots and bags of fertiliser.",
+			"etiquetas": ["tool lockers", "allotment lockers", "tool storage"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Allotment tool lockers”: a rectangle, 3.00 by 0.60 metres, marked with the letters “Aa”."
+		},
+		"aspersor": {
+			"nombre": "Running lawn sprinkler",
+			"descripcion": "Circle of lawn watered by an impact sprinkler: in the middle, the metal head at ground level, a trip hazard; around it, the jet sweeps side to side with a tick, tick, tick and snaps back. You get wet and the grass is slippery.",
+			"etiquetas": ["sprinkler", "impact sprinkler", "lawn sprinkler", "irrigation"],
+			"acciones": {
+				"apagar": "Switch off",
+				"encender": "Switch on"
+			},
+			"aviso": "Sprinkler running: you will get wet.",
+			"imagen": "Footprint of “Running lawn sprinkler”: a circle, 8.00 by 8.00 metres, marked with the letters “As”."
+		},
+		"riego_goteo": {
+			"nombre": "Drip irrigation lines",
+			"descripcion": "Thin black tubes laid along the ground beside the plants, with a dripper every hand's width. They catch your foot, roll under the cane and the soil around is muddy.",
+			"etiquetas": ["drip irrigation", "drip line", "soaker hose"],
+			"aviso": "Irrigation hoses on the ground.",
+			"imagen": "Footprint of “Drip irrigation lines”: a rectangle, 2.00 by 5.00 metres, marked with the letters “Rg”."
+		},
+		"aperos_apoyados": {
+			"nombre": "Tools leaning on the fence",
+			"descripcion": "Hoe, spade, fork and rake stood up against the fence or shed. The wooden handles are smooth; the metal heads are on top, at chest and face height. Brush them and they slide and fall.",
+			"etiquetas": ["garden tools", "hoe", "spade", "fork", "rake"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Tools leaning on the fence”: a rectangle, 1.00 by 0.30 metres, marked with the letters “Aa”."
+		},
+		"rastrillo_tumbado": {
+			"nombre": "Rake lying tines up",
+			"descripcion": "Rake left on the ground with its teeth upwards. Step on the tines and the handle flips up into your face. Find it with the cane and move it by the handle.",
+			"etiquetas": ["rake", "rake on the ground", "garden rake"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"aviso": "Rake on the ground: do not step on the tines.",
+			"imagen": "Footprint of “Rake lying tines up”: a rectangle, 0.40 by 1.60 metres, marked with the letters “Rt”."
+		},
+		"regaderas_suelo": {
+			"nombre": "Watering cans and buckets on the path",
+			"descripcion": "Two or three watering cans and a bucket left in the middle of the plot path beside the tap. Low, plastic or zinc; they sound hollow or slosh if full.",
+			"etiquetas": ["watering cans", "buckets", "watering can"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Watering cans and buckets on the path”: an irregular patch, 0.80 by 0.40 metres, marked with the letters “Rs”."
+		},
+		"gallinero": {
+			"nombre": "Hen house with run",
+			"descripcion": "Wooden hen house with a mesh run in front. You hear clucking from afar and it smells of straw and feed. The run gate has a latch; inside, in the nest boxes, there are eggs.",
+			"etiquetas": ["hen house", "chicken coop", "hen run", "poultry"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"pq_recoger_huevos": "Collect the eggs"
+			},
+			"imagen": "Footprint of “Hen house with run”: the hut at the back left and the wider mesh run in front, 3.00 by 3.00 metres, marked with the letters “Ga”."
+		},
+		"colmenas": {
+			"nombre": "Beehives",
+			"descripcion": "Row of wooden boxes on a low stand at the far end of the plot or out in the hills. You hear the hum before you arrive and it grows as you approach: do not touch them or stand in front of the entrance.",
+			"etiquetas": ["beehives", "bees", "apiary", "beekeeping"],
+			"aviso": "Beehives: bees, keep away.",
+			"imagen": "Footprint of “Beehives”: a rectangle, 2.50 by 0.60 metres, marked with the letters “Co”."
+		},
+		"conejera": {
+			"nombre": "Rabbit hutch on legs",
+			"descripcion": "Wood and mesh hutch on legs at waist height, with a sloping roof. Inside you hear the rabbits moving on the straw; the mesh at the front is fine and gives when touched.",
+			"etiquetas": ["rabbit hutch", "hutch", "rabbits"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Rabbit hutch on legs”: a rectangle, 1.50 by 0.70 metres, marked with the letters “Co”."
+		},
+		"cercado_ovejas": {
+			"nombre": "Sheep pen",
+			"descripcion": "Chest-high timber-railed pen with a few sheep or goats inside. You hear bleating and the clank of bells; it smells of wool and dung. Lean on it and one may come to sniff you.",
+			"etiquetas": ["sheep pen", "pen", "sheep", "goats", "fold"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Sheep pen”: a rectangle, 5.00 by 4.00 metres, marked with the letters “Co”."
+		},
+		"hotel_insectos": {
+			"nombre": "Bug hotel",
+			"descripcion": "Wooden box with a little roof on a post at chest height, filled with hollow canes, cones and drilled logs. Explore it with your fingers: each hole is different. Small insects hum.",
+			"etiquetas": ["bug hotel", "insect hotel", "insect house"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Bug hotel”: a rectangle, 0.60 by 0.25 metres, marked with the letters “Hi”."
+		},
+		"balancin_jardin": {
+			"nombre": "Garden swing seat with canopy",
+			"descripcion": "Three-seat bench hung from a metal frame with a fabric canopy above. It rocks back and forth: the seat may swing towards you. The frame's legs splay at the sides.",
+			"etiquetas": ["garden swing seat", "swing bench", "porch swing"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"pq_balancearse": "Rock up and down"
+			},
+			"imagen": "Footprint of “Garden swing seat with canopy”: a rectangle, 2.10 by 1.40 metres, marked with the letters “Bj”."
+		},
+		"banco_forja_jardin": {
+			"nombre": "Wrought-iron garden bench",
+			"descripcion": "Bench with a wrought-iron back and arms and a seat of wooden slats. The arms have scrolls you can feel; the iron is cold in winter and hot in the summer sun.",
+			"etiquetas": ["garden bench", "wrought-iron bench", "park bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Wrought-iron garden bench”: a rectangle, 1.50 by 0.65 metres, marked with the letters “Bf”."
+		},
+		"hamaca_cuerda": {
+			"nombre": "Rope hammock between trees",
+			"descripcion": "Net hammock strung between two trunks at hip height, swinging gently. The cane passes underneath without touching it; the ropes rising to the trees cross at chest height.",
+			"etiquetas": ["hammock", "rope hammock", "net hammock"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Rope hammock between trees”: a rectangle, 1.20 by 3.80 metres, hanging 0.50 metres above the floor, marked with the letters “Hc”."
+		},
+		"reloj_sol": {
+			"nombre": "Sundial on a pedestal",
+			"descripcion": "Waist-high stone column with a bronze plate on top: the hour numbers are raised and a metal fin stands up in the middle. A good landmark in the middle of the garden.",
+			"etiquetas": ["sundial", "sun clock", "pedestal"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Sundial on a pedestal”: a circle, 0.50 by 0.50 metres, marked with the letters “Rs”."
+		},
+		"bebedero_pajaros": {
+			"nombre": "Bird bath",
+			"descripcion": "Shallow round basin on a stone foot at waist height, holding water. You hear birds splashing and they fly off as you approach.",
+			"etiquetas": ["bird bath", "bird basin"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Bird bath”: a circle, 0.60 by 0.60 metres, marked with the letters “Bp”."
+		},
+		"sombrilla_playa": {
+			"nombre": "Beach umbrella stuck in the sand",
+			"descripcion": "Fabric beach umbrella with its pole stuck in the sand, often tilted. The cane finds the pole, but the edge of the canopy and the ribs are at face height; in the wind it flaps and may blow away.",
+			"etiquetas": ["beach umbrella", "parasol", "sunshade"],
+			"acciones": {
+				"cerrar": "Close",
+				"abrir": "Open"
+			},
+			"imagen": "Footprint of “Beach umbrella stuck in the sand”: an octagon, 1.80 by 1.80 metres, hanging 1.50 metres above the floor, marked with the letters “Sp”."
+		},
+		"hamacas_alquiler": {
+			"nombre": "Pair of rented loungers with parasol",
+			"descripcion": "Two plastic sun loungers side by side with a fixed thatched parasol between them. They usually form rows: a narrow sand corridor separates one pair from the next.",
+			"etiquetas": ["sun loungers", "sunbeds", "rented loungers", "deckchairs"],
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Pair of rented loungers with parasol”: a comb: a bar with bodies sticking out to the front, 2.20 by 2.00 metres, marked with the letters “Ha”."
+		},
+		"paravientos_playa": {
+			"nombre": "Beach windbreak",
+			"descripcion": "Strip of canvas stretched between several poles stuck in the sand, at waist height. It cuts the wind and you hear it snap; the poles poke up above.",
+			"etiquetas": ["windbreak", "beach windbreak", "wind screen"],
+			"imagen": "Footprint of “Beach windbreak”: a curved band bulging towards the front, 3.00 by 0.15 metres, marked with the letters “Pp”."
+		},
+		"sombrajo_fijo": {
+			"nombre": "Fixed shade of poles and thatch",
+			"descripcion": "Thatched roof on four poles set in the sand, with a bench running underneath. The poles are all the cane finds; the roof is high enough and the sand beneath is cool.",
+			"etiquetas": ["beach shade", "palapa", "thatched shade"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Fixed shade of poles and thatch”: a hexagon, 4.00 by 4.00 metres, marked with the letters “Sf”."
+		},
+		"tienda_playa": {
+			"nombre": "Pop-up beach tent",
+			"descripcion": "Small fabric tent, open at the front, with a canvas floor and stones or sand in the pockets to stop it blowing away. It is soft: the cane dents it; a baby may be sleeping inside.",
+			"etiquetas": ["beach tent", "pop-up tent", "beach shelter"],
+			"imagen": "Footprint of “Pop-up beach tent”: a semicircle, straight at the back and round at the front, 1.50 by 1.20 metres, marked with the letters “Tp”."
+		},
+		"torre_socorrista_playa": {
+			"nombre": "Lifeguard tower",
+			"descripcion": "Wooden hut on tall legs with a steep ladder in front and a flagpole. From above you hear the whistle and the loudspeaker; underneath, between the legs, there is shade and rescue gear.",
+			"etiquetas": ["lifeguard tower", "lifeguard station", "rescue post"],
+			"acciones": {
+				"llamar": "Call"
+			},
+			"imagen": "Footprint of “Lifeguard tower”: a T shape, 2.00 by 2.60 metres, marked with the letters “Ts”."
+		},
+		"mastil_bandera_playa": {
+			"nombre": "Sea-condition flagpole",
+			"descripcion": "Tall thin pole by the lifeguard post. The flag flying shows whether swimming is allowed; since you cannot see it, ask the lifeguard or listen to the announcements. You hear the cloth snapping and the halyard clinking.",
+			"etiquetas": ["flagpole", "beach flag", "sea condition flag"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Sea-condition flagpole”: a circle, 0.12 by 0.12 metres, marked with the letters “Mb”."
+		},
+		"ducha_lavapies": {
+			"nombre": "Beach shower and foot tap",
+			"descripcion": "Steel column with a push-button shower on top and a low tap for your feet, on a puddled wooden duckboard. The water is cold and you hear it fall; the duckboard is slippery.",
+			"etiquetas": ["beach shower", "foot shower", "foot tap"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Beach shower and foot tap”: a narrow column at the back and the square duckboard in front, 1.20 by 1.20 metres, marked with the letters “Dl”."
+		},
+		"pasarela_playa": {
+			"nombre": "Roll-out boardwalk on the sand",
+			"descripcion": "Path of slats tied together with rope, laid on the sand from the promenade to near the water, with no handrail. Footsteps sound wooden and wheelchairs roll easily; where it ends, your feet sink into soft sand.",
+			"etiquetas": ["beach boardwalk", "roll-out walkway", "beach path"],
+			"aviso": "End of the boardwalk: soft sand begins.",
+			"imagen": "Footprint of “Roll-out boardwalk on the sand”: a rectangle, 1.20 by 15.00 metres, marked with the letters “Pp”."
+		},
+		"silla_anfibia": {
+			"nombre": "Amphibious beach wheelchair",
+			"descripcion": "Plastic tube chair with large soft wheels that float, armrests and a push handle at the back. With it you go into the water with a helper; it waits parked at the end of the boardwalk.",
+			"etiquetas": ["amphibious wheelchair", "beach wheelchair", "floating wheelchair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Amphibious beach wheelchair”: a rectangle, 0.90 by 1.40 metres, marked with the letters “Sa”."
+		},
+		"escalera_bajada_playa": {
+			"nombre": "Steps down to the beach",
+			"descripcion": "Concrete steps going down from the promenade to the sand, with a handrail on one side. The treads have sand on them and slip; the last one is higher because the sea washes the sand away.",
+			"etiquetas": ["beach steps", "steps to the beach", "beach access"],
+			"aviso": "Steps down to the beach: the last step is higher.",
+			"imagen": "Footprint of “Steps down to the beach”: a rectangle, 2.00 by 3.00 metres, marked with the letters “Eb”."
+		},
+		"castillo_arena": {
+			"nombre": "Sandcastle",
+			"descripcion": "Mound of damp, packed sand with towers at the corners and a moat around it full of water. It crumbles if you step on it; the moat is a small hole that twists your ankle.",
+			"etiquetas": ["sandcastle", "sand castle", "moat"],
+			"acciones": {
+				"pq_cavar": "Dig",
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Sandcastle”: a square with a tower sticking out at each corner, 1.00 by 1.00 metres, marked with the letters “Ca”."
+		},
+		"hoyo_arena": {
+			"nombre": "Hole in the sand",
+			"descripcion": "Hole dug by children, knee deep, with the dug-out sand heaped beside it. You do not notice it until your foot drops in; near the water it fills up by itself.",
+			"etiquetas": ["hole", "hole in the sand", "pit"],
+			"acciones": {
+				"pq_cavar": "Dig"
+			},
+			"aviso": "Hole in the sand: the ground drops.",
+			"imagen": "Footprint of “Hole in the sand”: a circle, 0.80 by 0.80 metres, marked with the letters “Ha”."
+		},
+		"toalla_bolsa": {
+			"nombre": "Spread towel with bag and flip-flops",
+			"descripcion": "Towel spread on the sand with a bag, flip-flops and sun cream on it. You can walk on the towel, but the bag and flip-flops trip you; someone is usually lying there.",
+			"etiquetas": ["beach towel", "towel", "beach bag", "flip-flops"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Spread towel with bag and flip-flops”: a rectangle, 1.00 by 1.80 metres, marked with the letters “Tb”."
+		},
+		"nevera_playa": {
+			"nombre": "Cool box",
+			"descripcion": "Rigid plastic cool box with a handle, shin high. Cold inside; open it and the ice and cans rattle.",
+			"etiquetas": ["cool box", "cooler", "ice box"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Cool box”: a rectangle, 0.50 by 0.35 metres, marked with the letters “Np”."
+		},
+		"juguetes_arena": {
+			"nombre": "Beach bucket, spade and rake",
+			"descripcion": "Plastic toys scattered on the sand: a bucket, a spade, a rake and moulds. They are low and light; you tread on them and they crack or roll.",
+			"etiquetas": ["bucket and spade", "beach toys", "sand moulds"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Beach bucket, spade and rake”: an irregular patch, 0.80 by 0.80 metres, marked with the letters “Ja”."
+		},
+		"piragua_varada": {
+			"nombre": "Beached kayak",
+			"descripcion": "Hard plastic kayak, long and narrow, pointed at both ends, lying on the sand with the paddle inside. It is low: a long trip hazard at shin height.",
+			"etiquetas": ["kayak", "canoe", "beached kayak"],
+			"variantes": {
+				"individual": "Single",
+				"doble": "Tandem"
+			},
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Beached kayak”: a long spindle, pointed at both ends, 0.70 by 3.80 metres, marked with the letters “Pv”."
+		},
+		"hidropedal": {
+			"nombre": "Beached pedalo",
+			"descripcion": "Two long plastic floats joined by the seats and pedals, sometimes with a slide at the back. Beached at the water's edge, the floats are hollow and boom when struck.",
+			"etiquetas": ["pedalo", "pedal boat", "water bike"],
+			"acciones": {
+				"subir": "Climb on"
+			},
+			"imagen": "Footprint of “Beached pedalo”: two long floats joined in the middle by the seat, 2.20 by 4.50 metres, marked with the letters “Hi”."
+		},
+		"velero_ligero": {
+			"nombre": "Dinghy on its launching trolley",
+			"descripcion": "Small sailing boat on a wheeled trolley with the mast up. The wires holding the mast run diagonally down to the sides, thin and taut: the cane misses them and they cross at face height.",
+			"etiquetas": ["dinghy", "sailing dinghy", "small sailboat", "launching trolley"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Dinghy on its launching trolley”: a boat: square stern at the back and pointed bow at the front, 1.60 by 4.20 metres, marked with the letters “Vl”."
+		},
+		"tabla_paddle": {
+			"nombre": "Paddleboard lying on the sand",
+			"descripcion": "Long, wide, flat board, rounded at the front, lying on the sand with the paddle beside it. Almost flush with the ground: easy to tread on, and the paddle rolls.",
+			"etiquetas": ["paddleboard", "surfboard", "SUP board"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Paddleboard lying on the sand”: a teardrop, round at the back and pointed at the front, 0.80 by 3.20 metres, marked with the letters “Tp”."
+		},
+		"orilla_mar": {
+			"nombre": "Water's edge",
+			"descripcion": "Strip of wet, firm sand where the waves come in. You hear them break ahead and feel cold water on your feet; the further you go, the deeper it gets. The waves push and pull.",
+			"etiquetas": ["shoreline", "water's edge", "sea", "waves", "surf"],
+			"acciones": {
+				"pq_banarse": "Have a swim"
+			},
+			"aviso": "Water's edge: the water and waves begin.",
+			"imagen": "Footprint of “Water's edge”: a rectangle with wavy edges, 15.00 by 5.00 metres, marked with the letters “Om”."
+		},
+		"duna": {
+			"nombre": "Sand dune",
+			"descripcion": "Mound of loose, fine sand, taller than a person, with tough, spiky marram grass. The ground rises and the sand gives at every step. It is protected: go round on the path.",
+			"etiquetas": ["dune", "sand dune", "marram grass"],
+			"aviso": "Dune: the ground rises and the sand gives.",
+			"imagen": "Footprint of “Sand dune”: an irregular patch, 10.00 by 8.00 metres, marked with the letters “Du”."
+		},
+		"captadores_dunas": {
+			"nombre": "Sand-trap fencing",
+			"descripcion": "Low fence of stakes and canes tied with wire, running along the foot of the dunes to trap sand. Knee high, it gives a little and loose wires snag.",
+			"etiquetas": ["sand fence", "dune fencing", "sand traps"],
+			"imagen": "Footprint of “Sand-trap fencing”: a rectangle, 6.00 by 0.15 metres, marked with the letters “Cd”."
+		},
+		"escollera": {
+			"nombre": "Rock breakwater",
+			"descripcion": "Large stone blocks piled up running into the sea, with deep gaps between them and the lower part covered in slippery seaweed. The waves crash against them and gulls call.",
+			"etiquetas": ["breakwater", "groyne", "jetty rocks", "rock armour"],
+			"aviso": "Breakwater: loose rocks, gaps and slippery seaweed.",
+			"imagen": "Footprint of “Rock breakwater”: a jagged outline with nooks and bumps, 5.00 by 15.00 metres, marked with the letters “Es”."
+		},
+		"posidonia_acumulada": {
+			"nombre": "Bank of dried seaweed on the shore",
+			"descripcion": "Long heap of dried seaweed leaves piled up by the storm along the tide line. It is soft and springy, smells of salt and iodine, and may be wet and slippery underneath.",
+			"etiquetas": ["seaweed", "dried seaweed", "wrack line", "posidonia"],
+			"imagen": "Footprint of “Bank of dried seaweed on the shore”: a rectangle with wavy edges, 6.00 by 1.00 metres, marked with the letters “Pa”."
+		},
+		"charca_rocas": {
+			"nombre": "Flat rocks with rock pools",
+			"descripcion": "Flat rock shelf at water level, full of pools with crabs and sea urchins. The rock is rough and sharp and very slippery where wet; you notice the pools by the sudden cold.",
+			"etiquetas": ["rock pools", "flat rocks", "tide pools"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"aviso": "Rocks with pools: slippery and sharp.",
+			"imagen": "Footprint of “Flat rocks with rock pools”: a jagged outline with nooks and bumps, 5.00 by 4.00 metres, marked with the letters “Cr”."
+		}
+	}
+}

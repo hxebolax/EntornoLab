@@ -1,0 +1,1066 @@
+{
+	"nombre": "Care home and assistive equipment",
+	"descripcion": "Care home and day centre, adapted housing, hoists, grab rails, ramps and lifts, plus tactile and audible wayfinding and the equipment used by blind and deaf people.",
+	"categorias": {
+		"sala_estar": "Care home lounge and dining room",
+		"habitacion": "Care home bedroom and nurses' station",
+		"terapia": "Occupational therapy and gentle exercise",
+		"bano_adaptado": "Accessible toilet and bathroom",
+		"vivienda": "Adapted kitchen and home",
+		"movilidad": "Hoists, ramps and lifts",
+		"orientacion": "Tactile and audible wayfinding",
+		"ciegos_sordos": "Equipment for blind and deaf people, guide dog"
+	},
+	"subcategorias": {
+		"sillones_residencia": "Care home armchairs and chairs",
+		"mesas_residencia": "Dining and games tables",
+		"ambiente_sala": "Lounge sounds and landmarks",
+		"cama_y_entorno": "Profiling bed and bedside",
+		"mobiliario_habitacion": "Bedroom furniture",
+		"control_enfermeria": "Nurses' station and ward",
+		"terapia_ocupacional": "Occupational therapy",
+		"gimnasia_mantenimiento": "Gentle exercise",
+		"estimulacion": "Stimulation and games",
+		"sanitarios_adaptados": "Accessible sanitaryware",
+		"barras_apoyo": "Grab rails",
+		"ducha_y_banera": "Accessible shower and bath",
+		"accesorios_aseo": "Accessible toilet fittings",
+		"cocina_adaptada": "Adapted kitchen",
+		"ayudas_casa": "Aids around the home",
+		"gruas": "Transfer hoists",
+		"elevadores": "Stairlifts and platform lifts",
+		"rampas_pasamanos": "Ramps and handrails",
+		"vehiculos_ayuda": "Mobility scooter and evacuation",
+		"planos_tactiles": "Tactile maps and models",
+		"pavimento_interior": "Floor strips and markings",
+		"rotulos_braille": "Braille signs",
+		"avisos_sonoros": "Beacons, call points and intercoms",
+		"accesos": "Accessible entrances and counters",
+		"puestos_adaptados": "Adapted reading and writing stations",
+		"braille_y_relieve": "Braille and raised graphics",
+		"avisos_hogar": "Home alerts and devices",
+		"perro_guia": "Guide dog and canes"
+	},
+	"estados": {
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"apagado": "Off",
+		"encendido": "On",
+		"regulado_bajo": "Lowered",
+		"regulado_alto": "Raised",
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"plegado": "Folded",
+		"desplegado": "Unfolded",
+		"funcionando": "Running",
+		"en_espera": "Waiting",
+		"llamando": "Calling"
+	},
+	"objetos": {
+		"sillon_geriatrico": {
+			"nombre": "High-back care home armchair",
+			"descripcion": "Firm, high-seated armchair with wooden arms to push up from and a back that reaches the head. Smooth wipe-clean upholstery.",
+			"etiquetas": ["care home armchair", "high-back chair", "riser chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “High-back care home armchair”: a rectangle, 0.68 by 0.78 metres, marked with the letters “Sg”."
+		},
+		"sillon_geriatrico_ruedas": {
+			"nombre": "Reclining care chair on castors",
+			"descripcion": "Transfer armchair on four castors, with a footrest and a tray in front. Reclined it is as long as a lounger; push it unbraked and it rolls.",
+			"etiquetas": ["tilt-in-space chair", "reclining care chair", "geriatric chair"],
+			"variantes": {
+				"incorporado": "Upright",
+				"reclinado": "Fully reclined"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Reclining care chair on castors”: a rectangle, 0.72 by 1.10 metres, marked with the letters “Sg”."
+		},
+		"sillon_relax_reposapies": {
+			"nombre": "Recliner with footrest out",
+			"descripcion": "Soft armchair with its footrest out: a narrower padded board sticks out in front of the seat at knee height. The cane meets it before the chair.",
+			"etiquetas": ["recliner", "reclining armchair", "lounger"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Recliner with footrest out”: a T shape, 0.85 by 1.55 metres, marked with the letters “Sr”."
+		},
+		"hilera_sillones": {
+			"nombre": "Row of lounge armchairs",
+			"descripcion": "Several identical armchairs, arm to arm, lined up against the wall. Trail your hand from arm to arm; sitters' legs stick out into the way.",
+			"etiquetas": ["row of armchairs", "lounge seating"],
+			"variantes": {
+				"tres": "Three chairs",
+				"cuatro": "Four chairs",
+				"seis": "Six chairs",
+				"ocho": "Eight chairs"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Row of lounge armchairs”: a rectangle, 2.60 by 0.80 metres, marked with the letters “Hs”."
+		},
+		"silla_comedor_brazos": {
+			"nombre": "Dining chair with armrests",
+			"descripcion": "Heavy wooden chair with two arms to lean on when sitting down and getting up. Wider than an ordinary chair and hard to tip over.",
+			"etiquetas": ["armchair dining chair", "carver chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Dining chair with armrests”: a rectangle, 0.58 by 0.60 metres, marked with the letters “Sc”."
+		},
+		"mesa_escotadura": {
+			"nombre": "Dining table with wheelchair cut-outs",
+			"descripcion": "Dining table with a rounded bite out of each long side, so a wheelchair can pull in close. No apron: clear underneath to above the knee.",
+			"etiquetas": ["wheelchair-accessible table", "cut-out table"],
+			"variantes": {
+				"dos_plazas": "For two",
+				"cuatro_plazas": "For four",
+				"seis_plazas": "For six"
+			},
+			"imagen": "Footprint of “Dining table with wheelchair cut-outs”: a rectangle with a rounded cut-out at the front and another at the back, 1.20 by 0.90 metres, marked with the letters “Me”."
+		},
+		"mesa_juegos_residencia": {
+			"nombre": "Cards and dominoes table",
+			"descripcion": "Square table with blunted corners, a baize top and a raised lip so the tiles do not fall off. Four people usually sit around it.",
+			"etiquetas": ["card table", "games table", "dominoes table"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Cards and dominoes table”: a rectangle with cut corners, 0.90 by 0.90 metres, marked with the letters “Mj”."
+		},
+		"televisor_sala_alto": {
+			"nombre": "Lounge television mounted high",
+			"descripcion": "Large television hung on the wall above head height, with the volume up. The cane never touches it: you hear it across the lounge, a good landmark.",
+			"etiquetas": ["wall television", "lounge tv", "mounted screen"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Lounge television mounted high”: a rectangle, 1.20 by 0.10 metres, hanging 1.60 metres above the floor, marked with the letters “Ts”."
+		},
+		"jaula_pajaros_sala": {
+			"nombre": "Birdcage on a stand",
+			"descripcion": "Wire cage on a metal stand, at face height. The canaries sing now and then: you know where it is without touching it.",
+			"etiquetas": ["birdcage", "canary cage", "aviary"],
+			"imagen": "Footprint of “Birdcage on a stand”: a circle, 0.50 by 0.50 metres, marked with the letters “Jp”."
+		},
+		"panel_orientacion_fecha": {
+			"nombre": "Day and date orientation board",
+			"descripcion": "Board hung at face height with a large clock and the day, date and weather in raised letters. You hear it ticking as you come near.",
+			"etiquetas": ["orientation board", "large calendar clock", "reality board"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Day and date orientation board”: a rectangle, 0.90 by 0.05 metres, hanging 1.20 metres above the floor, marked with the letters “Po”."
+		},
+		"cama_geriatrica": {
+			"nombre": "Profiling care bed with side rails",
+			"descripcion": "Care home profiling bed with wooden head and foot boards and rails along the sides. It drops very low, almost to the floor, and rises on a motor. Walk round the foot.",
+			"etiquetas": ["profiling bed", "care bed", "nursing bed", "low bed"],
+			"variantes": {
+				"ancho_90": "90 cm",
+				"ancho_105": "105 cm",
+				"ultrabaja": "Ultra-low, a hand's width off the floor"
+			},
+			"acciones": {
+				"tumbarse": "Lie down",
+				"levantarse": "Stand up",
+				"regular_subir": "Raise",
+				"regular_bajar": "Lower"
+			},
+			"imagen": "Footprint of “Profiling care bed with side rails”: a rectangle, 1.00 by 2.10 metres, marked with the letters “Cg”."
+		},
+		"colchoneta_anticaidas": {
+			"nombre": "Bedside fall mat",
+			"descripcion": "Thin foam mat laid on the floor along the bed. You step on it: the floor suddenly turns soft and your steps go quiet.",
+			"etiquetas": ["fall mat", "crash mat", "bedside mat"],
+			"imagen": "Footprint of “Bedside fall mat”: a rectangle, 0.70 by 1.90 metres, marked with the letters “Ca”."
+		},
+		"mesilla_bandeja_abatible": {
+			"nombre": "Bedside cabinet with fold-out tray",
+			"descripcion": "Tall bedside cabinet on castors with a drawer. A tray lifts from one side and hangs out over the bed, at chest height for someone sitting up.",
+			"etiquetas": ["bedside locker", "overbed tray cabinet"],
+			"variantes": {
+				"recogida": "Tray folded away",
+				"desplegada": "Tray out over the bed"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"desplegar": "Unfold",
+				"plegar": "Fold"
+			},
+			"imagen": "Footprint of “Bedside cabinet with fold-out tray”: a rectangle, 0.48 by 0.45 metres, marked with the letters “Mb”."
+		},
+		"cabecero_luz_llamada": {
+			"nombre": "Bedhead unit with light and call button",
+			"descripcion": "Long trunking screwed to the wall above the bedhead, over a sitter's head: it holds the light, the sockets and a pear push on a lead to call for help.",
+			"etiquetas": ["bedhead trunking", "call bell", "nurse call"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off",
+				"llamar_asistencia": "Call for assistance"
+			},
+			"imagen": "Footprint of “Bedhead unit with light and call button”: a rectangle, 1.00 by 0.10 metres, hanging 1.30 metres above the floor, marked with the letters “Cl”."
+		},
+		"incorporador_cama_colgante": {
+			"nombre": "Bed pole with hanging grab handle",
+			"descripcion": "Tubular arm reaching over the headboard with a triangular handle dangling above the pillow. It hangs at face height when you lean over the bed.",
+			"etiquetas": ["bed pole", "monkey pole", "lifting pole", "trapeze bar"],
+			"imagen": "Footprint of “Bed pole with hanging grab handle”: a triangle pointing to the front, 0.30 by 0.70 metres, hanging 1.30 metres above the floor, marked with the letters “Ic”."
+		},
+		"alfombrilla_sensora_cama": {
+			"nombre": "Bed-exit sensor floor mat",
+			"descripcion": "Very thin rubber mat at the bedside, with a lead. Step on it and the call sounds at the nurses' station: it tells staff someone has got up.",
+			"etiquetas": ["sensor mat", "pressure mat", "bed-exit alarm"],
+			"aviso": "Sensor mat: stepping on it sounds the call at the nurses' station.",
+			"imagen": "Footprint of “Bed-exit sensor floor mat”: a rectangle, 0.90 by 0.60 metres, marked with the letters “As”."
+		},
+		"armario_barra_abatible": {
+			"nombre": "Wardrobe with pull-down hanging rail",
+			"descripcion": "Bedroom wardrobe with doors up to the ceiling. Inside, the hanging rail swings down to chest height when you pull a rod.",
+			"etiquetas": ["accessible wardrobe", "pull-down rail wardrobe"],
+			"variantes": {
+				"una_puerta": "One wide door",
+				"dos_puertas": "Two doors"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"bajar_barra_ropa": "Pull the clothes rail down"
+			},
+			"imagen": "Footprint of “Wardrobe with pull-down hanging rail”: a rectangle, 0.90 by 0.60 metres, marked with the letters “Ab”."
+		},
+		"silla_wc_noche": {
+			"nombre": "Bedside commode chair",
+			"descripcion": "Tubular chair with arms whose seat lifts: there is a pan underneath. It is left beside the bed at night.",
+			"etiquetas": ["commode", "commode chair", "bedside toilet"],
+			"variantes": {
+				"fija": "Static, on rubber feet",
+				"con_ruedas": "On castors"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Bedside commode chair”: a rectangle, 0.60 by 0.60 metres, marked with the letters “Sw”."
+		},
+		"mostrador_control_enfermeria": {
+			"nombre": "Nurses' station counter",
+			"descripcion": "L-shaped counter where the ward corridors meet. One run is high, to lean on standing, and the other low, to talk seated. The call panel sounds behind it.",
+			"etiquetas": ["nurses' station", "ward desk", "care station"],
+			"imagen": "Footprint of “Nurses' station counter”: an L shape, 2.40 by 1.80 metres, marked with the letters “Mc”."
+		},
+		"panel_llamadas_enfermeria": {
+			"nombre": "Room call indicator panel",
+			"descripcion": "Box on the station wall at face height, with a row of keys. It buzzes when someone calls from a bedroom.",
+			"etiquetas": ["nurse call panel", "call indicator", "annunciator"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Room call indicator panel”: a rectangle, 0.40 by 0.08 metres, hanging 1.30 metres above the floor, marked with the letters “Pl”."
+		},
+		"carro_lenceria_planta": {
+			"nombre": "Ward linen trolley",
+			"descripcion": "Tall wire trolley on castors, loaded with sheets, towels and pads, with a laundry bag hanging off it. In the mornings it stands in the corridor, in a different place each day.",
+			"etiquetas": ["linen trolley", "laundry cart", "housekeeping cart"],
+			"imagen": "Footprint of “Ward linen trolley”: a rectangle, 0.55 by 0.95 metres, marked with the letters “Cl”."
+		},
+		"mesa_terapia_herradura": {
+			"nombre": "Horseshoe therapy table",
+			"descripcion": "Curved half-moon table, height adjustable: the therapist sits in the hollow and the others round the outside of the curve. No corners at the front.",
+			"etiquetas": ["horseshoe table", "therapy table", "kidney table"],
+			"acciones": {
+				"regular_subir": "Raise",
+				"regular_bajar": "Lower"
+			},
+			"imagen": "Footprint of “Horseshoe therapy table”: a curved band bulging towards the front, 1.80 by 1.10 metres, marked with the letters “Mt”."
+		},
+		"panel_actividades_diarias": {
+			"nombre": "Daily living skills board",
+			"descripcion": "Wooden board on the wall fitted with locks, bolts, switches, a tap and zips to practise on with your hands. It sticks out a hand's width at chest height.",
+			"etiquetas": ["busy board", "ADL board", "latches board"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Daily living skills board”: a rectangle, 1.00 by 0.10 metres, hanging 0.75 metres above the floor, marked with the letters “Pa”."
+		},
+		"mesa_cultivo_adaptada": {
+			"nombre": "Raised wheelchair planter",
+			"descripcion": "Wooden box full of soil and plants, raised on four legs so you can garden seated. Knee room underneath; it smells of damp earth and herbs.",
+			"etiquetas": ["raised planter", "raised bed", "accessible garden table"],
+			"imagen": "Footprint of “Raised wheelchair planter”: a rectangle, 1.20 by 0.80 metres, marked with the letters “Mc”."
+		},
+		"pedalier_sentado": {
+			"nombre": "Floor pedal exerciser",
+			"descripcion": "Small device with two pedals placed on the floor in front of a chair. Low, at ankle height: you trip over it if you do not know it is there.",
+			"etiquetas": ["pedal exerciser", "mini exercise bike"],
+			"acciones": {
+				"pedalear_sentado": "Pedal while seated"
+			},
+			"imagen": "Footprint of “Floor pedal exerciser”: a rectangle, 0.42 by 0.50 metres, marked with the letters “Ps”."
+		},
+		"corro_sillas_gimnasia": {
+			"nombre": "Circle of chairs for seated exercise",
+			"descripcion": "Chairs set out in a circle facing inwards, with one gap to enter. Exercise is done seated; inside is an empty ring where the ball is passed round.",
+			"etiquetas": ["circle of chairs", "seated exercise ring", "chair circle"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Circle of chairs for seated exercise”: a ring with an opening at the front, 3.80 by 3.80 metres, marked with the letters “Cs”."
+		},
+		"circuito_aros_picas": {
+			"nombre": "Floor circuit of hoops and poles",
+			"descripcion": "Hoops, poles laid flat and low cones set out in a line to step over. A low, changing obstacle: it sounds like hollow plastic underfoot.",
+			"etiquetas": ["obstacle circuit", "hoops and poles", "gait circuit"],
+			"imagen": "Footprint of “Floor circuit of hoops and poles”: an uneven strip of loose pieces, 3.00 by 1.20 metres, marked with the letters “Ca”."
+		},
+		"cesto_psicomotricidad": {
+			"nombre": "Basket of soft balls and bands",
+			"descripcion": "Round wicker basket, knee high, full of foam balls, stretch bands and small rings. Light: one knock tips it over.",
+			"etiquetas": ["ball basket", "exercise kit basket"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Basket of soft balls and bands”: a circle, 0.55 by 0.55 metres, marked with the letters “Cp”."
+		},
+		"columna_burbujas": {
+			"nombre": "Bubble tube",
+			"descripcion": "Wide plastic tube full of water, from the floor to above head height, on a plinth. Switched on, bubbles gurgle upwards and the tube hums when you hug it.",
+			"etiquetas": ["bubble tube", "bubble column", "sensory room"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Bubble tube”: a circle, 0.40 by 0.40 metres, marked with the letters “Cb”."
+		},
+		"bombo_bingo_mesa": {
+			"nombre": "Bingo cage on its table",
+			"descripcion": "Table with a round wire cage full of balls and a crank. Turn it and the balls rattle until one drops down the chute.",
+			"etiquetas": ["bingo cage", "bingo machine", "tombola"],
+			"acciones": {
+				"girar_bombo": "Spin the cage"
+			},
+			"imagen": "Footprint of “Bingo cage on its table”: a rectangle, 0.80 by 0.60 metres, marked with the letters “Bb”."
+		},
+		"inodoro_adaptado_barras": {
+			"nombre": "Raised toilet with side rails",
+			"descripcion": "Toilet higher than usual, set away from the walls so you can come alongside, with a rail on each side at hip height. You meet the rails before the bowl.",
+			"etiquetas": ["accessible toilet", "raised wc", "toilet with grab rails"],
+			"acciones": {
+				"tirar_cadena": "Flush",
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Raised toilet with side rails”: the cistern at the back, the bowl in the middle and a thin rail on each side, 0.85 by 0.75 metres, marked with the letters “Ia”."
+		},
+		"lavabo_suspendido_regulable": {
+			"nombre": "Height-adjustable wall basin",
+			"descripcion": "Basin hung on the wall, with no pedestal or cabinet: completely clear underneath for the knees. The cane passes under it and your hip finds it.",
+			"etiquetas": ["wall-hung basin", "accessible washbasin", "adjustable basin"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Height-adjustable wall basin”: a semicircle, straight at the back and round at the front, 0.65 by 0.55 metres, hanging 0.68 metres above the floor, marked with the letters “Ls”."
+		},
+		"alza_inodoro_marco": {
+			"nombre": "Toilet frame with raised seat",
+			"descripcion": "Tubular frame wrapping round the sides and back of the toilet, with two armrests and a raised seat. Free-standing: it shifts a little when leant on.",
+			"etiquetas": ["toilet frame", "raised toilet seat", "toilet surround"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Toilet frame with raised seat”: a U open at the front, 0.60 by 0.52 metres, marked with the letters “Ai”."
+		},
+		"barra_abatible_inodoro": {
+			"nombre": "Drop-down toilet rail",
+			"descripcion": "Double-tube rail sticking out from the wall like an arm at hip height, which swings up to stand vertical. Lowered, it reaches nearly a metre out: the cane passes under it.",
+			"etiquetas": ["drop-down rail", "hinged grab rail", "fold-up support arm"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Drop-down toilet rail”: a rectangle, 0.15 by 0.75 metres, hanging 0.55 metres above the floor, marked with the letters “Ba”."
+		},
+		"barra_fija_pared": {
+			"nombre": "Fixed wall grab rail",
+			"descripcion": "Metal tube screwed to the wall at hip height, standing four fingers clear of it. Cold and firm: it takes your full body weight.",
+			"etiquetas": ["grab rail", "grab bar", "handrail"],
+			"variantes": {
+				"de_30": "30 cm",
+				"de_60": "60 cm",
+				"de_90": "90 cm",
+				"en_escuadra": "Angled, with an upright section"
+			},
+			"imagen": "Footprint of “Fixed wall grab rail”: a rectangle, 0.60 by 0.08 metres, hanging 0.70 metres above the floor, marked with the letters “Bf”."
+		},
+		"barra_suelo_techo": {
+			"nombre": "Floor-to-ceiling support pole",
+			"descripcion": "Upright tube wedged between floor and ceiling, beside the bath or the bed. As slim as a thick broom handle: the cane finds it, the hand takes longer.",
+			"etiquetas": ["floor-to-ceiling pole", "transfer pole", "security pole"],
+			"imagen": "Footprint of “Floor-to-ceiling support pole”: a circle, 0.15 by 0.15 metres, marked with the letters “Bs”."
+		},
+		"plato_ducha_ras_suelo": {
+			"nombre": "Level-access shower floor",
+			"descripcion": "Shower area level with the rest of the floor, no kerb and no screen, with the drain in the middle. You walk or wheel straight in: the floor turns rough and wet.",
+			"etiquetas": ["wet room shower", "level-access shower", "roll-in shower"],
+			"variantes": {
+				"de_80_120": "80 by 120 cm",
+				"de_90_140": "90 by 140 cm",
+				"de_150_150": "150 by 150 cm, room to turn"
+			},
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"aviso": "Level-access shower: the floor is wet.",
+			"imagen": "Footprint of “Level-access shower floor”: a rectangle, 1.20 by 0.90 metres, marked with the letters “Pd”."
+		},
+		"asiento_ducha_abatible": {
+			"nombre": "Fold-down wall shower seat",
+			"descripcion": "Slatted plastic seat hung on the shower wall, with no legs. Lowered, it juts out two hand-widths at knee height; folded, it lies flat against the wall.",
+			"etiquetas": ["fold-down shower seat", "wall shower seat"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold",
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Fold-down wall shower seat”: a rectangle, 0.45 by 0.42 metres, hanging 0.50 metres above the floor, marked with the letters “Ad”."
+		},
+		"silla_ducha_ruedas": {
+			"nombre": "Wheeled shower chair",
+			"descripcion": "Plastic and tubular chair on four small castors, with footrests and a seat open at the front. It gets wet all over; it rolls unless the brake is on.",
+			"etiquetas": ["shower chair", "shower commode chair"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Wheeled shower chair”: a rectangle, 0.56 by 0.90 metres, marked with the letters “Sd”."
+		},
+		"banqueta_ducha_regulable": {
+			"nombre": "Adjustable shower stool",
+			"descripcion": "Round plastic stool on four aluminium legs with rubber feet. Light and backless: it slides when pushed.",
+			"etiquetas": ["shower stool", "bath stool"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Adjustable shower stool”: a circle, 0.40 by 0.40 metres, marked with the letters “Bd”."
+		},
+		"asiento_giratorio_banera": {
+			"nombre": "Swivel bath seat",
+			"descripcion": "Plastic seat with back and arms resting on both rims of the bath. It turns a quarter turn so you sit down from outside and then swing your legs in.",
+			"etiquetas": ["swivel bather", "rotating bath seat", "bath chair"],
+			"acciones": {
+				"girar": "Spin",
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Swivel bath seat”: a rectangle with rounded corners, 0.72 by 0.55 metres, hanging 0.55 metres above the floor, marked with the letters “Ag”."
+		},
+		"banera_con_puerta": {
+			"nombre": "Walk-in bath",
+			"descripcion": "Short, very tall bath, waist high, with a small watertight door in its side and a seat inside. You step in through the door without lifting your leg over.",
+			"etiquetas": ["walk-in bath", "walk-in tub", "door bath"],
+			"variantes": {
+				"de_asiento": "Short, sit-in",
+				"mediana": "Medium",
+				"larga": "Long, lie-down"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Walk-in bath”: a rectangle with rounded corners, 1.40 by 0.72 metres, marked with the letters “Bc”."
+		},
+		"mampara_baja_cuidador": {
+			"nombre": "Half-height carer shower screen",
+			"descripcion": "Plastic leaf only waist high that swings like a saloon door: you shower seated while your helper stays dry. Closed, it blocks the way into the shower.",
+			"etiquetas": ["half-height shower door", "carer screen"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Half-height carer shower screen”: a rectangle, 0.90 by 0.04 metres, marked with the letters “Mb”."
+		},
+		"peldano_banera_asidero": {
+			"nombre": "Non-slip bath step",
+			"descripcion": "Loose step of rough plastic set on the floor beside the bath to make getting in easier. Low and easy to forget: you trip over it.",
+			"etiquetas": ["bath step", "step stool"],
+			"variantes": {
+				"sencillo": "Plain",
+				"con_asidero": "With tall handle"
+			},
+			"imagen": "Footprint of “Non-slip bath step”: a rectangle, 0.45 by 0.38 metres, marked with the letters “Pb”."
+		},
+		"espejo_basculante_aseo": {
+			"nombre": "Tilting accessible mirror",
+			"descripcion": "Mirror tilted forwards above the basin, with a lever to move it. Its top edge stands a hand's width off the wall, at forehead height.",
+			"etiquetas": ["tilting mirror", "adjustable mirror"],
+			"imagen": "Footprint of “Tilting accessible mirror”: a rectangle, 0.60 by 0.15 metres, hanging 0.90 metres above the floor, marked with the letters “Eb”."
+		},
+		"tirador_alarma_aseo": {
+			"nombre": "Emergency pull cord",
+			"descripcion": "Cord hanging from the ceiling beside the toilet almost to the floor, with two plastic rings. Pull it from floor level and the call for help sounds.",
+			"etiquetas": ["pull cord alarm", "emergency cord", "toilet alarm"],
+			"acciones": {
+				"llamar_asistencia": "Call for assistance"
+			},
+			"imagen": "Footprint of “Emergency pull cord”: a circle, 0.08 by 0.08 metres, hanging 0.10 metres above the floor, marked with the letters “Ta”."
+		},
+		"cambiador_adultos_abatible": {
+			"nombre": "Fold-down adult changing bench",
+			"descripcion": "Plastic bench as long as a person hung on the wall, legless, at hip height. Lowered, it fills half the room and the cane passes underneath.",
+			"etiquetas": ["adult changing bench", "changing places bench"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold",
+				"regular_subir": "Raise",
+				"regular_bajar": "Lower"
+			},
+			"imagen": "Footprint of “Fold-down adult changing bench”: a rectangle, 1.80 by 0.75 metres, hanging 0.60 metres above the floor, marked with the letters “Ca”."
+		},
+		"encimera_regulable_hueco": {
+			"nombre": "Height-adjustable worktop with knee space",
+			"descripcion": "Run of worktop with no units underneath, held at its ends, which a motor raises and lowers. The cane goes underneath: your hip or hand finds it.",
+			"etiquetas": ["adjustable worktop", "rise and fall worktop", "accessible counter"],
+			"variantes": {
+				"de_90": "90 cm",
+				"de_120": "1.20 m",
+				"de_180": "1.80 m"
+			},
+			"acciones": {
+				"regular_subir": "Raise",
+				"regular_bajar": "Lower"
+			},
+			"imagen": "Footprint of “Height-adjustable worktop with knee space”: a rectangle, 1.20 by 0.62 metres, marked with the letters “Er”."
+		},
+		"fregadero_adaptado_hueco": {
+			"nombre": "Shallow sink with knee space",
+			"descripcion": "Shallow steel sink with no cupboard below and the waste pushed back to the wall, leaving room for the knees. The tap has a long lever.",
+			"etiquetas": ["accessible sink", "shallow bowl sink"],
+			"acciones": {
+				"abrir_grifo": "Turn the tap on",
+				"cerrar_grifo": "Turn the tap off"
+			},
+			"imagen": "Footprint of “Shallow sink with knee space”: a rectangle, 0.90 by 0.60 metres, marked with the letters “Fa”."
+		},
+		"placa_coccion_adaptada": {
+			"nombre": "Hob with front controls and knee space",
+			"descripcion": "Hob set into a worktop with no unit below, with the knobs on the front edge. Hot when on, and nothing underneath to warn the cane.",
+			"etiquetas": ["accessible hob", "front-control cooktop"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Hob with front controls and knee space”: a rectangle, 0.70 by 0.60 metres, marked with the letters “Pc”."
+		},
+		"armarios_altos_descendentes": {
+			"nombre": "Pull-down wall cupboards",
+			"descripcion": "Cupboards hung above the worktop whose insides come down on a motor until they rest on it. Up, they are at head height; down, they fill the worktop.",
+			"etiquetas": ["pull-down cupboards", "drop-down shelves", "motorised wall units"],
+			"acciones": {
+				"regular_bajar": "Lower",
+				"regular_subir": "Raise"
+			},
+			"imagen": "Footprint of “Pull-down wall cupboards”: a rectangle, 0.90 by 0.35 metres, hanging 1.40 metres above the floor, marked with the letters “Aa”."
+		},
+		"horno_lateral_bandeja": {
+			"nombre": "Side-opening oven with pull-out shelf",
+			"descripcion": "Unit with the oven at worktop height. The door opens sideways, like a cupboard, and a shelf slides out underneath to rest the hot dish on.",
+			"etiquetas": ["side-opening oven", "accessible oven"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Side-opening oven with pull-out shelf”: a rectangle, 0.60 by 0.58 metres, marked with the letters “Hl”."
+		},
+		"carro_camarera_apoyo": {
+			"nombre": "Kitchen trolley walker",
+			"descripcion": "Two-tray trolley on four castors with a tall handle: it carries the plates so you do not have to. It rolls when pushed and is never in the same place.",
+			"etiquetas": ["trolley walker", "tea trolley", "household trolley"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Kitchen trolley walker”: a rectangle, 0.48 by 0.68 metres, marked with the letters “Cc”."
+		},
+		"sillon_elevador": {
+			"nombre": "Riser recliner chair",
+			"descripcion": "Large soft armchair with a motor: it tips forwards to bring you almost to standing, or lies back with its footrest out. A handset hangs from it on a lead.",
+			"etiquetas": ["riser recliner", "lift chair", "rise and recline chair"],
+			"variantes": {
+				"sentado": "Seated",
+				"tumbado": "Reclined, footrest out"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"regular_subir": "Raise"
+			},
+			"imagen": "Footprint of “Riser recliner chair”: a rectangle with rounded corners, 0.82 by 0.95 metres, marked with the letters “Se”."
+		},
+		"asidero_cama_incorporarse": {
+			"nombre": "Bed grab handle",
+			"descripcion": "Waist-high tubular hoop held under the mattress at one side of the bed. It stands up from the edge like a short rail to grip when getting up.",
+			"etiquetas": ["bed rail", "bed grab handle", "bed lever"],
+			"imagen": "Footprint of “Bed grab handle”: a rectangle, 0.50 by 0.08 metres, marked with the letters “Ac”."
+		},
+		"grua_traslado_ruedas": {
+			"nombre": "Mobile patient hoist",
+			"descripcion": "Tubular hoist on castors: at the bottom, two long legs spread in a U at floor level; at the top, a boom with a spreader bar at head height from which the sling hangs.",
+			"etiquetas": ["patient hoist", "mobile hoist", "patient lift"],
+			"variantes": {
+				"patas_cerradas": "Legs closed",
+				"patas_abiertas": "Legs spread",
+				"bipedestacion": "Stand-aid hoist"
+			},
+			"acciones": {
+				"regular_subir": "Raise",
+				"regular_bajar": "Lower"
+			},
+			"imagen": "Footprint of “Mobile patient hoist”: a U open at the front, 0.68 by 1.25 metres, marked with the letters “Gt”."
+		},
+		"grua_techo_rail": {
+			"nombre": "Ceiling track hoist",
+			"descripcion": "Track screwed to the ceiling, from bed to bathroom, with a motor that runs along it. A metal spreader bar hangs from the motor and, when parked, sits at head height.",
+			"etiquetas": ["ceiling hoist", "overhead hoist", "track hoist"],
+			"variantes": {
+				"tramo_recto_corto": "1.5 m straight run",
+				"tramo_recto": "3 m straight run",
+				"tramo_largo": "6 m long run"
+			},
+			"acciones": {
+				"regular_bajar": "Lower",
+				"regular_subir": "Raise"
+			},
+			"imagen": "Footprint of “Ceiling track hoist”: a rectangle, 3.00 by 0.50 metres, hanging 1.70 metres above the floor, marked with the letters “Gt”."
+		},
+		"silla_salvaescaleras": {
+			"nombre": "Stairlift on its rail",
+			"descripcion": "Folding seat mounted on a rail running up the stair wall. Parked at the bottom it narrows the first step; when moving it hums and beeps slowly.",
+			"etiquetas": ["stairlift", "chair lift", "stair chair"],
+			"variantes": {
+				"plegada": "Folded",
+				"desplegada": "Unfolded"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up",
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Stairlift on its rail”: a rectangle, 0.65 by 0.65 metres, marked with the letters “Ss”."
+		},
+		"plataforma_elevadora_vertical": {
+			"nombre": "Vertical platform lift",
+			"descripcion": "Sheet-metal platform with waist-high sides and a small gate, next to a few steps: it travels straight up and down like a short, slow lift.",
+			"etiquetas": ["platform lift", "vertical lift", "wheelchair lift"],
+			"variantes": {
+				"corto_recorrido": "Short rise, open",
+				"con_cerramiento": "Enclosed"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"poner": "Start",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Vertical platform lift”: a rectangle, 1.10 by 1.50 metres, marked with the letters “Pe”."
+		},
+		"plataforma_salvaescaleras_plegable": {
+			"nombre": "Inclined platform stairlift",
+			"descripcion": "Platform that climbs an inclined rail on the stair wall. Folded, it is a flat upright box at the foot of the first step; open, it takes up the full width.",
+			"etiquetas": ["inclined platform lift", "wheelchair stairlift"],
+			"variantes": {
+				"recogida": "Folded against the wall",
+				"abierta": "Open"
+			},
+			"acciones": {
+				"desplegar": "Unfold",
+				"plegar": "Fold"
+			},
+			"imagen": "Footprint of “Inclined platform stairlift”: a rectangle, 1.00 by 0.30 metres, marked with the letters “Ps”."
+		},
+		"oruga_salvaescaleras": {
+			"nombre": "Portable stair climber",
+			"descripcion": "Machine with two rubber tracks, like a small tank, and a tall handle, to which a wheelchair is clamped to climb the steps. It is kept at the foot of the stairs.",
+			"etiquetas": ["stair climber", "tracked stair climber", "stair crawler"],
+			"imagen": "Footprint of “Portable stair climber”: a rectangle, 0.65 by 1.10 metres, marked with the letters “Os”."
+		},
+		"rampa_umbral_portatil": {
+			"nombre": "Portable threshold ramp",
+			"descripcion": "Rubber or aluminium wedge pushed up against a small step or a door frame. You step on it: your foot feels a short slope and a change of material.",
+			"etiquetas": ["threshold ramp", "door ramp", "kerb wedge"],
+			"aviso": "Threshold ramp: a short slope.",
+			"imagen": "Footprint of “Portable threshold ramp”: a trapezoid, narrower at the back, 0.90 by 0.30 metres, marked with the letters “Ru”."
+		},
+		"rampa_modular_barandilla": {
+			"nombre": "Modular ramp with handrails",
+			"descripcion": "Ramp of textured metal built in sections over some steps, with a tubular handrail on each side. It rings hollow underfoot and has a kerb along its edges.",
+			"etiquetas": ["modular ramp", "wheelchair ramp", "access ramp"],
+			"variantes": {
+				"de_150": "1.5 m",
+				"de_300": "3 m",
+				"de_600": "6 m"
+			},
+			"aviso": "Ramp with handrails: the slope starts here.",
+			"imagen": "Footprint of “Modular ramp with handrails”: a rectangle, 1.00 by 3.00 metres, marked with the letters “Rm”."
+		},
+		"pasamanos_doble_altura": {
+			"nombre": "Double-height handrail",
+			"descripcion": "Two round wooden rails, one above the other, along the corridor wall: the upper at hip height and the lower at thigh height. Trail your hand along it to the door.",
+			"etiquetas": ["double handrail", "corridor rail", "dual-height handrail"],
+			"variantes": {
+				"de_1": "1 m",
+				"de_2": "2 m",
+				"de_4": "4 m",
+				"de_6": "6 m"
+			},
+			"imagen": "Footprint of “Double-height handrail”: a rectangle, 2.00 by 0.08 metres, hanging 0.65 metres above the floor, marked with the letters “Pd”."
+		},
+		"scooter_movilidad_cargando": {
+			"nombre": "Mobility scooter parked on charge",
+			"descripcion": "Four-wheeled electric vehicle with a swivel seat, a front basket and handlebars, parked by a socket. The charger hums and the lead runs across to the wall.",
+			"etiquetas": ["mobility scooter", "electric scooter", "disability scooter"],
+			"acciones": {
+				"desenchufar": "Unplug",
+				"recargar": "Plug in"
+			},
+			"imagen": "Footprint of “Mobility scooter parked on charge”: a wide seat at the back, a narrow footboard and the handlebars across it near the front, 0.60 by 1.20 metres, marked with the letters “Sm”."
+		},
+		"silla_evacuacion_colgada": {
+			"nombre": "Wall-hung evacuation chair",
+			"descripcion": "Folded chair in a cover, hung on the landing wall at hip height. It sticks out a good hand's width and the cane passes under it.",
+			"etiquetas": ["evacuation chair", "evac chair", "stair chair"],
+			"imagen": "Footprint of “Wall-hung evacuation chair”: a rectangle, 0.55 by 0.25 metres, hanging 0.80 metres above the floor, marked with the letters “Se”."
+		},
+		"disco_transferencia": {
+			"nombre": "Transfer turning disc",
+			"descripcion": "Flat plastic disc, the size of a tray, that spins on itself. It is left on the floor by the bed so you can turn standing without moving your feet: step on it and it moves.",
+			"etiquetas": ["turning disc", "transfer disc", "pivot disc"],
+			"aviso": "Turning disc on the floor: it spins under your feet.",
+			"imagen": "Footprint of “Transfer turning disc”: a circle, 0.40 by 0.40 metres, marked with the letters “Dt”."
+		},
+		"plano_tactil_atril": {
+			"nombre": "Tactile floor plan on a lectern",
+			"descripcion": "Raised-line and braille plan on a sloping board at hand height, on a narrow pedestal. The board overhangs the pedestal: your hand reaches it before the cane does.",
+			"etiquetas": ["tactile floor plan", "tactile map lectern", "raised plan"],
+			"acciones": {
+				"leer": "Read by touch",
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Tactile floor plan on a lectern”: a trapezoid, narrower at the back, 0.80 by 0.55 metres, marked with the letters “Pt”."
+		},
+		"plano_tactil_pared": {
+			"nombre": "Wall-mounted tactile plan",
+			"descripcion": "Raised-line and braille plate screwed to the wall by the entrance to the floor, at chest height. It sticks out three fingers; read it standing, with both hands.",
+			"etiquetas": ["wall tactile plan", "braille floor plan"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Wall-mounted tactile plan”: a rectangle, 0.70 by 0.05 metres, hanging 1.00 metres above the floor, marked with the letters “Pt”."
+		},
+		"maqueta_tactil_edificio": {
+			"nombre": "Tactile model of the building",
+			"descripcion": "Wooden model of the building on a table, made to be touched: walls, doors, stairs and courtyards in the round, with braille labels along the edge.",
+			"etiquetas": ["tactile model", "touch model", "architectural model"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Tactile model of the building”: a rectangle with cut corners, 1.20 by 0.90 metres, marked with the letters “Mt”."
+		},
+		"franja_guia_interior": {
+			"nombre": "Indoor stick-on guidance strip",
+			"descripcion": "Narrow rubber strip with lengthwise ribs, stuck onto the smooth lobby floor. Follow it with your cane or foot from the door to the counter.",
+			"etiquetas": ["indoor guidance strip", "tactile path", "guide strip"],
+			"variantes": {
+				"de_2": "2 m",
+				"de_4": "4 m",
+				"de_8": "8 m"
+			},
+			"imagen": "Footprint of “Indoor stick-on guidance strip”: a rectangle, 0.30 by 4.00 metres, marked with the letters “Fg”."
+		},
+		"loseta_cruce_guia": {
+			"nombre": "Guidance path junction tile",
+			"descripcion": "Square of studs where two guidance strips cross or fork. When you feel it underfoot, stop and decide which way to go on.",
+			"etiquetas": ["decision tile", "junction tile", "tactile crossing point"],
+			"aviso": "Guidance strips cross: the path divides here.",
+			"imagen": "Footprint of “Guidance path junction tile”: a rectangle, 0.90 by 0.90 metres, marked with the letters “Lc”."
+		},
+		"franja_botones_escalera": {
+			"nombre": "Stud warning strip at indoor stairs",
+			"descripcion": "Strip of studs stuck across the floor in front of the first step of a staircase. It warns you: the drop begins one pace further on.",
+			"etiquetas": ["warning strip", "hazard studs", "tactile warning at stairs"],
+			"variantes": {
+				"de_100": "1 m wide",
+				"de_120": "1.20 m wide",
+				"de_200": "2 m wide"
+			},
+			"aviso": "Warning studs: stairs start just ahead.",
+			"imagen": "Footprint of “Stud warning strip at indoor stairs”: a rectangle, 1.20 by 0.80 metres, marked with the letters “Fb”."
+		},
+		"bandas_contraste_peldanos": {
+			"nombre": "Non-slip stair nosing strips",
+			"descripcion": "Rough strip, like sandpaper, stuck along the edge of a step from side to side. Foot and cane feel it gritty: it marks where the step ends.",
+			"etiquetas": ["stair nosing", "anti-slip strip", "step edge marking"],
+			"aviso": "Rough strip: the edge of a step.",
+			"imagen": "Footprint of “Non-slip stair nosing strips”: a rectangle, 1.20 by 0.05 metres, marked with the letters “Bc”."
+		},
+		"felpudo_encastrado_vestibulo": {
+			"nombre": "Recessed entrance matting",
+			"descripcion": "Matting of aluminium bars and stiff bristle strips set in a well, flush with the floor, just inside the door. It rattles and scrapes underfoot: you are coming in.",
+			"etiquetas": ["recessed mat", "entrance matting", "mat well"],
+			"imagen": "Footprint of “Recessed entrance matting”: a rectangle, 1.80 by 1.50 metres, marked with the letters “Fe”."
+		},
+		"placa_braille_puerta": {
+			"nombre": "Braille door sign",
+			"descripcion": "Small plate with raised letters and braille, to the right of the door frame at elbow height. Find it by sliding your hand along the wall from the frame.",
+			"etiquetas": ["braille sign", "door plate", "room sign"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Braille door sign”: a rectangle, 0.20 by 0.03 metres, hanging 1.20 metres above the floor, marked with the letters “Pb”."
+		},
+		"directorio_braille_voz": {
+			"nombre": "Braille and speech directory",
+			"descripcion": "Free-standing panel in the lobby listing floors and services in raised print and braille, with a large button at bottom right that reads it aloud.",
+			"etiquetas": ["talking directory", "braille directory", "building directory"],
+			"acciones": {
+				"leer": "Read by touch",
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Braille and speech directory”: a rectangle, 0.80 by 0.30 metres, marked with the letters “Db”."
+		},
+		"pasamanos_braille": {
+			"nombre": "Handrail with braille floor marker",
+			"descripcion": "Tubular stair handrail with a small braille tag at the start and end of each flight, on its inner face: it tells you which floor you are on.",
+			"etiquetas": ["braille handrail", "handrail floor indicator"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Handrail with braille floor marker”: a rectangle, 2.00 by 0.07 metres, hanging 0.90 metres above the floor, marked with the letters “Pb”."
+		},
+		"rotulo_banderola_bajo": {
+			"nombre": "Low projecting sign",
+			"descripcion": "Sign sticking out at right angles from the wall, like a stiff flag, at forehead height. It is thin and the cane gives no warning: you walk into it face first.",
+			"etiquetas": ["projecting sign", "blade sign", "flag sign"],
+			"imagen": "Footprint of “Low projecting sign”: a rectangle, 0.04 by 0.40 metres, hanging 1.70 metres above the floor, marked with the letters “Rb”."
+		},
+		"baliza_orientacion_interior": {
+			"nombre": "Indoor audible wayfinding beacon",
+			"descripcion": "Small speaker box above the door or the counter, over head height. It repeats a sharp, dry “tock, tock”: walk towards the sound to reach the spot.",
+			"etiquetas": ["wayfinding beacon", "audible beacon", "sound beacon"],
+			"acciones": {
+				"apagar": "Switch off",
+				"encender": "Switch on"
+			},
+			"imagen": "Footprint of “Indoor audible wayfinding beacon”: a rectangle, 0.20 by 0.10 metres, hanging 2.20 metres above the floor, marked with the letters “Bo”."
+		},
+		"pulsador_asistencia_pared": {
+			"nombre": "Assistance call button",
+			"descripcion": "Large round button in a small wall box at hip height, with braille beside it. Press it and it buzzes, and a member of staff comes.",
+			"etiquetas": ["assistance button", "help call point", "call for aid"],
+			"acciones": {
+				"llamar_asistencia": "Call for assistance"
+			},
+			"imagen": "Footprint of “Assistance call button”: a rectangle, 0.10 by 0.05 metres, hanging 0.90 metres above the floor, marked with the letters “Pa”."
+		},
+		"intercomunicador_accesible": {
+			"nombre": "Accessible entrance intercom",
+			"descripcion": "Metal plate on the wall by the door, lower than an ordinary entry phone, with one large raised button and a grille. A voice answers when you call.",
+			"etiquetas": ["accessible intercom", "entry phone", "door intercom"],
+			"acciones": {
+				"llamar": "Call",
+				"colgar": "Hang up"
+			},
+			"imagen": "Footprint of “Accessible entrance intercom”: a rectangle, 0.20 by 0.08 metres, hanging 0.90 metres above the floor, marked with the letters “Ia”."
+		},
+		"mostrador_accesible_bucle": {
+			"nombre": "Accessible counter with hearing loop",
+			"descripcion": "Two-height counter: a high run for standing and a low one with knee space. The low run has a hearing loop: with a hearing aid on T you hear the clerk without the room noise.",
+			"etiquetas": ["accessible counter", "hearing loop desk", "induction loop counter"],
+			"imagen": "Footprint of “Accessible counter with hearing loop”: a rectangle with a knee recess at the front left, 2.00 by 0.80 metres, marked with the letters “Ma”."
+		},
+		"puerta_automatica_detector": {
+			"nombre": "Automatic door with sensor and chime",
+			"descripcion": "Sliding glass door that opens by itself as you approach, with a beep and the hiss of the leaves. Closed it is a full pane of glass; wait a moment in front of it.",
+			"etiquetas": ["automatic door", "sliding door", "sensor door"],
+			"variantes": {
+				"una_hoja": "Single leaf",
+				"dos_hojas": "Double leaf",
+				"ancha": "Wide double leaf"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Automatic door with sensor and chime”: a rectangle, 1.60 by 0.12 metres, marked with the letters “Pa”."
+		},
+		"poste_pulsador_puerta": {
+			"nombre": "Door-opener push pad post",
+			"descripcion": "Square waist-high post a couple of paces before the door, with a large pad you press with hand, elbow or cane to make the door open.",
+			"etiquetas": ["push pad post", "door opener bollard", "access button post"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Door-opener push pad post”: a rectangle, 0.15 by 0.15 metres, marked with the letters “Pp”."
+		},
+		"lupa_television_mesa": {
+			"nombre": "Video magnifier on its desk",
+			"descripcion": "Desk with a tall device: a large screen and, beneath it, a sliding tray where the page goes to be seen hugely enlarged. The tray moves when touched.",
+			"etiquetas": ["video magnifier", "cctv magnifier", "desktop magnifier"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Video magnifier on its desk”: a rectangle, 1.00 by 0.70 metres, marked with the letters “Lt”."
+		},
+		"puesto_linea_braille": {
+			"nombre": "Computer desk with braille display",
+			"descripcion": "Desk with a talking computer and, in front of the keyboard, a strip of pins that rise and fall under your fingers. You hear the synthetic voice and the typing.",
+			"etiquetas": ["braille display", "screen reader workstation", "adapted computer"],
+			"acciones": {
+				"escribir": "Write",
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Computer desk with braille display”: a rectangle, 1.20 by 0.70 metres, marked with the letters “Pl”."
+		},
+		"maquina_perkins_mesa": {
+			"nombre": "Perkins brailler on its table",
+			"descripcion": "Table with a heavy cast-iron braille writer with six keys and a lever. Each letter is a sharp thump; a bell rings at the end of the line.",
+			"etiquetas": ["Perkins brailler", "braille writer", "braille typewriter"],
+			"acciones": {
+				"escribir": "Write"
+			},
+			"imagen": "Footprint of “Perkins brailler on its table”: a rectangle, 0.80 by 0.60 metres, marked with the letters “Mp”."
+		},
+		"impresora_braille_mueble": {
+			"nombre": "Braille embosser in its cabinet",
+			"descripcion": "Closed cabinet with a lid, hip high, housing the braille embosser. Even shut, when it prints it hammers loudly enough to hear from the corridor.",
+			"etiquetas": ["braille embosser", "braille printer", "acoustic hood"],
+			"acciones": {
+				"imprimir": "Print",
+				"parar": "Stop"
+			},
+			"imagen": "Footprint of “Braille embosser in its cabinet”: a rectangle, 0.70 by 0.65 metres, marked with the letters “Ib”."
+		},
+		"horno_relieves": {
+			"nombre": "Tactile graphics fuser",
+			"descripcion": "Sheet-metal machine on a table, with a lid that lowers onto a plastic sheet to copy a drawing in relief. It blows hot air: do not rest your hand on it.",
+			"etiquetas": ["thermoform machine", "swell paper fuser", "tactile image maker"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Tactile graphics fuser”: a rectangle, 0.75 by 0.70 metres, marked with the letters “Hr”."
+		},
+		"estanteria_libros_braille": {
+			"nombre": "Braille book shelving",
+			"descripcion": "Deep, sturdy shelving: braille books are wide, tall volumes and a single novel fills a whole shelf. The spines carry braille labels.",
+			"etiquetas": ["braille bookcase", "braille library shelves"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Braille book shelving”: a rectangle, 1.00 by 0.42 metres, marked with the letters “El”."
+		},
+		"mesa_ajedrez_adaptado": {
+			"nombre": "Adapted chess table",
+			"descripcion": "Small table with a chessboard whose dark squares are raised and where each piece pegs into a hole. The white pieces have a dot on top.",
+			"etiquetas": ["tactile chess", "adapted chess", "chess table"],
+			"acciones": {
+				"jugar": "Play"
+			},
+			"imagen": "Footprint of “Adapted chess table”: a rectangle, 0.70 by 0.70 metres, marked with the letters “Ma”."
+		},
+		"telefono_teclas_grandes_mesita": {
+			"nombre": "Big-button telephone on its stand",
+			"descripcion": "Narrow hall stand with a landline telephone with huge keys and a loud ringer that also flashes when it rings. The lead runs down to the skirting.",
+			"etiquetas": ["big-button phone", "amplified telephone"],
+			"acciones": {
+				"llamar": "Call",
+				"colgar": "Hang up"
+			},
+			"imagen": "Footprint of “Big-button telephone on its stand”: a rectangle, 0.45 by 0.38 metres, marked with the letters “Tt”."
+		},
+		"timbre_luminoso": {
+			"nombre": "Flashing doorbell",
+			"descripcion": "Small box high on the wall that, when someone rings the door, sounds loudly and flashes for anyone who cannot hear. It is above head height.",
+			"etiquetas": ["flashing doorbell", "visual alert", "doorbell signaller"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Flashing doorbell”: a rectangle, 0.15 by 0.06 metres, hanging 1.90 metres above the floor, marked with the letters “Tl”."
+		},
+		"reloj_parlante_repisa": {
+			"nombre": "Talking clock on its shelf",
+			"descripcion": "Short shelf at chest height holding a clock with one large button: press it and a voice tells the time. In between it ticks quietly.",
+			"etiquetas": ["talking clock", "speaking clock"],
+			"acciones": {
+				"escuchar_hora": "Hear the time"
+			},
+			"imagen": "Footprint of “Talking clock on its shelf”: a rectangle, 0.40 by 0.18 metres, hanging 1.10 metres above the floor, marked with the letters “Rp”."
+		},
+		"punto_videointerpretacion": {
+			"nombre": "Sign language video relay point",
+			"descripcion": "Free-standing lectern by the counter with a screen at chest height: it connects by video to a sign language interpreter. A tone sounds when calling.",
+			"etiquetas": ["video relay point", "sign language kiosk", "video interpreting"],
+			"acciones": {
+				"llamar": "Call",
+				"colgar": "Hang up"
+			},
+			"imagen": "Footprint of “Sign language video relay point”: a rectangle, 0.50 by 0.40 metres, marked with the letters “Pv”."
+		},
+		"panel_pictogramas": {
+			"nombre": "Pictogram communication board",
+			"descripcion": "Large board on the wall with simple pictures in raised squares, for asking for things by pointing. It sticks out only slightly, from waist to head.",
+			"etiquetas": ["pictogram board", "communication board", "AAC board"],
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Pictogram communication board”: a rectangle, 1.20 by 0.04 metres, hanging 0.80 metres above the floor, marked with the letters “Pp”."
+		},
+		"bastonero_bastones_blancos": {
+			"nombre": "White cane rack",
+			"descripcion": "Low metal holder against the wall by the entrance, with slots where canes are stood upright. Touch it and the canes clink.",
+			"etiquetas": ["cane rack", "cane stand", "white cane holder"],
+			"acciones": {
+				"dejar_baston": "Leave your cane"
+			},
+			"imagen": "Footprint of “White cane rack”: a semicircle, straight at the back and round at the front, 0.40 by 0.20 metres, marked with the letters “Bb”."
+		},
+		"bebedero_comedero_perro_guia": {
+			"nombre": "Guide dog water and food bowls",
+			"descripcion": "Two steel bowls side by side on a rubber tray, on the floor against the wall. Low and full of water: kick them and they splash and clang.",
+			"etiquetas": ["dog bowls", "water bowl", "feeding station"],
+			"variantes": {
+				"en_el_suelo": "On the floor",
+				"elevado": "On a raised stand"
+			},
+			"acciones": {
+				"tocar": "Touch"
+			},
+			"imagen": "Footprint of “Guide dog water and food bowls”: an elongated oval with straight sides and round ends, 0.60 by 0.30 metres, marked with the letters “Bc”."
+		},
+		"cama_perro_guia": {
+			"nombre": "Guide dog bed",
+			"descripcion": "Oval cushion with a soft raised rim, on the floor beside the desk or in a corner. Low and squashy; the dog is often lying on it.",
+			"etiquetas": ["dog bed", "dog cushion", "dog basket"],
+			"imagen": "Footprint of “Guide dog bed”: a rectangle with rounded corners, 0.90 by 0.70 metres, marked with the letters “Cp”."
+		}
+	}
+}

@@ -1,0 +1,9465 @@
+{
+	"formato": 1,
+	"explicacion": "Especificaciones enviadas a «sonido.exe renderizar» del Generador de sonidos, una por sonido (la salida es relativa a la carpeta de trabajo). Después solo se iguala el nivel de cada sonido al de serie y se guarda en FLAC.",
+	"generador": "Generador de Sonidos 1.0.0 con Python 3.15.0",
+	"ficha": {
+		"id": "natural",
+		"nombre": "Natural",
+		"descripcion": "Instrumentos acústicos y objetos con cuerpo: marimba, xilófono y campanas en lugar de tonos electrónicos, y pasos, golpes, puertas y agua hechos con modelos físicos.",
+		"autor": "EntornoLab, con el Generador de sonidos de su autor",
+		"licencia": "GPL-3.0-or-later, como el programa (sonidos generados por procedimiento; sin grabaciones de terceros)",
+		"version": "1.0",
+		"igualar": true
+	},
+	"sonidos": {
+		"baliza/pulso": {
+			"especificacion": {
+				"salida": "baliza/pulso.wav",
+				"titulo": "baliza/pulso",
+				"semilla": 101426,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "marimba",
+						"notas": "660hz",
+						"duracion": 0.3,
+						"params": {
+							"brillo": 0.6
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.35,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					660
+				],
+				"golpes": 1
+			}
+		},
+		"baliza/alineado": {
+			"especificacion": {
+				"salida": "baliza/alineado.wav",
+				"titulo": "baliza/alineado",
+				"semilla": 810171,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "xilofono",
+						"notas": "990hz",
+						"duracion": 0.3,
+						"params": {
+							"brillo": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.35,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					990
+				],
+				"golpes": 1
+			}
+		},
+		"baliza/detras": {
+			"especificacion": {
+				"salida": "baliza/detras.wav",
+				"titulo": "baliza/detras",
+				"semilla": 728202,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "marimba",
+						"notas": "440hz:0.13 330hz:0.24",
+						"params": {
+							"brillo": 0.5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.13
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					440,
+					330
+				],
+				"golpes": 2
+			}
+		},
+		"baliza/cerca": {
+			"especificacion": {
+				"salida": "baliza/cerca.wav",
+				"titulo": "baliza/cerca",
+				"semilla": 441299,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "xilofono",
+						"notas": "1320hz:0.11 1320hz:0.1",
+						"params": {
+							"brillo": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.11
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1320
+				],
+				"golpes": 2
+			}
+		},
+		"baliza/llegada": {
+			"especificacion": {
+				"salida": "baliza/llegada.wav",
+				"titulo": "baliza/llegada",
+				"semilla": 369965,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "vibrafono",
+						"notas": "523.25hz:0.11 659.25hz:0.11 783.99hz:0.11 1046.5hz:0.5",
+						"params": {
+							"motor": 0.0,
+							"brillo": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0,
+						"inicio": 0.11
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0,
+						"inicio": 0.22
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0,
+						"inicio": 0.33
+					}
+				],
+				"mono": true,
+				"duracion": 1.0,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					523.25,
+					659.25,
+					783.99,
+					1046.5
+				],
+				"golpes": 4
+			}
+		},
+		"sonda/pared": {
+			"especificacion": {
+				"salida": "sonda/pared.wav",
+				"titulo": "sonda/pared",
+				"semilla": 222738,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "marimba",
+						"notas": "[520hz 1040hz]:0.12",
+						"params": {
+							"brillo": 0.7,
+							"resonador": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					520
+				],
+				"golpes": 1
+			}
+		},
+		"sonda/puerta": {
+			"especificacion": {
+				"salida": "sonda/puerta.wav",
+				"titulo": "sonda/puerta",
+				"semilla": 879331,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_madera",
+						"duracion_max": 0.1,
+						"params": {
+							"golpeador": "nudillo",
+							"hueco": true,
+							"tamano": 0.5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_madera",
+						"inicio": 0.1,
+						"tono": 5,
+						"duracion_max": 0.18,
+						"params": {
+							"golpeador": "nudillo",
+							"hueco": true,
+							"tamano": 0.5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"params": {
+							"afinacion": 12
+						},
+						"volumen_db": -10.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"params": {
+							"afinacion": 12
+						},
+						"volumen_db": -10.0,
+						"inicio": 0.1
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"golpes": 2
+			}
+		},
+		"sonda/objeto": {
+			"especificacion": {
+				"salida": "sonda/objeto.wav",
+				"titulo": "sonda/objeto",
+				"semilla": 230811,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "xilofono",
+						"notas": "988hz",
+						"duracion": 0.16,
+						"params": {
+							"brillo": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					988
+				],
+				"golpes": 1
+			}
+		},
+		"sonda/libre": {
+			"especificacion": {
+				"salida": "sonda/libre.wav",
+				"titulo": "sonda/libre",
+				"semilla": 79182,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "espada_corte_aire",
+						"params": {
+							"velocidad": 0.9,
+							"tamano": 0.1,
+							"duracion": 0.25
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 1200
+							}
+						]
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"sonda/escalon": {
+			"especificacion": {
+				"salida": "sonda/escalon.wav",
+				"titulo": "sonda/escalon",
+				"semilla": 127741,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "xilofono",
+						"notas": "700hz:0.06 880hz:0.06 1109hz:0.12",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -2.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -2.0,
+						"inicio": 0.06
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -2.0,
+						"inicio": 0.12
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					700,
+					880,
+					1109
+				],
+				"golpes": 3
+			}
+		},
+		"sonda/bordillo": {
+			"especificacion": {
+				"salida": "sonda/bordillo.wav",
+				"titulo": "sonda/bordillo",
+				"semilla": 797696,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "tom_grave",
+						"duracion_max": 0.12,
+						"params": {
+							"fuerza": 0.8,
+							"afinacion": -5,
+							"apagado": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"volumen_db": -12,
+						"params": {
+							"afinacion": 7
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.09,
+						"volumen_db": -9,
+						"params": {
+							"afinacion": 7
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.09
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"golpes": 2
+			}
+		},
+		"sonda/cerca": {
+			"especificacion": {
+				"salida": "sonda/cerca.wav",
+				"titulo": "sonda/cerca",
+				"semilla": 224478,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "1397hz:0.09 1397hz:0.09 1397hz:0.09",
+						"params": {
+							"brillo": 0.8,
+							"liberacion": 0.08
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.09
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.18
+					}
+				],
+				"mono": true,
+				"duracion": 0.35,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1397.0
+				],
+				"golpes": 3
+			}
+		},
+		"sonda/media": {
+			"especificacion": {
+				"salida": "sonda/media.wav",
+				"titulo": "sonda/media",
+				"semilla": 858039,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "932hz:0.09 932hz:0.09",
+						"params": {
+							"brillo": 0.8,
+							"liberacion": 0.08
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.09
+					}
+				],
+				"mono": true,
+				"duracion": 0.26,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					932.0
+				],
+				"golpes": 2
+			}
+		},
+		"sonda/lejos": {
+			"especificacion": {
+				"salida": "sonda/lejos.wav",
+				"titulo": "sonda/lejos",
+				"semilla": 603267,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "554hz:0.09",
+						"params": {
+							"brillo": 0.8,
+							"liberacion": 0.08
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.17,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					554.0
+				],
+				"golpes": 1
+			}
+		},
+		"brujula/norte": {
+			"especificacion": {
+				"salida": "brujula/norte.wav",
+				"titulo": "brujula/norte",
+				"semilla": 380810,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "1568hz:0.2",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.26,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1568.0
+				],
+				"golpes": 1
+			}
+		},
+		"brujula/este": {
+			"especificacion": {
+				"salida": "brujula/este.wav",
+				"titulo": "brujula/este",
+				"semilla": 34110,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "1174.7hz:0.08 1174.7hz:0.2",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.08
+					}
+				],
+				"mono": true,
+				"duracion": 0.34,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1174.7
+				],
+				"golpes": 2
+			}
+		},
+		"brujula/sur": {
+			"especificacion": {
+				"salida": "brujula/sur.wav",
+				"titulo": "brujula/sur",
+				"semilla": 725195,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "784hz:0.2",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.26,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					784.0
+				],
+				"golpes": 1
+			}
+		},
+		"brujula/oeste": {
+			"especificacion": {
+				"salida": "brujula/oeste.wav",
+				"titulo": "brujula/oeste",
+				"semilla": 305705,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "987.8hz:0.08 987.8hz:0.08 987.8hz:0.2",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0,
+						"inicio": 0.08
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0,
+						"inicio": 0.16
+					}
+				],
+				"mono": true,
+				"duracion": 0.42,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					987.8
+				],
+				"golpes": 3
+			}
+		},
+		"brujula/noreste": {
+			"especificacion": {
+				"salida": "brujula/noreste.wav",
+				"titulo": "brujula/noreste",
+				"semilla": 544596,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "1568hz:0.08 1174.7hz:0.2",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.08
+					}
+				],
+				"mono": true,
+				"duracion": 0.34,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1568.0,
+					1174.7
+				],
+				"golpes": 2
+			}
+		},
+		"brujula/sureste": {
+			"especificacion": {
+				"salida": "brujula/sureste.wav",
+				"titulo": "brujula/sureste",
+				"semilla": 314599,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "784hz:0.08 1174.7hz:0.2",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0,
+						"inicio": 0.08
+					}
+				],
+				"mono": true,
+				"duracion": 0.34,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					784.0,
+					1174.7
+				],
+				"golpes": 2
+			}
+		},
+		"brujula/suroeste": {
+			"especificacion": {
+				"salida": "brujula/suroeste.wav",
+				"titulo": "brujula/suroeste",
+				"semilla": 46223,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "784hz:0.08 987.8hz:0.2",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.08
+					}
+				],
+				"mono": true,
+				"duracion": 0.34,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					784.0,
+					987.8
+				],
+				"golpes": 2
+			}
+		},
+		"brujula/noroeste": {
+			"especificacion": {
+				"salida": "brujula/noroeste.wav",
+				"titulo": "brujula/noroeste",
+				"semilla": 799221,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "1568hz:0.08 987.8hz:0.2",
+						"params": {
+							"brillo": 0.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0,
+						"inicio": 0.08
+					}
+				],
+				"mono": true,
+				"duracion": 0.34,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1568.0,
+					987.8
+				],
+				"golpes": 2
+			}
+		},
+		"eco/chasquido": {
+			"especificacion": {
+				"salida": "eco/chasquido.wav",
+				"titulo": "eco/chasquido",
+				"semilla": 287505,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "chasquido_dedos_bateria",
+						"params": {
+							"fuerza": 0.9
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.07,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.0175
+					}
+				]
+			}
+		},
+		"pasos/baldosa_izq_1": {
+			"especificacion": {
+				"salida": "pasos/baldosa_izq_1.wav",
+				"titulo": "pasos/baldosa_izq_1",
+				"semilla": 576425,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/baldosa_izq_2": {
+			"especificacion": {
+				"salida": "pasos/baldosa_izq_2.wav",
+				"titulo": "pasos/baldosa_izq_2",
+				"semilla": 382099,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/baldosa_izq_3": {
+			"especificacion": {
+				"salida": "pasos/baldosa_izq_3.wav",
+				"titulo": "pasos/baldosa_izq_3",
+				"semilla": 458885,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/baldosa_der_1": {
+			"especificacion": {
+				"salida": "pasos/baldosa_der_1.wav",
+				"titulo": "pasos/baldosa_der_1",
+				"semilla": 232520,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/baldosa_der_2": {
+			"especificacion": {
+				"salida": "pasos/baldosa_der_2.wav",
+				"titulo": "pasos/baldosa_der_2",
+				"semilla": 143794,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/baldosa_der_3": {
+			"especificacion": {
+				"salida": "pasos/baldosa_der_3.wav",
+				"titulo": "pasos/baldosa_der_3",
+				"semilla": 708324,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/madera_izq_1": {
+			"especificacion": {
+				"salida": "pasos/madera_izq_1.wav",
+				"titulo": "pasos/madera_izq_1",
+				"semilla": 587168,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "madera",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/madera_izq_2": {
+			"especificacion": {
+				"salida": "pasos/madera_izq_2.wav",
+				"titulo": "pasos/madera_izq_2",
+				"semilla": 971802,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "madera",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/madera_izq_3": {
+			"especificacion": {
+				"salida": "pasos/madera_izq_3.wav",
+				"titulo": "pasos/madera_izq_3",
+				"semilla": 155404,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "madera",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/madera_der_1": {
+			"especificacion": {
+				"salida": "pasos/madera_der_1.wav",
+				"titulo": "pasos/madera_der_1",
+				"semilla": 655681,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "madera",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/madera_der_2": {
+			"especificacion": {
+				"salida": "pasos/madera_der_2.wav",
+				"titulo": "pasos/madera_der_2",
+				"semilla": 96891,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "madera",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/madera_der_3": {
+			"especificacion": {
+				"salida": "pasos/madera_der_3.wav",
+				"titulo": "pasos/madera_der_3",
+				"semilla": 534573,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "madera",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/moqueta_izq_1": {
+			"especificacion": {
+				"salida": "pasos/moqueta_izq_1.wav",
+				"titulo": "pasos/moqueta_izq_1",
+				"semilla": 429855,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "zapatilla",
+							"peso": 0.4,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 180
+							},
+							{
+								"nombre": "paso_bajo",
+								"corte": 2200
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/moqueta_izq_2": {
+			"especificacion": {
+				"salida": "pasos/moqueta_izq_2.wav",
+				"titulo": "pasos/moqueta_izq_2",
+				"semilla": 994917,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "zapatilla",
+							"peso": 0.4,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 180
+							},
+							{
+								"nombre": "paso_bajo",
+								"corte": 2200
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/moqueta_izq_3": {
+			"especificacion": {
+				"salida": "pasos/moqueta_izq_3.wav",
+				"titulo": "pasos/moqueta_izq_3",
+				"semilla": 442163,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "zapatilla",
+							"peso": 0.4,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 180
+							},
+							{
+								"nombre": "paso_bajo",
+								"corte": 2200
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/moqueta_der_1": {
+			"especificacion": {
+				"salida": "pasos/moqueta_der_1.wav",
+				"titulo": "pasos/moqueta_der_1",
+				"semilla": 934782,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 180
+							},
+							{
+								"nombre": "paso_bajo",
+								"corte": 2200
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/moqueta_der_2": {
+			"especificacion": {
+				"salida": "pasos/moqueta_der_2.wav",
+				"titulo": "pasos/moqueta_der_2",
+				"semilla": 281732,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 180
+							},
+							{
+								"nombre": "paso_bajo",
+								"corte": 2200
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/moqueta_der_3": {
+			"especificacion": {
+				"salida": "pasos/moqueta_der_3.wav",
+				"titulo": "pasos/moqueta_der_3",
+				"semilla": 39890,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 180
+							},
+							{
+								"nombre": "paso_bajo",
+								"corte": 2200
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/alfombra_izq_1": {
+			"especificacion": {
+				"salida": "pasos/alfombra_izq_1.wav",
+				"titulo": "pasos/alfombra_izq_1",
+				"semilla": 67162,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "bota",
+							"peso": 0.8,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 700
+							},
+							{
+								"nombre": "graves",
+								"frecuencia": 200,
+								"ganancia": 4
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/alfombra_izq_2": {
+			"especificacion": {
+				"salida": "pasos/alfombra_izq_2.wav",
+				"titulo": "pasos/alfombra_izq_2",
+				"semilla": 452576,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "bota",
+							"peso": 0.8,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 700
+							},
+							{
+								"nombre": "graves",
+								"frecuencia": 200,
+								"ganancia": 4
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/alfombra_izq_3": {
+			"especificacion": {
+				"salida": "pasos/alfombra_izq_3.wav",
+				"titulo": "pasos/alfombra_izq_3",
+				"semilla": 446198,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "bota",
+							"peso": 0.8,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 700
+							},
+							{
+								"nombre": "graves",
+								"frecuencia": 200,
+								"ganancia": 4
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/alfombra_der_1": {
+			"especificacion": {
+				"salida": "pasos/alfombra_der_1.wav",
+				"titulo": "pasos/alfombra_der_1",
+				"semilla": 925115,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "bota",
+							"peso": 0.7,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 700
+							},
+							{
+								"nombre": "graves",
+								"frecuencia": 200,
+								"ganancia": 4
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/alfombra_der_2": {
+			"especificacion": {
+				"salida": "pasos/alfombra_der_2.wav",
+				"titulo": "pasos/alfombra_der_2",
+				"semilla": 365953,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "bota",
+							"peso": 0.7,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 700
+							},
+							{
+								"nombre": "graves",
+								"frecuencia": 200,
+								"ganancia": 4
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/alfombra_der_3": {
+			"especificacion": {
+				"salida": "pasos/alfombra_der_3.wav",
+				"titulo": "pasos/alfombra_der_3",
+				"semilla": 428631,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "alfombra",
+							"calzado": "bota",
+							"peso": 0.7,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 700
+							},
+							{
+								"nombre": "graves",
+								"frecuencia": 200,
+								"ganancia": 4
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hormigon_izq_1": {
+			"especificacion": {
+				"salida": "pasos/hormigon_izq_1.wav",
+				"titulo": "pasos/hormigon_izq_1",
+				"semilla": 793648,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 2500
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.21,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hormigon_izq_2": {
+			"especificacion": {
+				"salida": "pasos/hormigon_izq_2.wav",
+				"titulo": "pasos/hormigon_izq_2",
+				"semilla": 340106,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 2500
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.21,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hormigon_izq_3": {
+			"especificacion": {
+				"salida": "pasos/hormigon_izq_3.wav",
+				"titulo": "pasos/hormigon_izq_3",
+				"semilla": 402588,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 2500
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.21,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hormigon_der_1": {
+			"especificacion": {
+				"salida": "pasos/hormigon_der_1.wav",
+				"titulo": "pasos/hormigon_der_1",
+				"semilla": 995089,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 2500
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.21,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hormigon_der_2": {
+			"especificacion": {
+				"salida": "pasos/hormigon_der_2.wav",
+				"titulo": "pasos/hormigon_der_2",
+				"semilla": 339947,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 2500
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.21,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hormigon_der_3": {
+			"especificacion": {
+				"salida": "pasos/hormigon_der_3.wav",
+				"titulo": "pasos/hormigon_der_3",
+				"semilla": 898813,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 2500
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.21,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/asfalto_izq_1": {
+			"especificacion": {
+				"salida": "pasos/asfalto_izq_1.wav",
+				"titulo": "pasos/asfalto_izq_1",
+				"semilla": 437253,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapatilla",
+							"peso": 0.6,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 1800
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5
+						},
+						"volumen_db": 7.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.23,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/asfalto_izq_2": {
+			"especificacion": {
+				"salida": "pasos/asfalto_izq_2.wav",
+				"titulo": "pasos/asfalto_izq_2",
+				"semilla": 921087,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapatilla",
+							"peso": 0.6,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 1800
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5
+						},
+						"volumen_db": 7.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.23,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/asfalto_izq_3": {
+			"especificacion": {
+				"salida": "pasos/asfalto_izq_3.wav",
+				"titulo": "pasos/asfalto_izq_3",
+				"semilla": 501481,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapatilla",
+							"peso": 0.6,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 1800
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5
+						},
+						"volumen_db": 3.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.23,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/asfalto_der_1": {
+			"especificacion": {
+				"salida": "pasos/asfalto_der_1.wav",
+				"titulo": "pasos/asfalto_der_1",
+				"semilla": 806884,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapatilla",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 1800
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5
+						},
+						"volumen_db": 3.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.23,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/asfalto_der_2": {
+			"especificacion": {
+				"salida": "pasos/asfalto_der_2.wav",
+				"titulo": "pasos/asfalto_der_2",
+				"semilla": 235166,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapatilla",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 1800
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5
+						},
+						"volumen_db": 3.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.23,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/asfalto_der_3": {
+			"especificacion": {
+				"salida": "pasos/asfalto_der_3.wav",
+				"titulo": "pasos/asfalto_der_3",
+				"semilla": 295560,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapatilla",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_bajo",
+								"corte": 1800
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "zapatilla",
+							"peso": 0.3,
+							"velocidad": 0.5
+						},
+						"volumen_db": 7.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.23,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/acera_izq_1": {
+			"especificacion": {
+				"salida": "pasos/acera_izq_1.wav",
+				"titulo": "pasos/acera_izq_1",
+				"semilla": 416685,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "zapato",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 300
+							},
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 2400,
+								"ganancia": 9,
+								"q": 1.2
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/acera_izq_2": {
+			"especificacion": {
+				"salida": "pasos/acera_izq_2.wav",
+				"titulo": "pasos/acera_izq_2",
+				"semilla": 914583,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "zapato",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 300
+							},
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 2400,
+								"ganancia": 9,
+								"q": 1.2
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/acera_izq_3": {
+			"especificacion": {
+				"salida": "pasos/acera_izq_3.wav",
+				"titulo": "pasos/acera_izq_3",
+				"semilla": 37505,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "zapato",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 300
+							},
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 2400,
+								"ganancia": 9,
+								"q": 1.2
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/acera_der_1": {
+			"especificacion": {
+				"salida": "pasos/acera_der_1.wav",
+				"titulo": "pasos/acera_der_1",
+				"semilla": 641228,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "zapato",
+							"peso": 0.4,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 300
+							},
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 2400,
+								"ganancia": 9,
+								"q": 1.2
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/acera_der_2": {
+			"especificacion": {
+				"salida": "pasos/acera_der_2.wav",
+				"titulo": "pasos/acera_der_2",
+				"semilla": 34678,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "zapato",
+							"peso": 0.4,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 300
+							},
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 2400,
+								"ganancia": 9,
+								"q": 1.2
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/acera_der_3": {
+			"especificacion": {
+				"salida": "pasos/acera_der_3.wav",
+				"titulo": "pasos/acera_der_3",
+				"semilla": 968480,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "zapato",
+							"peso": 0.4,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 300
+							},
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 2400,
+								"ganancia": 9,
+								"q": 1.2
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/adoquin_izq_1": {
+			"especificacion": {
+				"salida": "pasos/adoquin_izq_1.wav",
+				"titulo": "pasos/adoquin_izq_1",
+				"semilla": 233471,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.6,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 1100,
+								"ganancia": 7,
+								"q": 1.5
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"inicio": 0.07,
+						"volumen_db": -2,
+						"tono": 5,
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.2,
+							"velocidad": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.25,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/adoquin_izq_2": {
+			"especificacion": {
+				"salida": "pasos/adoquin_izq_2.wav",
+				"titulo": "pasos/adoquin_izq_2",
+				"semilla": 418501,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.6,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 1100,
+								"ganancia": 7,
+								"q": 1.5
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"inicio": 0.07,
+						"volumen_db": -2,
+						"tono": 5,
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.2,
+							"velocidad": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.25,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/adoquin_izq_3": {
+			"especificacion": {
+				"salida": "pasos/adoquin_izq_3.wav",
+				"titulo": "pasos/adoquin_izq_3",
+				"semilla": 853843,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.6,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 1100,
+								"ganancia": 7,
+								"q": 1.5
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"inicio": 0.07,
+						"volumen_db": -2,
+						"tono": 5,
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.2,
+							"velocidad": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.25,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/adoquin_der_1": {
+			"especificacion": {
+				"salida": "pasos/adoquin_der_1.wav",
+				"titulo": "pasos/adoquin_der_1",
+				"semilla": 186974,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 1100,
+								"ganancia": 7,
+								"q": 1.5
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"inicio": 0.07,
+						"volumen_db": -2,
+						"tono": 5,
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.2,
+							"velocidad": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.25,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/adoquin_der_2": {
+			"especificacion": {
+				"salida": "pasos/adoquin_der_2.wav",
+				"titulo": "pasos/adoquin_der_2",
+				"semilla": 219428,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 1100,
+								"ganancia": 7,
+								"q": 1.5
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"inicio": 0.07,
+						"volumen_db": -2,
+						"tono": 5,
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.2,
+							"velocidad": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.25,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/adoquin_der_3": {
+			"especificacion": {
+				"salida": "pasos/adoquin_der_3.wav",
+				"titulo": "pasos/adoquin_der_3",
+				"semilla": 618482,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.5,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "ecualizador",
+								"frecuencia": 1100,
+								"ganancia": 7,
+								"q": 1.5
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"inicio": 0.07,
+						"volumen_db": -2,
+						"tono": 5,
+						"params": {
+							"superficie": "piedra",
+							"calzado": "bota",
+							"peso": 0.2,
+							"velocidad": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.25,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tierra_izq_1": {
+			"especificacion": {
+				"salida": "pasos/tierra_izq_1.wav",
+				"titulo": "pasos/tierra_izq_1",
+				"semilla": 552590,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "tierra",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tierra_izq_2": {
+			"especificacion": {
+				"salida": "pasos/tierra_izq_2.wav",
+				"titulo": "pasos/tierra_izq_2",
+				"semilla": 674100,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "tierra",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tierra_izq_3": {
+			"especificacion": {
+				"salida": "pasos/tierra_izq_3.wav",
+				"titulo": "pasos/tierra_izq_3",
+				"semilla": 952290,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "tierra",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tierra_der_1": {
+			"especificacion": {
+				"salida": "pasos/tierra_der_1.wav",
+				"titulo": "pasos/tierra_der_1",
+				"semilla": 645743,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "tierra",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tierra_der_2": {
+			"especificacion": {
+				"salida": "pasos/tierra_der_2.wav",
+				"titulo": "pasos/tierra_der_2",
+				"semilla": 807317,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "tierra",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tierra_der_3": {
+			"especificacion": {
+				"salida": "pasos/tierra_der_3.wav",
+				"titulo": "pasos/tierra_der_3",
+				"semilla": 323203,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "tierra",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hierba_izq_1": {
+			"especificacion": {
+				"salida": "pasos/hierba_izq_1.wav",
+				"titulo": "pasos/hierba_izq_1",
+				"semilla": 921048,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hierba",
+							"calzado": "zapatilla",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hierba_izq_2": {
+			"especificacion": {
+				"salida": "pasos/hierba_izq_2.wav",
+				"titulo": "pasos/hierba_izq_2",
+				"semilla": 429858,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hierba",
+							"calzado": "zapatilla",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hierba_izq_3": {
+			"especificacion": {
+				"salida": "pasos/hierba_izq_3.wav",
+				"titulo": "pasos/hierba_izq_3",
+				"semilla": 796788,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hierba",
+							"calzado": "zapatilla",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hierba_der_1": {
+			"especificacion": {
+				"salida": "pasos/hierba_der_1.wav",
+				"titulo": "pasos/hierba_der_1",
+				"semilla": 245945,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hierba",
+							"calzado": "zapatilla",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hierba_der_2": {
+			"especificacion": {
+				"salida": "pasos/hierba_der_2.wav",
+				"titulo": "pasos/hierba_der_2",
+				"semilla": 649155,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hierba",
+							"calzado": "zapatilla",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/hierba_der_3": {
+			"especificacion": {
+				"salida": "pasos/hierba_der_3.wav",
+				"titulo": "pasos/hierba_der_3",
+				"semilla": 11925,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "hierba",
+							"calzado": "zapatilla",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/grava_izq_1": {
+			"especificacion": {
+				"salida": "pasos/grava_izq_1.wav",
+				"titulo": "pasos/grava_izq_1",
+				"semilla": 308814,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.36,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/grava_izq_2": {
+			"especificacion": {
+				"salida": "pasos/grava_izq_2.wav",
+				"titulo": "pasos/grava_izq_2",
+				"semilla": 810676,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.36,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/grava_izq_3": {
+			"especificacion": {
+				"salida": "pasos/grava_izq_3.wav",
+				"titulo": "pasos/grava_izq_3",
+				"semilla": 14562,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.36,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/grava_der_1": {
+			"especificacion": {
+				"salida": "pasos/grava_der_1.wav",
+				"titulo": "pasos/grava_der_1",
+				"semilla": 415919,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.36,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/grava_der_2": {
+			"especificacion": {
+				"salida": "pasos/grava_der_2.wav",
+				"titulo": "pasos/grava_der_2",
+				"semilla": 22229,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.36,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/grava_der_3": {
+			"especificacion": {
+				"salida": "pasos/grava_der_3.wav",
+				"titulo": "pasos/grava_der_3",
+				"semilla": 197507,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "grava",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.36,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/metal_izq_1": {
+			"especificacion": {
+				"salida": "pasos/metal_izq_1.wav",
+				"titulo": "pasos/metal_izq_1",
+				"semilla": 149207,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "metal",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_metal",
+						"volumen_db": -9,
+						"params": {
+							"tamano": 0.35,
+							"fuerza": 0.4,
+							"forma": "placa",
+							"amortiguado": 0.45,
+							"duracion": 0.35
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/metal_izq_2": {
+			"especificacion": {
+				"salida": "pasos/metal_izq_2.wav",
+				"titulo": "pasos/metal_izq_2",
+				"semilla": 673837,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "metal",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_metal",
+						"volumen_db": -9,
+						"params": {
+							"tamano": 0.35,
+							"fuerza": 0.4,
+							"forma": "placa",
+							"amortiguado": 0.45,
+							"duracion": 0.35
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/metal_izq_3": {
+			"especificacion": {
+				"salida": "pasos/metal_izq_3.wav",
+				"titulo": "pasos/metal_izq_3",
+				"semilla": 306875,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "metal",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_metal",
+						"volumen_db": -9,
+						"params": {
+							"tamano": 0.35,
+							"fuerza": 0.4,
+							"forma": "placa",
+							"amortiguado": 0.45,
+							"duracion": 0.35
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/metal_der_1": {
+			"especificacion": {
+				"salida": "pasos/metal_der_1.wav",
+				"titulo": "pasos/metal_der_1",
+				"semilla": 596534,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "metal",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_metal",
+						"volumen_db": -9,
+						"params": {
+							"tamano": 0.35,
+							"fuerza": 0.4,
+							"forma": "placa",
+							"amortiguado": 0.45,
+							"duracion": 0.35
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/metal_der_2": {
+			"especificacion": {
+				"salida": "pasos/metal_der_2.wav",
+				"titulo": "pasos/metal_der_2",
+				"semilla": 918412,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "metal",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_metal",
+						"volumen_db": -9,
+						"params": {
+							"tamano": 0.35,
+							"fuerza": 0.4,
+							"forma": "placa",
+							"amortiguado": 0.45,
+							"duracion": 0.35
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/metal_der_3": {
+			"especificacion": {
+				"salida": "pasos/metal_der_3.wav",
+				"titulo": "pasos/metal_der_3",
+				"semilla": 15066,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "metal",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_metal",
+						"volumen_db": -9,
+						"params": {
+							"tamano": 0.35,
+							"fuerza": 0.4,
+							"forma": "placa",
+							"amortiguado": 0.45,
+							"duracion": 0.35
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/arena_izq_1": {
+			"especificacion": {
+				"salida": "pasos/arena_izq_1.wav",
+				"titulo": "pasos/arena_izq_1",
+				"semilla": 257311,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "arena",
+							"calzado": "zapatilla",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.33,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/arena_izq_2": {
+			"especificacion": {
+				"salida": "pasos/arena_izq_2.wav",
+				"titulo": "pasos/arena_izq_2",
+				"semilla": 184165,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "arena",
+							"calzado": "zapatilla",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.33,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/arena_izq_3": {
+			"especificacion": {
+				"salida": "pasos/arena_izq_3.wav",
+				"titulo": "pasos/arena_izq_3",
+				"semilla": 10611,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "arena",
+							"calzado": "zapatilla",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.33,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/arena_der_1": {
+			"especificacion": {
+				"salida": "pasos/arena_der_1.wav",
+				"titulo": "pasos/arena_der_1",
+				"semilla": 835262,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "arena",
+							"calzado": "zapatilla",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.33,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/arena_der_2": {
+			"especificacion": {
+				"salida": "pasos/arena_der_2.wav",
+				"titulo": "pasos/arena_der_2",
+				"semilla": 625796,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "arena",
+							"calzado": "zapatilla",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.33,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/arena_der_3": {
+			"especificacion": {
+				"salida": "pasos/arena_der_3.wav",
+				"titulo": "pasos/arena_der_3",
+				"semilla": 964498,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "arena",
+							"calzado": "zapatilla",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.33,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/agua_izq_1": {
+			"especificacion": {
+				"salida": "pasos/agua_izq_1.wav",
+				"titulo": "pasos/agua_izq_1",
+				"semilla": 45505,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "agua_charco",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.45,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/agua_izq_2": {
+			"especificacion": {
+				"salida": "pasos/agua_izq_2.wav",
+				"titulo": "pasos/agua_izq_2",
+				"semilla": 36475,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "agua_charco",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.45,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/agua_izq_3": {
+			"especificacion": {
+				"salida": "pasos/agua_izq_3.wav",
+				"titulo": "pasos/agua_izq_3",
+				"semilla": 171181,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "agua_charco",
+							"calzado": "bota",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.45,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/agua_der_1": {
+			"especificacion": {
+				"salida": "pasos/agua_der_1.wav",
+				"titulo": "pasos/agua_der_1",
+				"semilla": 283744,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "agua_charco",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.45,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/agua_der_2": {
+			"especificacion": {
+				"salida": "pasos/agua_der_2.wav",
+				"titulo": "pasos/agua_der_2",
+				"semilla": 313754,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "agua_charco",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.45,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/agua_der_3": {
+			"especificacion": {
+				"salida": "pasos/agua_der_3.wav",
+				"titulo": "pasos/agua_der_3",
+				"semilla": 235276,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "agua_charco",
+							"calzado": "bota",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.45,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_botones_izq_1": {
+			"especificacion": {
+				"salida": "pasos/tactil_botones_izq_1.wav",
+				"titulo": "pasos/tactil_botones_izq_1",
+				"semilla": 169947,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.03,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.06,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_botones_izq_2": {
+			"especificacion": {
+				"salida": "pasos/tactil_botones_izq_2.wav",
+				"titulo": "pasos/tactil_botones_izq_2",
+				"semilla": 704033,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.03,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.06,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_botones_izq_3": {
+			"especificacion": {
+				"salida": "pasos/tactil_botones_izq_3.wav",
+				"titulo": "pasos/tactil_botones_izq_3",
+				"semilla": 633207,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.03,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.06,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_botones_der_1": {
+			"especificacion": {
+				"salida": "pasos/tactil_botones_der_1.wav",
+				"titulo": "pasos/tactil_botones_der_1",
+				"semilla": 225658,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.03,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.06,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_botones_der_2": {
+			"especificacion": {
+				"salida": "pasos/tactil_botones_der_2.wav",
+				"titulo": "pasos/tactil_botones_der_2",
+				"semilla": 865216,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.03,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.06,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_botones_der_3": {
+			"especificacion": {
+				"salida": "pasos/tactil_botones_der_3.wav",
+				"titulo": "pasos/tactil_botones_der_3",
+				"semilla": 879830,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.03,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.06,
+						"volumen_db": -7,
+						"params": {
+							"fuerza": 0.5,
+							"afinacion": 5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.22,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_rayas_izq_1": {
+			"especificacion": {
+				"salida": "pasos/tactil_rayas_izq_1.wav",
+				"titulo": "pasos/tactil_rayas_izq_1",
+				"semilla": 46221,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_pies",
+						"inicio": 0.02,
+						"duracion_max": 0.15,
+						"volumen_db": 1,
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"duracion": 0.5,
+							"velocidad": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_rayas_izq_2": {
+			"especificacion": {
+				"salida": "pasos/tactil_rayas_izq_2.wav",
+				"titulo": "pasos/tactil_rayas_izq_2",
+				"semilla": 876535,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_pies",
+						"inicio": 0.02,
+						"duracion_max": 0.15,
+						"volumen_db": 1,
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"duracion": 0.5,
+							"velocidad": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_rayas_izq_3": {
+			"especificacion": {
+				"salida": "pasos/tactil_rayas_izq_3.wav",
+				"titulo": "pasos/tactil_rayas_izq_3",
+				"semilla": 90465,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.55,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_pies",
+						"inicio": 0.02,
+						"duracion_max": 0.15,
+						"volumen_db": 1,
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"duracion": 0.5,
+							"velocidad": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_rayas_der_1": {
+			"especificacion": {
+				"salida": "pasos/tactil_rayas_der_1.wav",
+				"titulo": "pasos/tactil_rayas_der_1",
+				"semilla": 565100,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_pies",
+						"inicio": 0.02,
+						"duracion_max": 0.15,
+						"volumen_db": 1,
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"duracion": 0.5,
+							"velocidad": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_rayas_der_2": {
+			"especificacion": {
+				"salida": "pasos/tactil_rayas_der_2.wav",
+				"titulo": "pasos/tactil_rayas_der_2",
+				"semilla": 517270,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_pies",
+						"inicio": 0.02,
+						"duracion_max": 0.15,
+						"volumen_db": 1,
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"duracion": 0.5,
+							"velocidad": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"pasos/tactil_rayas_der_3": {
+			"especificacion": {
+				"salida": "pasos/tactil_rayas_der_3.wav",
+				"titulo": "pasos/tactil_rayas_der_3",
+				"semilla": 468928,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"peso": 0.45,
+							"velocidad": 0.5,
+							"arrastre": 0.3,
+							"sala": "seca"
+						},
+						"efectos": [
+							{
+								"nombre": "agudos",
+								"frecuencia": 2000,
+								"ganancia": 6
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_pies",
+						"inicio": 0.02,
+						"duracion_max": 0.15,
+						"volumen_db": 1,
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"duracion": 0.5,
+							"velocidad": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"duracion_max": 0.12,
+						"params": {
+							"tela": "vaqueros",
+							"intensidad": 0.6,
+							"duracion": 0.2,
+							"movimientos": 1
+						},
+						"volumen_db": -14.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.24,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"golpe/ladrillo": {
+			"especificacion": {
+				"salida": "golpe/ladrillo.wav",
+				"titulo": "golpe/ladrillo",
+				"semilla": 197712,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_piedra",
+						"params": {
+							"tamano": 0.75,
+							"fuerza": 0.7,
+							"arenilla": 0.9
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 12.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"golpe/madera": {
+			"especificacion": {
+				"salida": "golpe/madera.wav",
+				"titulo": "golpe/madera",
+				"semilla": 35915,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_madera",
+						"params": {
+							"tamano": 0.5,
+							"fuerza": 0.8,
+							"hueco": true,
+							"golpeador": "mazo"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"params": {
+							"afinacion": 12
+						},
+						"volumen_db": -6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"golpes": 1
+			}
+		},
+		"golpe/metal": {
+			"especificacion": {
+				"salida": "golpe/metal.wav",
+				"titulo": "golpe/metal",
+				"semilla": 119935,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_metal",
+						"params": {
+							"tamano": 0.5,
+							"fuerza": 0.8,
+							"forma": "placa",
+							"amortiguado": 0.2,
+							"duracion": 0.7
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.7,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 4.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"golpe/cristal": {
+			"especificacion": {
+				"salida": "golpe/cristal.wav",
+				"titulo": "golpe/cristal",
+				"semilla": 5806,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_vidrio",
+						"params": {
+							"objeto": "ventana",
+							"tamano": 0.5,
+							"fuerza": 0.5
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.7,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 8.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"golpe/plastico": {
+			"especificacion": {
+				"salida": "golpe/plastico.wav",
+				"titulo": "golpe/plastico",
+				"semilla": 439825,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "impacto",
+						"params": {
+							"material": "plastico",
+							"forma": "caja",
+							"tamano": 0.4,
+							"fuerza": 0.7,
+							"duracion": 0.3
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 16.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"golpe/tela": {
+			"especificacion": {
+				"salida": "golpe/tela.wav",
+				"titulo": "golpe/tela",
+				"semilla": 272524,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_cojin",
+						"params": {
+							"objeto": "cojin",
+							"fuerza": 0.7
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"params": {
+							"tela": "algodon",
+							"intensidad": 0.7,
+							"duracion": 0.25,
+							"movimientos": 1
+						},
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"golpe/piedra": {
+			"especificacion": {
+				"salida": "golpe/piedra.wav",
+				"titulo": "golpe/piedra",
+				"semilla": 504989,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_piedra",
+						"params": {
+							"tamano": 0.4,
+							"fuerza": 0.9,
+							"arenilla": 0.05
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.3,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 8.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"roce/ladrillo": {
+			"especificacion": {
+				"salida": "roce/ladrillo.wav",
+				"titulo": "roce/ladrillo",
+				"semilla": 69282,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_objeto",
+						"params": {
+							"material": "piedra",
+							"superficie": "hormigon",
+							"duracion": 0.4,
+							"peso": 0.3,
+							"tamano": 0.4
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 8.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"roce/madera": {
+			"especificacion": {
+				"salida": "roce/madera.wav",
+				"titulo": "roce/madera",
+				"semilla": 491188,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_objeto",
+						"params": {
+							"material": "madera",
+							"superficie": "madera",
+							"duracion": 0.4,
+							"peso": 0.3,
+							"tamano": 0.4
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 12.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"roce/metal": {
+			"especificacion": {
+				"salida": "roce/metal.wav",
+				"titulo": "roce/metal",
+				"semilla": 304139,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_objeto",
+						"params": {
+							"material": "metal",
+							"superficie": "metal",
+							"duracion": 0.4,
+							"peso": 0.3,
+							"tamano": 0.3
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 8.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"roce/cristal": {
+			"especificacion": {
+				"salida": "roce/cristal.wav",
+				"titulo": "roce/cristal",
+				"semilla": 237629,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_objeto",
+						"params": {
+							"material": "plastico",
+							"superficie": "baldosa",
+							"duracion": 0.4,
+							"peso": 0.1,
+							"tamano": 0.2
+						},
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 3000
+							}
+						]
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"roce/plastico": {
+			"especificacion": {
+				"salida": "roce/plastico.wav",
+				"titulo": "roce/plastico",
+				"semilla": 827043,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_objeto",
+						"params": {
+							"material": "plastico",
+							"superficie": "madera",
+							"duracion": 0.4,
+							"peso": 0.2,
+							"tamano": 0.3
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 16.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"roce/tela": {
+			"especificacion": {
+				"salida": "roce/tela.wav",
+				"titulo": "roce/tela",
+				"semilla": 734283,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "ropa_movimiento",
+						"params": {
+							"tela": "algodon",
+							"intensidad": 0.6,
+							"duracion": 0.4,
+							"movimientos": 1
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"roce/piedra": {
+			"especificacion": {
+				"salida": "roce/piedra.wav",
+				"titulo": "roce/piedra",
+				"semilla": 711138,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_objeto",
+						"params": {
+							"material": "piedra",
+							"superficie": "piedra",
+							"duracion": 0.4,
+							"peso": 0.5,
+							"tamano": 0.6
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.4,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 4.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"puerta/abrir": {
+			"especificacion": {
+				"salida": "puerta/abrir.wav",
+				"titulo": "puerta/abrir",
+				"semilla": 48096,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "puerta_madera",
+						"params": {
+							"accion": "abrir",
+							"chirrido": 0.5,
+							"tamano": 0.4,
+							"fuerza": 0.5,
+							"velocidad": 1.0,
+							"espacio": "seco"
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 1.2,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"puerta/cerrar": {
+			"especificacion": {
+				"salida": "puerta/cerrar.wav",
+				"titulo": "puerta/cerrar",
+				"semilla": 305826,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "puerta_madera",
+						"params": {
+							"accion": "cerrar",
+							"chirrido": 0.4,
+							"tamano": 0.4,
+							"fuerza": 0.6,
+							"velocidad": 1.0,
+							"espacio": "seco"
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 1.15,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 8.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"puerta/con_llave": {
+			"especificacion": {
+				"salida": "puerta/con_llave.wav",
+				"titulo": "puerta/con_llave",
+				"semilla": 753189,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "picaporte",
+						"duracion_max": 0.3,
+						"repetir": 2,
+						"cada": 0.3,
+						"params": {
+							"fuerza": 0.9,
+							"desgaste": 0.7,
+							"material": "metal"
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.6,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"puerta/automatica": {
+			"especificacion": {
+				"salida": "puerta/automatica.wav",
+				"titulo": "puerta/automatica",
+				"semilla": 815776,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "ventana",
+						"params": {
+							"tipo": "corredera",
+							"accion": "abrir",
+							"velocidad": 1.0,
+							"fuerza": 0.4
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "motor_electrico",
+						"duracion_max": 1.0,
+						"volumen_db": -9,
+						"fundido_entrada": 0.08,
+						"fundido_salida": 0.15,
+						"params": {
+							"duracion": 2.0,
+							"velocidad": 0.5,
+							"carga": 0.5,
+							"tamano": 0.4
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 1.1,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 8.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"escalera/subir": {
+			"especificacion": {
+				"salida": "escalera/subir.wav",
+				"titulo": "escalera/subir",
+				"semilla": 990978,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"duracion_max": 0.2,
+						"volumen_db": -3,
+						"params": {
+							"superficie": "madera",
+							"calzado": "zapato",
+							"peso": 0.4,
+							"velocidad": 0.6
+						}
+					},
+					{
+						"tipo": "secuencia",
+						"instrumento": "marimba",
+						"notas": "587hz:0.07 784hz:0.16",
+						"inicio": 0.04,
+						"params": {
+							"brillo": 0.7
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.04
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.11
+					}
+				],
+				"mono": true,
+				"duracion": 0.32,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					587.0,
+					784.0
+				]
+			}
+		},
+		"escalera/bajar": {
+			"especificacion": {
+				"salida": "escalera/bajar.wav",
+				"titulo": "escalera/bajar",
+				"semilla": 301704,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "paso",
+						"duracion_max": 0.2,
+						"volumen_db": -3,
+						"params": {
+							"superficie": "madera",
+							"calzado": "zapato",
+							"peso": 0.6,
+							"velocidad": 0.6
+						}
+					},
+					{
+						"tipo": "secuencia",
+						"instrumento": "marimba",
+						"notas": "784hz:0.07 587hz:0.16",
+						"inicio": 0.04,
+						"params": {
+							"brillo": 0.7
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.04
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.11
+					}
+				],
+				"mono": true,
+				"duracion": 0.32,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					784.0,
+					587.0
+				]
+			}
+		},
+		"escalera/rampa": {
+			"especificacion": {
+				"salida": "escalera/rampa.wav",
+				"titulo": "escalera/rampa",
+				"semilla": 551041,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_pies",
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"duracion": 0.5,
+							"velocidad": 1.0,
+							"peso": 0.4
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.45,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"ascensor/llamada": {
+			"especificacion": {
+				"salida": "ascensor/llamada.wav",
+				"titulo": "ascensor/llamada",
+				"semilla": 691888,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "interruptor_luz",
+						"params": {
+							"tipo": "pulsador",
+							"fuerza": 0.7
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "1175hz",
+						"duracion": 0.3,
+						"inicio": 0.08,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.2
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 2.0,
+						"inicio": 0.08
+					}
+				],
+				"mono": true,
+				"duracion": 0.45,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1175
+				]
+			}
+		},
+		"ascensor/puerta": {
+			"especificacion": {
+				"salida": "ascensor/puerta.wav",
+				"titulo": "ascensor/puerta",
+				"semilla": 632959,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "ventana",
+						"params": {
+							"tipo": "corredera",
+							"accion": "cerrar",
+							"velocidad": 0.85,
+							"fuerza": 0.8
+						},
+						"efectos": [
+							{
+								"nombre": "graves",
+								"frecuencia": 250,
+								"ganancia": 6
+							}
+						]
+					}
+				],
+				"mono": true,
+				"duracion": 1.3,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 16.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"ascensor/viaje": {
+			"especificacion": {
+				"salida": "ascensor/viaje.wav",
+				"titulo": "ascensor/viaje",
+				"semilla": 521214,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "ascensor",
+						"params": {
+							"parte": "viaje",
+							"duracion": 3.25,
+							"antiguedad": 0.3
+						}
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 3.25
+			}
+		},
+		"ascensor/llegada": {
+			"especificacion": {
+				"salida": "ascensor/llegada.wav",
+				"titulo": "ascensor/llegada",
+				"semilla": 917140,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "1319hz:0.22 1047hz:0.7",
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.8
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.22
+					}
+				],
+				"mono": true,
+				"duracion": 1.0,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1319,
+					1047
+				],
+				"golpes": 2
+			}
+		},
+		"ascensor/planta_0": {
+			"especificacion": {
+				"salida": "ascensor/planta_0.wav",
+				"titulo": "ascensor/planta_0",
+				"semilla": 186175,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "523.25hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					523.25
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_1": {
+			"especificacion": {
+				"salida": "ascensor/planta_1.wav",
+				"titulo": "ascensor/planta_1",
+				"semilla": 912361,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "587.33hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					587.33
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_2": {
+			"especificacion": {
+				"salida": "ascensor/planta_2.wav",
+				"titulo": "ascensor/planta_2",
+				"semilla": 429075,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "659.25hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					659.25
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_3": {
+			"especificacion": {
+				"salida": "ascensor/planta_3.wav",
+				"titulo": "ascensor/planta_3",
+				"semilla": 251333,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "698.45hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					698.45
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_4": {
+			"especificacion": {
+				"salida": "ascensor/planta_4.wav",
+				"titulo": "ascensor/planta_4",
+				"semilla": 186726,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "783.99hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					783.99
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_5": {
+			"especificacion": {
+				"salida": "ascensor/planta_5.wav",
+				"titulo": "ascensor/planta_5",
+				"semilla": 376560,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "880hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					880.0
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_6": {
+			"especificacion": {
+				"salida": "ascensor/planta_6.wav",
+				"titulo": "ascensor/planta_6",
+				"semilla": 594570,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "987.76hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					987.76
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_7": {
+			"especificacion": {
+				"salida": "ascensor/planta_7.wav",
+				"titulo": "ascensor/planta_7",
+				"semilla": 582236,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "1046.5hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 10.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1046.5
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_8": {
+			"especificacion": {
+				"salida": "ascensor/planta_8.wav",
+				"titulo": "ascensor/planta_8",
+				"semilla": 480461,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "1174.66hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1174.66
+				],
+				"golpes": 1
+			}
+		},
+		"ascensor/planta_9": {
+			"especificacion": {
+				"salida": "ascensor/planta_9.wav",
+				"titulo": "ascensor/planta_9",
+				"semilla": 486875,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "1318.51hz",
+						"duracion": 0.42,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 2.0
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1318.51
+				],
+				"golpes": 1
+			}
+		},
+		"premio/aparece": {
+			"especificacion": {
+				"salida": "premio/aparece.wav",
+				"titulo": "premio/aparece",
+				"semilla": 178333,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "1568hz:0.07 2093hz:0.07 2637hz:0.07 3136hz:0.07 4186hz:0.07",
+						"params": {
+							"brillo": 0.9,
+							"liberacion": 0.25
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.07
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.14
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.21000000000000002
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.28
+					}
+				],
+				"mono": true,
+				"duracion": 0.6,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1568.0,
+					2093.0,
+					2637.0,
+					3136.0,
+					4186.0
+				],
+				"golpes": 5
+			}
+		},
+		"premio/cerca": {
+			"especificacion": {
+				"salida": "premio/cerca.wav",
+				"titulo": "premio/cerca",
+				"semilla": 654057,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "2637hz",
+						"duracion": 0.15,
+						"params": {
+							"brillo": 0.9,
+							"liberacion": 0.15
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "3136hz",
+						"duracion": 0.15,
+						"inicio": 0.15,
+						"volumen_db": -2.0,
+						"params": {
+							"brillo": 0.9,
+							"liberacion": 0.15
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "3951hz",
+						"duracion": 0.15,
+						"inicio": 0.3,
+						"volumen_db": -1.0,
+						"params": {
+							"brillo": 0.9,
+							"liberacion": 0.15
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "3136hz",
+						"duracion": 0.15,
+						"inicio": 0.6,
+						"volumen_db": -3.0,
+						"params": {
+							"brillo": 0.9,
+							"liberacion": 0.15
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "glockenspiel",
+						"notas": "4186hz",
+						"duracion": 0.15,
+						"inicio": 0.75,
+						"volumen_db": -2.0,
+						"params": {
+							"brillo": 0.9,
+							"liberacion": 0.15
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.15
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.3
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.6
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.75
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 1.2
+			},
+			"comprobar": {
+				"notas": [
+					2637.0,
+					3136.0,
+					3951.0,
+					4186.0
+				]
+			}
+		},
+		"premio/recogido": {
+			"especificacion": {
+				"salida": "premio/recogido.wav",
+				"titulo": "premio/recogido",
+				"semilla": 491586,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "moneda",
+						"params": {
+							"tono": 0.6,
+							"brillo": 0.6,
+							"estilo": "realista",
+							"monedas": 3
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.55,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"premio/tesoro": {
+			"especificacion": {
+				"salida": "premio/tesoro.wav",
+				"titulo": "premio/tesoro",
+				"semilla": 613426,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "523.25hz:0.1 659.25hz:0.1 783.99hz:0.1 1046.5hz:0.1 783.99hz:0.1 1046.5hz:0.1 1318.5hz:0.7",
+						"params": {
+							"brillo": 0.8,
+							"pedal": true
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "destello",
+						"params": {
+							"densidad": 0.7,
+							"duracion": 0.9,
+							"tono": 0.7
+						},
+						"volumen_db": 4.0,
+						"inicio": 0.5
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -2.0
+					}
+				],
+				"mono": true,
+				"duracion": 1.6,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					523.25,
+					659.25,
+					783.99,
+					1046.5,
+					1318.5
+				]
+			}
+		},
+		"logro/logro": {
+			"especificacion": {
+				"salida": "logro/logro.wav",
+				"titulo": "logro/logro",
+				"semilla": 904192,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "vibrafono",
+						"notas": "659.25hz:0.09 783.99hz:0.09 1046.5hz:0.45",
+						"params": {
+							"motor": 0.0,
+							"brillo": 0.7
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.72,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					659.25,
+					783.99,
+					1046.5
+				]
+			}
+		},
+		"logro/estrella_1": {
+			"especificacion": {
+				"salida": "logro/estrella_1.wav",
+				"titulo": "logro/estrella_1",
+				"semilla": 88782,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "1046.5hz:0.6",
+						"params": {
+							"brillo": 0.8,
+							"liberacion": 0.6
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.92,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1046.5
+				],
+				"golpes": 1
+			}
+		},
+		"logro/estrella_2": {
+			"especificacion": {
+				"salida": "logro/estrella_2.wav",
+				"titulo": "logro/estrella_2",
+				"semilla": 34292,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "1046.5hz:0.22 1318.5hz:0.6",
+						"params": {
+							"brillo": 0.8,
+							"liberacion": 0.6
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 1.14,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1046.5,
+					1318.5
+				],
+				"golpes": 2
+			}
+		},
+		"logro/estrella_3": {
+			"especificacion": {
+				"salida": "logro/estrella_3.wav",
+				"titulo": "logro/estrella_3",
+				"semilla": 270434,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "1046.5hz:0.22 1318.5hz:0.22 1568hz:0.6",
+						"params": {
+							"brillo": 0.8,
+							"liberacion": 0.6
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 1.36,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1046.5,
+					1318.5,
+					1568.0
+				],
+				"golpes": 3
+			}
+		},
+		"logro/medalla": {
+			"especificacion": {
+				"salida": "logro/medalla.wav",
+				"titulo": "logro/medalla",
+				"semilla": 252681,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "trompeta",
+						"notas": "392hz:0.17 392hz:0.17 523.25hz:0.24 659.25hz:0.24 [523.25hz 659.25hz 783.99hz 1046.5hz]:0.95",
+						"params": {
+							"brillo": 0.6,
+							"vibrato": 0.1
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "destello",
+						"inicio": 0.85,
+						"volumen_db": -12,
+						"params": {
+							"densidad": 0.5,
+							"duracion": 0.8,
+							"tono": 0.7
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 1.9,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					392.0,
+					523.25,
+					659.25
+				]
+			}
+		},
+		"logro/error": {
+			"especificacion": {
+				"salida": "logro/error.wav",
+				"titulo": "logro/error",
+				"semilla": 809133,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "marimba",
+						"notas": "311.1hz:0.13 233.1hz:0.28",
+						"params": {
+							"brillo": 0.2,
+							"resonador": 1.0
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.42,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					311.1,
+					233.1
+				],
+				"golpes": 2
+			}
+		},
+		"logro/pista": {
+			"especificacion": {
+				"salida": "logro/pista.wav",
+				"titulo": "logro/pista",
+				"semilla": 861682,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "celesta",
+						"notas": "880hz:0.14 1318.5hz:0.42",
+						"params": {
+							"brillo": 0.6,
+							"pedal": true
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.6,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					880.0,
+					1318.5
+				],
+				"golpes": 2
+			}
+		},
+		"semaforo/verde": {
+			"especificacion": {
+				"salida": "semaforo/verde.wav",
+				"titulo": "semaforo/verde",
+				"semilla": 637470,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "ocarina",
+						"notas": "3000hz",
+						"duracion": 0.08,
+						"inicio": 0.02,
+						"params": {
+							"vibrato": 0.0,
+							"aire": 0.2,
+							"liberacion": 0.04
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "ocarina",
+						"notas": "3000hz",
+						"duracion": 0.08,
+						"inicio": 0.27,
+						"params": {
+							"vibrato": 0.0,
+							"aire": 0.2,
+							"liberacion": 0.04
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "ocarina",
+						"notas": "3000hz",
+						"duracion": 0.08,
+						"inicio": 0.52,
+						"params": {
+							"vibrato": 0.0,
+							"aire": 0.2,
+							"liberacion": 0.04
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "ocarina",
+						"notas": "3000hz",
+						"duracion": 0.08,
+						"inicio": 0.77,
+						"params": {
+							"vibrato": 0.0,
+							"aire": 0.2,
+							"liberacion": 0.04
+						}
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 1.0
+			},
+			"comprobar": {
+				"golpes": 4
+			}
+		},
+		"semaforo/intermitente": {
+			"especificacion": {
+				"salida": "semaforo/intermitente.wav",
+				"titulo": "semaforo/intermitente",
+				"semilla": 60225,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "ocarina",
+						"notas": "3000hz",
+						"duracion": 0.05,
+						"inicio": 0.01,
+						"params": {
+							"vibrato": 0.0,
+							"aire": 0.2,
+							"liberacion": 0.03
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "ocarina",
+						"notas": "3000hz",
+						"duracion": 0.05,
+						"inicio": 0.135,
+						"params": {
+							"vibrato": 0.0,
+							"aire": 0.2,
+							"liberacion": 0.03
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "ocarina",
+						"notas": "3000hz",
+						"duracion": 0.05,
+						"inicio": 0.26,
+						"params": {
+							"vibrato": 0.0,
+							"aire": 0.2,
+							"liberacion": 0.03
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "ocarina",
+						"notas": "3000hz",
+						"duracion": 0.05,
+						"inicio": 0.385,
+						"params": {
+							"vibrato": 0.0,
+							"aire": 0.2,
+							"liberacion": 0.03
+						}
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 0.5
+			},
+			"comprobar": {
+				"golpes": 4
+			}
+		},
+		"semaforo/rojo": {
+			"especificacion": {
+				"salida": "semaforo/rojo.wav",
+				"titulo": "semaforo/rojo",
+				"semilla": 761582,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "claves",
+						"inicio": 0.02,
+						"params": {
+							"fuerza": 0.8,
+							"afinacion": 3
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": -14.0,
+						"inicio": 0.02
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 1.5
+			},
+			"comprobar": {
+				"golpes": 1
+			}
+		},
+		"semaforo/pulsador": {
+			"especificacion": {
+				"salida": "semaforo/pulsador.wav",
+				"titulo": "semaforo/pulsador",
+				"semilla": 256428,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "interruptor_luz",
+						"params": {
+							"tipo": "pulsador",
+							"fuerza": 0.8
+						}
+					},
+					{
+						"tipo": "secuencia",
+						"instrumento": "glockenspiel",
+						"notas": "1480hz:0.14 1480hz:0.16",
+						"inicio": 0.12,
+						"params": {
+							"brillo": 0.7,
+							"liberacion": 0.08
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.12
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "maracas",
+						"volumen_db": 6.0,
+						"inicio": 0.26
+					}
+				],
+				"mono": true,
+				"duracion": 0.5,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					1480.0
+				]
+			}
+		},
+		"trafico/coche": {
+			"especificacion": {
+				"salida": "trafico/coche.wav",
+				"titulo": "trafico/coche",
+				"semilla": 172085,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "coche_pasa",
+						"params": {
+							"velocidad": 50.0,
+							"distancia_m": 5.0,
+							"cilindros": 4,
+							"escape": "normal",
+							"duracion": 3.2
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 3.2,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 12.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"trafico/moto": {
+			"especificacion": {
+				"salida": "trafico/moto.wav",
+				"titulo": "trafico/moto",
+				"semilla": 912316,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "moto",
+						"params": {
+							"tipo": "scooter",
+							"accion": "pasada",
+							"duracion": 2.6
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 2.6,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 4.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"trafico/autobus": {
+			"especificacion": {
+				"salida": "trafico/autobus.wav",
+				"titulo": "trafico/autobus",
+				"semilla": 267312,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "camion_diesel",
+						"params": {
+							"accion": "pasada",
+							"carga": 0.5,
+							"duracion": 3.9
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "autobus_frenos_aire",
+						"inicio": 3.3,
+						"duracion_max": 1.2,
+						"volumen_db": -16,
+						"params": {
+							"accion": "frenar",
+							"intensidad": 0.5
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 4.5,
+				"efectos": [
+					{
+						"nombre": "limitador",
+						"techo": -18
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"trafico/ambiente_leve": {
+			"especificacion": {
+				"salida": "trafico/ambiente_leve.wav",
+				"titulo": "trafico/ambiente_leve",
+				"semilla": 760838,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "trafico",
+						"params": {
+							"densidad": 0.12,
+							"distancia": 0.65,
+							"bocinas": 0.0,
+							"duracion": 10.0
+						}
+					}
+				],
+				"estereo": true,
+				"bucle": "nativo"
+			}
+		},
+		"trafico/ambiente_medio": {
+			"especificacion": {
+				"salida": "trafico/ambiente_medio.wav",
+				"titulo": "trafico/ambiente_medio",
+				"semilla": 173739,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "trafico",
+						"params": {
+							"densidad": 0.5,
+							"distancia": 0.4,
+							"bocinas": 0.0,
+							"duracion": 10.0
+						}
+					}
+				],
+				"estereo": true,
+				"bucle": "nativo"
+			}
+		},
+		"trafico/ambiente_intenso": {
+			"especificacion": {
+				"salida": "trafico/ambiente_intenso.wav",
+				"titulo": "trafico/ambiente_intenso",
+				"semilla": 818426,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "trafico",
+						"params": {
+							"densidad": 0.92,
+							"distancia": 0.2,
+							"bocinas": 0.1,
+							"duracion": 10.0
+						}
+					}
+				],
+				"estereo": true,
+				"bucle": "nativo"
+			}
+		},
+		"exterior/bordillo": {
+			"especificacion": {
+				"salida": "exterior/bordillo.wav",
+				"titulo": "exterior/bordillo",
+				"semilla": 419775,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "arrastrar_pies",
+						"duracion_max": 0.11,
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"duracion": 0.5,
+							"velocidad": 1.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "salto_aterrizaje",
+						"inicio": 0.08,
+						"params": {
+							"superficie": "hormigon",
+							"calzado": "zapato",
+							"peso": 0.6,
+							"altura": 0.1,
+							"fase": "aterrizaje"
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.38,
+				"efectos": [
+					{
+						"nombre": "agudos",
+						"frecuencia": 3000,
+						"ganancia": 12.0
+					},
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			}
+		},
+		"fuente/frigorifico": {
+			"especificacion": {
+				"salida": "fuente/frigorifico.wav",
+				"titulo": "fuente/frigorifico",
+				"semilla": 425950,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "frigorifico",
+						"params": {
+							"duracion": 4.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ventilador",
+						"params": {
+							"velocidad": 0.8,
+							"duracion": 4.0
+						},
+						"volumen_db": 6.0,
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 2500
+							}
+						]
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 4.0
+			}
+		},
+		"fuente/reloj": {
+			"especificacion": {
+				"salida": "fuente/reloj.wav",
+				"titulo": "fuente/reloj",
+				"semilla": 521739,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "reloj_tic_tac",
+						"params": {
+							"tipo": "pie",
+							"duracion": 2.0,
+							"volumen_caja": 0.5
+						}
+					}
+				],
+				"mono": true,
+				"bucle": "nativo"
+			}
+		},
+		"fuente/grifo": {
+			"especificacion": {
+				"salida": "fuente/grifo.wav",
+				"titulo": "fuente/grifo",
+				"semilla": 401586,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "grifo",
+						"params": {
+							"caudal": 0.4,
+							"duracion": 3.0
+						}
+					}
+				],
+				"mono": true,
+				"bucle": "nativo"
+			}
+		},
+		"fuente/ventilador": {
+			"especificacion": {
+				"salida": "fuente/ventilador.wav",
+				"titulo": "fuente/ventilador",
+				"semilla": 673623,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "ventilador",
+						"params": {
+							"velocidad": 0.5,
+							"oscilante": false,
+							"duracion": 3.0
+						}
+					}
+				],
+				"mono": true,
+				"bucle": "nativo"
+			}
+		},
+		"fuente/television": {
+			"especificacion": {
+				"salida": "fuente/television.wav",
+				"titulo": "fuente/television",
+				"semilla": 664283,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "multitud_murmullo",
+						"params": {
+							"personas": 3,
+							"animacion": 0.45,
+							"lugar": "sala",
+							"duracion": 5.0
+						},
+						"efectos": [
+							{
+								"nombre": "telefono"
+							}
+						]
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ventilador",
+						"params": {
+							"velocidad": 0.8,
+							"duracion": 5.0
+						},
+						"volumen_db": 4.0,
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 2500
+							}
+						]
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 5.0
+			}
+		},
+		"fuente/fuente_agua": {
+			"especificacion": {
+				"salida": "fuente/fuente_agua.wav",
+				"titulo": "fuente/fuente_agua",
+				"semilla": 126986,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "fuente",
+						"params": {
+							"tamano": 0.5,
+							"duracion": 4.0
+						}
+					}
+				],
+				"mono": true,
+				"bucle": "nativo"
+			}
+		},
+		"fuente/maquina_expendedora": {
+			"especificacion": {
+				"salida": "fuente/maquina_expendedora.wav",
+				"titulo": "fuente/maquina_expendedora",
+				"semilla": 791783,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "fluorescente_zumbido",
+						"volumen_db": -4,
+						"params": {
+							"red": "50",
+							"parpadeo": 0.0,
+							"duracion": 4.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "motor_electrico",
+						"volumen_db": -14,
+						"params": {
+							"duracion": 4.0,
+							"velocidad": 0.8,
+							"carga": 0.2,
+							"tamano": 0.05
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "interruptor_luz",
+						"inicio": 2.6,
+						"volumen_db": -8,
+						"params": {
+							"tipo": "basculante",
+							"fuerza": 0.5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "ventilador",
+						"params": {
+							"velocidad": 0.8,
+							"duracion": 4.0
+						},
+						"volumen_db": 6.0,
+						"efectos": [
+							{
+								"nombre": "paso_alto",
+								"corte": 2500
+							}
+						]
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 4.0
+			}
+		},
+		"fuente/campanas": {
+			"especificacion": {
+				"salida": "fuente/campanas.wav",
+				"titulo": "fuente/campanas",
+				"semilla": 507484,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "campanas_tubulares",
+						"notas": "196hz",
+						"duracion": 1.6,
+						"inicio": 0.1,
+						"params": {
+							"brillo": 1.0,
+							"liberacion": 1.2
+						}
+					},
+					{
+						"tipo": "nota",
+						"instrumento": "campanas_tubulares",
+						"notas": "196hz",
+						"duracion": 1.6,
+						"inicio": 1.9,
+						"volumen_db": -2.0,
+						"params": {
+							"brillo": 1.0,
+							"liberacion": 1.2
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "triangulo",
+						"params": {
+							"fuerza": 0.6,
+							"afinacion": -6,
+							"apagado": true,
+							"duracion": 0.3
+						},
+						"volumen_db": 10.0,
+						"inicio": 0.1
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "triangulo",
+						"params": {
+							"fuerza": 0.6,
+							"afinacion": -6,
+							"apagado": true,
+							"duracion": 0.3
+						},
+						"volumen_db": 10.0,
+						"inicio": 1.9
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 5.0
+			},
+			"comprobar": {
+				"notas": [
+					196.0
+				]
+			}
+		},
+		"fuente/pajaros": {
+			"especificacion": {
+				"salida": "fuente/pajaros.wav",
+				"titulo": "fuente/pajaros",
+				"semilla": 48660,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "pajaro",
+						"inicio": 0.3,
+						"params": {
+							"especie": "gorrion",
+							"distancia": 0.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "pajaro",
+						"inicio": 2.1,
+						"volumen_db": -3,
+						"params": {
+							"especie": "canario",
+							"distancia": 0.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "pajaro",
+						"inicio": 3.9,
+						"params": {
+							"especie": "mirlo",
+							"distancia": 0.0
+						}
+					}
+				],
+				"mono": true,
+				"bucle": true,
+				"duracion": 6.0
+			}
+		},
+		"ambiente/casa": {
+			"especificacion": {
+				"salida": "ambiente/casa.wav",
+				"titulo": "ambiente/casa",
+				"semilla": 295579,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "viento",
+						"volumen_db": -6,
+						"params": {
+							"fuerza": 0.08,
+							"rafagas": 0.1,
+							"silbido": 0.0,
+							"duracion": 10.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "crujido_madera",
+						"inicio": 3.1,
+						"volumen_db": -10,
+						"pan": -0.4,
+						"params": {
+							"tension": 0.4,
+							"duracion": 0.6,
+							"crujidos": 1,
+							"tamano": 0.6
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "crujido_madera",
+						"inicio": 7.4,
+						"volumen_db": -14,
+						"pan": 0.5,
+						"params": {
+							"tension": 0.5,
+							"duracion": 0.5,
+							"crujidos": 1,
+							"tamano": 0.3
+						}
+					}
+				],
+				"estereo": true,
+				"bucle": true,
+				"duracion": 10.0
+			}
+		},
+		"ambiente/oficina": {
+			"especificacion": {
+				"salida": "ambiente/oficina.wav",
+				"titulo": "ambiente/oficina",
+				"semilla": 547545,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "oficina",
+						"params": {
+							"densidad": 0.4,
+							"intensidad": 0.4,
+							"duracion": 10.0
+						}
+					}
+				],
+				"estereo": true,
+				"bucle": "nativo"
+			}
+		},
+		"ambiente/pasillo": {
+			"especificacion": {
+				"salida": "ambiente/pasillo.wav",
+				"titulo": "ambiente/pasillo",
+				"semilla": 59247,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "aire_acondicionado",
+						"volumen_db": -6,
+						"params": {
+							"unidad": "interior",
+							"duracion": 10.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "secuencia_pasos",
+						"inicio": 2.5,
+						"volumen_db": -8,
+						"pan": 0.3,
+						"params": {
+							"superficie": "baldosa",
+							"calzado": "zapato",
+							"numero": 5,
+							"velocidad": 0.3,
+							"sala": "pasillo"
+						},
+						"efectos": [
+							{
+								"nombre": "distancia",
+								"metros": 12,
+								"entorno": "pasillo"
+							}
+						]
+					}
+				],
+				"estereo": true,
+				"bucle": true,
+				"duracion": 10.0,
+				"efectos": [
+					{
+						"nombre": "reverberacion",
+						"espacio": "pasillo",
+						"mezcla": 0.3
+					}
+				]
+			}
+		},
+		"ambiente/calle": {
+			"especificacion": {
+				"salida": "ambiente/calle.wav",
+				"titulo": "ambiente/calle",
+				"semilla": 836952,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "ciudad_dia",
+						"params": {
+							"densidad": 0.5,
+							"intensidad": 0.5,
+							"duracion": 10.0
+						}
+					}
+				],
+				"estereo": true,
+				"bucle": "nativo"
+			}
+		},
+		"ambiente/parque": {
+			"especificacion": {
+				"salida": "ambiente/parque.wav",
+				"titulo": "ambiente/parque",
+				"semilla": 44464,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "brisa_hojas",
+						"volumen_db": -4,
+						"params": {
+							"intensidad": 0.4,
+							"hojas": 0.7,
+							"duracion": 10.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "pajaro",
+						"inicio": 0.6,
+						"pan": -0.6,
+						"volumen_db": -6,
+						"params": {
+							"especie": "gorrion",
+							"distancia": 0.5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "pajaro",
+						"inicio": 2.4,
+						"pan": 0.5,
+						"volumen_db": -4,
+						"params": {
+							"especie": "mirlo",
+							"distancia": 0.5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "pajaro",
+						"inicio": 4.6,
+						"pan": -0.2,
+						"volumen_db": -8,
+						"params": {
+							"especie": "canario",
+							"distancia": 0.5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "pajaro",
+						"inicio": 6.3,
+						"pan": 0.7,
+						"volumen_db": -5,
+						"params": {
+							"especie": "cantor",
+							"distancia": 0.5
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "pajaro",
+						"inicio": 8.0,
+						"pan": -0.5,
+						"volumen_db": -7,
+						"params": {
+							"especie": "alondra",
+							"distancia": 0.5
+						}
+					}
+				],
+				"estereo": true,
+				"bucle": true,
+				"duracion": 10.0
+			}
+		},
+		"ambiente/cocina": {
+			"especificacion": {
+				"salida": "ambiente/cocina.wav",
+				"titulo": "ambiente/cocina",
+				"semilla": 969685,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "frigorifico",
+						"volumen_db": -8,
+						"params": {
+							"duracion": 10.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "hervir",
+						"volumen_db": -8,
+						"pan": 0.3,
+						"params": {
+							"intensidad": 0.4,
+							"tapa": false,
+							"duracion": 10.0
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "cajon_mueble",
+						"inicio": 3.4,
+						"volumen_db": -12,
+						"pan": -0.4,
+						"params": {
+							"accion": "abrir",
+							"contenido": "cubiertos",
+							"material": "madera"
+						}
+					},
+					{
+						"tipo": "sonido",
+						"nombre": "golpe_metal",
+						"inicio": 7.3,
+						"volumen_db": -14,
+						"pan": -0.2,
+						"params": {
+							"tamano": 0.2,
+							"fuerza": 0.3,
+							"forma": "cuenco",
+							"amortiguado": 0.6,
+							"duracion": 0.6
+						}
+					}
+				],
+				"estereo": true,
+				"bucle": true,
+				"duracion": 10.0
+			}
+		},
+		"interfaz/mover": {
+			"especificacion": {
+				"salida": "interfaz/mover.wav",
+				"titulo": "interfaz/mover",
+				"semilla": 128480,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "tick",
+						"params": {
+							"tono": 0.6,
+							"brillo": 0.5,
+							"duracion": 0.03,
+							"estilo": "madera"
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.03,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.0075
+					}
+				]
+			}
+		},
+		"interfaz/elegir": {
+			"especificacion": {
+				"salida": "interfaz/elegir.wav",
+				"titulo": "interfaz/elegir",
+				"semilla": 566536,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "kalimba",
+						"notas": "880hz:0.06 1320hz:0.15",
+						"params": {
+							"brillo": 0.7
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					880.0,
+					1320.0
+				]
+			}
+		},
+		"interfaz/atras": {
+			"especificacion": {
+				"salida": "interfaz/atras.wav",
+				"titulo": "interfaz/atras",
+				"semilla": 873201,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "kalimba",
+						"notas": "660hz:0.06 440hz:0.15",
+						"params": {
+							"brillo": 0.7
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.27,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					660.0,
+					440.0
+				]
+			}
+		},
+		"interfaz/borde": {
+			"especificacion": {
+				"salida": "interfaz/borde.wav",
+				"titulo": "interfaz/borde",
+				"semilla": 275883,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "nota",
+						"instrumento": "marimba",
+						"notas": "180hz",
+						"duracion": 0.08,
+						"params": {
+							"brillo": 0.3,
+							"resonador": 1.0
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.12,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					180
+				]
+			}
+		},
+		"interfaz/abrir": {
+			"especificacion": {
+				"salida": "interfaz/abrir.wav",
+				"titulo": "interfaz/abrir",
+				"semilla": 663596,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "kalimba",
+						"notas": "523.25hz:0.05 659.25hz:0.05 783.99hz:0.16",
+						"params": {
+							"brillo": 0.7
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.31,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					523.25,
+					659.25,
+					783.99
+				]
+			}
+		},
+		"interfaz/cerrar": {
+			"especificacion": {
+				"salida": "interfaz/cerrar.wav",
+				"titulo": "interfaz/cerrar",
+				"semilla": 413137,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "secuencia",
+						"instrumento": "kalimba",
+						"notas": "783.99hz:0.05 659.25hz:0.05 523.25hz:0.16",
+						"params": {
+							"brillo": 0.7
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.31,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.03
+					}
+				]
+			},
+			"comprobar": {
+				"notas": [
+					783.99,
+					659.25,
+					523.25
+				]
+			}
+		},
+		"interfaz/ajuste": {
+			"especificacion": {
+				"salida": "interfaz/ajuste.wav",
+				"titulo": "interfaz/ajuste",
+				"semilla": 535702,
+				"sr_salida": 44100,
+				"bits": 24,
+				"normalizar": -3,
+				"capas": [
+					{
+						"tipo": "sonido",
+						"nombre": "tick",
+						"params": {
+							"tono": 0.9,
+							"brillo": 0.7,
+							"duracion": 0.03,
+							"estilo": "madera"
+						}
+					}
+				],
+				"mono": true,
+				"duracion": 0.03,
+				"efectos": [
+					{
+						"nombre": "fundido",
+						"entrada": 0.002,
+						"salida": 0.0075
+					}
+				]
+			}
+		}
+	}
+}

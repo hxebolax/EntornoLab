@@ -1,0 +1,27 @@
+PAQUETE DE SONIDOS «NATURAL» DE ENTORNOLAB
+
+Instrumentos acústicos y objetos con cuerpo: marimba, xilófono y campanas en lugar de tonos electrónicos, y pasos, golpes, puertas y agua hechos con modelos físicos.
+
+Trae 198 de los 198 sonidos del catálogo. Lo que no trae suena con el paquete por defecto.
+
+CÓMO SE HIZO
+  Con el Generador de Sonidos 1.0.0 con Python 3.15.0, la herramienta del propio autor de EntornoLab, usando solo su motor
+  procedural (modelos físicos, instrumentos y efectos) por la línea de órdenes compilada:
+      sonido.exe renderizar lote.json --json
+  No se ha usado ninguno de sus motores de inteligencia artificial, ni grabaciones, ni las voces
+  de Windows. Después, cada sonido se ha llevado al nivel del sonido de serie del mismo nombre
+  (una ganancia) y se ha guardado en FLAC de 16 bits a 44,1 kHz.
+
+  La receta completa (las especificaciones enviadas al generador, con sus semillas) está en
+  receta.json, y lo que se midió de cada sonido, en medidas.json. Para regenerarlo:
+      .venv\Scripts\python.exe tools\generar_paquete_sonidos.py --desde-receta data\sounds\natural\receta.json
+
+QUÉ SE CONSERVA DEL PAQUETE POR DEFECTO
+  Los nombres, las duraciones aproximadas, los bucles sin costura y el contenido por encima de
+  3 kHz de todo lo que se sitúa en el espacio. Los avisos que codifican algo (balizas, bastón
+  sonoro, brújula, plantas del ascensor, premios, menús, semáforos) conservan sus notas exactas,
+  su número de toques y su ritmo: solo cambia el instrumento que los toca.
+
+LICENCIA
+  GPL-3.0-or-later, como el programa (sonidos generados por procedimiento; sin grabaciones de terceros)
+  Son sonidos generados por procedimiento con una herramienta del autor: no tienen derechos de terceros.

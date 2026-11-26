@@ -1,0 +1,630 @@
+{
+	"nombre": "Transport",
+	"descripcion": "Bus and taxi stops, station concourses, ticket gates, ticket machines and platforms, with their landmarks and warnings.",
+	"categorias": {
+		"parada": "Bus and taxi stop",
+		"vestibulo": "Station concourse",
+		"acceso": "Gates and access",
+		"anden": "Platform",
+		"ayuda": "Information and help",
+		"a_bordo": "On board: bus, tram, metro and train"
+	},
+	"subcategorias": {
+		"marquesinas": "Shelters",
+		"postes_paneles": "Stop poles and panels",
+		"apoyos_plataformas": "Leaning rails, platforms and bike stands",
+		"taxi": "Taxi rank",
+		"venta_billetes": "Tickets and information",
+		"asientos_vestibulo": "Waiting seats",
+		"servicios_vestibulo": "Machines, bins and lockers",
+		"equipaje": "Luggage",
+		"validacion_tornos": "Validators and gates",
+		"barandillas_escaleras": "Railings, escalators and lifts",
+		"mobiliario_anden": "Benches, columns and ashtrays",
+		"suelo_anden": "Platform edge and strips",
+		"carteles_relojes": "Signs and clocks",
+		"informacion_accesible": "Accessible information",
+		"emergencia_ayuda": "Help and emergency",
+		"entrada_conductor": "Doors and driver's cab",
+		"suelo_escalones": "Floor, ramps and steps",
+		"barras_asideros": "Poles and grab handles",
+		"asientos_bordo": "Seats and reserved spaces",
+		"avisos_seguridad": "Announcements and safety",
+		"equipaje_servicios": "Luggage, toilet and café"
+	},
+	"estados": {
+		"libre": "Free",
+		"ocupado": "Occupied",
+		"cerrado": "Closed",
+		"abierto": "Open",
+		"en_espera": "Waiting",
+		"llamando": "Calling",
+		"apagado": "Off",
+		"encendido": "On",
+		"desplegado": "Unfolded",
+		"plegado": "Folded"
+	},
+	"objetos": {
+		"marquesina": {
+			"nombre": "Bus shelter with bench",
+			"descripcion": "Bus shelter: a glass back wall with a bench and two side walls. You go in from the front; inside you are under cover.",
+			"etiquetas": ["bus shelter", "bus stop"],
+			"variantes": {
+				"corta": "Short",
+				"normal": "Standard",
+				"larga": "Long"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Bus shelter with bench”: a U open at the front, 4.00 by 1.60 metres, marked with the letters “Ma”."
+		},
+		"marquesina_ele": {
+			"nombre": "L-shaped bus shelter",
+			"descripcion": "Shelter with a back and a single side wall, on the windward side. The other side is open.",
+			"etiquetas": ["bus shelter", "L-shaped shelter"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “L-shaped bus shelter”: an L shape: the back with the bench and a single side wall, on the left, 4.00 by 1.60 metres, marked with the letters “Me”."
+		},
+		"poste_parada": {
+			"nombre": "Bus stop pole",
+			"descripcion": "Thin pole with the stop sign on top and, at chest height, the timetable frame.",
+			"etiquetas": ["bus stop pole", "bus stop sign"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Bus stop pole”: a circle, 0.10 by 0.10 metres, marked with the letters “Pp”."
+		},
+		"panel_sonoro": {
+			"nombre": "Talking information panel",
+			"descripcion": "Post with a next-arrivals screen and a button at hand height: press it and it speaks the waiting times.",
+			"etiquetas": ["information panel", "talking sign", "next arrivals"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Talking information panel”: a rectangle, 0.30 by 0.20 metres, marked with the letters “Ps”."
+		},
+		"poste_taxi": {
+			"nombre": "Taxi rank pole",
+			"descripcion": "Pole with the taxi sign. The cabs wait beside it with their engines running.",
+			"etiquetas": ["taxi rank", "taxi stand", "taxi sign"],
+			"imagen": "Footprint of “Taxi rank pole”: a circle, 0.10 by 0.10 metres, marked with the letters “Pt”."
+		},
+		"apoyo_isquiatico": {
+			"nombre": "Leaning rail",
+			"descripcion": "Padded bar at hip height to lean on without sitting.",
+			"etiquetas": ["leaning rail", "perch seat"],
+			"imagen": "Footprint of “Leaning rail”: a rectangle, 1.20 by 0.35 metres, marked with the letters “Ai”."
+		},
+		"aparcabicis": {
+			"nombre": "Bike parking",
+			"descripcion": "A row of metal hoops with bikes locked to them, by the station. Wheels and handlebars stick out.",
+			"etiquetas": ["bike parking", "cycle stands"],
+			"imagen": "Footprint of “Bike parking”: a comb: a bar with bodies sticking out to the front, 3.00 by 1.80 metres, marked with the letters “Ap”."
+		},
+		"plataforma_embarque": {
+			"nombre": "Raised boarding platform",
+			"descripcion": "A stretch of pavement raised above the rest so you board the bus without a step. You get on it by a gentle ramp.",
+			"etiquetas": ["boarding platform", "raised kerb", "bus boarder"],
+			"aviso": "Bus stop platform: the ground ramps up.",
+			"imagen": "Footprint of “Raised boarding platform”: a trapezoid, narrower at the back, 8.00 by 2.50 metres, marked with the letters “Pe”."
+		},
+		"maquina_billetes": {
+			"nombre": "Ticket machine",
+			"descripcion": "Ticket machine: a metal cabinet with a screen and keypad at chest height. The keys beep.",
+			"etiquetas": ["ticket machine", "ticket vending machine"],
+			"acciones": {
+				"sacar_billete": "Buy a ticket"
+			},
+			"imagen": "Footprint of “Ticket machine”: a rectangle, 0.80 by 0.70 metres, marked with the letters “Mb”."
+		},
+		"mostrador_taquilla": {
+			"nombre": "Ticket office counter",
+			"descripcion": "Ticket office window: a counter at chest height with a glass screen and a person behind it.",
+			"etiquetas": ["ticket office", "ticket counter", "booking office"],
+			"acciones": {
+				"sacar_billete": "Buy a ticket"
+			},
+			"imagen": "Footprint of “Ticket office counter”: a rectangle, 2.00 by 0.80 metres, marked with the letters “Mt”."
+		},
+		"kiosco_informacion": {
+			"nombre": "Information kiosk",
+			"descripcion": "Round information desk in the middle of the concourse, with a person inside. You can walk all the way round.",
+			"etiquetas": ["information kiosk", "information desk", "help point"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Information kiosk”: an octagon, 2.40 by 2.40 metres, marked with the letters “Ki”."
+		},
+		"asientos_estacion": {
+			"nombre": "Row of station seats",
+			"descripcion": "Row of metal seats joined on a beam, with armrests between places. They do not move.",
+			"etiquetas": ["station seats", "waiting seats", "beam seating"],
+			"variantes": {
+				"dos_plazas": "Two seats",
+				"cuatro_plazas": "Four seats",
+				"seis_plazas": "Six seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Row of station seats”: a rectangle, 2.40 by 0.65 metres, marked with the letters “Ae”."
+		},
+		"asientos_dobles": {
+			"nombre": "Back-to-back seats",
+			"descripcion": "Two rows of seats joined back to back, in the middle of the concourse: you can sit on either side.",
+			"etiquetas": ["back-to-back seats", "double row seats"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Back-to-back seats”: a rectangle, 2.40 by 1.30 metres, marked with the letters “Ad”."
+		},
+		"vending": {
+			"nombre": "Vending machine",
+			"descripcion": "Drinks and snacks machine. It hums constantly: it tells you where the wall is.",
+			"etiquetas": ["vending machine", "drinks machine"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Vending machine”: a rectangle, 0.90 by 0.85 metres, marked with the letters “Ve”."
+		},
+		"papelera": {
+			"nombre": "Station litter bin",
+			"descripcion": "Hoop bin with a clear bag, at hip height.",
+			"etiquetas": ["litter bin", "rubbish bin"],
+			"acciones": {
+				"tirar_basura": "Throw something in"
+			},
+			"imagen": "Footprint of “Station litter bin”: a circle, 0.40 by 0.40 metres, marked with the letters “Pa”."
+		},
+		"consigna": {
+			"nombre": "Left-luggage lockers",
+			"descripcion": "A wall of metal lockers for leaving luggage. The doors open outwards.",
+			"etiquetas": ["left luggage", "luggage lockers"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Left-luggage lockers”: a rectangle, 1.80 by 0.80 metres, marked with the letters “Co”."
+		},
+		"maleta": {
+			"nombre": "Suitcase on the floor",
+			"descripcion": "A suitcase someone has left beside them, in the way. Low and hard; on wheels.",
+			"etiquetas": ["suitcase", "luggage", "bag"],
+			"imagen": "Footprint of “Suitcase on the floor”: a rectangle, 0.45 by 0.30 metres, marked with the letters “Ma”."
+		},
+		"carro_equipaje": {
+			"nombre": "Luggage trolley",
+			"descripcion": "Metal trolley for suitcases, loose in the concourse. It rolls if pushed.",
+			"etiquetas": ["luggage trolley", "baggage cart"],
+			"acciones": {
+				"empujar": "Push"
+			},
+			"imagen": "Footprint of “Luggage trolley”: a trapezoid, narrower at the back, 0.65 by 0.95 metres, marked with the letters “Ce”."
+		},
+		"canceladora": {
+			"nombre": "Ticket validator",
+			"descripcion": "Post with a machine to validate your ticket or tap your card, at hand height. It beeps when it accepts.",
+			"etiquetas": ["ticket validator", "card reader"],
+			"acciones": {
+				"validar": "Validate your ticket"
+			},
+			"imagen": "Footprint of “Ticket validator”: a rectangle, 0.25 by 0.25 metres, marked with the letters “Ca”."
+		},
+		"torno": {
+			"nombre": "Ticket gate",
+			"descripcion": "A ticket gate: a narrow metal body with an arm barring the way. Validate your ticket and it gives.",
+			"etiquetas": ["ticket gate", "turnstile", "barrier"],
+			"acciones": {
+				"validar": "Validate your ticket",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Ticket gate”: an L shape, 0.80 by 1.20 metres, marked with the letters “To”."
+		},
+		"tornos_fila": {
+			"nombre": "Row of ticket gates",
+			"descripcion": "A bank of ticket gates: several metal bodies in a row with narrow passages between them. You must validate for them to open.",
+			"etiquetas": ["ticket gates", "gate line", "turnstiles"],
+			"variantes": {
+				"tres_pasos": "Three passages",
+				"cinco_pasos": "Five passages",
+				"siete_pasos": "Seven passages"
+			},
+			"acciones": {
+				"validar": "Validate your ticket",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Row of ticket gates”: a comb: a bar with bodies sticking out to the front, 3.20 by 1.50 metres, marked with the letters “Tf”."
+		},
+		"puerta_acceso_ancha": {
+			"nombre": "Wide access gate",
+			"descripcion": "Wide passage for wheelchairs, pushchairs and guide dogs: two bodies at the sides and a leaf that opens when you validate.",
+			"etiquetas": ["wide gate", "accessible gate", "wide-aisle gate"],
+			"acciones": {
+				"validar": "Validate your ticket",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Wide access gate”: two bodies at the sides joined by a thin leaf barring the way, 1.40 by 1.50 metres, marked with the letters “Pa”."
+		},
+		"barandilla": {
+			"nombre": "Handrail",
+			"descripcion": "Tubular metal railing dividing two routes. You can follow it by hand; the cane passes under the top bar.",
+			"etiquetas": ["handrail", "railing", "guard rail"],
+			"imagen": "Footprint of “Handrail”: a rectangle, 2.00 by 0.06 metres, marked with the letters “Ba”."
+		},
+		"ascensor_exterior": {
+			"nombre": "Street lift",
+			"descripcion": "Glass housing of the lift down to the station. As an object it is a tall box; the door is at the front, with the button on the right.",
+			"etiquetas": ["street lift", "elevator"],
+			"acciones": {
+				"pulsar": "Press the button"
+			},
+			"imagen": "Footprint of “Street lift”: a rectangle with cut corners, 2.00 by 2.20 metres, marked with the letters “Ae”."
+		},
+		"banco_anden": {
+			"nombre": "Platform bench",
+			"descripcion": "Metal bench with armrests, against the platform wall.",
+			"etiquetas": ["platform bench", "bench"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Platform bench”: a rectangle, 1.80 by 0.60 metres, marked with the letters “Ba”."
+		},
+		"columna_anden": {
+			"nombre": "Platform column",
+			"descripcion": "Column holding up the roof, in the middle of the platform. There is usually one every few metres, in a row.",
+			"etiquetas": ["platform column", "pillar"],
+			"imagen": "Footprint of “Platform column”: an octagon, 0.40 by 0.40 metres, marked with the letters “Ca”."
+		},
+		"borde_anden": {
+			"nombre": "Platform edge with tactile strip",
+			"descripcion": "Strip of blisters along the platform edge. It does not block the way, but beyond it are the tracks: do not cross until the train has stopped.",
+			"etiquetas": ["platform edge", "tactile strip", "warning strip"],
+			"aviso": "Platform edge: stop. The tracks are beyond.",
+			"imagen": "Footprint of “Platform edge with tactile strip”: a rectangle, 10.00 by 0.60 metres, marked with the letters “Ba”."
+		},
+		"franja_guia": {
+			"nombre": "Tactile guidance strip",
+			"descripcion": "Strip of raised bars leading from the concourse to the gates and the platform. Follow it with your foot or cane.",
+			"etiquetas": ["guidance strip", "tactile path"],
+			"imagen": "Footprint of “Tactile guidance strip”: a rectangle, 0.40 by 5.00 metres, marked with the letters “Fg”."
+		},
+		"cartel_colgante": {
+			"nombre": "Hanging sign",
+			"descripcion": "Illuminated sign hanging from the ceiling, sometimes too low: at head height for a tall person.",
+			"etiquetas": ["hanging sign", "overhead sign"],
+			"imagen": "Footprint of “Hanging sign”: a rectangle, 1.50 by 0.15 metres, hanging 1.85 metres above the floor, marked with the letters “Cc”."
+		},
+		"reloj_estacion": {
+			"nombre": "Station clock",
+			"descripcion": "Large clock on the wall. It ticks: a landmark telling you which way the exit is.",
+			"etiquetas": ["station clock", "clock"],
+			"imagen": "Footprint of “Station clock”: a rectangle, 0.60 by 0.12 metres, hanging 2.20 metres above the floor, marked with the letters “Re”."
+		},
+		"cenicero": {
+			"nombre": "Standing ashtray",
+			"descripcion": "Thin metal column with an ashtray on top, by the station door.",
+			"etiquetas": ["ashtray", "cigarette bin"],
+			"imagen": "Footprint of “Standing ashtray”: a circle, 0.25 by 0.25 metres, marked with the letters “Ce”."
+		},
+		"plano_tactil": {
+			"nombre": "Tactile map",
+			"descripcion": "Sloping lectern with the station map in relief and braille, at hand height.",
+			"etiquetas": ["tactile map", "braille map", "relief plan"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Tactile map”: a rectangle, 0.80 by 0.50 metres, marked with the letters “Pt”."
+		},
+		"interfono": {
+			"nombre": "Help point intercom",
+			"descripcion": "Post with a large button at chest height: press it and a person answers through the speaker.",
+			"etiquetas": ["help point", "intercom", "emergency call point"],
+			"acciones": {
+				"llamar": "Call",
+				"colgar": "Hang up"
+			},
+			"imagen": "Footprint of “Help point intercom”: a rectangle, 0.30 by 0.25 metres, marked with the letters “In”."
+		},
+		"baliza_sonora": {
+			"nombre": "Audible door beacon",
+			"descripcion": "Small box above a door that makes a sound so you can find it. It is not in the way: it is very high up.",
+			"etiquetas": ["audible beacon", "door beacon"],
+			"acciones": {
+				"encender": "Switch on",
+				"apagar": "Switch off"
+			},
+			"imagen": "Footprint of “Audible door beacon”: a rectangle, 0.25 by 0.10 metres, hanging 2.30 metres above the floor, marked with the letters “Bs”."
+		},
+		"megafono": {
+			"nombre": "Public address speaker",
+			"descripcion": "Loudspeaker mounted high up. Every so often the announcement chime sounds: ding, dong, dang.",
+			"etiquetas": ["loudspeaker", "public address", "tannoy"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Public address speaker”: a rectangle, 0.30 by 0.25 metres, hanging 2.60 metres above the floor, marked with the letters “Me”."
+		},
+		"extintor": {
+			"nombre": "Wall fire extinguisher",
+			"descripcion": "Fire extinguisher hung on the wall one metre up. The cane passes under it.",
+			"etiquetas": ["fire extinguisher", "extinguisher"],
+			"imagen": "Footprint of “Wall fire extinguisher”: a circle, 0.15 by 0.15 metres, hanging 1.00 metres above the floor, marked with the letters “Ex”."
+		},
+		"llamador_taxi": {
+			"nombre": "Taxi call post",
+			"descripcion": "Post with a large raised button at chest height and a speaker: press it and a voice confirms a taxi has been called to that rank. It stands next to the taxi rank sign.",
+			"etiquetas": ["taxi call post", "taxi call point", "taxi caller"],
+			"acciones": {
+				"llamar": "Call",
+				"colgar": "Hang up"
+			},
+			"imagen": "Footprint of “Taxi call post”: a rectangle, 0.25 by 0.20 metres, marked with the letters “Lt”."
+		},
+		"eurotaxi_rampa": {
+			"nombre": "Accessible taxi with its rear ramp down",
+			"descripcion": "Taxi people carrier with the tailgate open and an aluminium ramp resting on the ground for a wheelchair to roll up. The ramp sticks out a metre and a half behind the car and has raised edges.",
+			"etiquetas": ["accessible taxi", "wheelchair taxi", "eurotaxi"],
+			"acciones": {
+				"plegar": "Fold",
+				"desplegar": "Unfold"
+			},
+			"imagen": "Footprint of “Accessible taxi with its rear ramp down”: the outline of a car with its nose at the front and a narrower ramp sticking out at the back, 1.90 by 6.50 metres, marked with the letters “Er”."
+		},
+		"parada_provisional": {
+			"nombre": "Temporary bus stop post on a base",
+			"descripcion": "Bus stop pole set in a concrete block or a wide, low rubber base, put out when the stop moves because of roadworks. The base sticks out around the pole at ankle height and is easy to trip on.",
+			"etiquetas": ["temporary bus stop", "relocated stop", "portable stop pole"],
+			"acciones": {
+				"leer": "Read by touch"
+			},
+			"imagen": "Footprint of “Temporary bus stop post on a base”: a low square base with the pole in the middle, 0.50 by 0.50 metres, marked with the letters “Pp”."
+		},
+		"escalera_mecanica": {
+			"nombre": "Escalator (section)",
+			"descripcion": "Moving staircase between two rubber handrails that travel with it. At the entrance you feel a metal comb plate and the steps forming under your feet. Put your hand on the handrail before stepping on: that tells you whether it goes up or down. It rattles and hums: you hear it before you reach it.",
+			"etiquetas": ["escalator", "moving stairs"],
+			"variantes": {
+				"estrecha": "Narrow, one person",
+				"ancha": "Wide, two people",
+				"larga": "Long, deep metro"
+			},
+			"aviso": "Escalator: hold the handrail and get ready for the step that forms.",
+			"imagen": "Footprint of “Escalator (section)”: a rectangle, 1.00 by 9.00 metres, marked with the letters “Em”."
+		},
+		"puerta_autobus": {
+			"nombre": "Bus double door",
+			"descripcion": "Two framed glass leaves that open with a puff of air after three beeps. In the middle or at the sides there are vertical poles to hold. In low-floor buses there is no step and the vehicle kneels towards the kerb.",
+			"etiquetas": ["bus door", "tram door", "folding door"],
+			"variantes": {
+				"delantera": "Front, single leaf",
+				"central": "Centre, double leaf"
+			},
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close"
+			},
+			"imagen": "Footprint of “Bus double door”: a rectangle, 1.20 by 0.40 metres, marked with the letters “Pa”."
+		},
+		"puesto_conductor_bus": {
+			"nombre": "Driver's cab with validator",
+			"descripcion": "Beside the front door: a chest-high glass screen with a gap to talk through, the change tray and the validator, which beeps when you tap your card. The driver sits behind it.",
+			"etiquetas": ["driver's cab", "bus validator", "fare box"],
+			"acciones": {
+				"validar": "Validate your ticket",
+				"pagar": "Pay"
+			},
+			"imagen": "Footprint of “Driver's cab with validator”: a rectangle, 1.10 by 1.40 metres, marked with the letters “Pc”."
+		},
+		"mampara_puerta_bus": {
+			"nombre": "Glass screen beside the door",
+			"descripcion": "Glass or acrylic panel separating the first seat from the door area, fixed to a pole. It leaves a gap at the bottom where the cane tip may slip under; you find it with your hand or knee.",
+			"etiquetas": ["glass screen", "door screen", "draught screen"],
+			"imagen": "Footprint of “Glass screen beside the door”: a rectangle, 0.70 by 0.05 metres, hanging 0.15 metres above the floor, marked with the letters “Mp”."
+		},
+		"rampa_autobus": {
+			"nombre": "Bus fold-out ramp",
+			"descripcion": "Metal plate with non-slip rubber at the centre door, which the driver flips out onto the kerb with slow warning beeps. Unfolded it makes a short slope with raised edges; folded it is part of the floor and you feel its joints.",
+			"etiquetas": ["bus ramp", "fold-out ramp", "wheelchair ramp"],
+			"acciones": {
+				"desplegar": "Unfold",
+				"plegar": "Fold"
+			},
+			"aviso": "Bus ramp: the floor slopes down to the kerb.",
+			"imagen": "Footprint of “Bus fold-out ramp”: a rectangle, 0.90 by 1.00 metres, marked with the letters “Ra”."
+		},
+		"escalones_vehiculo": {
+			"nombre": "Steps inside the door",
+			"descripcion": "High, narrow steps just inside the door of a coach or an old regional train, with a vertical grab handle on each side. The first is usually the highest; each step has a rough strip along its edge.",
+			"etiquetas": ["coach steps", "door steps", "entrance steps"],
+			"variantes": {
+				"dos": "Two steps",
+				"tres": "Three steps",
+				"cuatro": "Four coach steps"
+			},
+			"aviso": "Door steps: hold the grab handle.",
+			"imagen": "Footprint of “Steps inside the door”: a rectangle, 0.80 by 0.90 metres, marked with the letters “Ev”."
+		},
+		"tarima_trasera_bus": {
+			"nombre": "Step up to the rear deck",
+			"descripcion": "In low-floor buses the rear section is higher: a step a hand's width high, sometimes with a short ramp, crosses the aisle. The last rows of seats are behind it.",
+			"etiquetas": ["rear deck step", "aisle step", "raised rear floor"],
+			"aviso": "Step: the back of the bus is higher.",
+			"imagen": "Footprint of “Step up to the rear deck”: a rectangle, 2.30 by 0.30 metres, marked with the letters “Tt”."
+		},
+		"paso_rueda_bus": {
+			"nombre": "Wheel arch housing",
+			"descripcion": "Plastic-covered bulge over the wheel, against the side of the bus, at knee height. Raised seats are usually on top, reached by a small step. Walking down the aisle your knee bumps into it.",
+			"etiquetas": ["wheel arch", "wheel housing", "raised seat platform"],
+			"imagen": "Footprint of “Wheel arch housing”: a rectangle with rounded corners, 0.80 by 1.20 metres, marked with the letters “Pr”."
+		},
+		"plataforma_fuelle_bus": {
+			"nombre": "Articulated bus turntable",
+			"descripcion": "In an articulated bus or tram, the round floor where the two sections join: a metal disc that turns under your feet on bends, with folded rubber walls at the sides that move. Better not to stand on it.",
+			"etiquetas": ["turntable", "articulation", "bus bellows", "gangway"],
+			"aviso": "Articulation: the floor turns on bends.",
+			"imagen": "Footprint of “Articulated bus turntable”: a circle, 1.20 by 1.40 metres, marked with the letters “Pf”."
+		},
+		"escalera_dos_pisos": {
+			"nombre": "Stairs inside a double-deck vehicle",
+			"descripcion": "Narrow, steep stairway, sometimes curving, up to the top deck of a sightseeing bus or a double-deck train. It has handrails on both sides and short treads; at the top the ceiling is low.",
+			"etiquetas": ["double-deck stairs", "upper deck stairs", "bus stairs"],
+			"aviso": "Narrow stairs to the upper deck: hold both handrails.",
+			"imagen": "Footprint of “Stairs inside a double-deck vehicle”: an L shape, 0.60 by 1.80 metres, marked with the letters “Ed”."
+		},
+		"barra_vertical_pulsador": {
+			"nombre": "Vertical pole with stop button",
+			"descripcion": "Smooth metal tube from floor to ceiling, as thick as a wrist, to hold while standing. At chest height it has a raised rectangular button: press it, a chime sounds and the stop-requested sign lights up.",
+			"etiquetas": ["grab pole", "stanchion", "stop button", "bell push"],
+			"acciones": {
+				"tra_agarrarse": "Hold on",
+				"tra_pedir_parada": "Request the stop"
+			},
+			"imagen": "Footprint of “Vertical pole with stop button”: a circle, 0.04 by 0.04 metres, marked with the letters “Bv”."
+		},
+		"barra_techo_asideros": {
+			"nombre": "Ceiling rail with hanging straps",
+			"descripcion": "Horizontal rail along the aisle, above head height, with plastic straps hanging from it that swing with the motion. A tall person can hit them with their forehead; the cane does not find them.",
+			"etiquetas": ["hanging straps", "grab straps", "ceiling rail"],
+			"acciones": {
+				"tra_agarrarse": "Hold on"
+			},
+			"imagen": "Footprint of “Ceiling rail with hanging straps”: a rectangle, 2.00 by 0.10 metres, hanging 1.65 metres above the floor, marked with the letters “Bt”."
+		},
+		"barra_arbol_metro": {
+			"nombre": "Branching centre pole",
+			"descripcion": "Vertical pole in the middle of a metro or tram car that, halfway up, splits into three curved arms reaching the ceiling, so several people can hold on at once. It is slim at the bottom; higher up the arms take more room and your shoulder bumps them.",
+			"etiquetas": ["branching pole", "three-way pole", "centre pole"],
+			"acciones": {
+				"tra_agarrarse": "Hold on"
+			},
+			"imagen": "Footprint of “Branching centre pole”: a 3-pointed star, 0.50 by 0.50 metres, marked with the letters “Ba”."
+		},
+		"asientos_bus_pareja": {
+			"nombre": "Pair of bus seats",
+			"descripcion": "Two seats side by side facing forward, with a grab handle on top of the backrest for whoever sits behind. The window seat is against the side; the aisle seat is next to a pole.",
+			"etiquetas": ["bus seats", "double seat", "coach seats"],
+			"variantes": {
+				"autobus": "City bus",
+				"autocar": "Coach, reclining"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Pair of bus seats”: a rectangle, 0.90 by 0.70 metres, marked with the letters “Ab”."
+		},
+		"asiento_reservado_bus": {
+			"nombre": "Fold-up priority seat",
+			"descripcion": "Single seat near the door, reserved for older, pregnant or disabled passengers. The seat springs up on its own when you stand. There is a raised pictogram above it and, nearby, a lower stop button.",
+			"etiquetas": ["priority seat", "reserved seat", "tip-up seat"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Fold-up priority seat”: a rectangle, 0.45 by 0.45 metres, marked with the letters “Ar”."
+		},
+		"zona_pmr_bus": {
+			"nombre": "Wheelchair space backrest",
+			"descripcion": "Opposite the centre door: a padded panel against the side wall at back height, with a horizontal rail and a low raised stop button. In front of it is a free space for a wheelchair or a pushchair.",
+			"etiquetas": ["wheelchair space", "wheelchair backrest", "buggy space"],
+			"acciones": {
+				"tra_pedir_parada": "Request the stop"
+			},
+			"imagen": "Footprint of “Wheelchair space backrest”: a rectangle, 0.80 by 0.20 metres, hanging 0.50 metres above the floor, marked with the letters “Zp”."
+		},
+		"banco_longitudinal_metro": {
+			"nombre": "Longitudinal metro bench",
+			"descripcion": "Row of seats along the side of the car, backs to the windows and facing the aisle. The opposite bench is two steps away: knees nearly meet. The doors are between one bench and the next.",
+			"etiquetas": ["metro bench", "longitudinal seating", "side bench"],
+			"variantes": {
+				"tres_plazas": "Three seats",
+				"seis_plazas": "Six seats"
+			},
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Longitudinal metro bench”: a rectangle, 2.50 by 0.50 metres, marked with the letters “Bl”."
+		},
+		"cuarteto_asientos_tren": {
+			"nombre": "Facing seats with table",
+			"descripcion": "Two pairs of train seats facing each other with a table between them by the window. The aisle side is open; sitting down, your knees touch the table and the knees opposite.",
+			"etiquetas": ["facing seats", "table seats", "bay of four"],
+			"acciones": {
+				"sentarse": "Sit down",
+				"levantarse": "Stand up"
+			},
+			"imagen": "Footprint of “Facing seats with table”: two rows of facing seats with a table between them by the window; the aisle side is open, 1.00 by 1.80 metres, marked with the letters “Ca”."
+		},
+		"aviso_proxima_parada": {
+			"nombre": "Next stop display and speaker",
+			"descripcion": "Screen hanging from the aisle ceiling with a speaker: before each stop two notes sound and a voice says its name. If it hangs mid-aisle, a tall person may hit it.",
+			"etiquetas": ["next stop display", "stop announcement", "on-board display"],
+			"acciones": {
+				"escuchar": "Listen to the information"
+			},
+			"imagen": "Footprint of “Next stop display and speaker”: a rectangle, 0.80 by 0.10 metres, hanging 1.95 metres above the floor, marked with the letters “Ap”."
+		},
+		"martillo_emergencia": {
+			"nombre": "Emergency glass hammer",
+			"descripcion": "Small plastic hammer with a steel point, in a holder by the emergency windows, at head height. You feel the point when you touch it; it comes out when pulled, sometimes setting off a beeping alarm. Emergencies only.",
+			"etiquetas": ["emergency hammer", "glass breaker", "safety hammer"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Emergency glass hammer”: a rectangle, 0.08 by 0.05 metres, hanging 1.50 metres above the floor, marked with the letters “Me”."
+		},
+		"freno_emergencia": {
+			"nombre": "Emergency brake handle",
+			"descripcion": "Handle in a box by the carriage door, behind a plastic flap you have to lift. Pulling it stops the train and alerts the driver over the intercom. Only in case of danger.",
+			"etiquetas": ["emergency brake", "passenger alarm", "communication cord"],
+			"acciones": {
+				"tra_tirar_freno": "Pull the emergency brake"
+			},
+			"imagen": "Footprint of “Emergency brake handle”: a rectangle, 0.20 by 0.08 metres, hanging 1.60 metres above the floor, marked with the letters “Fe”."
+		},
+		"rejilla_equipaje": {
+			"nombre": "Overhead luggage rack",
+			"descripcion": "Wire or glass shelf along the wall above the seats, for small cases and coats. When you stand up from your seat your head is right underneath: mind the edge and anything sticking out.",
+			"etiquetas": ["luggage rack", "overhead rack", "parcel shelf"],
+			"imagen": "Footprint of “Overhead luggage rack”: a rectangle, 2.00 by 0.45 metres, hanging 1.70 metres above the floor, marked with the letters “Re”."
+		},
+		"maletero_tren": {
+			"nombre": "Train luggage stack",
+			"descripcion": "Two- or three-tier rack by the coach entrance for large suitcases, with bars across the front to stop them falling. Cases often stick out into the aisle.",
+			"etiquetas": ["luggage stack", "luggage rack", "baggage area"],
+			"acciones": {
+				"coger": "Take"
+			},
+			"imagen": "Footprint of “Train luggage stack”: a rectangle, 1.00 by 0.60 metres, marked with the letters “Mt”."
+		},
+		"aseo_tren": {
+			"nombre": "Accessible train toilet",
+			"descripcion": "Large cubicle with a sliding door opened by a big raised button and closed with another from inside. Inside are fold-down grab rails, a sensor basin and a vacuum toilet that flushes with a loud, sharp whoosh.",
+			"etiquetas": ["train toilet", "accessible toilet", "on-board toilet"],
+			"acciones": {
+				"abrir": "Open",
+				"cerrar": "Close",
+				"tirar_cadena": "Flush"
+			},
+			"imagen": "Footprint of “Accessible train toilet”: a rectangle with cut corners, 1.80 by 1.80 metres, marked with the letters “At”."
+		},
+		"barra_cafeteria_tren": {
+			"nombre": "Train café-bar counter",
+			"descripcion": "Narrow counter on one side of the buffet car, with the attendant behind it and high ledges to lean on opposite, by the windows. The train sways: cups clink and it is wise to hold the edge.",
+			"etiquetas": ["buffet car", "café bar", "train bar"],
+			"acciones": {
+				"comprar": "Buy"
+			},
+			"imagen": "Footprint of “Train café-bar counter”: a rectangle, 2.50 by 0.60 metres, marked with the letters “Bc”."
+		}
+	}
+}

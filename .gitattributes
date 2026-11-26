@@ -1,0 +1,34 @@
+# Finales de línea fijos, sea cual sea la configuración de git de cada equipo.
+# Varias pruebas comparan byte a byte ficheros generados (complementos, catálogos,
+# recetas de sonido): si git los convirtiera a CRLF al descargar, fallarían en un
+# clon nuevo aunque el contenido fuera el mismo.
+* text=auto eol=lf
+
+# Los datos que viajan con el programa se guardan tal cual, byte a byte: hay
+# copias exactas de licencias de terceros y ficheros generados que las pruebas
+# comparan con lo que producen las herramientas.
+data/** -text
+requirements*.txt -text
+
+# Los .bat necesitan CRLF: cmd.exe interpreta mal las etiquetas y los saltos con LF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binarios: nunca se tocan.
+*.flac binary
+*.ogg binary
+*.wav binary
+*.mp3 binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.dll binary
+*.pyd binary
+*.exe binary
+*.mhr binary
+*.whl binary
+*.zip binary
+*.elab binary
+*.elabc binary
+*.mo binary
+*.db binary

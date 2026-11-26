@@ -1,0 +1,62 @@
+# Pruebas automáticas de EntornoLab en Windows.
+#
+# Por ahora solo se lanzan a mano (pestaña «Actions», «Pruebas», «Run workflow»).
+# Motivo: el proyecto exige Python 3.15 de 64 bits y no está garantizado que
+# los ejecutores de GitHub tengan esa versión, ni que haya ruedas de wxPython
+# para ella en PyPI. Si se lanzara en cada envío, podría fallar en rojo sin que
+# el código tenga la culpa. Cuando se compruebe que funciona, se pueden
+# descomentar los disparadores «push» y «pull_request».
+
+name: Pruebas
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+  # pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pruebas:
+    name: Ruff y pytest en Windows
+    runs-on: windows-latest
+    timeout-minutes: 60
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar Python 3.15 de 64 bits
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.15"
+          architecture: x64
+          allow-prereleases: true
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Instalar las dependencias
+        # requirements.txt instala también las ruedas propias de __pip__
+        # (basskit con BASS) por su ruta dentro del repositorio.
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install -r requirements.txt
+          python -m pip install -r requirements-dev.txt
+
+      - name: Estilo con ruff
+        shell: pwsh
+        run: python -m ruff check app main.py jugar.py tools setup_cx.py tests
+
+      - name: Atajos documentados
+        shell: pwsh
+        run: python tools/comprobar_teclas.py
+
+      - name: Pruebas sin red, sin ventanas y sin las lentas
+        shell: pwsh
+        run: python -m pytest tests -q -m "not red and not interfaz and not lento"

@@ -1,0 +1,4875 @@
+{
+	"formato": 1,
+	"id": "calle",
+	"nombre": "Calle",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Lo que se encuentra en una acera: mobiliario urbano, semáforos, contenedores, árboles, vehículos aparcados, terrazas, obras y marcas del suelo.",
+	"depende_de": ["comun", "hogar", "oficina_y_comercio", "transporte", "juego"],
+	"categorias": {
+		"mobiliario": "Mobiliario urbano",
+		"trafico": "Semáforos y señales",
+		"residuos": "Contenedores y papeleras",
+		"verde": "Árboles, jardineras y fuentes",
+		"vehiculos": "Vehículos aparcados",
+		"terraza": "Terrazas, quioscos y comercio",
+		"obras": "Obras y obstáculos temporales",
+		"suelo": "Suelo, bordillos y servicios",
+		"plaza": "Plazas y monumentos"
+	},
+	"subcategorias": {
+		"alumbrado_postes": "Farolas y postes",
+		"bolardos_protecciones": "Bolardos y protecciones",
+		"asientos_urbanos": "Bancos y asientos",
+		"buzones_cabinas": "Buzones, cabinas y aseos",
+		"informacion_publicidad": "Información, publicidad y relojes",
+		"pago_recarga_bicis": "Bicis, parquímetros y recarga",
+		"semaforos": "Semáforos",
+		"senales_verticales": "Señales y placas",
+		"cruces_pasos": "Pasos de peatones e isletas",
+		"carril_bici_balizas": "Carril bici y balizas",
+		"papeleras": "Papeleras y bolsas para perros",
+		"contenedores_calle": "Contenedores de basura",
+		"reciclaje": "Reciclaje",
+		"arboles_alcorques": "Árboles y alcorques",
+		"jardineras_setos": "Jardineras, setos y parterres",
+		"fuentes_agua": "Fuentes y agua",
+		"coches_furgonetas": "Coches y furgonetas",
+		"motos_bicis_patinetes": "Motos, bicis y patinetes",
+		"terrazas_bar": "Terrazas de bar",
+		"quioscos_puestos": "Quioscos y puestos",
+		"comercio_acera": "Comercio en la acera",
+		"vallas_andamios": "Vallas y andamios",
+		"zanjas_conos": "Zanjas, conos y charcos",
+		"tapas_rejillas": "Tapas y rejillas",
+		"servicios_fachada": "Armarios, hidrantes y fachada",
+		"bordillos_desniveles": "Bordillos, escalones y desniveles",
+		"pavimentos_guias": "Pavimentos y guías del suelo",
+		"plaza_monumentos": "Monumentos y soportales",
+		"plaza_reunion": "Templetes, gradas y atracciones"
+	},
+	"estados": {
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"apagado": "Apagado",
+		"funcionando": "Funcionando",
+		"rojo": "Rojo: no cruces",
+		"verde": "Verde: puedes cruzar",
+		"intermitente": "Verde intermitente: se acaba el tiempo",
+		"ambar": "Ámbar",
+		"parado": "Parado",
+		"girando": "Girando"
+	},
+	"objetos": [
+		{
+			"id": "farola",
+			"nombre": "Farola",
+			"categoria": "mobiliario",
+			"subcategoria": "alumbrado_postes",
+			"etiquetas": ["farola", "poste", "alumbrado", "luz"],
+			"descripcion": "Poste de farola: un tubo de metal del grosor de un brazo, junto al bordillo. Al golpearlo, resuena.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.18, 0.4],
+				"fondo": [0.12, 0.18, 0.4],
+				"alto": [3.5, 6.0, 10.0]
+			},
+			"variantes": [
+				{
+					"id": "peatonal",
+					"nombre": "Peatonal",
+					"ancho": 0.14,
+					"fondo": 0.14,
+					"alto": 4.0
+				},
+				{
+					"id": "de_calle",
+					"nombre": "De calle",
+					"ancho": 0.18,
+					"fondo": 0.18,
+					"alto": 8.0
+				},
+				{
+					"id": "clasica",
+					"nombre": "Clásica de fundición",
+					"ancho": 0.35,
+					"fondo": 0.35,
+					"alto": 4.5
+				}
+			],
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["bolardo", "senal"],
+			"simbolo": {
+				"letra": "Fa",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/farola.png",
+				"descripcion": "Huella en planta de «Farola»: un círculo de 0,18 por 0,18 metros, con la letra «Fa»."
+			}
+		},
+		{
+			"id": "poste_luz",
+			"nombre": "Poste de la luz",
+			"categoria": "mobiliario",
+			"subcategoria": "alumbrado_postes",
+			"etiquetas": ["poste", "poste de la luz", "poste de teléfono", "tendido"],
+			"descripcion": "Poste de madera u hormigón de los cables, más grueso que una farola y a veces en mitad de la acera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.3, 0.45],
+				"fondo": [0.2, 0.3, 0.45],
+				"alto": [7.0, 9.0, 12.0]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_luz.png",
+				"descripcion": "Huella en planta de «Poste de la luz»: un círculo de 0,30 por 0,30 metros, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "bolardo",
+			"nombre": "Bolardo",
+			"categoria": "mobiliario",
+			"subcategoria": "bolardos_protecciones",
+			"etiquetas": ["bolardo", "pivote", "hito", "poste corto"],
+			"descripcion": "Poste corto de hierro, a la altura de la rodilla o la cadera. Suele haber varios en fila al borde de la acera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.15, 0.3],
+				"fondo": [0.1, 0.15, 0.3],
+				"alto": [0.5, 0.8, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "fino",
+					"nombre": "Fino",
+					"ancho": 0.1,
+					"fondo": 0.1,
+					"alto": 0.9
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 0.15,
+					"fondo": 0.15,
+					"alto": 0.8
+				},
+				{
+					"id": "bola",
+					"nombre": "De bola",
+					"ancho": 0.3,
+					"fondo": 0.3,
+					"alto": 0.5
+				}
+			],
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle"],
+			"estancias": ["acera", "cruce", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["pilona", "bloque_antivehiculo"],
+			"simbolo": {
+				"letra": "Bo",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/bolardo.png",
+				"descripcion": "Huella en planta de «Bolardo»: un círculo de 0,15 por 0,15 metros, con la letra «Bo»."
+			}
+		},
+		{
+			"id": "pilona",
+			"nombre": "Pilona escamoteable",
+			"categoria": "mobiliario",
+			"subcategoria": "bolardos_protecciones",
+			"etiquetas": ["pilona", "pilón", "bolardo automático"],
+			"descripcion": "Cilindro grueso de metal que sube y baja del suelo para cortar el paso de coches. Bajada, se pisa.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.27, 0.35],
+				"fondo": [0.2, 0.27, 0.35],
+				"alto": [0.5, 0.6, 0.8]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle"],
+			"estancias": ["calzada", "acera"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["bolardo"],
+			"simbolo": {
+				"letra": "Pi",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/pilona.png",
+				"descripcion": "Huella en planta de «Pilona escamoteable»: un círculo de 0,27 por 0,27 metros, con la letra «Pi»."
+			}
+		},
+		{
+			"id": "banco",
+			"nombre": "Banco",
+			"categoria": "mobiliario",
+			"subcategoria": "asientos_urbanos",
+			"etiquetas": ["banco", "asiento", "banco de madera"],
+			"descripcion": "Banco de listones de madera con respaldo, de cara a la calle.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 2.4],
+				"fondo": [0.55, 0.65, 0.75],
+				"alto": [0.75, 0.85, 0.95]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 1.2,
+					"fondo": 0.65,
+					"alto": 0.85
+				},
+				{
+					"id": "tres_plazas",
+					"nombre": "De tres plazas",
+					"ancho": 1.8,
+					"fondo": 0.65,
+					"alto": 0.85
+				},
+				{
+					"id": "largo",
+					"nombre": "Largo",
+					"ancho": 2.4,
+					"fondo": 0.65,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["acera", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["papelera", "farola"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco.png",
+				"descripcion": "Huella en planta de «Banco»: un rectángulo de 1,80 por 0,65 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "banco_piedra",
+			"nombre": "Banco de piedra sin respaldo",
+			"categoria": "mobiliario",
+			"subcategoria": "asientos_urbanos",
+			"etiquetas": ["banco de piedra", "poyo", "bancada"],
+			"descripcion": "Bloque de piedra bajo y macizo para sentarse. Duro y frío; a la altura de la rodilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 2.0, 3.0],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [0.42, 0.45, 0.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["calle", "parque"],
+			"estancias": ["plaza", "acera"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_piedra.png",
+				"descripcion": "Huella en planta de «Banco de piedra sin respaldo»: un rectángulo de 2,00 por 0,50 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "bancos_rotonda",
+			"nombre": "Bancos en rotonda",
+			"categoria": "mobiliario",
+			"subcategoria": "asientos_urbanos",
+			"etiquetas": ["rotonda de bancos", "banco circular", "corro"],
+			"descripcion": "Banco corrido en círculo, con una entrada por delante. Dentro queda un corro para sentarse a charlar.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.213, 1.0], [0.1, 0.88], [0.027, 0.726], [0.0, 0.556], [0.023, 0.384], [0.094, 0.23], [0.204, 0.106], [0.344, 0.027], [0.5, 0.0], [0.656, 0.027], [0.796, 0.106], [0.906, 0.23], [0.977, 0.384], [1.0, 0.556], [0.973, 0.726], [0.9, 0.88], [0.787, 1.0], [0.706, 0.874], [0.788, 0.787], [0.841, 0.677], [0.86, 0.554], [0.843, 0.431], [0.793, 0.319], [0.713, 0.231], [0.612, 0.174], [0.5, 0.154], [0.388, 0.174], [0.287, 0.231], [0.207, 0.319], [0.157, 0.431], [0.14, 0.554], [0.159, 0.677], [0.212, 0.787], [0.294, 0.874]]
+			},
+			"medidas": {
+				"ancho": [3.0, 4.0, 6.0],
+				"fondo": [3.0, 4.0, 6.0],
+				"alto": [0.42, 0.45, 0.85]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["calle", "parque"],
+			"estancias": ["plaza"],
+			"obstaculo": "bajo",
+			"frecuencia": "ocasional",
+			"relacionados": ["fuente_ornamental"],
+			"simbolo": {
+				"letra": "Br",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/bancos_rotonda.png",
+				"descripcion": "Huella en planta de «Bancos en rotonda»: un anillo con una entrada por delante de 4,00 por 4,00 metros, con la letra «Br»."
+			}
+		},
+		{
+			"id": "buzon",
+			"nombre": "Buzón de correos",
+			"categoria": "mobiliario",
+			"subcategoria": "buzones_cabinas",
+			"etiquetas": ["buzón", "buzon", "correos", "cartas"],
+			"descripcion": "Buzón de correos: un cilindro de chapa del alto de una persona, con la boca a la altura del pecho.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [1.4, 1.6, 1.7]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/trampilla_buzon.flac"
+			},
+			"acciones": [
+				{
+					"id": "echar_carta",
+					"nombre": "Echar una carta",
+					"sonido": "sonidos/trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bu",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/buzon.png",
+				"descripcion": "Huella en planta de «Buzón de correos»: un círculo de 0,50 por 0,50 metros, con la letra «Bu»."
+			}
+		},
+		{
+			"id": "buzon_pared",
+			"nombre": "Buzón de pared",
+			"categoria": "mobiliario",
+			"subcategoria": "buzones_cabinas",
+			"etiquetas": ["buzón de pared", "buzón colgado"],
+			"descripcion": "Buzón colgado de la fachada, a la altura del pecho. Sobresale un palmo y el bastón pasa por debajo.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.5],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "echar_carta",
+					"nombre": "Echar una carta",
+					"sonido": "sonidos/trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/buzon_pared.png",
+				"descripcion": "Huella en planta de «Buzón de pared»: un rectángulo de 0,40 por 0,20 metros, colgado a 1,00 metros del suelo, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "totem",
+			"nombre": "Tótem informativo",
+			"categoria": "mobiliario",
+			"subcategoria": "informacion_publicidad",
+			"etiquetas": ["tótem", "totem", "mupi", "panel publicitario", "plano"],
+			"descripcion": "Panel vertical alto y estrecho con un plano o publicidad. Plano por las dos caras y de canto fino.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [0.15, 0.2, 0.35],
+				"alto": [1.8, 2.3, 2.8]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza", "parada"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "To",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/totem.png",
+				"descripcion": "Huella en planta de «Tótem informativo»: un rectángulo de 1,20 por 0,20 metros, con la letra «To»."
+			}
+		},
+		{
+			"id": "cabina",
+			"nombre": "Cabina de teléfono",
+			"categoria": "mobiliario",
+			"subcategoria": "buzones_cabinas",
+			"etiquetas": ["cabina", "teléfono público", "locutorio"],
+			"descripcion": "Cabina de teléfono: un poste con un tejadillo y paneles de cristal a la altura de la cabeza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 0.2], [1.0, 0.8], [0.8, 1.0], [0.2, 1.0], [0.0, 0.8], [0.0, 0.2]]
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [0.8, 0.9, 1.0],
+				"alto": [2.1, 2.3, 2.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"sonido": "transporte:interfono.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabina.png",
+				"descripcion": "Huella en planta de «Cabina de teléfono»: un rectángulo con las esquinas cortadas de 0,90 por 0,90 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "aparcabicis",
+			"nombre": "Aparcabicis con bicicletas",
+			"categoria": "mobiliario",
+			"subcategoria": "pago_recarga_bicis",
+			"etiquetas": ["aparcabicis", "bicicletas", "bicis", "aparcamiento de bicicletas"],
+			"descripcion": "Barra con arcos de metal y bicicletas atadas. Las ruedas y los manillares sobresalen hacia el paso.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.94, 1.0], [0.94, 0.12], [0.765, 0.12], [0.765, 1.0], [0.705, 1.0], [0.705, 0.12], [0.53, 0.12], [0.53, 1.0], [0.47, 1.0], [0.47, 0.12], [0.295, 0.12], [0.295, 1.0], [0.235, 1.0], [0.235, 0.12], [0.06, 0.12], [0.06, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 6.0],
+				"fondo": [1.6, 1.8, 2.0],
+				"alto": [0.8, 1.0, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "tres_bicis",
+					"nombre": "Tres bicicletas",
+					"ancho": 1.5,
+					"fondo": 1.8,
+					"alto": 1.0
+				},
+				{
+					"id": "cinco_bicis",
+					"nombre": "Cinco bicicletas",
+					"ancho": 3.0,
+					"fondo": 1.8,
+					"alto": 1.0
+				},
+				{
+					"id": "diez_bicis",
+					"nombre": "Diez bicicletas",
+					"ancho": 6.0,
+					"fondo": 1.8,
+					"alto": 1.0
+				}
+			],
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["bicicleta"],
+			"simbolo": {
+				"letra": "Ap",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/aparcabicis.png",
+				"descripcion": "Huella en planta de «Aparcabicis con bicicletas»: un peine: una barra con cuerpos que salen hacia delante de 3,00 por 1,80 metros, con la letra «Ap»."
+			}
+		},
+		{
+			"id": "parquimetro",
+			"nombre": "Parquímetro",
+			"categoria": "mobiliario",
+			"subcategoria": "pago_recarga_bicis",
+			"etiquetas": ["parquímetro", "parquimetro", "zona azul", "ora"],
+			"descripcion": "Columna metálica con teclas y ranura, a la altura del pecho.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.45],
+				"fondo": [0.3, 0.35, 0.45],
+				"alto": [1.4, 1.6, 1.8]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"acciones": [
+				{
+					"id": "pagar",
+					"nombre": "Pagar",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "pago",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["coche"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/parquimetro.png",
+				"descripcion": "Huella en planta de «Parquímetro»: un rectángulo de 0,35 por 0,35 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "punto_recarga",
+			"nombre": "Punto de recarga",
+			"categoria": "mobiliario",
+			"subcategoria": "pago_recarga_bicis",
+			"etiquetas": ["recarga", "cargador", "coche eléctrico", "electrolinera"],
+			"descripcion": "Poste de recarga de coches eléctricos, con un cable grueso que puede cruzar la acera. Zumba cuando carga.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.2, 0.3, 0.45],
+				"alto": [1.2, 1.5, 1.8]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/zumbido_recarga.flac",
+					"volumen": 0.35,
+					"radio": 6,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "recargar",
+					"nombre": "Enchufar",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "transporte:bip_validacion.flac"
+				},
+				{
+					"id": "desenchufar",
+					"nombre": "Desenchufar",
+					"de": "funcionando",
+					"a": "apagado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["calle", "aparcamiento"],
+			"estancias": ["acera", "plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["coche"],
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/punto_recarga.png",
+				"descripcion": "Huella en planta de «Punto de recarga»: un rectángulo de 0,40 por 0,30 metros, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "semaforo_peatones",
+			"nombre": "Semáforo de peatones sonoro con pulsador",
+			"categoria": "trafico",
+			"subcategoria": "semaforos",
+			"etiquetas": ["semáforo", "semaforo", "semáforo sonoro", "pulsador", "paso de peatones"],
+			"descripcion": "Poste del semáforo de peatones, con un pulsador a la altura de la mano. Pita lento en rojo y rápido en verde.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.15, 0.25],
+				"fondo": [0.12, 0.15, 0.25],
+				"alto": [2.5, 3.0, 3.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["rojo", "verde", "intermitente"],
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "semaforo/pulsador"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "semaforo",
+				"para": "peatones",
+				"fases": [
+					{
+						"estado": "rojo",
+						"segundos": 45,
+						"sonido": "semaforo/rojo"
+					},
+					{
+						"estado": "verde",
+						"segundos": 25,
+						"sonido": "semaforo/verde"
+					},
+					{
+						"estado": "intermitente",
+						"segundos": 5,
+						"sonido": "semaforo/intermitente"
+					}
+				],
+				"sonoro": true,
+				"pulsador": true,
+				"espera_tras_pulsar_s": 8,
+				"radio": 14,
+				"volumen": 0.6
+			},
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["cruce"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["pavimento_botones", "paso_cebra", "semaforo_vehiculos"],
+			"simbolo": {
+				"letra": "Sp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/semaforo_peatones.png",
+				"descripcion": "Huella en planta de «Semáforo de peatones sonoro con pulsador»: un círculo de 0,15 por 0,15 metros, con la letra «Sp»."
+			}
+		},
+		{
+			"id": "semaforo_peatones_sonoro",
+			"nombre": "Semáforo de peatones sonoro",
+			"categoria": "trafico",
+			"subcategoria": "semaforos",
+			"etiquetas": ["semáforo sonoro", "semáforo acústico"],
+			"descripcion": "Poste del semáforo de peatones. Pita lento en rojo y rápido en verde, sin pulsador.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.15, 0.25],
+				"fondo": [0.12, 0.15, 0.25],
+				"alto": [2.5, 3.0, 3.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["rojo", "verde", "intermitente"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "semaforo",
+				"para": "peatones",
+				"fases": [
+					{
+						"estado": "rojo",
+						"segundos": 45,
+						"sonido": "semaforo/rojo"
+					},
+					{
+						"estado": "verde",
+						"segundos": 25,
+						"sonido": "semaforo/verde"
+					},
+					{
+						"estado": "intermitente",
+						"segundos": 5,
+						"sonido": "semaforo/intermitente"
+					}
+				],
+				"sonoro": true,
+				"pulsador": false,
+				"radio": 14,
+				"volumen": 0.6
+			},
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["cruce"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["pavimento_botones", "paso_cebra"],
+			"simbolo": {
+				"letra": "Sp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/semaforo_peatones_sonoro.png",
+				"descripcion": "Huella en planta de «Semáforo de peatones sonoro»: un círculo de 0,15 por 0,15 metros, con la letra «Sp»."
+			}
+		},
+		{
+			"id": "semaforo_peatones_mudo",
+			"nombre": "Semáforo de peatones sin sonido",
+			"categoria": "trafico",
+			"subcategoria": "semaforos",
+			"etiquetas": ["semáforo", "semáforo mudo", "semáforo sin sonido"],
+			"descripcion": "Poste del semáforo de peatones. No pita: para cruzar hay que escuchar cuándo se paran los coches.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.12, 0.15, 0.25],
+				"fondo": [0.12, 0.15, 0.25],
+				"alto": [2.5, 3.0, 3.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["rojo", "verde", "intermitente"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "semaforo",
+				"para": "peatones",
+				"fases": [
+					{
+						"estado": "rojo",
+						"segundos": 45
+					},
+					{
+						"estado": "verde",
+						"segundos": 25
+					},
+					{
+						"estado": "intermitente",
+						"segundos": 5
+					}
+				],
+				"sonoro": false,
+				"pulsador": false
+			},
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["cruce"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["pavimento_botones", "paso_cebra"],
+			"simbolo": {
+				"letra": "Sp",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/semaforo_peatones_mudo.png",
+				"descripcion": "Huella en planta de «Semáforo de peatones sin sonido»: un círculo de 0,15 por 0,15 metros, con la letra «Sp»."
+			}
+		},
+		{
+			"id": "semaforo_vehiculos",
+			"nombre": "Semáforo de vehículos",
+			"categoria": "trafico",
+			"subcategoria": "semaforos",
+			"etiquetas": ["semáforo", "semáforo de coches", "báculo"],
+			"descripcion": "Poste grueso del semáforo de los coches, junto al bordillo, a veces con un brazo sobre la calzada.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.15, 0.2, 0.3],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [3.0, 3.5, 6.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["verde", "ambar", "rojo"],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "semaforo",
+				"para": "vehiculos",
+				"fases": [
+					{
+						"estado": "verde",
+						"segundos": 42
+					},
+					{
+						"estado": "ambar",
+						"segundos": 3
+					},
+					{
+						"estado": "rojo",
+						"segundos": 30
+					}
+				]
+			},
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["cruce"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["semaforo_peatones"],
+			"simbolo": {
+				"letra": "Sv",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/semaforo_vehiculos.png",
+				"descripcion": "Huella en planta de «Semáforo de vehículos»: un círculo de 0,20 por 0,20 metros, con la letra «Sv»."
+			}
+		},
+		{
+			"id": "senal",
+			"nombre": "Señal de tráfico en poste",
+			"categoria": "trafico",
+			"subcategoria": "senales_verticales",
+			"etiquetas": ["señal", "señal de tráfico", "poste", "stop", "ceda"],
+			"descripcion": "Poste fino de metal con una señal arriba. La placa puede quedar a la altura de la cabeza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.06, 0.08, 0.1],
+				"fondo": [0.06, 0.08, 0.1],
+				"alto": [2.2, 2.8, 3.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["cruce", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Se",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/senal.png",
+				"descripcion": "Huella en planta de «Señal de tráfico en poste»: un círculo de 0,08 por 0,08 metros, con la letra «Se»."
+			}
+		},
+		{
+			"id": "senal_baja",
+			"nombre": "Placa de señal a la altura de la cabeza",
+			"categoria": "trafico",
+			"subcategoria": "senales_verticales",
+			"etiquetas": ["señal baja", "placa", "cartel bajo", "obstáculo en altura"],
+			"descripcion": "Placa de señal o cartel colocado demasiado bajo, que invade la acera a la altura de la cara. El bastón no la detecta.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.6, 0.9],
+				"fondo": [0.03, 0.05, 0.1],
+				"alto": [0.6, 0.6, 0.9]
+			},
+			"colocacion": ["acera", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Sb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/senal_baja.png",
+				"descripcion": "Huella en planta de «Placa de señal a la altura de la cabeza»: un rectángulo de 0,60 por 0,05 metros, colgado a 1,50 metros del suelo, con la letra «Sb»."
+			}
+		},
+		{
+			"id": "papelera",
+			"nombre": "Papelera",
+			"categoria": "residuos",
+			"subcategoria": "papeleras",
+			"etiquetas": ["papelera", "basura"],
+			"descripcion": "Papelera de la calle, colgada de un poste o de pie, a la altura de la cadera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.5],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [0.8, 0.9, 1.1]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/papelera.png",
+				"descripcion": "Huella en planta de «Papelera»: un círculo de 0,40 por 0,40 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "contenedor_240",
+			"nombre": "Contenedor de 240 litros",
+			"categoria": "residuos",
+			"subcategoria": "contenedores_calle",
+			"etiquetas": ["contenedor", "cubo", "cubo de basura", "240 litros"],
+			"descripcion": "Cubo con dos ruedas y tapa, del alto de la cintura. Los vecinos lo sacan y lo dejan en cualquier sitio de la acera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.58, 0.62],
+				"fondo": [0.7, 0.73, 0.75],
+				"alto": [1.0, 1.07, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "litros_120",
+					"nombre": "De 120 litros",
+					"ancho": 0.55,
+					"fondo": 0.7,
+					"alto": 1.0
+				},
+				{
+					"id": "litros_240",
+					"nombre": "De 240 litros",
+					"ancho": 0.58,
+					"fondo": 0.73,
+					"alto": 1.07
+				}
+			],
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle", "comunidad"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "C2",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_240.png",
+				"descripcion": "Huella en planta de «Contenedor de 240 litros»: un rectángulo de 0,58 por 0,73 metros, con la letra «C2»."
+			}
+		},
+		{
+			"id": "contenedor_resto",
+			"nombre": "Contenedor de resto de 1100 litros",
+			"categoria": "residuos",
+			"subcategoria": "contenedores_calle",
+			"etiquetas": ["contenedor", "basura", "resto", "orgánico", "1100 litros"],
+			"descripcion": "Contenedor grande con cuatro ruedas y tapa curva, del alto del pecho. Plástico hueco al golpearlo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.08, 0.0], [0.92, 0.0], [1.0, 0.08], [1.0, 0.92], [0.92, 1.0], [0.08, 1.0], [0.0, 0.92], [0.0, 0.08]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.37, 1.4],
+				"fondo": [1.0, 1.07, 1.1],
+				"alto": [1.25, 1.33, 1.45]
+			},
+			"variantes": [
+				{
+					"id": "litros_800",
+					"nombre": "De 800 litros",
+					"ancho": 1.26,
+					"fondo": 1.0,
+					"alto": 1.33
+				},
+				{
+					"id": "litros_1100",
+					"nombre": "De 1100 litros",
+					"ancho": 1.37,
+					"fondo": 1.07,
+					"alto": 1.33
+				}
+			],
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["contenedor_envases", "contenedor_papel", "contenedor_vidrio"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_resto.png",
+				"descripcion": "Huella en planta de «Contenedor de resto de 1100 litros»: un rectángulo con las esquinas cortadas de 1,37 por 1,07 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "contenedor_envases",
+			"nombre": "Contenedor de envases",
+			"categoria": "residuos",
+			"subcategoria": "reciclaje",
+			"etiquetas": ["contenedor amarillo", "envases", "plásticos", "latas"],
+			"descripcion": "Contenedor de carga lateral para envases: una caja grande y alta con una boca redonda a la altura del hombro.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.1], [1.0, 0.9], [0.9, 1.0], [0.1, 1.0], [0.0, 0.9], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [1.3, 1.88, 1.95],
+				"fondo": [1.2, 1.45, 1.6],
+				"alto": [1.5, 1.65, 1.8]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["contenedor_resto", "contenedor_papel"],
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_envases.png",
+				"descripcion": "Huella en planta de «Contenedor de envases»: un rectángulo con las esquinas cortadas de 1,88 por 1,45 metros, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "contenedor_papel",
+			"nombre": "Contenedor de papel",
+			"categoria": "residuos",
+			"subcategoria": "reciclaje",
+			"etiquetas": ["contenedor azul", "papel", "cartón"],
+			"descripcion": "Contenedor para papel y cartón: caja grande con una ranura ancha y horizontal a la altura del pecho.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.1], [1.0, 0.9], [0.9, 1.0], [0.1, 1.0], [0.0, 0.9], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [1.3, 1.88, 1.95],
+				"fondo": [1.2, 1.45, 1.6],
+				"alto": [1.5, 1.65, 1.8]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "sonidos/papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["contenedor_envases", "contenedor_vidrio"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_papel.png",
+				"descripcion": "Huella en planta de «Contenedor de papel»: un rectángulo con las esquinas cortadas de 1,88 por 1,45 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "contenedor_vidrio",
+			"nombre": "Contenedor de vidrio tipo iglú",
+			"categoria": "residuos",
+			"subcategoria": "reciclaje",
+			"etiquetas": ["iglú", "iglu", "contenedor verde", "vidrio", "botellas"],
+			"descripcion": "Iglú de vidrio: una cúpula redonda con bocas pequeñas. Al echar una botella, se oye romperse dentro.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.4, 1.6, 1.8],
+				"fondo": [1.4, 1.6, 1.8],
+				"alto": [1.5, 1.7, 1.85]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/vidrio.flac"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "sonidos/vidrio.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["contenedor_papel"],
+			"simbolo": {
+				"letra": "Cv",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_vidrio.png",
+				"descripcion": "Huella en planta de «Contenedor de vidrio tipo iglú»: un círculo de 1,60 por 1,60 metros, con la letra «Cv»."
+			}
+		},
+		{
+			"id": "alcorque",
+			"nombre": "Alcorque con árbol",
+			"categoria": "verde",
+			"subcategoria": "arboles_alcorques",
+			"etiquetas": ["árbol", "arbol", "alcorque", "tronco"],
+			"descripcion": "Árbol de la acera. El tronco corta el paso; alrededor, el alcorque es un cuadro de tierra un poco hundido. Las hojas suenan con el aire.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.35, 0.8],
+				"fondo": [0.2, 0.35, 0.8],
+				"alto": [3.0, 6.0, 15.0]
+			},
+			"variantes": [
+				{
+					"id": "joven",
+					"nombre": "Árbol joven",
+					"ancho": 0.2,
+					"fondo": 0.2,
+					"alto": 4.0
+				},
+				{
+					"id": "mediano",
+					"nombre": "Árbol mediano",
+					"ancho": 0.35,
+					"fondo": 0.35,
+					"alto": 7.0
+				},
+				{
+					"id": "viejo",
+					"nombre": "Árbol viejo",
+					"ancho": 0.7,
+					"fondo": 0.7,
+					"alto": 12.0
+				}
+			],
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "sonidos/hojas.flac",
+					"volumen": 0.3,
+					"radio": 8
+				}
+			},
+			"contenedor": true,
+			"funcion": "vegetacion",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["alcorque_hueco", "rejilla_alcorque"],
+			"simbolo": {
+				"letra": "Al",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/alcorque.png",
+				"descripcion": "Huella en planta de «Alcorque con árbol»: un círculo de 0,35 por 0,35 metros, con la letra «Al»."
+			}
+		},
+		{
+			"id": "alcorque_hueco",
+			"nombre": "Alcorque sin árbol",
+			"categoria": "verde",
+			"subcategoria": "arboles_alcorques",
+			"etiquetas": ["alcorque", "tierra", "hoyo"],
+			"descripcion": "Cuadro de tierra en la acera, un poco más bajo que las losas. No corta el paso, pero el pie se tuerce en el borde.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.5],
+				"fondo": [0.8, 1.0, 1.5],
+				"alto": [0.05, 0.08, 0.15]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "tierra",
+			"aviso": "Alcorque: el suelo baja y es de tierra.",
+			"funcion": "vegetacion",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["alcorque"],
+			"simbolo": {
+				"letra": "Ah",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/alcorque_hueco.png",
+				"descripcion": "Huella en planta de «Alcorque sin árbol»: un rectángulo de 1,00 por 1,00 metros, con la letra «Ah»."
+			}
+		},
+		{
+			"id": "jardinera",
+			"nombre": "Jardinera",
+			"categoria": "verde",
+			"subcategoria": "jardineras_setos",
+			"etiquetas": ["jardinera", "macetero", "parterre"],
+			"descripcion": "Jardinera alargada de hormigón con plantas, a la altura de la rodilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.5],
+				"fondo": [0.4, 0.5, 0.8],
+				"alto": [0.4, 0.5, 0.8]
+			},
+			"colocacion": ["acera", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "vegetacion",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ja",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/jardinera.png",
+				"descripcion": "Huella en planta de «Jardinera»: un rectángulo de 1,20 por 0,50 metros, con la letra «Ja»."
+			}
+		},
+		{
+			"id": "maceta_grande",
+			"nombre": "Maceta grande",
+			"categoria": "verde",
+			"subcategoria": "jardineras_setos",
+			"etiquetas": ["maceta", "macetón", "tiesto"],
+			"descripcion": "Macetón redondo de barro con un arbusto. Primero rozan las ramas.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 1.2],
+				"fondo": [0.5, 0.7, 1.2],
+				"alto": [0.8, 1.2, 2.0]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "vegetacion",
+			"lugares": ["calle", "comunidad", "bar"],
+			"estancias": ["acera", "entrada", "terraza_bar"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mg",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/maceta_grande.png",
+				"descripcion": "Huella en planta de «Maceta grande»: un círculo de 0,70 por 0,70 metros, con la letra «Mg»."
+			}
+		},
+		{
+			"id": "seto",
+			"nombre": "Seto",
+			"categoria": "verde",
+			"subcategoria": "jardineras_setos",
+			"etiquetas": ["seto", "arbusto", "valla vegetal"],
+			"descripcion": "Seto recortado: una pared verde y blanda que se puede seguir con la mano.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 6.0],
+				"fondo": [0.4, 0.6, 1.0],
+				"alto": [0.6, 1.0, 2.0]
+			},
+			"colocacion": ["acera", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "planta",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "vegetacion",
+			"lugares": ["calle", "parque", "jardin"],
+			"estancias": ["acera", "jardin"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Se",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/seto.png",
+				"descripcion": "Huella en planta de «Seto»: un rectángulo de 3,00 por 0,60 metros, con la letra «Se»."
+			}
+		},
+		{
+			"id": "fuente_beber",
+			"nombre": "Fuente para beber",
+			"categoria": "verde",
+			"subcategoria": "fuentes_agua",
+			"etiquetas": ["fuente", "fuente de beber", "bebedero", "caño"],
+			"descripcion": "Fuente de hierro con un pulsador. Gotea siempre un poco: se oye al acercarse.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/fuente_agua",
+					"volumen": 0.4,
+					"radio": 8
+				}
+			},
+			"acciones": [
+				{
+					"id": "beber",
+					"nombre": "Beber",
+					"sonido": "sonidos/chorro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Fb",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/fuente_beber.png",
+				"descripcion": "Huella en planta de «Fuente para beber»: un octógono de 0,40 por 0,40 metros, con la letra «Fb»."
+			}
+		},
+		{
+			"id": "fuente_ornamental",
+			"nombre": "Fuente ornamental",
+			"categoria": "verde",
+			"subcategoria": "fuentes_agua",
+			"etiquetas": ["fuente", "fuente ornamental", "estanque", "surtidor"],
+			"descripcion": "Fuente grande de plaza: un vaso redondo de piedra con chorros en el centro. Se oye desde toda la plaza y sirve para orientarse.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.634], [0.866, 0.866], [0.634, 1.0], [0.366, 1.0], [0.134, 0.866], [0.0, 0.634], [0.0, 0.366], [0.134, 0.134], [0.366, 0.0], [0.634, 0.0], [0.866, 0.134], [1.0, 0.366]]
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 6.0],
+				"fondo": [2.0, 4.0, 6.0],
+				"alto": [0.5, 1.2, 3.0]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "Pequeña",
+					"ancho": 2.0,
+					"fondo": 2.0,
+					"alto": 1.0
+				},
+				{
+					"id": "mediana",
+					"nombre": "Mediana",
+					"ancho": 4.0,
+					"fondo": 4.0,
+					"alto": 1.2
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 6.0,
+					"fondo": 6.0,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "sonidos/surtidor.flac",
+					"volumen": 0.6,
+					"radio": 20
+				}
+			},
+			"contenedor": true,
+			"funcion": "agua",
+			"lugares": ["calle", "parque"],
+			"estancias": ["plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["bancos_rotonda", "monumento_plaza"],
+			"simbolo": {
+				"letra": "Fo",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/fuente_ornamental.png",
+				"descripcion": "Huella en planta de «Fuente ornamental»: un círculo de doce lados de 4,00 por 4,00 metros, con la letra «Fo»."
+			}
+		},
+		{
+			"id": "coche",
+			"nombre": "Coche aparcado",
+			"categoria": "vehiculos",
+			"subcategoria": "coches_furgonetas",
+			"etiquetas": ["coche", "automóvil", "turismo", "vehículo"],
+			"descripcion": "Coche aparcado. Chapa y cristal; los retrovisores sobresalen a la altura de la cadera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.07], [1.0, 0.85], [0.9, 0.96], [0.72, 1.0], [0.28, 1.0], [0.1, 0.96], [0.0, 0.85], [0.0, 0.07]]
+			},
+			"medidas": {
+				"ancho": [1.6, 1.8, 1.95],
+				"fondo": [3.5, 4.3, 5.0],
+				"alto": [1.4, 1.5, 1.8]
+			},
+			"variantes": [
+				{
+					"id": "utilitario",
+					"nombre": "Utilitario",
+					"ancho": 1.65,
+					"fondo": 3.6,
+					"alto": 1.5
+				},
+				{
+					"id": "compacto",
+					"nombre": "Compacto",
+					"ancho": 1.8,
+					"fondo": 4.3,
+					"alto": 1.5
+				},
+				{
+					"id": "todoterreno",
+					"nombre": "Todoterreno",
+					"ancho": 1.9,
+					"fondo": 4.7,
+					"alto": 1.7
+				}
+			],
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle"],
+			"estancias": ["calzada", "plaza_aparcamiento"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Co",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/coche.png",
+				"descripcion": "Huella en planta de «Coche aparcado»: la silueta de un vehículo, con el morro delante de 1,80 por 4,30 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "furgoneta",
+			"nombre": "Furgoneta",
+			"categoria": "vehiculos",
+			"subcategoria": "coches_furgonetas",
+			"etiquetas": ["furgoneta", "furgón", "reparto", "carga y descarga"],
+			"descripcion": "Furgoneta de reparto parada, a veces con dos ruedas sobre la acera. Alta y de chapa lisa.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.05, 0.0], [0.95, 0.0], [1.0, 0.05], [1.0, 0.95], [0.95, 1.0], [0.05, 1.0], [0.0, 0.95], [0.0, 0.05]]
+			},
+			"medidas": {
+				"ancho": [1.9, 2.0, 2.1],
+				"fondo": [4.8, 5.4, 6.4],
+				"alto": [1.9, 2.5, 2.8]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["calle"],
+			"estancias": ["calzada", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Fu",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/furgoneta.png",
+				"descripcion": "Huella en planta de «Furgoneta»: un rectángulo con las esquinas cortadas de 2,00 por 5,40 metros, con la letra «Fu»."
+			}
+		},
+		{
+			"id": "moto",
+			"nombre": "Moto aparcada en la acera",
+			"categoria": "vehiculos",
+			"subcategoria": "motos_bicis_patinetes",
+			"etiquetas": ["moto", "motocicleta", "ciclomotor", "scooter"],
+			"descripcion": "Moto aparcada sobre la acera. El manillar y los espejos sobresalen; el tubo de escape puede estar caliente.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [0.75, 0.25], [1.0, 0.3], [1.0, 0.4], [0.7, 0.45], [0.65, 1.0], [0.35, 1.0], [0.3, 0.45], [0.0, 0.4], [0.0, 0.3], [0.25, 0.25]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 0.95],
+				"fondo": [1.8, 2.0, 2.3],
+				"alto": [1.0, 1.15, 1.4]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mo",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/moto.png",
+				"descripcion": "Huella en planta de «Moto aparcada en la acera»: un cuerpo estrecho y largo con el manillar atravesado cerca del frente de 0,80 por 2,00 metros, con la letra «Mo»."
+			}
+		},
+		{
+			"id": "patinetes",
+			"nombre": "Patinetes aparcados",
+			"categoria": "vehiculos",
+			"subcategoria": "motos_bicis_patinetes",
+			"etiquetas": ["patinete", "patinetes", "patinete eléctrico"],
+			"descripcion": "Patinetes eléctricos dejados en medio de la acera, alguno tumbado. Obstáculo que cambia de sitio cada día.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.8, 1.0], [0.8, 0.15], [0.6, 0.15], [0.6, 1.0], [0.4, 1.0], [0.4, 0.15], [0.2, 0.15], [0.2, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 1.2, 2.5],
+				"fondo": [1.0, 1.15, 1.25],
+				"alto": [0.3, 1.1, 1.25]
+			},
+			"variantes": [
+				{
+					"id": "uno",
+					"nombre": "Un patinete",
+					"ancho": 0.5,
+					"fondo": 1.15,
+					"alto": 1.1
+				},
+				{
+					"id": "tres",
+					"nombre": "Tres patinetes",
+					"ancho": 1.2,
+					"fondo": 1.15,
+					"alto": 1.1
+				},
+				{
+					"id": "tumbado",
+					"nombre": "Uno tumbado",
+					"ancho": 1.2,
+					"fondo": 1.0,
+					"alto": 0.3
+				}
+			],
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/patinetes.png",
+				"descripcion": "Huella en planta de «Patinetes aparcados»: un peine: una barra con cuerpos que salen hacia delante de 1,20 por 1,15 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "bicicleta",
+			"nombre": "Bicicleta atada a un poste",
+			"categoria": "vehiculos",
+			"subcategoria": "motos_bicis_patinetes",
+			"etiquetas": ["bicicleta", "bici"],
+			"descripcion": "Bicicleta suelta atada a una farola o a una señal, atravesada en la acera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [0.75, 0.25], [1.0, 0.3], [1.0, 0.4], [0.7, 0.45], [0.65, 1.0], [0.35, 1.0], [0.3, 0.45], [0.0, 0.4], [0.0, 0.3], [0.25, 0.25]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [1.6, 1.75, 1.9],
+				"alto": [0.95, 1.05, 1.15]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:timbre_bici.flac"
+			},
+			"contenedor": false,
+			"funcion": "vehiculo",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["aparcabicis"],
+			"simbolo": {
+				"letra": "Bi",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/bicicleta.png",
+				"descripcion": "Huella en planta de «Bicicleta atada a un poste»: un cuerpo estrecho y largo con el manillar atravesado cerca del frente de 0,60 por 1,75 metros, con la letra «Bi»."
+			}
+		},
+		{
+			"id": "mesa_terraza",
+			"nombre": "Mesa de terraza con sillas",
+			"categoria": "terraza",
+			"subcategoria": "terrazas_bar",
+			"etiquetas": ["terraza", "mesa de bar", "velador", "sillas"],
+			"descripcion": "Mesa de bar con cuatro sillas de metal alrededor. Las sillas se mueven: la terraza nunca está igual dos días.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [0.7, 0.0], [0.7, 0.2], [1.0, 0.2], [1.0, 0.8], [0.7, 0.8], [0.7, 1.0], [0.3, 1.0], [0.3, 0.8], [0.0, 0.8], [0.0, 0.2], [0.3, 0.2]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.2],
+				"fondo": [1.5, 1.8, 2.2],
+				"alto": [0.72, 0.75, 0.9]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["calle", "bar", "restaurante"],
+			"estancias": ["terraza_bar", "acera"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["sombrilla", "mesa_alta"],
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_terraza.png",
+				"descripcion": "Huella en planta de «Mesa de terraza con sillas»: una cruz gruesa: la mesa en el centro y una silla en cada lado de 1,80 por 1,80 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "mesa_alta",
+			"nombre": "Mesa alta de terraza",
+			"categoria": "terraza",
+			"subcategoria": "terrazas_bar",
+			"etiquetas": ["mesa alta", "barril", "velador alto"],
+			"descripcion": "Mesa alta redonda, o un barril, para tomar algo de pie.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.8],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.05, 1.1, 1.15]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["calle", "bar"],
+			"estancias": ["terraza_bar", "acera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["mesa_terraza"],
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_alta.png",
+				"descripcion": "Huella en planta de «Mesa alta de terraza»: un círculo de 0,70 por 0,70 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "sombrilla",
+			"nombre": "Sombrilla",
+			"categoria": "terraza",
+			"subcategoria": "terrazas_bar",
+			"etiquetas": ["sombrilla", "parasol", "base de sombrilla"],
+			"descripcion": "Sombrilla de terraza: una base pesada en el suelo y un mástil. Las varillas quedan a la altura de la cabeza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.25, 0.0], [0.75, 0.0], [1.0, 0.25], [1.0, 0.75], [0.75, 1.0], [0.25, 1.0], [0.0, 0.75], [0.0, 0.25]]
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.8],
+				"fondo": [0.45, 0.5, 0.8],
+				"alto": [2.2, 2.5, 2.8]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle", "bar", "restaurante"],
+			"estancias": ["terraza_bar", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["mesa_terraza"],
+			"simbolo": {
+				"letra": "So",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/sombrilla.png",
+				"descripcion": "Huella en planta de «Sombrilla»: un rectángulo con las esquinas cortadas de 0,50 por 0,50 metros, con la letra «So»."
+			}
+		},
+		{
+			"id": "cartel_caballete",
+			"nombre": "Cartel caballete",
+			"categoria": "terraza",
+			"subcategoria": "comercio_acera",
+			"etiquetas": ["caballete", "cartel", "pizarra de bar", "menú"],
+			"descripcion": "Cartel de dos caras en tijera con el menú del día, plantado en mitad de la acera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["calle", "bar", "tienda"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cartel_caballete.png",
+				"descripcion": "Huella en planta de «Cartel caballete»: un rectángulo de 0,60 por 0,60 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "toldo_bajo",
+			"nombre": "Toldo bajo",
+			"categoria": "terraza",
+			"subcategoria": "comercio_acera",
+			"etiquetas": ["toldo", "toldo bajo", "marquesina de tienda", "obstáculo en altura"],
+			"descripcion": "Toldo de un comercio que cuelga demasiado bajo: la barra queda a la altura de la frente. El bastón no lo avisa.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 6.0],
+				"fondo": [0.8, 1.2, 2.5],
+				"alto": [0.15, 0.25, 0.5]
+			},
+			"colocacion": ["pared", "acera"],
+			"bloquea": true,
+			"altura_base": 1.65,
+			"detectable_baston": false,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle", "tienda", "bar"],
+			"estancias": ["acera"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tb",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/toldo_bajo.png",
+				"descripcion": "Huella en planta de «Toldo bajo»: un rectángulo de 3,00 por 1,20 metros, colgado a 1,65 metros del suelo, con la letra «Tb»."
+			}
+		},
+		{
+			"id": "quiosco",
+			"nombre": "Quiosco",
+			"categoria": "terraza",
+			"subcategoria": "quioscos_puestos",
+			"etiquetas": ["quiosco", "kiosco", "prensa", "once", "cupones"],
+			"descripcion": "Quiosco de prensa: una caseta de metal de ocho lados con mostrador y revistas colgando alrededor.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 4.0],
+				"fondo": [2.0, 2.5, 3.0],
+				"alto": [2.5, 2.8, 3.2]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Qu",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/quiosco.png",
+				"descripcion": "Huella en planta de «Quiosco»: un octógono de 2,50 por 2,50 metros, con la letra «Qu»."
+			}
+		},
+		{
+			"id": "puesto_mercado",
+			"nombre": "Puesto de mercado",
+			"categoria": "terraza",
+			"subcategoria": "quioscos_puestos",
+			"etiquetas": ["puesto", "mercadillo", "mercado", "tenderete"],
+			"descripcion": "Puesto de mercadillo: un mostrador con género y un toldo encima sobre cuatro patas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.075, 0.0], [0.925, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.0],
+				"fondo": [1.5, 2.0, 2.5],
+				"alto": [2.0, 2.3, 2.6]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["calle"],
+			"estancias": ["plaza", "calzada", "acera"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pm",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/puesto_mercado.png",
+				"descripcion": "Huella en planta de «Puesto de mercado»: un trapecio, más estrecho por detrás de 3,00 por 2,00 metros, con la letra «Pm»."
+			}
+		},
+		{
+			"id": "expositor_fruta",
+			"nombre": "Cajas de fruta en la acera",
+			"categoria": "terraza",
+			"subcategoria": "comercio_acera",
+			"etiquetas": ["frutería", "cajas", "expositor", "género"],
+			"descripcion": "Cajas de fruta que la frutería saca a la acera, inclinadas, a la altura de la rodilla y la cadera.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 4.0],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [0.6, 0.9, 1.1]
+			},
+			"colocacion": ["pared", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["calle", "tienda"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ef",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/expositor_fruta.png",
+				"descripcion": "Huella en planta de «Cajas de fruta en la acera»: un rectángulo de 2,00 por 0,80 metros, con la letra «Ef»."
+			}
+		},
+		{
+			"id": "valla_obra",
+			"nombre": "Valla de obra",
+			"categoria": "obras",
+			"subcategoria": "vallas_andamios",
+			"etiquetas": ["valla", "valla de obra", "obra", "barrera"],
+			"descripcion": "Valla metálica de obra, del alto de la cintura, con patas que sobresalen por abajo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 2.5, 3.5],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.0, 1.1, 2.0]
+			},
+			"variantes": [
+				{
+					"id": "peatonal",
+					"nombre": "Peatonal",
+					"ancho": 2.5,
+					"fondo": 0.5,
+					"alto": 1.1
+				},
+				{
+					"id": "alta",
+					"nombre": "Alta de malla",
+					"ancho": 3.5,
+					"fondo": 0.6,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle", "obra"],
+			"estancias": ["acera", "zona_obra"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["zanja", "cono"],
+			"simbolo": {
+				"letra": "Vo",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/valla_obra.png",
+				"descripcion": "Huella en planta de «Valla de obra»: un rectángulo de 2,50 por 0,50 metros, con la letra «Vo»."
+			}
+		},
+		{
+			"id": "andamio",
+			"nombre": "Pies de andamio",
+			"categoria": "obras",
+			"subcategoria": "vallas_andamios",
+			"etiquetas": ["andamio", "obra", "paso estrecho", "túnel", "tubos"],
+			"descripcion": "Fila de pies de un andamio montado sobre la acera. Entre esta fila y la fachada queda un túnel estrecho por el que se pasa, con la pared a un lado y los tubos al otro.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.5, 5.0, 12.0],
+				"fondo": [0.1, 0.15, 0.3],
+				"alto": [2.2, 2.5, 6.0]
+			},
+			"variantes": [
+				{
+					"id": "un_tramo",
+					"nombre": "De un tramo",
+					"ancho": 2.5,
+					"fondo": 0.15,
+					"alto": 2.5
+				},
+				{
+					"id": "dos_tramos",
+					"nombre": "De dos tramos",
+					"ancho": 5.0,
+					"fondo": 0.15,
+					"alto": 2.5
+				},
+				{
+					"id": "cuatro_tramos",
+					"nombre": "De cuatro tramos",
+					"ancho": 10.0,
+					"fondo": 0.15,
+					"alto": 2.5
+				}
+			],
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"aviso": "Andamio: paso estrecho, cuidado con la cabeza.",
+			"funcion": "estructura",
+			"lugares": ["calle", "obra"],
+			"estancias": ["acera", "zona_obra"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["andamio_travesano"],
+			"simbolo": {
+				"letra": "An",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/andamio.png",
+				"descripcion": "Huella en planta de «Pies de andamio»: un rectángulo de 5,00 por 0,15 metros, con la letra «An»."
+			}
+		},
+		{
+			"id": "andamio_travesano",
+			"nombre": "Travesaño de andamio",
+			"categoria": "obras",
+			"subcategoria": "vallas_andamios",
+			"etiquetas": ["andamio", "travesaño", "tubo", "obstáculo en altura"],
+			"descripcion": "Tubo del andamio que cruza el paso a la altura de la frente. El bastón pasa por debajo sin tocarlo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.3, 2.5],
+				"fondo": [0.05, 0.06, 0.1],
+				"alto": [0.05, 0.06, 0.1]
+			},
+			"colocacion": ["acera", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 1.7,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle", "obra"],
+			"estancias": ["acera", "zona_obra"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["andamio"],
+			"simbolo": {
+				"letra": "At",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/andamio_travesano.png",
+				"descripcion": "Huella en planta de «Travesaño de andamio»: un rectángulo de 1,30 por 0,06 metros, colgado a 1,70 metros del suelo, con la letra «At»."
+			}
+		},
+		{
+			"id": "zanja",
+			"nombre": "Zanja señalizada",
+			"categoria": "obras",
+			"subcategoria": "zanjas_conos",
+			"etiquetas": ["zanja", "obra", "agujero", "socavón"],
+			"descripcion": "Zanja abierta en la acera, rodeada de vallas. No se puede pasar: hay que rodearla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.06, 0.0], [0.94, 0.0], [1.0, 0.06], [1.0, 0.94], [0.94, 1.0], [0.06, 1.0], [0.0, 0.94], [0.0, 0.06]]
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 6.0],
+				"fondo": [0.8, 1.2, 2.0],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"contenedor": false,
+			"aviso": "Zanja de obra: no hay paso.",
+			"funcion": "barrera",
+			"lugares": ["calle", "obra"],
+			"estancias": ["acera", "calzada", "zona_obra"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["valla_obra", "cono"],
+			"simbolo": {
+				"letra": "Za",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/zanja.png",
+				"descripcion": "Huella en planta de «Zanja señalizada»: un rectángulo con las esquinas cortadas de 2,00 por 1,20 metros, con la letra «Za»."
+			}
+		},
+		{
+			"id": "cono",
+			"nombre": "Cono",
+			"categoria": "obras",
+			"subcategoria": "zanjas_conos",
+			"etiquetas": ["cono", "obra", "señal"],
+			"descripcion": "Cono de plástico de obra, del alto de la rodilla. Si lo golpeas, se cae.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.45],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [0.3, 0.5, 0.75]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle", "obra", "aparcamiento"],
+			"estancias": ["acera", "calzada", "zona_obra"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Co",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/cono.png",
+				"descripcion": "Huella en planta de «Cono»: un rectángulo de 0,30 por 0,30 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "saco_escombros",
+			"nombre": "Saco de escombros",
+			"categoria": "obras",
+			"subcategoria": "zanjas_conos",
+			"etiquetas": ["saco", "escombros", "big bag"],
+			"descripcion": "Saco grande de obra lleno de escombros, dejado junto al bordillo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.9, 0.9, 1.0],
+				"fondo": [0.9, 0.9, 1.0],
+				"alto": [0.6, 0.9, 1.1]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle", "obra"],
+			"estancias": ["acera", "zona_obra"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Se",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/saco_escombros.png",
+				"descripcion": "Huella en planta de «Saco de escombros»: un rectángulo de esquinas redondeadas de 0,90 por 0,90 metros, con la letra «Se»."
+			}
+		},
+		{
+			"id": "charco",
+			"nombre": "Charco",
+			"categoria": "obras",
+			"subcategoria": "zanjas_conos",
+			"etiquetas": ["charco", "agua", "lluvia"],
+			"descripcion": "Charco en la acera después de llover. No corta el paso: se oye el chapoteo al pisarlo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 1.2, 3.0],
+				"fondo": [0.4, 0.8, 2.0],
+				"alto": [0.01, 0.02, 0.05]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "agua",
+			"funcion": "agua",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo", "temporal"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ch",
+				"color": "#D35400"
+			},
+			"imagen": {
+				"fichero": "imagenes/charco.png",
+				"descripcion": "Huella en planta de «Charco»: un óvalo de 1,20 por 0,80 metros, con la letra «Ch»."
+			}
+		},
+		{
+			"id": "armario_servicios",
+			"nombre": "Armario de servicios",
+			"categoria": "suelo",
+			"subcategoria": "servicios_fachada",
+			"etiquetas": ["armario", "cuadro eléctrico", "caja de registro", "telefonía"],
+			"descripcion": "Armario metálico de la luz o del teléfono, pegado a la fachada. Zumba un poco.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.0, 1.6],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [1.0, 1.3, 1.8]
+			},
+			"colocacion": ["pared", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/zumbido_recarga.flac",
+					"volumen": 0.2,
+					"radio": 3
+				}
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "As",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_servicios.png",
+				"descripcion": "Huella en planta de «Armario de servicios»: un rectángulo de 1,00 por 0,40 metros, con la letra «As»."
+			}
+		},
+		{
+			"id": "boca_riego",
+			"nombre": "Boca de riego",
+			"categoria": "suelo",
+			"subcategoria": "tapas_rejillas",
+			"etiquetas": ["boca de riego", "hidrante", "arqueta"],
+			"descripcion": "Tapa pequeña de hierro en la acera, casi a ras. Se nota bajo el pie y suena a metal.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.3, 0.4],
+				"fondo": [0.2, 0.3, 0.4],
+				"alto": [0.01, 0.02, 0.04]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"funcion": "agua",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Br",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/boca_riego.png",
+				"descripcion": "Huella en planta de «Boca de riego»: un rectángulo de 0,30 por 0,30 metros, con la letra «Br»."
+			}
+		},
+		{
+			"id": "hidrante",
+			"nombre": "Hidrante de columna",
+			"categoria": "suelo",
+			"subcategoria": "servicios_fachada",
+			"etiquetas": ["hidrante", "bomberos", "boca de incendios"],
+			"descripcion": "Hidrante de bomberos: una columna corta de hierro con bocas a los lados, a la altura de la rodilla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.25, 0.0], [0.75, 0.0], [0.75, 0.25], [1.0, 0.25], [1.0, 0.75], [0.75, 0.75], [0.75, 1.0], [0.25, 1.0], [0.25, 0.75], [0.0, 0.75], [0.0, 0.25], [0.25, 0.25]]
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.6, 0.75, 1.0]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Hi",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/hidrante.png",
+				"descripcion": "Huella en planta de «Hidrante de columna»: una cruz de 0,30 por 0,30 metros, con la letra «Hi»."
+			}
+		},
+		{
+			"id": "tapa_alcantarilla",
+			"nombre": "Tapa de alcantarilla",
+			"categoria": "suelo",
+			"subcategoria": "tapas_rejillas",
+			"etiquetas": ["alcantarilla", "tapa", "registro", "pozo"],
+			"descripcion": "Tapa redonda de hierro. No corta el paso: los pasos suenan a metal y a veces baila un poco.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.6, 0.7, 0.9],
+				"alto": [0.01, 0.02, 0.04]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/tapa_alcantarilla.png",
+				"descripcion": "Huella en planta de «Tapa de alcantarilla»: un círculo de 0,70 por 0,70 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "rejilla",
+			"nombre": "Rejilla de ventilación",
+			"categoria": "suelo",
+			"subcategoria": "tapas_rejillas",
+			"etiquetas": ["rejilla", "respiradero", "ventilación", "imbornal"],
+			"descripcion": "Rejilla de metal en la acera, del metro o de un garaje. Se pisa: suena hueca y la punta del bastón se puede enganchar.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.5, 4.0],
+				"fondo": [0.5, 1.0, 2.0],
+				"alto": [0.01, 0.02, 0.04]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Rejilla: la punta del bastón se puede enganchar.",
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Re",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/rejilla.png",
+				"descripcion": "Huella en planta de «Rejilla de ventilación»: un rectángulo de 1,50 por 1,00 metros, con la letra «Re»."
+			}
+		},
+		{
+			"id": "bordillo_alto",
+			"nombre": "Escalón o bordillo alto",
+			"categoria": "suelo",
+			"subcategoria": "bordillos_desniveles",
+			"etiquetas": ["escalón", "bordillo", "peldaño", "desnivel"],
+			"descripcion": "Escalón de un palmo a lo ancho del paso. No corta el camino, pero hay que subirlo o bajarlo.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 2.0, 6.0],
+				"fondo": [0.15, 0.3, 0.5],
+				"alto": [0.1, 0.15, 0.25]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "exterior/bordillo"
+			},
+			"contenedor": false,
+			"aviso": "Escalón.",
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera", "cruce"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/bordillo_alto.png",
+				"descripcion": "Huella en planta de «Escalón o bordillo alto»: un rectángulo de 2,00 por 0,30 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "rampa_vado",
+			"nombre": "Rampa de vado",
+			"categoria": "suelo",
+			"subcategoria": "bordillos_desniveles",
+			"etiquetas": ["vado", "rampa", "rebaje", "garaje"],
+			"descripcion": "Rebaje de la acera hacia la calzada: el suelo se inclina. En un vado de garaje pueden cruzar coches.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 3.0, 5.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [0.01, 0.1, 0.15]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"aviso": "Vado: la acera baja en rampa hacia la calzada.",
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera", "cruce"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["pavimento_botones"],
+			"simbolo": {
+				"letra": "Rv",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/rampa_vado.png",
+				"descripcion": "Huella en planta de «Rampa de vado»: un trapecio, más estrecho por detrás de 3,00 por 1,50 metros, con la letra «Rv»."
+			}
+		},
+		{
+			"id": "pavimento_botones",
+			"nombre": "Pavimento táctil de botones",
+			"categoria": "suelo",
+			"subcategoria": "pavimentos_guias",
+			"etiquetas": ["pavimento táctil", "botones", "baldosa de botones", "advertencia"],
+			"descripcion": "Franja de baldosas con botones en relieve. Avisa de un peligro o de un cruce justo delante: aquí hay que pararse.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 4.0, 8.0],
+				"fondo": [0.4, 0.6, 1.2],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "tactil_botones",
+			"aviso": "Pavimento de botones: párate, hay un cruce o un peligro delante.",
+			"funcion": "referencia",
+			"lugares": ["calle"],
+			"estancias": ["acera", "cruce", "parada"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["pavimento_rayas", "rampa_vado", "paso_cebra"],
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/pavimento_botones.png",
+				"descripcion": "Huella en planta de «Pavimento táctil de botones»: un rectángulo de 4,00 por 0,60 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "pavimento_rayas",
+			"nombre": "Pavimento táctil de rayas",
+			"categoria": "suelo",
+			"subcategoria": "pavimentos_guias",
+			"etiquetas": ["pavimento táctil", "rayas", "encaminamiento", "franja guía"],
+			"descripcion": "Franja de baldosas con rayas en relieve. Marca un camino: se sigue en la dirección de las rayas.",
+			"ambito": ["exterior", "interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.8, 1.2],
+				"fondo": [1.0, 4.0, 12.0],
+				"alto": [0.005, 0.005, 0.01]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "tactil_rayas",
+			"funcion": "referencia",
+			"lugares": ["calle"],
+			"estancias": ["acera", "cruce", "parada"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["pavimento_botones"],
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/pavimento_rayas.png",
+				"descripcion": "Huella en planta de «Pavimento táctil de rayas»: un rectángulo de 0,80 por 4,00 metros, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "silla_urbana",
+			"nombre": "Silla urbana individual",
+			"categoria": "mobiliario",
+			"subcategoria": "asientos_urbanos",
+			"etiquetas": ["silla urbana", "asiento individual", "sillón de calle", "asiento con brazos"],
+			"descripcion": "Asiento para una sola persona, con respaldo y dos brazos firmes para apoyarse al levantarse. Está anclado al suelo: no se mueve aunque tires de él. Suelen ponerse varios, separados un paso.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.86, 1.0], [0.86, 0.25], [0.14, 0.25], [0.14, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.7],
+				"fondo": [0.55, 0.6, 0.7],
+				"alto": [0.8, 0.85, 0.95]
+			},
+			"colocacion": ["acera", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["banco", "papelera"],
+			"simbolo": {
+				"letra": "Su",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_urbana.png",
+				"descripcion": "Huella en planta de «Silla urbana individual»: una U abierta por delante: el respaldo detrás y un brazo a cada lado de 0,60 por 0,60 metros, con la letra «Su»."
+			}
+		},
+		{
+			"id": "bloque_antivehiculo",
+			"nombre": "Bloque de hormigón antivehículos",
+			"categoria": "mobiliario",
+			"subcategoria": "bolardos_protecciones",
+			"etiquetas": ["bloque antivehículos", "bloque de hormigón", "barrera antiatentado", "macetón de hormigón", "new jersey fijo"],
+			"descripcion": "Bloque macizo de hormigón a la altura del muslo, a veces con forma de maceta o de letra, para que no entren coches en una calle peatonal. Se ponen en fila con huecos de un paso. Al golpearlo suena sordo y no se mueve.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.1], [1.0, 0.9], [0.9, 1.0], [0.1, 1.0], [0.0, 0.9], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.6, 2.5],
+				"fondo": [0.6, 0.8, 1.0],
+				"alto": [0.6, 0.8, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "cubo",
+					"nombre": "Cubo",
+					"ancho": 1.0,
+					"fondo": 1.0,
+					"alto": 0.8
+				},
+				{
+					"id": "alargado",
+					"nombre": "Alargado",
+					"ancho": 2.4,
+					"fondo": 0.8,
+					"alto": 0.8
+				}
+			],
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "hormigon",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza", "calzada"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["bolardo"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/bloque_antivehiculo.png",
+				"descripcion": "Huella en planta de «Bloque de hormigón antivehículos»: un rectángulo con las esquinas cortadas de 1,60 por 0,80 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "guardacanton",
+			"nombre": "Guardacantón de esquina",
+			"categoria": "mobiliario",
+			"subcategoria": "bolardos_protecciones",
+			"etiquetas": ["guardacantón", "guardacantones", "recantón", "cantonera de piedra", "protector de esquina"],
+			"descripcion": "Piedra o pieza de hierro gruesa y redondeada, pegada a la esquina de un edificio antiguo a la altura de la rodilla, que protegía la pared de los carros. Sobresale justo donde doblas la esquina siguiendo la fachada.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.966, 0.259], [0.866, 0.5], [0.707, 0.707], [0.5, 0.866], [0.259, 0.966], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.4, 0.6, 0.9]
+			},
+			"colocacion": ["esquina", "pared", "acera"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Gu",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/guardacanton.png",
+				"descripcion": "Huella en planta de «Guardacantón de esquina»: un cuarto de círculo, con el rincón atrás a la izquierda de 0,40 por 0,40 metros, con la letra «Gu»."
+			}
+		},
+		{
+			"id": "aseo_publico_automatico",
+			"nombre": "Aseo público automático",
+			"categoria": "mobiliario",
+			"subcategoria": "buzones_cabinas",
+			"etiquetas": ["aseo público", "sanisette", "urinario público", "váter de la calle", "baño automático"],
+			"descripcion": "Cabina grande de metal con una puerta corredera ancha y un botón grande en relieve al lado. Al entrar, una voz explica dónde está todo; al salir, se limpia sola con ruido de agua. Dentro cabe una silla de ruedas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.12], [1.0, 0.88], [0.88, 1.0], [0.12, 1.0], [0.0, 0.88], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.6, 3.2],
+				"fondo": [1.6, 1.8, 2.2],
+				"alto": [2.4, 2.6, 2.8]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/automatica"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/automatica"
+				},
+				{
+					"id": "tirar_cadena",
+					"nombre": "Tirar de la cadena",
+					"sonido": "hogar:cisterna.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["calle", "parque", "playa"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ap",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/aseo_publico_automatico.png",
+				"descripcion": "Huella en planta de «Aseo público automático»: un rectángulo con las esquinas cortadas de 2,60 por 1,80 metros, con la letra «Ap»."
+			}
+		},
+		{
+			"id": "columna_anunciadora",
+			"nombre": "Columna anunciadora",
+			"categoria": "mobiliario",
+			"subcategoria": "informacion_publicidad",
+			"etiquetas": ["columna anunciadora", "columna Morris", "columna de carteles", "cilindro publicitario"],
+			"descripcion": "Cilindro grueso, ancho como un abrazo, forrado de carteles de papel que crujen al rozarlos. Arriba tiene un tejadillo que sobresale, muy alto. Rodeándolo se vuelve al mismo sitio sin encontrar esquinas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [0.9, 1.2, 1.5],
+				"alto": [2.5, 3.0, 3.6]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/papel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna_anunciadora.png",
+				"descripcion": "Huella en planta de «Columna anunciadora»: un círculo de 1,20 por 1,20 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "reloj_calle",
+			"nombre": "Reloj de calle sobre columna",
+			"categoria": "mobiliario",
+			"subcategoria": "informacion_publicidad",
+			"etiquetas": ["reloj de calle", "reloj de plaza", "reloj en columna", "reloj público"],
+			"descripcion": "Columna de fundición, fina como una farola, con un reloj de cuatro esferas arriba. Hace tictac y algunos dan las horas con campanadas: sirve para quedar con alguien y para saber hacia dónde queda la plaza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.45],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [3.0, 3.8, 4.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/reloj",
+					"volumen": 0.3,
+					"radio": 6
+				}
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "sonidos/calle_reloj_campanadas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["fuente_ornamental"],
+			"simbolo": {
+				"letra": "Rc",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/reloj_calle.png",
+				"descripcion": "Huella en planta de «Reloj de calle sobre columna»: un círculo de 0,30 por 0,30 metros, con la letra «Rc»."
+			}
+		},
+		{
+			"id": "placa_calle_braille",
+			"nombre": "Placa de calle en relieve y braille",
+			"categoria": "trafico",
+			"subcategoria": "senales_verticales",
+			"etiquetas": ["placa de calle", "nombre de la calle", "placa braille", "rótulo en relieve"],
+			"descripcion": "Placa pequeña atornillada a la fachada, en la esquina y a la altura de la mano, con el nombre de la calle y los números de portal en letras en relieve y en braille. Se encuentra siguiendo la fachada hasta la esquina.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.3, 0.4],
+				"fondo": [0.02, 0.03, 0.05],
+				"alto": [0.1, 0.15, 0.2]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": false,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos",
+					"sonido": "logro/pista"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["calle"],
+			"estancias": ["acera", "cruce"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"relacionados": ["pavimento_botones"],
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/placa_calle_braille.png",
+				"descripcion": "Huella en planta de «Placa de calle en relieve y braille»: un rectángulo de 0,30 por 0,03 metros, colgado a 1,20 metros del suelo, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "paso_cebra",
+			"nombre": "Paso de peatones de cebra",
+			"categoria": "trafico",
+			"subcategoria": "cruces_pasos",
+			"etiquetas": ["paso de cebra", "paso de peatones", "cebra", "cruce"],
+			"descripcion": "Franjas anchas de pintura cruzando la calzada. Al pie apenas se notan: son algo más lisas y con lluvia resbalan. Empieza y acaba en la franja de botones de cada acera; sigue la dirección de las rayas del suelo para cruzar recto.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.5, 4.0, 8.0],
+				"fondo": [5.0, 7.0, 15.0],
+				"alto": [0.002, 0.003, 0.005]
+			},
+			"variantes": [
+				{
+					"id": "calle_estrecha",
+					"nombre": "Calle de un carril",
+					"ancho": 4.0,
+					"fondo": 5.0,
+					"alto": 0.003
+				},
+				{
+					"id": "dos_carriles",
+					"nombre": "Dos carriles",
+					"ancho": 4.0,
+					"fondo": 7.0,
+					"alto": 0.003
+				},
+				{
+					"id": "avenida",
+					"nombre": "Avenida",
+					"ancho": 6.0,
+					"fondo": 15.0,
+					"alto": 0.003
+				}
+			],
+			"colocacion": ["calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "asfalto",
+			"aviso": "Paso de peatones: estás en la calzada. Cruza recto y sin pararte.",
+			"funcion": "referencia",
+			"lugares": ["calle"],
+			"estancias": ["cruce", "calzada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["pavimento_botones", "semaforo_peatones", "isleta_refugio"],
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/paso_cebra.png",
+				"descripcion": "Huella en planta de «Paso de peatones de cebra»: un rectángulo de 4,00 por 7,00 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "isleta_refugio",
+			"nombre": "Isleta refugio en mitad del paso",
+			"categoria": "trafico",
+			"subcategoria": "cruces_pasos",
+			"etiquetas": ["isleta", "refugio peatonal", "mediana", "isleta de cruce"],
+			"descripcion": "Trozo de acera en medio de la calzada para cruzar en dos veces. Unas veces tiene bordillo y otras está a nivel de la calzada, con botones en cada borde. Párate en ella: detrás vuelven a pasar coches, en sentido contrario.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.756, 0.0], [0.907, 0.095], [1.0, 0.345], [1.0, 0.655], [0.907, 0.905], [0.756, 1.0], [0.244, 1.0], [0.093, 0.905], [0.0, 0.655], [0.0, 0.345], [0.093, 0.095], [0.244, 0.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 8.0],
+				"fondo": [1.5, 2.0, 3.0],
+				"alto": [0.02, 0.15, 0.2]
+			},
+			"colocacion": ["calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "exterior/bordillo"
+			},
+			"contenedor": false,
+			"suelo": "tactil_botones",
+			"aviso": "Isleta: estás en mitad de la calzada. Espera antes de seguir cruzando.",
+			"funcion": "referencia",
+			"lugares": ["calle"],
+			"estancias": ["cruce", "calzada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["paso_cebra", "semaforo_peatones"],
+			"simbolo": {
+				"letra": "Ir",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/isleta_refugio.png",
+				"descripcion": "Huella en planta de «Isleta refugio en mitad del paso»: un óvalo alargado, de lados rectos y extremos redondos de 4,00 por 2,00 metros, con la letra «Ir»."
+			}
+		},
+		{
+			"id": "paso_elevado",
+			"nombre": "Paso de peatones sobreelevado",
+			"categoria": "trafico",
+			"subcategoria": "cruces_pasos",
+			"etiquetas": ["paso elevado", "paso sobreelevado", "lomo de asno", "paso a nivel de acera", "plataforma de cruce"],
+			"descripcion": "La calzada sube en rampa hasta la altura de la acera y el paso queda a nivel: no hay bordillo que bajar. Por eso cuesta saber dónde acaba la acera; lo marcan las franjas de botones de cada lado. Los coches frenan y suenan al subir la rampa.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.125, 0.0], [0.875, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 4.0, 6.0],
+				"fondo": [5.0, 7.0, 12.0],
+				"alto": [0.05, 0.1, 0.15]
+			},
+			"colocacion": ["calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "asfalto",
+			"aviso": "Paso elevado: estás en la calzada aunque no haya bordillo.",
+			"funcion": "referencia",
+			"lugares": ["calle"],
+			"estancias": ["cruce", "calzada"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["pavimento_botones", "paso_cebra"],
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/paso_elevado.png",
+				"descripcion": "Huella en planta de «Paso de peatones sobreelevado»: un trapecio, más estrecho por detrás de 4,00 por 7,00 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "carril_bici",
+			"nombre": "Carril bici por la acera",
+			"categoria": "trafico",
+			"subcategoria": "carril_bici_balizas",
+			"etiquetas": ["carril bici", "ciclovía", "bidegorri", "acera bici"],
+			"descripcion": "Franja de la acera reservada a las bicicletas, de asfalto más liso que las baldosas y a veces separada por un bordillo bajo o una línea en relieve. Las bicis y los patinetes pasan rápido y casi sin ruido: crúzala recto y sin pararte en ella.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 2.5],
+				"fondo": [3.0, 10.0, 30.0],
+				"alto": [0.002, 0.003, 0.005]
+			},
+			"variantes": [
+				{
+					"id": "un_sentido",
+					"nombre": "De un sentido",
+					"ancho": 1.2,
+					"fondo": 10.0,
+					"alto": 0.003
+				},
+				{
+					"id": "doble_sentido",
+					"nombre": "De doble sentido",
+					"ancho": 2.4,
+					"fondo": 10.0,
+					"alto": 0.003
+				}
+			],
+			"colocacion": ["acera", "calzada"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "asfalto",
+			"aviso": "Carril bici: pueden pasar bicicletas rápidas y silenciosas.",
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["baliza_flexible"],
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/carril_bici.png",
+				"descripcion": "Huella en planta de «Carril bici por la acera»: un rectángulo de 2,00 por 10,00 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "baliza_flexible",
+			"nombre": "Baliza cilíndrica flexible",
+			"categoria": "trafico",
+			"subcategoria": "carril_bici_balizas",
+			"etiquetas": ["baliza flexible", "hito cilíndrico", "pivote de plástico", "bolardo flexible"],
+			"descripcion": "Poste de plástico blando y fino que se dobla al empujarlo y vuelve a ponerse derecho. Separa el carril bici o cierra el paso a los coches, a menudo en fila. Al golpearlo con el bastón suena hueco y cede.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.08, 0.1, 0.2],
+				"fondo": [0.08, 0.1, 0.2],
+				"alto": [0.45, 0.75, 1.0]
+			},
+			"colocacion": ["calzada", "acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle"],
+			"estancias": ["calzada", "acera", "cruce"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["carril_bici"],
+			"simbolo": {
+				"letra": "Bf",
+				"color": "#B03A2E"
+			},
+			"imagen": {
+				"fichero": "imagenes/baliza_flexible.png",
+				"descripcion": "Huella en planta de «Baliza cilíndrica flexible»: un círculo de 0,10 por 0,10 metros, con la letra «Bf»."
+			}
+		},
+		{
+			"id": "dispensador_bolsas_perro",
+			"nombre": "Dispensador de bolsas para perros",
+			"categoria": "residuos",
+			"subcategoria": "papeleras",
+			"etiquetas": ["dispensador de bolsas", "sanecan", "bolsas para perros", "caca de perro", "papelera canina"],
+			"descripcion": "Poste fino con una caja arriba, a la altura del pecho, de la que se tira de una bolsa; debajo suele colgar una papelerita. Está junto a farolas, alcorques y entradas de parque.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [1.0, 1.2, 1.4]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "cal_coger_bolsa",
+					"nombre": "Coger una bolsa",
+					"sonido": "sonidos/papel.flac"
+				},
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro"
+				}
+			],
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["papelera"],
+			"simbolo": {
+				"letra": "Db",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/dispensador_bolsas_perro.png",
+				"descripcion": "Huella en planta de «Dispensador de bolsas para perros»: un rectángulo de 0,30 por 0,20 metros, con la letra «Db»."
+			}
+		},
+		{
+			"id": "cercado_contenedores",
+			"nombre": "Cercado de contenedores",
+			"categoria": "residuos",
+			"subcategoria": "contenedores_calle",
+			"etiquetas": ["cercado de contenedores", "recinto de basuras", "ocultacontenedores", "caseta de contenedores"],
+			"descripcion": "Recinto de lamas de madera o de chapa que esconde los contenedores en fila. Desde la acera es una pared lisa a la altura del pecho; por el lado de la calzada está abierto. Huele a basura y se oyen las tapas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.96, 1.0], [0.96, 0.06], [0.04, 0.06], [0.04, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.5, 4.0, 8.0],
+				"fondo": [1.5, 1.8, 2.5],
+				"alto": [1.2, 1.5, 1.8]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["contenedor_resto", "contenedor_envases", "contenedor_papel"],
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/cercado_contenedores.png",
+				"descripcion": "Huella en planta de «Cercado de contenedores»: una U abierta por delante de 4,00 por 1,80 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "contenedor_soterrado",
+			"nombre": "Buzón de contenedor soterrado",
+			"categoria": "residuos",
+			"subcategoria": "contenedores_calle",
+			"etiquetas": ["contenedor soterrado", "buzón soterrado", "contenedor enterrado", "isla de contenedores"],
+			"descripcion": "Columna de metal, de la cintura al pecho, con una trampilla que se abre tirando del asa. La basura cae a un contenedor enterrado y se oye caer muy hondo. Alrededor, el suelo es una plataforma de chapa que suena distinta al pisarla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.5, 0.7, 0.9],
+				"alto": [1.0, 1.15, 1.3]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/calle_soterrado_caida.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/trampilla_buzon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/trampilla_buzon.flac"
+				},
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "sonidos/calle_soterrado_caida.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_soterrado.png",
+				"descripcion": "Huella en planta de «Buzón de contenedor soterrado»: un rectángulo de 0,80 por 0,70 metros, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "contenedor_ropa",
+			"nombre": "Contenedor de ropa usada",
+			"categoria": "residuos",
+			"subcategoria": "reciclaje",
+			"etiquetas": ["contenedor de ropa", "ropa usada", "textil", "calzado usado"],
+			"descripcion": "Caja de chapa más alta que una persona, con una tolva basculante a la altura del pecho: se tira del asa, se deja la bolsa de ropa y se suelta. Suena a chapa hueca al golpearla.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.5],
+				"fondo": [0.9, 1.0, 1.2],
+				"alto": [1.8, 2.0, 2.2]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "sonidos/trampilla_buzon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["contenedor_papel"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_ropa.png",
+				"descripcion": "Huella en planta de «Contenedor de ropa usada»: un rectángulo de 1,20 por 1,00 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "contenedor_aceite",
+			"nombre": "Contenedor de aceite usado",
+			"categoria": "residuos",
+			"subcategoria": "reciclaje",
+			"etiquetas": ["contenedor de aceite", "aceite usado", "aceite de cocina", "contenedor naranja"],
+			"descripcion": "Contenedor más pequeño que los de basura, con una boca redonda con tapa a la altura del pecho, por donde se mete la botella de plástico cerrada con el aceite de cocinar.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 0.15], [1.0, 0.85], [0.85, 1.0], [0.15, 1.0], [0.0, 0.85], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [1.2, 1.4, 1.6]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "oficina_y_comercio:garrafa.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["contenedor_envases"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_aceite.png",
+				"descripcion": "Huella en planta de «Contenedor de aceite usado»: un rectángulo con las esquinas cortadas de 0,70 por 0,60 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "contenedor_pilas",
+			"nombre": "Contenedor de pilas en poste",
+			"categoria": "residuos",
+			"subcategoria": "reciclaje",
+			"etiquetas": ["contenedor de pilas", "pilas usadas", "tubo de pilas", "baterías"],
+			"descripcion": "Tubo de plástico del tamaño de un termo, sujeto a una farola o a un poste a la altura del pecho, con una ranura arriba. Sobresale poco y el bastón no lo encuentra. Al echar una pila suena al caer sobre las demás.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.35],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"colocacion": ["acera", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.8,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "juego:monedas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "residuos",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"relacionados": ["farola"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/contenedor_pilas.png",
+				"descripcion": "Huella en planta de «Contenedor de pilas en poste»: un círculo de 0,25 por 0,20 metros, colgado a 0,80 metros del suelo, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "rejilla_alcorque",
+			"nombre": "Rejilla de alcorque",
+			"categoria": "verde",
+			"subcategoria": "arboles_alcorques",
+			"etiquetas": ["rejilla de alcorque", "alcorque con rejilla", "cubrealcorque", "rejilla de árbol"],
+			"descripcion": "Rejilla de hierro cuadrada a ras de la acera alrededor de un árbol, con un agujero redondo en el centro para el tronco. Se pisa: suena a metal y la punta del bastón se mete en las ranuras. El tronco aparece en el centro.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.8],
+				"fondo": [0.8, 1.2, 1.8],
+				"alto": [0.01, 0.02, 0.04]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Rejilla de alcorque: en el centro está el tronco del árbol.",
+			"funcion": "referencia",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["alcorque"],
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/rejilla_alcorque.png",
+				"descripcion": "Huella en planta de «Rejilla de alcorque»: un rectángulo de 1,20 por 1,20 metros, con la letra «Ra»."
+			}
+		},
+		{
+			"id": "parterre_bordillo",
+			"nombre": "Parterre con bordillo bajo",
+			"categoria": "verde",
+			"subcategoria": "jardineras_setos",
+			"etiquetas": ["parterre", "arriate", "macizo de flores", "césped", "cuadro de jardín"],
+			"descripcion": "Trozo de césped o de flores rodeado por un bordillo de un palmo. El bordillo se tropieza fácil y, pasado, el pie se hunde en tierra blanda que huele a hierba mojada.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.994, 0.873], [0.974, 0.938], [0.938, 0.974], [0.873, 0.994], [0.5, 1.0], [0.127, 0.994], [0.062, 0.974], [0.026, 0.938], [0.006, 0.873], [0.0, 0.5], [0.006, 0.127], [0.026, 0.062], [0.062, 0.026], [0.127, 0.006], [0.5, 0.0], [0.873, 0.006], [0.938, 0.026], [0.974, 0.062], [0.994, 0.127]]
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 10.0],
+				"fondo": [0.6, 1.5, 4.0],
+				"alto": [0.05, 0.1, 0.2]
+			},
+			"variantes": [
+				{
+					"id": "cuadrado",
+					"nombre": "Cuadrado",
+					"ancho": 1.5,
+					"fondo": 1.5,
+					"alto": 0.1
+				},
+				{
+					"id": "franja",
+					"nombre": "Franja larga",
+					"ancho": 8.0,
+					"fondo": 1.0,
+					"alto": 0.1
+				}
+			],
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "planta",
+			"sonidos": {
+				"golpe": "exterior/bordillo"
+			},
+			"contenedor": false,
+			"suelo": "hierba",
+			"aviso": "Parterre: un bordillo bajo y luego tierra blanda.",
+			"funcion": "vegetacion",
+			"lugares": ["calle", "parque"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["valla_arquillos"],
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/parterre_bordillo.png",
+				"descripcion": "Huella en planta de «Parterre con bordillo bajo»: un rectángulo de esquinas redondeadas de 3,00 por 1,50 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "valla_arquillos",
+			"nombre": "Valla baja de arquillos",
+			"categoria": "verde",
+			"subcategoria": "jardineras_setos",
+			"etiquetas": ["valla de arquillos", "arquillos", "cerca baja", "bordura de jardín", "valla de césped"],
+			"descripcion": "Arcos de varilla de hierro clavados uno tras otro en el borde del césped, a la altura del tobillo o de la espinilla. Son muy finos: el bastón pasa a menudo por encima y el pie se engancha.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 6.0],
+				"fondo": [0.02, 0.03, 0.05],
+				"alto": [0.2, 0.35, 0.5]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle", "parque", "jardin"],
+			"estancias": ["acera", "plaza", "jardin"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["parterre_bordillo"],
+			"simbolo": {
+				"letra": "Va",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/valla_arquillos.png",
+				"descripcion": "Huella en planta de «Valla baja de arquillos»: un rectángulo de 2,00 por 0,03 metros, con la letra «Va»."
+			}
+		},
+		{
+			"id": "lavadero_publico",
+			"nombre": "Lavadero público",
+			"categoria": "verde",
+			"subcategoria": "fuentes_agua",
+			"etiquetas": ["lavadero", "lavadero público", "pila de lavar", "fuente lavadero"],
+			"descripcion": "Pila larga de piedra a la altura de la cintura, con los bordes inclinados para frotar la ropa y un caño que no deja de correr, bajo un tejado sobre columnas. El agua se oye desde la plaza y el borde siempre está mojado.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.987, 0.863], [0.945, 0.945], [0.863, 0.987], [0.5, 1.0], [0.137, 0.987], [0.055, 0.945], [0.013, 0.863], [0.0, 0.5], [0.013, 0.137], [0.055, 0.055], [0.137, 0.013], [0.5, 0.0], [0.863, 0.013], [0.945, 0.055], [0.987, 0.137]]
+			},
+			"medidas": {
+				"ancho": [2.0, 4.0, 8.0],
+				"fondo": [1.0, 1.5, 2.5],
+				"alto": [0.7, 0.8, 0.9]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/fuente_agua",
+					"volumen": 0.4,
+					"radio": 12
+				}
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/chorro.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["calle", "naturaleza"],
+			"estancias": ["plaza"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "ocasional",
+			"relacionados": ["fuente_ornamental"],
+			"simbolo": {
+				"letra": "Lp",
+				"color": "#27AE60"
+			},
+			"imagen": {
+				"fichero": "imagenes/lavadero_publico.png",
+				"descripcion": "Huella en planta de «Lavadero público»: un rectángulo de esquinas redondeadas de 4,00 por 1,50 metros, con la letra «Lp»."
+			}
+		},
+		{
+			"id": "quiosco_flores",
+			"nombre": "Quiosco de flores",
+			"categoria": "terraza",
+			"subcategoria": "quioscos_puestos",
+			"etiquetas": ["quiosco de flores", "floristería de calle", "puesto de flores", "flores"],
+			"descripcion": "Puesto fijo de flores: una caseta con cubos de agua y ramos en gradas que salen hacia la acera, a la altura de la rodilla y de la cadera. Huele mucho a flores y el suelo de alrededor suele estar mojado.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [0.85, 0.55], [1.0, 0.6], [1.0, 1.0], [0.0, 1.0], [0.0, 0.6], [0.15, 0.55]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.0, 4.0],
+				"fondo": [1.5, 2.0, 2.5],
+				"alto": [2.4, 2.6, 2.8]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "comprar",
+					"nombre": "Comprar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "alto",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "ocasional",
+			"relacionados": ["quiosco"],
+			"simbolo": {
+				"letra": "Qf",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/quiosco_flores.png",
+				"descripcion": "Huella en planta de «Quiosco de flores»: una caseta detrás y una grada de cubos más ancha que sale hacia delante de 3,00 por 2,00 metros, con la letra «Qf»."
+			}
+		},
+		{
+			"id": "expositor_postales",
+			"nombre": "Expositor giratorio de postales",
+			"categoria": "terraza",
+			"subcategoria": "comercio_acera",
+			"etiquetas": ["expositor giratorio", "postales", "revistero giratorio", "torre de recuerdos"],
+			"descripcion": "Torre de rejilla metálica con postales, imanes o gafas de sol, plantada a la puerta de una tienda sobre una base redonda y pesada. Gira al tocarla con un chirrido y las tarjetas tiemblan.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.5, 1.7, 1.9]
+			},
+			"colocacion": ["acera", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar",
+					"sonido": "sonidos/calle_expositor_giro.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "expositor",
+			"lugares": ["calle", "tienda"],
+			"estancias": ["acera"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ep",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/expositor_postales.png",
+				"descripcion": "Huella en planta de «Expositor giratorio de postales»: un octógono de 0,50 por 0,50 metros, con la letra «Ep»."
+			}
+		},
+		{
+			"id": "reja_ventana",
+			"nombre": "Reja de ventana saliente",
+			"categoria": "suelo",
+			"subcategoria": "servicios_fachada",
+			"etiquetas": ["reja", "reja de ventana", "reja saliente", "balconcillo bajo", "ventana enrejada"],
+			"descripcion": "Reja de hierro de una ventana de planta baja que sobresale de la fachada un palmo o más, desde la cintura hasta por encima de la cabeza. El bastón, pegado a la fachada, pasa por debajo: se encuentra con la cadera o el hombro.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.15, 0.25, 0.4],
+				"alto": [1.0, 1.4, 1.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.8,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"relacionados": ["buzon_pared", "toldo_bajo"],
+			"simbolo": {
+				"letra": "Rv",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/reja_ventana.png",
+				"descripcion": "Huella en planta de «Reja de ventana saliente»: un rectángulo de 1,20 por 0,25 metros, colgado a 0,80 metros del suelo, con la letra «Rv»."
+			}
+		},
+		{
+			"id": "escaleras_calle",
+			"nombre": "Escalinata de calle con pasamanos",
+			"categoria": "suelo",
+			"subcategoria": "bordillos_desniveles",
+			"etiquetas": ["escalinata", "escaleras de la calle", "escalones", "cuesta con escaleras", "peldaños"],
+			"descripcion": "Tramo de escalones de piedra que salva una cuesta de la calle, con pasamanos a los lados o en el centro. Arriba y abajo hay una franja de botones; los peldaños son anchos y a veces irregulares.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 8.0],
+				"fondo": [1.0, 2.4, 8.0],
+				"alto": [0.5, 1.36, 3.0]
+			},
+			"variantes": [
+				{
+					"id": "cuatro_peldanos",
+					"nombre": "Cuatro peldaños",
+					"ancho": 3.0,
+					"fondo": 1.2,
+					"alto": 0.68
+				},
+				{
+					"id": "ocho_peldanos",
+					"nombre": "Ocho peldaños",
+					"ancho": 3.0,
+					"fondo": 2.4,
+					"alto": 1.36
+				},
+				{
+					"id": "doce_peldanos",
+					"nombre": "Doce peldaños",
+					"ancho": 3.0,
+					"fondo": 3.6,
+					"alto": 2.04
+				}
+			],
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "exterior/bordillo"
+			},
+			"contenedor": false,
+			"aviso": "Escalinata: tramo de escalones con pasamanos.",
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["pavimento_botones"],
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/escaleras_calle.png",
+				"descripcion": "Huella en planta de «Escalinata de calle con pasamanos»: un rectángulo de 3,00 por 2,40 metros, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "desnivel_lateral",
+			"nombre": "Borde de acera elevada sin protección",
+			"categoria": "suelo",
+			"subcategoria": "bordillos_desniveles",
+			"etiquetas": ["desnivel", "borde sin protección", "caída lateral", "acera elevada", "muro sin barandilla"],
+			"descripcion": "Tramo de acera más alto que la calzada o que un solar de al lado, sin barandilla: el suelo se corta de golpe medio metro o más. Se nota por el cambio de eco del bastón y por el aire; ve pegado a la fachada.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [2.0, 6.0, 20.0],
+				"fondo": [0.1, 0.2, 0.3],
+				"alto": [0.005, 0.01, 0.02]
+			},
+			"colocacion": ["acera", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "exterior/bordillo"
+			},
+			"contenedor": false,
+			"aviso": "Borde sin protección: el suelo cae a un lado.",
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["acera"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Dl",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/desnivel_lateral.png",
+				"descripcion": "Huella en planta de «Borde de acera elevada sin protección»: un rectángulo de 6,00 por 0,20 metros, con la letra «Dl»."
+			}
+		},
+		{
+			"id": "rigola_plataforma_unica",
+			"nombre": "Rigola de calle de plataforma única",
+			"categoria": "suelo",
+			"subcategoria": "pavimentos_guias",
+			"etiquetas": ["rigola", "plataforma única", "calle de coexistencia", "canaleta de adoquines", "límite de calzada"],
+			"descripcion": "En las calles sin bordillo, donde acera y calzada están a la misma altura, una franja de adoquines o una canaleta un poco hundida marca por dónde pasan los coches. Se nota con el pie y con el bastón: no la cruces sin escuchar.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [3.0, 10.0, 30.0],
+				"alto": [0.005, 0.01, 0.03]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "adoquin",
+			"aviso": "Rigola: al otro lado pueden pasar coches.",
+			"funcion": "referencia",
+			"lugares": ["calle"],
+			"estancias": ["acera", "calzada"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["pavimento_rayas"],
+			"simbolo": {
+				"letra": "Rp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/rigola_plataforma_unica.png",
+				"descripcion": "Huella en planta de «Rigola de calle de plataforma única»: un rectángulo de 0,40 por 10,00 metros, con la letra «Rp»."
+			}
+		},
+		{
+			"id": "adoquinado",
+			"nombre": "Tramo de adoquín irregular",
+			"categoria": "suelo",
+			"subcategoria": "pavimentos_guias",
+			"etiquetas": ["adoquines", "adoquinado", "empedrado", "cantos rodados", "casco antiguo"],
+			"descripcion": "Zona de adoquines o de cantos rodados con juntas anchas. El bastón rebota y se engancha en las juntas, y los pasos suenan distintos: avisa de que entras en una plaza o en un casco antiguo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 3.0, 10.0],
+				"fondo": [1.0, 5.0, 20.0],
+				"alto": [0.01, 0.02, 0.04]
+			},
+			"colocacion": ["acera", "calzada", "suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "adoquin",
+			"funcion": "referencia",
+			"lugares": ["calle"],
+			"estancias": ["acera", "plaza", "calzada"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ad",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/adoquinado.png",
+				"descripcion": "Huella en planta de «Tramo de adoquín irregular»: un rectángulo de 3,00 por 5,00 metros, con la letra «Ad»."
+			}
+		},
+		{
+			"id": "monumento_plaza",
+			"nombre": "Monumento sobre pedestal escalonado",
+			"categoria": "plaza",
+			"subcategoria": "plaza_monumentos",
+			"etiquetas": ["monumento", "estatua", "pedestal", "columna conmemorativa", "escultura de plaza"],
+			"descripcion": "Estatua o columna conmemorativa sobre un pedestal de piedra con dos o tres escalones alrededor y, a veces, una verja baja. Los escalones aparecen antes que el pedestal: el bastón tropieza con el primero. Suele estar en el centro de la plaza.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [1.0, 0.15], [1.0, 0.85], [0.85, 1.0], [0.15, 1.0], [0.0, 0.85], [0.0, 0.15]]
+			},
+			"medidas": {
+				"ancho": [2.0, 3.5, 6.0],
+				"fondo": [2.0, 3.5, 6.0],
+				"alto": [3.0, 5.0, 10.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["calle", "parque"],
+			"estancias": ["plaza"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["fuente_ornamental", "bancos_rotonda"],
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#8E44AD"
+			},
+			"imagen": {
+				"fichero": "imagenes/monumento_plaza.png",
+				"descripcion": "Huella en planta de «Monumento sobre pedestal escalonado»: un rectángulo con las esquinas cortadas de 3,50 por 3,50 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "pilar_soportal",
+			"nombre": "Pilar de soportal",
+			"categoria": "plaza",
+			"subcategoria": "plaza_monumentos",
+			"etiquetas": ["soportal", "pilar", "columna", "porche", "arcada", "porticada"],
+			"descripcion": "Pilar de piedra o columna de un soportal, cada pocos metros, entre el paso cubierto (con la fachada a un lado) y la plaza. Bajo los soportales el eco del techo cambia y la lluvia no se oye caer.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.1], [1.0, 0.9], [0.9, 1.0], [0.1, 1.0], [0.0, 0.9], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.8],
+				"fondo": [0.4, 0.5, 0.8],
+				"alto": [3.0, 3.5, 5.0]
+			},
+			"variantes": [
+				{
+					"id": "cuadrado",
+					"nombre": "Pilar cuadrado",
+					"ancho": 0.5,
+					"fondo": 0.5,
+					"alto": 3.5
+				},
+				{
+					"id": "grueso",
+					"nombre": "Pilar grueso de piedra",
+					"ancho": 0.8,
+					"fondo": 0.8,
+					"alto": 3.5
+				}
+			],
+			"colocacion": ["acera", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["calle"],
+			"estancias": ["plaza", "acera"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ps",
+				"color": "#8E44AD"
+			},
+			"imagen": {
+				"fichero": "imagenes/pilar_soportal.png",
+				"descripcion": "Huella en planta de «Pilar de soportal»: un rectángulo con las esquinas cortadas de 0,50 por 0,50 metros, con la letra «Ps»."
+			}
+		},
+		{
+			"id": "templete_musica",
+			"nombre": "Templete de música",
+			"categoria": "plaza",
+			"subcategoria": "plaza_reunion",
+			"etiquetas": ["templete", "quiosco de música", "kiosco de la música", "glorieta"],
+			"descripcion": "Plataforma octogonal elevada hasta el pecho, con barandilla, columnas finas y tejado, a la que se sube por una escalera. Rodeándola se sigue su zócalo de piedra. En fiestas hay banda de música.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.707], [0.707, 1.0], [0.293, 1.0], [0.0, 0.707], [0.0, 0.293], [0.293, 0.0], [0.707, 0.0], [1.0, 0.293]]
+			},
+			"medidas": {
+				"ancho": [5.0, 7.0, 10.0],
+				"fondo": [5.0, 7.0, 10.0],
+				"alto": [4.0, 5.5, 7.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "escalera/subir"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse",
+					"de": "ocupado",
+					"a": "libre",
+					"sonido": "escalera/bajar"
+				}
+			],
+			"contenedor": true,
+			"funcion": "estructura",
+			"lugares": ["calle", "parque"],
+			"estancias": ["plaza"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["bancos_rotonda"],
+			"simbolo": {
+				"letra": "Tm",
+				"color": "#8E44AD"
+			},
+			"imagen": {
+				"fichero": "imagenes/templete_musica.png",
+				"descripcion": "Huella en planta de «Templete de música»: un octógono de 7,00 por 7,00 metros, con la letra «Tm»."
+			}
+		},
+		{
+			"id": "graderio_plaza",
+			"nombre": "Graderío de piedra",
+			"categoria": "plaza",
+			"subcategoria": "plaza_reunion",
+			"etiquetas": ["graderío", "gradas", "anfiteatro", "escalones para sentarse"],
+			"descripcion": "Escalones anchos y curvos de piedra, como un pequeño anfiteatro, para sentarse a mirar la plaza o un escenario. Cada escalón llega a la rodilla y es profundo; bajarlos sin pasamanos cuesta.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.425], [0.076, 0.622], [0.168, 0.783], [0.271, 0.902], [0.384, 0.975], [0.5, 1.0], [0.616, 0.975], [0.729, 0.902], [0.832, 0.783], [0.924, 0.622], [1.0, 0.425], [0.725, 0.0], [0.691, 0.088], [0.65, 0.161], [0.603, 0.214], [0.552, 0.248], [0.5, 0.259], [0.448, 0.248], [0.397, 0.214], [0.35, 0.161], [0.309, 0.088], [0.275, 0.0]]
+			},
+			"medidas": {
+				"ancho": [3.0, 6.0, 12.0],
+				"fondo": [1.5, 2.5, 4.0],
+				"alto": [0.45, 0.9, 1.4]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["calle", "parque"],
+			"estancias": ["plaza"],
+			"obstaculo": "medio",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Gp",
+				"color": "#8E44AD"
+			},
+			"imagen": {
+				"fichero": "imagenes/graderio_plaza.png",
+				"descripcion": "Huella en planta de «Graderío de piedra»: una banda curva que abomba hacia delante de 6,00 por 2,50 metros, con la letra «Gp»."
+			}
+		},
+		{
+			"id": "tiovivo",
+			"nombre": "Tiovivo",
+			"categoria": "plaza",
+			"subcategoria": "plaza_reunion",
+			"etiquetas": ["tiovivo", "carrusel", "caballitos", "atracción de feria"],
+			"descripcion": "Atracción redonda con caballitos y cochecitos que suben y bajan sobre una plataforma giratoria, bajo una carpa. En marcha suena una música de organillo que se oye desde lejos: buena referencia en ferias y plazas. El borde tiene un escalón y una barandilla con la entrada.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.634], [0.866, 0.866], [0.634, 1.0], [0.366, 1.0], [0.134, 0.866], [0.0, 0.634], [0.0, 0.366], [0.134, 0.134], [0.366, 0.0], [0.634, 0.0], [0.866, 0.134], [1.0, 0.366]]
+			},
+			"medidas": {
+				"ancho": [5.0, 8.0, 12.0],
+				"fondo": [5.0, 8.0, 12.0],
+				"alto": [3.5, 4.5, 6.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:calle_tiovivo_organillo.flac",
+					"volumen": 0.55,
+					"radio": 25,
+					"estado": "girando"
+				}
+			},
+			"estados": ["parado", "girando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "parado",
+					"a": "girando",
+					"sonido": "comun:carrusel_giro.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "girando",
+					"a": "parado"
+				},
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["calle", "parque", "ocio"],
+			"estancias": ["plaza"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ti",
+				"color": "#8E44AD"
+			},
+			"imagen": {
+				"fichero": "imagenes/tiovivo.png",
+				"descripcion": "Huella en planta de «Tiovivo»: un círculo de doce lados de 8,00 por 8,00 metros, con la letra «Ti»."
+			}
+		}
+	]
+}

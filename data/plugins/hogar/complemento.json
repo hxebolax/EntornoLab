@@ -1,0 +1,6898 @@
+{
+	"formato": 1,
+	"id": "hogar",
+	"nombre": "Hogar",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Muebles y objetos de una vivienda: salón, cocina, dormitorio, baño, entrada y los trastos que suelen quedar por medio.",
+	"depende_de": ["comun", "calle", "transporte", "juego"],
+	"categorias": {
+		"salon": "Salón",
+		"cocina": "Cocina",
+		"dormitorio": "Dormitorio",
+		"bano": "Baño",
+		"entrada": "Entrada y pasillo",
+		"trastos": "Trastos y obstáculos de casa",
+		"lavadero": "Lavadero, plancha y costura",
+		"terraza": "Terraza, balcón y jardín",
+		"infantil": "Habitación infantil"
+	},
+	"subcategorias": {
+		"asientos_salon": "Sofás y sillones",
+		"mesas_salon": "Mesas de salón y comedor",
+		"almacenaje_salon": "Muebles de almacenaje",
+		"luz_clima_salon": "Luz, calor y aire",
+		"decoracion_salon": "Alfombras, plantas, relojes y mascotas",
+		"musica_salon": "Pianos",
+		"muebles_cocina": "Muebles de cocina",
+		"electro_cocina": "Electrodomésticos de cocina",
+		"fregadero_basura": "Fregadero y basura",
+		"mesas_asientos_cocina": "Mesa y asientos de cocina",
+		"camas": "Camas y cunas",
+		"armarios_dormitorio": "Armarios, cómodas y mesillas",
+		"estudio": "Rincón de estudio",
+		"sanitarios_bano": "Sanitarios, bañera y ducha",
+		"muebles_bano": "Muebles y accesorios de baño",
+		"colada": "Lavar, tender y planchar",
+		"muebles_entrada": "Muebles de la entrada",
+		"pared_entrada": "Colgado en la pared",
+		"suelo_escaleras": "Suelo y escaleras",
+		"sueltos": "Cosas que quedan por medio",
+		"puertas": "Puertas y cortinas de paso",
+		"almacen_lavadero": "Armarios y congelador",
+		"instalaciones": "Caldera y agua caliente",
+		"costura": "Costura",
+		"descanso_terraza": "Hamacas y sillones colgantes",
+		"barbacoa_lena": "Barbacoa y leña",
+		"jardin_terraza": "Jardín, piscina y almacenaje exterior",
+		"camas_infantiles": "Camas de niños y cunas",
+		"cuidado_bebe": "Baño y juego del bebé"
+	},
+	"estados": {
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"apagado": "Apagado",
+		"encendido": "Encendido",
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"funcionando": "Funcionando",
+		"desplegado": "Desplegado",
+		"plegado": "Plegado"
+	},
+	"objetos": [
+		{
+			"id": "sofa",
+			"nombre": "Sofá",
+			"categoria": "salon",
+			"subcategoria": "asientos_salon",
+			"etiquetas": ["sofa", "sofá", "tresillo", "diván"],
+			"descripcion": "Sofá de tela, blando y bajo. Al tocarlo cede; se rodea por los lados.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.4, 2.0, 2.6],
+				"fondo": [0.8, 0.9, 1.05],
+				"alto": [0.75, 0.85, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 1.5,
+					"fondo": 0.9,
+					"alto": 0.85
+				},
+				{
+					"id": "tres_plazas",
+					"nombre": "De tres plazas",
+					"ancho": 2.0,
+					"fondo": 0.9,
+					"alto": 0.85
+				},
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De cuatro plazas",
+					"ancho": 2.5,
+					"fondo": 0.95,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["salon"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_centro", "alfombra", "mueble_tv"],
+			"simbolo": {
+				"letra": "So",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/sofa.png",
+				"descripcion": "Huella en planta de «Sofá»: un rectángulo de 2,00 por 0,90 metros, con la letra «So»."
+			}
+		},
+		{
+			"id": "sofa_ele",
+			"nombre": "Sofá en ele",
+			"categoria": "salon",
+			"subcategoria": "asientos_salon",
+			"etiquetas": ["sofá rinconera", "rinconera", "chaise longue", "sofá en L"],
+			"descripcion": "Sofá con un brazo largo que sale hacia delante por un lado, como una ele. Ocupa el rincón y deja un hueco delante.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.55], [0.37, 0.55], [0.37, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.2, 2.6, 3.2],
+				"fondo": [1.5, 1.7, 2.3],
+				"alto": [0.75, 0.85, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "chaise_longue",
+					"nombre": "Con chaise longue",
+					"ancho": 2.6,
+					"fondo": 1.7,
+					"alto": 0.85
+				},
+				{
+					"id": "rinconera",
+					"nombre": "Rinconera grande",
+					"ancho": 3.0,
+					"fondo": 2.2,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["salon"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["mesa_centro", "alfombra", "mueble_tv"],
+			"simbolo": {
+				"letra": "Se",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/sofa_ele.png",
+				"descripcion": "Huella en planta de «Sofá en ele»: una ele de 2,60 por 1,70 metros, con la letra «Se»."
+			}
+		},
+		{
+			"id": "sillon",
+			"nombre": "Sillón",
+			"categoria": "salon",
+			"subcategoria": "asientos_salon",
+			"etiquetas": ["sillón", "sillon", "butaca", "orejero"],
+			"descripcion": "Sillón de una plaza con brazos, blando.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.85, 1.0],
+				"fondo": [0.75, 0.85, 0.95],
+				"alto": [0.8, 0.95, 1.1]
+			},
+			"colocacion": ["suelo", "esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["lampara_pie", "puf_reposapies"],
+			"simbolo": {
+				"letra": "Si",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon.png",
+				"descripcion": "Huella en planta de «Sillón»: un rectángulo de 0,85 por 0,85 metros, con la letra «Si»."
+			}
+		},
+		{
+			"id": "mesa_centro",
+			"nombre": "Mesa de centro",
+			"categoria": "salon",
+			"subcategoria": "mesas_salon",
+			"etiquetas": ["mesa baja", "mesita de salón"],
+			"descripcion": "Mesa baja delante del sofá, a la altura de la rodilla: el bastón la encuentra, la mano no.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.1, 1.3],
+				"fondo": [0.4, 0.6, 0.8],
+				"alto": [0.35, 0.42, 0.5]
+			},
+			"variantes": [
+				{
+					"id": "pequena",
+					"nombre": "Pequeña",
+					"ancho": 0.6,
+					"fondo": 0.4,
+					"alto": 0.42
+				},
+				{
+					"id": "cuadrada",
+					"nombre": "Cuadrada",
+					"ancho": 0.8,
+					"fondo": 0.8,
+					"alto": 0.4
+				},
+				{
+					"id": "rectangular",
+					"nombre": "Rectangular",
+					"ancho": 1.1,
+					"fondo": 0.6,
+					"alto": 0.42
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["salon"],
+			"obstaculo": "bajo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["sofa", "alfombra"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_centro.png",
+				"descripcion": "Huella en planta de «Mesa de centro»: un rectángulo de 1,10 por 0,60 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "mesa_redonda",
+			"nombre": "Mesa redonda",
+			"categoria": "salon",
+			"subcategoria": "mesas_salon",
+			"etiquetas": ["mesa camilla", "mesa circular"],
+			"descripcion": "Mesa redonda de comedor, de una sola pata central. Se rodea sin esquinas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.1, 1.5],
+				"fondo": [0.8, 1.1, 1.5],
+				"alto": [0.72, 0.75, 0.78]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 0.8,
+					"fondo": 0.8,
+					"alto": 0.75
+				},
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De cuatro plazas",
+					"ancho": 1.1,
+					"fondo": 1.1,
+					"alto": 0.75
+				},
+				{
+					"id": "seis_plazas",
+					"nombre": "De seis plazas",
+					"ancho": 1.4,
+					"fondo": 1.4,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "comedor", "cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla"],
+			"simbolo": {
+				"letra": "Mr",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_redonda.png",
+				"descripcion": "Huella en planta de «Mesa redonda»: un círculo de 1,10 por 1,10 metros, con la letra «Mr»."
+			}
+		},
+		{
+			"id": "mesa_comedor",
+			"nombre": "Mesa de comedor",
+			"categoria": "salon",
+			"subcategoria": "mesas_salon",
+			"etiquetas": ["comedor", "mesa grande"],
+			"descripcion": "Mesa grande y alta de comedor, con las sillas alrededor.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.4],
+				"fondo": [0.8, 0.9, 1.1],
+				"alto": [0.72, 0.75, 0.78]
+			},
+			"variantes": [
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De cuatro plazas",
+					"ancho": 1.2,
+					"fondo": 0.8,
+					"alto": 0.75
+				},
+				{
+					"id": "seis_plazas",
+					"nombre": "De seis plazas",
+					"ancho": 1.6,
+					"fondo": 0.9,
+					"alto": 0.75
+				},
+				{
+					"id": "ocho_plazas",
+					"nombre": "De ocho plazas",
+					"ancho": 2.2,
+					"fondo": 1.0,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "comedor"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["silla", "lampara_colgante", "aparador"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_comedor.png",
+				"descripcion": "Huella en planta de «Mesa de comedor»: un rectángulo de 1,60 por 0,90 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "mueble_tv",
+			"nombre": "Mueble de televisión con televisor",
+			"categoria": "salon",
+			"subcategoria": "almacenaje_salon",
+			"etiquetas": ["television", "televisión", "televisor", "tele", "mueble de television"],
+			"descripcion": "Mueble bajo y alargado con el televisor encima. Encendido, se oyen voces y música: sirve para orientarse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.6, 2.2],
+				"fondo": [0.35, 0.42, 0.5],
+				"alto": [0.9, 1.2, 1.6]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "Pequeño",
+					"ancho": 1.0,
+					"fondo": 0.4,
+					"alto": 1.0
+				},
+				{
+					"id": "mediano",
+					"nombre": "Mediano",
+					"ancho": 1.6,
+					"fondo": 0.42,
+					"alto": 1.2
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 2.2,
+					"fondo": 0.45,
+					"alto": 1.4
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "fuente/television",
+					"volumen": 0.45,
+					"radio": 8,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["salon"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["sofa", "mesa_centro"],
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mueble_tv.png",
+				"descripcion": "Huella en planta de «Mueble de televisión con televisor»: un rectángulo de 1,60 por 0,42 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "estanteria",
+			"nombre": "Estantería",
+			"categoria": "salon",
+			"subcategoria": "almacenaje_salon",
+			"etiquetas": ["estanteria", "librería", "libreria", "estantes"],
+			"descripcion": "Estantería alta y estrecha, pegada a la pared, llena de libros.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.8, 1.2],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [1.0, 1.9, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "estrecha",
+					"nombre": "Estrecha",
+					"ancho": 0.4,
+					"fondo": 0.3,
+					"alto": 1.9
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 0.8,
+					"fondo": 0.3,
+					"alto": 1.9
+				},
+				{
+					"id": "ancha",
+					"nombre": "Ancha",
+					"ancho": 1.2,
+					"fondo": 0.35,
+					"alto": 1.9
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio", "habitacion_infantil"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Es",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/estanteria.png",
+				"descripcion": "Huella en planta de «Estantería»: un rectángulo de 0,80 por 0,30 metros, con la letra «Es»."
+			}
+		},
+		{
+			"id": "lampara_pie",
+			"nombre": "Lámpara de pie",
+			"categoria": "salon",
+			"subcategoria": "luz_clima_salon",
+			"etiquetas": ["lámpara", "lampara", "luz"],
+			"descripcion": "Lámpara de pie: una base redonda y pesada con un tubo fino. Si la empujas, se tambalea.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.35, 0.5],
+				"fondo": [0.25, 0.35, 0.5],
+				"alto": [1.4, 1.6, 1.9]
+			},
+			"colocacion": ["suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["sillon"],
+			"simbolo": {
+				"letra": "Lp",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/lampara_pie.png",
+				"descripcion": "Huella en planta de «Lámpara de pie»: un círculo de 0,35 por 0,35 metros, con la letra «Lp»."
+			}
+		},
+		{
+			"id": "alfombra",
+			"nombre": "Alfombra",
+			"categoria": "salon",
+			"subcategoria": "decoracion_salon",
+			"etiquetas": ["tapete", "moqueta suelta"],
+			"descripcion": "Alfombra: no corta el paso, pero al pisarla tus pasos suenan apagados. Sirve de referencia bajo los pies.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 2.0, 3.0],
+				"fondo": [0.5, 1.4, 2.0],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"variantes": [
+				{
+					"id": "pasillo",
+					"nombre": "De pasillo",
+					"ancho": 2.0,
+					"fondo": 0.7,
+					"alto": 0.02
+				},
+				{
+					"id": "mediana",
+					"nombre": "Mediana",
+					"ancho": 1.6,
+					"fondo": 1.2,
+					"alto": 0.02
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 2.4,
+					"fondo": 1.7,
+					"alto": 0.02
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"suelo": "alfombra",
+			"funcion": "decoracion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio", "pasillo", "habitacion_infantil"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["sofa", "mesa_centro"],
+			"simbolo": {
+				"letra": "Al",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/alfombra.png",
+				"descripcion": "Huella en planta de «Alfombra»: un rectángulo de 2,00 por 1,40 metros, con la letra «Al»."
+			}
+		},
+		{
+			"id": "piano",
+			"nombre": "Piano vertical",
+			"categoria": "salon",
+			"subcategoria": "musica_salon",
+			"etiquetas": ["piano", "piano de pared", "teclado"],
+			"descripcion": "Piano de pared: una caja alta de madera con el teclado delante. Al tocarlo suenan tres notas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.4, 1.5, 1.55],
+				"fondo": [0.55, 0.6, 0.65],
+				"alto": [1.1, 1.2, 1.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/piano.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar_nota",
+					"nombre": "Tocar una nota",
+					"sonido": "sonidos/piano.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["vivienda"],
+			"estancias": ["salon"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pi",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/piano.png",
+				"descripcion": "Huella en planta de «Piano vertical»: un rectángulo de 1,50 por 0,60 metros, con la letra «Pi»."
+			}
+		},
+		{
+			"id": "piano_cola",
+			"nombre": "Piano de cola",
+			"categoria": "salon",
+			"subcategoria": "musica_salon",
+			"etiquetas": ["piano de cola", "colín"],
+			"descripcion": "Piano de cola: el teclado recto delante y, detrás, una caja larga y curva. Ocupa mucho y se rodea despacio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 1.0], [0.0, 0.06], [0.08, 0.0], [0.34, 0.0], [0.48, 0.07], [0.6, 0.27], [0.76, 0.42], [0.93, 0.5], [1.0, 0.6], [1.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.45, 1.5, 1.6],
+				"fondo": [1.5, 1.8, 2.8],
+				"alto": [0.95, 1.0, 1.05]
+			},
+			"variantes": [
+				{
+					"id": "colin",
+					"nombre": "Colín",
+					"ancho": 1.5,
+					"fondo": 1.5,
+					"alto": 1.0
+				},
+				{
+					"id": "media_cola",
+					"nombre": "De media cola",
+					"ancho": 1.5,
+					"fondo": 2.1,
+					"alto": 1.0
+				},
+				{
+					"id": "gran_cola",
+					"nombre": "De gran cola",
+					"ancho": 1.57,
+					"fondo": 2.74,
+					"alto": 1.02
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/piano.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar_nota",
+					"nombre": "Tocar una nota",
+					"sonido": "sonidos/piano.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "instrumento",
+			"lugares": ["vivienda", "cine_teatro"],
+			"estancias": ["salon"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/piano_cola.png",
+				"descripcion": "Huella en planta de «Piano de cola»: la silueta de un piano de cola, con el teclado delante de 1,50 por 1,80 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "planta_grande",
+			"nombre": "Planta grande",
+			"categoria": "salon",
+			"subcategoria": "decoracion_salon",
+			"etiquetas": ["planta", "maceta", "macetero", "ficus"],
+			"descripcion": "Maceta grande en el suelo con una planta alta. Las hojas rozan antes de llegar a la maceta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.5, 0.8],
+				"fondo": [0.35, 0.5, 0.8],
+				"alto": [0.9, 1.4, 2.0]
+			},
+			"colocacion": ["suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "planta",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "vegetacion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "entrada", "terraza"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pg",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/planta_grande.png",
+				"descripcion": "Huella en planta de «Planta grande»: un círculo de 0,50 por 0,50 metros, con la letra «Pg»."
+			}
+		},
+		{
+			"id": "encimera",
+			"nombre": "Encimera",
+			"categoria": "cocina",
+			"subcategoria": "muebles_cocina",
+			"etiquetas": ["encimera recta", "muebles de cocina", "bancada"],
+			"descripcion": "Tramo recto de muebles bajos de cocina con encimera, a la altura de la cadera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.8, 3.6],
+				"fondo": [0.6, 0.62, 0.65],
+				"alto": [0.88, 0.9, 0.95]
+			},
+			"variantes": [
+				{
+					"id": "un_modulo",
+					"nombre": "De 60 cm",
+					"ancho": 0.6,
+					"fondo": 0.62,
+					"alto": 0.9
+				},
+				{
+					"id": "dos_modulos",
+					"nombre": "De 1,20 m",
+					"ancho": 1.2,
+					"fondo": 0.62,
+					"alto": 0.9
+				},
+				{
+					"id": "tres_modulos",
+					"nombre": "De 1,80 m",
+					"ancho": 1.8,
+					"fondo": 0.62,
+					"alto": 0.9
+				},
+				{
+					"id": "cuatro_modulos",
+					"nombre": "De 2,40 m",
+					"ancho": 2.4,
+					"fondo": 0.62,
+					"alto": 0.9
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["fregadero", "cocina", "armarios_altos"],
+			"simbolo": {
+				"letra": "En",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/encimera.png",
+				"descripcion": "Huella en planta de «Encimera»: un rectángulo de 1,80 por 0,62 metros, con la letra «En»."
+			}
+		},
+		{
+			"id": "encimera_ele",
+			"nombre": "Encimera en ele",
+			"categoria": "cocina",
+			"subcategoria": "muebles_cocina",
+			"etiquetas": ["cocina en L", "encimera en L", "rincón de cocina"],
+			"descripcion": "Muebles bajos de cocina que doblan la esquina en ele.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.31], [0.26, 0.31], [0.26, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.6, 2.4, 3.6],
+				"fondo": [1.6, 2.0, 3.0],
+				"alto": [0.88, 0.9, 0.95]
+			},
+			"colocacion": ["esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["fregadero", "cocina", "armarios_altos"],
+			"simbolo": {
+				"letra": "Ee",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/encimera_ele.png",
+				"descripcion": "Huella en planta de «Encimera en ele»: una ele de 2,40 por 2,00 metros, con la letra «Ee»."
+			}
+		},
+		{
+			"id": "isla",
+			"nombre": "Isla de cocina",
+			"categoria": "cocina",
+			"subcategoria": "muebles_cocina",
+			"etiquetas": ["isla", "península", "barra de cocina"],
+			"descripcion": "Bloque de encimera suelto en medio de la cocina: se le puede dar la vuelta entera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.07, 0.0], [0.93, 0.0], [1.0, 0.07], [1.0, 0.93], [0.93, 1.0], [0.07, 1.0], [0.0, 0.93], [0.0, 0.07]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 2.4],
+				"fondo": [0.8, 0.9, 1.2],
+				"alto": [0.88, 0.9, 0.95]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["taburete"],
+			"simbolo": {
+				"letra": "Is",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/isla.png",
+				"descripcion": "Huella en planta de «Isla de cocina»: un rectángulo con las esquinas cortadas de 1,80 por 0,90 metros, con la letra «Is»."
+			}
+		},
+		{
+			"id": "frigorifico",
+			"nombre": "Frigorífico",
+			"categoria": "cocina",
+			"subcategoria": "electro_cocina",
+			"etiquetas": ["frigorifico", "nevera", "congelador", "frigo"],
+			"descripcion": "Frigorífico alto de chapa. Zumba bajito todo el rato: buena referencia para situarse en la cocina.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.92],
+				"fondo": [0.6, 0.66, 0.75],
+				"alto": [1.45, 1.85, 2.03]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "Pequeño",
+					"ancho": 0.55,
+					"fondo": 0.6,
+					"alto": 1.45
+				},
+				{
+					"id": "combi",
+					"nombre": "Combi",
+					"ancho": 0.6,
+					"fondo": 0.66,
+					"alto": 1.85
+				},
+				{
+					"id": "americano",
+					"nombre": "Americano de dos puertas",
+					"ancho": 0.91,
+					"fondo": 0.72,
+					"alto": 1.78
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.5,
+					"radio": 6
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_electrodomestico.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["encimera"],
+			"simbolo": {
+				"letra": "Fr",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/frigorifico.png",
+				"descripcion": "Huella en planta de «Frigorífico»: un rectángulo de 0,60 por 0,66 metros, con la letra «Fr»."
+			}
+		},
+		{
+			"id": "cocina",
+			"nombre": "Cocina",
+			"categoria": "cocina",
+			"subcategoria": "electro_cocina",
+			"etiquetas": ["vitrocerámica", "vitroceramica", "fogones", "placa", "hornillo", "fuegos"],
+			"descripcion": "Cocina con placa arriba y horno debajo. Encendida quema: no se apoya la mano encima.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.9],
+				"fondo": [0.6, 0.6, 0.65],
+				"alto": [0.85, 0.9, 0.92]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["campana_extractora", "encimera"],
+			"simbolo": {
+				"letra": "Co",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/cocina.png",
+				"descripcion": "Huella en planta de «Cocina»: un rectángulo de 0,60 por 0,60 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "horno",
+			"nombre": "Columna de horno",
+			"categoria": "cocina",
+			"subcategoria": "electro_cocina",
+			"etiquetas": ["horno", "columna", "mueble del horno"],
+			"descripcion": "Mueble alto con el horno a media altura. La puerta se abre hacia abajo y ocupa sitio delante.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.56, 0.6, 0.6],
+				"fondo": [0.55, 0.58, 0.6],
+				"alto": [1.4, 2.0, 2.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_electrodomestico.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "comun",
+			"relacionados": ["microondas"],
+			"simbolo": {
+				"letra": "Ho",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/horno.png",
+				"descripcion": "Huella en planta de «Columna de horno»: un rectángulo de 0,60 por 0,58 metros, con la letra «Ho»."
+			}
+		},
+		{
+			"id": "lavavajillas",
+			"nombre": "Lavavajillas",
+			"categoria": "cocina",
+			"subcategoria": "electro_cocina",
+			"etiquetas": ["lavaplatos", "friegaplatos"],
+			"descripcion": "Lavavajillas bajo la encimera. En marcha se oye agua barriendo por dentro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.6, 0.6],
+				"fondo": [0.55, 0.6, 0.63],
+				"alto": [0.82, 0.85, 0.87]
+			},
+			"variantes": [
+				{
+					"id": "estrecho",
+					"nombre": "De 45 cm",
+					"ancho": 0.45,
+					"fondo": 0.6,
+					"alto": 0.85
+				},
+				{
+					"id": "normal",
+					"nombre": "De 60 cm",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/lavavajillas.flac",
+					"volumen": 0.4,
+					"radio": 5,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 90,
+				"al_terminar": "apagado"
+			},
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["fregadero"],
+			"simbolo": {
+				"letra": "La",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/lavavajillas.png",
+				"descripcion": "Huella en planta de «Lavavajillas»: un rectángulo de 0,60 por 0,60 metros, con la letra «La»."
+			}
+		},
+		{
+			"id": "fregadero",
+			"nombre": "Fregadero con grifo",
+			"categoria": "cocina",
+			"subcategoria": "fregadero_basura",
+			"etiquetas": ["pila", "grifo", "fregadera"],
+			"descripcion": "Fregadero de acero con su grifo. Con el grifo abierto se oye correr el agua.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.8, 1.2],
+				"fondo": [0.5, 0.6, 0.62],
+				"alto": [0.88, 0.9, 0.95]
+			},
+			"variantes": [
+				{
+					"id": "un_seno",
+					"nombre": "De un seno",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 0.9
+				},
+				{
+					"id": "dos_senos",
+					"nombre": "De dos senos",
+					"ancho": 0.8,
+					"fondo": 0.6,
+					"alto": 0.9
+				},
+				{
+					"id": "con_escurridor",
+					"nombre": "Con escurridor",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 0.9
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.45,
+					"radio": 5,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["encimera", "lavavajillas", "cubo_basura"],
+			"simbolo": {
+				"letra": "Fr",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/fregadero.png",
+				"descripcion": "Huella en planta de «Fregadero con grifo»: un rectángulo de 0,80 por 0,60 metros, con la letra «Fr»."
+			}
+		},
+		{
+			"id": "mesa_cocina",
+			"nombre": "Mesa de cocina",
+			"categoria": "cocina",
+			"subcategoria": "mesas_asientos_cocina",
+			"etiquetas": ["mesa", "mesa de comer", "mesa de office"],
+			"descripcion": "Mesa de cocina, con las sillas metidas debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.1, 1.6],
+				"fondo": [0.6, 0.7, 0.9],
+				"alto": [0.72, 0.75, 0.78]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 0.7,
+					"fondo": 0.7,
+					"alto": 0.75
+				},
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De cuatro plazas",
+					"ancho": 1.1,
+					"fondo": 0.7,
+					"alto": 0.75
+				},
+				{
+					"id": "seis_plazas",
+					"nombre": "De seis plazas",
+					"ancho": 1.5,
+					"fondo": 0.9,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina", "comedor"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla", "taburete"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_cocina.png",
+				"descripcion": "Huella en planta de «Mesa de cocina»: un rectángulo de 1,10 por 0,70 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "silla",
+			"nombre": "Silla",
+			"categoria": "cocina",
+			"subcategoria": "mesas_asientos_cocina",
+			"etiquetas": ["silla de comedor", "silla de cocina", "asiento"],
+			"descripcion": "Silla con respaldo. Es ligera: si la empujas se mueve y arrastra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.5],
+				"fondo": [0.42, 0.48, 0.55],
+				"alto": [0.8, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina", "comedor", "salon"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_cocina", "mesa_comedor"],
+			"simbolo": {
+				"letra": "Si",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla.png",
+				"descripcion": "Huella en planta de «Silla»: un rectángulo de 0,45 por 0,48 metros, con la letra «Si»."
+			}
+		},
+		{
+			"id": "taburete",
+			"nombre": "Taburete",
+			"categoria": "cocina",
+			"subcategoria": "mesas_asientos_cocina",
+			"etiquetas": ["banqueta", "taburete de barra"],
+			"descripcion": "Taburete redondo sin respaldo. Bajo y fácil de volcar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.42],
+				"fondo": [0.3, 0.35, 0.42],
+				"alto": [0.45, 0.65, 0.8]
+			},
+			"variantes": [
+				{
+					"id": "bajo",
+					"nombre": "Bajo",
+					"ancho": 0.35,
+					"fondo": 0.35,
+					"alto": 0.45
+				},
+				{
+					"id": "de_barra",
+					"nombre": "De barra",
+					"ancho": 0.38,
+					"fondo": 0.38,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["isla"],
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/taburete.png",
+				"descripcion": "Huella en planta de «Taburete»: un círculo de 0,35 por 0,35 metros, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "cubo_basura",
+			"nombre": "Cubo de basura",
+			"categoria": "cocina",
+			"subcategoria": "fregadero_basura",
+			"etiquetas": ["basura", "cubo", "papelera de cocina"],
+			"descripcion": "Cubo de basura con tapa, de plástico hueco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.45],
+				"fondo": [0.25, 0.3, 0.45],
+				"alto": [0.35, 0.6, 0.75]
+			},
+			"colocacion": ["suelo", "esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/tapa_contenedor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "residuos",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["fregadero"],
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/cubo_basura.png",
+				"descripcion": "Huella en planta de «Cubo de basura»: un círculo de 0,30 por 0,30 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "microondas",
+			"nombre": "Microondas",
+			"categoria": "cocina",
+			"subcategoria": "electro_cocina",
+			"etiquetas": ["micro", "horno microondas"],
+			"descripcion": "Microondas apoyado sobre la encimera, a la altura del pecho. El bastón no lo toca: lo encuentra la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.44, 0.48, 0.55],
+				"fondo": [0.33, 0.38, 0.45],
+				"alto": [0.26, 0.3, 0.33]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/microondas.flac",
+					"volumen": 0.4,
+					"radio": 4,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "sonidos/microondas_fin.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "sonidos/microondas_fin.flac"
+				}
+			],
+			"contenedor": true,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 30,
+				"al_terminar": "apagado",
+				"sonido_al_terminar": "sonidos/microondas_fin.flac"
+			},
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["encimera"],
+			"simbolo": {
+				"letra": "Mi",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/microondas.png",
+				"descripcion": "Huella en planta de «Microondas»: un rectángulo de 0,48 por 0,38 metros, colgado a 0,90 metros del suelo, con la letra «Mi»."
+			}
+		},
+		{
+			"id": "armarios_altos",
+			"nombre": "Armarios altos de cocina",
+			"categoria": "cocina",
+			"subcategoria": "muebles_cocina",
+			"etiquetas": ["muebles altos", "alacena", "armarito colgado"],
+			"descripcion": "Armarios colgados sobre la encimera, a la altura de la cabeza. El bastón pasa por debajo: cuidado al inclinarse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 1.2, 3.0],
+				"fondo": [0.3, 0.35, 0.37],
+				"alto": [0.6, 0.7, 0.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.45,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "cabeza",
+			"frecuencia": "muy_comun",
+			"relacionados": ["encimera"],
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/armarios_altos.png",
+				"descripcion": "Huella en planta de «Armarios altos de cocina»: un rectángulo de 1,20 por 0,35 metros, colgado a 1,45 metros del suelo, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "cama",
+			"nombre": "Cama",
+			"categoria": "dormitorio",
+			"subcategoria": "camas",
+			"etiquetas": ["cama", "colchón", "lecho"],
+			"descripcion": "Cama con colchón: baja, blanda y larga. Con el cabecero contra la pared, se rodea por los pies.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.35, 2.0],
+				"fondo": [1.8, 1.9, 2.1],
+				"alto": [0.4, 0.5, 0.65]
+			},
+			"variantes": [
+				{
+					"id": "ancho_80",
+					"nombre": "De 80",
+					"ancho": 0.8,
+					"fondo": 1.8,
+					"alto": 0.5
+				},
+				{
+					"id": "ancho_90",
+					"nombre": "De 90",
+					"ancho": 0.9,
+					"fondo": 1.9,
+					"alto": 0.5
+				},
+				{
+					"id": "ancho_105",
+					"nombre": "De 105",
+					"ancho": 1.05,
+					"fondo": 1.9,
+					"alto": 0.5
+				},
+				{
+					"id": "ancho_135",
+					"nombre": "De 135",
+					"ancho": 1.35,
+					"fondo": 1.9,
+					"alto": 0.5
+				},
+				{
+					"id": "ancho_150",
+					"nombre": "De 150",
+					"ancho": 1.5,
+					"fondo": 1.9,
+					"alto": 0.5
+				},
+				{
+					"id": "ancho_180",
+					"nombre": "De 180",
+					"ancho": 1.8,
+					"fondo": 2.0,
+					"alto": 0.5
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "habitacion_infantil"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesilla"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cama.png",
+				"descripcion": "Huella en planta de «Cama»: un rectángulo de 1,35 por 1,90 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "cama_cabecero",
+			"nombre": "Cama con cabecero",
+			"categoria": "dormitorio",
+			"subcategoria": "camas",
+			"etiquetas": ["cabecero", "cama de matrimonio"],
+			"descripcion": "Cama con un cabecero de madera más ancho que el colchón: sobresale un palmo a cada lado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.05], [0.94, 0.05], [0.94, 1.0], [0.06, 1.0], [0.06, 0.05], [0.0, 0.05]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.6, 2.1],
+				"fondo": [1.95, 2.0, 2.15],
+				"alto": [0.9, 1.1, 1.3]
+			},
+			"variantes": [
+				{
+					"id": "ancho_90",
+					"nombre": "De 90",
+					"ancho": 1.0,
+					"fondo": 2.0,
+					"alto": 1.1
+				},
+				{
+					"id": "ancho_135",
+					"nombre": "De 135",
+					"ancho": 1.45,
+					"fondo": 2.0,
+					"alto": 1.1
+				},
+				{
+					"id": "ancho_150",
+					"nombre": "De 150",
+					"ancho": 1.6,
+					"fondo": 2.0,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesilla", "comoda"],
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cama_cabecero.png",
+				"descripcion": "Huella en planta de «Cama con cabecero»: un rectángulo con un cabecero más ancho detrás de 1,60 por 2,00 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "litera",
+			"nombre": "Litera",
+			"categoria": "dormitorio",
+			"subcategoria": "camas",
+			"etiquetas": ["literas", "cama litera"],
+			"descripcion": "Litera de dos camas, una encima de otra, con escalerilla. La cama de arriba queda a la altura de la cabeza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.1],
+				"fondo": [1.9, 2.0, 2.1],
+				"alto": [1.5, 1.6, 1.8]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "habitacion_infantil"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Li",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/litera.png",
+				"descripcion": "Huella en planta de «Litera»: un rectángulo de 1,00 por 2,00 metros, con la letra «Li»."
+			}
+		},
+		{
+			"id": "cuna",
+			"nombre": "Cuna",
+			"categoria": "dormitorio",
+			"subcategoria": "camas",
+			"etiquetas": ["cuna", "moisés", "cama de bebé"],
+			"descripcion": "Cuna de barrotes de madera, alta hasta la cintura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.66, 0.8],
+				"fondo": [1.2, 1.26, 1.45],
+				"alto": [0.85, 0.95, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "de_60",
+					"nombre": "De 60 por 120",
+					"ancho": 0.66,
+					"fondo": 1.26,
+					"alto": 0.95
+				},
+				{
+					"id": "de_70",
+					"nombre": "De 70 por 140",
+					"ancho": 0.76,
+					"fondo": 1.45,
+					"alto": 0.95
+				}
+			],
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "habitacion_infantil"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["cama"],
+			"simbolo": {
+				"letra": "Cu",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuna.png",
+				"descripcion": "Huella en planta de «Cuna»: un rectángulo de 0,66 por 1,26 metros, con la letra «Cu»."
+			}
+		},
+		{
+			"id": "mesilla",
+			"nombre": "Mesilla de noche",
+			"categoria": "dormitorio",
+			"subcategoria": "armarios_dormitorio",
+			"etiquetas": ["mesilla", "mesita", "mesita de noche"],
+			"descripcion": "Mesita baja con un cajón, junto a la cabecera de la cama.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.45, 0.6],
+				"fondo": [0.3, 0.4, 0.45],
+				"alto": [0.45, 0.55, 0.65]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama", "cama_cabecero"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesilla.png",
+				"descripcion": "Huella en planta de «Mesilla de noche»: un rectángulo de 0,45 por 0,40 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "armario",
+			"nombre": "Armario",
+			"categoria": "dormitorio",
+			"subcategoria": "armarios_dormitorio",
+			"etiquetas": ["armario", "ropero", "guardarropa", "armario empotrado"],
+			"descripcion": "Armario ropero alto, casi hasta el techo. Las puertas se abren hacia fuera y ocupan sitio delante.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.5, 3.0],
+				"fondo": [0.5, 0.6, 0.65],
+				"alto": [1.8, 2.1, 2.5]
+			},
+			"variantes": [
+				{
+					"id": "dos_puertas",
+					"nombre": "De dos puertas",
+					"ancho": 1.0,
+					"fondo": 0.6,
+					"alto": 2.1
+				},
+				{
+					"id": "tres_puertas",
+					"nombre": "De tres puertas",
+					"ancho": 1.5,
+					"fondo": 0.6,
+					"alto": 2.1
+				},
+				{
+					"id": "cuatro_puertas",
+					"nombre": "De cuatro puertas",
+					"ancho": 2.0,
+					"fondo": 0.6,
+					"alto": 2.1
+				},
+				{
+					"id": "empotrado",
+					"nombre": "Empotrado de pared a pared",
+					"ancho": 2.5,
+					"fondo": 0.62,
+					"alto": 2.4
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "habitacion_infantil"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario.png",
+				"descripcion": "Huella en planta de «Armario»: un rectángulo de 1,50 por 0,60 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "comoda",
+			"nombre": "Cómoda",
+			"categoria": "dormitorio",
+			"subcategoria": "armarios_dormitorio",
+			"etiquetas": ["cómoda", "comoda", "cajonera", "sinfonier"],
+			"descripcion": "Mueble de cajones a la altura de la cintura.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [0.75, 0.85, 1.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Co",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/comoda.png",
+				"descripcion": "Huella en planta de «Cómoda»: un rectángulo de 1,00 por 0,45 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "escritorio",
+			"nombre": "Escritorio",
+			"categoria": "dormitorio",
+			"subcategoria": "estudio",
+			"etiquetas": ["escritorio", "mesa de estudio", "mesa de trabajo"],
+			"descripcion": "Mesa de estudio con cajones, contra la pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.6],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.72, 0.75, 0.76]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "Pequeño",
+					"ancho": 1.0,
+					"fondo": 0.5,
+					"alto": 0.75
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 1.2,
+					"fondo": 0.6,
+					"alto": 0.75
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande",
+					"ancho": 1.4,
+					"fondo": 0.7,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "habitacion_infantil"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla_escritorio"],
+			"simbolo": {
+				"letra": "Es",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/escritorio.png",
+				"descripcion": "Huella en planta de «Escritorio»: un rectángulo de 1,20 por 0,60 metros, con la letra «Es»."
+			}
+		},
+		{
+			"id": "silla_escritorio",
+			"nombre": "Silla de escritorio con ruedas",
+			"categoria": "dormitorio",
+			"subcategoria": "estudio",
+			"etiquetas": ["silla giratoria", "silla de estudio"],
+			"descripcion": "Silla giratoria con cinco ruedas. Si chocas con ella, rueda y se aparta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [0.55, 0.6, 0.7],
+				"alto": [0.85, 0.95, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "habitacion_infantil"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["escritorio"],
+			"simbolo": {
+				"letra": "Se",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_escritorio.png",
+				"descripcion": "Huella en planta de «Silla de escritorio con ruedas»: un círculo de 0,60 por 0,60 metros, con la letra «Se»."
+			}
+		},
+		{
+			"id": "perchero",
+			"nombre": "Perchero de pie",
+			"categoria": "dormitorio",
+			"subcategoria": "armarios_dormitorio",
+			"etiquetas": ["perchero", "percha", "colgador"],
+			"descripcion": "Poste de madera con brazos arriba para colgar ropa. Abajo es fino; arriba, con abrigos, abulta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.45, 0.55],
+				"fondo": [0.35, 0.45, 0.55],
+				"alto": [1.6, 1.75, 1.9]
+			},
+			"colocacion": ["suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "colgar_ropa",
+					"nombre": "Colgar el abrigo"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "entrada"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/perchero.png",
+				"descripcion": "Huella en planta de «Perchero de pie»: un círculo de 0,45 por 0,45 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "baul",
+			"nombre": "Baúl",
+			"categoria": "dormitorio",
+			"subcategoria": "armarios_dormitorio",
+			"etiquetas": ["baúl", "baul", "arcón", "arca"],
+			"descripcion": "Baúl de madera a los pies de la cama, con tapa que se levanta. Dentro puede haber algo guardado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.3],
+				"fondo": [0.4, 0.45, 0.55],
+				"alto": [0.4, 0.45, 0.55]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "bajo",
+			"frecuencia": "ocasional",
+			"relacionados": ["cama"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/baul.png",
+				"descripcion": "Huella en planta de «Baúl»: un rectángulo de 1,00 por 0,45 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "inodoro",
+			"nombre": "Inodoro",
+			"categoria": "bano",
+			"subcategoria": "sanitarios_bano",
+			"etiquetas": ["inodoro", "váter", "vater", "retrete", "wc", "taza"],
+			"descripcion": "Inodoro de loza con la cisterna detrás, contra la pared. Duro y frío al tacto.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.3], [0.95, 0.6], [0.8, 0.88], [0.5, 1.0], [0.2, 0.88], [0.05, 0.6], [0.0, 0.3]]
+			},
+			"medidas": {
+				"ancho": [0.35, 0.38, 0.42],
+				"fondo": [0.6, 0.68, 0.75],
+				"alto": [0.7, 0.78, 0.85]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tirar_cadena",
+					"nombre": "Tirar de la cadena",
+					"sonido": "sonidos/cisterna.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["lavabo", "bide", "portarrollos_pie"],
+			"simbolo": {
+				"letra": "In",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/inodoro.png",
+				"descripcion": "Huella en planta de «Inodoro»: un rectángulo detrás (la cisterna) y una taza redondeada delante de 0,38 por 0,68 metros, con la letra «In»."
+			}
+		},
+		{
+			"id": "lavabo",
+			"nombre": "Lavabo",
+			"categoria": "bano",
+			"subcategoria": "sanitarios_bano",
+			"etiquetas": ["lavabo", "lavamanos", "pila del baño"],
+			"descripcion": "Lavabo con su grifo, a la altura de la cintura. Con el grifo abierto se oye el agua.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.6, 1.2],
+				"fondo": [0.4, 0.46, 0.55],
+				"alto": [0.8, 0.85, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "Pequeño",
+					"ancho": 0.45,
+					"fondo": 0.4,
+					"alto": 0.85
+				},
+				{
+					"id": "normal",
+					"nombre": "Normal",
+					"ancho": 0.6,
+					"fondo": 0.46,
+					"alto": 0.85
+				},
+				{
+					"id": "con_mueble",
+					"nombre": "Con mueble",
+					"ancho": 0.8,
+					"fondo": 0.46,
+					"alto": 0.85
+				},
+				{
+					"id": "doble",
+					"nombre": "Doble",
+					"ancho": 1.2,
+					"fondo": 0.5,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.4,
+					"radio": 4,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["inodoro", "armario_espejo_bano"],
+			"simbolo": {
+				"letra": "La",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/lavabo.png",
+				"descripcion": "Huella en planta de «Lavabo»: un rectángulo de 0,60 por 0,46 metros, con la letra «La»."
+			}
+		},
+		{
+			"id": "bide",
+			"nombre": "Bidé",
+			"categoria": "bano",
+			"subcategoria": "sanitarios_bano",
+			"etiquetas": ["bidé", "bide"],
+			"descripcion": "Bidé de loza, bajo, junto al inodoro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.974, 0.764], [0.897, 0.897], [0.764, 0.974], [0.5, 1.0], [0.236, 0.974], [0.103, 0.897], [0.026, 0.764], [0.0, 0.5], [0.026, 0.236], [0.103, 0.103], [0.236, 0.026], [0.5, 0.0], [0.764, 0.026], [0.897, 0.103], [0.974, 0.236]]
+			},
+			"medidas": {
+				"ancho": [0.35, 0.37, 0.4],
+				"fondo": [0.52, 0.56, 0.6],
+				"alto": [0.38, 0.4, 0.42]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["inodoro"],
+			"simbolo": {
+				"letra": "Bi",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/bide.png",
+				"descripcion": "Huella en planta de «Bidé»: un rectángulo de esquinas redondeadas de 0,37 por 0,56 metros, con la letra «Bi»."
+			}
+		},
+		{
+			"id": "banera",
+			"nombre": "Bañera",
+			"categoria": "bano",
+			"subcategoria": "sanitarios_bano",
+			"etiquetas": ["bañera", "banera", "baño", "tina"],
+			"descripcion": "Bañera larga con el borde a la altura de la rodilla: hay que levantar la pierna para entrar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.992, 0.838], [0.966, 0.919], [0.919, 0.966], [0.838, 0.992], [0.5, 1.0], [0.162, 0.992], [0.081, 0.966], [0.034, 0.919], [0.008, 0.838], [0.0, 0.5], [0.008, 0.162], [0.034, 0.081], [0.081, 0.034], [0.162, 0.008], [0.5, 0.0], [0.838, 0.008], [0.919, 0.034], [0.966, 0.081], [0.992, 0.162]]
+			},
+			"medidas": {
+				"ancho": [1.4, 1.7, 1.8],
+				"fondo": [0.7, 0.7, 0.8],
+				"alto": [0.5, 0.58, 0.62]
+			},
+			"variantes": [
+				{
+					"id": "de_140",
+					"nombre": "De 1,40 m",
+					"ancho": 1.4,
+					"fondo": 0.7,
+					"alto": 0.58
+				},
+				{
+					"id": "de_150",
+					"nombre": "De 1,50 m",
+					"ancho": 1.5,
+					"fondo": 0.7,
+					"alto": 0.58
+				},
+				{
+					"id": "de_160",
+					"nombre": "De 1,60 m",
+					"ancho": 1.6,
+					"fondo": 0.7,
+					"alto": 0.58
+				},
+				{
+					"id": "de_170",
+					"nombre": "De 1,70 m",
+					"ancho": 1.7,
+					"fondo": 0.7,
+					"alto": 0.58
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": true,
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo", "desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["alfombrilla_bano"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/banera.png",
+				"descripcion": "Huella en planta de «Bañera»: un rectángulo de esquinas redondeadas de 1,70 por 0,70 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "ducha",
+			"nombre": "Ducha con mampara",
+			"categoria": "bano",
+			"subcategoria": "sanitarios_bano",
+			"etiquetas": ["ducha", "mampara", "cabina de ducha"],
+			"descripcion": "Ducha cerrada con mampara de cristal. Hay que abrir la mampara para entrar; cerrada, corta el paso.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 1.6],
+				"fondo": [0.7, 0.8, 0.9],
+				"alto": [1.9, 1.95, 2.1]
+			},
+			"variantes": [
+				{
+					"id": "de_70",
+					"nombre": "De 70 por 70",
+					"ancho": 0.7,
+					"fondo": 0.7,
+					"alto": 1.95
+				},
+				{
+					"id": "de_80",
+					"nombre": "De 80 por 80",
+					"ancho": 0.8,
+					"fondo": 0.8,
+					"alto": 1.95
+				},
+				{
+					"id": "de_120",
+					"nombre": "De 120 por 80",
+					"ancho": 1.2,
+					"fondo": 0.8,
+					"alto": 1.95
+				}
+			],
+			"colocacion": ["esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_cristal.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente", "resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["alfombrilla_bano"],
+			"simbolo": {
+				"letra": "Du",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/ducha.png",
+				"descripcion": "Huella en planta de «Ducha con mampara»: un rectángulo de 0,80 por 0,80 metros, con la letra «Du»."
+			}
+		},
+		{
+			"id": "plato_ducha",
+			"nombre": "Plato de ducha de esquina",
+			"categoria": "bano",
+			"subcategoria": "sanitarios_bano",
+			"etiquetas": ["plato de ducha", "ducha a ras de suelo"],
+			"descripcion": "Plato de ducha a ras de suelo, en el rincón, sin mampara. Se pisa: el suelo cambia y puede resbalar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.966, 0.259], [0.866, 0.5], [0.707, 0.707], [0.5, 0.866], [0.259, 0.966], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 1.0],
+				"fondo": [0.7, 0.8, 1.0],
+				"alto": [0.03, 0.04, 0.06]
+			},
+			"colocacion": ["esquina"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"contenedor": false,
+			"suelo": "agua",
+			"aviso": "Plato de ducha: el suelo está mojado.",
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pd",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/plato_ducha.png",
+				"descripcion": "Huella en planta de «Plato de ducha de esquina»: un cuarto de círculo, con el rincón atrás a la izquierda de 0,80 por 0,80 metros, con la letra «Pd»."
+			}
+		},
+		{
+			"id": "lavadora",
+			"nombre": "Lavadora",
+			"categoria": "bano",
+			"subcategoria": "colada",
+			"etiquetas": ["lavadora", "secadora", "lavasecadora"],
+			"descripcion": "Lavadora de carga frontal. En marcha zumba y da vueltas: se oye desde el pasillo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": 0.6,
+				"fondo": [0.45, 0.58, 0.63],
+				"alto": [0.84, 0.85, 0.87]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/lavadora.flac",
+					"volumen": 0.5,
+					"radio": 7,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 90,
+				"al_terminar": "apagado"
+			},
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["bano", "lavadero", "cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["tendedero", "cesto_ropa"],
+			"simbolo": {
+				"letra": "La",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/lavadora.png",
+				"descripcion": "Huella en planta de «Lavadora»: un rectángulo de 0,60 por 0,58 metros, con la letra «La»."
+			}
+		},
+		{
+			"id": "toallero",
+			"nombre": "Toallero de pared",
+			"categoria": "bano",
+			"subcategoria": "muebles_bano",
+			"etiquetas": ["toallero", "radiador toallero", "secatoallas"],
+			"descripcion": "Toallero colgado de la pared a la altura de la cintura. El bastón, que barre el suelo, no lo encuentra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.7, 0.9, 1.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.6,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "To",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/toallero.png",
+				"descripcion": "Huella en planta de «Toallero de pared»: un rectángulo de 0,50 por 0,10 metros, colgado a 0,60 metros del suelo, con la letra «To»."
+			}
+		},
+		{
+			"id": "zapatero",
+			"nombre": "Zapatero",
+			"categoria": "entrada",
+			"subcategoria": "muebles_entrada",
+			"etiquetas": ["zapatero", "mueble de zapatos"],
+			"descripcion": "Mueble estrecho y alto para zapatos, pegado a la pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 1.2],
+				"fondo": [0.17, 0.25, 0.35],
+				"alto": [0.8, 1.0, 1.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada", "pasillo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["banco"],
+			"simbolo": {
+				"letra": "Za",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/zapatero.png",
+				"descripcion": "Huella en planta de «Zapatero»: un rectángulo de 0,70 por 0,25 metros, con la letra «Za»."
+			}
+		},
+		{
+			"id": "paraguero",
+			"nombre": "Paragüero",
+			"categoria": "entrada",
+			"subcategoria": "muebles_entrada",
+			"etiquetas": ["paragüero", "paraguero", "paraguas"],
+			"descripcion": "Cubo estrecho de metal junto a la puerta, con paraguas dentro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.25, 0.3],
+				"fondo": [0.2, 0.25, 0.3],
+				"alto": [0.45, 0.5, 0.6]
+			},
+			"colocacion": ["suelo", "esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada", "pasillo"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/paraguero.png",
+				"descripcion": "Huella en planta de «Paragüero»: un círculo de 0,25 por 0,25 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "consola",
+			"nombre": "Consola de media luna",
+			"categoria": "entrada",
+			"subcategoria": "muebles_entrada",
+			"etiquetas": ["consola", "recibidor", "mesa de entrada"],
+			"descripcion": "Mesa estrecha de entrada, recta contra la pared y redonda por delante: sin esquinas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.038, 0.383], [0.146, 0.707], [0.309, 0.924], [0.5, 1.0], [0.691, 0.924], [0.854, 0.707], [0.962, 0.383], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.28, 0.35, 0.45],
+				"alto": [0.75, 0.8, 0.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada", "pasillo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["espejo"],
+			"simbolo": {
+				"letra": "Co",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/consola.png",
+				"descripcion": "Huella en planta de «Consola de media luna»: un semicírculo, recto por detrás y redondo por delante de 1,00 por 0,35 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "banco",
+			"nombre": "Banco de entrada",
+			"categoria": "entrada",
+			"subcategoria": "muebles_entrada",
+			"etiquetas": ["banco", "descalzador", "banqueta"],
+			"descripcion": "Banco bajo para sentarse a calzarse; el asiento se levanta y dentro se guardan cosas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.33, 0.38, 0.45],
+				"alto": [0.42, 0.45, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado", "cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada", "pasillo"],
+			"obstaculo": "bajo",
+			"frecuencia": "ocasional",
+			"relacionados": ["zapatero"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco.png",
+				"descripcion": "Huella en planta de «Banco de entrada»: un rectángulo de 1,00 por 0,38 metros, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "espejo",
+			"nombre": "Espejo colgado",
+			"categoria": "entrada",
+			"subcategoria": "pared_entrada",
+			"etiquetas": ["espejo", "cuadro", "marco"],
+			"descripcion": "Espejo con marco colgado de la pared, de la cintura a la cabeza. Sobresale poco, pero el bastón no lo avisa.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 1.0],
+				"fondo": [0.03, 0.05, 0.08],
+				"alto": [0.6, 0.9, 1.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada", "pasillo", "dormitorio", "bano"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Es",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/espejo.png",
+				"descripcion": "Huella en planta de «Espejo colgado»: un rectángulo de 0,60 por 0,05 metros, colgado a 0,90 metros del suelo, con la letra «Es»."
+			}
+		},
+		{
+			"id": "radiador",
+			"nombre": "Radiador",
+			"categoria": "entrada",
+			"subcategoria": "pared_entrada",
+			"etiquetas": ["radiador", "calefacción", "calefaccion"],
+			"descripcion": "Radiador de metal bajo, pegado a la pared. En invierno está caliente.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.8, 1.4],
+				"fondo": [0.08, 0.1, 0.14],
+				"alto": [0.5, 0.6, 0.7]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.12,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada", "pasillo", "salon", "dormitorio", "bano"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/radiador.png",
+				"descripcion": "Huella en planta de «Radiador»: un rectángulo de 0,80 por 0,10 metros, colgado a 0,12 metros del suelo, con la letra «Ra»."
+			}
+		},
+		{
+			"id": "extintor",
+			"nombre": "Extintor colgado",
+			"categoria": "entrada",
+			"subcategoria": "pared_entrada",
+			"etiquetas": ["extintor", "matafuegos"],
+			"descripcion": "Extintor de metal colgado de la pared a un metro del suelo. Sobresale y el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.13, 0.15, 0.18],
+				"fondo": [0.13, 0.15, 0.2],
+				"alto": [0.45, 0.5, 0.6]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada", "cocina", "garaje"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ex",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/extintor.png",
+				"descripcion": "Huella en planta de «Extintor colgado»: un círculo de 0,15 por 0,15 metros, colgado a 1,00 metros del suelo, con la letra «Ex»."
+			}
+		},
+		{
+			"id": "felpudo",
+			"nombre": "Felpudo",
+			"categoria": "entrada",
+			"subcategoria": "suelo_escaleras",
+			"etiquetas": ["felpudo", "esterilla", "alfombrilla"],
+			"descripcion": "Felpudo áspero delante de la puerta. Se nota bajo los pies: estás en la entrada.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 0.9],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"suelo": "moqueta",
+			"funcion": "referencia",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Fe",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/felpudo.png",
+				"descripcion": "Huella en planta de «Felpudo»: un rectángulo de 0,60 por 0,40 metros, con la letra «Fe»."
+			}
+		},
+		{
+			"id": "tendedero",
+			"nombre": "Tendedero",
+			"categoria": "trastos",
+			"subcategoria": "colada",
+			"etiquetas": ["tendedero", "tendal", "ropa tendida"],
+			"descripcion": "Tendedero de varillas de metal abierto, con ropa colgando. Ligero y con las alas a la altura de la cadera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.0],
+				"fondo": [0.5, 0.55, 0.6],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["desplegado", "plegado"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["vivienda"],
+			"estancias": ["terraza", "lavadero", "salon"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["lavadora"],
+			"simbolo": {
+				"letra": "Te",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/tendedero.png",
+				"descripcion": "Huella en planta de «Tendedero»: un rectángulo de 1,80 por 0,55 metros, con la letra «Te»."
+			}
+		},
+		{
+			"id": "tabla_planchar",
+			"nombre": "Tabla de planchar",
+			"categoria": "trastos",
+			"subcategoria": "colada",
+			"etiquetas": ["tabla de planchar", "plancha"],
+			"descripcion": "Tabla de planchar abierta: estrecha, a la altura de la cintura y acabada en punta. Las patas se cruzan debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.75, 0.0], [1.0, 0.5], [0.75, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.1, 1.2, 1.4],
+				"fondo": [0.3, 0.38, 0.45],
+				"alto": [0.75, 0.9, 0.95]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["vivienda"],
+			"estancias": ["lavadero", "salon", "dormitorio"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/tabla_planchar.png",
+				"descripcion": "Huella en planta de «Tabla de planchar»: un rectángulo acabado en punta por la derecha de 1,20 por 0,38 metros, con la letra «Tp»."
+			}
+		},
+		{
+			"id": "aspiradora",
+			"nombre": "Aspiradora en el suelo",
+			"categoria": "trastos",
+			"subcategoria": "sueltos",
+			"etiquetas": ["aspiradora", "aspirador", "robot aspirador"],
+			"descripcion": "Aspiradora que alguien ha dejado en medio, con el tubo tirado. Baja: se tropieza con ella.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.966, 0.791], [0.865, 0.932], [0.684, 1.0], [0.316, 1.0], [0.135, 0.932], [0.034, 0.791], [0.0, 0.5], [0.034, 0.209], [0.135, 0.068], [0.316, 0.0], [0.684, 0.0], [0.865, 0.068], [0.966, 0.209]]
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.3, 0.4, 0.5],
+				"alto": [0.25, 0.3, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "sonidos/aspiradora.flac"
+			},
+			"contenedor": false,
+			"funcion": "trasto",
+			"lugares": ["vivienda"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "As",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/aspiradora.png",
+				"descripcion": "Huella en planta de «Aspiradora en el suelo»: un rectángulo de esquinas redondeadas de 0,30 por 0,40 metros, con la letra «As»."
+			}
+		},
+		{
+			"id": "juguetes",
+			"nombre": "Juguetes por el suelo",
+			"categoria": "trastos",
+			"subcategoria": "sueltos",
+			"etiquetas": ["juguetes", "piezas", "bloques", "trastos"],
+			"descripcion": "Juguetes esparcidos por el suelo: piezas, un coche, una pelota. Obstáculo bajo e irregular; suenan al pisarlos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.2], [0.4, 0.0], [0.7, 0.15], [1.0, 0.1], [0.9, 0.5], [1.0, 0.85], [0.6, 1.0], [0.35, 0.8], [0.05, 1.0], [0.0, 0.55]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.8, 1.5],
+				"fondo": [0.4, 0.6, 1.2],
+				"alto": [0.08, 0.12, 0.25]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "sonidos/juguetes.flac"
+			},
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "habitacion_infantil", "dormitorio"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ju",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/juguetes.png",
+				"descripcion": "Huella en planta de «Juguetes por el suelo»: una mancha irregular de 0,80 por 0,60 metros, con la letra «Ju»."
+			}
+		},
+		{
+			"id": "mesa_plegable",
+			"nombre": "Mesa plegable",
+			"categoria": "trastos",
+			"subcategoria": "sueltos",
+			"etiquetas": ["mesa plegable", "mesa auxiliar", "mesa de camping"],
+			"descripcion": "Mesa plegable ligera. Hoy está abierta aquí; otro día puede no estar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.5, 0.6, 0.8],
+				"alto": [0.7, 0.72, 0.75]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["desplegado", "plegado"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["terraza", "salon"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_plegable.png",
+				"descripcion": "Huella en planta de «Mesa plegable»: un rectángulo de 0,80 por 0,60 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "escalera_mano",
+			"nombre": "Escalera de mano abierta",
+			"categoria": "trastos",
+			"subcategoria": "sueltos",
+			"etiquetas": ["escalera", "escalera de tijera", "taburete escalera"],
+			"descripcion": "Escalera de tijera abierta en medio del paso. Las patas se abren abajo: es más ancha en el suelo que arriba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.45, 0.5, 0.6],
+				"fondo": [0.8, 1.0, 1.3],
+				"alto": [1.2, 1.6, 2.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "sonidos/valla_obra.flac"
+			},
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["vivienda"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Em",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_mano.png",
+				"descripcion": "Huella en planta de «Escalera de mano abierta»: un trapecio, más estrecho por detrás de 0,50 por 1,00 metros, con la letra «Em»."
+			}
+		},
+		{
+			"id": "puerta_terraza",
+			"nombre": "Puerta de terraza",
+			"categoria": "trastos",
+			"subcategoria": "puertas",
+			"etiquetas": ["puerta corredera", "cristalera", "balconera", "puerta de balcón"],
+			"descripcion": "Puerta corredera de cristal de la terraza. Cerrada es un cristal entero que corta el paso; abierta, se pasa.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 1.2],
+				"fondo": [0.05, 0.08, 0.12],
+				"alto": [2.0, 2.05, 2.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_cristal.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["vivienda"],
+			"estancias": ["terraza", "salon"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_terraza.png",
+				"descripcion": "Huella en planta de «Puerta de terraza»: un rectángulo de 0,80 por 0,08 metros, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "aparador",
+			"nombre": "Aparador",
+			"categoria": "salon",
+			"subcategoria": "almacenaje_salon",
+			"etiquetas": ["aparador", "bufé", "mueble de comedor", "vajillero bajo"],
+			"descripcion": "Mueble largo y bajo, a la altura de la cadera, contra la pared del comedor: puertas abajo, cajones arriba y la vajilla dentro. Encima suele haber un frutero o fotos que se caen si se apoya la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.2],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [0.75, 0.85, 0.95]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "De 1,20 m",
+					"ancho": 1.2,
+					"fondo": 0.42,
+					"alto": 0.85
+				},
+				{
+					"id": "normal",
+					"nombre": "De 1,60 m",
+					"ancho": 1.6,
+					"fondo": 0.45,
+					"alto": 0.85
+				},
+				{
+					"id": "grande",
+					"nombre": "De 2 m",
+					"ancho": 2.0,
+					"fondo": 0.48,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "comun:vajilla_tintineo.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "comedor"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["mesa_comedor"],
+			"simbolo": {
+				"letra": "Ap",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/aparador.png",
+				"descripcion": "Huella en planta de «Aparador»: un rectángulo de 1,60 por 0,45 metros, con la letra «Ap»."
+			}
+		},
+		{
+			"id": "chimenea",
+			"nombre": "Chimenea de leña",
+			"categoria": "salon",
+			"subcategoria": "luz_clima_salon",
+			"etiquetas": ["chimenea", "hogar", "lar", "chimenea francesa", "insertable", "cassette"],
+			"descripcion": "Hogar de obra o de hierro contra la pared, con una solera de piedra que sobresale delante a la altura del tobillo: se tropieza con ella antes de notar el calor. Encendida crepita y quema; el frontal de cristal, si lo tiene, abrasa.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.55], [0.92, 0.55], [0.92, 1.0], [0.08, 1.0], [0.08, 0.55], [0.0, 0.55]]
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.6, 0.9, 1.2],
+				"alto": [1.0, 1.3, 2.4]
+			},
+			"variantes": [
+				{
+					"id": "insertable",
+					"nombre": "Con frente de cristal",
+					"ancho": 0.9,
+					"fondo": 0.7,
+					"alto": 1.2
+				},
+				{
+					"id": "abierta",
+					"nombre": "Abierta, de obra",
+					"ancho": 1.3,
+					"fondo": 0.9,
+					"alto": 1.4
+				},
+				{
+					"id": "rincon",
+					"nombre": "De rincón",
+					"ancho": 1.0,
+					"fondo": 1.0,
+					"alto": 2.2
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "piedra",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "comun:brasas_castanera.flac",
+					"volumen": 0.45,
+					"radio": 7,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "hog_echar_lena",
+					"nombre": "Echar un leño",
+					"sonido": "golpe/madera"
+				}
+			],
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente", "desnivel"],
+			"frecuencia": "ocasional",
+			"relacionados": ["lena_apilada", "sillon", "alfombra"],
+			"simbolo": {
+				"letra": "Ch",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/chimenea.png",
+				"descripcion": "Huella en planta de «Chimenea de leña»: un cuerpo ancho contra la pared y una solera que sale por delante de 1,20 por 0,90 metros, con la letra «Ch»."
+			}
+		},
+		{
+			"id": "mesa_camilla_brasero",
+			"nombre": "Mesa camilla con brasero",
+			"categoria": "salon",
+			"subcategoria": "mesas_salon",
+			"etiquetas": ["mesa camilla", "brasero", "faldas de mesa", "mesa de brasero"],
+			"descripcion": "Mesa redonda vestida con unas faldas de tela gruesa que llegan al suelo; debajo, el brasero eléctrico calienta las piernas. El bastón choca con tela blanda, no con patas, y por debajo sale calor.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.1],
+				"fondo": [0.8, 0.9, 1.1],
+				"alto": [0.7, 0.72, 0.75]
+			},
+			"variantes": [
+				{
+					"id": "de_80",
+					"nombre": "De 80 cm",
+					"ancho": 0.8,
+					"fondo": 0.8,
+					"alto": 0.72
+				},
+				{
+					"id": "de_90",
+					"nombre": "De 90 cm",
+					"ancho": 0.9,
+					"fondo": 0.9,
+					"alto": 0.72
+				},
+				{
+					"id": "de_100",
+					"nombre": "De 1 m",
+					"ancho": 1.0,
+					"fondo": 1.0,
+					"alto": 0.72
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.12,
+					"radio": 2,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "comedor"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"relacionados": ["silla", "sofa"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_camilla_brasero.png",
+				"descripcion": "Huella en planta de «Mesa camilla con brasero»: un círculo de 0,90 por 0,90 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "puf_reposapies",
+			"nombre": "Puf reposapiés",
+			"categoria": "salon",
+			"subcategoria": "asientos_salon",
+			"etiquetas": ["puf", "reposapiés", "otomana", "banqueta tapizada"],
+			"descripcion": "Taburete tapizado sin patas a la vista, firme, a la altura de la espinilla. Se queda donde lo dejaron y se tropieza con él; algunos se abren y guardan mantas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.974, 0.764], [0.897, 0.897], [0.764, 0.974], [0.5, 1.0], [0.236, 0.974], [0.103, 0.897], [0.026, 0.764], [0.0, 0.5], [0.026, 0.236], [0.103, 0.103], [0.236, 0.026], [0.5, 0.0], [0.764, 0.026], [0.897, 0.103], [0.974, 0.236]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.8],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.35, 0.42, 0.48]
+			},
+			"variantes": [
+				{
+					"id": "redondo",
+					"nombre": "Redondo",
+					"ancho": 0.45,
+					"fondo": 0.45,
+					"alto": 0.42
+				},
+				{
+					"id": "cuadrado",
+					"nombre": "Cuadrado",
+					"ancho": 0.5,
+					"fondo": 0.5,
+					"alto": 0.42
+				},
+				{
+					"id": "arcon",
+					"nombre": "Alargado, con arcón",
+					"ancho": 0.8,
+					"fondo": 0.45,
+					"alto": 0.45
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["sillon", "sofa"],
+			"simbolo": {
+				"letra": "Pr",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/puf_reposapies.png",
+				"descripcion": "Huella en planta de «Puf reposapiés»: un rectángulo de esquinas redondeadas de 0,50 por 0,50 metros, con la letra «Pr»."
+			}
+		},
+		{
+			"id": "mecedora",
+			"nombre": "Mecedora",
+			"categoria": "salon",
+			"subcategoria": "asientos_salon",
+			"etiquetas": ["mecedora", "balancín", "silla de lactancia"],
+			"descripcion": "Silla de brazos sobre dos patines curvos que sobresalen por delante y por detrás. Al tocarla se balancea y cruje; el patín de atrás pilla los pies de quien pasa por detrás.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.12, 0.0], [0.12, 0.14], [0.88, 0.14], [0.88, 0.0], [1.0, 0.0], [1.0, 1.0], [0.88, 1.0], [0.88, 0.86], [0.12, 0.86], [0.12, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [0.8, 0.95, 1.1],
+				"alto": [0.95, 1.05, 1.15]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/hogar_mecedora.flac"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "hog_mecerse",
+					"nombre": "Mecerse",
+					"sonido": "sonidos/hogar_mecedora.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio", "habitacion_infantil"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Me",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mecedora.png",
+				"descripcion": "Huella en planta de «Mecedora»: un asiento entre dos patines curvos que sobresalen por delante y por detrás de 0,60 por 0,95 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "sofa_cama",
+			"nombre": "Sofá cama",
+			"categoria": "salon",
+			"subcategoria": "asientos_salon",
+			"etiquetas": ["sofá cama", "sofá cama italiano", "sofá de libro", "clic clac"],
+			"descripcion": "Sofá que se despliega en cama: cerrado ocupa como un sofá; abierto, el colchón sale casi dos metros hacia delante sobre patas de metal y tapa el paso. Cambia de tamaño de un día a otro.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.4, 1.9, 2.2],
+				"fondo": [0.9, 0.95, 2.2],
+				"alto": [0.45, 0.85, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "cerrado",
+					"nombre": "Cerrado",
+					"ancho": 1.9,
+					"fondo": 0.95,
+					"alto": 0.85
+				},
+				{
+					"id": "abierto",
+					"nombre": "Abierto como cama",
+					"ancho": 1.9,
+					"fondo": 2.1,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["plegado", "desplegado"],
+			"acciones": [
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"sonido": "sonidos/sentarse.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["mesa_centro"],
+			"simbolo": {
+				"letra": "Sc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/sofa_cama.png",
+				"descripcion": "Huella en planta de «Sofá cama»: un rectángulo de 1,90 por 0,95 metros, con la letra «Sc»."
+			}
+		},
+		{
+			"id": "mesas_nido",
+			"nombre": "Mesas nido",
+			"categoria": "salon",
+			"subcategoria": "mesas_salon",
+			"etiquetas": ["mesas nido", "mesitas auxiliares", "mesa auxiliar", "mesitas encajables"],
+			"descripcion": "Dos o tres mesitas metidas unas dentro de otras, junto al sofá. Recogidas son una sola mesa baja; cuando hay visitas aparecen sueltas por el salón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.35, 0.4, 0.45],
+				"alto": [0.45, 0.5, 0.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["salon"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["sofa", "sillon"],
+			"simbolo": {
+				"letra": "Mn",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesas_nido.png",
+				"descripcion": "Huella en planta de «Mesas nido»: un rectángulo de 0,50 por 0,40 metros, con la letra «Mn»."
+			}
+		},
+		{
+			"id": "lampara_colgante",
+			"nombre": "Lámpara colgante baja",
+			"categoria": "salon",
+			"subcategoria": "luz_clima_salon",
+			"etiquetas": ["lámpara colgante", "lámpara de techo", "plafón colgante", "lámpara de comedor"],
+			"descripcion": "Lámpara que cuelga del techo por un cable hasta poco más de un metro y medio, sobre la mesa del comedor. Con la mesa debajo no molesta; si la mesa se mueve, la pantalla queda a la altura de la cara y el bastón no la encuentra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.45, 1.0],
+				"fondo": [0.3, 0.45, 0.5],
+				"alto": [0.2, 0.3, 0.5]
+			},
+			"variantes": [
+				{
+					"id": "pantalla",
+					"nombre": "Una pantalla",
+					"ancho": 0.45,
+					"fondo": 0.45,
+					"alto": 0.3
+				},
+				{
+					"id": "barra",
+					"nombre": "Barra de varias luces",
+					"ancho": 1.0,
+					"fondo": 0.3,
+					"alto": 0.25
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "comedor", "cocina"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"relacionados": ["mesa_comedor", "mesa_redonda"],
+			"simbolo": {
+				"letra": "Lc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/lampara_colgante.png",
+				"descripcion": "Huella en planta de «Lámpara colgante baja»: un círculo de 0,45 por 0,45 metros, colgado a 1,50 metros del suelo, con la letra «Lc»."
+			}
+		},
+		{
+			"id": "reloj_pie",
+			"nombre": "Reloj de pie",
+			"categoria": "salon",
+			"subcategoria": "decoracion_salon",
+			"etiquetas": ["reloj de pie", "reloj de caja alta", "reloj de péndulo", "carillón"],
+			"descripcion": "Caja alta y estrecha de madera, más alta que una persona, con un péndulo detrás de un cristal. El tictac se oye desde la puerta y da las horas con campanadas: buena referencia para situarse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.25, 0.3, 0.35],
+				"alto": [1.8, 2.0, 2.2]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "fuente/reloj",
+					"volumen": 0.35,
+					"radio": 7
+				}
+			},
+			"acciones": [
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "fuente/campanas"
+				}
+			],
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "entrada"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Rp",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/reloj_pie.png",
+				"descripcion": "Huella en planta de «Reloj de pie»: un rectángulo de 0,50 por 0,30 metros, con la letra «Rp»."
+			}
+		},
+		{
+			"id": "rascador_gato",
+			"nombre": "Rascador de gato",
+			"categoria": "salon",
+			"subcategoria": "decoracion_salon",
+			"etiquetas": ["rascador", "árbol para gatos", "torre de gato", "rascador con casita"],
+			"descripcion": "Torre de postes forrados de cuerda áspera con plataformas de moqueta a distintas alturas que sobresalen hacia los lados. Se mueve si te apoyas y a veces hay un gato arriba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.6, 0.0], [0.6, 0.15], [1.0, 0.15], [1.0, 0.55], [0.75, 0.55], [0.75, 1.0], [0.2, 1.0], [0.2, 0.7], [0.0, 0.7], [0.0, 0.3], [0.2, 0.3]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 0.9],
+				"fondo": [0.4, 0.5, 0.7],
+				"alto": [0.6, 1.3, 1.8]
+			},
+			"variantes": [
+				{
+					"id": "bajo",
+					"nombre": "Bajo",
+					"ancho": 0.45,
+					"fondo": 0.4,
+					"alto": 0.6
+				},
+				{
+					"id": "torre",
+					"nombre": "Torre",
+					"ancho": 0.6,
+					"fondo": 0.5,
+					"alto": 1.3
+				},
+				{
+					"id": "hasta_techo",
+					"nombre": "Alto",
+					"ancho": 0.8,
+					"fondo": 0.6,
+					"alto": 1.8
+				}
+			],
+			"colocacion": ["esquina", "suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": true,
+			"funcion": "animal",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio", "terraza"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Rg",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/rascador_gato.png",
+				"descripcion": "Huella en planta de «Rascador de gato»: una base con plataformas que sobresalen hacia varios lados de 0,60 por 0,50 metros, con la letra «Rg»."
+			}
+		},
+		{
+			"id": "ventilador_pie",
+			"nombre": "Ventilador de pie",
+			"categoria": "salon",
+			"subcategoria": "luz_clima_salon",
+			"etiquetas": ["ventilador", "ventilador de pie", "abanico eléctrico", "torre de aire"],
+			"descripcion": "Base redonda y pesada, un tubo fino y arriba la rejilla con las aspas, a la altura del pecho. Encendido sopla y zumba, y gira la cabeza de un lado a otro; el bastón solo encuentra la base.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.45, 0.6],
+				"fondo": [0.25, 0.45, 0.6],
+				"alto": [1.0, 1.3, 1.5]
+			},
+			"variantes": [
+				{
+					"id": "pie",
+					"nombre": "De pie, con aspas",
+					"ancho": 0.45,
+					"fondo": 0.45,
+					"alto": 1.3
+				},
+				{
+					"id": "torre",
+					"nombre": "De torre, sin aspas",
+					"ancho": 0.3,
+					"fondo": 0.3,
+					"alto": 1.05
+				}
+			],
+			"colocacion": ["suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.45,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Vp",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/ventilador_pie.png",
+				"descripcion": "Huella en planta de «Ventilador de pie»: un círculo de 0,45 por 0,45 metros, con la letra «Vp»."
+			}
+		},
+		{
+			"id": "estufa_portatil",
+			"nombre": "Estufa portátil",
+			"categoria": "salon",
+			"subcategoria": "luz_clima_salon",
+			"etiquetas": ["estufa", "estufa de butano", "radiador de aceite", "calefactor", "estufa catalítica"],
+			"descripcion": "Estufa que se lleva de un cuarto a otro: la de butano, un mueble con ruedas y la bombona dentro, o el radiador de aceite, una fila de aletas metálicas. Encendida da calor de lejos; por delante y por arriba quema.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.25, 0.45, 0.6],
+				"fondo": [0.18, 0.35, 0.45],
+				"alto": [0.25, 0.7, 0.8]
+			},
+			"variantes": [
+				{
+					"id": "butano",
+					"nombre": "De butano",
+					"ancho": 0.45,
+					"fondo": 0.4,
+					"alto": 0.75
+				},
+				{
+					"id": "aceite",
+					"nombre": "Radiador de aceite",
+					"ancho": 0.5,
+					"fondo": 0.25,
+					"alto": 0.65
+				},
+				{
+					"id": "calefactor",
+					"nombre": "Calefactor de aire",
+					"ancho": 0.3,
+					"fondo": 0.2,
+					"alto": 0.3
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:estufa_terraza_gas.flac",
+					"volumen": 0.25,
+					"radio": 4,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio", "bano"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente", "movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ep",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/estufa_portatil.png",
+				"descripcion": "Huella en planta de «Estufa portátil»: un rectángulo de esquinas redondeadas de 0,45 por 0,35 metros, con la letra «Ep»."
+			}
+		},
+		{
+			"id": "aire_portatil",
+			"nombre": "Aire acondicionado portátil",
+			"categoria": "salon",
+			"subcategoria": "luz_clima_salon",
+			"etiquetas": ["aire acondicionado portátil", "pingüino", "climatizador portátil", "aire portátil"],
+			"descripcion": "Caja de plástico con ruedas, a la altura de la cintura, con un tubo gordo y arrugado que va hasta la ventana y cruza el suelo. Encendido ruge y echa aire frío por arriba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.984, 0.84], [0.935, 0.935], [0.84, 0.984], [0.5, 1.0], [0.16, 0.984], [0.065, 0.935], [0.016, 0.84], [0.0, 0.5], [0.016, 0.16], [0.065, 0.065], [0.16, 0.016], [0.5, 0.0], [0.84, 0.016], [0.935, 0.065], [0.984, 0.16]]
+			},
+			"medidas": {
+				"ancho": [0.35, 0.45, 0.5],
+				"fondo": [0.35, 0.4, 0.45],
+				"alto": [0.7, 0.8, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "comun:compresor_azotea.flac",
+					"volumen": 0.35,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["vivienda"],
+			"estancias": ["salon", "dormitorio"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ap",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/aire_portatil.png",
+				"descripcion": "Huella en planta de «Aire acondicionado portátil»: un rectángulo de esquinas redondeadas de 0,45 por 0,40 metros, con la letra «Ap»."
+			}
+		},
+		{
+			"id": "columna_despensa",
+			"nombre": "Columna despensa",
+			"categoria": "cocina",
+			"subcategoria": "muebles_cocina",
+			"etiquetas": ["despensa", "columna despensa", "alacena", "mueble despensero"],
+			"descripcion": "Mueble alto de cocina, del suelo casi al techo, con baldas o cestas extraíbles para la comida. La puerta es alta y abre hacia el paso; dentro huele a pan y a especias.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.6, 0.9],
+				"fondo": [0.55, 0.6, 0.62],
+				"alto": [1.9, 2.1, 2.3]
+			},
+			"variantes": [
+				{
+					"id": "estrecha",
+					"nombre": "Estrecha, extraíble",
+					"ancho": 0.3,
+					"fondo": 0.6,
+					"alto": 2.1
+				},
+				{
+					"id": "normal",
+					"nombre": "De 60 cm",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 2.1
+				},
+				{
+					"id": "doble",
+					"nombre": "De dos puertas",
+					"ancho": 0.9,
+					"fondo": 0.6,
+					"alto": 2.1
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["frigorifico", "encimera"],
+			"simbolo": {
+				"letra": "Cd",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna_despensa.png",
+				"descripcion": "Huella en planta de «Columna despensa»: un rectángulo de 0,60 por 0,60 metros, con la letra «Cd»."
+			}
+		},
+		{
+			"id": "campana_extractora",
+			"nombre": "Campana extractora",
+			"categoria": "cocina",
+			"subcategoria": "electro_cocina",
+			"etiquetas": ["campana", "extractor", "campana extractora", "extractor de humos"],
+			"descripcion": "Campana de chapa colgada sobre la placa, con el borde a la altura de la frente. El bastón no la avisa y al inclinarte sobre la cocina te das con ella; encendida zumba y sopla hacia arriba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.35, 0.0], [0.65, 0.0], [0.65, 0.3], [1.0, 0.3], [1.0, 1.0], [0.0, 1.0], [0.0, 0.3], [0.35, 0.3]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.2],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [0.15, 0.6, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "plana",
+					"nombre": "Plana, bajo el mueble",
+					"ancho": 0.6,
+					"fondo": 0.5,
+					"alto": 0.2
+				},
+				{
+					"id": "decorativa",
+					"nombre": "Decorativa, de chimenea",
+					"ancho": 0.9,
+					"fondo": 0.5,
+					"alto": 1.0
+				},
+				{
+					"id": "isla",
+					"nombre": "De isla, colgada del techo",
+					"ancho": 0.9,
+					"fondo": 0.6,
+					"alto": 0.9
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.45,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "cabeza",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cocina", "encimera"],
+			"simbolo": {
+				"letra": "Ce",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/campana_extractora.png",
+				"descripcion": "Huella en planta de «Campana extractora»: una chimenea estrecha detrás y la campana ancha delante de 0,90 por 0,50 metros, colgado a 1,50 metros del suelo, con la letra «Ce»."
+			}
+		},
+		{
+			"id": "mesa_abatible_pared",
+			"nombre": "Mesa abatible de pared",
+			"categoria": "cocina",
+			"subcategoria": "mesas_asientos_cocina",
+			"etiquetas": ["mesa abatible", "mesa plegable de pared", "mesa de cocina abatible", "tablero abatible"],
+			"descripcion": "Tablero sujeto a la pared con bisagras y una escuadra que lo sostiene. Bajado, es una tabla plana pegada a la pared; subido, sobresale a la altura de la cintura y el bastón pasa por debajo sin tocar patas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.07, 0.5, 0.7],
+				"alto": [0.72, 0.75, 0.78]
+			},
+			"variantes": [
+				{
+					"id": "plegada",
+					"nombre": "Plegada contra la pared",
+					"ancho": 0.8,
+					"fondo": 0.07,
+					"alto": 0.75
+				},
+				{
+					"id": "abierta",
+					"nombre": "Abierta",
+					"ancho": 0.8,
+					"fondo": 0.5,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["plegado", "desplegado"],
+			"acciones": [
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina", "terraza"],
+			"obstaculo": "voladizo",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"relacionados": ["taburete"],
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_abatible_pared.png",
+				"descripcion": "Huella en planta de «Mesa abatible de pared»: un rectángulo de 0,80 por 0,50 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "banco_rinconera",
+			"nombre": "Banco rinconera de cocina",
+			"categoria": "cocina",
+			"subcategoria": "mesas_asientos_cocina",
+			"etiquetas": ["rinconera", "banco de esquina", "banco de cocina", "office"],
+			"descripcion": "Banco de madera en forma de ele que ocupa el rincón, con respaldo contra las dos paredes y el asiento que se levanta para guardar cosas. La mesa suele ir delante.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.35], [0.3, 0.35], [0.3, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.0],
+				"fondo": [1.0, 1.2, 1.6],
+				"alto": [0.85, 0.9, 1.0]
+			},
+			"colocacion": ["esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado", "cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cajon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina", "comedor"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["mesa_cocina"],
+			"simbolo": {
+				"letra": "Br",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/banco_rinconera.png",
+				"descripcion": "Huella en planta de «Banco rinconera de cocina»: una ele de 1,60 por 1,20 metros, con la letra «Br»."
+			}
+		},
+		{
+			"id": "cama_abatible",
+			"nombre": "Cama abatible",
+			"categoria": "dormitorio",
+			"subcategoria": "camas",
+			"etiquetas": ["cama abatible", "cama mueble", "cama plegable de pared", "cama armario"],
+			"descripcion": "Armario que en realidad es una cama: de día es un frente liso contra la pared; de noche la cama baja hacia delante y ocupa dos metros de suelo. Lo que hay delante de día estorba de noche.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.95, 1.45, 1.65],
+				"fondo": [0.45, 0.45, 2.15],
+				"alto": [0.4, 2.1, 2.3]
+			},
+			"variantes": [
+				{
+					"id": "plegada",
+					"nombre": "Plegada en su mueble",
+					"ancho": 1.45,
+					"fondo": 0.45,
+					"alto": 2.1
+				},
+				{
+					"id": "abierta",
+					"nombre": "Bajada",
+					"ancho": 1.45,
+					"fondo": 2.1,
+					"alto": 0.45
+				},
+				{
+					"id": "individual",
+					"nombre": "Individual, bajada",
+					"ancho": 1.0,
+					"fondo": 2.1,
+					"alto": 0.45
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["plegado", "desplegado"],
+			"acciones": [
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"sonido": "sonidos/sentarse.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "salon", "habitacion_infantil"],
+			"obstaculo": "alto",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cama_abatible.png",
+				"descripcion": "Huella en planta de «Cama abatible»: un rectángulo de 1,45 por 0,45 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "colchon_hinchable",
+			"nombre": "Colchón hinchable",
+			"categoria": "dormitorio",
+			"subcategoria": "camas",
+			"etiquetas": ["colchón hinchable", "cama hinchable", "colchón de aire"],
+			"descripcion": "Colchón de plástico grueso inflado en el suelo para una visita. Blando y resbaladizo, se hunde al pisarlo y suena a plástico al rozarlo. Hoy está; mañana, desinflado en un armario.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.992, 0.838], [0.966, 0.919], [0.919, 0.966], [0.838, 0.992], [0.5, 1.0], [0.162, 0.992], [0.081, 0.966], [0.034, 0.919], [0.008, 0.838], [0.0, 0.5], [0.008, 0.162], [0.034, 0.081], [0.081, 0.034], [0.162, 0.008], [0.5, 0.0], [0.838, 0.008], [0.919, 0.034], [0.966, 0.081], [0.992, 0.162]]
+			},
+			"medidas": {
+				"ancho": [0.75, 1.4, 1.6],
+				"fondo": [1.85, 1.95, 2.05],
+				"alto": [0.2, 0.3, 0.5]
+			},
+			"variantes": [
+				{
+					"id": "individual",
+					"nombre": "Individual",
+					"ancho": 0.8,
+					"fondo": 1.9,
+					"alto": 0.25
+				},
+				{
+					"id": "doble",
+					"nombre": "Doble",
+					"ancho": 1.4,
+					"fondo": 1.95,
+					"alto": 0.25
+				},
+				{
+					"id": "alto",
+					"nombre": "Doble alto",
+					"ancho": 1.5,
+					"fondo": 2.0,
+					"alto": 0.46
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "salon"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ch",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/colchon_hinchable.png",
+				"descripcion": "Huella en planta de «Colchón hinchable»: un rectángulo de esquinas redondeadas de 1,40 por 1,95 metros, con la letra «Ch»."
+			}
+		},
+		{
+			"id": "columna_bano",
+			"nombre": "Columna de baño",
+			"categoria": "bano",
+			"subcategoria": "muebles_bano",
+			"etiquetas": ["columna de baño", "mueble alto de baño", "armario de baño"],
+			"descripcion": "Mueble alto y estrecho junto al lavabo, con puertas y baldas para toallas y botes. Es más hondo que la pared de al lado y su esquina sale al paso.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.35, 0.45],
+				"fondo": [0.25, 0.3, 0.35],
+				"alto": [1.4, 1.6, 1.8]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["lavabo"],
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna_bano.png",
+				"descripcion": "Huella en planta de «Columna de baño»: un rectángulo de 0,35 por 0,30 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "armario_espejo_bano",
+			"nombre": "Armario con espejo sobre el lavabo",
+			"categoria": "bano",
+			"subcategoria": "muebles_bano",
+			"etiquetas": ["armario espejo", "botiquín de baño", "espejo con armario"],
+			"descripcion": "Armarito colgado sobre el lavabo con la puerta de espejo, a la altura de la cara. Sobresale un palmo y, al abrir la puerta, la hoja de cristal se queda delante de tu cabeza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.6, 1.0],
+				"fondo": [0.12, 0.15, 0.18],
+				"alto": [0.5, 0.65, 0.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "voladizo",
+			"riesgos": ["transparente"],
+			"frecuencia": "comun",
+			"relacionados": ["lavabo"],
+			"simbolo": {
+				"letra": "Ae",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_espejo_bano.png",
+				"descripcion": "Huella en planta de «Armario con espejo sobre el lavabo»: un rectángulo de 0,60 por 0,15 metros, colgado a 1,20 metros del suelo, con la letra «Ae»."
+			}
+		},
+		{
+			"id": "alfombrilla_bano",
+			"nombre": "Alfombrilla de baño",
+			"categoria": "bano",
+			"subcategoria": "muebles_bano",
+			"etiquetas": ["alfombrilla", "alfombra de baño", "toalla de pies", "felpudo de baño"],
+			"descripcion": "Alfombrilla de rizo delante de la bañera o de la ducha. Blanda y húmeda bajo el pie; si no tiene goma debajo, resbala sobre las baldosas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.974, 0.764], [0.897, 0.897], [0.764, 0.974], [0.5, 1.0], [0.236, 0.974], [0.103, 0.897], [0.026, 0.764], [0.0, 0.5], [0.026, 0.236], [0.103, 0.103], [0.236, 0.026], [0.5, 0.0], [0.764, 0.026], [0.897, 0.103], [0.974, 0.236]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.8],
+				"fondo": [0.4, 0.6, 1.0],
+				"alto": [0.01, 0.015, 0.03]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"suelo": "alfombra",
+			"funcion": "referencia",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["banera", "ducha"],
+			"simbolo": {
+				"letra": "Ab",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/alfombrilla_bano.png",
+				"descripcion": "Huella en planta de «Alfombrilla de baño»: un rectángulo de esquinas redondeadas de 0,50 por 0,60 metros, con la letra «Ab»."
+			}
+		},
+		{
+			"id": "bascula_bano",
+			"nombre": "Báscula de baño",
+			"categoria": "bano",
+			"subcategoria": "muebles_bano",
+			"etiquetas": ["báscula", "peso", "báscula parlante", "báscula de baño"],
+			"descripcion": "Plataforma plana de cristal o plástico en el suelo, de un palmo de alto. Se tropieza con ella con la punta del pie; al subirse pita y dice o muestra el peso.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.28, 0.32, 0.36],
+				"fondo": [0.28, 0.32, 0.36],
+				"alto": [0.02, 0.03, 0.06]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"acciones": [
+				{
+					"id": "hog_pesarse",
+					"nombre": "Pesarse",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["vivienda"],
+			"estancias": ["bano", "dormitorio"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bb",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/bascula_bano.png",
+				"descripcion": "Huella en planta de «Báscula de baño»: un rectángulo de esquinas redondeadas de 0,32 por 0,32 metros, con la letra «Bb»."
+			}
+		},
+		{
+			"id": "cesto_ropa",
+			"nombre": "Cesto de la ropa sucia",
+			"categoria": "bano",
+			"subcategoria": "colada",
+			"etiquetas": ["cesto de la ropa", "cesto de ropa sucia", "canasta de la colada", "cubo de ropa"],
+			"descripcion": "Cesto alto de mimbre o de plástico con tapa, en un rincón. Ligero: se vuelca si lo golpeas y suena hueco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.6],
+				"fondo": [0.3, 0.35, 0.4],
+				"alto": [0.5, 0.6, 0.7]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "mimbre",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/tapa_contenedor.flac"
+				},
+				{
+					"id": "tirar_basura",
+					"nombre": "Tirar algo dentro",
+					"sonido": "golpe/tela"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["bano", "lavadero", "dormitorio"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["lavadora"],
+			"simbolo": {
+				"letra": "Cr",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cesto_ropa.png",
+				"descripcion": "Huella en planta de «Cesto de la ropa sucia»: un óvalo de 0,40 por 0,35 metros, con la letra «Cr»."
+			}
+		},
+		{
+			"id": "portarrollos_pie",
+			"nombre": "Portarrollos de pie con escobilla",
+			"categoria": "bano",
+			"subcategoria": "muebles_bano",
+			"etiquetas": ["portarrollos", "escobillero", "portarrollos de pie", "escobilla del váter"],
+			"descripcion": "Varilla de metal sobre una base pesada junto al inodoro, con rollos de papel ensartados y la escobilla en su vaso. Fina y fácil de tirar con el pie.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.18, 0.22, 0.25],
+				"fondo": [0.18, 0.22, 0.25],
+				"alto": [0.6, 0.7, 0.8]
+			},
+			"colocacion": ["suelo", "pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["inodoro"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/portarrollos_pie.png",
+				"descripcion": "Huella en planta de «Portarrollos de pie con escobilla»: un círculo de 0,22 por 0,22 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "escalera_caracol",
+			"nombre": "Escalera de caracol",
+			"categoria": "entrada",
+			"subcategoria": "suelo_escaleras",
+			"etiquetas": ["escalera de caracol", "escalera helicoidal", "escalera de dúplex"],
+			"descripcion": "Escalera que sube dando vueltas alrededor de un poste central, dentro de un círculo de poco más de metro y medio. Los peldaños son triángulos: anchos fuera, casi nada junto al poste. Se sube por el lado de fuera agarrado a la barandilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.6, 2.2],
+				"fondo": [1.2, 1.6, 2.2],
+				"alto": [2.5, 2.7, 3.0]
+			},
+			"variantes": [
+				{
+					"id": "estrecha",
+					"nombre": "Estrecha, de 1,20 m",
+					"ancho": 1.2,
+					"fondo": 1.2,
+					"alto": 2.7
+				},
+				{
+					"id": "normal",
+					"nombre": "De 1,60 m",
+					"ancho": 1.6,
+					"fondo": 1.6,
+					"alto": 2.7
+				},
+				{
+					"id": "amplia",
+					"nombre": "Amplia, de 2 m",
+					"ancho": 2.0,
+					"fondo": 2.0,
+					"alto": 2.7
+				}
+			],
+			"colocacion": ["suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "escalera/subir"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse",
+					"sonido": "escalera/bajar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["vivienda"],
+			"estancias": ["entrada", "salon", "pasillo"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ec",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_caracol.png",
+				"descripcion": "Huella en planta de «Escalera de caracol»: un círculo de 1,60 por 1,60 metros, con la letra «Ec»."
+			}
+		},
+		{
+			"id": "escalera_buhardilla",
+			"nombre": "Escalera escamoteable de buhardilla",
+			"categoria": "entrada",
+			"subcategoria": "suelo_escaleras",
+			"etiquetas": ["escalera escamoteable", "escalera de trampilla", "escalera de desván", "escalera de altillo"],
+			"descripcion": "Trampilla en el techo del pasillo de la que baja una escalera plegable muy empinada. Recogida no se nota; bajada, ocupa el pasillo de lado a lado y arriba queda el hueco abierto.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.65, 0.75],
+				"fondo": [1.2, 1.5, 1.8],
+				"alto": [2.4, 2.5, 2.8]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["plegado", "desplegado"],
+			"acciones": [
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "escalera/subir"
+				}
+			],
+			"paso_libre": ["plegado"],
+			"contenedor": false,
+			"funcion": "estructura",
+			"lugares": ["vivienda"],
+			"estancias": ["pasillo", "trastero", "garaje"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel", "temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Eb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/escalera_buhardilla.png",
+				"descripcion": "Huella en planta de «Escalera escamoteable de buhardilla»: un rectángulo de 0,65 por 1,50 metros, con la letra «Eb»."
+			}
+		},
+		{
+			"id": "tendedero_techo",
+			"nombre": "Tendedero de techo con poleas",
+			"categoria": "lavadero",
+			"subcategoria": "colada",
+			"etiquetas": ["tendedero de techo", "tendedero de poleas", "tendal de techo", "secadero"],
+			"descripcion": "Varillas colgadas del techo con cuerdas y poleas: se bajan para tender y se suben para secar. Bajado, la ropa mojada queda a la altura de la cara; el bastón no lo encuentra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [0.3, 0.5, 0.8]
+			},
+			"variantes": [
+				{
+					"id": "subido",
+					"nombre": "Subido",
+					"ancho": 1.2,
+					"fondo": 0.5,
+					"alto": 0.4
+				},
+				{
+					"id": "bajado",
+					"nombre": "Bajado, con ropa",
+					"ancho": 1.2,
+					"fondo": 0.5,
+					"alto": 0.8
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 1.5,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "hog_tender",
+					"nombre": "Subir o bajar el tendedero",
+					"sonido": "comun:polea_tendedero.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["lavadero", "terraza", "bano"],
+			"obstaculo": "cabeza",
+			"riesgos": ["temporal", "resbaladizo"],
+			"frecuencia": "ocasional",
+			"relacionados": ["lavadora", "cesto_ropa"],
+			"simbolo": {
+				"letra": "Tt",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/tendedero_techo.png",
+				"descripcion": "Huella en planta de «Tendedero de techo con poleas»: un rectángulo de 1,20 por 0,50 metros, colgado a 1,50 metros del suelo, con la letra «Tt»."
+			}
+		},
+		{
+			"id": "congelador_arcon",
+			"nombre": "Congelador arcón",
+			"categoria": "lavadero",
+			"subcategoria": "almacen_lavadero",
+			"etiquetas": ["arcón", "arcón congelador", "congelador horizontal", "congelador de baúl"],
+			"descripcion": "Caja blanca de chapa a la altura de la cadera, con la tapa entera que se levanta hacia arriba. Zumba sin parar y, al abrirla, sale un aliento frío.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.0, 1.6],
+				"fondo": [0.55, 0.65, 0.75],
+				"alto": [0.82, 0.85, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "pequeno",
+					"nombre": "Pequeño, de 100 litros",
+					"ancho": 0.6,
+					"fondo": 0.55,
+					"alto": 0.85
+				},
+				{
+					"id": "mediano",
+					"nombre": "Mediano, de 200 litros",
+					"ancho": 1.0,
+					"fondo": 0.65,
+					"alto": 0.85
+				},
+				{
+					"id": "grande",
+					"nombre": "Grande, de 400 litros",
+					"ancho": 1.5,
+					"fondo": 0.7,
+					"alto": 0.85
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/frigorifico",
+					"volumen": 0.4,
+					"radio": 5
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_electrodomestico.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["lavadero", "garaje", "trastero", "cocina"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/congelador_arcon.png",
+				"descripcion": "Huella en planta de «Congelador arcón»: un rectángulo de 1,00 por 0,65 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "armario_escobero",
+			"nombre": "Armario escobero",
+			"categoria": "lavadero",
+			"subcategoria": "almacen_lavadero",
+			"etiquetas": ["escobero", "armario de limpieza", "armario de escobas", "armario de la limpieza"],
+			"descripcion": "Armario alto y estrecho de una puerta donde se guardan la escoba, la fregona, el cubo y la tabla de planchar. Al abrirlo puede caerse algo hacia ti.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.7],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [1.6, 1.8, 2.1]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["lavadero", "cocina", "pasillo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ae",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_escobero.png",
+				"descripcion": "Huella en planta de «Armario escobero»: un rectángulo de 0,50 por 0,40 metros, con la letra «Ae»."
+			}
+		},
+		{
+			"id": "caldera_mural",
+			"nombre": "Caldera o termo colgado",
+			"categoria": "lavadero",
+			"subcategoria": "instalaciones",
+			"etiquetas": ["caldera", "caldera de gas", "calentador", "termo eléctrico", "calentador de agua"],
+			"descripcion": "Aparato colgado de la pared a la altura de la cabeza, con tubos que bajan hasta el suelo. Cuando se abre un grifo de agua caliente se enciende con un soplo y ruge bajito; el bastón solo encuentra los tubos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.45, 0.6],
+				"fondo": [0.25, 0.35, 0.5],
+				"alto": [0.5, 0.75, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "caldera",
+					"nombre": "Caldera de gas",
+					"ancho": 0.45,
+					"fondo": 0.35,
+					"alto": 0.75
+				},
+				{
+					"id": "calentador",
+					"nombre": "Calentador de gas",
+					"ancho": 0.35,
+					"fondo": 0.25,
+					"alto": 0.6
+				},
+				{
+					"id": "termo",
+					"nombre": "Termo eléctrico",
+					"ancho": 0.45,
+					"fondo": 0.45,
+					"alto": 1.0
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.4,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:caldera_comunitaria.flac",
+					"volumen": 0.2,
+					"radio": 4,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "climatizacion",
+			"lugares": ["vivienda"],
+			"estancias": ["lavadero", "cocina", "bano", "terraza"],
+			"obstaculo": "cabeza",
+			"riesgos": ["caliente"],
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/caldera_mural.png",
+				"descripcion": "Huella en planta de «Caldera o termo colgado»: un rectángulo de 0,45 por 0,35 metros, colgado a 1,40 metros del suelo, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "maquina_coser",
+			"nombre": "Máquina de coser en su mueble",
+			"categoria": "lavadero",
+			"subcategoria": "costura",
+			"etiquetas": ["máquina de coser", "mesa de costura", "costurero", "mueble de máquina de coser"],
+			"descripcion": "Mueble de madera a la altura de la mesa con la máquina encima o escondida bajo una tapa, y un pedal en el suelo. Cosiendo traquetea rápido; alrededor suele haber alfileres y retales.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.1],
+				"fondo": [0.4, 0.45, 0.55],
+				"alto": [0.75, 0.78, 0.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "sonidos/hogar_maquina_coser.flac",
+					"volumen": 0.4,
+					"radio": 5,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "hog_coser",
+					"nombre": "Coser a máquina",
+					"sonido": "sonidos/hogar_maquina_coser.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["vivienda"],
+			"estancias": ["lavadero", "dormitorio", "salon"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["tabla_planchar"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#1F618D"
+			},
+			"imagen": {
+				"fichero": "imagenes/maquina_coser.png",
+				"descripcion": "Huella en planta de «Máquina de coser en su mueble»: un rectángulo de 0,90 por 0,45 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "sillon_colgante",
+			"nombre": "Sillón colgante",
+			"categoria": "terraza",
+			"subcategoria": "descanso_terraza",
+			"etiquetas": ["sillón colgante", "silla huevo", "columpio de terraza", "silla nido"],
+			"descripcion": "Cesta redonda de mimbre o de cuerda con cojines, colgada de un arco de metal con un pie pesado. Se balancea y gira al tocarla; el arco pasa por encima de la cabeza.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.3, 0.0], [0.7, 0.0], [0.7, 0.25], [0.9, 0.35], [1.0, 0.6], [0.9, 0.88], [0.5, 1.0], [0.1, 0.88], [0.0, 0.6], [0.1, 0.35], [0.3, 0.25]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.05, 1.2],
+				"fondo": [0.9, 1.1, 1.3],
+				"alto": [1.9, 2.0, 2.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "mimbre",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "hog_balancearse",
+					"nombre": "Balancearse",
+					"sonido": "comun:columpio_chirrido.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["terraza", "salon", "jardin"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Sc",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon_colgante.png",
+				"descripcion": "Huella en planta de «Sillón colgante»: el pie del soporte detrás y la cesta redonda colgando delante de 1,05 por 1,10 metros, con la letra «Sc»."
+			}
+		},
+		{
+			"id": "hamaca_soporte",
+			"nombre": "Hamaca con soporte",
+			"categoria": "terraza",
+			"subcategoria": "descanso_terraza",
+			"etiquetas": ["hamaca", "hamaca paraguaya", "hamaca con soporte", "hamaca de jardín"],
+			"descripcion": "Hamaca de tela colgada entre los dos extremos de un soporte largo de madera o metal. Los pies del soporte, en los extremos, se tropiezan; la tela, en medio, cede y se balancea.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.1, 0.0], [0.1, 0.38], [0.9, 0.38], [0.9, 0.0], [1.0, 0.0], [1.0, 1.0], [0.9, 1.0], [0.9, 0.62], [0.1, 0.62], [0.1, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.6, 3.0, 3.6],
+				"fondo": [0.9, 1.1, 1.3],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "hog_balancearse",
+					"nombre": "Balancearse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "descanso",
+			"lugares": ["vivienda", "jardin"],
+			"estancias": ["terraza", "jardin"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Hs",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/hamaca_soporte.png",
+				"descripcion": "Huella en planta de «Hamaca con soporte»: dos pies anchos en los extremos unidos por una tela estrecha de 3,00 por 1,10 metros, con la letra «Hs»."
+			}
+		},
+		{
+			"id": "barbacoa_portatil",
+			"nombre": "Barbacoa portátil de tapa",
+			"categoria": "terraza",
+			"subcategoria": "barbacoa_lena",
+			"etiquetas": ["barbacoa", "barbacoa de carbón", "barbacoa de gas", "parrilla"],
+			"descripcion": "Cuenco redondo de chapa sobre tres patas, a la altura de la cintura, con una tapa abombada. Encendida, las brasas crepitan, huele a humo y quema por todos los lados.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.6, 1.2],
+				"fondo": [0.45, 0.6, 0.7],
+				"alto": [0.85, 0.95, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "redonda",
+					"nombre": "Redonda de carbón",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 0.95
+				},
+				{
+					"id": "gas",
+					"nombre": "De gas con repisas",
+					"ancho": 1.2,
+					"fondo": 0.55,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "comun:barbacoa_brasas.flac",
+					"volumen": 0.4,
+					"radio": 6,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido", "cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "juego:cofre_abrir.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "juego:cofre_cerrar.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda", "jardin"],
+			"estancias": ["terraza", "jardin"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente", "movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["lena_apilada"],
+			"simbolo": {
+				"letra": "Bp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/barbacoa_portatil.png",
+				"descripcion": "Huella en planta de «Barbacoa portátil de tapa»: un círculo de 0,60 por 0,60 metros, con la letra «Bp»."
+			}
+		},
+		{
+			"id": "lena_apilada",
+			"nombre": "Leña apilada",
+			"categoria": "terraza",
+			"subcategoria": "barbacoa_lena",
+			"etiquetas": ["leña", "leñero", "troncos", "pila de leña", "astillas"],
+			"descripcion": "Pila de troncos cortados contra una pared, a veces dentro de un leñero de hierro. Áspera, con astillas; los troncos de arriba ruedan si los tocas.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 1.2, 2.5],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.4, 0.9, 1.6]
+			},
+			"variantes": [
+				{
+					"id": "cesto",
+					"nombre": "En un cesto junto a la chimenea",
+					"ancho": 0.6,
+					"fondo": 0.4,
+					"alto": 0.45
+				},
+				{
+					"id": "lenero",
+					"nombre": "En un leñero",
+					"ancho": 1.0,
+					"fondo": 0.4,
+					"alto": 1.2
+				},
+				{
+					"id": "pila",
+					"nombre": "Pila contra la pared",
+					"ancho": 2.0,
+					"fondo": 0.5,
+					"alto": 1.0
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "golpe/madera"
+				}
+			],
+			"contenedor": false,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["terraza", "salon", "garaje", "jardin"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"relacionados": ["chimenea", "barbacoa_portatil"],
+			"simbolo": {
+				"letra": "La",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/lena_apilada.png",
+				"descripcion": "Huella en planta de «Leña apilada»: un rectángulo de 1,20 por 0,40 metros, con la letra «La»."
+			}
+		},
+		{
+			"id": "cortacesped",
+			"nombre": "Cortacésped",
+			"categoria": "terraza",
+			"subcategoria": "jardin_terraza",
+			"etiquetas": ["cortacésped", "cortacéspedes", "segadora", "máquina de cortar el césped"],
+			"descripcion": "Carcasa baja con ruedas y un manillar largo que sube hasta la cintura. Parado en el césped es un obstáculo bajo; en marcha ruge y lanza hierba, y no se debe meter el pie.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.15, 0.0], [0.85, 0.0], [0.85, 0.45], [1.0, 0.45], [1.0, 1.0], [0.0, 1.0], [0.0, 0.45], [0.15, 0.45]]
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [1.2, 1.5, 1.7],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/hogar_cortacesped.flac",
+					"volumen": 0.6,
+					"radio": 15,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "sonidos/hogar_cortacesped.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "sonidos/hogar_cortacesped.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "herramienta",
+			"lugares": ["vivienda", "jardin"],
+			"estancias": ["jardin", "garaje"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Co",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/cortacesped.png",
+				"descripcion": "Huella en planta de «Cortacésped»: el manillar detrás y la carcasa ancha delante de 0,50 por 1,50 metros, con la letra «Co»."
+			}
+		},
+		{
+			"id": "armario_resina_terraza",
+			"nombre": "Armario de resina de terraza",
+			"categoria": "terraza",
+			"subcategoria": "jardin_terraza",
+			"etiquetas": ["armario de exterior", "armario de resina", "armario de terraza", "baúl de jardín"],
+			"descripcion": "Armario de plástico duro con puertas de rejilla, contra la pared de la terraza, donde se guardan herramientas, cojines y bombonas. Suena hueco al golpearlo.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 1.4],
+				"fondo": [0.4, 0.45, 0.6],
+				"alto": [0.9, 1.7, 1.9]
+			},
+			"variantes": [
+				{
+					"id": "bajo",
+					"nombre": "Bajo, tipo baúl",
+					"ancho": 1.2,
+					"fondo": 0.55,
+					"alto": 0.9
+				},
+				{
+					"id": "alto",
+					"nombre": "Alto, de dos puertas",
+					"ancho": 0.7,
+					"fondo": 0.45,
+					"alto": 1.7
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/puerta_mueble.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["terraza", "jardin"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ar",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_resina_terraza.png",
+				"descripcion": "Huella en planta de «Armario de resina de terraza»: un rectángulo de 0,70 por 0,45 metros, con la letra «Ar»."
+			}
+		},
+		{
+			"id": "piscina_hinchable",
+			"nombre": "Piscina hinchable",
+			"categoria": "terraza",
+			"subcategoria": "jardin_terraza",
+			"etiquetas": ["piscina hinchable", "piscina de plástico", "piscina desmontable", "piscina infantil"],
+			"descripcion": "Piscina de plástico con el borde hinchado a la altura de la rodilla, llena de agua. Alrededor el suelo está mojado y resbala; el borde cede si te apoyas.",
+			"ambito": ["exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.99, 0.813], [0.959, 0.904], [0.904, 0.959], [0.813, 0.99], [0.5, 1.0], [0.187, 0.99], [0.096, 0.959], [0.041, 0.904], [0.01, 0.813], [0.0, 0.5], [0.01, 0.187], [0.041, 0.096], [0.096, 0.041], [0.187, 0.01], [0.5, 0.0], [0.813, 0.01], [0.904, 0.041], [0.959, 0.096], [0.99, 0.187]]
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 3.0],
+				"fondo": [1.0, 1.5, 2.0],
+				"alto": [0.25, 0.5, 0.75]
+			},
+			"variantes": [
+				{
+					"id": "infantil",
+					"nombre": "Infantil redonda",
+					"ancho": 1.2,
+					"fondo": 1.2,
+					"alto": 0.3
+				},
+				{
+					"id": "familiar",
+					"nombre": "Familiar rectangular",
+					"ancho": 2.6,
+					"fondo": 1.6,
+					"alto": 0.55
+				},
+				{
+					"id": "desmontable",
+					"nombre": "Desmontable de tubos",
+					"ancho": 3.0,
+					"fondo": 2.0,
+					"alto": 0.75
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse",
+					"sonido": "comun:chapuzon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "agua",
+			"lugares": ["vivienda", "jardin"],
+			"estancias": ["terraza", "jardin"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal", "resbaladizo", "desnivel"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ph",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/piscina_hinchable.png",
+				"descripcion": "Huella en planta de «Piscina hinchable»: un rectángulo de esquinas redondeadas de 2,00 por 1,50 metros, con la letra «Ph»."
+			}
+		},
+		{
+			"id": "cortina_tiras",
+			"nombre": "Cortina de tiras en la puerta",
+			"categoria": "terraza",
+			"subcategoria": "puertas",
+			"etiquetas": ["cortina de tiras", "mosquitera", "cortina de cuentas", "cortina antimoscas"],
+			"descripcion": "Cortina de tiras de plástico o de cuentas colgada en el marco de la puerta de la terraza o de la cocina, contra las moscas. No corta el paso: se atraviesa y las tiras repiquetean sobre los hombros.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.85, 1.0],
+				"fondo": [0.02, 0.03, 0.05],
+				"alto": [2.0, 2.05, 2.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "sonidos/hogar_cortina_tiras.flac",
+				"uso": "sonidos/hogar_cortina_tiras.flac"
+			},
+			"acciones": [
+				{
+					"id": "pasar",
+					"nombre": "Pasar",
+					"sonido": "sonidos/hogar_cortina_tiras.flac"
+				}
+			],
+			"contenedor": false,
+			"aviso": "Cortina de tiras: la atraviesas.",
+			"funcion": "barrera",
+			"lugares": ["vivienda"],
+			"estancias": ["terraza", "cocina", "entrada"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["puerta_terraza"],
+			"simbolo": {
+				"letra": "Ct",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/cortina_tiras.png",
+				"descripcion": "Huella en planta de «Cortina de tiras en la puerta»: un rectángulo de 0,85 por 0,03 metros, con la letra «Ct»."
+			}
+		},
+		{
+			"id": "cama_nido",
+			"nombre": "Cama nido",
+			"categoria": "infantil",
+			"subcategoria": "camas_infantiles",
+			"etiquetas": ["cama nido", "cama doble nido", "cama con cama debajo", "cama de invitados"],
+			"descripcion": "Cama individual, arrimada a la pared por su lado largo, con otra cama escondida debajo que se saca tirando de ella como de un cajón grande. Sacada, la de abajo queda a la altura del tobillo y ocupa todo el paso junto a la cama.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.95, 1.0, 2.1],
+				"fondo": [1.95, 2.0, 2.05],
+				"alto": [0.4, 0.5, 0.95]
+			},
+			"variantes": [
+				{
+					"id": "cerrada",
+					"nombre": "Con la de abajo guardada",
+					"ancho": 1.0,
+					"fondo": 2.0,
+					"alto": 0.5
+				},
+				{
+					"id": "abierta",
+					"nombre": "Con la de abajo sacada",
+					"ancho": 2.0,
+					"fondo": 2.0,
+					"alto": 0.5
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "sonidos/cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "sonidos/cajon.flac"
+				},
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"sonido": "sonidos/sentarse.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["habitacion_infantil", "dormitorio"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cn",
+				"color": "#AF601A"
+			},
+			"imagen": {
+				"fichero": "imagenes/cama_nido.png",
+				"descripcion": "Huella en planta de «Cama nido»: un rectángulo de 1,00 por 2,00 metros, con la letra «Cn»."
+			}
+		},
+		{
+			"id": "cama_montessori",
+			"nombre": "Cama casita Montessori",
+			"categoria": "infantil",
+			"subcategoria": "camas_infantiles",
+			"etiquetas": ["cama montessori", "cama casita", "cama de suelo", "cama cabaña"],
+			"descripcion": "Colchón casi a ras de suelo dentro de un armazón de listones con forma de casita: cuatro postes y un tejado a dos aguas por encima de la cabeza. Los postes de las esquinas se encuentran con el bastón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.5],
+				"fondo": [1.5, 2.0, 2.05],
+				"alto": [1.4, 1.6, 1.9]
+			},
+			"variantes": [
+				{
+					"id": "de_70",
+					"nombre": "De 70 por 140",
+					"ancho": 0.8,
+					"fondo": 1.5,
+					"alto": 1.4
+				},
+				{
+					"id": "de_90",
+					"nombre": "De 90 por 190",
+					"ancho": 1.0,
+					"fondo": 2.0,
+					"alto": 1.6
+				}
+			],
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "sonidos/sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["habitacion_infantil"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cm",
+				"color": "#AF601A"
+			},
+			"imagen": {
+				"fichero": "imagenes/cama_montessori.png",
+				"descripcion": "Huella en planta de «Cama casita Montessori»: un rectángulo de 1,00 por 2,00 metros, con la letra «Cm»."
+			}
+		},
+		{
+			"id": "cuna_colecho",
+			"nombre": "Cuna de colecho",
+			"categoria": "infantil",
+			"subcategoria": "camas_infantiles",
+			"etiquetas": ["colecho", "cuna de colecho", "minicuna", "cuna sidecar"],
+			"descripcion": "Cuna pequeña de barrotes con un lateral abierto que se arrima pegado a la cama de los padres, a la misma altura que el colchón. Entre las dos camas no queda paso.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.94, 1.0], [0.94, 0.06], [0.06, 0.06], [0.06, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [0.85, 0.95, 1.0],
+				"alto": [0.7, 0.8, 0.9]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio", "habitacion_infantil"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"relacionados": ["cama", "cama_cabecero"],
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#AF601A"
+			},
+			"imagen": {
+				"fichero": "imagenes/cuna_colecho.png",
+				"descripcion": "Huella en planta de «Cuna de colecho»: una U de barrotes abierta por el lado que se arrima a la cama grande de 0,60 por 0,95 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "banera_bebe_patas",
+			"nombre": "Bañera de bebé con patas",
+			"categoria": "infantil",
+			"subcategoria": "cuidado_bebe",
+			"etiquetas": ["bañera de bebé", "bañerita", "bañera con patas", "bañera cambiador"],
+			"descripcion": "Bañerita de plástico sobre un armazón de patas plegables, a la altura de la cintura, a veces con un cambiador encima. Llena pesa y salpica; vacía se mueve con facilidad.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.984, 0.84], [0.935, 0.935], [0.84, 0.984], [0.5, 1.0], [0.16, 0.984], [0.065, 0.935], [0.016, 0.84], [0.0, 0.5], [0.016, 0.16], [0.065, 0.065], [0.16, 0.016], [0.5, 0.0], [0.84, 0.016], [0.935, 0.065], [0.984, 0.16]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.55, 0.6],
+				"fondo": [0.85, 0.9, 1.0],
+				"alto": [0.85, 0.95, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.25,
+					"radio": 3,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["vivienda"],
+			"estancias": ["bano", "habitacion_infantil"],
+			"obstaculo": "medio",
+			"riesgos": ["resbaladizo", "movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bb",
+				"color": "#AF601A"
+			},
+			"imagen": {
+				"fichero": "imagenes/banera_bebe_patas.png",
+				"descripcion": "Huella en planta de «Bañera de bebé con patas»: un rectángulo de esquinas redondeadas de 0,55 por 0,90 metros, con la letra «Bb»."
+			}
+		},
+		{
+			"id": "gimnasio_bebe",
+			"nombre": "Gimnasio de bebé",
+			"categoria": "infantil",
+			"subcategoria": "cuidado_bebe",
+			"etiquetas": ["gimnasio de bebé", "manta de actividades", "alfombra de juegos", "arco de juegos"],
+			"descripcion": "Manta acolchada en el suelo con dos arcos cruzados por encima, a la altura de la rodilla, de los que cuelgan juguetes que suenan. Blanda al pisarla; los arcos se enganchan en los pies.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.85, 1.0],
+				"fondo": [0.7, 0.85, 1.0],
+				"alto": [0.4, 0.45, 0.55]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "sonidos/juguetes.flac"
+			},
+			"acciones": [
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "sonidos/juguetes.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "juego",
+			"lugares": ["vivienda"],
+			"estancias": ["habitacion_infantil", "salon"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Gb",
+				"color": "#AF601A"
+			},
+			"imagen": {
+				"fichero": "imagenes/gimnasio_bebe.png",
+				"descripcion": "Huella en planta de «Gimnasio de bebé»: un rectángulo de esquinas redondeadas de 0,85 por 0,85 metros, con la letra «Gb»."
+			}
+		},
+		{
+			"id": "taburete_escalon",
+			"nombre": "Taburete escalón infantil",
+			"categoria": "infantil",
+			"subcategoria": "cuidado_bebe",
+			"etiquetas": ["taburete", "escalón", "alzador", "banqueta de baño"],
+			"descripcion": "Escalón de plástico de uno o dos peldaños delante del lavabo o del váter, para que llegue un niño. Bajo y ligero: se tropieza y se desliza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.125, 0.0], [0.875, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.45],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.15, 0.22, 0.35]
+			},
+			"variantes": [
+				{
+					"id": "un_peldano",
+					"nombre": "De un peldaño",
+					"ancho": 0.4,
+					"fondo": 0.28,
+					"alto": 0.2
+				},
+				{
+					"id": "dos_peldanos",
+					"nombre": "De dos peldaños",
+					"ancho": 0.4,
+					"fondo": 0.38,
+					"alto": 0.33
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "subir",
+					"nombre": "Subirse"
+				},
+				{
+					"id": "bajar",
+					"nombre": "Bajarse"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["vivienda"],
+			"estancias": ["bano", "habitacion_infantil", "cocina"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil", "desnivel"],
+			"frecuencia": "comun",
+			"relacionados": ["lavabo", "inodoro"],
+			"simbolo": {
+				"letra": "Te",
+				"color": "#AF601A"
+			},
+			"imagen": {
+				"fichero": "imagenes/taburete_escalon.png",
+				"descripcion": "Huella en planta de «Taburete escalón infantil»: un trapecio, más estrecho por detrás de 0,40 por 0,30 metros, con la letra «Te»."
+			}
+		},
+		{
+			"id": "robot_aspirador",
+			"nombre": "Robot aspirador en marcha",
+			"categoria": "trastos",
+			"subcategoria": "sueltos",
+			"etiquetas": ["robot aspirador", "roomba", "aspirador robot", "robot de limpieza"],
+			"descripcion": "Disco bajo que va solo por el suelo zumbando, choca contra los muebles, gira y sigue. Se mete bajo las camas y aparece entre los pies: un obstáculo que se mueve.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.32, 0.35, 0.38],
+				"fondo": [0.32, 0.35, 0.38],
+				"alto": [0.08, 0.1, 0.12]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "sonidos/aspiradora.flac",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.3,
+					"radio": 5,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "sonidos/interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "sonidos/interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["cualquiera"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ra",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/robot_aspirador.png",
+				"descripcion": "Huella en planta de «Robot aspirador en marcha»: un círculo de 0,35 por 0,35 metros, con la letra «Ra»."
+			}
+		}
+	]
+}

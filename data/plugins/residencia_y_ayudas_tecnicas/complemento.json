@@ -1,0 +1,5773 @@
+{
+	"formato": 1,
+	"id": "residencia_y_ayudas_tecnicas",
+	"nombre": "Residencia y ayudas técnicas",
+	"version": "1.0.0",
+	"autor": "Héctor J. Benítez Corredera",
+	"licencia": "CC BY 4.0",
+	"descripcion": "Residencia de mayores y centro de día, vivienda adaptada, grúas, barras, rampas y elevadores, y la señalización táctil y sonora y los aparatos de las personas ciegas y sordas.",
+	"depende_de": ["comun", "hogar", "colegio", "oficina_y_comercio", "calle", "transporte", "juego"],
+	"categorias": {
+		"sala_estar": "Sala de estar y comedor de residencia",
+		"habitacion": "Habitación de residencia y control",
+		"terapia": "Terapia ocupacional y gimnasia",
+		"bano_adaptado": "Aseo y baño adaptados",
+		"vivienda": "Cocina y casa adaptadas",
+		"movilidad": "Grúas, rampas y elevadores",
+		"orientacion": "Señalización táctil y sonora",
+		"ciegos_sordos": "Aparatos para ciegos y sordos y perro guía"
+	},
+	"subcategorias": {
+		"sillones_residencia": "Sillones y sillas de residencia",
+		"mesas_residencia": "Mesas de comedor y de juegos",
+		"ambiente_sala": "Sonidos y referencias de la sala",
+		"cama_y_entorno": "Cama articulada y su entorno",
+		"mobiliario_habitacion": "Mobiliario de la habitación",
+		"control_enfermeria": "Control de enfermería y planta",
+		"terapia_ocupacional": "Terapia ocupacional",
+		"gimnasia_mantenimiento": "Gimnasia de mantenimiento",
+		"estimulacion": "Estimulación y juegos",
+		"sanitarios_adaptados": "Sanitarios adaptados",
+		"barras_apoyo": "Barras de apoyo",
+		"ducha_y_banera": "Ducha y bañera adaptadas",
+		"accesorios_aseo": "Accesorios del aseo adaptado",
+		"cocina_adaptada": "Cocina adaptada",
+		"ayudas_casa": "Ayudas en casa",
+		"gruas": "Grúas de traslado",
+		"elevadores": "Salvaescaleras y plataformas",
+		"rampas_pasamanos": "Rampas y pasamanos",
+		"vehiculos_ayuda": "Scooter y evacuación",
+		"planos_tactiles": "Planos y maquetas táctiles",
+		"pavimento_interior": "Franjas y marcas del suelo",
+		"rotulos_braille": "Rótulos en braille",
+		"avisos_sonoros": "Balizas, llamadas e intercomunicadores",
+		"accesos": "Accesos y mostradores accesibles",
+		"puestos_adaptados": "Puestos de lectura y escritura adaptados",
+		"braille_y_relieve": "Braille y relieve",
+		"avisos_hogar": "Avisos y aparatos de casa",
+		"perro_guia": "Perro guía y bastones"
+	},
+	"estados": {
+		"libre": "Libre",
+		"ocupado": "Ocupado",
+		"apagado": "Apagado",
+		"encendido": "Encendido",
+		"regulado_bajo": "Abajo",
+		"regulado_alto": "Arriba",
+		"cerrado": "Cerrado",
+		"abierto": "Abierto",
+		"plegado": "Plegado",
+		"desplegado": "Desplegado",
+		"funcionando": "Funcionando",
+		"en_espera": "En espera",
+		"llamando": "Llamando"
+	},
+	"objetos": [
+		{
+			"id": "sillon_geriatrico",
+			"nombre": "Sillón geriátrico de respaldo alto",
+			"categoria": "sala_estar",
+			"subcategoria": "sillones_residencia",
+			"etiquetas": ["sillón geriátrico", "butaca geriátrica", "sillón de respaldo alto", "orejero de residencia"],
+			"descripcion": "Sillón firme y alto de asiento, con brazos de madera para apoyarse al levantarse y un respaldo que llega a la cabeza. Tapizado liso, que se limpia.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.62, 0.68, 0.78],
+				"fondo": [0.7, 0.78, 0.9],
+				"alto": [1.05, 1.15, 1.3]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia", "hospital"],
+			"estancias": ["sala_comun", "dormitorio"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Sg",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon_geriatrico.png",
+				"descripcion": "Huella en planta de «Sillón geriátrico de respaldo alto»: un rectángulo de 0,68 por 0,78 metros, con la letra «Sg»."
+			}
+		},
+		{
+			"id": "sillon_geriatrico_ruedas",
+			"nombre": "Sillón geriátrico reclinable con ruedas",
+			"categoria": "sala_estar",
+			"subcategoria": "sillones_residencia",
+			"etiquetas": ["sillón de traslado", "sillón reclinable con ruedas", "sillón con bandeja", "sillón basculante"],
+			"descripcion": "Sillón de traslado con cuatro ruedas, reposapiés y una bandeja delante. Reclinado es largo como una tumbona; si lo empujas sin freno, rueda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.65, 0.72, 0.8],
+				"fondo": [0.85, 1.1, 1.7],
+				"alto": [1.05, 1.25, 1.35]
+			},
+			"variantes": [
+				{
+					"id": "incorporado",
+					"nombre": "Incorporado",
+					"ancho": 0.72,
+					"fondo": 0.9,
+					"alto": 1.25
+				},
+				{
+					"id": "reclinado",
+					"nombre": "Reclinado del todo",
+					"ancho": 0.72,
+					"fondo": 1.6,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia", "hospital"],
+			"estancias": ["sala_comun", "dormitorio", "pasillo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Sg",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon_geriatrico_ruedas.png",
+				"descripcion": "Huella en planta de «Sillón geriátrico reclinable con ruedas»: un rectángulo de 0,72 por 1,10 metros, con la letra «Sg»."
+			}
+		},
+		{
+			"id": "sillon_relax_reposapies",
+			"nombre": "Sillón de relax con reposapiés",
+			"categoria": "sala_estar",
+			"subcategoria": "sillones_residencia",
+			"etiquetas": ["sillón relax", "sillón reclinable", "sillón con reposapiés", "butaca relax"],
+			"descripcion": "Sillón blando con el reposapiés sacado: delante del asiento sale una tabla acolchada, más estrecha, a la altura de la rodilla. El bastón la encuentra antes que al sillón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.62], [0.85, 0.62], [0.85, 1.0], [0.15, 1.0], [0.15, 0.62], [0.0, 0.62]]
+			},
+			"medidas": {
+				"ancho": [0.75, 0.85, 0.95],
+				"fondo": [1.4, 1.55, 1.75],
+				"alto": [0.95, 1.05, 1.15]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["sala_comun", "salon"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Sr",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon_relax_reposapies.png",
+				"descripcion": "Huella en planta de «Sillón de relax con reposapiés»: una te de 0,85 por 1,55 metros, con la letra «Sr»."
+			}
+		},
+		{
+			"id": "hilera_sillones",
+			"nombre": "Hilera de sillones de sala común",
+			"categoria": "sala_estar",
+			"subcategoria": "sillones_residencia",
+			"etiquetas": ["fila de sillones", "sillones en fila", "sillones de la sala", "bancada de sillones"],
+			"descripcion": "Varios sillones iguales, brazo con brazo, puestos en fila contra la pared. Se sigue con la mano de brazo en brazo; las piernas de quien está sentado invaden el paso.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.9, 2.6, 5.2],
+				"fondo": [0.75, 0.8, 0.9],
+				"alto": [1.0, 1.1, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "tres",
+					"nombre": "Tres sillones",
+					"ancho": 1.95,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "cuatro",
+					"nombre": "Cuatro sillones",
+					"ancho": 2.6,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "seis",
+					"nombre": "Seis sillones",
+					"ancho": 3.9,
+					"fondo": 0.8,
+					"alto": 1.1
+				},
+				{
+					"id": "ocho",
+					"nombre": "Ocho sillones",
+					"ancho": 5.2,
+					"fondo": 0.8,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cuero",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia"],
+			"estancias": ["sala_comun"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["televisor_sala_alto"],
+			"simbolo": {
+				"letra": "Hs",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/hilera_sillones.png",
+				"descripcion": "Huella en planta de «Hilera de sillones de sala común»: un rectángulo de 2,60 por 0,80 metros, con la letra «Hs»."
+			}
+		},
+		{
+			"id": "silla_comedor_brazos",
+			"nombre": "Silla de comedor con reposabrazos",
+			"categoria": "sala_estar",
+			"subcategoria": "sillones_residencia",
+			"etiquetas": ["silla con brazos", "silla con reposabrazos", "silla geriátrica de comedor"],
+			"descripcion": "Silla de madera pesada, con dos brazos para apoyarse al sentarse y al levantarse. Más ancha que una silla corriente y difícil de volcar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.58, 0.65],
+				"fondo": [0.55, 0.6, 0.65],
+				"alto": [0.82, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia"],
+			"estancias": ["comedor_colectivo", "sala_comun"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesa_escotadura"],
+			"simbolo": {
+				"letra": "Sc",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_comedor_brazos.png",
+				"descripcion": "Huella en planta de «Silla de comedor con reposabrazos»: un rectángulo de 0,58 por 0,60 metros, con la letra «Sc»."
+			}
+		},
+		{
+			"id": "mesa_escotadura",
+			"nombre": "Mesa de comedor con escotaduras",
+			"categoria": "sala_estar",
+			"subcategoria": "mesas_residencia",
+			"etiquetas": ["mesa con escotadura", "mesa adaptada de comedor", "mesa para silla de ruedas", "mesa de residencia"],
+			"descripcion": "Mesa de comedor con un mordisco redondeado en cada lado largo, para arrimar una silla de ruedas. Sin faldón: debajo queda libre hasta más arriba de la rodilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.3, 0.0], [0.34, 0.16], [0.5, 0.24], [0.66, 0.16], [0.7, 0.0], [1.0, 0.0], [1.0, 1.0], [0.7, 1.0], [0.66, 0.84], [0.5, 0.76], [0.34, 0.84], [0.3, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.6],
+				"fondo": [0.8, 0.9, 1.0],
+				"alto": [0.74, 0.77, 0.82]
+			},
+			"variantes": [
+				{
+					"id": "dos_plazas",
+					"nombre": "De dos plazas",
+					"ancho": 0.9,
+					"fondo": 0.8,
+					"alto": 0.77
+				},
+				{
+					"id": "cuatro_plazas",
+					"nombre": "De cuatro plazas",
+					"ancho": 1.2,
+					"fondo": 0.9,
+					"alto": 0.77
+				},
+				{
+					"id": "seis_plazas",
+					"nombre": "De seis plazas",
+					"ancho": 1.6,
+					"fondo": 1.0,
+					"alto": 0.77
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["residencia"],
+			"estancias": ["comedor_colectivo", "sala_comun"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["silla_comedor_brazos"],
+			"simbolo": {
+				"letra": "Me",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_escotadura.png",
+				"descripcion": "Huella en planta de «Mesa de comedor con escotaduras»: un rectángulo con una escotadura redondeada delante y otra detrás de 1,20 por 0,90 metros, con la letra «Me»."
+			}
+		},
+		{
+			"id": "mesa_juegos_residencia",
+			"nombre": "Mesa de cartas y dominó",
+			"categoria": "sala_estar",
+			"subcategoria": "mesas_residencia",
+			"etiquetas": ["mesa de juegos", "mesa de cartas", "mesa de dominó", "tapete"],
+			"descripcion": "Mesa cuadrada de esquinas matadas, con tapete y un reborde para que no caigan las fichas. Alrededor suele haber cuatro personas sentadas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.12, 0.0], [0.88, 0.0], [1.0, 0.12], [1.0, 0.88], [0.88, 1.0], [0.12, 1.0], [0.0, 0.88], [0.0, 0.12]]
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.0],
+				"fondo": [0.8, 0.9, 1.0],
+				"alto": [0.72, 0.75, 0.78]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "hogar:juguetes.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["sala_comun"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["silla_comedor_brazos"],
+			"simbolo": {
+				"letra": "Mj",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_juegos_residencia.png",
+				"descripcion": "Huella en planta de «Mesa de cartas y dominó»: un rectángulo con las esquinas cortadas de 0,90 por 0,90 metros, con la letra «Mj»."
+			}
+		},
+		{
+			"id": "televisor_sala_alto",
+			"nombre": "Televisor de sala común colgado en alto",
+			"categoria": "sala_estar",
+			"subcategoria": "ambiente_sala",
+			"etiquetas": ["televisor de pared", "televisión colgada", "pantalla de la sala", "tele de la residencia"],
+			"descripcion": "Televisor grande colgado de la pared por encima de las cabezas, con el volumen alto. No se toca con el bastón: se oye desde toda la sala y sirve de referencia.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.5],
+				"fondo": [0.08, 0.1, 0.25],
+				"alto": [0.55, 0.7, 0.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.6,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/television",
+					"volumen": 0.55,
+					"radio": 12,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["sala_comun", "sala_espera"],
+			"obstaculo": "cabeza",
+			"frecuencia": "muy_comun",
+			"relacionados": ["hilera_sillones"],
+			"simbolo": {
+				"letra": "Ts",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/televisor_sala_alto.png",
+				"descripcion": "Huella en planta de «Televisor de sala común colgado en alto»: un rectángulo de 1,20 por 0,10 metros, colgado a 1,60 metros del suelo, con la letra «Ts»."
+			}
+		},
+		{
+			"id": "jaula_pajaros_sala",
+			"nombre": "Jaula de pájaros en su pie",
+			"categoria": "sala_estar",
+			"subcategoria": "ambiente_sala",
+			"etiquetas": ["jaula", "pajarera", "canarios", "jaula de canarios"],
+			"descripcion": "Jaula de alambre sobre un pie de metal, a la altura de la cara. Los canarios cantan a ratos: se sabe dónde está sin tocarla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.4, 0.5, 0.6],
+				"alto": [1.5, 1.65, 1.8]
+			},
+			"colocacion": ["suelo", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/pajaros",
+					"volumen": 0.35,
+					"radio": 8
+				}
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["sala_comun", "patio"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Jp",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/jaula_pajaros_sala.png",
+				"descripcion": "Huella en planta de «Jaula de pájaros en su pie»: un círculo de 0,50 por 0,50 metros, con la letra «Jp»."
+			}
+		},
+		{
+			"id": "panel_orientacion_fecha",
+			"nombre": "Panel de fecha y hora de la sala",
+			"categoria": "sala_estar",
+			"subcategoria": "ambiente_sala",
+			"etiquetas": ["panel de orientación", "calendario grande", "reloj calendario", "hoy es"],
+			"descripcion": "Panel colgado a la altura de la cara con un reloj grande y el día, la fecha y el tiempo en letras de relieve. Se oye el tictac al acercarse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.2],
+				"fondo": [0.03, 0.05, 0.08],
+				"alto": [0.4, 0.6, 0.8]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/reloj",
+					"volumen": 0.3,
+					"radio": 4
+				}
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["residencia"],
+			"estancias": ["sala_comun", "pasillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Po",
+				"color": "#8B5A2B"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_orientacion_fecha.png",
+				"descripcion": "Huella en planta de «Panel de fecha y hora de la sala»: un rectángulo de 0,90 por 0,05 metros, colgado a 1,20 metros del suelo, con la letra «Po»."
+			}
+		},
+		{
+			"id": "cama_geriatrica",
+			"nombre": "Cama articulada geriátrica con barandillas",
+			"categoria": "habitacion",
+			"subcategoria": "cama_y_entorno",
+			"etiquetas": ["cama geriátrica", "cama articulada", "cama de residencia", "cama eléctrica con barandillas"],
+			"descripcion": "Cama articulada de residencia, con cabecero y piecero de madera y barandillas a los lados. Baja mucho, casi hasta el suelo, y sube con un motor. Se rodea por los pies.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.95, 1.0, 1.2],
+				"fondo": [2.05, 2.1, 2.2],
+				"alto": [0.6, 0.75, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "ancho_90",
+					"nombre": "De 90",
+					"ancho": 1.0,
+					"fondo": 2.1,
+					"alto": 0.75
+				},
+				{
+					"id": "ancho_105",
+					"nombre": "De 105",
+					"ancho": 1.15,
+					"fondo": 2.1,
+					"alto": 0.75
+				},
+				{
+					"id": "ultrabaja",
+					"nombre": "Ultrabaja, a un palmo del suelo",
+					"ancho": 1.0,
+					"fondo": 2.1,
+					"alto": 0.6
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["libre", "ocupado", "regulado_bajo", "regulado_alto"],
+			"acciones": [
+				{
+					"id": "tumbarse",
+					"nombre": "Tumbarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "regular_subir",
+					"nombre": "Subir",
+					"de": "regulado_bajo",
+					"a": "regulado_alto",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				},
+				{
+					"id": "regular_bajar",
+					"nombre": "Bajar",
+					"de": "regulado_alto",
+					"a": "regulado_bajo",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "descanso",
+			"lugares": ["residencia"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["mesilla_bandeja_abatible", "armario_barra_abatible", "cabecero_luz_llamada", "sillon_geriatrico"],
+			"simbolo": {
+				"letra": "Cg",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cama_geriatrica.png",
+				"descripcion": "Huella en planta de «Cama articulada geriátrica con barandillas»: un rectángulo de 1,00 por 2,10 metros, con la letra «Cg»."
+			}
+		},
+		{
+			"id": "colchoneta_anticaidas",
+			"nombre": "Colchoneta de caída junto a la cama",
+			"categoria": "habitacion",
+			"subcategoria": "cama_y_entorno",
+			"etiquetas": ["colchoneta de caída", "alfombra anticaídas", "colchoneta de suelo", "protector de caídas"],
+			"descripcion": "Colchoneta fina de espuma tendida en el suelo a lo largo de la cama. Se pisa: el suelo se vuelve blando de repente y los pasos no suenan.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [1.6, 1.9, 2.0],
+				"alto": [0.03, 0.04, 0.06]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"suelo": "alfombra",
+			"funcion": "seguridad",
+			"lugares": ["residencia"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["cama_geriatrica"],
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/colchoneta_anticaidas.png",
+				"descripcion": "Huella en planta de «Colchoneta de caída junto a la cama»: un rectángulo de 0,70 por 1,90 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "mesilla_bandeja_abatible",
+			"nombre": "Mesilla con bandeja abatible",
+			"categoria": "habitacion",
+			"subcategoria": "cama_y_entorno",
+			"etiquetas": ["mesilla con bandeja", "mesilla de residencia", "mesilla con atril", "mesilla hospitalaria"],
+			"descripcion": "Mesilla alta con ruedas y un cajón. De un costado se levanta una bandeja que queda volada sobre la cama, a la altura del pecho de quien está sentado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.42, 0.48, 1.1],
+				"fondo": [0.4, 0.45, 0.5],
+				"alto": [0.75, 0.85, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "recogida",
+					"nombre": "Con la bandeja recogida",
+					"ancho": 0.48,
+					"fondo": 0.45,
+					"alto": 0.85
+				},
+				{
+					"id": "desplegada",
+					"nombre": "Con la bandeja sobre la cama",
+					"ancho": 1.05,
+					"fondo": 0.45,
+					"alto": 0.95
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto", "plegado", "desplegado"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:cajon.flac"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["residencia", "hospital"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama_geriatrica"],
+			"simbolo": {
+				"letra": "Mb",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesilla_bandeja_abatible.png",
+				"descripcion": "Huella en planta de «Mesilla con bandeja abatible»: un rectángulo de 0,48 por 0,45 metros, con la letra «Mb»."
+			}
+		},
+		{
+			"id": "cabecero_luz_llamada",
+			"nombre": "Cabecero con luz y pulsador de llamada",
+			"categoria": "habitacion",
+			"subcategoria": "cama_y_entorno",
+			"etiquetas": ["cabecero técnico", "luz de cabecera", "pulsador de cama", "pera de llamada", "timbre de la cama"],
+			"descripcion": "Regleta larga atornillada a la pared sobre la cabecera, por encima de la cabeza de quien está sentado: lleva la luz, los enchufes y una pera con cable para llamar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.06, 0.1, 0.15],
+				"alto": [0.12, 0.2, 0.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.3,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "llamar_asistencia",
+					"nombre": "Pedir ayuda",
+					"sonido": "sonidos/llamada_asistencia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["residencia", "hospital"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama_geriatrica", "panel_llamadas_enfermeria"],
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/cabecero_luz_llamada.png",
+				"descripcion": "Huella en planta de «Cabecero con luz y pulsador de llamada»: un rectángulo de 1,00 por 0,10 metros, colgado a 1,30 metros del suelo, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "incorporador_cama_colgante",
+			"nombre": "Incorporador de cama con triángulo",
+			"categoria": "habitacion",
+			"subcategoria": "cama_y_entorno",
+			"etiquetas": ["incorporador", "potencia de cama", "triángulo de cama", "trapecio de cama"],
+			"descripcion": "Brazo de tubo que sale por encima del cabecero y deja colgando un triángulo de agarre sobre la almohada. Queda a la altura de la cara al inclinarse sobre la cama.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [0.5, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.25, 0.3, 0.4],
+				"fondo": [0.5, 0.7, 0.9],
+				"alto": [0.3, 0.5, 0.6]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.3,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "vivienda"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["cama_geriatrica"],
+			"simbolo": {
+				"letra": "Ic",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/incorporador_cama_colgante.png",
+				"descripcion": "Huella en planta de «Incorporador de cama con triángulo»: un triángulo con la punta hacia delante de 0,30 por 0,70 metros, colgado a 1,30 metros del suelo, con la letra «Ic»."
+			}
+		},
+		{
+			"id": "alfombrilla_sensora_cama",
+			"nombre": "Alfombrilla sensora de levantarse",
+			"categoria": "habitacion",
+			"subcategoria": "cama_y_entorno",
+			"etiquetas": ["alfombra sensora", "alfombrilla de presión", "sensor de caídas", "alfombra de aviso"],
+			"descripcion": "Alfombrilla de goma muy fina al pie de la cama, con un cable. Al pisarla suena la llamada en el control: avisa de que alguien se ha levantado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.2],
+				"fondo": [0.4, 0.6, 0.75],
+				"alto": [0.005, 0.01, 0.02]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/llamada_asistencia.flac"
+			},
+			"contenedor": false,
+			"suelo": "moqueta",
+			"aviso": "Alfombrilla sensora: al pisarla suena la llamada en el control.",
+			"funcion": "seguridad",
+			"lugares": ["residencia"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "ocasional",
+			"relacionados": ["cama_geriatrica"],
+			"simbolo": {
+				"letra": "As",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/alfombrilla_sensora_cama.png",
+				"descripcion": "Huella en planta de «Alfombrilla sensora de levantarse»: un rectángulo de 0,90 por 0,60 metros, con la letra «As»."
+			}
+		},
+		{
+			"id": "armario_barra_abatible",
+			"nombre": "Armario con barra de colgar abatible",
+			"categoria": "habitacion",
+			"subcategoria": "mobiliario_habitacion",
+			"etiquetas": ["armario adaptado", "armario de residencia", "barra abatible de armario", "ropero adaptado"],
+			"descripcion": "Armario de habitación con las puertas hasta el techo. Dentro, la barra de las perchas baja tirando de una varilla hasta la altura del pecho.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.2],
+				"fondo": [0.55, 0.6, 0.62],
+				"alto": [1.9, 2.0, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "una_puerta",
+					"nombre": "De una puerta ancha",
+					"ancho": 0.8,
+					"fondo": 0.6,
+					"alto": 2.0
+				},
+				{
+					"id": "dos_puertas",
+					"nombre": "De dos puertas",
+					"ancho": 1.0,
+					"fondo": 0.6,
+					"alto": 2.0
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_mueble.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_mueble.flac"
+				},
+				{
+					"id": "bajar_barra_ropa",
+					"nombre": "Bajar la barra de la ropa",
+					"sonido": "comun:barra_abatible_clac.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "alto",
+			"frecuencia": "muy_comun",
+			"relacionados": ["cama_geriatrica"],
+			"simbolo": {
+				"letra": "Ab",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/armario_barra_abatible.png",
+				"descripcion": "Huella en planta de «Armario con barra de colgar abatible»: un rectángulo de 0,90 por 0,60 metros, con la letra «Ab»."
+			}
+		},
+		{
+			"id": "silla_wc_noche",
+			"nombre": "Silla con inodoro de habitación",
+			"categoria": "habitacion",
+			"subcategoria": "mobiliario_habitacion",
+			"etiquetas": ["silla con inodoro", "silla de noche", "silla sanitaria", "silla WC"],
+			"descripcion": "Silla de tubo con brazos cuyo asiento se levanta: debajo hay una cubeta. Se deja junto a la cama por la noche.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.65],
+				"fondo": [0.55, 0.6, 0.7],
+				"alto": [0.85, 0.95, 1.0]
+			},
+			"variantes": [
+				{
+					"id": "fija",
+					"nombre": "Fija, con tacos",
+					"ancho": 0.6,
+					"fondo": 0.6,
+					"alto": 0.95
+				},
+				{
+					"id": "con_ruedas",
+					"nombre": "Con ruedas",
+					"ancho": 0.6,
+					"fondo": 0.65,
+					"alto": 0.98
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado", "cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:tapa_contenedor.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:tapa_contenedor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["dormitorio", "bano"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["cama_geriatrica"],
+			"simbolo": {
+				"letra": "Sw",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_wc_noche.png",
+				"descripcion": "Huella en planta de «Silla con inodoro de habitación»: un rectángulo de 0,60 por 0,60 metros, con la letra «Sw»."
+			}
+		},
+		{
+			"id": "mostrador_control_enfermeria",
+			"nombre": "Mostrador del control de enfermería",
+			"categoria": "habitacion",
+			"subcategoria": "control_enfermeria",
+			"etiquetas": ["control de enfermería", "control de planta", "puesto de enfermería", "mostrador de planta"],
+			"descripcion": "Mostrador en ele en el cruce de los pasillos de la planta. Un tramo es alto, para apoyarse de pie, y el otro, bajo, para hablar sentado. Detrás suena el panel de llamadas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "ele",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.4], [0.3, 0.4], [0.3, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [2.0, 2.4, 3.6],
+				"fondo": [1.4, 1.8, 2.4],
+				"alto": [1.05, 1.1, 1.15]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["residencia", "hospital"],
+			"estancias": ["pasillo", "recepcion"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["panel_llamadas_enfermeria"],
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_control_enfermeria.png",
+				"descripcion": "Huella en planta de «Mostrador del control de enfermería»: una ele de 2,40 por 1,80 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "panel_llamadas_enfermeria",
+			"nombre": "Panel de llamadas de habitaciones",
+			"categoria": "habitacion",
+			"subcategoria": "control_enfermeria",
+			"etiquetas": ["panel de llamadas", "central de llamadas", "llamada paciente enfermera", "avisador de habitaciones"],
+			"descripcion": "Caja colgada de la pared del control, a la altura de la cara, con una fila de teclas. Zumba cuando alguien llama desde una habitación.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.06, 0.08, 0.12],
+				"alto": [0.25, 0.3, 0.45]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.3,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/llamada_asistencia.flac"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "sonidos/llamada_asistencia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["residencia", "hospital"],
+			"estancias": ["pasillo", "recepcion"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"relacionados": ["mostrador_control_enfermeria"],
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_llamadas_enfermeria.png",
+				"descripcion": "Huella en planta de «Panel de llamadas de habitaciones»: un rectángulo de 0,40 por 0,08 metros, colgado a 1,30 metros del suelo, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "carro_lenceria_planta",
+			"nombre": "Carro de lencería de planta",
+			"categoria": "habitacion",
+			"subcategoria": "control_enfermeria",
+			"etiquetas": ["carro de lencería", "carro de ropa", "carro de pañales", "carro de planta"],
+			"descripcion": "Carro alto de varillas con ruedas, cargado de sábanas, toallas y pañales, con un saco de ropa sucia colgado. Por las mañanas está en mitad del pasillo, cada día en un sitio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.55, 0.7],
+				"fondo": [0.8, 0.95, 1.3],
+				"alto": [1.0, 1.15, 1.6]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"contenedor": true,
+			"funcion": "carga",
+			"lugares": ["residencia", "hospital", "hotel"],
+			"estancias": ["pasillo"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cl",
+				"color": "#2E6DA4"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_lenceria_planta.png",
+				"descripcion": "Huella en planta de «Carro de lencería de planta»: un rectángulo de 0,55 por 0,95 metros, con la letra «Cl»."
+			}
+		},
+		{
+			"id": "mesa_terapia_herradura",
+			"nombre": "Mesa de terapia en herradura",
+			"categoria": "terapia",
+			"subcategoria": "terapia_ocupacional",
+			"etiquetas": ["mesa de herradura", "mesa de terapia ocupacional", "mesa de media luna", "mesa regulable de grupo"],
+			"descripcion": "Mesa curva en media luna, regulable en altura: el terapeuta se sienta en el hueco y los demás, por fuera, alrededor de la curva. Sin esquinas por delante.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.017, 0.259], [0.067, 0.5], [0.146, 0.707], [0.25, 0.866], [0.371, 0.966], [0.5, 1.0], [0.629, 0.966], [0.75, 0.866], [0.854, 0.707], [0.933, 0.5], [0.983, 0.259], [1.0, 0.0], [0.775, 0.0], [0.766, 0.142], [0.738, 0.275], [0.694, 0.389], [0.637, 0.476], [0.571, 0.531], [0.5, 0.55], [0.429, 0.531], [0.362, 0.476], [0.306, 0.389], [0.262, 0.275], [0.234, 0.142], [0.225, 0.0]]
+			},
+			"medidas": {
+				"ancho": [1.5, 1.8, 2.2],
+				"fondo": [0.9, 1.1, 1.3],
+				"alto": [0.6, 0.74, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["regulado_bajo", "regulado_alto"],
+			"acciones": [
+				{
+					"id": "regular_subir",
+					"nombre": "Subir",
+					"de": "regulado_bajo",
+					"a": "regulado_alto",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				},
+				{
+					"id": "regular_bajar",
+					"nombre": "Bajar",
+					"de": "regulado_alto",
+					"a": "regulado_bajo",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["residencia", "hospital", "colegio"],
+			"estancias": ["sala_rehabilitacion", "sala_comun"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["silla_comedor_brazos", "panel_actividades_diarias"],
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_terapia_herradura.png",
+				"descripcion": "Huella en planta de «Mesa de terapia en herradura»: una banda curva que abomba hacia delante de 1,80 por 1,10 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "panel_actividades_diarias",
+			"nombre": "Tablero de cerrojos, grifos y cremalleras",
+			"categoria": "terapia",
+			"subcategoria": "terapia_ocupacional",
+			"etiquetas": ["tablero de actividades de la vida diaria", "tablero AVD", "panel de cerrojos", "tablero de destreza manual"],
+			"descripcion": "Tablero de madera colgado de la pared con cerraduras, pestillos, interruptores, un grifo y cremalleras para practicar con las manos. Sobresale un palmo a la altura del pecho.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.4],
+				"fondo": [0.06, 0.1, 0.15],
+				"alto": [0.5, 0.7, 0.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.75,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "juego:cremallera.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "juego:llaves.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "colegio"],
+			"estancias": ["sala_rehabilitacion", "sala_comun"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_actividades_diarias.png",
+				"descripcion": "Huella en planta de «Tablero de cerrojos, grifos y cremalleras»: un rectángulo de 1,00 por 0,10 metros, colgado a 0,75 metros del suelo, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "mesa_cultivo_adaptada",
+			"nombre": "Mesa de cultivo elevada",
+			"categoria": "terapia",
+			"subcategoria": "terapia_ocupacional",
+			"etiquetas": ["mesa de cultivo", "huerto elevado", "jardinera adaptada", "huerto terapéutico"],
+			"descripcion": "Cajón de madera lleno de tierra y plantas, alto sobre cuatro patas para trabajar sentado. Debajo queda hueco para las rodillas; huele a tierra mojada y a hierbas.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 2.0],
+				"fondo": [0.6, 0.8, 0.9],
+				"alto": [0.75, 0.8, 0.9]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "vegetacion",
+			"lugares": ["residencia", "vivienda", "colegio", "jardin"],
+			"estancias": ["patio", "terraza", "jardin"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Mc",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_cultivo_adaptada.png",
+				"descripcion": "Huella en planta de «Mesa de cultivo elevada»: un rectángulo de 1,20 por 0,80 metros, con la letra «Mc»."
+			}
+		},
+		{
+			"id": "pedalier_sentado",
+			"nombre": "Pedalier de suelo",
+			"categoria": "terapia",
+			"subcategoria": "gimnasia_mantenimiento",
+			"etiquetas": ["pedalier", "pedaleador", "pedales de rehabilitación", "minibicicleta"],
+			"descripcion": "Aparato pequeño con dos pedales que se pone en el suelo delante de una silla. Bajo, a la altura del tobillo: se tropieza con él si no se sabe que está.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.38, 0.42, 0.5],
+				"fondo": [0.45, 0.5, 0.6],
+				"alto": [0.25, 0.3, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "pedalear_sentado",
+					"nombre": "Pedalear sentado",
+					"sonido": "oficina_y_comercio:silla_ruedas.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["sala_rehabilitacion", "sala_comun", "salon"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ps",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/pedalier_sentado.png",
+				"descripcion": "Huella en planta de «Pedalier de suelo»: un rectángulo de 0,42 por 0,50 metros, con la letra «Ps»."
+			}
+		},
+		{
+			"id": "corro_sillas_gimnasia",
+			"nombre": "Corro de sillas de gimnasia de mantenimiento",
+			"categoria": "terapia",
+			"subcategoria": "gimnasia_mantenimiento",
+			"etiquetas": ["corro de sillas", "sillas en círculo", "gimnasia en silla", "rueda de sillas"],
+			"descripcion": "Sillas puestas en círculo, mirando al centro, con una entrada. La gimnasia se hace sentado; dentro queda un corro vacío donde se pasa el balón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.287, 1.0], [0.148, 0.9], [0.048, 0.757], [0.0, 0.587], [0.008, 0.411], [0.072, 0.248], [0.185, 0.115], [0.333, 0.03], [0.5, 0.0], [0.667, 0.03], [0.815, 0.115], [0.928, 0.248], [0.992, 0.411], [1.0, 0.587], [0.952, 0.757], [0.852, 0.9], [0.713, 1.0], [0.662, 0.886], [0.768, 0.81], [0.843, 0.701], [0.88, 0.572], [0.874, 0.438], [0.825, 0.314], [0.74, 0.214], [0.627, 0.148], [0.5, 0.126], [0.373, 0.148], [0.26, 0.214], [0.175, 0.314], [0.126, 0.438], [0.12, 0.572], [0.157, 0.701], [0.232, 0.81], [0.338, 0.886]]
+			},
+			"medidas": {
+				"ancho": [3.0, 3.8, 5.0],
+				"fondo": [3.0, 3.8, 5.0],
+				"alto": [0.8, 0.85, 0.95]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia"],
+			"estancias": ["sala_rehabilitacion", "sala_comun"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["cesto_psicomotricidad"],
+			"simbolo": {
+				"letra": "Cs",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/corro_sillas_gimnasia.png",
+				"descripcion": "Huella en planta de «Corro de sillas de gimnasia de mantenimiento»: un anillo con una entrada por delante de 3,80 por 3,80 metros, con la letra «Cs»."
+			}
+		},
+		{
+			"id": "circuito_aros_picas",
+			"nombre": "Circuito de aros y picas en el suelo",
+			"categoria": "terapia",
+			"subcategoria": "gimnasia_mantenimiento",
+			"etiquetas": ["circuito de psicomotricidad", "aros en el suelo", "picas", "circuito de marcha"],
+			"descripcion": "Aros, picas tumbadas y conos bajos colocados en fila para pasar por encima levantando los pies. Obstáculo bajo y cambiante: suena a plástico hueco al pisarlo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.3], [0.15, 0.0], [0.4, 0.15], [0.6, 0.0], [0.85, 0.2], [1.0, 0.1], [1.0, 0.75], [0.8, 1.0], [0.55, 0.8], [0.3, 1.0], [0.1, 0.85]]
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 5.0],
+				"fondo": [0.8, 1.2, 2.0],
+				"alto": [0.05, 0.25, 0.4]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "hogar:juguetes.flac"
+			},
+			"contenedor": false,
+			"funcion": "deporte",
+			"lugares": ["residencia", "hospital", "colegio"],
+			"estancias": ["sala_rehabilitacion", "sala_comun"],
+			"obstaculo": "bajo",
+			"riesgos": ["temporal", "movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/circuito_aros_picas.png",
+				"descripcion": "Huella en planta de «Circuito de aros y picas en el suelo»: una franja irregular de piezas sueltas de 3,00 por 1,20 metros, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "cesto_psicomotricidad",
+			"nombre": "Cesto de pelotas blandas y cintas",
+			"categoria": "terapia",
+			"subcategoria": "gimnasia_mantenimiento",
+			"etiquetas": ["cesto de pelotas", "cesta de material", "pelotas blandas", "material de psicomotricidad"],
+			"descripcion": "Cesto redondo de mimbre, hasta la rodilla, lleno de pelotas de espuma, cintas elásticas y aros pequeños. Ligero: se vuelca con un golpe.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.45, 0.55, 0.7],
+				"fondo": [0.45, 0.55, 0.7],
+				"alto": [0.5, 0.6, 0.8]
+			},
+			"colocacion": ["suelo", "esquina", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "mimbre",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "colegio:balon.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["sala_rehabilitacion", "sala_comun"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["corro_sillas_gimnasia"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/cesto_psicomotricidad.png",
+				"descripcion": "Huella en planta de «Cesto de pelotas blandas y cintas»: un círculo de 0,55 por 0,55 metros, con la letra «Cp»."
+			}
+		},
+		{
+			"id": "columna_burbujas",
+			"nombre": "Columna de burbujas",
+			"categoria": "terapia",
+			"subcategoria": "estimulacion",
+			"etiquetas": ["columna de burbujas", "tubo de burbujas", "sala multisensorial", "snoezelen"],
+			"descripcion": "Tubo ancho de plástico lleno de agua, del suelo a más arriba de la cabeza, sobre un zócalo. Encendido, las burbujas suben borboteando y el tubo vibra al abrazarlo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [1.5, 1.8, 2.0]
+			},
+			"colocacion": ["esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "fuente/fuente_agua",
+					"volumen": 0.3,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "iluminacion",
+			"lugares": ["residencia", "colegio", "hospital"],
+			"estancias": ["sala_rehabilitacion", "sala_comun"],
+			"obstaculo": "alto",
+			"riesgos": ["transparente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Cb",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/columna_burbujas.png",
+				"descripcion": "Huella en planta de «Columna de burbujas»: un círculo de 0,40 por 0,40 metros, con la letra «Cb»."
+			}
+		},
+		{
+			"id": "bombo_bingo_mesa",
+			"nombre": "Bombo de bingo en su mesa",
+			"categoria": "terapia",
+			"subcategoria": "estimulacion",
+			"etiquetas": ["bingo", "bombo", "bombo de bolas", "mesa del bingo"],
+			"descripcion": "Mesa con una jaula redonda de alambre llena de bolas y una manivela. Al girarla, las bolas repican y una cae por la rampa.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [1.0, 1.1, 1.3]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/bombo_bingo.flac"
+			},
+			"acciones": [
+				{
+					"id": "girar_bombo",
+					"nombre": "Dar vueltas al bombo",
+					"sonido": "sonidos/bombo_bingo.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["residencia", "ocio"],
+			"estancias": ["sala_comun"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bb",
+				"color": "#B9770E"
+			},
+			"imagen": {
+				"fichero": "imagenes/bombo_bingo_mesa.png",
+				"descripcion": "Huella en planta de «Bombo de bingo en su mesa»: un rectángulo de 0,80 por 0,60 metros, con la letra «Bb»."
+			}
+		},
+		{
+			"id": "inodoro_adaptado_barras",
+			"nombre": "Inodoro alto con barras a los lados",
+			"categoria": "bano_adaptado",
+			"subcategoria": "sanitarios_adaptados",
+			"etiquetas": ["inodoro adaptado", "váter adaptado", "inodoro alto", "inodoro con barras", "wc accesible"],
+			"descripcion": "Inodoro más alto de lo normal, separado de las paredes para acercarse de lado, con una barra a cada costado a la altura de la cadera. Las barras se encuentran antes que la taza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 0.95], [0.93, 0.95], [0.93, 0.25], [0.72, 0.25], [0.72, 0.8], [0.5, 1.0], [0.28, 0.8], [0.28, 0.25], [0.07, 0.25], [0.07, 0.95], [0.0, 0.95]]
+			},
+			"medidas": {
+				"ancho": [0.75, 0.85, 0.95],
+				"fondo": [0.7, 0.75, 0.8],
+				"alto": [0.75, 0.85, 1.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "tirar_cadena",
+					"nombre": "Tirar de la cadena",
+					"sonido": "hogar:cisterna.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["cualquiera"],
+			"estancias": ["aseo_adaptado", "bano"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["lavabo_suspendido_regulable", "tirador_alarma_aseo"],
+			"simbolo": {
+				"letra": "Ia",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/inodoro_adaptado_barras.png",
+				"descripcion": "Huella en planta de «Inodoro alto con barras a los lados»: la cisterna detrás, la taza en el centro y una barra fina a cada lado de 0,85 por 0,75 metros, con la letra «Ia»."
+			}
+		},
+		{
+			"id": "lavabo_suspendido_regulable",
+			"nombre": "Lavabo sin pedestal regulable",
+			"categoria": "bano_adaptado",
+			"subcategoria": "sanitarios_adaptados",
+			"etiquetas": ["lavabo sin pedestal", "lavabo suspendido", "lavabo adaptado", "lavabo regulable"],
+			"descripcion": "Lavabo colgado de la pared, sin pie ni mueble: debajo queda todo libre para las rodillas. El bastón pasa por debajo y es la cadera la que lo encuentra.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.038, 0.383], [0.146, 0.707], [0.309, 0.924], [0.5, 1.0], [0.691, 0.924], [0.854, 0.707], [0.962, 0.383], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.65, 0.8],
+				"fondo": [0.45, 0.55, 0.6],
+				"alto": [0.15, 0.18, 0.25]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.68,
+			"detectable_baston": false,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.4,
+					"radio": 4,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["cualquiera"],
+			"estancias": ["aseo_adaptado", "bano"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["espejo_basculante_aseo"],
+			"simbolo": {
+				"letra": "Ls",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/lavabo_suspendido_regulable.png",
+				"descripcion": "Huella en planta de «Lavabo sin pedestal regulable»: un semicírculo, recto por detrás y redondo por delante de 0,65 por 0,55 metros, colgado a 0,68 metros del suelo, con la letra «Ls»."
+			}
+		},
+		{
+			"id": "alza_inodoro_marco",
+			"nombre": "Alza de inodoro con marco de apoyo",
+			"categoria": "bano_adaptado",
+			"subcategoria": "sanitarios_adaptados",
+			"etiquetas": ["elevador de inodoro", "alza de váter", "marco de inodoro", "asiento elevador"],
+			"descripcion": "Marco de tubo que abraza el inodoro por los lados y por detrás, con dos reposabrazos y un asiento elevado. Suelto: se mueve un poco al apoyarse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.9, 1.0], [0.9, 0.25], [0.1, 0.25], [0.1, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [0.48, 0.52, 0.6],
+				"alto": [0.65, 0.75, 0.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["vivienda", "residencia"],
+			"estancias": ["bano"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ai",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/alza_inodoro_marco.png",
+				"descripcion": "Huella en planta de «Alza de inodoro con marco de apoyo»: una U abierta por delante de 0,60 por 0,52 metros, con la letra «Ai»."
+			}
+		},
+		{
+			"id": "barra_abatible_inodoro",
+			"nombre": "Barra abatible de inodoro",
+			"categoria": "bano_adaptado",
+			"subcategoria": "barras_apoyo",
+			"etiquetas": ["barra abatible", "asidero abatible", "barra de váter", "barra basculante"],
+			"descripcion": "Barra de doble tubo que sale de la pared como un brazo, a la altura de la cadera, y se levanta girando hasta quedar vertical. Bajada, vuela casi un metro: el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.15, 0.2],
+				"fondo": [0.6, 0.75, 0.9],
+				"alto": [0.15, 0.2, 0.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.55,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["desplegado", "plegado"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				}
+			],
+			"paso_libre": ["plegado"],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["cualquiera"],
+			"estancias": ["aseo_adaptado", "bano"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["inodoro_adaptado_barras"],
+			"simbolo": {
+				"letra": "Ba",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/barra_abatible_inodoro.png",
+				"descripcion": "Huella en planta de «Barra abatible de inodoro»: un rectángulo de 0,15 por 0,75 metros, colgado a 0,55 metros del suelo, con la letra «Ba»."
+			}
+		},
+		{
+			"id": "barra_fija_pared",
+			"nombre": "Barra fija de pared",
+			"categoria": "bano_adaptado",
+			"subcategoria": "barras_apoyo",
+			"etiquetas": ["barra de apoyo", "asidero", "agarradera", "barra de baño"],
+			"descripcion": "Tubo de metal atornillado a la pared a la altura de la cadera, separado cuatro dedos de ella. Frío y firme: aguanta todo el peso del cuerpo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.3, 0.6, 0.9],
+				"fondo": [0.07, 0.08, 0.1],
+				"alto": [0.05, 0.05, 0.75]
+			},
+			"variantes": [
+				{
+					"id": "de_30",
+					"nombre": "De 30 cm",
+					"ancho": 0.3,
+					"fondo": 0.08,
+					"alto": 0.05
+				},
+				{
+					"id": "de_60",
+					"nombre": "De 60 cm",
+					"ancho": 0.6,
+					"fondo": 0.08,
+					"alto": 0.05
+				},
+				{
+					"id": "de_90",
+					"nombre": "De 90 cm",
+					"ancho": 0.9,
+					"fondo": 0.08,
+					"alto": 0.05
+				},
+				{
+					"id": "en_escuadra",
+					"nombre": "En escuadra, con tramo vertical",
+					"ancho": 0.6,
+					"fondo": 0.08,
+					"alto": 0.7
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.7,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["cualquiera"],
+			"estancias": ["aseo_adaptado", "bano", "pasillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Bf",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/barra_fija_pared.png",
+				"descripcion": "Huella en planta de «Barra fija de pared»: un rectángulo de 0,60 por 0,08 metros, colgado a 0,70 metros del suelo, con la letra «Bf»."
+			}
+		},
+		{
+			"id": "barra_suelo_techo",
+			"nombre": "Barra de apoyo de suelo a techo",
+			"categoria": "bano_adaptado",
+			"subcategoria": "barras_apoyo",
+			"etiquetas": ["barra de suelo a techo", "poste de apoyo", "barra vertical", "asidero vertical"],
+			"descripcion": "Tubo vertical fijado a presión entre el suelo y el techo, junto a la bañera o la cama. Fino como un palo de escoba grueso: el bastón lo encuentra, la mano tarda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.15, 0.2],
+				"fondo": [0.1, 0.15, 0.2],
+				"alto": [2.2, 2.5, 3.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["vivienda", "residencia"],
+			"estancias": ["bano", "dormitorio"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bs",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/barra_suelo_techo.png",
+				"descripcion": "Huella en planta de «Barra de apoyo de suelo a techo»: un círculo de 0,15 por 0,15 metros, con la letra «Bs»."
+			}
+		},
+		{
+			"id": "plato_ducha_ras_suelo",
+			"nombre": "Plato de ducha enrasado sin escalón",
+			"categoria": "bano_adaptado",
+			"subcategoria": "ducha_y_banera",
+			"etiquetas": ["ducha a ras de suelo", "ducha de obra", "plato enrasado", "ducha accesible"],
+			"descripcion": "Zona de ducha al mismo nivel que el resto del suelo, sin bordillo ni mampara, con el desagüe en medio. Se entra andando o rodando: el suelo se vuelve rugoso y mojado.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 1.8],
+				"fondo": [0.8, 0.9, 1.5],
+				"alto": [0.01, 0.02, 0.03]
+			},
+			"variantes": [
+				{
+					"id": "de_80_120",
+					"nombre": "De 80 por 120",
+					"ancho": 1.2,
+					"fondo": 0.8,
+					"alto": 0.02
+				},
+				{
+					"id": "de_90_140",
+					"nombre": "De 90 por 140",
+					"ancho": 1.4,
+					"fondo": 0.9,
+					"alto": 0.02
+				},
+				{
+					"id": "de_150_150",
+					"nombre": "De 150 por 150, para girar",
+					"ancho": 1.5,
+					"fondo": 1.5,
+					"alto": 0.02
+				}
+			],
+			"colocacion": ["esquina", "pared"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra",
+				"propio": {
+					"sonido": "comun:ducha.flac",
+					"volumen": 0.4,
+					"radio": 6,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"suelo": "agua",
+			"aviso": "Ducha a ras de suelo: el suelo está mojado.",
+			"funcion": "sanitario",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["aseo_adaptado", "bano"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["asiento_ducha_abatible", "barra_fija_pared"],
+			"simbolo": {
+				"letra": "Pd",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/plato_ducha_ras_suelo.png",
+				"descripcion": "Huella en planta de «Plato de ducha enrasado sin escalón»: un rectángulo de 1,20 por 0,90 metros, con la letra «Pd»."
+			}
+		},
+		{
+			"id": "asiento_ducha_abatible",
+			"nombre": "Asiento de ducha abatible de pared",
+			"categoria": "bano_adaptado",
+			"subcategoria": "ducha_y_banera",
+			"etiquetas": ["asiento de ducha", "asiento abatible", "banco de ducha de pared", "asiento plegable de ducha"],
+			"descripcion": "Asiento de listones de plástico colgado de la pared de la ducha, sin patas. Bajado, vuela dos palmos a la altura de la rodilla; recogido, queda plano contra la pared.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.6],
+				"fondo": [0.35, 0.42, 0.5],
+				"alto": [0.05, 0.08, 0.15]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.5,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["desplegado", "plegado", "libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"paso_libre": ["plegado"],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["aseo_adaptado", "bano"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["plato_ducha_ras_suelo"],
+			"simbolo": {
+				"letra": "Ad",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/asiento_ducha_abatible.png",
+				"descripcion": "Huella en planta de «Asiento de ducha abatible de pared»: un rectángulo de 0,45 por 0,42 metros, colgado a 0,50 metros del suelo, con la letra «Ad»."
+			}
+		},
+		{
+			"id": "silla_ducha_ruedas",
+			"nombre": "Silla de ducha con ruedas",
+			"categoria": "bano_adaptado",
+			"subcategoria": "ducha_y_banera",
+			"etiquetas": ["silla de ducha", "silla de baño con ruedas", "silla de aseo"],
+			"descripcion": "Silla de plástico y tubo con cuatro ruedas pequeñas, reposapiés y el asiento abierto por delante. Se moja entera; rueda si no tiene echado el freno.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.52, 0.56, 0.62],
+				"fondo": [0.8, 0.9, 1.0],
+				"alto": [0.95, 1.0, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["aseo_adaptado", "bano", "dormitorio"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "resbaladizo"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Sd",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_ducha_ruedas.png",
+				"descripcion": "Huella en planta de «Silla de ducha con ruedas»: un rectángulo de 0,56 por 0,90 metros, con la letra «Sd»."
+			}
+		},
+		{
+			"id": "banqueta_ducha_regulable",
+			"nombre": "Banqueta de ducha de patas regulables",
+			"categoria": "bano_adaptado",
+			"subcategoria": "ducha_y_banera",
+			"etiquetas": ["banqueta de ducha", "taburete de ducha", "taburete de baño", "asiento de ducha con patas"],
+			"descripcion": "Banqueta redonda de plástico sobre cuatro patas de aluminio con tacos de goma. Ligera y sin respaldo: se desplaza al empujarla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.36, 0.4, 0.5],
+				"fondo": [0.36, 0.4, 0.5],
+				"alto": [0.38, 0.45, 0.55]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["vivienda", "residencia"],
+			"estancias": ["bano", "aseo_adaptado"],
+			"obstaculo": "bajo",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bd",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/banqueta_ducha_regulable.png",
+				"descripcion": "Huella en planta de «Banqueta de ducha de patas regulables»: un círculo de 0,40 por 0,40 metros, con la letra «Bd»."
+			}
+		},
+		{
+			"id": "asiento_giratorio_banera",
+			"nombre": "Asiento giratorio de bañera",
+			"categoria": "bano_adaptado",
+			"subcategoria": "ducha_y_banera",
+			"etiquetas": ["asiento giratorio", "silla giratoria de bañera", "asiento de bañera", "silla de bañera"],
+			"descripcion": "Asiento de plástico con respaldo y brazos apoyado sobre los dos bordes de la bañera. Gira un cuarto de vuelta para sentarse desde fuera y meter luego las piernas.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.981, 0.809], [0.92, 0.92], [0.809, 0.981], [0.5, 1.0], [0.191, 0.981], [0.08, 0.92], [0.019, 0.809], [0.0, 0.5], [0.019, 0.191], [0.08, 0.08], [0.191, 0.019], [0.5, 0.0], [0.809, 0.019], [0.92, 0.08], [0.981, 0.191]]
+			},
+			"medidas": {
+				"ancho": [0.68, 0.72, 0.78],
+				"fondo": [0.5, 0.55, 0.6],
+				"alto": [0.3, 0.4, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.55,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "girar",
+					"nombre": "Girar",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "voladizo",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ag",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/asiento_giratorio_banera.png",
+				"descripcion": "Huella en planta de «Asiento giratorio de bañera»: un rectángulo de esquinas redondeadas de 0,72 por 0,55 metros, colgado a 0,55 metros del suelo, con la letra «Ag»."
+			}
+		},
+		{
+			"id": "banera_con_puerta",
+			"nombre": "Bañera con puerta",
+			"categoria": "bano_adaptado",
+			"subcategoria": "ducha_y_banera",
+			"etiquetas": ["bañera con puerta", "bañera de asiento", "bañera para mayores", "bañera adaptada"],
+			"descripcion": "Bañera corta y muy alta, hasta la cintura, con una puertecita estanca en el costado y un asiento dentro. Se entra por la puerta sin levantar la pierna.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.992, 0.838], [0.966, 0.919], [0.919, 0.966], [0.838, 0.992], [0.5, 1.0], [0.162, 0.992], [0.081, 0.966], [0.034, 0.919], [0.008, 0.838], [0.0, 0.5], [0.008, 0.162], [0.034, 0.081], [0.081, 0.034], [0.162, 0.008], [0.5, 0.0], [0.838, 0.008], [0.919, 0.034], [0.966, 0.081], [0.992, 0.162]]
+			},
+			"medidas": {
+				"ancho": [1.0, 1.4, 1.7],
+				"fondo": [0.68, 0.72, 0.8],
+				"alto": [0.6, 0.95, 1.05]
+			},
+			"variantes": [
+				{
+					"id": "de_asiento",
+					"nombre": "Corta, de asiento",
+					"ancho": 1.05,
+					"fondo": 0.72,
+					"alto": 1.0
+				},
+				{
+					"id": "mediana",
+					"nombre": "Mediana",
+					"ancho": 1.4,
+					"fondo": 0.72,
+					"alto": 0.95
+				},
+				{
+					"id": "larga",
+					"nombre": "Larga, de tumbarse",
+					"ancho": 1.7,
+					"fondo": 0.75,
+					"alto": 0.6
+				}
+			],
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "fibra",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "sanitario",
+			"lugares": ["vivienda", "residencia"],
+			"estancias": ["bano"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/banera_con_puerta.png",
+				"descripcion": "Huella en planta de «Bañera con puerta»: un rectángulo de esquinas redondeadas de 1,40 por 0,72 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "mampara_baja_cuidador",
+			"nombre": "Media mampara abatible de ducha asistida",
+			"categoria": "bano_adaptado",
+			"subcategoria": "ducha_y_banera",
+			"etiquetas": ["media mampara", "mampara baja", "mampara de cuidador", "mampara geriátrica"],
+			"descripcion": "Hoja de plástico que solo llega a la cintura y gira como una puerta de vaivén: deja ducharse sentado mientras quien ayuda no se moja. Cerrada, corta el paso a la ducha.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.0],
+				"fondo": [0.03, 0.04, 0.06],
+				"alto": [0.75, 0.9, 1.0]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_cristal.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_cristal.flac"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "barrera",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["bano", "aseo_adaptado"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "transparente"],
+			"frecuencia": "ocasional",
+			"relacionados": ["plato_ducha_ras_suelo"],
+			"simbolo": {
+				"letra": "Mb",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/mampara_baja_cuidador.png",
+				"descripcion": "Huella en planta de «Media mampara abatible de ducha asistida»: un rectángulo de 0,90 por 0,04 metros, con la letra «Mb»."
+			}
+		},
+		{
+			"id": "peldano_banera_asidero",
+			"nombre": "Peldaño de bañera antideslizante",
+			"categoria": "bano_adaptado",
+			"subcategoria": "ducha_y_banera",
+			"etiquetas": ["peldaño de bañera", "escalón de baño", "alza de suelo", "peldaño con asidero"],
+			"descripcion": "Escalón suelto de plástico rugoso que se pone en el suelo junto a la bañera para entrar con menos esfuerzo. Bajo y fácil de olvidar: se tropieza con él.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.5],
+				"fondo": [0.3, 0.38, 0.45],
+				"alto": [0.1, 0.15, 0.9]
+			},
+			"variantes": [
+				{
+					"id": "sencillo",
+					"nombre": "Sencillo",
+					"ancho": 0.45,
+					"fondo": 0.38,
+					"alto": 0.15
+				},
+				{
+					"id": "con_asidero",
+					"nombre": "Con asidero alto",
+					"ancho": 0.45,
+					"fondo": 0.38,
+					"alto": 0.9
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["vivienda"],
+			"estancias": ["bano"],
+			"obstaculo": "bajo",
+			"riesgos": ["desnivel", "movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/peldano_banera_asidero.png",
+				"descripcion": "Huella en planta de «Peldaño de bañera antideslizante»: un rectángulo de 0,45 por 0,38 metros, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "espejo_basculante_aseo",
+			"nombre": "Espejo basculante de aseo adaptado",
+			"categoria": "bano_adaptado",
+			"subcategoria": "accesorios_aseo",
+			"etiquetas": ["espejo inclinable", "espejo reclinable", "espejo adaptado", "espejo abatible"],
+			"descripcion": "Espejo inclinado hacia delante sobre el lavabo, con una palanca para moverlo. Por arriba se separa un palmo de la pared, a la altura de la frente.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.1, 0.15, 0.2],
+				"alto": [0.7, 0.9, 1.0]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal"
+			},
+			"contenedor": false,
+			"funcion": "decoracion",
+			"lugares": ["cualquiera"],
+			"estancias": ["aseo_adaptado"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"relacionados": ["lavabo_suspendido_regulable"],
+			"simbolo": {
+				"letra": "Eb",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/espejo_basculante_aseo.png",
+				"descripcion": "Huella en planta de «Espejo basculante de aseo adaptado»: un rectángulo de 0,60 por 0,15 metros, colgado a 0,90 metros del suelo, con la letra «Eb»."
+			}
+		},
+		{
+			"id": "tirador_alarma_aseo",
+			"nombre": "Tirador de alarma con cordón",
+			"categoria": "bano_adaptado",
+			"subcategoria": "accesorios_aseo",
+			"etiquetas": ["tirador de alarma", "cordón de emergencia", "alarma de aseo", "llamada de socorro"],
+			"descripcion": "Cordón que cuelga del techo junto al inodoro hasta casi el suelo, con dos anillas de plástico. Tirando de él desde el suelo suena la llamada de ayuda.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.05, 0.08, 0.1],
+				"fondo": [0.05, 0.08, 0.1],
+				"alto": [1.8, 2.0, 2.3]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.1,
+			"detectable_baston": true,
+			"material": "cuerda",
+			"sonidos": {
+				"golpe": "golpe/tela",
+				"uso": "sonidos/llamada_asistencia.flac"
+			},
+			"acciones": [
+				{
+					"id": "llamar_asistencia",
+					"nombre": "Pedir ayuda",
+					"sonido": "sonidos/llamada_asistencia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["cualquiera"],
+			"estancias": ["aseo_adaptado"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["inodoro_adaptado_barras"],
+			"simbolo": {
+				"letra": "Ta",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/tirador_alarma_aseo.png",
+				"descripcion": "Huella en planta de «Tirador de alarma con cordón»: un círculo de 0,08 por 0,08 metros, colgado a 0,10 metros del suelo, con la letra «Ta»."
+			}
+		},
+		{
+			"id": "cambiador_adultos_abatible",
+			"nombre": "Cambiador de adultos abatible",
+			"categoria": "bano_adaptado",
+			"subcategoria": "accesorios_aseo",
+			"etiquetas": ["cambiador de adultos", "camilla abatible de aseo", "cambiador inclusivo", "cambiador de pared"],
+			"descripcion": "Camilla de plástico del largo de una persona colgada de la pared, sin patas, a la altura de la cadera. Bajada, ocupa media habitación y el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.6, 1.8, 1.9],
+				"fondo": [0.7, 0.75, 0.8],
+				"alto": [0.1, 0.15, 0.25]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.6,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"estados": ["desplegado", "plegado", "regulado_bajo", "regulado_alto"],
+			"acciones": [
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "regular_subir",
+					"nombre": "Subir",
+					"de": "regulado_bajo",
+					"a": "regulado_alto",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				},
+				{
+					"id": "regular_bajar",
+					"nombre": "Bajar",
+					"de": "regulado_alto",
+					"a": "regulado_bajo",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"paso_libre": ["plegado"],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["centro_comercial", "hospital", "aeropuerto", "residencia", "colegio"],
+			"estancias": ["aseo_adaptado"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Ca",
+				"color": "#148F77"
+			},
+			"imagen": {
+				"fichero": "imagenes/cambiador_adultos_abatible.png",
+				"descripcion": "Huella en planta de «Cambiador de adultos abatible»: un rectángulo de 1,80 por 0,75 metros, colgado a 0,60 metros del suelo, con la letra «Ca»."
+			}
+		},
+		{
+			"id": "encimera_regulable_hueco",
+			"nombre": "Encimera regulable con hueco inferior",
+			"categoria": "vivienda",
+			"subcategoria": "cocina_adaptada",
+			"etiquetas": ["encimera regulable", "encimera adaptada", "encimera con hueco", "cocina adaptada"],
+			"descripcion": "Tramo de encimera sin muebles debajo, sostenido por los extremos, que sube y baja con un motor. El bastón entra por debajo: se toca con la cadera o con la mano.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 1.8],
+				"fondo": [0.6, 0.62, 0.65],
+				"alto": [0.7, 0.82, 0.95]
+			},
+			"variantes": [
+				{
+					"id": "de_90",
+					"nombre": "De 90 cm",
+					"ancho": 0.9,
+					"fondo": 0.62,
+					"alto": 0.82
+				},
+				{
+					"id": "de_120",
+					"nombre": "De 1,20 m",
+					"ancho": 1.2,
+					"fondo": 0.62,
+					"alto": 0.82
+				},
+				{
+					"id": "de_180",
+					"nombre": "De 1,80 m",
+					"ancho": 1.8,
+					"fondo": 0.62,
+					"alto": 0.82
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["regulado_bajo", "regulado_alto"],
+			"acciones": [
+				{
+					"id": "regular_subir",
+					"nombre": "Subir",
+					"de": "regulado_bajo",
+					"a": "regulado_alto",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				},
+				{
+					"id": "regular_bajar",
+					"nombre": "Bajar",
+					"de": "regulado_alto",
+					"a": "regulado_bajo",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "mesa",
+			"lugares": ["vivienda", "residencia"],
+			"estancias": ["cocina"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["fregadero_adaptado_hueco", "placa_coccion_adaptada", "armarios_altos_descendentes"],
+			"simbolo": {
+				"letra": "Er",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/encimera_regulable_hueco.png",
+				"descripcion": "Huella en planta de «Encimera regulable con hueco inferior»: un rectángulo de 1,20 por 0,62 metros, con la letra «Er»."
+			}
+		},
+		{
+			"id": "fregadero_adaptado_hueco",
+			"nombre": "Fregadero poco profundo con hueco inferior",
+			"categoria": "vivienda",
+			"subcategoria": "cocina_adaptada",
+			"etiquetas": ["fregadero adaptado", "fregadero accesible", "pila adaptada", "fregadero sin mueble"],
+			"descripcion": "Fregadero de acero de poco fondo, sin armario debajo y con el desagüe arrimado a la pared, para meter las rodillas. El grifo es de palanca larga.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 0.9, 1.2],
+				"fondo": [0.58, 0.6, 0.65],
+				"alto": [0.72, 0.8, 0.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/grifo",
+					"volumen": 0.45,
+					"radio": 5,
+					"estado": "abierto"
+				}
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir_grifo",
+					"nombre": "Abrir el grifo",
+					"de": "cerrado",
+					"a": "abierto"
+				},
+				{
+					"id": "cerrar_grifo",
+					"nombre": "Cerrar el grifo",
+					"de": "abierto",
+					"a": "cerrado"
+				}
+			],
+			"contenedor": false,
+			"funcion": "sanitario",
+			"lugares": ["vivienda", "residencia"],
+			"estancias": ["cocina"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"relacionados": ["encimera_regulable_hueco"],
+			"simbolo": {
+				"letra": "Fa",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/fregadero_adaptado_hueco.png",
+				"descripcion": "Huella en planta de «Fregadero poco profundo con hueco inferior»: un rectángulo de 0,90 por 0,60 metros, con la letra «Fa»."
+			}
+		},
+		{
+			"id": "placa_coccion_adaptada",
+			"nombre": "Placa de cocción con mandos frontales y hueco",
+			"categoria": "vivienda",
+			"subcategoria": "cocina_adaptada",
+			"etiquetas": ["placa adaptada", "vitrocerámica adaptada", "placa con mandos frontales", "cocina accesible"],
+			"descripcion": "Placa de cocinar encastrada en una encimera sin mueble debajo, con los mandos en el canto de delante. Encendida quema, y debajo no hay nada que avise al bastón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.55, 0.6, 0.63],
+				"alto": [0.72, 0.8, 0.88]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "ceramica",
+			"sonidos": {
+				"golpe": "golpe/piedra"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda", "residencia"],
+			"estancias": ["cocina"],
+			"obstaculo": "voladizo",
+			"riesgos": ["caliente"],
+			"frecuencia": "comun",
+			"relacionados": ["encimera_regulable_hueco"],
+			"simbolo": {
+				"letra": "Pc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/placa_coccion_adaptada.png",
+				"descripcion": "Huella en planta de «Placa de cocción con mandos frontales y hueco»: un rectángulo de 0,70 por 0,60 metros, con la letra «Pc»."
+			}
+		},
+		{
+			"id": "armarios_altos_descendentes",
+			"nombre": "Armarios altos descendentes",
+			"categoria": "vivienda",
+			"subcategoria": "cocina_adaptada",
+			"etiquetas": ["armarios descendentes", "muebles altos motorizados", "estantes descendentes", "armario basculante"],
+			"descripcion": "Armarios colgados sobre la encimera cuyo interior baja con un motor hasta apoyarse en ella. Arriba quedan a la altura de la cabeza; bajados, ocupan la encimera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.2],
+				"fondo": [0.32, 0.35, 0.6],
+				"alto": [0.6, 0.7, 0.9]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.4,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["regulado_alto", "regulado_bajo"],
+			"acciones": [
+				{
+					"id": "regular_bajar",
+					"nombre": "Bajar",
+					"de": "regulado_alto",
+					"a": "regulado_bajo",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				},
+				{
+					"id": "regular_subir",
+					"nombre": "Subir",
+					"de": "regulado_bajo",
+					"a": "regulado_alto",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"relacionados": ["encimera_regulable_hueco"],
+			"simbolo": {
+				"letra": "Aa",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/armarios_altos_descendentes.png",
+				"descripcion": "Huella en planta de «Armarios altos descendentes»: un rectángulo de 0,90 por 0,35 metros, colgado a 1,40 metros del suelo, con la letra «Aa»."
+			}
+		},
+		{
+			"id": "horno_lateral_bandeja",
+			"nombre": "Horno de puerta lateral con bandeja extraíble",
+			"categoria": "vivienda",
+			"subcategoria": "cocina_adaptada",
+			"etiquetas": ["horno adaptado", "horno de apertura lateral", "horno accesible", "horno a media altura"],
+			"descripcion": "Mueble con el horno a la altura de la encimera. La puerta se abre de lado, como la de un armario, y debajo sale una bandeja para posar la fuente caliente.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.58, 0.6, 0.62],
+				"fondo": [0.55, 0.58, 0.6],
+				"alto": [1.25, 1.4, 1.6]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "hogar:puerta_electrodomestico.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "electrodomestico",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina"],
+			"obstaculo": "alto",
+			"riesgos": ["caliente"],
+			"frecuencia": "comun",
+			"relacionados": ["encimera_regulable_hueco"],
+			"simbolo": {
+				"letra": "Hl",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/horno_lateral_bandeja.png",
+				"descripcion": "Huella en planta de «Horno de puerta lateral con bandeja extraíble»: un rectángulo de 0,60 por 0,58 metros, con la letra «Hl»."
+			}
+		},
+		{
+			"id": "carro_camarera_apoyo",
+			"nombre": "Carrito camarera con asa de apoyo",
+			"categoria": "vivienda",
+			"subcategoria": "ayudas_casa",
+			"etiquetas": ["carrito camarera", "camarera", "carro de bandejas de casa", "andador de bandejas"],
+			"descripcion": "Carrito de dos bandejas con cuatro ruedas y un asa alta: sirve para llevar los platos sin cargar con ellos. Rueda al empujarlo y cada vez está en un sitio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.42, 0.48, 0.55],
+				"fondo": [0.6, 0.68, 0.8],
+				"alto": [0.85, 0.92, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "transporte:carrito.flac"
+			},
+			"acciones": [
+				{
+					"id": "empujar",
+					"nombre": "Empujar",
+					"sonido": "transporte:carrito.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["vivienda"],
+			"estancias": ["cocina", "comedor", "salon"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Cc",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/carro_camarera_apoyo.png",
+				"descripcion": "Huella en planta de «Carrito camarera con asa de apoyo»: un rectángulo de 0,48 por 0,68 metros, con la letra «Cc»."
+			}
+		},
+		{
+			"id": "sillon_elevador",
+			"nombre": "Sillón elevador",
+			"categoria": "vivienda",
+			"subcategoria": "ayudas_casa",
+			"etiquetas": ["sillón elevador", "sillón levantapersonas", "sillón motorizado", "butaca elevadora"],
+			"descripcion": "Sillón grande y blando con motor: se inclina hacia delante y te pone casi de pie, o se tumba sacando el reposapiés. Lleva un mando colgando de un cable.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.984, 0.84], [0.935, 0.935], [0.84, 0.984], [0.5, 1.0], [0.16, 0.984], [0.065, 0.935], [0.016, 0.84], [0.0, 0.5], [0.016, 0.16], [0.065, 0.065], [0.16, 0.016], [0.5, 0.0], [0.84, 0.016], [0.935, 0.065], [0.984, 0.16]]
+			},
+			"medidas": {
+				"ancho": [0.75, 0.82, 0.95],
+				"fondo": [0.85, 0.95, 1.7],
+				"alto": [1.0, 1.08, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "sentado",
+					"nombre": "Sentado",
+					"ancho": 0.82,
+					"fondo": 0.95,
+					"alto": 1.08
+				},
+				{
+					"id": "tumbado",
+					"nombre": "Tumbado, con el reposapiés fuera",
+					"ancho": 0.82,
+					"fondo": 1.65,
+					"alto": 1.0
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"estados": ["libre", "ocupado"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "regular_subir",
+					"nombre": "Subir",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "asiento",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["salon", "sala_comun", "dormitorio"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Se",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/sillon_elevador.png",
+				"descripcion": "Huella en planta de «Sillón elevador»: un rectángulo de esquinas redondeadas de 0,82 por 0,95 metros, con la letra «Se»."
+			}
+		},
+		{
+			"id": "asidero_cama_incorporarse",
+			"nombre": "Asidero de cama para incorporarse",
+			"categoria": "vivienda",
+			"subcategoria": "ayudas_casa",
+			"etiquetas": ["asidero de cama", "barandilla de cama", "asa de cama", "agarrador de cama"],
+			"descripcion": "Arco de tubo a media altura sujeto bajo el colchón, a un costado de la cama. Sobresale del borde como una barandilla corta para agarrarse al levantarse.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.05, 0.08, 0.3],
+				"alto": [0.85, 0.9, 1.0]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["vivienda"],
+			"estancias": ["dormitorio"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ac",
+				"color": "#C0392B"
+			},
+			"imagen": {
+				"fichero": "imagenes/asidero_cama_incorporarse.png",
+				"descripcion": "Huella en planta de «Asidero de cama para incorporarse»: un rectángulo de 0,50 por 0,08 metros, con la letra «Ac»."
+			}
+		},
+		{
+			"id": "grua_traslado_ruedas",
+			"nombre": "Grúa de traslado con ruedas",
+			"categoria": "movilidad",
+			"subcategoria": "gruas",
+			"etiquetas": ["grúa de traslado", "grúa de pacientes", "grúa de arnés", "grúa de transferencia"],
+			"descripcion": "Grúa de tubo sobre ruedas: abajo, dos patas largas abiertas en U a ras de suelo; arriba, un brazo con una percha a la altura de la cabeza de la que cuelga el arnés.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.9, 1.0], [0.9, 0.22], [0.1, 0.22], [0.1, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.62, 0.68, 1.1],
+				"fondo": [1.1, 1.25, 1.4],
+				"alto": [1.3, 1.75, 2.0]
+			},
+			"variantes": [
+				{
+					"id": "patas_cerradas",
+					"nombre": "Con las patas cerradas",
+					"ancho": 0.68,
+					"fondo": 1.25,
+					"alto": 1.75
+				},
+				{
+					"id": "patas_abiertas",
+					"nombre": "Con las patas abiertas",
+					"ancho": 1.05,
+					"fondo": 1.25,
+					"alto": 1.75
+				},
+				{
+					"id": "bipedestacion",
+					"nombre": "De bipedestación",
+					"ancho": 0.65,
+					"fondo": 1.1,
+					"alto": 1.3
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["regulado_bajo", "regulado_alto"],
+			"acciones": [
+				{
+					"id": "regular_subir",
+					"nombre": "Subir",
+					"de": "regulado_bajo",
+					"a": "regulado_alto",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				},
+				{
+					"id": "regular_bajar",
+					"nombre": "Bajar",
+					"de": "regulado_alto",
+					"a": "regulado_bajo",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "vivienda"],
+			"estancias": ["dormitorio", "pasillo", "bano"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "comun",
+			"relacionados": ["cama_geriatrica"],
+			"simbolo": {
+				"letra": "Gt",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/grua_traslado_ruedas.png",
+				"descripcion": "Huella en planta de «Grúa de traslado con ruedas»: una U abierta por delante de 0,68 por 1,25 metros, con la letra «Gt»."
+			}
+		},
+		{
+			"id": "grua_techo_rail",
+			"nombre": "Grúa de techo con raíl",
+			"categoria": "movilidad",
+			"subcategoria": "gruas",
+			"etiquetas": ["grúa de techo", "grúa de raíl", "grúa cenital", "raíl de techo"],
+			"descripcion": "Raíl atornillado al techo, de la cama al baño, con un motor que corre por él. Del motor cuelga una percha de metal que, aparcada, queda a la altura de la cabeza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.5, 3.0, 6.0],
+				"fondo": [0.3, 0.5, 0.6],
+				"alto": [0.4, 0.7, 1.2]
+			},
+			"variantes": [
+				{
+					"id": "tramo_recto_corto",
+					"nombre": "Tramo recto de 1,5 m",
+					"ancho": 1.5,
+					"fondo": 0.5,
+					"alto": 0.7
+				},
+				{
+					"id": "tramo_recto",
+					"nombre": "Tramo recto de 3 m",
+					"ancho": 3.0,
+					"fondo": 0.5,
+					"alto": 0.7
+				},
+				{
+					"id": "tramo_largo",
+					"nombre": "Tramo largo de 6 m",
+					"ancho": 6.0,
+					"fondo": 0.5,
+					"alto": 0.7
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 1.7,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["regulado_alto", "regulado_bajo"],
+			"acciones": [
+				{
+					"id": "regular_bajar",
+					"nombre": "Bajar",
+					"de": "regulado_alto",
+					"a": "regulado_bajo",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				},
+				{
+					"id": "regular_subir",
+					"nombre": "Subir",
+					"de": "regulado_bajo",
+					"a": "regulado_alto",
+					"sonido": "comun:actuador_ayuda_tecnica.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "vivienda"],
+			"estancias": ["dormitorio", "bano", "sala_rehabilitacion"],
+			"obstaculo": "cabeza",
+			"riesgos": ["movil"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Gt",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/grua_techo_rail.png",
+				"descripcion": "Huella en planta de «Grúa de techo con raíl»: un rectángulo de 3,00 por 0,50 metros, colgado a 1,70 metros del suelo, con la letra «Gt»."
+			}
+		},
+		{
+			"id": "silla_salvaescaleras",
+			"nombre": "Silla salvaescaleras en su raíl",
+			"categoria": "movilidad",
+			"subcategoria": "elevadores",
+			"etiquetas": ["silla salvaescaleras", "salvaescaleras", "silla elevadora", "subeescaleras"],
+			"descripcion": "Silla plegable montada en un raíl que sube pegado a la pared de la escalera. Aparcada abajo, estrecha el primer peldaño; en marcha zumba y pita despacio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.65, 0.75],
+				"fondo": [0.35, 0.65, 0.75],
+				"alto": [0.95, 1.0, 1.1]
+			},
+			"variantes": [
+				{
+					"id": "plegada",
+					"nombre": "Plegada",
+					"ancho": 0.65,
+					"fondo": 0.38,
+					"alto": 1.0
+				},
+				{
+					"id": "desplegada",
+					"nombre": "Desplegada",
+					"ancho": 0.65,
+					"fondo": 0.65,
+					"alto": 1.0
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/salvaescaleras_motor.flac",
+					"volumen": 0.45,
+					"radio": 9,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["libre", "ocupado", "apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "sentarse",
+					"nombre": "Sentarse",
+					"de": "libre",
+					"a": "ocupado",
+					"sonido": "hogar:sentarse.flac"
+				},
+				{
+					"id": "levantarse",
+					"nombre": "Levantarse",
+					"de": "ocupado",
+					"a": "libre"
+				},
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 25,
+				"al_terminar": "apagado"
+			},
+			"funcion": "ayuda_tecnica",
+			"lugares": ["vivienda", "comunidad", "residencia"],
+			"estancias": ["rellano", "entrada"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ss",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_salvaescaleras.png",
+				"descripcion": "Huella en planta de «Silla salvaescaleras en su raíl»: un rectángulo de 0,65 por 0,65 metros, con la letra «Ss»."
+			}
+		},
+		{
+			"id": "plataforma_elevadora_vertical",
+			"nombre": "Plataforma elevadora vertical",
+			"categoria": "movilidad",
+			"subcategoria": "elevadores",
+			"etiquetas": ["plataforma elevadora", "elevador vertical", "plataforma para silla de ruedas", "elevador de corto recorrido"],
+			"descripcion": "Plataforma de chapa con paredes hasta la cintura y una puertecita, junto a unos pocos escalones: sube y baja en vertical como un ascensor corto y lento.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.1, 1.4],
+				"fondo": [1.4, 1.5, 1.7],
+				"alto": [1.1, 1.3, 2.2]
+			},
+			"variantes": [
+				{
+					"id": "corto_recorrido",
+					"nombre": "De corto recorrido, abierta",
+					"ancho": 1.1,
+					"fondo": 1.5,
+					"alto": 1.3
+				},
+				{
+					"id": "con_cerramiento",
+					"nombre": "Con cerramiento",
+					"ancho": 1.4,
+					"fondo": 1.6,
+					"alto": 2.2
+				}
+			],
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "sonidos/salvaescaleras_motor.flac",
+					"volumen": 0.45,
+					"radio": 9,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["cerrado", "abierto", "apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "ascensor/puerta"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "ascensor/puerta"
+				},
+				{
+					"id": "poner",
+					"nombre": "Poner en marcha",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 20,
+				"al_terminar": "apagado"
+			},
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "comunidad", "tienda"],
+			"estancias": ["entrada", "portal", "vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pe",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/plataforma_elevadora_vertical.png",
+				"descripcion": "Huella en planta de «Plataforma elevadora vertical»: un rectángulo de 1,10 por 1,50 metros, con la letra «Pe»."
+			}
+		},
+		{
+			"id": "plataforma_salvaescaleras_plegable",
+			"nombre": "Plataforma salvaescaleras inclinada",
+			"categoria": "movilidad",
+			"subcategoria": "elevadores",
+			"etiquetas": ["plataforma salvaescaleras", "plataforma inclinada", "salvaescaleras de plataforma", "elevador de escalera"],
+			"descripcion": "Plataforma que sube por un raíl inclinado en la pared de la escalera. Recogida es una caja plana y vertical al pie del primer peldaño; abierta, ocupa todo el ancho.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.25],
+				"fondo": [0.25, 0.3, 1.0],
+				"alto": [1.0, 1.1, 1.5]
+			},
+			"variantes": [
+				{
+					"id": "recogida",
+					"nombre": "Recogida contra la pared",
+					"ancho": 1.0,
+					"fondo": 0.3,
+					"alto": 1.1
+				},
+				{
+					"id": "abierta",
+					"nombre": "Abierta",
+					"ancho": 1.05,
+					"fondo": 0.9,
+					"alto": 1.1
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["plegado", "desplegado"],
+			"acciones": [
+				{
+					"id": "desplegar",
+					"nombre": "Desplegar",
+					"de": "plegado",
+					"a": "desplegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				},
+				{
+					"id": "plegar",
+					"nombre": "Plegar",
+					"de": "desplegado",
+					"a": "plegado",
+					"sonido": "comun:barra_abatible_clac.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "comunidad", "estacion"],
+			"estancias": ["rellano", "portal"],
+			"obstaculo": "medio",
+			"riesgos": ["movil"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ps",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/plataforma_salvaescaleras_plegable.png",
+				"descripcion": "Huella en planta de «Plataforma salvaescaleras inclinada»: un rectángulo de 1,00 por 0,30 metros, con la letra «Ps»."
+			}
+		},
+		{
+			"id": "oruga_salvaescaleras",
+			"nombre": "Oruga salvaescaleras portátil",
+			"categoria": "movilidad",
+			"subcategoria": "elevadores",
+			"etiquetas": ["oruga salvaescaleras", "subeescaleras portátil", "oruga de escaleras", "salvaescaleras móvil"],
+			"descripcion": "Aparato con dos cadenas de goma, como un tanque pequeño, y un manillar alto, al que se engancha una silla de ruedas para subirla por los peldaños. Se guarda al pie de la escalera.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.65, 0.75],
+				"fondo": [0.9, 1.1, 1.4],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["comunidad", "colegio", "administracion", "residencia"],
+			"estancias": ["rellano", "portal"],
+			"obstaculo": "medio",
+			"riesgos": ["movil", "temporal"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Os",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/oruga_salvaescaleras.png",
+				"descripcion": "Huella en planta de «Oruga salvaescaleras portátil»: un rectángulo de 0,65 por 1,10 metros, con la letra «Os»."
+			}
+		},
+		{
+			"id": "rampa_umbral_portatil",
+			"nombre": "Rampa portátil de umbral",
+			"categoria": "movilidad",
+			"subcategoria": "rampas_pasamanos",
+			"etiquetas": ["rampa de umbral", "cuña de umbral", "rampa de goma", "salvaumbrales"],
+			"descripcion": "Cuña de goma o de aluminio arrimada a un escalón pequeño o al marco de una puerta. Se pisa: el pie nota una cuesta corta y un cambio de material.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.05, 0.0], [0.95, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [0.1, 0.3, 0.6],
+				"alto": [0.02, 0.04, 0.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Rampa de umbral: una cuesta corta.",
+			"funcion": "ayuda_tecnica",
+			"lugares": ["vivienda", "comunidad", "tienda", "residencia"],
+			"estancias": ["entrada", "terraza", "portal"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel", "temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ru",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/rampa_umbral_portatil.png",
+				"descripcion": "Huella en planta de «Rampa portátil de umbral»: un trapecio, más estrecho por detrás de 0,90 por 0,30 metros, con la letra «Ru»."
+			}
+		},
+		{
+			"id": "rampa_modular_barandilla",
+			"nombre": "Rampa modular con barandilla",
+			"categoria": "movilidad",
+			"subcategoria": "rampas_pasamanos",
+			"etiquetas": ["rampa modular", "rampa metálica", "rampa de aluminio", "rampa con pasamanos"],
+			"descripcion": "Rampa de chapa rugosa montada por tramos sobre unos escalones, con una barandilla de tubo a cada lado. Suena a metal hueco al pisarla y tiene un bordillo en los costados.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.5],
+				"fondo": [1.5, 3.0, 6.0],
+				"alto": [0.1, 0.3, 0.5]
+			},
+			"variantes": [
+				{
+					"id": "de_150",
+					"nombre": "De 1,5 m",
+					"ancho": 1.0,
+					"fondo": 1.5,
+					"alto": 0.12
+				},
+				{
+					"id": "de_300",
+					"nombre": "De 3 m",
+					"ancho": 1.0,
+					"fondo": 3.0,
+					"alto": 0.3
+				},
+				{
+					"id": "de_600",
+					"nombre": "De 6 m",
+					"ancho": 1.2,
+					"fondo": 6.0,
+					"alto": 0.5
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "escalera/rampa"
+			},
+			"contenedor": false,
+			"suelo": "metal",
+			"aviso": "Rampa con barandilla: empieza la cuesta.",
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "comunidad", "tienda"],
+			"estancias": ["entrada", "portal", "patio"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rm",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/rampa_modular_barandilla.png",
+				"descripcion": "Huella en planta de «Rampa modular con barandilla»: un rectángulo de 1,00 por 3,00 metros, con la letra «Rm»."
+			}
+		},
+		{
+			"id": "pasamanos_doble_altura",
+			"nombre": "Pasamanos doble a dos alturas",
+			"categoria": "movilidad",
+			"subcategoria": "rampas_pasamanos",
+			"etiquetas": ["pasamanos doble", "pasamanos de pasillo", "barandilla de pared", "pasamanos a dos alturas"],
+			"descripcion": "Dos barras de madera redondas, una sobre otra, a lo largo de la pared del pasillo: la alta a la altura de la cadera y la baja a la del muslo. Se sigue con la mano hasta la puerta.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 6.0],
+				"fondo": [0.06, 0.08, 0.12],
+				"alto": [0.2, 0.25, 0.35]
+			},
+			"variantes": [
+				{
+					"id": "de_1",
+					"nombre": "De 1 m",
+					"ancho": 1.0,
+					"fondo": 0.08,
+					"alto": 0.25
+				},
+				{
+					"id": "de_2",
+					"nombre": "De 2 m",
+					"ancho": 2.0,
+					"fondo": 0.08,
+					"alto": 0.25
+				},
+				{
+					"id": "de_4",
+					"nombre": "De 4 m",
+					"ancho": 4.0,
+					"fondo": 0.08,
+					"alto": 0.25
+				},
+				{
+					"id": "de_6",
+					"nombre": "De 6 m",
+					"ancho": 6.0,
+					"fondo": 0.08,
+					"alto": 0.25
+				}
+			],
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.65,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "centro_salud"],
+			"estancias": ["pasillo", "rellano"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pd",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/pasamanos_doble_altura.png",
+				"descripcion": "Huella en planta de «Pasamanos doble a dos alturas»: un rectángulo de 2,00 por 0,08 metros, colgado a 0,65 metros del suelo, con la letra «Pd»."
+			}
+		},
+		{
+			"id": "scooter_movilidad_cargando",
+			"nombre": "Scooter de movilidad aparcado y cargándose",
+			"categoria": "movilidad",
+			"subcategoria": "vehiculos_ayuda",
+			"etiquetas": ["scooter de movilidad", "scooter eléctrico de mayores", "moto de minusválido", "vehículo de movilidad"],
+			"descripcion": "Vehículo eléctrico de cuatro ruedas con un asiento giratorio, cesta delante y manillar, aparcado junto a un enchufe. El cargador zumba y el cable cruza hasta la pared.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.08], [1.0, 0.5], [0.78, 0.58], [0.78, 0.72], [1.0, 0.74], [1.0, 0.82], [0.75, 0.86], [0.68, 1.0], [0.32, 1.0], [0.25, 0.86], [0.0, 0.82], [0.0, 0.74], [0.22, 0.72], [0.22, 0.58], [0.0, 0.5], [0.0, 0.08]]
+			},
+			"medidas": {
+				"ancho": [0.55, 0.6, 0.7],
+				"fondo": [1.0, 1.2, 1.5],
+				"alto": [0.9, 1.0, 1.3]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "calle:zumbido_recarga.flac",
+					"volumen": 0.3,
+					"radio": 5,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["funcionando", "apagado"],
+			"acciones": [
+				{
+					"id": "desenchufar",
+					"nombre": "Desenchufar",
+					"de": "funcionando",
+					"a": "apagado"
+				},
+				{
+					"id": "recargar",
+					"nombre": "Enchufar",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "transporte:bip_validacion.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "vehiculo",
+			"lugares": ["residencia", "vivienda", "comunidad"],
+			"estancias": ["portal", "entrada", "garaje", "pasillo"],
+			"obstaculo": "medio",
+			"riesgos": ["temporal"],
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Sm",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/scooter_movilidad_cargando.png",
+				"descripcion": "Huella en planta de «Scooter de movilidad aparcado y cargándose»: un asiento ancho detrás, una plataforma estrecha y el manillar atravesado cerca del frente de 0,60 por 1,20 metros, con la letra «Sm»."
+			}
+		},
+		{
+			"id": "silla_evacuacion_colgada",
+			"nombre": "Silla de evacuación colgada en la escalera",
+			"categoria": "movilidad",
+			"subcategoria": "vehiculos_ayuda",
+			"etiquetas": ["silla de evacuación", "silla de emergencia", "silla de escaleras", "evacuación de personas"],
+			"descripcion": "Silla plegada dentro de una funda, colgada de la pared del rellano a la altura de la cadera. Sobresale un palmo largo y el bastón pasa por debajo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.55, 0.6],
+				"fondo": [0.2, 0.25, 0.3],
+				"alto": [0.9, 1.0, 1.1]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.8,
+			"detectable_baston": false,
+			"material": "tela",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "colegio"],
+			"estancias": ["rellano"],
+			"obstaculo": "voladizo",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Se",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/silla_evacuacion_colgada.png",
+				"descripcion": "Huella en planta de «Silla de evacuación colgada en la escalera»: un rectángulo de 0,55 por 0,25 metros, colgado a 0,80 metros del suelo, con la letra «Se»."
+			}
+		},
+		{
+			"id": "disco_transferencia",
+			"nombre": "Disco giratorio de transferencia",
+			"categoria": "movilidad",
+			"subcategoria": "gruas",
+			"etiquetas": ["disco giratorio", "disco de transferencia", "plato giratorio", "disco de giro"],
+			"descripcion": "Disco plano de plástico, del tamaño de una bandeja, que gira sobre sí mismo. Se deja en el suelo junto a la cama para girar de pie sin mover los pies: si lo pisas, se mueve.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "circulo"
+			},
+			"medidas": {
+				"ancho": [0.35, 0.4, 0.45],
+				"fondo": [0.35, 0.4, 0.45],
+				"alto": [0.02, 0.03, 0.05]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Disco giratorio en el suelo: gira bajo los pies.",
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "vivienda", "hospital"],
+			"estancias": ["dormitorio", "bano"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["movil", "resbaladizo"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Dt",
+				"color": "#566573"
+			},
+			"imagen": {
+				"fichero": "imagenes/disco_transferencia.png",
+				"descripcion": "Huella en planta de «Disco giratorio de transferencia»: un círculo de 0,40 por 0,40 metros, con la letra «Dt»."
+			}
+		},
+		{
+			"id": "plano_tactil_atril",
+			"nombre": "Plano táctil del edificio en atril",
+			"categoria": "orientacion",
+			"subcategoria": "planos_tactiles",
+			"etiquetas": ["plano táctil en atril", "plano en relieve del edificio", "plano háptico", "plano tiflológico"],
+			"descripcion": "Plano en relieve y braille sobre un tablero inclinado, a la altura de la mano, en un pie estrecho. El tablero vuela por delante del pie: se llega a él con la mano antes que con el bastón.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.2, 0.0], [0.8, 0.0], [1.0, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.2],
+				"fondo": [0.45, 0.55, 0.7],
+				"alto": [0.85, 0.95, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				},
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel"],
+			"estancias": ["vestibulo", "recepcion"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"relacionados": ["franja_guia_interior"],
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/plano_tactil_atril.png",
+				"descripcion": "Huella en planta de «Plano táctil del edificio en atril»: un trapecio, más estrecho por detrás de 0,80 por 0,55 metros, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "plano_tactil_pared",
+			"nombre": "Plano táctil de pared",
+			"categoria": "orientacion",
+			"subcategoria": "planos_tactiles",
+			"etiquetas": ["plano táctil de pared", "plano de planta en braille", "plano de evacuación táctil", "plano en relieve"],
+			"descripcion": "Placa en relieve y braille atornillada a la pared junto a la entrada de la planta, a la altura del pecho. Sobresale tres dedos; se lee de pie con las dos manos.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.5, 0.7, 1.0],
+				"fondo": [0.03, 0.05, 0.1],
+				"alto": [0.4, 0.5, 0.7]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.0,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel"],
+			"estancias": ["pasillo", "rellano", "vestibulo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pt",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/plano_tactil_pared.png",
+				"descripcion": "Huella en planta de «Plano táctil de pared»: un rectángulo de 0,70 por 0,05 metros, colgado a 1,00 metros del suelo, con la letra «Pt»."
+			}
+		},
+		{
+			"id": "maqueta_tactil_edificio",
+			"nombre": "Maqueta táctil del edificio",
+			"categoria": "orientacion",
+			"subcategoria": "planos_tactiles",
+			"etiquetas": ["maqueta táctil", "maqueta tiflológica", "maqueta para tocar", "maqueta del edificio"],
+			"descripcion": "Maqueta de madera del edificio sobre una mesa, hecha para tocarla: muros, puertas, escaleras y patios en volumen, con rótulos en braille en el borde.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.1, 0.0], [0.9, 0.0], [1.0, 0.1], [1.0, 0.9], [0.9, 1.0], [0.1, 1.0], [0.0, 0.9], [0.0, 0.1]]
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 2.0],
+				"fondo": [0.7, 0.9, 1.5],
+				"alto": [0.85, 0.95, 1.1]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["museo", "administracion", "universidad", "biblioteca", "residencia"],
+			"estancias": ["vestibulo", "sala_exposicion"],
+			"obstaculo": "medio",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Mt",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/maqueta_tactil_edificio.png",
+				"descripcion": "Huella en planta de «Maqueta táctil del edificio»: un rectángulo con las esquinas cortadas de 1,20 por 0,90 metros, con la letra «Mt»."
+			}
+		},
+		{
+			"id": "franja_guia_interior",
+			"nombre": "Franja guía interior adhesiva",
+			"categoria": "orientacion",
+			"subcategoria": "pavimento_interior",
+			"etiquetas": ["franja guía interior", "encaminamiento interior", "banda guía", "camino podotáctil"],
+			"descripcion": "Tira estrecha de goma con rayas a lo largo, pegada sobre el suelo liso del vestíbulo. Se sigue con el bastón o con el pie de la puerta al mostrador.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.2, 0.3, 0.4],
+				"fondo": [1.0, 4.0, 10.0],
+				"alto": [0.003, 0.005, 0.008]
+			},
+			"variantes": [
+				{
+					"id": "de_2",
+					"nombre": "De 2 m",
+					"ancho": 0.3,
+					"fondo": 2.0,
+					"alto": 0.005
+				},
+				{
+					"id": "de_4",
+					"nombre": "De 4 m",
+					"ancho": 0.3,
+					"fondo": 4.0,
+					"alto": 0.005
+				},
+				{
+					"id": "de_8",
+					"nombre": "De 8 m",
+					"ancho": 0.3,
+					"fondo": 8.0,
+					"alto": 0.005
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "tactil_rayas",
+			"funcion": "referencia",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "estacion", "centro_comercial"],
+			"estancias": ["vestibulo", "pasillo"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "muy_comun",
+			"relacionados": ["loseta_cruce_guia", "plano_tactil_atril"],
+			"simbolo": {
+				"letra": "Fg",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/franja_guia_interior.png",
+				"descripcion": "Huella en planta de «Franja guía interior adhesiva»: un rectángulo de 0,30 por 4,00 metros, con la letra «Fg»."
+			}
+		},
+		{
+			"id": "loseta_cruce_guia",
+			"nombre": "Loseta de cruce de franjas guía",
+			"categoria": "orientacion",
+			"subcategoria": "pavimento_interior",
+			"etiquetas": ["cruce de encaminamientos", "loseta de decisión", "cruce podotáctil", "cambio de dirección"],
+			"descripcion": "Cuadrado de botones donde se cruzan o se bifurcan dos franjas guía. Al notarlo bajo el pie hay que pararse y decidir hacia dónde se sigue.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.9, 1.2],
+				"fondo": [0.6, 0.9, 1.2],
+				"alto": [0.003, 0.005, 0.008]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "tactil_botones",
+			"aviso": "Cruce de franjas guía: aquí el camino se divide.",
+			"funcion": "referencia",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "estacion", "centro_comercial"],
+			"estancias": ["vestibulo", "pasillo"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["franja_guia_interior"],
+			"simbolo": {
+				"letra": "Lc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/loseta_cruce_guia.png",
+				"descripcion": "Huella en planta de «Loseta de cruce de franjas guía»: un rectángulo de 0,90 por 0,90 metros, con la letra «Lc»."
+			}
+		},
+		{
+			"id": "franja_botones_escalera",
+			"nombre": "Franja de botones ante escalera interior",
+			"categoria": "orientacion",
+			"subcategoria": "pavimento_interior",
+			"etiquetas": ["franja de advertencia", "botones de escalera", "pavimento de advertencia interior", "banda de botones"],
+			"descripcion": "Franja de botones pegada al suelo de lado a lado delante del primer peldaño de una escalera. Avisa: un paso más allá empieza el desnivel.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 3.0],
+				"fondo": [0.4, 0.8, 1.2],
+				"alto": [0.003, 0.005, 0.008]
+			},
+			"variantes": [
+				{
+					"id": "de_100",
+					"nombre": "De 1 m de ancho",
+					"ancho": 1.0,
+					"fondo": 0.8,
+					"alto": 0.005
+				},
+				{
+					"id": "de_120",
+					"nombre": "De 1,20 m de ancho",
+					"ancho": 1.2,
+					"fondo": 0.8,
+					"alto": 0.005
+				},
+				{
+					"id": "de_200",
+					"nombre": "De 2 m de ancho",
+					"ancho": 2.0,
+					"fondo": 0.8,
+					"alto": 0.005
+				}
+			],
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "tactil_botones",
+			"aviso": "Franja de botones: delante empieza una escalera.",
+			"funcion": "referencia",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "estacion", "centro_comercial", "colegio"],
+			"estancias": ["rellano", "pasillo", "vestibulo"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["bandas_contraste_peldanos"],
+			"simbolo": {
+				"letra": "Fb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/franja_botones_escalera.png",
+				"descripcion": "Huella en planta de «Franja de botones ante escalera interior»: un rectángulo de 1,20 por 0,80 metros, con la letra «Fb»."
+			}
+		},
+		{
+			"id": "bandas_contraste_peldanos",
+			"nombre": "Bandas antideslizantes en el borde de los peldaños",
+			"categoria": "orientacion",
+			"subcategoria": "pavimento_interior",
+			"etiquetas": ["bandas de peldaño", "banda antideslizante", "tira de contraste", "borde de peldaño"],
+			"descripcion": "Tira rugosa, como de lija, pegada en el borde de un peldaño de lado a lado. El pie y el bastón la notan áspera: marca dónde acaba el escalón.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.2, 3.0],
+				"fondo": [0.03, 0.05, 0.07],
+				"alto": [0.002, 0.003, 0.005]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"aviso": "Banda rugosa: borde de un peldaño.",
+			"funcion": "referencia",
+			"lugares": ["cualquiera"],
+			"estancias": ["rellano"],
+			"obstaculo": "ras_suelo",
+			"riesgos": ["desnivel"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["franja_botones_escalera"],
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/bandas_contraste_peldanos.png",
+				"descripcion": "Huella en planta de «Bandas antideslizantes en el borde de los peldaños»: un rectángulo de 1,20 por 0,05 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "felpudo_encastrado_vestibulo",
+			"nombre": "Felpudo encastrado de vestíbulo",
+			"categoria": "orientacion",
+			"subcategoria": "pavimento_interior",
+			"etiquetas": ["felpudo encastrado", "felpudo de aluminio", "alfombra de entrada enrasada", "limpiabarros"],
+			"descripcion": "Alfombra de perfiles de aluminio y tiras de pelo duro metida en un foso, enrasada con el suelo, justo tras la puerta. Al pisarla suena y raspa: estás entrando.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.2, 1.8, 3.0],
+				"fondo": [0.9, 1.5, 2.5],
+				"alto": [0.015, 0.02, 0.025]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": false,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "goma",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"suelo": "moqueta",
+			"funcion": "referencia",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "comunidad", "centro_comercial"],
+			"estancias": ["vestibulo", "entrada", "portal"],
+			"obstaculo": "ras_suelo",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_automatica_detector"],
+			"simbolo": {
+				"letra": "Fe",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/felpudo_encastrado_vestibulo.png",
+				"descripcion": "Huella en planta de «Felpudo encastrado de vestíbulo»: un rectángulo de 1,80 por 1,50 metros, con la letra «Fe»."
+			}
+		},
+		{
+			"id": "placa_braille_puerta",
+			"nombre": "Placa braille junto a la puerta",
+			"categoria": "orientacion",
+			"subcategoria": "rotulos_braille",
+			"etiquetas": ["placa braille", "rótulo en braille", "cartel de puerta en relieve", "número de habitación en braille"],
+			"descripcion": "Placa pequeña con letras en relieve y braille, a la derecha del marco de la puerta y a la altura del codo. Se busca deslizando la mano por la pared desde el marco.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.15, 0.2, 0.3],
+				"fondo": [0.03, 0.03, 0.05],
+				"alto": [0.1, 0.15, 0.3]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["cualquiera"],
+			"estancias": ["pasillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/placa_braille_puerta.png",
+				"descripcion": "Huella en planta de «Placa braille junto a la puerta»: un rectángulo de 0,20 por 0,03 metros, colgado a 1,20 metros del suelo, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "directorio_braille_voz",
+			"nombre": "Directorio con braille y voz",
+			"categoria": "orientacion",
+			"subcategoria": "rotulos_braille",
+			"etiquetas": ["directorio accesible", "directorio parlante", "directorio en braille", "panel de plantas"],
+			"descripcion": "Panel de pie en el vestíbulo con la lista de plantas y servicios en relieve y braille, y un botón grande abajo a la derecha que lo lee en voz alta.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.8, 1.0],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [1.4, 1.6, 1.9]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:megafonia.flac"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				},
+				{
+					"id": "escuchar",
+					"nombre": "Escuchar la información",
+					"sonido": "transporte:megafonia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "centro_comercial"],
+			"estancias": ["vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["plano_tactil_atril"],
+			"simbolo": {
+				"letra": "Db",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/directorio_braille_voz.png",
+				"descripcion": "Huella en planta de «Directorio con braille y voz»: un rectángulo de 0,80 por 0,30 metros, con la letra «Db»."
+			}
+		},
+		{
+			"id": "pasamanos_braille",
+			"nombre": "Pasamanos con indicación braille de planta",
+			"categoria": "orientacion",
+			"subcategoria": "rotulos_braille",
+			"etiquetas": ["pasamanos con braille", "pasamanos de escalera", "barandilla con braille", "indicador de planta"],
+			"descripcion": "Pasamanos de tubo en la escalera con una chapita en braille al principio y al final de cada tramo, por la cara de dentro: dice en qué planta estás.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 2.0, 6.0],
+				"fondo": [0.05, 0.07, 0.1],
+				"alto": [0.05, 0.05, 0.08]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": false,
+			"funcion": "ayuda_tecnica",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "estacion"],
+			"estancias": ["rellano"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/pasamanos_braille.png",
+				"descripcion": "Huella en planta de «Pasamanos con indicación braille de planta»: un rectángulo de 2,00 por 0,07 metros, colgado a 0,90 metros del suelo, con la letra «Pb»."
+			}
+		},
+		{
+			"id": "rotulo_banderola_bajo",
+			"nombre": "Rótulo en banderola mal colocado",
+			"categoria": "orientacion",
+			"subcategoria": "rotulos_braille",
+			"etiquetas": ["rótulo en banderola", "cartel perpendicular", "señal de pasillo", "banderola"],
+			"descripcion": "Cartel que sale de la pared en perpendicular, como una bandera rígida, a la altura de la frente. Es fino y el bastón no lo avisa: se da con él en la cara.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.03, 0.04, 0.08],
+				"fondo": [0.3, 0.4, 0.6],
+				"alto": [0.2, 0.3, 0.4]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.7,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["cualquiera"],
+			"estancias": ["pasillo"],
+			"obstaculo": "cabeza",
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Rb",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/rotulo_banderola_bajo.png",
+				"descripcion": "Huella en planta de «Rótulo en banderola mal colocado»: un rectángulo de 0,04 por 0,40 metros, colgado a 1,70 metros del suelo, con la letra «Rb»."
+			}
+		},
+		{
+			"id": "baliza_orientacion_interior",
+			"nombre": "Baliza sonora de orientación interior",
+			"categoria": "orientacion",
+			"subcategoria": "avisos_sonoros",
+			"etiquetas": ["baliza de orientación", "baliza acústica", "baliza de interior", "guía sonora de mostrador"],
+			"descripcion": "Cajita con altavoz sobre la puerta o el mostrador, por encima de la cabeza. Repite un «toc, toc» seco y agudo: se camina hacia el sonido para llegar al sitio.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.15, 0.2, 0.3],
+				"fondo": [0.08, 0.1, 0.15],
+				"alto": [0.12, 0.15, 0.25]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 2.2,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"propio": {
+					"sonido": "sonidos/baliza_orientacion_interior.flac",
+					"volumen": 0.5,
+					"radio": 16,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["encendido", "apagado"],
+			"acciones": [
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "senalizacion",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "estacion"],
+			"estancias": ["vestibulo", "pasillo"],
+			"obstaculo": "aereo",
+			"frecuencia": "comun",
+			"relacionados": ["mostrador_accesible_bucle"],
+			"simbolo": {
+				"letra": "Bo",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/baliza_orientacion_interior.png",
+				"descripcion": "Huella en planta de «Baliza sonora de orientación interior»: un rectángulo de 0,20 por 0,10 metros, colgado a 2,20 metros del suelo, con la letra «Bo»."
+			}
+		},
+		{
+			"id": "pulsador_asistencia_pared",
+			"nombre": "Pulsador de llamada de asistencia",
+			"categoria": "orientacion",
+			"subcategoria": "avisos_sonoros",
+			"etiquetas": ["pulsador de asistencia", "botón de ayuda", "llamada de asistencia", "timbre de ayuda"],
+			"descripcion": "Botón grande y redondo en una cajita de pared, a la altura de la cadera, con braille al lado. Al pulsarlo zumba y alguien del personal acude.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.08, 0.1, 0.15],
+				"fondo": [0.03, 0.05, 0.08],
+				"alto": [0.08, 0.1, 0.15]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/llamada_asistencia.flac"
+			},
+			"acciones": [
+				{
+					"id": "llamar_asistencia",
+					"nombre": "Pedir ayuda",
+					"sonido": "sonidos/llamada_asistencia.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "seguridad",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "tienda"],
+			"estancias": ["vestibulo", "entrada", "pasillo"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/pulsador_asistencia_pared.png",
+				"descripcion": "Huella en planta de «Pulsador de llamada de asistencia»: un rectángulo de 0,10 por 0,05 metros, colgado a 0,90 metros del suelo, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "intercomunicador_accesible",
+			"nombre": "Intercomunicador accesible de entrada",
+			"categoria": "orientacion",
+			"subcategoria": "avisos_sonoros",
+			"etiquetas": ["intercomunicador accesible", "portero accesible", "videoportero adaptado", "interfono de entrada"],
+			"descripcion": "Placa de metal en la pared junto a la puerta, más baja que un portero corriente, con un solo botón grande en relieve y una rejilla. Al llamar contesta una voz.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.15, 0.2, 0.3],
+				"fondo": [0.05, 0.08, 0.12],
+				"alto": [0.25, 0.35, 0.5]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.9,
+			"detectable_baston": false,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "transporte:interfono.flac"
+			},
+			"estados": ["en_espera", "llamando"],
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"de": "en_espera",
+					"a": "llamando",
+					"sonido": "transporte:interfono.flac"
+				},
+				{
+					"id": "colgar",
+					"nombre": "Colgar",
+					"de": "llamando",
+					"a": "en_espera"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "comunidad"],
+			"estancias": ["entrada", "portal"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_automatica_detector"],
+			"simbolo": {
+				"letra": "Ia",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/intercomunicador_accesible.png",
+				"descripcion": "Huella en planta de «Intercomunicador accesible de entrada»: un rectángulo de 0,20 por 0,08 metros, colgado a 0,90 metros del suelo, con la letra «Ia»."
+			}
+		},
+		{
+			"id": "mostrador_accesible_bucle",
+			"nombre": "Mostrador accesible con bucle magnético",
+			"categoria": "orientacion",
+			"subcategoria": "accesos",
+			"etiquetas": ["mostrador accesible", "bucle magnético", "bucle de inducción", "mostrador a dos alturas"],
+			"descripcion": "Mostrador a dos alturas: un tramo alto para estar de pie y otro bajo, con hueco para las rodillas. En el bajo hay un bucle magnético: con el audífono en T se oye a quien atiende sin el ruido de la sala.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.45, 1.0], [0.45, 0.65], [0.08, 0.65], [0.08, 1.0], [0.0, 1.0]]
+			},
+			"medidas": {
+				"ancho": [1.6, 2.0, 3.0],
+				"fondo": [0.6, 0.8, 0.9],
+				"alto": [0.8, 1.1, 1.15]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"contenedor": true,
+			"funcion": "mostrador",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "banco", "farmacia"],
+			"estancias": ["recepcion", "ventanilla", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["baliza_orientacion_interior", "franja_guia_interior"],
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/mostrador_accesible_bucle.png",
+				"descripcion": "Huella en planta de «Mostrador accesible con bucle magnético»: un rectángulo con un hueco delante, a la izquierda, para meter las rodillas de 2,00 por 0,80 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "puerta_automatica_detector",
+			"nombre": "Puerta automática con detector y aviso",
+			"categoria": "orientacion",
+			"subcategoria": "accesos",
+			"etiquetas": ["puerta automática", "puerta corredera automática", "puerta de cristal automática", "puerta con sensor"],
+			"descripcion": "Puerta corredera de cristal que se abre sola al acercarse, con un pitido y el siseo de las hojas. Cerrada es un cristal entero; hay que esperar un instante delante.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.6, 2.4],
+				"fondo": [0.08, 0.12, 0.2],
+				"alto": [2.1, 2.2, 2.5]
+			},
+			"variantes": [
+				{
+					"id": "una_hoja",
+					"nombre": "De una hoja",
+					"ancho": 1.0,
+					"fondo": 0.12,
+					"alto": 2.2
+				},
+				{
+					"id": "dos_hojas",
+					"nombre": "De dos hojas",
+					"ancho": 1.6,
+					"fondo": 0.12,
+					"alto": 2.2
+				},
+				{
+					"id": "ancha",
+					"nombre": "Ancha, de dos hojas",
+					"ancho": 2.4,
+					"fondo": 0.15,
+					"alto": 2.3
+				}
+			],
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "cristal",
+			"sonidos": {
+				"golpe": "golpe/cristal",
+				"uso": "transporte:bip_validacion.flac"
+			},
+			"estados": ["cerrado", "abierto"],
+			"acciones": [
+				{
+					"id": "abrir",
+					"nombre": "Abrir",
+					"de": "cerrado",
+					"a": "abierto",
+					"sonido": "puerta/automatica"
+				},
+				{
+					"id": "cerrar",
+					"nombre": "Cerrar",
+					"de": "abierto",
+					"a": "cerrado",
+					"sonido": "puerta/automatica"
+				}
+			],
+			"paso_libre": ["abierto"],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "centro_comercial", "supermercado", "estacion"],
+			"estancias": ["entrada", "vestibulo"],
+			"obstaculo": "alto",
+			"riesgos": ["movil", "transparente"],
+			"frecuencia": "muy_comun",
+			"relacionados": ["felpudo_encastrado_vestibulo"],
+			"simbolo": {
+				"letra": "Pa",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/puerta_automatica_detector.png",
+				"descripcion": "Huella en planta de «Puerta automática con detector y aviso»: un rectángulo de 1,60 por 0,12 metros, con la letra «Pa»."
+			}
+		},
+		{
+			"id": "poste_pulsador_puerta",
+			"nombre": "Poste con pulsador de apertura de puerta",
+			"categoria": "orientacion",
+			"subcategoria": "accesos",
+			"etiquetas": ["pulsador de puerta", "poste pulsador", "pulsador de codo", "botón de apertura"],
+			"descripcion": "Poste cuadrado hasta la cintura, un par de pasos antes de la puerta, con una placa grande que se aprieta con la mano, el codo o el bastón para que la puerta se abra.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.15, 0.2],
+				"fondo": [0.1, 0.15, 0.2],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "control_acceso",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "comunidad"],
+			"estancias": ["entrada", "vestibulo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["puerta_automatica_detector"],
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#7D3C98"
+			},
+			"imagen": {
+				"fichero": "imagenes/poste_pulsador_puerta.png",
+				"descripcion": "Huella en planta de «Poste con pulsador de apertura de puerta»: un rectángulo de 0,15 por 0,15 metros, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "lupa_television_mesa",
+			"nombre": "Lupa televisión en su mesa",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "puestos_adaptados",
+			"etiquetas": ["lupa televisión", "telelupa", "magnificador de pantalla", "ampliador de textos"],
+			"descripcion": "Mesa con un aparato alto: una pantalla grande y, debajo, una bandeja que se desliza donde se pone el papel para verlo muy ampliado. La bandeja se mueve al tocarla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.0, 1.2],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [1.1, 1.25, 1.4]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "maquina",
+			"lugares": ["vivienda", "biblioteca", "colegio", "universidad", "residencia", "oficina"],
+			"estancias": ["despacho", "sala_lectura"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"relacionados": ["estanteria_libros_braille"],
+			"simbolo": {
+				"letra": "Lt",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/lupa_television_mesa.png",
+				"descripcion": "Huella en planta de «Lupa televisión en su mesa»: un rectángulo de 1,00 por 0,70 metros, con la letra «Lt»."
+			}
+		},
+		{
+			"id": "puesto_linea_braille",
+			"nombre": "Puesto de ordenador con línea braille",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "puestos_adaptados",
+			"etiquetas": ["línea braille", "ordenador adaptado", "puesto adaptado", "lector de pantalla", "puesto tiflotécnico"],
+			"descripcion": "Mesa con un ordenador que habla y, delante del teclado, una regleta de puntos que suben y bajan bajo los dedos. Se oyen la voz sintética y el tecleo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [1.0, 1.2, 1.6],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [0.72, 0.76, 1.2]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "colegio:teclado.flac"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "colegio:teclado.flac"
+				},
+				{
+					"id": "leer",
+					"nombre": "Leer con los dedos"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["vivienda", "biblioteca", "colegio", "universidad", "oficina"],
+			"estancias": ["despacho", "sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"relacionados": ["impresora_braille_mueble"],
+			"simbolo": {
+				"letra": "Pl",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/puesto_linea_braille.png",
+				"descripcion": "Huella en planta de «Puesto de ordenador con línea braille»: un rectángulo de 1,20 por 0,70 metros, con la letra «Pl»."
+			}
+		},
+		{
+			"id": "maquina_perkins_mesa",
+			"nombre": "Máquina Perkins en su mesa",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "braille_y_relieve",
+			"etiquetas": ["máquina Perkins", "máquina de escribir braille", "perkins", "braille"],
+			"descripcion": "Mesa con una máquina de escribir braille de hierro, pesada, con seis teclas y una palanca. Cada letra es un golpe seco; al final de la línea suena una campanilla.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.7, 0.8, 1.0],
+				"fondo": [0.5, 0.6, 0.7],
+				"alto": [0.85, 0.9, 0.95]
+			},
+			"colocacion": ["pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/maquina_perkins.flac"
+			},
+			"acciones": [
+				{
+					"id": "escribir",
+					"nombre": "Escribir",
+					"sonido": "sonidos/maquina_perkins.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "mesa",
+			"lugares": ["colegio", "vivienda", "biblioteca", "universidad"],
+			"estancias": ["aula", "despacho", "sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "muy_comun",
+			"simbolo": {
+				"letra": "Mp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/maquina_perkins_mesa.png",
+				"descripcion": "Huella en planta de «Máquina Perkins en su mesa»: un rectángulo de 0,80 por 0,60 metros, con la letra «Mp»."
+			}
+		},
+		{
+			"id": "impresora_braille_mueble",
+			"nombre": "Impresora braille en su mueble",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "braille_y_relieve",
+			"etiquetas": ["impresora braille", "impresora de puntos", "embosadora", "cabina insonorizada"],
+			"descripcion": "Mueble cerrado con una tapa, del alto de la cadera, que guarda la impresora braille. Aun cerrado, cuando imprime martillea tan fuerte que se oye desde el pasillo.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.7, 0.9],
+				"fondo": [0.55, 0.65, 0.75],
+				"alto": [0.9, 1.0, 1.2]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"propio": {
+					"sonido": "sonidos/impresora_braille_martilleo.flac",
+					"volumen": 0.6,
+					"radio": 14,
+					"estado": "funcionando"
+				}
+			},
+			"estados": ["apagado", "funcionando"],
+			"acciones": [
+				{
+					"id": "imprimir",
+					"nombre": "Imprimir",
+					"de": "apagado",
+					"a": "funcionando",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "parar",
+					"nombre": "Parar",
+					"de": "funcionando",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"dinamica": {
+				"tipo": "temporizador",
+				"estado": "funcionando",
+				"segundos": 30,
+				"al_terminar": "apagado"
+			},
+			"funcion": "maquina",
+			"lugares": ["colegio", "biblioteca", "universidad", "administracion", "oficina"],
+			"estancias": ["despacho", "sala_lectura"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"relacionados": ["puesto_linea_braille"],
+			"simbolo": {
+				"letra": "Ib",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/impresora_braille_mueble.png",
+				"descripcion": "Huella en planta de «Impresora braille en su mueble»: un rectángulo de 0,70 por 0,65 metros, con la letra «Ib»."
+			}
+		},
+		{
+			"id": "horno_relieves",
+			"nombre": "Horno de láminas en relieve",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "braille_y_relieve",
+			"etiquetas": ["horno de relieves", "thermoform", "termoformadora", "horno fúser", "láminas en relieve"],
+			"descripcion": "Aparato de chapa sobre una mesa, con una tapa que baja sobre una lámina de plástico para copiar un dibujo en relieve. Sopla aire caliente: no se apoya la mano encima.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.6, 0.75, 0.9],
+				"fondo": [0.6, 0.7, 0.8],
+				"alto": [0.95, 1.05, 1.15]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "chapa",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"propio": {
+					"sonido": "fuente/ventilador",
+					"volumen": 0.35,
+					"radio": 5,
+					"estado": "encendido"
+				}
+			},
+			"estados": ["apagado", "encendido"],
+			"acciones": [
+				{
+					"id": "encender",
+					"nombre": "Encender",
+					"de": "apagado",
+					"a": "encendido",
+					"sonido": "hogar:interruptor.flac"
+				},
+				{
+					"id": "apagar",
+					"nombre": "Apagar",
+					"de": "encendido",
+					"a": "apagado",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "maquina",
+			"lugares": ["colegio", "biblioteca", "universidad"],
+			"estancias": ["despacho", "sala_lectura"],
+			"obstaculo": "medio",
+			"riesgos": ["caliente"],
+			"frecuencia": "ocasional",
+			"simbolo": {
+				"letra": "Hr",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/horno_relieves.png",
+				"descripcion": "Huella en planta de «Horno de láminas en relieve»: un rectángulo de 0,75 por 0,70 metros, con la letra «Hr»."
+			}
+		},
+		{
+			"id": "estanteria_libros_braille",
+			"nombre": "Estantería de libros en braille",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "braille_y_relieve",
+			"etiquetas": ["estantería de braille", "librería braille", "libros en braille", "biblioteca braille"],
+			"descripcion": "Estantería honda y recia: los libros en braille son tomos anchos y altos, y una sola novela llena una balda entera. Los lomos llevan la etiqueta en braille.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.9, 1.0, 1.2],
+				"fondo": [0.38, 0.42, 0.5],
+				"alto": [1.8, 2.0, 2.2]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "coger",
+					"nombre": "Coger",
+					"sonido": "calle:papel.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["biblioteca", "colegio", "vivienda", "universidad"],
+			"estancias": ["sala_lectura", "despacho", "aula"],
+			"obstaculo": "alto",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "El",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/estanteria_libros_braille.png",
+				"descripcion": "Huella en planta de «Estantería de libros en braille»: un rectángulo de 1,00 por 0,42 metros, con la letra «El»."
+			}
+		},
+		{
+			"id": "mesa_ajedrez_adaptado",
+			"nombre": "Mesa de ajedrez adaptado",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "puestos_adaptados",
+			"etiquetas": ["ajedrez adaptado", "ajedrez para ciegos", "tablero táctil", "juegos adaptados"],
+			"descripcion": "Mesa pequeña con un tablero de ajedrez en el que las casillas negras están más altas y cada pieza encaja en un agujero. Las piezas blancas llevan un punto arriba.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.65, 0.7, 0.8],
+				"fondo": [0.65, 0.7, 0.8],
+				"alto": [0.72, 0.75, 0.78]
+			},
+			"colocacion": ["suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera"
+			},
+			"acciones": [
+				{
+					"id": "jugar",
+					"nombre": "Jugar",
+					"sonido": "juego:xilofono.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "juego",
+			"lugares": ["vivienda", "residencia", "ocio", "colegio", "biblioteca"],
+			"estancias": ["sala_juegos", "sala_comun", "salon"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Ma",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/mesa_ajedrez_adaptado.png",
+				"descripcion": "Huella en planta de «Mesa de ajedrez adaptado»: un rectángulo de 0,70 por 0,70 metros, con la letra «Ma»."
+			}
+		},
+		{
+			"id": "telefono_teclas_grandes_mesita",
+			"nombre": "Teléfono de teclas grandes en su mesita",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "avisos_hogar",
+			"etiquetas": ["teléfono de teclas grandes", "teléfono para mayores", "teléfono amplificado", "teléfono fijo adaptado"],
+			"descripcion": "Mesita estrecha de entrada con un teléfono fijo de teclas enormes y timbre fuerte, que además destella al sonar. El cable baja hasta el rodapié.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.45, 0.6],
+				"fondo": [0.3, 0.38, 0.45],
+				"alto": [0.7, 0.8, 0.95]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/telefono_teclas_grandes_tonos.flac"
+			},
+			"estados": ["en_espera", "llamando"],
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"de": "en_espera",
+					"a": "llamando",
+					"sonido": "sonidos/telefono_teclas_grandes_tonos.flac"
+				},
+				{
+					"id": "colgar",
+					"nombre": "Colgar",
+					"de": "llamando",
+					"a": "en_espera",
+					"sonido": "hogar:interruptor.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "comunicacion",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["entrada", "salon", "dormitorio", "pasillo"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tt",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/telefono_teclas_grandes_mesita.png",
+				"descripcion": "Huella en planta de «Teléfono de teclas grandes en su mesita»: un rectángulo de 0,45 por 0,38 metros, con la letra «Tt»."
+			}
+		},
+		{
+			"id": "timbre_luminoso",
+			"nombre": "Timbre luminoso",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "avisos_hogar",
+			"etiquetas": ["timbre luminoso", "avisador luminoso", "timbre para sordos", "timbre con destellos"],
+			"descripcion": "Cajita en lo alto de la pared que, cuando llaman a la puerta, suena fuerte y lanza destellos para quien no oye. Está por encima de la cabeza.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.1, 0.15, 0.2],
+				"fondo": [0.04, 0.06, 0.1],
+				"alto": [0.1, 0.15, 0.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.9,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico",
+				"uso": "sonidos/timbre_luminoso_dindon.flac"
+			},
+			"acciones": [
+				{
+					"id": "pulsar",
+					"nombre": "Pulsar el botón",
+					"sonido": "sonidos/timbre_luminoso_dindon.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["entrada", "salon", "pasillo"],
+			"obstaculo": "cabeza",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Tl",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/timbre_luminoso.png",
+				"descripcion": "Huella en planta de «Timbre luminoso»: un rectángulo de 0,15 por 0,06 metros, colgado a 1,90 metros del suelo, con la letra «Tl»."
+			}
+		},
+		{
+			"id": "reloj_parlante_repisa",
+			"nombre": "Reloj parlante en su repisa",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "avisos_hogar",
+			"etiquetas": ["reloj parlante", "reloj que habla", "despertador parlante", "reloj para ciegos"],
+			"descripcion": "Repisa corta a la altura del pecho con un reloj de un solo botón grande: al apretarlo, una voz dice la hora. Entre tanto hace tictac bajito.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.25, 0.4, 0.6],
+				"fondo": [0.12, 0.18, 0.25],
+				"alto": [0.12, 0.18, 0.25]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 1.1,
+			"detectable_baston": false,
+			"material": "madera",
+			"sonidos": {
+				"golpe": "golpe/madera",
+				"uso": "sonidos/reloj_parlante_hora.flac",
+				"propio": {
+					"sonido": "fuente/reloj",
+					"volumen": 0.25,
+					"radio": 3
+				}
+			},
+			"acciones": [
+				{
+					"id": "escuchar_hora",
+					"nombre": "Oír la hora",
+					"sonido": "sonidos/reloj_parlante_hora.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["residencia", "vivienda"],
+			"estancias": ["dormitorio", "salon", "entrada", "sala_comun"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Rp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/reloj_parlante_repisa.png",
+				"descripcion": "Huella en planta de «Reloj parlante en su repisa»: un rectángulo de 0,40 por 0,18 metros, colgado a 1,10 metros del suelo, con la letra «Rp»."
+			}
+		},
+		{
+			"id": "punto_videointerpretacion",
+			"nombre": "Punto de videointerpretación en lengua de signos",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "avisos_hogar",
+			"etiquetas": ["videointerpretación", "intérprete de lengua de signos", "punto de signos", "videollamada accesible"],
+			"descripcion": "Atril de pie junto al mostrador con una pantalla a la altura del pecho: conecta por vídeo con un intérprete de lengua de signos. Suena un tono al llamar.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.4, 0.5, 0.6],
+				"fondo": [0.35, 0.4, 0.5],
+				"alto": [1.3, 1.5, 1.7]
+			},
+			"colocacion": ["suelo", "pared"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal"
+			},
+			"estados": ["en_espera", "llamando"],
+			"acciones": [
+				{
+					"id": "llamar",
+					"nombre": "Llamar",
+					"de": "en_espera",
+					"a": "llamando",
+					"sonido": "transporte:interfono.flac"
+				},
+				{
+					"id": "colgar",
+					"nombre": "Colgar",
+					"de": "llamando",
+					"a": "en_espera"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["residencia", "hospital", "centro_salud", "administracion", "museo", "biblioteca", "universidad", "oficina", "hotel", "banco"],
+			"estancias": ["recepcion", "ventanilla", "vestibulo"],
+			"obstaculo": "alto",
+			"frecuencia": "ocasional",
+			"relacionados": ["mostrador_accesible_bucle"],
+			"simbolo": {
+				"letra": "Pv",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/punto_videointerpretacion.png",
+				"descripcion": "Huella en planta de «Punto de videointerpretación en lengua de signos»: un rectángulo de 0,50 por 0,40 metros, con la letra «Pv»."
+			}
+		},
+		{
+			"id": "panel_pictogramas",
+			"nombre": "Panel de pictogramas de comunicación",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "avisos_hogar",
+			"etiquetas": ["panel de pictogramas", "tablero de comunicación", "comunicación aumentativa", "pictogramas"],
+			"descripcion": "Tablero grande en la pared con dibujos sencillos en casillas con relieve, para pedir cosas señalando. Sobresale poco, de la cintura a la cabeza.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "rectangulo"
+			},
+			"medidas": {
+				"ancho": [0.8, 1.2, 2.0],
+				"fondo": [0.03, 0.04, 0.06],
+				"alto": [0.6, 0.9, 1.2]
+			},
+			"colocacion": ["pared"],
+			"bloquea": true,
+			"altura_base": 0.8,
+			"detectable_baston": false,
+			"material": "plastico",
+			"sonidos": {
+				"golpe": "golpe/plastico"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar"
+				}
+			],
+			"contenedor": false,
+			"funcion": "comunicacion",
+			"lugares": ["residencia", "colegio", "hospital", "parque_infantil"],
+			"estancias": ["sala_comun", "pasillo", "aula"],
+			"obstaculo": "voladizo",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Pp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/panel_pictogramas.png",
+				"descripcion": "Huella en planta de «Panel de pictogramas de comunicación»: un rectángulo de 1,20 por 0,04 metros, colgado a 0,80 metros del suelo, con la letra «Pp»."
+			}
+		},
+		{
+			"id": "bastonero_bastones_blancos",
+			"nombre": "Bastonero para bastones blancos",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "perro_guia",
+			"etiquetas": ["bastonero", "soporte de bastones", "portabastones", "bastones blancos"],
+			"descripcion": "Soporte bajo de metal pegado a la pared junto a la entrada, con huecos donde se dejan de pie los bastones. Al tocarlo, los bastones tintinean.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.0, 0.0], [0.038, 0.383], [0.146, 0.707], [0.309, 0.924], [0.5, 1.0], [0.691, 0.924], [0.854, 0.707], [0.962, 0.383], [1.0, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.3, 0.4, 0.6],
+				"fondo": [0.15, 0.2, 0.3],
+				"alto": [0.5, 0.6, 0.9]
+			},
+			"colocacion": ["pared", "esquina"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "hogar:valla_obra.flac"
+			},
+			"acciones": [
+				{
+					"id": "dejar_baston",
+					"nombre": "Dejar el bastón",
+					"sonido": "hogar:valla_obra.flac"
+				}
+			],
+			"contenedor": true,
+			"funcion": "almacenaje",
+			"lugares": ["vivienda", "residencia", "colegio", "oficina"],
+			"estancias": ["entrada", "vestibulo", "aula"],
+			"obstaculo": "medio",
+			"frecuencia": "comun",
+			"simbolo": {
+				"letra": "Bb",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/bastonero_bastones_blancos.png",
+				"descripcion": "Huella en planta de «Bastonero para bastones blancos»: un semicírculo, recto por detrás y redondo por delante de 0,40 por 0,20 metros, con la letra «Bb»."
+			}
+		},
+		{
+			"id": "bebedero_comedero_perro_guia",
+			"nombre": "Bebedero y comedero del perro guía",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "perro_guia",
+			"etiquetas": ["bebedero del perro", "comedero del perro", "cuencos del perro guía", "cacharros del perro"],
+			"descripcion": "Dos cuencos de acero juntos sobre una bandeja de goma, en el suelo y arrimados a la pared. Bajos y con agua: si les das con el pie, salpican y suenan a lata.",
+			"ambito": ["interior", "exterior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[0.75, 0.0], [0.875, 0.067], [0.967, 0.25], [1.0, 0.5], [0.967, 0.75], [0.875, 0.933], [0.75, 1.0], [0.25, 1.0], [0.125, 0.933], [0.033, 0.75], [0.0, 0.5], [0.033, 0.25], [0.125, 0.067], [0.25, 0.0]]
+			},
+			"medidas": {
+				"ancho": [0.5, 0.6, 0.8],
+				"fondo": [0.25, 0.3, 0.4],
+				"alto": [0.08, 0.12, 0.35]
+			},
+			"variantes": [
+				{
+					"id": "en_el_suelo",
+					"nombre": "En el suelo",
+					"ancho": 0.6,
+					"fondo": 0.3,
+					"alto": 0.12
+				},
+				{
+					"id": "elevado",
+					"nombre": "En soporte elevado",
+					"ancho": 0.6,
+					"fondo": 0.3,
+					"alto": 0.3
+				}
+			],
+			"colocacion": ["pared", "esquina", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "metal",
+			"sonidos": {
+				"golpe": "golpe/metal",
+				"uso": "sonidos/perro_guia_bebe.flac"
+			},
+			"acciones": [
+				{
+					"id": "tocar",
+					"nombre": "Tocar",
+					"sonido": "sonidos/perro_guia_bebe.flac"
+				}
+			],
+			"contenedor": false,
+			"funcion": "animal",
+			"lugares": ["vivienda", "oficina", "residencia"],
+			"estancias": ["cocina", "entrada", "despacho", "terraza"],
+			"obstaculo": "bajo",
+			"riesgos": ["resbaladizo"],
+			"frecuencia": "comun",
+			"relacionados": ["cama_perro_guia"],
+			"simbolo": {
+				"letra": "Bc",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/bebedero_comedero_perro_guia.png",
+				"descripcion": "Huella en planta de «Bebedero y comedero del perro guía»: un óvalo alargado, de lados rectos y extremos redondos de 0,60 por 0,30 metros, con la letra «Bc»."
+			}
+		},
+		{
+			"id": "cama_perro_guia",
+			"nombre": "Cama del perro guía",
+			"categoria": "ciegos_sordos",
+			"subcategoria": "perro_guia",
+			"etiquetas": ["cama del perro", "colchoneta del perro", "cuna del perro guía", "cesta del perro"],
+			"descripcion": "Colchoneta ovalada con reborde blando, en el suelo junto a la mesa o en un rincón. Baja y mullida; a menudo el perro está tumbado encima.",
+			"ambito": ["interior"],
+			"forma": {
+				"tipo": "poligono",
+				"puntos": [[1.0, 0.5], [0.974, 0.764], [0.897, 0.897], [0.764, 0.974], [0.5, 1.0], [0.236, 0.974], [0.103, 0.897], [0.026, 0.764], [0.0, 0.5], [0.026, 0.236], [0.103, 0.103], [0.236, 0.026], [0.5, 0.0], [0.764, 0.026], [0.897, 0.103], [0.974, 0.236]]
+			},
+			"medidas": {
+				"ancho": [0.7, 0.9, 1.2],
+				"fondo": [0.5, 0.7, 0.9],
+				"alto": [0.12, 0.18, 0.25]
+			},
+			"colocacion": ["esquina", "pared", "suelo"],
+			"bloquea": true,
+			"altura_base": 0.0,
+			"detectable_baston": true,
+			"material": "espuma",
+			"sonidos": {
+				"golpe": "golpe/tela"
+			},
+			"contenedor": false,
+			"funcion": "animal",
+			"lugares": ["vivienda", "oficina", "residencia"],
+			"estancias": ["despacho", "salon", "dormitorio", "zona_trabajo"],
+			"obstaculo": "bajo",
+			"frecuencia": "comun",
+			"relacionados": ["bebedero_comedero_perro_guia"],
+			"simbolo": {
+				"letra": "Cp",
+				"color": "#1E8449"
+			},
+			"imagen": {
+				"fichero": "imagenes/cama_perro_guia.png",
+				"descripcion": "Huella en planta de «Cama del perro guía»: un rectángulo de esquinas redondeadas de 0,90 por 0,70 metros, con la letra «Cp»."
+			}
+		}
+	]
+}

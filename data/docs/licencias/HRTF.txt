@@ -1,0 +1,39 @@
+Perfiles de cabeza (HRTF) de EntornoLab
+=======================================
+
+Ficheros de data/bin/openal/hrtf, usados por el motor de sonido binaural
+(OpenAL Soft). Convertidos con «makemhr» de OpenAL Soft 1.25.2 a 44,1 kHz
+desde ficheros SOFA públicos (https://www.sofaconventions.org):
+
+  kemar_oreja_normal.mhr  MIT KEMAR, oreja normal
+      https://sofacoustics.org/data/database/mit/mit_kemar_normal_pinna.sofa
+  kemar_oreja_grande.mhr  MIT KEMAR, oreja grande
+      https://sofacoustics.org/data/database/mit/mit_kemar_large_pinna.sofa
+  ku100.mhr               SADIE II, cabeza artificial Neumann KU100 (D1)
+      https://sofacoustics.org/data/database/sadie/D1_48K_24bit_256tap_FIR_SOFA.sofa
+  persona_1.mhr           SADIE II, persona H3
+      https://sofacoustics.org/data/database/sadie/H3_48K_24bit_256tap_FIR_SOFA.sofa
+  persona_2.mhr           SADIE II, persona H4
+      https://sofacoustics.org/data/database/sadie/H4_48K_24bit_256tap_FIR_SOFA.sofa
+  persona_3.mhr           SADIE II, persona H5
+      https://sofacoustics.org/data/database/sadie/H5_48K_24bit_256tap_FIR_SOFA.sofa
+  persona_4.mhr           SADIE II, persona H6
+      https://sofacoustics.org/data/database/sadie/H6_48K_24bit_256tap_FIR_SOFA.sofa
+
+Además está el perfil «Built-In HRTF», que va dentro de soft_oal.dll y tiene
+la licencia de OpenAL Soft (ver OpenAL-Soft-LGPL.txt).
+
+Autores de las medidas y condiciones
+------------------------------------
+
+- MIT KEMAR: Bill Gardner y Keith Martin, MIT Media Lab, 1994 («HRTF
+  Measurements of a KEMAR Dummy-Head Microphone»). Los autores permiten su
+  uso sin restricciones citando la procedencia.
+  https://sound.media.mit.edu/resources/KEMAR.html
+
+- SADIE II: AudioLab, Universidad de York (cabeza Neumann KU100 y personas).
+  Publicada con licencia Apache 2.0.
+  https://www.york.ac.uk/sadie-project/
+
+Consulte las condiciones de uso vigentes de cada base de datos en su sitio
+antes de redistribuir estos perfiles fuera de EntornoLab.
