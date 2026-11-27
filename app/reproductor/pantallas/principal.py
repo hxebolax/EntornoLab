@@ -97,7 +97,9 @@ def abrir_menu_principal(app: Aplicacion, saludar: bool = True) -> Menu:
 	intro = None
 	if saludar:
 		saludo = (
-			textos.frase("saludo", app.estilo, alias=alumno.alias_para_mostrar(app.alias)) if app.perfil is not None else textos.frase("saludo_sin_alias", app.estilo)
+			textos.frase("saludo", app.estilo, alias=alumno.alias_para_mostrar(app.alias))
+			if app.perfil is not None
+			else textos.frase("saludo_sin_alias", app.estilo)
 		)
 		intro = _("{saludo} Muévete con {arriba} y {abajo} y elige con {aceptar}").format(
 			saludo=saludo,

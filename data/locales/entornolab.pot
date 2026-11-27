@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: entornolab 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-26 23:17+0100\n"
+"POT-Creation-Date: 2026-11-27 07:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2058,7 +2058,7 @@ msgid "Adulto"
 msgstr ""
 
 #. Traductores: cabeceras de las columnas de la lista de complementos.
-#: app/actividades/tipos.py:288 app/seguimiento/alumnos.py:369 app/seguimiento/informes.py:66 app/seguimiento/informes.py:292 app/ui/asistente_complemento.py:167 app/ui/complemento_propio.py:375 app/ui/dialogo_catalogo.py:779 app/ui/dialogo_complementos.py:197 app/ui/dialogo_complementos_en_linea.py:44 app/ui/esquemas_elementos.py:125 app/ui/esquemas_elementos.py:221 app/ui/esquemas_elementos.py:237 app/ui/esquemas_elementos.py:517 app/ui/esquemas_elementos.py:537 app/ui/esquemas_elementos.py:642 app/ui/esquemas_elementos.py:678 app/ui/esquemas_elementos.py:717 app/ui/esquemas_elementos.py:783 app/ui/esquemas_elementos.py:848 app/ui/esquemas_elementos.py:891 app/ui/esquemas_elementos.py:933 app/ui/esquemas_elementos.py:958 app/ui/esquemas_elementos.py:978 app/ui/esquemas_elementos.py:1051 app/ui/esquemas_elementos.py:1088 app/ui/esquemas_elementos.py:1119 app/ui/esquemas_elementos.py:1157 app/ui/esquemas_elementos.py:1176 app/ui/seguimiento/alumnos.py:376 app/ui/seguimiento/formulario_actividad.py:84 app/ui/seguimiento/presentador_actividades.py:70 app/ui/seguimiento/reserva_actividades.py:83 app/ui/ventana_principal.py:449
+#: app/actividades/tipos.py:288 app/seguimiento/alumnos.py:369 app/seguimiento/informes.py:66 app/seguimiento/informes.py:292 app/ui/asistente_complemento.py:167 app/ui/complemento_propio.py:375 app/ui/dialogo_catalogo.py:779 app/ui/dialogo_complementos.py:197 app/ui/dialogo_complementos_en_linea.py:44 app/ui/esquemas_elementos.py:125 app/ui/esquemas_elementos.py:221 app/ui/esquemas_elementos.py:237 app/ui/esquemas_elementos.py:517 app/ui/esquemas_elementos.py:537 app/ui/esquemas_elementos.py:642 app/ui/esquemas_elementos.py:678 app/ui/esquemas_elementos.py:717 app/ui/esquemas_elementos.py:783 app/ui/esquemas_elementos.py:848 app/ui/esquemas_elementos.py:891 app/ui/esquemas_elementos.py:933 app/ui/esquemas_elementos.py:958 app/ui/esquemas_elementos.py:978 app/ui/esquemas_elementos.py:1051 app/ui/esquemas_elementos.py:1088 app/ui/esquemas_elementos.py:1119 app/ui/esquemas_elementos.py:1157 app/ui/esquemas_elementos.py:1176 app/ui/seguimiento/alumnos.py:376 app/ui/seguimiento/formulario_actividad.py:84 app/ui/seguimiento/presentador_actividades.py:70 app/ui/seguimiento/reserva_actividades.py:83 app/ui/ventana_principal.py:464
 msgid "Nombre"
 msgstr ""
 
@@ -2066,7 +2066,7 @@ msgstr ""
 msgid "Nombre con el que el alumno y el profesional verán la actividad."
 msgstr ""
 
-#: app/actividades/tipos.py:293 app/ui/complemento_propio.py:284 app/ui/dialogos_importar.py:251 app/ui/dialogos_insertar.py:298 app/ui/esquemas_elementos.py:126 app/ui/esquemas_elementos.py:135 app/ui/esquemas_elementos.py:521 app/ui/esquemas_elementos.py:550 app/ui/esquemas_elementos.py:596 app/ui/esquemas_elementos.py:645 app/ui/esquemas_elementos.py:904 app/ui/esquemas_elementos.py:938 app/ui/esquemas_elementos.py:1133 app/ui/esquemas_elementos.py:1159 app/ui/esquemas_elementos.py:1179 app/ui/seguimiento/reserva_actividades.py:85 app/ui/ventana_principal.py:509 app/ui/ventana_principal.py:522
+#: app/actividades/tipos.py:293 app/ui/complemento_propio.py:284 app/ui/dialogos_importar.py:251 app/ui/dialogos_insertar.py:298 app/ui/esquemas_elementos.py:126 app/ui/esquemas_elementos.py:135 app/ui/esquemas_elementos.py:521 app/ui/esquemas_elementos.py:550 app/ui/esquemas_elementos.py:596 app/ui/esquemas_elementos.py:645 app/ui/esquemas_elementos.py:904 app/ui/esquemas_elementos.py:938 app/ui/esquemas_elementos.py:1133 app/ui/esquemas_elementos.py:1159 app/ui/esquemas_elementos.py:1179 app/ui/seguimiento/reserva_actividades.py:85 app/ui/ventana_principal.py:524 app/ui/ventana_principal.py:537
 msgid "Descripción"
 msgstr ""
 
@@ -3500,7 +3500,7 @@ msgstr ""
 msgid "Una pisada y dos notas que bajan: has bajado un peldaño. Cada peldaño suena un poco más grave que el anterior."
 msgstr ""
 
-#: app/audio/sintesis.py:743 app/dominio/edicion.py:824 app/dominio/modelo.py:122 app/importar/osm_conversion.py:1561 app/motor/movimiento.py:817
+#: app/audio/sintesis.py:743 app/dominio/edicion.py:825 app/dominio/modelo.py:123 app/importar/osm_conversion.py:1561 app/motor/movimiento.py:817
 msgid "Rampa"
 msgstr ""
 
@@ -3949,7 +3949,7 @@ msgstr ""
 msgid "Rumor continuo y coches frecuentes: una calle con bastante circulación."
 msgstr ""
 
-#: app/audio/sintesis.py:1381 app/dominio/modelo.py:156
+#: app/audio/sintesis.py:1381 app/dominio/modelo.py:157
 msgid "Tráfico intenso"
 msgstr ""
 
@@ -4053,7 +4053,7 @@ msgstr ""
 msgid "Aire acondicionado, teclados y un murmullo lejano."
 msgstr ""
 
-#: app/audio/sintesis.py:1706 app/dominio/catalogo.py:190 app/dominio/ejemplos.py:90 app/dominio/ejemplos.py:196 app/dominio/modelo.py:42 app/dominio/modelo.py:79 app/importar/osm_etiquetas.py:48 app/importar/osm_interiores.py:160 app/ui/operaciones.py:842 app/ui/operaciones.py:854
+#: app/audio/sintesis.py:1706 app/dominio/catalogo.py:190 app/dominio/ejemplos.py:90 app/dominio/ejemplos.py:196 app/dominio/modelo.py:43 app/dominio/modelo.py:80 app/importar/osm_etiquetas.py:48 app/importar/osm_interiores.py:160 app/ui/operaciones.py:979 app/ui/operaciones.py:991
 msgid "Pasillo"
 msgstr ""
 
@@ -4061,7 +4061,7 @@ msgstr ""
 msgid "Un aire hueco, que resuena, con pasos lejanos."
 msgstr ""
 
-#: app/audio/sintesis.py:1707 app/dominio/catalogo.py:165 app/dominio/edicion.py:158 app/dominio/ejemplos.py:421 app/dominio/modelo.py:84 app/importar/osm_conversion.py:633 app/ui/operaciones.py:90 app/ui/operaciones.py:826 app/ui/operaciones.py:870 app/ui/operaciones.py:882
+#: app/audio/sintesis.py:1707 app/dominio/catalogo.py:165 app/dominio/edicion.py:159 app/dominio/ejemplos.py:421 app/dominio/modelo.py:85 app/importar/osm_conversion.py:633 app/ui/operaciones.py:93 app/ui/operaciones.py:963 app/ui/operaciones.py:1007 app/ui/operaciones.py:1019
 msgid "Calle"
 msgstr ""
 
@@ -4069,7 +4069,7 @@ msgstr ""
 msgid "El rumor de la ciudad, coches lejanos y alguna voz."
 msgstr ""
 
-#: app/audio/sintesis.py:1708 app/dominio/modelo.py:51 app/dominio/modelo.py:85 app/importar/osm_etiquetas.py:160
+#: app/audio/sintesis.py:1708 app/dominio/modelo.py:52 app/dominio/modelo.py:86 app/importar/osm_etiquetas.py:160
 msgid "Parque"
 msgstr ""
 
@@ -4251,7 +4251,7 @@ msgstr ""
 msgid "Interior"
 msgstr ""
 
-#: app/dominio/catalogo.py:58 app/dominio/modelo.py:83
+#: app/dominio/catalogo.py:58 app/dominio/modelo.py:84
 msgid "Exterior"
 msgstr ""
 
@@ -4395,7 +4395,7 @@ msgstr ""
 msgid "Carga y mercancías"
 msgstr ""
 
-#: app/dominio/catalogo.py:125 app/dominio/modelo.py:70 app/importar/osm_etiquetas.py:172
+#: app/dominio/catalogo.py:125 app/dominio/modelo.py:71 app/importar/osm_etiquetas.py:172
 msgid "Agua"
 msgstr ""
 
@@ -4543,7 +4543,7 @@ msgstr ""
 msgid "Aparcamiento"
 msgstr ""
 
-#: app/dominio/catalogo.py:168 app/dominio/modelo.py:139
+#: app/dominio/catalogo.py:168 app/dominio/modelo.py:140
 msgid "Parada de transporte"
 msgstr ""
 
@@ -4627,7 +4627,7 @@ msgstr ""
 msgid "Garaje"
 msgstr ""
 
-#: app/dominio/catalogo.py:195 app/dominio/colocacion.py:1021 app/dominio/modelo.py:104 app/dominio/modelo.py:141 app/importar/osm_etiquetas.py:145 app/importar/osm_interiores.py:130
+#: app/dominio/catalogo.py:195 app/dominio/colocacion.py:1021 app/dominio/modelo.py:105 app/dominio/modelo.py:142 app/importar/osm_etiquetas.py:145 app/importar/osm_interiores.py:130
 msgid "Portal"
 msgstr ""
 
@@ -4647,7 +4647,7 @@ msgstr ""
 msgid "Cuarto de instalaciones o de basuras"
 msgstr ""
 
-#: app/dominio/catalogo.py:200 app/dominio/colocacion.py:1007 app/ui/operaciones.py:843 app/ui/operaciones.py:895
+#: app/dominio/catalogo.py:200 app/dominio/colocacion.py:1007 app/ui/operaciones.py:980 app/ui/operaciones.py:1032
 msgid "Aula"
 msgstr ""
 
@@ -4679,7 +4679,7 @@ msgstr ""
 msgid "Zona de trabajo de oficina"
 msgstr ""
 
-#: app/dominio/catalogo.py:209 app/ui/operaciones.py:861
+#: app/dominio/catalogo.py:209 app/ui/operaciones.py:998
 msgid "Sala de reuniones"
 msgstr ""
 
@@ -4739,7 +4739,7 @@ msgstr ""
 msgid "Habitación de hotel"
 msgstr ""
 
-#: app/dominio/catalogo.py:224 app/dominio/ejemplos.py:240 app/dominio/modelo.py:43
+#: app/dominio/catalogo.py:224 app/dominio/ejemplos.py:240 app/dominio/modelo.py:44
 msgid "Vestíbulo"
 msgstr ""
 
@@ -4835,11 +4835,11 @@ msgstr ""
 msgid "Huerto"
 msgstr ""
 
-#: app/dominio/catalogo.py:248 app/dominio/modelo.py:47 app/dominio/modelo.py:63 app/importar/osm_conversion.py:1677
+#: app/dominio/catalogo.py:248 app/dominio/modelo.py:48 app/dominio/modelo.py:64 app/importar/osm_conversion.py:1677
 msgid "Acera"
 msgstr ""
 
-#: app/dominio/catalogo.py:249 app/dominio/modelo.py:48
+#: app/dominio/catalogo.py:249 app/dominio/modelo.py:49
 msgid "Calzada"
 msgstr ""
 
@@ -4847,7 +4847,7 @@ msgstr ""
 msgid "Cruce o paso de peatones"
 msgstr ""
 
-#: app/dominio/catalogo.py:251 app/dominio/modelo.py:50 app/importar/osm_etiquetas.py:157
+#: app/dominio/catalogo.py:251 app/dominio/modelo.py:51 app/importar/osm_etiquetas.py:157
 msgid "Plaza"
 msgstr ""
 
@@ -5506,7 +5506,7 @@ msgstr ""
 msgid "Elija un objeto más pequeño u otro sitio."
 msgstr ""
 
-#: app/dominio/colocacion.py:557 app/dominio/edicion.py:552
+#: app/dominio/colocacion.py:557 app/dominio/edicion.py:553
 #, python-brace-format
 msgid "«{espacio}» no tiene pared en el lado «{lado}»."
 msgstr ""
@@ -5537,7 +5537,7 @@ msgstr ""
 msgid "Indique un elemento que exista y un lado: norte, sur, este u oeste."
 msgstr ""
 
-#: app/dominio/colocacion.py:1006 app/dominio/ejemplos.py:107 app/dominio/modelo.py:80
+#: app/dominio/colocacion.py:1006 app/dominio/ejemplos.py:107 app/dominio/modelo.py:81
 msgid "Baño"
 msgstr ""
 
@@ -5550,646 +5550,646 @@ msgstr ""
 msgid "No se sabe amueblar un espacio como «{uso}». Usos: {usos}."
 msgstr ""
 
-#: app/dominio/edicion.py:89 app/exportar/indicaciones.py:173 app/motor/lenguaje.py:161 app/motor/lenguaje.py:163
+#: app/dominio/edicion.py:90 app/exportar/indicaciones.py:173 app/motor/lenguaje.py:161 app/motor/lenguaje.py:163
 #, python-brace-format
 msgid "{n} metro"
 msgid_plural "{n} metros"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/dominio/edicion.py:102
+#: app/dominio/edicion.py:103
 #, python-brace-format
 msgid "No existe ningún elemento con el identificador «{id}»."
 msgstr ""
 
-#: app/dominio/edicion.py:115
+#: app/dominio/edicion.py:116
 #, python-brace-format
 msgid "«{nombre}» tiene que ser un número."
 msgstr ""
 
-#: app/dominio/edicion.py:117
+#: app/dominio/edicion.py:118
 #, python-brace-format
 msgid "«{nombre}» tiene que ser mayor que cero."
 msgstr ""
 
-#: app/dominio/edicion.py:127
+#: app/dominio/edicion.py:128
 msgid "Ese elemento no se puede guardar en una planta."
 msgstr ""
 
-#: app/dominio/edicion.py:155
+#: app/dominio/edicion.py:156
 #, python-brace-format
 msgid "Ya hay una planta en el nivel {nivel}."
 msgstr ""
 
-#: app/dominio/edicion.py:160 app/dominio/ejemplos.py:234 app/reproductor/pantallas/tutorial.py:58 app/ui/operaciones.py:820 app/ui/operaciones.py:841 app/ui/operaciones.py:853
+#: app/dominio/edicion.py:161 app/dominio/ejemplos.py:234 app/reproductor/pantallas/tutorial.py:58 app/ui/operaciones.py:957 app/ui/operaciones.py:978 app/ui/operaciones.py:990
 msgid "Planta baja"
 msgstr ""
 
-#: app/dominio/edicion.py:162
+#: app/dominio/edicion.py:163
 #, python-brace-format
 msgid "Planta {n}"
 msgstr ""
 
-#: app/dominio/edicion.py:164
+#: app/dominio/edicion.py:165
 #, python-brace-format
 msgid "Sótano {n}"
 msgstr ""
 
-#: app/dominio/edicion.py:212
+#: app/dominio/edicion.py:213
 #, python-brace-format
 msgid "«{tipo}» no es un tipo de espacio. Tipos: {tipos}."
 msgstr ""
 
-#: app/dominio/edicion.py:216
+#: app/dominio/edicion.py:217
 msgid "El contorno tiene que ser una lista de puntos (x, y)."
 msgstr ""
 
-#: app/dominio/edicion.py:218
+#: app/dominio/edicion.py:219
 msgid "Un espacio necesita al menos tres vértices."
 msgstr ""
 
-#: app/dominio/edicion.py:220
+#: app/dominio/edicion.py:221
 #, python-brace-format
 msgid "El contorno de «{nombre}» se corta a sí mismo o no encierra superficie."
 msgstr ""
 
-#: app/dominio/edicion.py:224 app/dominio/edicion.py:710
+#: app/dominio/edicion.py:225 app/dominio/edicion.py:711
 #, python-brace-format
 msgid "«{suelo}» no es un suelo conocido. Suelos: {suelos}."
 msgstr ""
 
-#: app/dominio/edicion.py:227
+#: app/dominio/edicion.py:228
 #, python-brace-format
 msgid "«{acustica}» no es una acústica conocida. Acústicas: {lista}."
 msgstr ""
 
-#: app/dominio/edicion.py:233
+#: app/dominio/edicion.py:234
 #, python-brace-format
 msgid "«{nombre}» se solaparía con «{otro}». Cambie la posición o las medidas."
 msgstr ""
 
-#: app/dominio/edicion.py:267 app/dominio/edicion.py:296 app/dominio/edicion.py:485 app/dominio/edicion.py:784 app/dominio/edicion.py:828 app/dominio/edicion.py:1083 app/dominio/edicion.py:1185 app/dominio/edicion.py:1353 app/ui/complemento_propio.py:495
+#: app/dominio/edicion.py:268 app/dominio/edicion.py:297 app/dominio/edicion.py:486 app/dominio/edicion.py:785 app/dominio/edicion.py:829 app/dominio/edicion.py:1084 app/dominio/edicion.py:1186 app/dominio/edicion.py:1369 app/ui/complemento_propio.py:495
 msgid "ancho"
 msgstr ""
 
-#: app/dominio/edicion.py:268 app/dominio/edicion.py:297 app/dominio/edicion.py:1185 app/dominio/edicion.py:1354 app/ui/complemento_propio.py:495
+#: app/dominio/edicion.py:269 app/dominio/edicion.py:298 app/dominio/edicion.py:1186 app/dominio/edicion.py:1370 app/ui/complemento_propio.py:495
 msgid "fondo"
 msgstr ""
 
-#: app/dominio/edicion.py:293
+#: app/dominio/edicion.py:294
 #, python-brace-format
 msgid "«{lado}» no es un lado. Lados: norte, sur, este, oeste."
 msgstr ""
 
-#: app/dominio/edicion.py:295
+#: app/dominio/edicion.py:296
 #, python-brace-format
 msgid "«{valor}» no es una alineación. Alineaciones: inicio, centro, fin."
 msgstr ""
 
-#: app/dominio/edicion.py:484
+#: app/dominio/edicion.py:485
 #, python-brace-format
 msgid "«{tipo}» no es un tipo de abertura. Tipos: {tipos}."
 msgstr ""
 
-#: app/dominio/edicion.py:491
+#: app/dominio/edicion.py:492
 #, python-brace-format
 msgid "Una abertura de {ancho} a {desplazamiento} del inicio no cabe en {donde}, que mide {largo}."
 msgstr ""
 
-#: app/dominio/edicion.py:501
+#: app/dominio/edicion.py:502
 #, python-brace-format
 msgid "En ese tramo ya está «{otra}». Elija otro desplazamiento."
 msgstr ""
 
-#: app/dominio/edicion.py:505
+#: app/dominio/edicion.py:506
 #, python-brace-format
 msgid "«{estado}» no es un estado. Estados: abierta, cerrada, con_llave."
 msgstr ""
 
-#: app/dominio/edicion.py:509
+#: app/dominio/edicion.py:510
 #, python-brace-format
 msgid "«{hoja}» no es un tipo de hoja. Hojas: {hojas}."
 msgstr ""
 
-#: app/dominio/edicion.py:518 app/importar/osm_interiores.py:130 app/motor/lenguaje.py:244
+#: app/dominio/edicion.py:519 app/importar/osm_interiores.py:130 app/motor/lenguaje.py:244
 msgid "Hueco"
 msgstr ""
 
-#: app/dominio/edicion.py:520 app/importar/osm_interiores.py:132
+#: app/dominio/edicion.py:521 app/importar/osm_interiores.py:132
 #, python-brace-format
 msgid "{tipo} entre {a} y {b}"
 msgstr ""
 
-#: app/dominio/edicion.py:522 app/importar/osm_interiores.py:134
+#: app/dominio/edicion.py:523 app/importar/osm_interiores.py:134
 #, python-brace-format
 msgid "{tipo} de {a}"
 msgstr ""
 
-#: app/dominio/edicion.py:554
+#: app/dominio/edicion.py:555
 #, python-brace-format
 msgid "la pared {lado} de «{espacio}»"
 msgstr ""
 
-#: app/dominio/edicion.py:581
+#: app/dominio/edicion.py:582
 #, python-brace-format
 msgid "«{a}» y «{b}» no comparten ninguna pared."
 msgstr ""
 
-#: app/dominio/edicion.py:582
+#: app/dominio/edicion.py:583
 #, python-brace-format
 msgid "la pared entre «{a}» y «{b}»"
 msgstr ""
 
-#: app/dominio/edicion.py:647
+#: app/dominio/edicion.py:648
 msgid "Los dos extremos de la pared están en el mismo punto."
 msgstr ""
 
-#: app/dominio/edicion.py:649 app/dominio/edicion.py:1696 app/importar/plano.py:482 app/motor/movimiento.py:527 app/ui/dialogo_catalogo.py:1333 app/ui/esquemas_elementos.py:663
+#: app/dominio/edicion.py:650 app/dominio/edicion.py:1712 app/importar/plano.py:482 app/motor/movimiento.py:527 app/ui/dialogo_catalogo.py:1333 app/ui/esquemas_elementos.py:663
 msgid "Pared"
 msgstr ""
 
-#: app/dominio/edicion.py:653
+#: app/dominio/edicion.py:654
 msgid "grosor"
 msgstr ""
 
-#: app/dominio/edicion.py:657
+#: app/dominio/edicion.py:658
 msgid "altura"
 msgstr ""
 
-#: app/dominio/edicion.py:681
+#: app/dominio/edicion.py:682
 #, python-brace-format
 msgid "Hay que indicar qué sonido emite «{nombre}»."
 msgstr ""
 
-#: app/dominio/edicion.py:689
+#: app/dominio/edicion.py:690
 msgid "radio"
 msgstr ""
 
-#: app/dominio/edicion.py:713
+#: app/dominio/edicion.py:714
 #, python-brace-format
 msgid "La zona de suelo «{nombre}» no encierra superficie."
 msgstr ""
 
-#: app/dominio/edicion.py:727
+#: app/dominio/edicion.py:728
 msgid "Una escalera o rampa tiene que unir dos plantas distintas."
 msgstr ""
 
-#: app/dominio/edicion.py:730
+#: app/dominio/edicion.py:731
 #, python-brace-format
 msgid "«{abajo}» está más alta que «{arriba}»: páselas en el orden contrario."
 msgstr ""
 
-#: app/dominio/edicion.py:760
+#: app/dominio/edicion.py:761
 #, python-brace-format
 msgid "«{tipo}» no es un tipo de escalera."
 msgstr ""
 
-#: app/dominio/edicion.py:763 app/dominio/edicion.py:808
+#: app/dominio/edicion.py:764 app/dominio/edicion.py:809
 #, python-brace-format
 msgid "«{valor}» no es una opción de pasamanos. Opciones: izquierda, derecha, ambos, ninguno."
 msgstr ""
 
-#: app/dominio/edicion.py:765 app/dominio/edicion.py:810
+#: app/dominio/edicion.py:766 app/dominio/edicion.py:811
 msgid "longitud"
 msgstr ""
 
-#: app/dominio/edicion.py:767
+#: app/dominio/edicion.py:768
 msgid "Una escalera necesita al menos un peldaño."
 msgstr ""
 
-#: app/dominio/edicion.py:853
+#: app/dominio/edicion.py:854
 msgid "Un ascensor tiene que parar al menos en dos plantas."
 msgstr ""
 
-#: app/dominio/edicion.py:858 app/dominio/ejemplos.py:397 app/dominio/modelo.py:123 app/importar/osm_interiores.py:232
+#: app/dominio/edicion.py:859 app/dominio/ejemplos.py:397 app/dominio/modelo.py:124 app/importar/osm_interiores.py:232
 msgid "Ascensor"
 msgstr ""
 
-#: app/dominio/edicion.py:931
+#: app/dominio/edicion.py:932
 msgid "El eje de una calle necesita al menos dos puntos separados."
 msgstr ""
 
-#: app/dominio/edicion.py:932
+#: app/dominio/edicion.py:933
 msgid "ancho de la calzada"
 msgstr ""
 
-#: app/dominio/edicion.py:934
+#: app/dominio/edicion.py:935
 msgid "El ancho de la acera no puede ser negativo."
 msgstr ""
 
-#: app/dominio/edicion.py:936
+#: app/dominio/edicion.py:937
 #, python-brace-format
 msgid "«{sentido}» no es un sentido. Sentidos: doble, ida, vuelta."
 msgstr ""
 
-#: app/dominio/edicion.py:938
+#: app/dominio/edicion.py:939
 msgid "El tráfico va de 0 (ninguno) a 3 (intenso)."
 msgstr ""
 
-#: app/dominio/edicion.py:957 app/importar/osm_conversion.py:1144 app/importar/osm_conversion.py:1171
+#: app/dominio/edicion.py:958 app/importar/osm_conversion.py:1144 app/importar/osm_conversion.py:1171
 #, python-brace-format
 msgid "Calzada de {calle}"
 msgstr ""
 
-#: app/dominio/edicion.py:970 app/importar/osm_conversion.py:1448 app/importar/osm_conversion.py:1683
+#: app/dominio/edicion.py:971 app/importar/osm_conversion.py:1448 app/importar/osm_conversion.py:1683
 #, python-brace-format
 msgid "Acera {lado} de {calle}"
 msgstr ""
 
-#: app/dominio/edicion.py:1003
+#: app/dominio/edicion.py:1004
 msgid "Un cruce necesita dos calles distintas."
 msgstr ""
 
-#: app/dominio/edicion.py:1013
+#: app/dominio/edicion.py:1014
 #, python-brace-format
 msgid "«{a}» y «{b}» no se cruzan."
 msgstr ""
 
-#: app/dominio/edicion.py:1015
+#: app/dominio/edicion.py:1016
 msgid "A una de las calles le falta la calzada; créelas con «crear calle»."
 msgstr ""
 
-#: app/dominio/edicion.py:1041
+#: app/dominio/edicion.py:1042
 #, python-brace-format
 msgid "{acera}, tramo {tramo}"
 msgstr ""
 
-#: app/dominio/edicion.py:1048
+#: app/dominio/edicion.py:1049
 #, python-brace-format
 msgid "Las calzadas de «{a}» y «{b}» no llegan a tocarse."
 msgstr ""
 
-#: app/dominio/edicion.py:1052
+#: app/dominio/edicion.py:1053
 #, python-brace-format
 msgid "Cruce de {a} con {b}"
 msgstr ""
 
-#: app/dominio/edicion.py:1085
+#: app/dominio/edicion.py:1086
 msgid "Un paso sin semáforo no puede tener señal sonora ni pulsador."
 msgstr ""
 
-#: app/dominio/edicion.py:1089 app/importar/osm_conversion.py:1725
+#: app/dominio/edicion.py:1090 app/importar/osm_conversion.py:1725
 #, python-brace-format
 msgid "Paso de peatones de {calle}"
 msgstr ""
 
-#: app/dominio/edicion.py:1126
+#: app/dominio/edicion.py:1127
 #, python-brace-format
 msgid "Pavimento táctil {lado} de {paso}"
 msgstr ""
 
-#: app/dominio/edicion.py:1135
+#: app/dominio/edicion.py:1136
 msgid "con señal sonora"
 msgstr ""
 
-#: app/dominio/edicion.py:1137
+#: app/dominio/edicion.py:1138
 msgid "con pulsador"
 msgstr ""
 
-#: app/dominio/edicion.py:1141
+#: app/dominio/edicion.py:1142
 #, python-brace-format
 msgid "Semáforo {lado} de {paso}"
 msgstr ""
 
-#: app/dominio/edicion.py:1152
+#: app/dominio/edicion.py:1153
 #, python-brace-format
 msgid "Isleta de {paso}"
 msgstr ""
 
-#: app/dominio/edicion.py:1196
+#: app/dominio/edicion.py:1197
 #, python-brace-format
 msgid "Portal de {edificio}"
 msgstr ""
 
-#: app/dominio/edicion.py:1221 app/dominio/edicion.py:1232
+#: app/dominio/edicion.py:1222 app/dominio/edicion.py:1233
 msgid "Ese elemento no tiene posición."
 msgstr ""
 
-#: app/dominio/edicion.py:1271
+#: app/dominio/edicion.py:1287
 msgid "Ese elemento no se puede mover."
 msgstr ""
 
-#: app/dominio/edicion.py:1355 app/ui/complemento_propio.py:495
+#: app/dominio/edicion.py:1371 app/ui/complemento_propio.py:495
 msgid "alto"
 msgstr ""
 
-#: app/dominio/edicion.py:1365
+#: app/dominio/edicion.py:1381
 #, python-brace-format
 msgid "«{nombre}» admite un {dimension} de {minimo} a {maximo} metros."
 msgstr ""
 
-#: app/dominio/edicion.py:1378
+#: app/dominio/edicion.py:1394
 msgid "Para una abertura hay que indicar el ancho."
 msgstr ""
 
-#: app/dominio/edicion.py:1392
+#: app/dominio/edicion.py:1408
 msgid "Para una vía hay que indicar el ancho de la calzada."
 msgstr ""
 
-#: app/dominio/edicion.py:1395
+#: app/dominio/edicion.py:1411
 msgid "Ese elemento no tiene medidas que cambiar."
 msgstr ""
 
-#: app/dominio/edicion.py:1402 app/ui/operaciones.py:604
+#: app/dominio/edicion.py:1418 app/ui/operaciones.py:741
 msgid "El nombre no puede quedar vacío."
 msgstr ""
 
-#: app/dominio/edicion.py:1417 app/dominio/edicion.py:1433 app/ui/asistente_complemento.py:337
+#: app/dominio/edicion.py:1433 app/dominio/edicion.py:1449 app/ui/asistente_complemento.py:337
 #, python-brace-format
 msgid "{nombre} (copia)"
 msgstr ""
 
-#: app/dominio/edicion.py:1439 app/dominio/edicion.py:1488
+#: app/dominio/edicion.py:1455 app/dominio/edicion.py:1504
 msgid "Ese elemento no está en ninguna planta."
 msgstr ""
 
-#: app/dominio/edicion.py:1443
+#: app/dominio/edicion.py:1459
 msgid "Ese elemento no se puede duplicar."
 msgstr ""
 
-#: app/dominio/edicion.py:1536 app/ui/recorrido.py:809
+#: app/dominio/edicion.py:1552 app/ui/recorrido.py:809
 #, python-brace-format
 msgid "{distancia} hacia el {punto}"
 msgstr ""
 
-#: app/dominio/edicion.py:1538
+#: app/dominio/edicion.py:1554
 #, python-brace-format
 msgid " (separación libre: {metros})"
 msgstr ""
 
-#: app/dominio/edicion.py:1541
+#: app/dominio/edicion.py:1557
 #, python-brace-format
 msgid ", en otra planta, {metros} más arriba"
 msgstr ""
 
-#: app/dominio/edicion.py:1543
+#: app/dominio/edicion.py:1559
 #, python-brace-format
 msgid ", en otra planta, {metros} más abajo"
 msgstr ""
 
-#: app/dominio/edicion.py:1545
+#: app/dominio/edicion.py:1561
 msgid ", en otra planta"
 msgstr ""
 
-#: app/dominio/edicion.py:1586
+#: app/dominio/edicion.py:1602
 #, python-brace-format
 msgid "de {ancho} por {fondo} metros ({area} metros cuadrados)"
 msgstr ""
 
-#: app/dominio/edicion.py:1589
+#: app/dominio/edicion.py:1605
 #, python-brace-format
 msgid "de {lados} lados, unos {ancho} por {fondo} metros ({area} metros cuadrados)"
 msgstr ""
 
-#: app/dominio/edicion.py:1595
+#: app/dominio/edicion.py:1611
 #, python-brace-format
 msgid "de {ancho}"
 msgstr ""
 
-#: app/dominio/edicion.py:1617
+#: app/dominio/edicion.py:1633
 #, python-brace-format
 msgid "en la pared {lado} de {espacio}, a {metros} de la esquina {esquina}"
 msgstr ""
 
-#: app/dominio/edicion.py:1623
+#: app/dominio/edicion.py:1639
 #, python-brace-format
 msgid "da a {espacio}"
 msgstr ""
 
-#: app/dominio/edicion.py:1625
+#: app/dominio/edicion.py:1641
 msgid "es una salida"
 msgstr ""
 
-#: app/dominio/edicion.py:1631
+#: app/dominio/edicion.py:1647
 msgid "no une ninguna planta"
 msgstr ""
 
-#: app/dominio/edicion.py:1631
+#: app/dominio/edicion.py:1647
 #, python-brace-format
 msgid "une {plantas}"
 msgstr ""
 
-#: app/dominio/edicion.py:1631 app/importar/osm_conversion.py:1260
+#: app/dominio/edicion.py:1647 app/importar/osm_conversion.py:1260
 msgid " y "
 msgstr ""
 
-#: app/dominio/edicion.py:1635 app/exportar/indicaciones.py:258 app/exportar/indicaciones.py:382
+#: app/dominio/edicion.py:1651 app/exportar/indicaciones.py:258 app/exportar/indicaciones.py:382
 #, python-brace-format
 msgid "{n} peldaño"
 msgid_plural "{n} peldaños"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/dominio/edicion.py:1636
+#: app/dominio/edicion.py:1652
 #, python-brace-format
 msgid "{metros} de recorrido"
 msgstr ""
 
-#: app/dominio/edicion.py:1637
+#: app/dominio/edicion.py:1653
 #, python-brace-format
 msgid "se sube hacia el {punto}"
 msgstr ""
 
-#: app/dominio/edicion.py:1639
+#: app/dominio/edicion.py:1655
 #, python-brace-format
 msgid "pasamanos: {valor}"
 msgstr ""
 
-#: app/dominio/edicion.py:1641
+#: app/dominio/edicion.py:1657
 #, python-brace-format
 msgid "pendiente del {valor} por ciento"
 msgstr ""
 
-#: app/dominio/edicion.py:1643 app/importar/osm_conversion.py:2114
+#: app/dominio/edicion.py:1659 app/importar/osm_conversion.py:2114
 #, python-brace-format
 msgid "{n} parada"
 msgid_plural "{n} paradas"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/dominio/edicion.py:1655
+#: app/dominio/edicion.py:1671
 msgid "exterior"
 msgstr ""
 
-#: app/dominio/edicion.py:1655
+#: app/dominio/edicion.py:1671
 msgid "interior"
 msgstr ""
 
-#: app/dominio/edicion.py:1656
+#: app/dominio/edicion.py:1672
 #, python-brace-format
 msgid "{nombre}: planta {clase}, nivel {nivel}, a {altura} de altura, con {espacios}."
 msgstr ""
 
-#: app/dominio/edicion.py:1661 app/importar/osm_conversion.py:2386 app/importar/plano.py:421 app/importar/plano.py:577 app/reproductor/carga.py:217
+#: app/dominio/edicion.py:1677 app/importar/osm_conversion.py:2386 app/importar/plano.py:421 app/importar/plano.py:577 app/reproductor/carga.py:217
 #, python-brace-format
 msgid "{n} espacio"
 msgid_plural "{n} espacios"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/dominio/edicion.py:1668
+#: app/dominio/edicion.py:1684
 msgid "macizo, no se puede entrar"
 msgstr ""
 
-#: app/dominio/edicion.py:1670
+#: app/dominio/edicion.py:1686
 #, python-brace-format
 msgid "suelo de {suelo}"
 msgstr ""
 
-#: app/dominio/edicion.py:1673
+#: app/dominio/edicion.py:1689
 msgid "con semáforo"
 msgstr ""
 
-#: app/dominio/edicion.py:1675
+#: app/dominio/edicion.py:1691
 msgid " sonoro"
 msgstr ""
 
-#: app/dominio/edicion.py:1677
+#: app/dominio/edicion.py:1693
 msgid " y pulsador"
 msgstr ""
 
-#: app/dominio/edicion.py:1680
+#: app/dominio/edicion.py:1696
 msgid "sin semáforo"
 msgstr ""
 
-#: app/dominio/edicion.py:1682
+#: app/dominio/edicion.py:1698
 msgid "con isleta"
 msgstr ""
 
-#: app/dominio/edicion.py:1686
+#: app/dominio/edicion.py:1702
 #, python-brace-format
 msgid "{n} puerta o hueco"
 msgid_plural "{n} puertas o huecos"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/dominio/edicion.py:1695
+#: app/dominio/edicion.py:1711
 #, python-brace-format
 msgid "{nombre}: pared de {material} de {largo}, de {a} a {b}"
 msgstr ""
 
-#: app/dominio/edicion.py:1703
+#: app/dominio/edicion.py:1719
 msgid ", no corta el paso"
 msgstr ""
 
-#: app/dominio/edicion.py:1705
+#: app/dominio/edicion.py:1721
 msgid ", deja pasar el sonido"
-msgstr ""
-
-#: app/dominio/edicion.py:1712
-#, python-brace-format
-msgid " en {espacio}, a {este} de su lado oeste y {norte} de su lado sur"
-msgstr ""
-
-#: app/dominio/edicion.py:1717
-msgid "caja"
-msgstr ""
-
-#: app/dominio/edicion.py:1718
-#, python-brace-format
-msgid "{nombre}: {clase} de {ancho} de ancho por {fondo} de fondo y {alto} de alto{donde}, mirando al {punto}"
 msgstr ""
 
 #: app/dominio/edicion.py:1728
 #, python-brace-format
+msgid " en {espacio}, a {este} de su lado oeste y {norte} de su lado sur"
+msgstr ""
+
+#: app/dominio/edicion.py:1733
+msgid "caja"
+msgstr ""
+
+#: app/dominio/edicion.py:1734
+#, python-brace-format
+msgid "{nombre}: {clase} de {ancho} de ancho por {fondo} de fondo y {alto} de alto{donde}, mirando al {punto}"
+msgstr ""
+
+#: app/dominio/edicion.py:1744
+#, python-brace-format
 msgid ", estado: {estado}"
-msgstr ""
-
-#: app/dominio/edicion.py:1731
-#, python-brace-format
-msgid "{nombre}: fuente de sonido «{sonido}»{donde}, se oye hasta {radio}."
-msgstr ""
-
-#: app/dominio/edicion.py:1735
-#, python-brace-format
-msgid "{nombre}: {tipo}{donde}"
-msgstr ""
-
-#: app/dominio/edicion.py:1739
-msgid ", pasajera"
-msgstr ""
-
-#: app/dominio/edicion.py:1743
-#, python-brace-format
-msgid "{nombre}: zona de suelo de {suelo}, de unos {ancho} por {fondo} metros."
 msgstr ""
 
 #: app/dominio/edicion.py:1747
 #, python-brace-format
+msgid "{nombre}: fuente de sonido «{sonido}»{donde}, se oye hasta {radio}."
+msgstr ""
+
+#: app/dominio/edicion.py:1751
+#, python-brace-format
+msgid "{nombre}: {tipo}{donde}"
+msgstr ""
+
+#: app/dominio/edicion.py:1755
+msgid ", pasajera"
+msgstr ""
+
+#: app/dominio/edicion.py:1759
+#, python-brace-format
+msgid "{nombre}: zona de suelo de {suelo}, de unos {ancho} por {fondo} metros."
+msgstr ""
+
+#: app/dominio/edicion.py:1763
+#, python-brace-format
 msgid "{nombre}: vía de {largo} de largo y {ancho} de calzada, {carriles}, {sentido}, {trafico}, a {velocidad} kilómetros por hora."
 msgstr ""
 
-#: app/dominio/edicion.py:1753
+#: app/dominio/edicion.py:1769
 #, python-brace-format
 msgid "{n} carril"
 msgid_plural "{n} carriles"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/dominio/edicion.py:1758
+#: app/dominio/edicion.py:1774
 msgid "No se sabe describir ese elemento."
 msgstr ""
 
-#: app/dominio/edicion.py:1771 app/exportar/texto.py:258 app/exportar/texto.py:353 app/ui/contexto.py:186 app/ui/operaciones.py:290
+#: app/dominio/edicion.py:1787 app/exportar/texto.py:258 app/exportar/texto.py:353 app/ui/contexto.py:189 app/ui/operaciones.py:423
 msgid "Entorno sin nombre"
 msgstr ""
 
-#: app/dominio/edicion.py:1775 app/exportar/texto.py:262
+#: app/dominio/edicion.py:1791 app/exportar/texto.py:262
 #, python-brace-format
 msgid "Autor: {autor}."
 msgstr ""
 
-#: app/dominio/edicion.py:1777 app/exportar/texto.py:264
+#: app/dominio/edicion.py:1793 app/exportar/texto.py:264
 #, python-brace-format
 msgid "Tiene {n} planta"
 msgid_plural "Tiene {n} plantas"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/dominio/edicion.py:1778 app/exportar/texto.py:265
+#: app/dominio/edicion.py:1794 app/exportar/texto.py:265
 #, python-brace-format
 msgid " y {n} conector entre plantas."
 msgid_plural " y {n} conectores entre plantas."
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/dominio/edicion.py:1786 app/exportar/texto.py:273
+#: app/dominio/edicion.py:1802 app/exportar/texto.py:273
 #, python-brace-format
 msgid "Inicio: en {donde}, planta {planta}, mirando al {punto}."
 msgstr ""
 
-#: app/dominio/edicion.py:1787 app/exportar/indicaciones.py:320 app/exportar/texto.py:274
+#: app/dominio/edicion.py:1803 app/exportar/indicaciones.py:320 app/exportar/texto.py:274
 msgid "un punto fuera de todo espacio"
 msgstr ""
 
-#: app/dominio/edicion.py:1819 app/exportar/texto.py:102
+#: app/dominio/edicion.py:1835 app/exportar/texto.py:102
 #, python-brace-format
 msgid "Vecinos: {lista}."
 msgstr ""
 
-#: app/dominio/edicion.py:1820 app/exportar/texto.py:103
+#: app/dominio/edicion.py:1836 app/exportar/texto.py:103
 #, python-brace-format
 msgid "{nombre} al {lado}"
 msgstr ""
 
-#: app/dominio/edicion.py:1838
+#: app/dominio/edicion.py:1854
 msgid "Conectores entre plantas:"
 msgstr ""
 
-#: app/dominio/edicion.py:1883
+#: app/dominio/edicion.py:1978
 msgid "Deshacer"
 msgstr ""
 
-#: app/dominio/edicion.py:1883
+#: app/dominio/edicion.py:1978
 #, python-brace-format
 msgid "Deshacer: {operacion}"
 msgstr ""
 
-#: app/dominio/edicion.py:1887
+#: app/dominio/edicion.py:1982
 msgid "Rehacer"
 msgstr ""
 
-#: app/dominio/edicion.py:1887
+#: app/dominio/edicion.py:1982
 #, python-brace-format
 msgid "Rehacer: {operacion}"
 msgstr ""
@@ -6210,7 +6210,7 @@ msgstr ""
 msgid "Un piso pequeño para aprender a moverse por una casa: seis estancias en una planta."
 msgstr ""
 
-#: app/dominio/ejemplos.py:94 app/importar/osm_etiquetas.py:141 app/ui/operaciones.py:846 app/ui/operaciones.py:863
+#: app/dominio/ejemplos.py:94 app/importar/osm_etiquetas.py:141 app/ui/operaciones.py:983 app/ui/operaciones.py:1000
 msgid "Entrada"
 msgstr ""
 
@@ -6290,7 +6290,7 @@ msgstr ""
 msgid "Aseos"
 msgstr ""
 
-#: app/dominio/ejemplos.py:198 app/dominio/modelo.py:81 app/dominio/modelo.py:121 app/motor/movimiento.py:817
+#: app/dominio/ejemplos.py:198 app/dominio/modelo.py:82 app/dominio/modelo.py:122 app/motor/movimiento.py:817
 msgid "Escalera"
 msgstr ""
 
@@ -6458,7 +6458,7 @@ msgstr ""
 msgid "Un cruce de dos calles con sus aceras, dos pasos de peatones, una parada de autobús y varios edificios."
 msgstr ""
 
-#: app/dominio/ejemplos.py:426 app/ui/operaciones.py:871
+#: app/dominio/ejemplos.py:426 app/ui/operaciones.py:1008
 msgid "Calle Mayor"
 msgstr ""
 
@@ -6466,7 +6466,7 @@ msgstr ""
 msgid "Calle principal, con bastante tráfico en los dos sentidos."
 msgstr ""
 
-#: app/dominio/ejemplos.py:439 app/ui/operaciones.py:872
+#: app/dominio/ejemplos.py:439 app/ui/operaciones.py:1009
 msgid "Calle del Río"
 msgstr ""
 
@@ -6750,235 +6750,235 @@ msgstr ""
 msgid "noroeste"
 msgstr ""
 
-#: app/dominio/modelo.py:41 app/dominio/modelo.py:77
+#: app/dominio/modelo.py:42 app/dominio/modelo.py:78
 msgid "Habitación"
 msgstr ""
 
-#: app/dominio/modelo.py:44 app/importar/osm_interiores.py:160
+#: app/dominio/modelo.py:45 app/importar/osm_interiores.py:160
 msgid "Hueco de escalera"
 msgstr ""
 
-#: app/dominio/modelo.py:45
+#: app/dominio/modelo.py:46
 msgid "Cabina de ascensor"
 msgstr ""
 
-#: app/dominio/modelo.py:46
+#: app/dominio/modelo.py:47
 msgid "Zona exterior"
 msgstr ""
 
-#: app/dominio/modelo.py:49
+#: app/dominio/modelo.py:50
 msgid "Paso de peatones"
 msgstr ""
 
-#: app/dominio/modelo.py:52 app/importar/osm_etiquetas.py:42
+#: app/dominio/modelo.py:53 app/importar/osm_etiquetas.py:42
 msgid "Sendero"
 msgstr ""
 
-#: app/dominio/modelo.py:53 app/motor/movimiento.py:526
+#: app/dominio/modelo.py:54 app/motor/movimiento.py:526
 msgid "Edificio"
 msgstr ""
 
-#: app/dominio/modelo.py:57
+#: app/dominio/modelo.py:58
 msgid "Baldosa"
 msgstr ""
 
-#: app/dominio/modelo.py:58 app/dominio/modelo.py:92 app/ui/complemento_propio.py:58
+#: app/dominio/modelo.py:59 app/dominio/modelo.py:93 app/ui/complemento_propio.py:58
 msgid "Madera"
 msgstr ""
 
-#: app/dominio/modelo.py:59
+#: app/dominio/modelo.py:60
 msgid "Moqueta"
 msgstr ""
 
-#: app/dominio/modelo.py:60
+#: app/dominio/modelo.py:61
 msgid "Alfombra"
 msgstr ""
 
-#: app/dominio/modelo.py:61 app/dominio/modelo.py:90
+#: app/dominio/modelo.py:62 app/dominio/modelo.py:91
 msgid "Hormigón"
 msgstr ""
 
-#: app/dominio/modelo.py:62
+#: app/dominio/modelo.py:63
 msgid "Asfalto"
 msgstr ""
 
-#: app/dominio/modelo.py:64
+#: app/dominio/modelo.py:65
 msgid "Adoquín"
 msgstr ""
 
-#: app/dominio/modelo.py:65
+#: app/dominio/modelo.py:66
 msgid "Tierra"
 msgstr ""
 
-#: app/dominio/modelo.py:66
+#: app/dominio/modelo.py:67
 msgid "Hierba"
 msgstr ""
 
-#: app/dominio/modelo.py:67
+#: app/dominio/modelo.py:68
 msgid "Grava"
 msgstr ""
 
-#: app/dominio/modelo.py:68 app/dominio/modelo.py:94 app/ui/complemento_propio.py:59
+#: app/dominio/modelo.py:69 app/dominio/modelo.py:95 app/ui/complemento_propio.py:59
 msgid "Metal"
 msgstr ""
 
-#: app/dominio/modelo.py:69
+#: app/dominio/modelo.py:70
 msgid "Arena"
 msgstr ""
 
-#: app/dominio/modelo.py:71
+#: app/dominio/modelo.py:72
 msgid "Pavimento táctil de botones"
 msgstr ""
 
-#: app/dominio/modelo.py:72
+#: app/dominio/modelo.py:73
 msgid "Pavimento táctil de rayas"
 msgstr ""
 
-#: app/dominio/modelo.py:76
+#: app/dominio/modelo.py:77
 msgid "Seca"
 msgstr ""
 
-#: app/dominio/modelo.py:78 app/reproductor/pantallas/tutorial.py:62
+#: app/dominio/modelo.py:79 app/reproductor/pantallas/tutorial.py:62
 msgid "Sala grande"
 msgstr ""
 
-#: app/dominio/modelo.py:82
+#: app/dominio/modelo.py:83
 msgid "Nave"
 msgstr ""
 
-#: app/dominio/modelo.py:89 app/ui/complemento_propio.py:64
+#: app/dominio/modelo.py:90 app/ui/complemento_propio.py:64
 msgid "Ladrillo"
 msgstr ""
 
-#: app/dominio/modelo.py:91
+#: app/dominio/modelo.py:92
 msgid "Yeso"
 msgstr ""
 
-#: app/dominio/modelo.py:93 app/ui/complemento_propio.py:60
+#: app/dominio/modelo.py:94 app/ui/complemento_propio.py:60
 msgid "Cristal"
 msgstr ""
 
-#: app/dominio/modelo.py:95 app/ui/complemento_propio.py:63
+#: app/dominio/modelo.py:96 app/ui/complemento_propio.py:63
 msgid "Piedra"
 msgstr ""
 
-#: app/dominio/modelo.py:96 app/importar/osm_etiquetas.py:192
+#: app/dominio/modelo.py:97 app/importar/osm_etiquetas.py:192
 msgid "Valla"
 msgstr ""
 
-#: app/dominio/modelo.py:97 app/importar/osm_etiquetas.py:196
+#: app/dominio/modelo.py:98 app/importar/osm_etiquetas.py:196
 msgid "Seto"
 msgstr ""
 
-#: app/dominio/modelo.py:101 app/importar/osm_interiores.py:130 app/importar/plano.py:531
+#: app/dominio/modelo.py:102 app/importar/osm_interiores.py:130 app/importar/plano.py:531
 msgid "Puerta"
 msgstr ""
 
-#: app/dominio/modelo.py:102
+#: app/dominio/modelo.py:103
 msgid "Hueco sin puerta"
 msgstr ""
 
-#: app/dominio/modelo.py:103 app/motor/movimiento.py:524
+#: app/dominio/modelo.py:104 app/motor/movimiento.py:524
 msgid "Ventana"
 msgstr ""
 
-#: app/dominio/modelo.py:108
+#: app/dominio/modelo.py:109
 msgid "Abierta"
 msgstr ""
 
-#: app/dominio/modelo.py:109
+#: app/dominio/modelo.py:110
 msgid "Cerrada"
 msgstr ""
 
-#: app/dominio/modelo.py:110
+#: app/dominio/modelo.py:111
 msgid "Cerrada con llave"
 msgstr ""
 
-#: app/dominio/modelo.py:114
+#: app/dominio/modelo.py:115
 msgid "Batiente"
 msgstr ""
 
-#: app/dominio/modelo.py:115
+#: app/dominio/modelo.py:116
 msgid "Corredera"
 msgstr ""
 
-#: app/dominio/modelo.py:116
+#: app/dominio/modelo.py:117
 msgid "Automática"
 msgstr ""
 
-#: app/dominio/modelo.py:117
+#: app/dominio/modelo.py:118
 msgid "Sin hoja"
 msgstr ""
 
-#: app/dominio/modelo.py:124
+#: app/dominio/modelo.py:125
 msgid "Escalera mecánica"
 msgstr ""
 
-#: app/dominio/modelo.py:128
+#: app/dominio/modelo.py:129
 msgid "A la izquierda"
 msgstr ""
 
-#: app/dominio/modelo.py:129
+#: app/dominio/modelo.py:130
 msgid "A la derecha"
 msgstr ""
 
-#: app/dominio/modelo.py:130
+#: app/dominio/modelo.py:131
 msgid "A los dos lados"
 msgstr ""
 
-#: app/dominio/modelo.py:131
+#: app/dominio/modelo.py:132
 msgid "Sin pasamanos"
 msgstr ""
 
-#: app/dominio/modelo.py:135
+#: app/dominio/modelo.py:136
 msgid "Punto de interés"
 msgstr ""
 
-#: app/dominio/modelo.py:136
+#: app/dominio/modelo.py:137
 msgid "Referencia sonora"
 msgstr ""
 
-#: app/dominio/modelo.py:137
+#: app/dominio/modelo.py:138
 msgid "Referencia táctil"
 msgstr ""
 
-#: app/dominio/modelo.py:138
+#: app/dominio/modelo.py:139
 msgid "Referencia de olor"
 msgstr ""
 
-#: app/dominio/modelo.py:140 app/exportar/fichas.py:86
+#: app/dominio/modelo.py:141 app/exportar/fichas.py:86
 msgid "Semáforo"
 msgstr ""
 
-#: app/dominio/modelo.py:142
+#: app/dominio/modelo.py:143
 msgid "Comercio"
 msgstr ""
 
-#: app/dominio/modelo.py:143
+#: app/dominio/modelo.py:144
 msgid "Mobiliario urbano"
 msgstr ""
 
-#: app/dominio/modelo.py:147
+#: app/dominio/modelo.py:148
 msgid "Doble sentido"
 msgstr ""
 
-#: app/dominio/modelo.py:148
+#: app/dominio/modelo.py:149
 msgid "Sentido único, de inicio a fin"
 msgstr ""
 
-#: app/dominio/modelo.py:149
+#: app/dominio/modelo.py:150
 msgid "Sentido único, de fin a inicio"
 msgstr ""
 
-#: app/dominio/modelo.py:153
+#: app/dominio/modelo.py:154
 msgid "Sin tráfico"
 msgstr ""
 
-#: app/dominio/modelo.py:154
+#: app/dominio/modelo.py:155
 msgid "Tráfico escaso"
 msgstr ""
 
-#: app/dominio/modelo.py:155
+#: app/dominio/modelo.py:156
 msgid "Tráfico moderado"
 msgstr ""
 
@@ -7526,7 +7526,7 @@ msgstr ""
 msgid "Te lleva de nuevo al punto de partida."
 msgstr ""
 
-#: app/entrada/acciones.py:101 app/reproductor/pantallas/juego.py:1034 app/reproductor/pantallas/principal.py:83 app/seguimiento/informes.py:277 app/ui/seguimiento/editor_ayudas.py:49 app/ui/ventana_principal.py:1949 app/ui/visor_ayuda.py:234
+#: app/entrada/acciones.py:101 app/reproductor/pantallas/juego.py:1034 app/reproductor/pantallas/principal.py:83 app/seguimiento/informes.py:277 app/ui/seguimiento/editor_ayudas.py:49 app/ui/ventana_principal.py:2088 app/ui/visor_ayuda.py:234
 msgid "Ayuda"
 msgstr ""
 
@@ -8128,7 +8128,7 @@ msgstr ""
 msgid "{accion}. Pulsa la tecla que quieres usar. Escape cancela."
 msgstr ""
 
-#: app/entrada/teclado.py:545 app/reproductor/menus.py:580 app/reproductor/menus.py:722 app/reproductor/pantallas/opciones.py:581 app/ui/dialogo_complementos_en_linea.py:335 app/ui/dialogo_progreso.py:293 app/ui/plano.py:549
+#: app/entrada/teclado.py:545 app/reproductor/menus.py:580 app/reproductor/menus.py:722 app/reproductor/pantallas/opciones.py:581 app/ui/dialogo_complementos_en_linea.py:335 app/ui/dialogo_progreso.py:293 app/ui/plano.py:572
 msgid "Cancelado."
 msgstr ""
 
@@ -8611,7 +8611,7 @@ msgstr ""
 msgid "La planta «{nombre}» está vacía: no hay nada que dibujar."
 msgstr ""
 
-#: app/exportar/svg.py:338 app/motor/movimiento.py:517 app/motor/percepcion.py:1166 app/reproductor/pantallas/principal.py:217 app/ui/dialogos_herramientas.py:402 app/ui/operaciones.py:82 app/ui/recorrido.py:571 app/ui/seguimiento/alumnos.py:383 app/ui/seguimiento/alumnos.py:418
+#: app/exportar/svg.py:338 app/motor/movimiento.py:517 app/motor/percepcion.py:1166 app/reproductor/pantallas/principal.py:217 app/ui/dialogos_herramientas.py:402 app/ui/operaciones.py:85 app/ui/recorrido.py:571 app/ui/seguimiento/alumnos.py:383 app/ui/seguimiento/alumnos.py:418
 msgid "Objeto"
 msgstr ""
 
@@ -8841,7 +8841,7 @@ msgstr ""
 msgid "figura en el mapa, pero su anchura no"
 msgstr ""
 
-#: app/exportar/texto.py:145 app/ui/operaciones.py:303
+#: app/exportar/texto.py:145 app/ui/operaciones.py:380
 msgid "Calles"
 msgstr ""
 
@@ -8912,12 +8912,12 @@ msgstr[1] ""
 msgid "Las medidas van en metros. El norte es la parte de arriba del plano."
 msgstr ""
 
-#: app/exportar/texto.py:285 app/ui/ventana_principal.py:595 app/ui/ventana_principal.py:1760
+#: app/exportar/texto.py:285 app/ui/ventana_principal.py:627 app/ui/ventana_principal.py:1899
 #, python-brace-format
 msgid "Planta: {nombre}"
 msgstr ""
 
-#: app/exportar/texto.py:295 app/ui/operaciones.py:306
+#: app/exportar/texto.py:295 app/ui/operaciones.py:383
 msgid "Fuera de todo espacio"
 msgstr ""
 
@@ -10858,7 +10858,7 @@ msgstr ""
 msgid "centro sanitario"
 msgstr ""
 
-#: app/importar/osm_etiquetas.py:361 app/importar/osm_etiquetas.py:373 app/ui/operaciones.py:885 app/ui/operaciones.py:902
+#: app/importar/osm_etiquetas.py:361 app/importar/osm_etiquetas.py:373 app/ui/operaciones.py:1022 app/ui/operaciones.py:1039
 msgid "Parada de autobús"
 msgstr ""
 
@@ -12607,7 +12607,7 @@ msgstr ""
 msgid "Reúne los registros del programa, sin datos personales, en un fichero para enviarlo al avisar de un fallo."
 msgstr ""
 
-#: app/reproductor/pantallas/ayuda.py:74 app/ui/ventana_principal.py:1991 app/ui/ventana_principal.py:1999
+#: app/reproductor/pantallas/ayuda.py:74 app/ui/ventana_principal.py:2130 app/ui/ventana_principal.py:2138
 msgid "Paquete de diagnóstico"
 msgstr ""
 
@@ -12794,7 +12794,7 @@ msgstr ""
 msgid "Recorre el lugar a tu aire, sin objetivos ni tiempo, para conocerlo."
 msgstr ""
 
-#: app/reproductor/pantallas/elegir.py:145 app/seguimiento/alumnos.py:317 app/seguimiento/alumnos.py:342 app/seguimiento/informes.py:194 app/seguimiento/informes.py:545 app/ui/operaciones.py:71 app/ui/seguimiento/alumnos.py:454 app/ui/seguimiento/presentador_registros.py:53 app/ui/seguimiento/presentador_supervision.py:44 app/ui/ventana_principal.py:430 app/ui/ventana_principal.py:507
+#: app/reproductor/pantallas/elegir.py:145 app/seguimiento/alumnos.py:317 app/seguimiento/alumnos.py:342 app/seguimiento/informes.py:194 app/seguimiento/informes.py:545 app/ui/operaciones.py:74 app/ui/seguimiento/alumnos.py:454 app/ui/seguimiento/presentador_registros.py:53 app/ui/seguimiento/presentador_supervision.py:44 app/ui/ventana_principal.py:445 app/ui/ventana_principal.py:522
 msgid "Entorno"
 msgstr ""
 
@@ -13602,7 +13602,7 @@ msgstr ""
 msgid "Las distancias se dicen en"
 msgstr ""
 
-#: app/reproductor/pantallas/opciones.py:529 app/ui/plano.py:1054
+#: app/reproductor/pantallas/opciones.py:529 app/ui/plano.py:1077
 msgid "metros"
 msgstr ""
 
@@ -14961,7 +14961,7 @@ msgstr ""
 msgid "Observaciones"
 msgstr ""
 
-#: app/seguimiento/alumnos.py:369 app/ui/esquemas_elementos.py:239 app/ui/esquemas_elementos.py:349 app/ui/seguimiento/alumnos.py:376 app/ui/seguimiento/presentador_actividades.py:70 app/ui/ventana_principal.py:450
+#: app/seguimiento/alumnos.py:369 app/ui/esquemas_elementos.py:239 app/ui/esquemas_elementos.py:349 app/ui/seguimiento/alumnos.py:376 app/ui/seguimiento/presentador_actividades.py:70 app/ui/ventana_principal.py:465
 msgid "Tipo"
 msgstr ""
 
@@ -16485,7 +16485,7 @@ msgstr ""
 msgid "&No"
 msgstr ""
 
-#: app/ui/accesibilidad/dialogos.py:364 app/ui/accesibilidad/dialogos.py:368 app/ui/dialogo_complementos_en_linea.py:288 app/ui/dialogos_importar.py:666 app/ui/dialogos_importar.py:672 app/ui/dialogos_insertar.py:219 app/ui/ventana_principal.py:1311 app/ui/ventana_principal.py:1369 app/ui/ventana_principal.py:1509 app/ui/visor_ayuda.py:213
+#: app/ui/accesibilidad/dialogos.py:364 app/ui/accesibilidad/dialogos.py:368 app/ui/dialogo_complementos_en_linea.py:288 app/ui/dialogos_importar.py:666 app/ui/dialogos_importar.py:672 app/ui/dialogos_insertar.py:219 app/ui/ventana_principal.py:1450 app/ui/ventana_principal.py:1508 app/ui/ventana_principal.py:1648 app/ui/visor_ayuda.py:213
 msgid "&Cancelar"
 msgstr ""
 
@@ -16689,7 +16689,7 @@ msgstr ""
 msgid "Forma"
 msgstr ""
 
-#: app/ui/asistente_complemento.py:170 app/ui/dialogo_catalogo.py:781 app/ui/dialogos_herramientas.py:402 app/ui/ventana_principal.py:451
+#: app/ui/asistente_complemento.py:170 app/ui/dialogo_catalogo.py:781 app/ui/dialogos_herramientas.py:402 app/ui/ventana_principal.py:466
 msgid "Medidas"
 msgstr ""
 
@@ -16713,7 +16713,7 @@ msgstr ""
 msgid "Abre el formulario del objeto elegido."
 msgstr ""
 
-#: app/ui/asistente_complemento.py:182 app/ui/ventana_principal.py:93
+#: app/ui/asistente_complemento.py:182 app/ui/ventana_principal.py:106
 msgid "D&uplicar"
 msgstr ""
 
@@ -16729,7 +16729,7 @@ msgstr ""
 msgid "Quita de la lista el objeto elegido."
 msgstr ""
 
-#: app/ui/asistente_complemento.py:193 app/ui/asistente_complemento.py:216 app/ui/ventana_principal.py:1480
+#: app/ui/asistente_complemento.py:193 app/ui/asistente_complemento.py:216 app/ui/ventana_principal.py:1619
 msgid "Guardar"
 msgstr ""
 
@@ -17363,11 +17363,15 @@ msgstr ""
 msgid "Aviso: {texto}"
 msgstr ""
 
-#: app/ui/contexto.py:206 app/ui/dialogos_herramientas.py:49 app/ui/plano.py:608 app/ui/seguimiento/editor_premios.py:630 app/ui/seguimiento/panel_actividades.py:438 app/ui/seguimiento/presentador_actividades.py:498 app/ui/ventana_principal.py:961
+#: app/ui/contexto.py:215 app/ui/dialogos_herramientas.py:49 app/ui/plano.py:631 app/ui/seguimiento/editor_premios.py:630 app/ui/seguimiento/panel_actividades.py:438 app/ui/seguimiento/presentador_actividades.py:498 app/ui/ventana_principal.py:1100
 msgid "No hay ningún entorno abierto."
 msgstr ""
 
-#: app/ui/contexto.py:303
+#: app/ui/contexto.py:273
+msgid "No se puede deshacer: el entorno cambió por otro camino. Se ha vaciado el historial."
+msgstr ""
+
+#: app/ui/contexto.py:334
 #, python-brace-format
 msgid "No se pudo guardar: {error}"
 msgstr ""
@@ -17626,7 +17630,7 @@ msgstr ""
 msgid "A una distancia del extremo oeste o sur"
 msgstr ""
 
-#: app/ui/dialogo_catalogo.py:82 app/ui/operaciones.py:102
+#: app/ui/dialogo_catalogo.py:82 app/ui/operaciones.py:105
 #, python-brace-format
 msgid "{ancho} × {fondo} × {alto} m"
 msgstr ""
@@ -17935,7 +17939,7 @@ msgstr ""
 msgid "No hay ningún objeto disponible. Instale o active algún complemento en Herramientas, Complementos instalados."
 msgstr ""
 
-#: app/ui/dialogo_catalogo.py:1313 app/ui/dialogos_herramientas.py:452 app/ui/dialogos_importar.py:955 app/ui/esquemas_elementos.py:472 app/ui/operaciones.py:73
+#: app/ui/dialogo_catalogo.py:1313 app/ui/dialogos_herramientas.py:452 app/ui/dialogos_importar.py:955 app/ui/esquemas_elementos.py:472 app/ui/operaciones.py:76
 msgid "Planta"
 msgstr ""
 
@@ -18529,7 +18533,7 @@ msgstr ""
 msgid "&Refrescar"
 msgstr ""
 
-#: app/ui/dialogo_complementos_en_linea.py:185 app/ui/dialogo_complementos_en_linea.py:288 app/ui/dialogos_exportar.py:205 app/ui/dialogos_importar.py:304 app/ui/dialogos_importar.py:313 app/ui/ventana_principal.py:1409 app/ui/ventana_principal.py:1991
+#: app/ui/dialogo_complementos_en_linea.py:185 app/ui/dialogo_complementos_en_linea.py:288 app/ui/dialogos_exportar.py:205 app/ui/dialogos_importar.py:304 app/ui/dialogos_importar.py:313 app/ui/ventana_principal.py:1548 app/ui/ventana_principal.py:2130
 msgid "&Cerrar"
 msgstr ""
 
@@ -18846,7 +18850,7 @@ msgstr ""
 msgid "Tamaño del papel. El plano se dibuja a la mayor escala normalizada que quepa; imprímalo al 100 %."
 msgstr ""
 
-#: app/ui/dialogos_exportar.py:205 app/ui/ventana_principal.py:1991
+#: app/ui/dialogos_exportar.py:205 app/ui/ventana_principal.py:2130
 msgid "&Abrir la carpeta"
 msgstr ""
 
@@ -19830,7 +19834,7 @@ msgstr ""
 msgid "Informe de la importación de la ruta"
 msgstr ""
 
-#: app/ui/dialogos_insertar.py:38 app/ui/ventana_principal.py:907 app/ui/ventana_principal.py:1578
+#: app/ui/dialogos_insertar.py:38 app/ui/ventana_principal.py:1046 app/ui/ventana_principal.py:1717
 msgid "No hay ningún entorno abierto. Cree uno con Archivo, Nuevo entorno, o abra uno con Archivo, Abrir."
 msgstr ""
 
@@ -19843,7 +19847,7 @@ msgstr ""
 msgid "Entorno {nombre}."
 msgstr ""
 
-#: app/ui/dialogos_insertar.py:102 app/ui/dialogos_insertar.py:106 app/ui/ventana_principal.py:478 app/ui/ventana_principal.py:479 app/ui/ventana_principal.py:908
+#: app/ui/dialogos_insertar.py:102 app/ui/dialogos_insertar.py:106 app/ui/ventana_principal.py:493 app/ui/ventana_principal.py:494 app/ui/ventana_principal.py:1047
 msgid "Propiedades"
 msgstr ""
 
@@ -19856,12 +19860,12 @@ msgstr ""
 msgid "cambiar {nombre}"
 msgstr ""
 
-#: app/ui/dialogos_insertar.py:132 app/ui/ventana_principal.py:926
+#: app/ui/dialogos_insertar.py:132 app/ui/ventana_principal.py:1065
 #, python-brace-format
 msgid "Propiedades de {nombre}"
 msgstr ""
 
-#: app/ui/dialogos_insertar.py:141 app/ui/ventana_principal.py:948
+#: app/ui/dialogos_insertar.py:141 app/ui/ventana_principal.py:1087
 msgid "Sin cambios."
 msgstr ""
 
@@ -19915,7 +19919,7 @@ msgstr ""
 msgid "¿Borrar «{nombre}»? Si otras cosas dependen de él (las puertas de una habitación, las aceras de una calle), se borran también. Se podrá deshacer."
 msgstr ""
 
-#: app/ui/dialogos_insertar.py:219 app/ui/menus.py:116 app/ui/ventana_principal.py:97
+#: app/ui/dialogos_insertar.py:219 app/ui/menus.py:116 app/ui/ventana_principal.py:110
 msgid "&Borrar"
 msgstr ""
 
@@ -20780,7 +20784,7 @@ msgstr ""
 msgid "Solo errores"
 msgstr ""
 
-#: app/ui/esquemas.py:141 app/ui/plano.py:1022
+#: app/ui/esquemas.py:141 app/ui/plano.py:1045
 #, python-brace-format
 msgid "{n} m"
 msgstr ""
@@ -21356,7 +21360,7 @@ msgstr ""
 msgid "Por ejemplo «Alfombra del salón»."
 msgstr ""
 
-#: app/ui/esquemas_elementos.py:977 app/ui/esquemas_elementos.py:1048 app/ui/esquemas_elementos.py:1072 app/ui/esquemas_elementos.py:1118 app/ui/esquemas_elementos.py:1156 app/ui/esquemas_elementos.py:1175 app/ui/operaciones.py:73
+#: app/ui/esquemas_elementos.py:977 app/ui/esquemas_elementos.py:1048 app/ui/esquemas_elementos.py:1072 app/ui/esquemas_elementos.py:1118 app/ui/esquemas_elementos.py:1156 app/ui/esquemas_elementos.py:1175 app/ui/operaciones.py:76
 msgid "Plano de calle"
 msgstr ""
 
@@ -21671,7 +21675,7 @@ msgstr ""
 msgid "Mover"
 msgstr ""
 
-#: app/ui/esquemas_elementos.py:1488 app/ui/plano.py:485
+#: app/ui/esquemas_elementos.py:1488 app/ui/plano.py:508
 #, python-brace-format
 msgid "mover {nombre}"
 msgstr ""
@@ -21729,7 +21733,7 @@ msgstr ""
 msgid "Abre un cuadro de Windows para elegir «{campo}»."
 msgstr ""
 
-#: app/ui/formulario.py:472 app/ui/ventana_principal.py:945
+#: app/ui/formulario.py:472 app/ui/ventana_principal.py:1084
 msgid "No se puede hacer"
 msgstr ""
 
@@ -21961,7 +21965,7 @@ msgstr ""
 msgid "Busca un elemento por su nombre y lo selecciona."
 msgstr ""
 
-#: app/ui/menus.py:119 app/ui/ventana_principal.py:99
+#: app/ui/menus.py:119 app/ui/ventana_principal.py:112
 msgid "Poner aquí el &inicio"
 msgstr ""
 
@@ -22486,310 +22490,310 @@ msgstr ""
 msgid "Muestra la versión y los datos técnicos de la aplicación."
 msgstr ""
 
-#: app/ui/modelo_plano.py:393
+#: app/ui/modelo_plano.py:456
 #, python-brace-format
 msgid "Actividad elegida: «{nombre}»."
 msgstr ""
 
-#: app/ui/modelo_plano.py:401
+#: app/ui/modelo_plano.py:464
 #, python-brace-format
 msgid "Inicio de la actividad: planta {planta}, {lugar}x {x} m, y {y} m."
 msgstr ""
 
-#: app/ui/modelo_plano.py:403 app/ui/modelo_plano.py:437
+#: app/ui/modelo_plano.py:466 app/ui/modelo_plano.py:500
 #, python-brace-format
 msgid "en {espacio}, "
 msgstr ""
 
-#: app/ui/modelo_plano.py:410
+#: app/ui/modelo_plano.py:473
 msgid "No tiene premios."
 msgstr ""
 
-#: app/ui/modelo_plano.py:412
+#: app/ui/modelo_plano.py:475
 #, python-brace-format
 msgid "{n} premio:"
 msgid_plural "{n} premios:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/ui/modelo_plano.py:419
+#: app/ui/modelo_plano.py:482
 #, python-brace-format
 msgid "Premio «{premio}»: dentro de {objeto}, planta {planta}."
 msgstr ""
 
-#: app/ui/modelo_plano.py:425
+#: app/ui/modelo_plano.py:488
 #, python-brace-format
 msgid "Premio «{premio}»: dentro de un objeto que ya no existe."
 msgstr ""
 
-#: app/ui/modelo_plano.py:429
+#: app/ui/modelo_plano.py:492
 #, python-brace-format
 msgid "Premio «{premio}»: sin lugar en el plano."
 msgstr ""
 
-#: app/ui/modelo_plano.py:434
+#: app/ui/modelo_plano.py:497
 #, python-brace-format
 msgid "Premio «{premio}»: planta {planta}, {lugar}x {x} m, y {y} m."
 msgstr ""
 
-#: app/ui/operaciones.py:65
+#: app/ui/operaciones.py:68
 msgid "(sin nombre)"
 msgstr ""
 
-#: app/ui/operaciones.py:79
+#: app/ui/operaciones.py:82
 msgid "Pared suelta"
 msgstr ""
 
-#: app/ui/operaciones.py:84
+#: app/ui/operaciones.py:87
 msgid "Fuente de sonido"
 msgstr ""
 
-#: app/ui/operaciones.py:88
+#: app/ui/operaciones.py:91
 msgid "Zona de suelo"
 msgstr ""
 
-#: app/ui/operaciones.py:100
+#: app/ui/operaciones.py:103
 #, python-brace-format
 msgid "{ancho} × {fondo} m"
 msgstr ""
 
-#: app/ui/operaciones.py:106
+#: app/ui/operaciones.py:109
 #, python-brace-format
 msgid "{ancho} m de ancho"
 msgstr ""
 
-#: app/ui/operaciones.py:108
+#: app/ui/operaciones.py:111
 #, python-brace-format
 msgid "{largo} m de largo"
 msgstr ""
 
-#: app/ui/operaciones.py:111
+#: app/ui/operaciones.py:114
 #, python-brace-format
 msgid "{largo} m de largo, {ancho} m de calzada"
 msgstr ""
 
-#: app/ui/operaciones.py:113
+#: app/ui/operaciones.py:116
 #, python-brace-format
 msgid "se oye a {radio} m"
 msgstr ""
 
-#: app/ui/operaciones.py:117
+#: app/ui/operaciones.py:120
 #, python-brace-format
 msgid "{largo} m, {n} peldaños"
 msgstr ""
 
-#: app/ui/operaciones.py:118
+#: app/ui/operaciones.py:121
 #, python-brace-format
 msgid "{largo} m"
 msgstr ""
 
-#: app/ui/operaciones.py:120
+#: app/ui/operaciones.py:123
 #, python-brace-format
 msgid "nivel {nivel}, a {altura} m"
 msgstr ""
 
-#: app/ui/operaciones.py:139
+#: app/ui/operaciones.py:142
 #, python-brace-format
 msgid "x {x}, y {y}"
 msgstr ""
 
-#: app/ui/operaciones.py:214
+#: app/ui/operaciones.py:220
 #, python-brace-format
 msgid "{nombre} ({tipo})"
 msgstr ""
 
-#: app/ui/operaciones.py:290
-#, python-brace-format
-msgid "{nombre} (entorno)"
-msgstr ""
-
-#: app/ui/operaciones.py:302
+#: app/ui/operaciones.py:379
 msgid "Paredes sueltas"
 msgstr ""
 
-#: app/ui/operaciones.py:317
+#: app/ui/operaciones.py:391
 #, python-brace-format
 msgid "{titulo}: {n}"
 msgstr ""
 
-#: app/ui/operaciones.py:322
+#: app/ui/operaciones.py:423
+#, python-brace-format
+msgid "{nombre} (entorno)"
+msgstr ""
+
+#: app/ui/operaciones.py:433
 #, python-brace-format
 msgid "Escaleras, rampas y ascensores: {n}"
 msgstr ""
 
-#: app/ui/operaciones.py:517
+#: app/ui/operaciones.py:654
 #, python-brace-format
 msgid "{tipo} (complemento no instalado: se trata como una caja)"
 msgstr ""
 
-#: app/ui/operaciones.py:621
+#: app/ui/operaciones.py:758
 msgid "Elija la planta del punto de inicio."
 msgstr ""
 
-#: app/ui/operaciones.py:633
+#: app/ui/operaciones.py:770
 #, python-brace-format
 msgid "Ya hay otra planta en el nivel {nivel}."
 msgstr ""
 
-#: app/ui/operaciones.py:656
+#: app/ui/operaciones.py:793
 msgid "Los dos extremos de la pared no pueden estar en el mismo punto."
 msgstr ""
 
-#: app/ui/operaciones.py:661
+#: app/ui/operaciones.py:798
 msgid "El grosor y la altura tienen que ser mayores que cero."
 msgstr ""
 
-#: app/ui/operaciones.py:741
+#: app/ui/operaciones.py:878
 #, python-brace-format
 msgid "El punto {n} («{texto}») no se entiende. Escriba la x y la y separadas por un espacio, y los puntos separados por punto y coma."
 msgstr ""
 
-#: app/ui/operaciones.py:748
+#: app/ui/operaciones.py:885
 #, python-brace-format
 msgid "El punto {n} («{texto}») no tiene dos números."
 msgstr ""
 
-#: app/ui/operaciones.py:751
+#: app/ui/operaciones.py:888
 #, python-brace-format
 msgid "Hacen falta al menos {n} puntos."
 msgstr ""
 
-#: app/ui/operaciones.py:769
+#: app/ui/operaciones.py:906
 #, python-brace-format
 msgid "{elemento}, en {planta}"
 msgstr ""
 
-#: app/ui/operaciones.py:857
+#: app/ui/operaciones.py:994
 #, python-brace-format
 msgid "Despacho {n}"
 msgstr ""
 
-#: app/ui/operaciones.py:883
+#: app/ui/operaciones.py:1020
 msgid "Avenida"
 msgstr ""
 
-#: app/ui/operaciones.py:892
+#: app/ui/operaciones.py:1029
 msgid "Interior en blanco"
 msgstr ""
 
-#: app/ui/operaciones.py:892
+#: app/ui/operaciones.py:1029
 msgid "Un entorno con una planta baja vacía."
 msgstr ""
 
-#: app/ui/operaciones.py:893
+#: app/ui/operaciones.py:1030
 msgid "Exterior en blanco"
 msgstr ""
 
-#: app/ui/operaciones.py:893
+#: app/ui/operaciones.py:1030
 msgid "Un entorno con un plano de calle vacío."
 msgstr ""
 
-#: app/ui/operaciones.py:894
+#: app/ui/operaciones.py:1031
 msgid "Vivienda tipo"
 msgstr ""
 
-#: app/ui/operaciones.py:894
+#: app/ui/operaciones.py:1031
 msgid "Entrada, pasillo, salón, cocina, dormitorio y baño, con sus puertas."
 msgstr ""
 
-#: app/ui/operaciones.py:895
+#: app/ui/operaciones.py:1032
 msgid "Un aula de 9 por 7 metros con su pasillo y su entrada."
 msgstr ""
 
-#: app/ui/operaciones.py:896
+#: app/ui/operaciones.py:1033
 msgid "Planta de oficinas"
 msgstr ""
 
-#: app/ui/operaciones.py:896
+#: app/ui/operaciones.py:1033
 msgid "Un pasillo con tres despachos y una sala de reuniones."
 msgstr ""
 
-#: app/ui/operaciones.py:898
+#: app/ui/operaciones.py:1035
 msgid "Tramo de calle con cruce"
 msgstr ""
 
-#: app/ui/operaciones.py:899
+#: app/ui/operaciones.py:1036
 msgid "Dos calles con aceras que se cruzan y dos pasos de peatones, uno con semáforo sonoro."
 msgstr ""
 
-#: app/ui/operaciones.py:902
+#: app/ui/operaciones.py:1039
 msgid "Una avenida con aceras, un paso con semáforo y una parada de autobús."
 msgstr ""
 
-#: app/ui/operaciones.py:909
+#: app/ui/operaciones.py:1046
 #, python-brace-format
 msgid "No existe la plantilla «{clave}»."
 msgstr ""
 
-#: app/ui/operaciones.py:912
+#: app/ui/operaciones.py:1049
 msgid "Escriba un nombre para el entorno."
 msgstr ""
 
-#: app/ui/operaciones.py:957
+#: app/ui/operaciones.py:1094
 #, python-brace-format
 msgid "Este entorno usa el complemento {lista}, que no está instalado."
 msgid_plural "Este entorno usa los complementos {lista}, que no están instalados."
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/ui/operaciones.py:962
+#: app/ui/operaciones.py:1099
 #, python-brace-format
 msgid "Su objeto se conserva y se ve como una caja con sus medidas."
 msgid_plural "Sus {n} objetos se conservan y se ven como cajas con sus medidas."
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/ui/operaciones.py:967
+#: app/ui/operaciones.py:1104
 msgid "¿Buscar en el catálogo en línea?"
 msgstr ""
 
-#: app/ui/plano.py:90 app/ui/plano.py:120
+#: app/ui/plano.py:91 app/ui/plano.py:123
 msgid "Plano gráfico"
 msgstr ""
 
-#: app/ui/plano.py:121
+#: app/ui/plano.py:124
 msgid "Plano gráfico de la planta, a escala. Con el ratón: clic selecciona, arrastrar mueve, la rueda amplía, el botón central desplaza y el doble clic abre las propiedades. Con el teclado: las flechas mueven el elemento seleccionado un paso de cuadrícula, y con Mayúsculas un paso fino. Todo lo que se hace en el plano se puede hacer también desde el árbol, la lista y los menús Editar e Insertar."
 msgstr ""
 
-#: app/ui/plano.py:364
+#: app/ui/plano.py:387
 msgid "Primer extremo de la pared. Haga clic en el segundo."
 msgstr ""
 
-#: app/ui/plano.py:503
+#: app/ui/plano.py:526
 #, python-brace-format
 msgid "{nombre}: {este}, {norte}"
 msgstr ""
 
-#: app/ui/plano.py:505
+#: app/ui/plano.py:528
 msgid "al este"
 msgstr ""
 
-#: app/ui/plano.py:505
+#: app/ui/plano.py:528
 msgid "al oeste"
 msgstr ""
 
-#: app/ui/plano.py:506
+#: app/ui/plano.py:529
 msgid "al norte"
 msgstr ""
 
-#: app/ui/plano.py:506
+#: app/ui/plano.py:529
 msgid "al sur"
 msgstr ""
 
-#: app/ui/plano.py:537
+#: app/ui/plano.py:560
 msgid "No hay ningún elemento seleccionado que mover."
 msgstr ""
 
-#: app/ui/plano.py:1011
+#: app/ui/plano.py:1034
 #, python-brace-format
 msgid "{ancho} por {fondo} m"
 msgstr ""
 
-#: app/ui/plano.py:1033
+#: app/ui/plano.py:1056
 msgid "N"
 msgstr ""
 
-#: app/ui/plano.py:1054
+#: app/ui/plano.py:1077
 msgid "metro"
 msgstr ""
 
@@ -25118,7 +25122,7 @@ msgstr ""
 msgid "Marque al menos una actividad."
 msgstr ""
 
-#: app/ui/seguimiento/panel_actividades.py:217 app/ui/ventana_principal.py:525
+#: app/ui/seguimiento/panel_actividades.py:217 app/ui/ventana_principal.py:540
 msgid "Actividades"
 msgstr ""
 
@@ -27161,188 +27165,188 @@ msgstr ""
 msgid "{m} min {s:02d} s"
 msgstr ""
 
-#: app/ui/ventana_principal.py:91
+#: app/ui/ventana_principal.py:104
 msgid "&Propiedades..."
 msgstr ""
 
-#: app/ui/ventana_principal.py:92
+#: app/ui/ventana_principal.py:105
 msgid "Re&nombrar..."
 msgstr ""
 
-#: app/ui/ventana_principal.py:94
+#: app/ui/ventana_principal.py:107
 msgid "&Mover..."
 msgstr ""
 
-#: app/ui/ventana_principal.py:95
+#: app/ui/ventana_principal.py:108
 msgid "&Girar..."
 msgstr ""
 
-#: app/ui/ventana_principal.py:96
+#: app/ui/ventana_principal.py:109
 msgid "Cambiar m&edidas..."
 msgstr ""
 
-#: app/ui/ventana_principal.py:98
+#: app/ui/ventana_principal.py:111
 msgid "Insertar un &objeto del catálogo..."
 msgstr ""
 
-#: app/ui/ventana_principal.py:100
+#: app/ui/ventana_principal.py:113
 msgid "&Recorrer desde aquí"
 msgstr ""
 
-#: app/ui/ventana_principal.py:162
+#: app/ui/ventana_principal.py:177
 msgid "Listo"
 msgstr ""
 
-#: app/ui/ventana_principal.py:308
+#: app/ui/ventana_principal.py:323
 msgid "Esta orden todavía no está disponible."
 msgstr ""
 
-#: app/ui/ventana_principal.py:314
+#: app/ui/ventana_principal.py:329
 msgid "No se pudo completar la orden. Los detalles están en la carpeta de registros."
 msgstr ""
 
-#: app/ui/ventana_principal.py:332
+#: app/ui/ventana_principal.py:347
 msgid "(&No hay entornos recientes)"
 msgstr ""
 
-#: app/ui/ventana_principal.py:337
+#: app/ui/ventana_principal.py:352
 msgid "(&No hay ejemplos instalados)"
 msgstr ""
 
-#: app/ui/ventana_principal.py:344
+#: app/ui/ventana_principal.py:359
 msgid "Enseña esta planta."
 msgstr ""
 
-#: app/ui/ventana_principal.py:349
+#: app/ui/ventana_principal.py:364
 msgid "(&No hay plantas)"
 msgstr ""
 
-#: app/ui/ventana_principal.py:434
+#: app/ui/ventana_principal.py:449
 msgid "Á&rbol del entorno:"
 msgstr ""
 
-#: app/ui/ventana_principal.py:436
+#: app/ui/ventana_principal.py:451
 msgid "Árbol del entorno"
 msgstr ""
 
-#: app/ui/ventana_principal.py:439
+#: app/ui/ventana_principal.py:454
 msgid "Árbol del entorno: plantas, espacios y lo que hay en cada uno. Las flechas lo recorren; Intro abre las propiedades; Suprimir borra; la tecla Aplicaciones abre el menú contextual; F6 pasa a la lista."
 msgstr ""
 
-#: app/ui/ventana_principal.py:444
+#: app/ui/ventana_principal.py:459
 msgid "&Lista de elementos:"
 msgstr ""
 
-#: app/ui/ventana_principal.py:447
+#: app/ui/ventana_principal.py:462
 msgid "Lista de elementos"
 msgstr ""
 
-#: app/ui/ventana_principal.py:452
+#: app/ui/ventana_principal.py:467
 msgid "Posición"
 msgstr ""
 
-#: app/ui/ventana_principal.py:458
+#: app/ui/ventana_principal.py:473
 msgid "Elementos del nodo elegido en el árbol. Arriba y abajo cambian de elemento; izquierda y derecha leen el tipo, las medidas y la posición; Intro abre las propiedades; Suprimir borra."
 msgstr ""
 
-#: app/ui/ventana_principal.py:463
+#: app/ui/ventana_principal.py:478
 msgid "Elemento ele&gido:"
 msgstr ""
 
-#: app/ui/ventana_principal.py:465
+#: app/ui/ventana_principal.py:480
 msgid "Elemento elegido"
 msgstr ""
 
-#: app/ui/ventana_principal.py:467
+#: app/ui/ventana_principal.py:482
 msgid "Una frase que describe el elemento elegido: qué es, cuánto mide y dónde está."
 msgstr ""
 
-#: app/ui/ventana_principal.py:476
+#: app/ui/ventana_principal.py:491
 msgid "Aplicar &cambios"
 msgstr ""
 
-#: app/ui/ventana_principal.py:477
+#: app/ui/ventana_principal.py:492
 msgid "Descartar ca&mbios"
 msgstr ""
 
-#: app/ui/ventana_principal.py:484
+#: app/ui/ventana_principal.py:499
 msgid "Aplica al elemento los cambios escritos en el formulario de propiedades. Se pueden deshacer."
 msgstr ""
 
-#: app/ui/ventana_principal.py:486
+#: app/ui/ventana_principal.py:501
 msgid "Vuelve a poner en el formulario los valores que tiene el elemento."
 msgstr ""
 
-#: app/ui/ventana_principal.py:510
+#: app/ui/ventana_principal.py:525
 msgid "&Descripción del entorno:"
 msgstr ""
 
-#: app/ui/ventana_principal.py:513
+#: app/ui/ventana_principal.py:528
 msgid "Descripción del entorno"
 msgstr ""
 
-#: app/ui/ventana_principal.py:516
+#: app/ui/ventana_principal.py:531
 msgid "El entorno entero descrito en texto, una frase por línea. Es lo mismo que enseña el plano gráfico."
 msgstr ""
 
-#: app/ui/ventana_principal.py:628
+#: app/ui/ventana_principal.py:672
 msgid "No hay ningún entorno abierto"
 msgstr ""
 
-#: app/ui/ventana_principal.py:938
+#: app/ui/ventana_principal.py:1077
 msgid "Revise las propiedades"
 msgstr ""
 
-#: app/ui/ventana_principal.py:973
+#: app/ui/ventana_principal.py:1112
 #, python-brace-format
 msgid "Componiendo la descripción del entorno ({n} elementos)…"
 msgstr ""
 
-#: app/ui/ventana_principal.py:988 app/ui/ventana_principal.py:1025
+#: app/ui/ventana_principal.py:1127 app/ui/ventana_principal.py:1164
 msgid "No se pudo componer la descripción. Los detalles están en la carpeta de registros."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1013
+#: app/ui/ventana_principal.py:1152
 #, python-brace-format
 msgid "Descripción lista: {n} líneas."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1133
+#: app/ui/ventana_principal.py:1272
 #, python-brace-format
 msgid "{nombre} sigue en la bandeja del sistema."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1310
+#: app/ui/ventana_principal.py:1449
 #, python-brace-format
 msgid "«{nombre}» tiene cambios sin guardar. ¿Qué quiere hacer?"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1311
+#: app/ui/ventana_principal.py:1450
 msgid "Cambios sin guardar"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1311
+#: app/ui/ventana_principal.py:1450
 msgid "&Guardar"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1311
+#: app/ui/ventana_principal.py:1450
 msgid "&No guardar"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1340 app/ui/ventana_principal.py:1366 app/ui/ventana_principal.py:1369 app/ui/ventana_principal.py:1374 app/ui/ventana_principal.py:1379
+#: app/ui/ventana_principal.py:1479 app/ui/ventana_principal.py:1505 app/ui/ventana_principal.py:1508 app/ui/ventana_principal.py:1513 app/ui/ventana_principal.py:1518
 msgid "Abrir"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1344
+#: app/ui/ventana_principal.py:1483
 #, python-brace-format
 msgid "Abriendo {nombre} ({megas:.1f} MB)"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1358
+#: app/ui/ventana_principal.py:1497
 msgid "Apertura cancelada."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1368
+#: app/ui/ventana_principal.py:1507
 #, python-brace-format
 msgid ""
 "{error}\n"
@@ -27350,152 +27354,152 @@ msgid ""
 "Hay una copia de seguridad de la última vez que se guardó bien. ¿Quiere abrirla?"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1369
+#: app/ui/ventana_principal.py:1508
 msgid "&Abrir la copia de seguridad"
-msgstr ""
-
-#: app/ui/ventana_principal.py:1379
-#, python-brace-format
-msgid "No se pudo leer el fichero: {error}"
-msgstr ""
-
-#: app/ui/ventana_principal.py:1408
-msgid "Complementos que faltan"
-msgstr ""
-
-#: app/ui/ventana_principal.py:1409
-msgid "&Buscar en el catálogo en línea"
-msgstr ""
-
-#: app/ui/ventana_principal.py:1426
-#, python-brace-format
-msgid "Abierto {nombre}: {plantas} plantas y {espacios} espacios."
-msgstr ""
-
-#: app/ui/ventana_principal.py:1465
-msgid "Guardar el entorno"
-msgstr ""
-
-#: app/ui/ventana_principal.py:1477
-#, python-brace-format
-msgid "No se pudo guardar en {ruta}. Compruebe que la carpeta existe y que tiene permiso para escribir en ella."
-msgstr ""
-
-#: app/ui/ventana_principal.py:1485
-#, python-brace-format
-msgid "Guardado {nombre}."
-msgstr ""
-
-#: app/ui/ventana_principal.py:1506
-#, python-brace-format
-msgid "La última vez el programa se cerró sin guardar los cambios de «{nombre}». Hay una copia de recuperación del {fecha}. ¿Qué quiere hacer con ella?"
-msgstr ""
-
-#: app/ui/ventana_principal.py:1509 app/ui/ventana_principal.py:1518
-msgid "Recuperar el trabajo"
-msgstr ""
-
-#: app/ui/ventana_principal.py:1509
-msgid "&Recuperar"
-msgstr ""
-
-#: app/ui/ventana_principal.py:1509
-msgid "&Descartar la copia"
 msgstr ""
 
 #: app/ui/ventana_principal.py:1518
 #, python-brace-format
+msgid "No se pudo leer el fichero: {error}"
+msgstr ""
+
+#: app/ui/ventana_principal.py:1547
+msgid "Complementos que faltan"
+msgstr ""
+
+#: app/ui/ventana_principal.py:1548
+msgid "&Buscar en el catálogo en línea"
+msgstr ""
+
+#: app/ui/ventana_principal.py:1565
+#, python-brace-format
+msgid "Abierto {nombre}: {plantas} plantas y {espacios} espacios."
+msgstr ""
+
+#: app/ui/ventana_principal.py:1604
+msgid "Guardar el entorno"
+msgstr ""
+
+#: app/ui/ventana_principal.py:1616
+#, python-brace-format
+msgid "No se pudo guardar en {ruta}. Compruebe que la carpeta existe y que tiene permiso para escribir en ella."
+msgstr ""
+
+#: app/ui/ventana_principal.py:1624
+#, python-brace-format
+msgid "Guardado {nombre}."
+msgstr ""
+
+#: app/ui/ventana_principal.py:1645
+#, python-brace-format
+msgid "La última vez el programa se cerró sin guardar los cambios de «{nombre}». Hay una copia de recuperación del {fecha}. ¿Qué quiere hacer con ella?"
+msgstr ""
+
+#: app/ui/ventana_principal.py:1648 app/ui/ventana_principal.py:1657
+msgid "Recuperar el trabajo"
+msgstr ""
+
+#: app/ui/ventana_principal.py:1648
+msgid "&Recuperar"
+msgstr ""
+
+#: app/ui/ventana_principal.py:1648
+msgid "&Descartar la copia"
+msgstr ""
+
+#: app/ui/ventana_principal.py:1657
+#, python-brace-format
 msgid "La copia de recuperación no se puede leer: {error}"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1521
+#: app/ui/ventana_principal.py:1660
 #, python-brace-format
 msgid "Recuperado {nombre}. Guárdelo para conservarlo."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1552
+#: app/ui/ventana_principal.py:1691
 msgid "Abrir un entorno"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1653
+#: app/ui/ventana_principal.py:1792
 msgid "No hay nada que deshacer."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1653
+#: app/ui/ventana_principal.py:1792
 #, python-brace-format
 msgid "Deshecho: {operacion}."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1661
+#: app/ui/ventana_principal.py:1800
 msgid "No hay nada que rehacer."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1661
+#: app/ui/ventana_principal.py:1800
 #, python-brace-format
 msgid "Rehecho: {operacion}."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1741
+#: app/ui/ventana_principal.py:1880
 msgid "No hay propiedades que enseñar."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1766
+#: app/ui/ventana_principal.py:1905
 msgid "No hay plantas."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1771
+#: app/ui/ventana_principal.py:1910
 msgid "No hay más plantas hacia arriba."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1771
+#: app/ui/ventana_principal.py:1910
 msgid "No hay más plantas hacia abajo."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1795
+#: app/ui/ventana_principal.py:1934
 msgid "Herramienta del plano: seleccionar y mover."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1798
+#: app/ui/ventana_principal.py:1937
 msgid "Herramienta del plano: dibujar una habitación arrastrando un rectángulo."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1801
+#: app/ui/ventana_principal.py:1940
 msgid "Herramienta del plano: dibujar una pared con dos clics."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1804
+#: app/ui/ventana_principal.py:1943
 msgid "Herramienta del plano: un clic coloca un objeto del catálogo."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1859
+#: app/ui/ventana_principal.py:1998
 msgid "El recorrido ya está en marcha. Deténgalo con Herramientas, Detener el recorrido."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1865
+#: app/ui/ventana_principal.py:2004
 msgid "Seleccione antes el espacio o el elemento junto al que quiere empezar."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1865
+#: app/ui/ventana_principal.py:2004
 msgid "Recorrer"
 msgstr ""
 
-#: app/ui/ventana_principal.py:1869
+#: app/ui/ventana_principal.py:2008
 msgid "Recorrido en marcha. Lo que pida desde el reproductor se hará aquí."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1880
+#: app/ui/ventana_principal.py:2019
 msgid "No hay ningún recorrido en marcha."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1948
+#: app/ui/ventana_principal.py:2087
 msgid "No hay ayuda para este control. Pulse F1 para abrir el manual."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1979
+#: app/ui/ventana_principal.py:2118
 msgid "Generando el paquete de diagnóstico..."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1986
+#: app/ui/ventana_principal.py:2125
 #, python-brace-format
 msgid ""
 "Se ha creado el paquete de diagnóstico «{nombre}» en la carpeta {carpeta}.\n"
@@ -27503,16 +27507,16 @@ msgid ""
 "Lleva los registros y los datos del sistema, sin configuración, fichas, sesiones ni entornos. Adjúntelo al avisar de un fallo."
 msgstr ""
 
-#: app/ui/ventana_principal.py:1999
+#: app/ui/ventana_principal.py:2138
 #, python-brace-format
 msgid "No se pudo generar el paquete de diagnóstico: {error}"
 msgstr ""
 
-#: app/ui/ventana_principal.py:2007
+#: app/ui/ventana_principal.py:2146
 msgid "Se ha abierto la página en el navegador."
 msgstr ""
 
-#: app/ui/ventana_principal.py:2007
+#: app/ui/ventana_principal.py:2146
 msgid "No se pudo abrir el navegador."
 msgstr ""
 

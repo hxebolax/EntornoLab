@@ -186,7 +186,9 @@ def test_teclado_de_los_dialogos_de_orden_y_propiedades_en_ingles(ingles, app_wx
 			break
 	for clase, (entorno, id_elemento) in _un_elemento_de_cada_clase().items():
 		_planta, elemento = operaciones.resolver(entorno, id_elemento)
-		dialogo = DialogoFormulario(None, "Properties", esquema_de(elemento, entorno, catalogo), operaciones.valores_de(entorno, elemento, catalogo))
+		dialogo = DialogoFormulario(
+			None, "Properties", esquema_de(elemento, entorno, catalogo), operaciones.valores_de(entorno, elemento, catalogo)
+		)
 		try:
 			afirmar_teclado_correcto(dialogo)
 		except AssertionError as error:

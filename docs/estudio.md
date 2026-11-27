@@ -59,7 +59,9 @@ Atributos:
 | `catalogo` | El `Catalogo` de complementos cargado |
 | `configuracion` | La `Configuracion` |
 | `tareas` | El `GestorTareas` del Estudio, para el trabajo en segundo plano |
-| `historial` | El `Historial` de deshacer y rehacer del entorno |
+| `historial` | El `Historial` de deshacer y rehacer del entorno (por diferencias; ver [Historial por diferencias](#historial-por-diferencias)) |
+| `cambio` | Qué cambió en el último `entorno_cambiado`: el `Parche` del historial (`cambio.afectados()` dice qué elementos, plantas y conectores). `None` si no se sabe: hay que repintarlo todo |
+| `version` | Sube en uno con cada cambio del entorno. Quien enseña la `version - 1` puede ponerse al día solo con `cambio` |
 | `modificado` | `True` si hay cambios sin guardar |
 | `seleccion` | Id del elemento (o de la planta) elegido; cadena vacía si no hay |
 | `planta_id` | Id de la planta que se está viendo |
@@ -69,8 +71,8 @@ Métodos:
 
 | Método | Qué hace |
 |---|---|
-| `ejecutar(nombre, operacion, anuncio=None)` | Hace un cambio en el ENTORNO que se puede deshacer. Guarda el estado, llama a `operacion()`, marca modificado, emite `entorno_cambiado` y anuncia. Si `operacion` lanza una excepción, el entorno queda como estaba y la excepción sigue |
-| `deshacer()`, `rehacer()` | Devuelven el nombre de la operación, o `None` |
+| `ejecutar(nombre, operacion, anuncio=None)` | Hace un cambio en el ENTORNO que se puede deshacer: abre la operación en el historial, llama a `operacion()`, guarda lo que cambió (queda en `cambio`), marca modificado, emite `entorno_cambiado` y anuncia. Todo lo que haga `operacion` es UNA entrada del historial. Si lanza una excepción, el entorno vuelve a como estaba (y, si llegó a tocar algo, se emite `entorno_cambiado`), no queda nada en el historial y la excepción sigue |
+| `deshacer()`, `rehacer()` | Deshacen o rehacen EN EL SITIO (el entorno no se sustituye), llevan la selección al elemento afectado y devuelven el nombre de la operación, o `None` |
 | `marcar_modificado(nombre_operacion="")` | Para cambios del paquete que NO son del entorno: las actividades. Marca modificado y emite `actividades_cambiadas` |
 | `guardar(ruta=None) -> bool` | Guarda el paquete (entorno, actividades, recursos). Sin ruta conocida abre «Guardar como». Nunca lanza |
 | `anunciar(texto, interrumpir=False)` | Frase breve por el lector de pantalla y en la barra de estado |
@@ -88,7 +90,7 @@ Métodos:
 
 Eventos: `entorno_abierto`, `entorno_cerrado`, `entorno_cambiado`, `actividades_cambiadas`, `seleccion_cambiada`, `planta_cambiada`, `documento_cambiado` y `catalogo_cambiado`. Las funciones suscritas se llaman sin argumentos, en el hilo de la interfaz; si declaran un parámetro obligatorio reciben el contexto.
 
-Regla importante: el objeto `entorno` se **sustituye** por otro al deshacer, rehacer y abrir. No guarde referencias al entorno, a una planta ni a un elemento entre dos eventos: guarde el `id` y búsquelo de nuevo con `contexto.entorno.buscar(id)`.
+Regla importante: el objeto `entorno` solo se **sustituye** por otro al abrir (o crear, o importar como documento nuevo); deshacer y rehacer lo cambian en el sitio. Aun así, un elemento puede desaparecer (al borrarlo o al deshacer su creación) o volver como un objeto nuevo (al deshacer su borrado). No guarde referencias a una planta ni a un elemento entre dos eventos: guarde el `id` y búsquelo de nuevo con `contexto.entorno.buscar(id)`. Y todo cambio del entorno pasa por `ejecutar`: el historial no puede deshacer lo que no ha visto.
 
 ## Formato de la tabla de menús
 
@@ -163,7 +165,7 @@ Cómo se mantiene la sincronía. La selección vive en `contexto.seleccion`. Qui
 - Lista → árbol, propiedades y plano: la lista no se vuelve a rellenar mientras la persona se mueve por ella.
 - Plano → árbol, lista y propiedades.
 
-El árbol lógico (`operaciones.arbol_de`) se calcula una vez por cambio del entorno y se guarda en `_arbol_logico`; la lista (`elementos_de_nodo(..., arbol)`) y las búsquedas lo reutilizan. Los nodos nativos del `wx.TreeCtrl` no se borran y se rehacen: se SINCRONIZAN con el árbol lógico (`_poner_nodo`, `_poner_hijos`), reutilizando por posición los que ya hay y sin tocar los subárboles que no han cambiado, conservando qué nodos estaban desplegados y cuál estaba elegido. Con más de `LIMITE_ARBOL_COMPLETO` nodos (1.500) los hijos de cada espacio y de cada grupo se crean al desplegarlo (`EVT_TREE_ITEM_EXPANDING`); `_asegurar_item(clave)` los crea cuando hay que llevar la selección a un nodo que aún no existe. El formulario de propiedades no se rehace mientras la persona está escribiendo en él; si el elemento nuevo tiene los mismos campos que el anterior se reutilizan los controles, y los formularios de los últimos dieciséis tipos de elemento se guardan ocultos (`Formulario.guardar_cuerpos`).
+El árbol lógico (`operaciones.arbol_de`) se calcula una vez por cambio del entorno y se guarda en `_arbol_logico`; tras editar, deshacer o rehacer se calcula POR PARTES con el parche (`arbol_de(..., anterior=, afectados=)`), compartiendo con el anterior los nodos de lo que no ha cambiado (ver [Historial por diferencias](#historial-por-diferencias)); la lista (`elementos_de_nodo(..., arbol)`) y las búsquedas lo reutilizan. Los nodos nativos del `wx.TreeCtrl` no se borran y se rehacen: se SINCRONIZAN con el árbol lógico (`_poner_nodo`, `_poner_hijos`), reutilizando por posición los que ya hay y sin tocar los subárboles que no han cambiado, conservando qué nodos estaban desplegados y cuál estaba elegido. Con más de `LIMITE_ARBOL_COMPLETO` nodos (1.500) los hijos de cada espacio y de cada grupo se crean al desplegarlo (`EVT_TREE_ITEM_EXPANDING`); `_asegurar_item(clave)` los crea cuando hay que llevar la selección a un nodo que aún no existe. El formulario de propiedades no se rehace mientras la persona está escribiendo en él; si el elemento nuevo tiene los mismos campos que el anterior se reutilizan los controles, y los formularios de los últimos dieciséis tipos de elemento se guardan ocultos (`Formulario.guardar_cuerpos`).
 
 La lista de elementos es virtual (`ListaAccesible(virtual=True)` con `reemplazar_proveedor`): una planta de un barrio tiene miles de filas y solo se componen las que el control pide (`operaciones.FilasPerezosas`).
 
@@ -186,18 +188,46 @@ Las letras de acceso de la página «Entorno» se reparten al crearla (`esquemas
 
 El caso de referencia es un barrio importado de OpenStreetMap: 3.000 espacios, 2.000 puertas, 2.600 referencias y más de 1.400 objetos. `tests/_entornos_grandes.py` los genera sin red a partir de la muestra real de `tests/datos` y `tests/test_rendimiento_estudio.py` (marcada `lento`) comprueba los presupuestos de tiempo.
 
-- **Índice espacial por planta.** `Planta.espacios_en` y `espacio_en` usan `IndiceEspacios` (rejilla de cajas, `app/dominio/indice_espacial.py`), guardado en la planta y rehecho solo si cambia la lista de espacios (`ListaEspacios.version`) o se sustituye un contorno (`Espacio.__setattr__`, `invalidar_indices()`). Da exactamente lo mismo que `espacios_en_exhaustivo`. Regla: un contorno se SUSTITUYE (`espacio.contorno = [...]`); quien lo cambie en el sitio llama a `invalidar_indices()`.
-- **Una pasada por planta.** `operaciones.contenido_de_planta` y `edicion.aberturas_por_espacio` sitúan cada elemento una vez (y recuerdan lo ya situado mientras los espacios no cambien), en lugar de preguntar por cada pareja espacio-elemento. `describir_entorno`, `vecinos` y la validación usan el índice.
+- **Índice espacial por planta.** `Planta.espacios_en` y `espacio_en` usan `IndiceEspacios` (rejilla de cajas, `app/dominio/indice_espacial.py`), guardado en la planta y rehecho solo si cambia la lista de espacios (`ListaEspacios.version`) o se sustituye un contorno. Cada espacio apunta (con una referencia débil) el índice que lo tiene, y `Espacio.__setattr__` caduca SOLO ese: mover una habitación de una planta no rehace el índice de las demás. `invalidar_indices()` los caduca todos. Da exactamente lo mismo que `espacios_en_exhaustivo`. Regla: un contorno se SUSTITUYE (`espacio.contorno = [...]`); quien lo cambie en el sitio llama a `invalidar_indices()`.
+- **Una pasada por planta, y por partes.** `operaciones.contenido_de_planta` y `edicion.aberturas_por_espacio` sitúan cada elemento una vez, en lugar de preguntar por cada pareja espacio-elemento. `contenido_de_planta` recuerda lo ya situado; si los espacios cambian, `IndiceEspacios.cambios_desde(viejo)` da las cajas donde ha cambiado la geometría y solo se vuelve a situar lo que cae cerca (con más de `MAX_CAJAS_CAMBIADAS` cajas, o si se invalidó a mano, todo). `describir_entorno`, `vecinos` y la validación usan el índice.
 - **Lotes de comprobación.** `colocacion.lote_de_comprobaciones()` calcula una vez por planta las paredes y las zonas de paso de las puertas para todos los objetos que se comprueban (validación y amueblado).
-- **Historial.** Cada operación guarda el entorno de antes como diccionario (`a_dict`, optimizado); al deshacer y rehacer, el entorno que se deja se guarda tal cual, sin convertirlo.
-- **Plano.** La parte fija se pinta en un mapa de bits que se reutiliza mientras no cambien el entorno ni la vista; la selección y los gestos van encima. Solo se dibujan las figuras que se ven y, con más de `LIMITE_DETALLE` (1.500) a la vista, sin letras ni símbolos menudos.
+- **Historial por diferencias.** Cada operación guarda solo lo que cambia y deshacer lo aplica en el sitio; la ventana y el plano ponen al día solo lo afectado. Ver la sección siguiente.
+- **Plano.** La parte fija se pinta en un mapa de bits que se reutiliza mientras no cambien el entorno ni la vista; la selección y los gestos van encima. Solo se dibujan las figuras que se ven y, con más de `LIMITE_DETALLE` (1.500) a la vista, sin letras ni símbolos menudos. Tras editar, `figuras_de_planta(..., previas=, afectados=)` reutiliza las figuras de lo que no ha cambiado (las huellas del catálogo eran lo más caro).
 - **Segundo plano.** `app/ui/espera.py` decide: con un entorno de más de `UMBRAL_ELEMENTOS` (1.500) elementos, «Comprobar el entorno», las comprobaciones antes de exportar y las exportaciones van a un hilo con el diálogo de progreso; la página «Descripción» se compone en segundo plano sin diálogo y se descarta si el entorno cambió entretanto (`contexto.version`).
 
-Tiempos medidos con 3.000 espacios (antes de estos cambios, con 350 espacios, elegir un nodo del árbol tardaba más de tres minutos con esta muestra y entre 10 y 12 s con la del usuario): elegir en el árbol o en la lista, de 3 a 80 ms (la primera vez que se ven las propiedades de un tipo de elemento, hasta 0,12 s, porque se crean sus controles); abrir, 0,5 s; mover o deshacer, de 0,1 a 0,26 s; comprobar el entorno, 1,8 s en segundo plano.
+Tiempos medidos con 3.000 espacios (antes de estos cambios, con 350 espacios, elegir un nodo del árbol tardaba más de tres minutos con esta muestra y entre 10 y 12 s con la del usuario): elegir en el árbol o en la lista, de 3 a 80 ms (la primera vez que se ven las propiedades de un tipo de elemento, hasta 0,12 s, porque se crean sus controles); abrir, 0,5 s; mover un objeto o un espacio, deshacer, rehacer y aplicar una propiedad, de 20 a 40 ms (con el historial de instantáneas, de 0,13 a 0,43 s); comprobar el entorno, 1,8 s en segundo plano.
+
+## Historial por diferencias
+
+Por qué: el historial guardaba una copia entera del entorno antes de cada operación y deshacer devolvía otro entorno que el Estudio ponía en lugar del suyo. Con 3.000 espacios, cada copia eran unos 9 MB y 30 ms, recuperarla 25 ms más, y el árbol de diez mil nodos, la lista y el plano se rehacían enteros: entre 0,13 y 0,43 s por acción, y cien niveles de deshacer, unos 900 MB. Ahora cada operación guarda un **parche** con lo que cambia (cien movimientos, unos 6 MB en total) y deshacer y rehacer tardan lo mismo que la edición.
+
+Cómo funciona (`app/dominio/diferencias.py`, sin wx):
+
+1. **Foto antes.** `Historial.anotar(entorno, nombre)` abre la operación con una foto en huellas del entorno (`tomar_foto`): de cada elemento de cada planta, el objeto y sus valores en `marshal` (en C: unos 8 ms para diez mil elementos); también los campos del entorno, los de cada planta y los conectores. Si la operación anterior se cerró sobre el mismo entorno, su foto de después sirve de foto de antes y no se saca otra.
+2. **Comparar después.** `Historial.cerrar(entorno)` (lo llama `ContextoEstudio.ejecutar` al terminar la operación, o la siguiente llamada al historial) vuelve a sacar las huellas y empareja los elementos por IDENTIDAD. Los que faltan se han quitado; los nuevos se han puesto; los que tienen otra huella han cambiado. El parche guarda de esos pocos su forma serializada (`a_dict`): entera si se pone o se quita, solo los campos que cambian si cambia, y la posición en su lista (por planta y por lista: `CambioPlanta.listas["espacios"]`…). Si los que siguen cambiaron de orden, la lista entera cuenta como quitada y puesta.
+3. **Aplicar en el sitio.** `deshacer` aplica el «antes» y `rehacer` el «después» (`diferencias.aplicar`): pone los campos en los objetos que siguen (no cambian de identidad), quita los puestos y vuelve a poner los quitados en su posición. Antes de tocar nada comprueba que cada posición tiene el id esperado; si no (alguien cambió el entorno sin pasar por el historial), lanza `ErrorParche` sin tocar nada y el Estudio vacía el historial y lo dice. Solo se caduca el índice espacial de las plantas cuyos espacios cambian. Lo que se vuelve a poner es una copia honda: el entorno nunca comparte una lista con el historial.
+4. **Una operación que falla** se descarta con `Historial.cancelar(entorno)`, que deja el entorno como estaba (aunque la operación lo hubiera dejado a medias) sin borrar lo que se podía rehacer.
+
+Qué pone al día el Estudio. El parche dice qué ha cambiado (`Parche.afectados()`: id de planta → ids de elementos; plantas, conectores y campos del entorno) y a qué elemento llevar la selección (`Parche.foco(hacia_atras)`: lo que cambia; si no, lo que vuelve a aparecer; si no, la planta). `contexto.cambio` lo deja a mano de quien escuche `entorno_cambiado`, y `contexto.version` dice si quien escucha enseñaba el estado de justo antes (si no, hay que rehacerlo todo):
+
+- el árbol: `arbol_de(entorno, catalogo, anterior, afectados)` reutiliza los nodos de las plantas no tocadas y, en la tocada, los de los espacios cuyo contenido no ha cambiado; la ventana salta por identidad los nodos reutilizados y solo reescribe, inserta o borra los nodos nativos afectados (sin preguntar al control por cada uno de sus miles de nodos);
+- la lista: si sigue enseñando los mismos elementos, solo se recomponen las filas de los afectados;
+- el plano: solo se rehacen las figuras de los afectados;
+- las propiedades y la frase del elemento elegido, como siempre;
+- tras deshacer o rehacer, la selección (árbol, lista, propiedades y plano) va a `foco` y la ventana anuncia «Deshecho: …» o «Rehecho: …».
+
+**Cómo debe declarar una operación nueva lo que toca: no tiene que declararlo.** Basta con que el cambio pase por `contexto.ejecutar(nombre, operacion)` (o, fuera del Estudio, por `Historial.anotar` antes y `Historial.cerrar` después): el historial compara TODAS las plantas, los conectores y los campos del entorno, así que es imposible que un cambio se quede fuera del parche. Una operación compuesta (crear una calle con sus aceras y su vía, duplicar, borrar con su contenido, amueblar, importar una planta) es una sola entrada, haga lo que haga dentro. Lo que sí debe respetar:
+
+- todo cambio del entorno va dentro de una operación (nada de tocar el entorno desde un evento o un temporizador sin `ejecutar`);
+- un contorno se sustituye, no se cambia en el sitio (o se llama a `invalidar_indices()`), como exige el índice espacial;
+- los campos de los elementos tienen valores que `a_dict` sabe escribir (números, textos, listas, diccionarios); otro tipo de valor sigue funcionando, pero más despacio (`a_dict` en vez de `marshal`);
+- si la operación añade una clase de elemento nueva a las plantas, va en `LISTA_DE_CLASE` (`app/dominio/modelo.py`): las listas que se comparan son las de esa tabla.
+
+Lo vigilan `tests/test_dominio_historial_diferencias.py` (secuencias largas y variadas de todas las operaciones de `edicion` y `colocacion`, en los ejemplos y en un barrio: deshacer todo da un `a_dict` idéntico al inicial, rehacer todo el final, y tras cada paso el índice espacial, el contenido de cada espacio y el árbol por partes coinciden con los calculados desde cero), `tests/test_ui_estudio_historial.py` (la ventana: árbol nativo, lista y plano iguales a los de desde cero, y la selección tras deshacer) y `tests/test_rendimiento_estudio.py` (100 ms con 3.000 espacios).
 
 ## Cómo añadir un tipo de elemento
 
-1. Añada la clase al modelo (`app/dominio/modelo.py`) y sus funciones de edición (`app/dominio/edicion.py`), con sus pruebas.
+1. Añada la clase al modelo (`app/dominio/modelo.py`), con su lista en `LISTA_DE_CLASE` si vive en las plantas (el historial por diferencias compara las listas de esa tabla), y sus funciones de edición (`app/dominio/edicion.py`), con sus pruebas.
 2. En `app/ui/operaciones.py`: su nombre de tipo (`nombre_tipo`), sus textos de medidas y posición (`texto_medidas`, `texto_posicion`), sus valores (`valores_de`) y cómo se aplican (`aplicar_valores`, usando las funciones de edición cuando existan). Si no cuelga de un espacio, decida en `arbol_de` en qué grupo sale.
 3. En `app/ui/esquemas_elementos.py`: su esquema de propiedades (una función `_esquema_…` y su línea en `esquema_de`) y una entrada en `ORDENES` para insertarlo: título, campos, valores de partida, nombre para el historial y la función que lo crea.
 4. En `app/ui/menus.py`: la entrada del menú Insertar. Si su `nombre` es la clave de `ORDENES`, no hace falta escribir ningún manejador.

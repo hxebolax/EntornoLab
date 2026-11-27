@@ -24,6 +24,7 @@ from app.core.i18n import _, _n, separador_decimal
 from app.dominio import geometria as geo
 from app.dominio.catalogo import Catalogo
 from app.dominio.colocacion import LADOS, lado_de_espacio
+from app.dominio.diferencias import Foto, Parche, aplicar, comparar, comparar_y_fotografiar, tomar_foto
 from app.dominio.formato import identificador_seguro
 from app.dominio.geometria import Punto
 from app.dominio.modelo import (
@@ -1235,18 +1236,33 @@ def centro_de(elemento: Any) -> Punto:
 
 
 def _contenido_de(entorno: Entorno, planta: Planta, espacio: Espacio) -> list[Any]:
-	"""Lo que «va con» un espacio al moverlo: sus aberturas y lo que tiene dentro."""
+	"""Lo que «va con» un espacio al moverlo: sus aberturas y lo que tiene dentro.
+
+	Solo se pregunta en qué espacio está a lo que cae dentro de la caja del
+	espacio (con la holgura del índice espacial): lo de fuera no puede estar
+	en él. Con un barrio de miles de objetos y referencias, preguntarlo de
+	todos costaba 35 ms en cada movimiento. El resultado es el mismo.
+	"""
 	contenido: list[Any] = list(aberturas_de(planta, espacio))
+	if len(espacio.contorno) < 3:
+		return contenido
+	holgura = IndiceEspacios.HOLGURA * 2
+	x0, y0, x1, y1 = geo.caja(espacio.contorno)
+	x0, y0, x1, y1 = x0 - holgura, y0 - holgura, x1 + holgura, y1 + holgura
+
+	def dentro(x: float, y: float) -> bool:
+		return x0 <= x <= x1 and y0 <= y <= y1 and planta.espacio_en(x, y) is espacio
+
 	for lista in (planta.objetos, planta.fuentes, planta.referencias):
-		contenido.extend(e for e in lista if planta.espacio_en(e.x, e.y) is espacio)
+		contenido.extend(e for e in lista if dentro(e.x, e.y))
 	for zona in planta.zonas:
-		if len(zona.contorno) >= 3 and planta.espacio_en(*geo.centroide(zona.contorno)) is espacio:
+		if len(zona.contorno) >= 3 and dentro(*geo.centroide(zona.contorno)):
 			contenido.append(zona)
 	for conector in entorno.conectores:
 		for posicion in conector.posiciones():
-			if posicion.planta == planta.id and planta.espacio_en(posicion.x, posicion.y) is espacio:
+			if posicion.planta == planta.id and dentro(posicion.x, posicion.y):
 				contenido.append(posicion)
-	if entorno.inicio.planta == planta.id and planta.espacio_en(entorno.inicio.x, entorno.inicio.y) is espacio:
+	if entorno.inicio.planta == planta.id and dentro(entorno.inicio.x, entorno.inicio.y):
 		contenido.append(entorno.inicio)
 	return contenido
 
@@ -1844,74 +1860,168 @@ def describir_entorno(entorno: Entorno, catalogo: Catalogo | None = None) -> str
 # ── Deshacer y rehacer ───────────────────────────────────────────────────────
 
 
+@dataclass(slots=True)
+class _Entrada:
+	"""Una operación del historial: su nombre y lo que cambió (el parche)."""
+
+	nombre: str
+	parche: Parche
+
+
 class Historial:
-	"""Pila de instantáneas del entorno para deshacer y rehacer, con el nombre de cada operación.
+	"""Deshacer y rehacer POR DIFERENCIAS, con el nombre de cada operación.
 
 	Antes de cada cambio el editor llama a ``anotar(entorno, "crear habitación
-	Cocina")``. ``deshacer`` y ``rehacer`` devuelven un ``Entorno`` NUEVO con
-	el estado recuperado (el editor sustituye el suyo), porque restaurar por
-	completo es más seguro que intentar invertir cada operación.
+	Cocina")``: se saca una foto en huellas del entorno (ver
+	``app.dominio.diferencias``). La operación queda ABIERTA hasta que se
+	llama a ``cerrar(entorno)`` (lo hace ``ContextoEstudio.ejecutar`` al
+	terminar) o hasta la siguiente llamada a ``anotar``, ``deshacer`` o
+	``rehacer``, que la cierran solas: entonces se compara con el entorno y se
+	guarda solo lo que cambió. Una operación que falla se descarta con
+	``cancelar(entorno)``, que además deja el entorno como estaba.
+
+	``deshacer`` y ``rehacer`` modifican el entorno EN EL SITIO y devuelven el
+	MISMO objeto (antes devolvían un ``Entorno`` nuevo que el editor ponía en
+	lugar del suyo): así los objetos que no cambian conservan su identidad,
+	el índice espacial de las plantas no tocadas sigue valiendo y el Estudio
+	solo tiene que poner al día lo que dice el parche (``ultimo_parche``).
+	Si el entorno no está como el parche espera (alguien lo cambió sin pasar
+	por el historial) lanzan ``ErrorParche`` sin tocar nada.
+
+	Por qué: con un barrio de 3.000 espacios cada instantánea completa ocupaba
+	unos 9 MB y tardaba 30 ms en guardarse y 25 ms en recuperarse; cien
+	niveles eran casi un gigabyte. Un parche de mover una habitación ocupa
+	unos pocos kilobytes.
 	"""
 
 	def __init__(self, limite: int = 50) -> None:
 		self.limite = max(1, int(limite))
-		# Cada estado es un diccionario (lo que había antes de una operación) o un ``Entorno`` que ya
-		# no está abierto: al deshacer, el entorno que se deja ya no lo toca nadie, así que se guarda
-		# tal cual en vez de convertirlo a diccionario (con un barrio de miles de espacios, un tercio de segundo).
-		self._deshacer: list[tuple[str, dict[str, Any] | Entorno]] = []
-		self._rehacer: list[tuple[str, dict[str, Any] | Entorno]] = []
+		self._deshacer: list[_Entrada] = []
+		self._rehacer: list[_Entrada] = []
+		# La operación en curso: su nombre y la foto del entorno antes de empezarla.
+		self._abierta: tuple[str, Foto] | None = None
+		# La foto del entorno tal como lo dejó la última operación cerrada: es la de ANTES de la
+		# siguiente si nadie lo toca entre medias (todo cambio pasa por el historial). Ahorra sacarla.
+		self._foto_vigente: Foto | None = None
+		#: El parche de lo último que se hizo, deshizo o rehízo: dice qué elementos hay que volver a enseñar.
+		self.ultimo_parche: Parche | None = None
 
 	def anotar(self, entorno: Entorno, nombre: str) -> None:
-		"""Guarda el estado actual ANTES de una operación que se podrá deshacer."""
-		self._deshacer.append((nombre, entorno.a_dict()))
+		"""Abre una operación que se podrá deshacer: hay que llamarlo ANTES de cambiar el entorno.
+
+		Si había otra abierta, se cierra antes con el entorno tal como está.
+		Si la anterior se cerró sobre este mismo entorno, su foto de después
+		sirve de foto de antes (la regla de siempre: el entorno solo se cambia
+		dentro de una operación anotada). Aunque alguien lo cambiara por fuera,
+		el resultado sería coherente: ese cambio quedaría dentro de esta operación.
+		"""
+		self.cerrar(entorno)
+		vigente = self._foto_vigente
+		self._foto_vigente = None
+		self._abierta = (nombre, vigente if vigente is not None and vigente.entorno is entorno else tomar_foto(entorno))
+
+	def cerrar(self, entorno: Entorno | None = None) -> Parche | None:
+		"""Cierra la operación abierta: guarda lo que ha cambiado desde ``anotar`` y lo devuelve. None si no había ninguna.
+
+		Una operación nueva borra lo que se podía rehacer, como en cualquier editor.
+		"""
+		if self._abierta is None:
+			return None
+		nombre, foto = self._abierta
+		self._abierta = None
+		parche, self._foto_vigente = comparar_y_fotografiar(foto, entorno if entorno is not None else foto.entorno)
+		self._deshacer.append(_Entrada(nombre, parche))
 		if len(self._deshacer) > self.limite:
 			del self._deshacer[: len(self._deshacer) - self.limite]
 		self._rehacer.clear()
+		self.ultimo_parche = parche
+		return parche
+
+	def cancelar(self, entorno: Entorno | None = None) -> Parche | None:
+		"""Descarta la operación abierta (falló) y deja el entorno como estaba al anotarla.
+
+		No entra en el historial ni borra lo que se podía rehacer. Devuelve lo
+		que se ha devuelto a su estado (vacío si la operación no llegó a tocar
+		nada), o None si no había ninguna abierta.
+		"""
+		if self._abierta is None:
+			return None
+		_nombre, foto = self._abierta
+		self._abierta = None
+		self._foto_vigente = None
+		destino = entorno if entorno is not None else foto.entorno
+		parche = comparar(foto, destino)
+		if not parche.vacio:
+			aplicar(destino, parche, hacia_atras=True)
+		self.ultimo_parche = parche
+		return parche
+
+	def _nombres(self) -> list[str]:
+		nombres = [entrada.nombre for entrada in self._deshacer]
+		if self._abierta is not None:
+			nombres.append(self._abierta[0])
+		return nombres[-self.limite :]
 
 	@property
 	def puede_deshacer(self) -> bool:
-		"""True si hay algo que deshacer."""
-		return bool(self._deshacer)
+		"""True si hay algo que deshacer (también la operación abierta)."""
+		return bool(self._deshacer) or self._abierta is not None
 
 	@property
 	def puede_rehacer(self) -> bool:
-		"""True si hay algo que rehacer."""
-		return bool(self._rehacer)
+		"""True si hay algo que rehacer (con una operación abierta, no: al cerrarla se pierde)."""
+		return bool(self._rehacer) and self._abierta is None
 
 	def texto_deshacer(self) -> str:
 		"""«Deshacer: crear habitación Cocina», o «Deshacer» si no hay nada."""
-		return _("Deshacer: {operacion}").format(operacion=self._deshacer[-1][0]) if self._deshacer else _("Deshacer")
+		nombres = self._nombres()
+		return _("Deshacer: {operacion}").format(operacion=nombres[-1]) if nombres else _("Deshacer")
 
 	def texto_rehacer(self) -> str:
 		"""«Rehacer: crear habitación Cocina», o «Rehacer» si no hay nada."""
-		return _("Rehacer: {operacion}").format(operacion=self._rehacer[-1][0]) if self._rehacer else _("Rehacer")
+		return _("Rehacer: {operacion}").format(operacion=self._rehacer[-1].nombre) if self.puede_rehacer else _("Rehacer")
 
 	def operaciones(self) -> list[str]:
 		"""Nombres de las operaciones que se pueden deshacer, de la más antigua a la más reciente."""
-		return [nombre for nombre, _estado in self._deshacer]
+		return self._nombres()
 
 	def deshacer(self, entorno: Entorno) -> Entorno | None:
-		"""Devuelve el entorno como estaba antes de la última operación; None si no hay nada."""
+		"""Deja el entorno como estaba antes de la última operación, EN EL SITIO, y lo devuelve; None si no hay nada.
+
+		Devuelve el mismo ``entorno`` que recibe (no uno nuevo). Lo cambiado
+		está en ``ultimo_parche``. Lanza ``ErrorParche`` (sin tocar nada) si el
+		entorno no está como lo dejó esa operación.
+		"""
+		self.cerrar(entorno)
 		if not self._deshacer:
 			return None
-		nombre, estado = self._deshacer.pop()
-		self._rehacer.append((nombre, entorno))
-		return self._recuperar(estado)
+		entrada = self._deshacer[-1]
+		# La foto de después de la última operación ya no es el estado del entorno.
+		self._foto_vigente = None
+		aplicar(entorno, entrada.parche, hacia_atras=True)
+		self._rehacer.append(self._deshacer.pop())
+		self.ultimo_parche = entrada.parche
+		return entorno
 
 	def rehacer(self, entorno: Entorno) -> Entorno | None:
-		"""Vuelve a aplicar la última operación deshecha; None si no hay nada."""
-		if not self._rehacer:
+		"""Vuelve a aplicar la última operación deshecha, EN EL SITIO, y devuelve el mismo entorno; None si no hay nada."""
+		if not self.puede_rehacer:
 			return None
-		nombre, estado = self._rehacer.pop()
-		self._deshacer.append((nombre, entorno))
-		return self._recuperar(estado)
+		entrada = self._rehacer[-1]
+		self._foto_vigente = None
+		aplicar(entorno, entrada.parche, hacia_atras=False)
+		self._deshacer.append(self._rehacer.pop())
+		self.ultimo_parche = entrada.parche
+		return entorno
 
-	@staticmethod
-	def _recuperar(estado: dict[str, Any] | Entorno) -> Entorno:
-		"""El entorno de un estado guardado: el mismo objeto si se guardó entero, o reconstruido de su diccionario."""
-		return estado if isinstance(estado, Entorno) else Entorno.de_dict(estado)
+	def memoria(self) -> int:
+		"""Bytes que ocupan, aproximadamente, todos los parches guardados (para medir que no crece sin medida)."""
+		return sum(entrada.parche.tamano() for entrada in (*self._deshacer, *self._rehacer))
 
 	def limpiar(self) -> None:
 		"""Olvida todo (al abrir otro entorno)."""
 		self._deshacer.clear()
 		self._rehacer.clear()
+		self._abierta = None
+		self._foto_vigente = None
+		self.ultimo_parche = None

@@ -855,7 +855,8 @@ def test_historial_deshacer_y_rehacer_con_nombre():
 	assert historial.operaciones() == ["crear habitación Baño", "renombrar Salón"]
 
 	anterior = historial.deshacer(entorno)
-	assert anterior is not entorno
+	# Por diferencias: se deshace EN EL SITIO y devuelve el mismo entorno.
+	assert anterior is entorno
 	assert [e.nombre for e in anterior.plantas[0].espacios] == ["Salón", "Cocina", "Baño"]
 	assert historial.texto_deshacer() == "Deshacer: crear habitación Baño"
 	assert historial.texto_rehacer() == "Rehacer: renombrar Salón"

@@ -19,6 +19,7 @@ import dataclasses
 import logging
 import math
 import operator
+import weakref
 from collections.abc import Callable, Iterator
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any, ClassVar, NamedTuple, Self
@@ -461,17 +462,22 @@ class Espacio(Serializable):
 		return geo.punto_en_poligono((x, y), self.contorno)
 
 	def __setattr__(self, nombre: str, valor: Any) -> None:
-		"""Al sustituir el contorno de un espacio ya indizado, los índices espaciales dejan de valer.
+		"""Al sustituir el contorno de un espacio ya indizado, el índice espacial de SU planta deja de valer.
 
 		Es la única forma de que el índice de ``Planta.espacios_en`` se entere
 		de que un espacio se ha movido o cambiado de forma sin que cada consulta
-		tenga que revisar todos los contornos. Regla: el contorno se SUSTITUYE
-		(``espacio.contorno = [...]``), como hacen todas las funciones de
-		edición; si alguien lo cambia en el sitio, debe llamar a
-		``invalidar_indices()``.
+		tenga que revisar todos los contornos. Solo caduca el índice que tiene
+		apuntado este espacio (el de su planta): mover una habitación del
+		sótano no obliga a rehacer el índice de las demás plantas. Regla: el
+		contorno se SUSTITUYE (``espacio.contorno = [...]``), como hacen todas
+		las funciones de edición y el historial; si alguien lo cambia en el
+		sitio, debe llamar a ``invalidar_indices()``.
 		"""
-		if nombre == "contorno" and self.__dict__.get("_indizado"):
-			invalidar_indices()
+		if nombre == "contorno":
+			referencia = self.__dict__.get("_indizado")
+			indice = referencia() if referencia is not None else None
+			if indice is not None:
+				indice.caducar()
 		object.__setattr__(self, nombre, valor)
 
 
@@ -555,7 +561,12 @@ _CONTORNO = operator.attrgetter("contorno")
 
 
 def invalidar_indices() -> None:
-	"""Da por caducados todos los índices espaciales de espacios (se rehacen en la próxima consulta)."""
+	"""Da por caducados todos los índices espaciales de espacios (se rehacen en la próxima consulta).
+
+	Es para quien cambia un contorno EN EL SITIO (``espacio.contorno[0] = …``),
+	que el índice no puede notar. Sustituir el contorno no lo necesita: caduca
+	solo el índice de la planta de ese espacio.
+	"""
 	global _generacion_geometria
 	_generacion_geometria += 1
 
@@ -573,7 +584,8 @@ class IndiceEspacios:
 	(mismo orden: del más pequeño al más grande y, a igualdad, el orden de la lista).
 
 	Caduca (``vigente`` devuelve False) si cambia la lista de espacios de la
-	planta o se sustituye el contorno de alguno.
+	planta o se sustituye el contorno de alguno (cada espacio apunta, con una
+	referencia débil, el índice que lo tiene: así caduca solo el de su planta).
 	"""
 
 	# Por debajo de este número de espacios no compensa la rejilla: se miran las cajas una a una.
@@ -585,16 +597,21 @@ class IndiceEspacios:
 		from app.dominio.indice_espacial import RejillaCajas
 
 		self.generacion = _generacion_geometria
+		#: True cuando se ha sustituido el contorno de alguno de sus espacios.
+		self.caducado = False
 		# La lista de la planta y su versión: si es una ``ListaEspacios`` que no ha cambiado, el índice vale sin más comprobaciones.
 		self._lista = espacios
 		self._version = getattr(espacios, "version", None)
 		self._espacios = list(espacios)
-		self._longitudes = list(map(len, map(_CONTORNO, espacios)))
+		# Los contornos (los objetos lista) que había al indizar: ``cambios_desde`` sabe así qué espacio cambió de forma.
+		self._contornos = list(map(_CONTORNO, espacios))
+		self._longitudes = list(map(len, self._contornos))
 		self._utiles: list[int] = []
 		self._cajas: list[tuple[float, float, float, float]] = []
 		self._areas: list[float] = []
+		propio = weakref.ref(self)
 		for numero, espacio in enumerate(espacios):
-			object.__setattr__(espacio, "_indizado", True)
+			espacio.__dict__["_indizado"] = propio
 			if len(espacio.contorno) >= 3:
 				self._utiles.append(numero)
 				self._cajas.append(geo.caja(espacio.contorno))
@@ -627,7 +644,7 @@ class IndiceEspacios:
 		porque el índice devolvería los antiguos. Las longitudes de los
 		contornos descubren además un punto añadido o quitado en el sitio.
 		"""
-		if self.generacion != _generacion_geometria:
+		if self.caducado or self.generacion != _generacion_geometria:
 			return False
 		if espacios is self._lista and self._version is not None and getattr(espacios, "version", None) == self._version:
 			return True
@@ -640,6 +657,54 @@ class IndiceEspacios:
 			self._lista = espacios
 			self._version = getattr(espacios, "version", None)
 		return vale
+
+	def caducar(self) -> None:
+		"""Lo da por caducado: uno de sus espacios ha cambiado de contorno (lo llama ``Espacio.__setattr__``)."""
+		self.caducado = True
+
+	def cambios_desde(self, viejo: IndiceEspacios) -> list[tuple[float, float, float, float]] | None:
+		"""Cajas de la planta donde la geometría ha cambiado entre el índice ``viejo`` y este; None si no se sabe.
+
+		Por qué existe: lo que el Estudio calcula sobre los espacios (en qué
+		espacio cae cada puerta y cada mueble) solo puede cambiar dentro de esas
+		cajas. Con ellas, mover una habitación de un barrio de miles de espacios
+		vuelve a situar los elementos de alrededor, no los de toda la planta.
+
+		Una caja por cada espacio que se ha quitado o añadido y dos (la de antes
+		y la de ahora) por cada uno al que se le ha SUSTITUIDO el contorno. Si
+		alguien ha invalidado todos los índices a mano (un contorno cambiado en
+		el sitio, que no se puede ver) o los espacios que siguen han cambiado de
+		orden (el orden decide los empates), devuelve None: hay que recalcularlo todo.
+		"""
+		if viejo.generacion != self.generacion:
+			return None
+		posiciones: dict[int, int] = {}
+		for numero, espacio in enumerate(viejo._espacios):
+			if id(espacio) in posiciones:
+				return None
+			posiciones[id(espacio)] = numero
+		cajas: list[tuple[float, float, float, float]] = []
+		ultimo = -1
+		for numero, espacio in enumerate(self._espacios):
+			previo = posiciones.pop(id(espacio), None)
+			contorno = self._contornos[numero]
+			if previo is None:
+				if contorno:
+					cajas.append(geo.caja(contorno))
+				continue
+			if previo < ultimo:
+				return None
+			ultimo = previo
+			anterior = viejo._contornos[previo]
+			if anterior is not contorno or viejo._longitudes[previo] != self._longitudes[numero]:
+				if anterior:
+					cajas.append(geo.caja(anterior))
+				if contorno:
+					cajas.append(geo.caja(contorno))
+		for previo in posiciones.values():
+			if viejo._contornos[previo]:
+				cajas.append(geo.caja(viejo._contornos[previo]))
+		return cajas
 
 	def _candidatos(self, x: float, y: float) -> list[int]:
 		"""Números (en la lista de espacios, de menor a mayor) de los espacios cuya caja toca el punto."""
@@ -970,6 +1035,12 @@ class Planta(Serializable):
 			indice = IndiceEspacios(self.espacios)
 			self.__dict__["_indice_espacios"] = indice
 		return indice
+
+	def caducar_indice(self) -> None:
+		"""Da por caducado el índice espacial de ESTA planta (el historial lo llama al tocar sus espacios)."""
+		indice: IndiceEspacios | None = self.__dict__.get("_indice_espacios")
+		if indice is not None:
+			indice.caducar()
 
 	def espacios_en(self, x: float, y: float) -> list[Espacio]:
 		"""Espacios que contienen el punto, del más pequeño al más grande (con el índice espacial)."""

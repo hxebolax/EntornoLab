@@ -13,10 +13,14 @@ lento o cargado por otras pruebas):
 - NAVEGAR (elegir en el árbol cualquier tipo de nodo, desplegar un espacio,
   elegir en la lista, ver las propiedades, pinchar en el plano, repintar
   la selección): 100 ms, que es la regla del Estudio. Medido: 3 a 65 ms.
-- EDITAR (mover un elemento, deshacer, rehacer, aplicar una propiedad):
-  500 ms. Medido: 100 a 260 ms. Cada edición guarda una copia del entorno
-  entero para poder deshacer y pone al día un árbol de diez mil nodos; bajar
-  de 100 ms con 3.000 espacios exigiría un historial por diferencias.
+- EDITAR (mover un objeto o un espacio, deshacer, rehacer, aplicar una
+  propiedad): 100 ms, la misma regla. Medido: de 15 a 40 ms (antes del
+  historial por diferencias, de 130 a 430 ms: cada edición guardaba una copia
+  del entorno entero, deshacer lo sustituía por otro y el árbol de diez mil
+  nodos se rehacía entero). Ahora el historial guarda solo lo que cambia, lo
+  aplica en el sitio y el árbol, la lista y el plano ponen al día solo lo
+  afectado (ver «Historial por diferencias» en ``docs/estudio.md``).
+- REPINTAR el plano entero tras acercar: 500 ms (no depende del historial).
 - ABRIR el entorno (crear el árbol): 1,5 s. Medido: 0,5 s.
 - La primera vez que se ven las propiedades de cada tipo de elemento se
   crean sus controles (unos 7 ms cada lista desplegable de Windows, el
@@ -45,7 +49,8 @@ pytestmark = [pytest.mark.lento, pytest.mark.rendimiento]
 
 LIMITE_NAVEGAR_S = 0.100
 LIMITE_PRIMERA_VEZ_S = 0.400
-LIMITE_EDITAR_S = 0.500
+LIMITE_EDITAR_S = 0.100
+LIMITE_REPINTAR_S = 0.500
 LIMITE_ABRIR_S = 1.5
 PLUGINS = Path(__file__).resolve().parent.parent / "data" / "plugins"
 
@@ -174,7 +179,7 @@ def test_estudio_con_3000_espacios_no_bloquea(app_wx, monkeypatch, catalogo: Cat
 		pintar()
 		reloj.medir("plano: repintar la selección", LIMITE_NAVEGAR_S, pintar, veces=3)
 		reloj.medir("plano: pinchar", LIMITE_NAVEGAR_S, lambda: ventana.plano.elemento_en_pixel(500, 350), veces=3)
-		reloj.medir("plano: volver a pintar tras acercar", LIMITE_EDITAR_S, lambda: (ventana.plano.acercar(), pintar()))
+		reloj.medir("plano: volver a pintar tras acercar", LIMITE_REPINTAR_S, lambda: (ventana.plano.acercar(), pintar()))
 		# Editar.
 		objeto = planta.objetos[0]
 		espacio = tipos.get("acera") or planta.espacios[10]
@@ -184,11 +189,14 @@ def test_estudio_con_3000_espacios_no_bloquea(app_wx, monkeypatch, catalogo: Cat
 		reloj.medir("rehacer", LIMITE_EDITAR_S, contexto.rehacer, veces=3)
 		from app.ui import dialogos_insertar
 
+		nombres = iter(f"Mesa nueva {numero}" for numero in range(10))
 		reloj.medir(
 			"aplicar una propiedad",
 			LIMITE_EDITAR_S,
-			lambda: dialogos_insertar.aplicar_propiedades(contexto, objeto.id, {"nombre": "Mesa nueva"}),
+			lambda: dialogos_insertar.aplicar_propiedades(contexto, objeto.id, {"nombre": next(nombres)}),
+			veces=3,
 		)
+		assert objeto.nombre.startswith("Mesa nueva"), "deshacer y rehacer trabajan en el sitio: el objeto sigue siendo el mismo"
 		reloj.medir("árbol tras editar", LIMITE_NAVEGAR_S, lambda: elegir(espacio.id))
 		# La página «Descripción» se compone en segundo plano: cambiar a ella no espera.
 		reloj.medir("pestaña Descripción", LIMITE_NAVEGAR_S, lambda: (ventana.cuaderno.SetSelection(1), ventana._actualizar_descripcion()))

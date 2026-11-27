@@ -38,6 +38,7 @@ import wx
 from app.core.i18n import _
 from app.dominio import edicion
 from app.dominio import geometria as geo
+from app.dominio.diferencias import Afectados
 from app.ui import modelo_plano as mp
 from app.ui.accesibilidad.visual import alto_contraste_activo, color_sistema
 from app.ui.contexto import ContextoEstudio
@@ -102,6 +103,8 @@ class PanelPlano(wx.Panel):
 		self.cuadricula_visible = bool(self._preferencia("editor.cuadricula", True))
 		self.ajuste = bool(self._preferencia("editor.cuadricula", True))
 		self._planta_vista = ""
+		# ``contexto.version`` de lo que enseñan las figuras: si es la anterior, basta con el parche para ponerse al día.
+		self._version_vista = -1
 		self._encajado = False
 		# Gesto en curso: None o {"tipo": mover|desplazar|rectangulo, "inicio": (px, py), "actual": (px, py), "id": str, "activo": bool}
 		self._gesto: dict[str, Any] | None = None
@@ -152,8 +155,9 @@ class PanelPlano(wx.Panel):
 
 		self._bajas = [
 			contexto.suscribir(evento, self._al_cambiar_contexto)
-			for evento in ("entorno_abierto", "entorno_cerrado", "entorno_cambiado", "planta_cambiada", "actividades_cambiadas")
+			for evento in ("entorno_abierto", "entorno_cerrado", "planta_cambiada", "actividades_cambiadas", "catalogo_cambiado")
 		]
+		self._bajas.append(contexto.suscribir("entorno_cambiado", self._al_cambiar_entorno))
 		self._bajas.append(contexto.suscribir("seleccion_cambiada", self._al_cambiar_seleccion))
 		self.refrescar()
 
@@ -206,19 +210,28 @@ class PanelPlano(wx.Panel):
 
 	# ── API para la ventana principal ────────────────────────────────────────
 
-	def refrescar(self) -> None:
-		"""Vuelve a leer el contexto y repinta. Encaja la vista si ha cambiado la planta."""
+	def refrescar(self, afectados: Afectados | None = None) -> None:
+		"""Vuelve a leer el contexto y repinta. Encaja la vista si ha cambiado la planta.
+
+		Con ``afectados`` (lo que cambió en la última edición, deshacer o
+		rehacer) solo se rehacen las figuras de esos elementos; las demás se
+		reutilizan. Sin ellos, se rehacen todas.
+		"""
 		if not self:
 			return
 		entorno = self.contexto.entorno
 		planta = self.contexto.planta_actual() if entorno is not None else None
+		self._version_vista = self.contexto.version
 		if entorno is None or planta is None:
 			self.figuras = []
 			self._planta_vista = ""
 			self._gesto = None
 			self._primer_punto_pared = None
 		else:
-			self.figuras = mp.figuras_de_planta(entorno, planta, self.contexto.catalogo, self.contexto.actividad_actual)
+			previas = self.figuras if afectados is not None and planta.id == self._planta_vista else None
+			self.figuras = mp.figuras_de_planta(
+				entorno, planta, self.contexto.catalogo, self.contexto.actividad_actual, previas=previas, afectados=afectados
+			)
 			if planta.id != self._planta_vista:
 				self._planta_vista = planta.id
 				self._encajado = False
@@ -280,6 +293,16 @@ class PanelPlano(wx.Panel):
 
 	def _al_cambiar_contexto(self) -> None:
 		if self:
+			self.refrescar()
+
+	def _al_cambiar_entorno(self) -> None:
+		"""Tras editar, deshacer o rehacer: solo las figuras de lo que dice el parche, si el plano enseñaba el estado anterior."""
+		if not self:
+			return
+		cambio = self.contexto.cambio
+		if cambio is not None and self._version_vista == self.contexto.version - 1:
+			self.refrescar(cambio.afectados())
+		else:
 			self.refrescar()
 
 	def _al_cambiar_seleccion(self) -> None:

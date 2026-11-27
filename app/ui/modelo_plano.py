@@ -16,6 +16,7 @@ pantalla la y crece hacia abajo. Por eso el norte queda arriba en el plano.
 
 from __future__ import annotations
 
+import dataclasses
 import logging
 import math
 from collections.abc import Sequence
@@ -24,6 +25,7 @@ from typing import Any
 
 from app.core.i18n import _, _n
 from app.dominio import geometria as geo
+from app.dominio.diferencias import Afectados
 from app.dominio.geometria import Punto
 from app.dominio.modelo import Entorno, Objeto, Planta
 from app.ui.esquemas import texto_numero
@@ -75,6 +77,8 @@ class Figura:
 	orden: float = 0.0
 	tipo: str = ""
 	datos: dict[str, Any] = field(default_factory=dict)
+	# Superficie de un espacio (decide el orden de pintado): guardada para no recalcularla al reutilizar la figura.
+	area: float = field(default=0.0, compare=False, repr=False)
 
 	@property
 	def seleccionable(self) -> bool:
@@ -162,40 +166,92 @@ def _numero(valor: Any) -> float | None:
 	return numero if math.isfinite(numero) else None
 
 
-def figuras_de_planta(entorno: Entorno, planta: Planta, catalogo: Any = None, actividad: dict[str, Any] | None = None) -> list[Figura]:
+def _reutilizables(previas: Sequence[Figura] | None, afectados: Afectados | None) -> dict[tuple[str, str], Figura] | None:
+	"""Las figuras de la vez anterior por (clase, id), o None si no se pueden reutilizar (ids repetidos, plantas nuevas)."""
+	if previas is None or afectados is None or afectados.estructura:
+		return None
+	tabla: dict[tuple[str, str], Figura] = {}
+	for figura in previas:
+		if not figura.id:
+			continue
+		clave = (figura.clase, figura.id)
+		if clave in tabla:
+			return None
+		tabla[clave] = figura
+	return tabla
+
+
+def figuras_de_planta(
+	entorno: Entorno,
+	planta: Planta,
+	catalogo: Any = None,
+	actividad: dict[str, Any] | None = None,
+	previas: Sequence[Figura] | None = None,
+	afectados: Afectados | None = None,
+) -> list[Figura]:
 	"""Todo lo que hay que dibujar de una planta, ordenado de abajo arriba.
 
 	Los espacios van del más grande al más pequeño para que un paso de
 	peatones se vea (y se pueda pinchar) encima de su calzada. Los objetos
 	salen con su HUELLA real del catálogo, su letra y su color; sin catálogo,
 	o si falta el complemento, con su caja y la inicial de su nombre.
+
+	Con ``previas`` (las figuras de ESTA planta en el estado de justo antes) y
+	``afectados`` (lo que el parche del historial dice que ha cambiado), se
+	reutilizan las figuras de lo que no ha cambiado y solo se rehacen las de
+	los elementos afectados: con miles de espacios y objetos, calcular cada
+	huella del catálogo tras cada edición era la mayor parte del tiempo del
+	plano. El resultado es igual al de calcularlo todo.
 	"""
+	reutilizables = _reutilizables(previas, afectados)
+	cambiados = afectados.elementos.get(planta.id, set()) if reutilizables is not None and afectados is not None else set()
+
+	def previa(clase: str, elemento: Any) -> Figura | None:
+		if reutilizables is None or elemento.id in cambiados:
+			return None
+		return reutilizables.get((clase, elemento.id))
+
 	figuras: list[Figura] = []
-	espacios = sorted((e for e in planta.espacios if len(e.contorno) >= 3), key=lambda e: e.area(), reverse=True)
-	for indice, espacio in enumerate(espacios):
-		figuras.append(
-			Figura(
+	espacios: list[tuple[float, Any, Figura | None]] = []
+	for espacio in planta.espacios:
+		if len(espacio.contorno) >= 3:
+			hecha = previa("espacio", espacio)
+			espacios.append((hecha.area if hecha is not None else espacio.area(), espacio, hecha))
+	espacios.sort(key=lambda trio: trio[0], reverse=True)
+	for indice, (area, espacio, hecha) in enumerate(espacios):
+		orden = ORDEN_ESPACIO + indice * 0.001
+		if hecha is None:
+			hecha = Figura(
 				espacio.id,
 				"espacio",
 				POLIGONO,
 				list(espacio.contorno),
 				rotulo=espacio.nombre,
-				orden=ORDEN_ESPACIO + indice * 0.001,
+				orden=orden,
 				tipo=espacio.tipo,
 				datos={"cerrado": espacio.cerrado, "lados_abiertos": list(espacio.lados_abiertos), "macizo": espacio.macizo},
+				area=area,
 			)
-		)
+		elif hecha.orden != orden:
+			hecha = dataclasses.replace(hecha, orden=orden)
+		figuras.append(hecha)
 	for zona in planta.zonas:
 		if len(zona.contorno) >= 3:
-			figuras.append(Figura(zona.id, "zona", POLIGONO, list(zona.contorno), rotulo=zona.nombre, orden=ORDEN_ZONA, tipo=zona.suelo))
+			hecha = previa("zona", zona)
+			figuras.append(
+				hecha or Figura(zona.id, "zona", POLIGONO, list(zona.contorno), rotulo=zona.nombre, orden=ORDEN_ZONA, tipo=zona.suelo)
+			)
 	for via in planta.vias:
 		if len(via.eje) >= 2:
-			figuras.append(Figura(via.id, "via", LINEA, list(via.eje), rotulo=via.nombre, orden=ORDEN_VIA, tipo=via.sentido))
+			hecha = previa("via", via)
+			figuras.append(hecha or Figura(via.id, "via", LINEA, list(via.eje), rotulo=via.nombre, orden=ORDEN_VIA, tipo=via.sentido))
 	for ruta in _rutas(entorno, planta):
 		figuras.append(ruta)
 	for pared in planta.paredes:
+		hecha = previa("pared", pared)
 		figuras.append(
-			Figura(
+			hecha
+			or Figura(
 				pared.id,
 				"pared",
 				LINEA,
@@ -207,8 +263,10 @@ def figuras_de_planta(entorno: Entorno, planta: Planta, catalogo: Any = None, ac
 			)
 		)
 	for abertura in planta.aberturas:
+		hecha = previa("abertura", abertura)
 		figuras.append(
-			Figura(
+			hecha
+			or Figura(
 				abertura.id,
 				"abertura",
 				LINEA,
@@ -220,7 +278,8 @@ def figuras_de_planta(entorno: Entorno, planta: Planta, catalogo: Any = None, ac
 			)
 		)
 	for objeto in planta.objetos:
-		figuras.append(_figura_objeto(objeto, catalogo))
+		hecha = previa("objeto", objeto)
+		figuras.append(hecha or _figura_objeto(objeto, catalogo))
 	for conector in entorno.conectores:
 		puntos = [posicion.punto for posicion in conector.posiciones() if posicion.planta == planta.id]
 		if puntos:
@@ -231,8 +290,10 @@ def figuras_de_planta(entorno: Entorno, planta: Planta, catalogo: Any = None, ac
 				)
 			)
 	for fuente in planta.fuentes:
+		hecha = previa("fuente", fuente)
 		figuras.append(
-			Figura(
+			hecha
+			or Figura(
 				fuente.id,
 				"fuente",
 				PUNTO,
@@ -244,8 +305,10 @@ def figuras_de_planta(entorno: Entorno, planta: Planta, catalogo: Any = None, ac
 			)
 		)
 	for referencia in planta.referencias:
+		hecha = previa("referencia", referencia)
 		figuras.append(
-			Figura(
+			hecha
+			or Figura(
 				referencia.id,
 				"referencia",
 				PUNTO,

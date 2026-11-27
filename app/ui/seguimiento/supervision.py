@@ -533,7 +533,7 @@ class VentanaSupervision(VentanaSeguimiento):
 		poner_texto(self.ultimo, str(alumno.get("ultimo_texto") or "") if alumno else "")
 		entorno = getattr(self.contexto, "entorno", None)
 		if alumno and entorno is not None:
-			self.plano.poner_planta(entorno, str(alumno.get("planta") or ""))
+			self.plano.poner_planta(entorno, str(alumno.get("planta") or ""), getattr(self.contexto, "version", 0))
 			self.plano.poner_posicion(alumno.get("x"), alumno.get("y"), alumno.get("rumbo"))
 		else:
 			self.plano.poner_posicion(None, None)

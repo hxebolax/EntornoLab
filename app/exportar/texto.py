@@ -84,7 +84,8 @@ def _bloque_procedencia(entorno: Entorno) -> Bloque | None:
 	if isinstance(entorno.georef, dict) and "lat0" in entorno.georef and "lon0" in entorno.georef:
 		lineas.append(
 			_("Georreferencia: el punto (0; 0) del entorno está en la latitud {lat} y la longitud {lon}.").format(
-				lat=str(entorno.georef["lat0"]).replace(".", separador_decimal()), lon=str(entorno.georef["lon0"]).replace(".", separador_decimal())
+				lat=str(entorno.georef["lat0"]).replace(".", separador_decimal()),
+				lon=str(entorno.georef["lon0"]).replace(".", separador_decimal()),
 			)
 		)
 	if not lineas:

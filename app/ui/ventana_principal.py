@@ -25,6 +25,7 @@ Qué resuelve (y por qué):
 from __future__ import annotations
 
 import logging
+import operator
 import os
 import time
 from collections.abc import Callable
@@ -40,6 +41,7 @@ from app.core.instancia_unica import ORDEN_ABRIR, ORDEN_MOSTRAR, InstanciaUnica,
 from app.core.tareas import GestorTareas, TareaCancelada
 from app.core.version import NOMBRE_APLICACION
 from app.dominio.catalogo import Catalogo
+from app.dominio.diferencias import Afectados
 from app.dominio.formato import ErrorFormato, cargar_paquete, recuperar_copia
 from app.dominio.modelo import Entorno
 from app.ui import archivos, dialogos_herramientas, dialogos_insertar, espera, menus, operaciones
@@ -68,6 +70,17 @@ TAMANO_DE_SERIE = (1100, 700)
 LIMITE_ARBOL_COMPLETO = 1500
 # Un paquete de más de esto (bytes) se lee en segundo plano con el diálogo de progreso.
 TAMANO_PAQUETE_EN_SEGUNDO_PLANO = 4 * 1024 * 1024
+
+
+def _cuenta_hasta(arbol: operaciones.Nodo, tope: int) -> int:
+	"""Nodos del árbol, contando como mucho hasta ``tope`` (para saber si es pequeño sin recorrer un barrio entero)."""
+	cuenta = 0
+	for _nodo in arbol.recorrer():
+		cuenta += 1
+		if cuenta >= tope:
+			break
+	return cuenta
+
 
 # Órdenes del menú contextual del árbol, la lista y el plano: (nombre de la orden, etiqueta).
 MENU_CONTEXTUAL: list[tuple[str, str] | None] = [
@@ -147,6 +160,8 @@ class VentanaPrincipal(wx.Frame):
 		self._ids: list[str] = []
 		# Árbol lógico vigente (se calcula una vez por cambio del entorno) y estado de los nodos nativos.
 		self._arbol_logico: operaciones.Nodo | None = None
+		# ``contexto.version`` que enseñan el árbol y la lista: si es la anterior, basta el parche para ponerse al día.
+		self._version_arbol = -1
 		self._arbol_completo = True
 		self._materializados: set[str] = set()
 		self._abiertos: set[str] = set()
@@ -185,7 +200,7 @@ class VentanaPrincipal(wx.Frame):
 			("seleccion_cambiada", self._al_cambiar_seleccion),
 			("planta_cambiada", self._al_cambiar_planta),
 			("documento_cambiado", self._actualizar_titulo_y_menus),
-			("catalogo_cambiado", self._al_cambiar_entorno),
+			("catalogo_cambiado", self._al_cambiar_catalogo),
 			("actividades_cambiadas", self._actualizar_descripcion_si_vivo),
 		):
 			self.contexto.suscribir(evento, funcion)
@@ -579,23 +594,45 @@ class VentanaPrincipal(wx.Frame):
 		self._actualizar_titulo_y_menus()
 
 	def _al_cambiar_entorno(self) -> None:
-		"""El entorno ha cambiado: se repinta lo que se ve conservando dónde está la persona."""
+		"""El entorno ha cambiado: se pone al día lo que se ve conservando dónde está la persona.
+
+		Si el árbol y la lista enseñaban el estado de justo antes, el parche
+		del historial (``contexto.cambio``) dice qué elementos han cambiado y
+		solo se tocan sus nodos y sus filas; si no (otro documento, un cambio
+		que no se vio), se rehace todo.
+		"""
+		if not self or self._saliendo:
+			return
+		cambio = self.contexto.cambio
+		afectados = cambio.afectados() if cambio is not None and self._version_arbol == self.contexto.version - 1 else None
+		self._reconstruir_arbol(afectados=afectados)
+		self._rellenar_lista(afectados=afectados)
+		self._mostrar_propiedades()
+		self._actualizar_descripcion()
+		if self._recorrido is not None and self._recorrido.activo:
+			self._recorrido.al_cambiar_entorno()
+
+	def _al_cambiar_catalogo(self) -> None:
+		"""Hay otros complementos: los nombres de los objetos pueden ser otros, así que se rehace todo."""
 		if not self or self._saliendo:
 			return
 		self._reconstruir_arbol()
 		self._rellenar_lista()
 		self._mostrar_propiedades()
 		self._actualizar_descripcion()
-		if self._recorrido is not None and self._recorrido.activo:
-			self._recorrido.al_cambiar_entorno()
 
 	def _al_cambiar_planta(self) -> None:
 		planta = self.contexto.planta_actual()
 		if planta is not None and not self._sincronizando:
 			self.SetStatusText(_("Planta: {nombre}").format(nombre=operaciones.nombre_de(planta)))
 
-	def _reconstruir_arbol(self, expandir_todo: bool = False) -> None:
+	def _reconstruir_arbol(self, expandir_todo: bool = False, afectados: Afectados | None = None) -> None:
 		"""Pone el árbol al día con el entorno conservando qué estaba desplegado y qué estaba elegido.
+
+		Con ``afectados`` (lo que cambió desde el árbol que se enseña) el árbol
+		lógico nuevo comparte con el anterior los nodos de lo que no ha
+		cambiado, y la sincronización salta esos nodos por identidad: solo se
+		reescriben los nodos nativos de los elementos afectados.
 
 		Por qué no se borra y se rehace: con un barrio importado de miles de
 		espacios, crear los nodos nativos cuesta unos 30 µs cada uno y borrarlos
@@ -611,7 +648,13 @@ class VentanaPrincipal(wx.Frame):
 		  espacios y cada espacio dice que tiene contenido.
 		"""
 		anterior = self._arbol_logico
-		abiertos = {clave for clave, item in self._nodos.items() if item.IsOk() and self.arbol.IsExpanded(item)}
+		parcial = afectados is not None and anterior is not None and not expandir_todo
+		if parcial:
+			# Lo desplegado ya está al día (``_al_desplegar`` y ``_al_plegar``): preguntarlo a cada uno de los
+			# miles de nodos nativos (unos 15 µs cada pregunta) era la cuarta parte de lo que tardaba editar.
+			abiertos = set(self._abiertos)
+		else:
+			abiertos = {clave for clave, item in self._nodos.items() if item.IsOk() and self.arbol.IsExpanded(item)}
 		self._sincronizando = True
 		# Congelar y descongelar repinta el árbol entero (decenas de milisegundos con miles de nodos):
 		# solo compensa al crearlo de cero; al sincronizar cambian pocos nodos.
@@ -625,13 +668,17 @@ class VentanaPrincipal(wx.Frame):
 				self._nodos = {}
 				self._materializados = set()
 				self._arbol_logico = None
+				self._version_arbol = self.contexto.version
 				raiz = self.arbol.AddRoot(_("No hay ningún entorno abierto"))
 				self.arbol.SetItemData(raiz, "")
 				self.arbol.SelectItem(raiz)
 				return
-			arbol = operaciones.arbol_de(entorno, self.contexto.catalogo)
+			arbol = operaciones.arbol_de(
+				entorno, self.contexto.catalogo, anterior=anterior if parcial else None, afectados=afectados if parcial else None
+			)
 			self._arbol_logico = arbol
-			self._arbol_completo = sum(1 for _nodo in arbol.recorrer()) <= LIMITE_ARBOL_COMPLETO
+			self._version_arbol = self.contexto.version
+			self._arbol_completo = _cuenta_hasta(arbol, LIMITE_ARBOL_COMPLETO + 1) <= LIMITE_ARBOL_COMPLETO
 			if expandir_todo:
 				# Al abrir: siempre se ven las plantas y, si el árbol es pequeño, también lo de cada espacio.
 				abiertos = {nodo.clave for nodo in arbol.recorrer() if "/" not in nodo.clave and (self._arbol_completo or nodo is arbol)}
@@ -701,26 +748,44 @@ class VentanaPrincipal(wx.Frame):
 			self._materializados.discard(nodo.clave)
 			arbol.SetItemHasChildren(item, bool(nodo.hijos))
 		abierto = arbol.IsExpanded(item)
+		if abierto and anterior is not None and nodo.hijos:
+			# El mismo nodo, desplegado (por la persona o al hacer visible un hijo): sigue desplegado.
+			self._abiertos.add(nodo.clave)
 		if nodo.hijos and nodo.clave in self._abiertos and not abierto:
 			arbol.Expand(item)
 		elif abierto and nodo.clave not in self._abiertos:
 			arbol.Collapse(item)
 
 	def _poner_hijos(self, item: wx.TreeItemId, nodo: operaciones.Nodo, anterior: operaciones.Nodo | None) -> None:
-		"""Sincroniza los hijos nativos de ``item`` con los de ``nodo``, reutilizando por posición los que ya hay."""
+		"""Sincroniza los hijos nativos de ``item`` con los de ``nodo``, reutilizando por posición los que ya hay.
+
+		Si solo se han quitado o añadido hijos (borrar un espacio, deshacer su
+		borrado), se borran o insertan esos nodos nativos en su sitio: por
+		posición se reescribirían todos los que van detrás, que en un barrio
+		son miles.
+		"""
 		arbol = self.arbol
-		existentes: list[wx.TreeItemId] = []
-		hijo_item, galleta = arbol.GetFirstChild(item)
-		while hijo_item.IsOk():
-			existentes.append(hijo_item)
-			hijo_item, galleta = arbol.GetNextChild(item, galleta)
 		previos = anterior.hijos if anterior is not None else []
+		existentes = self._hijos_apuntados(item, nodo, previos)
+		apuntados = existentes is not None
+		if existentes is None:
+			existentes = []
+			hijo_item, galleta = arbol.GetFirstChild(item)
+			while hijo_item.IsOk():
+				existentes.append(hijo_item)
+				hijo_item, galleta = arbol.GetNextChild(item, galleta)
 		if len(existentes) != len(previos):
 			# Lo que hay en pantalla no corresponde a ``anterior`` (no estaba creado): se reescribe todo.
 			previos = []
+		elif len(previos) != len(nodo.hijos) and self._insertar_y_quitar(item, nodo, previos, existentes):
+			self._materializados.add(nodo.clave)
+			return
 		for posicion, hijo in enumerate(nodo.hijos):
 			previo = previos[posicion] if posicion < len(previos) else None
 			if posicion < len(existentes):
+				if apuntados and previo is hijo and not (self._debe_materializar(hijo) and hijo.clave not in self._materializados):
+					# El mismo nodo lógico (compartido con el árbol anterior) en su mismo nodo nativo: nada que hacer.
+					continue
 				self._poner_nodo(existentes[posicion], hijo, previo)
 			else:
 				self._poner_nuevo(arbol.AppendItem(item, hijo.texto), hijo)
@@ -728,6 +793,61 @@ class VentanaPrincipal(wx.Frame):
 			self._olvidar_item(existentes[posicion])
 			arbol.Delete(existentes[posicion])
 		self._materializados.add(nodo.clave)
+
+	def _hijos_apuntados(self, item: wx.TreeItemId, nodo: operaciones.Nodo, previos: list[operaciones.Nodo]) -> list[wx.TreeItemId] | None:
+		"""Los nodos nativos de los hijos ``previos`` sacados de ``_nodos``, sin recorrerlos en el control; None si no se puede.
+
+		Recorrer los hijos nativos de una planta con miles de espacios son miles
+		de llamadas al control (unos 15 µs cada una; contarlos con
+		``GetChildrenCount`` también los recorre). Si los hijos estaban creados
+		(el nodo está materializado), cada uno está apuntado con su clave; basta
+		comprobar que el primero y el último son los del control.
+		"""
+		if not previos or nodo.clave not in self._materializados:
+			return None
+		apuntados = [self._nodos.get(previo.clave) for previo in previos]
+		if any(apuntado is None for apuntado in apuntados):
+			return None
+		primero, _galleta = self.arbol.GetFirstChild(item)
+		if not primero.IsOk() or primero != apuntados[0] or self.arbol.GetLastChild(item) != apuntados[-1]:
+			return None
+		return apuntados  # type: ignore[return-value]
+
+	def _insertar_y_quitar(
+		self, item: wx.TreeItemId, nodo: operaciones.Nodo, previos: list[operaciones.Nodo], existentes: list[wx.TreeItemId]
+	) -> bool:
+		"""Pone al día los hijos de ``item`` borrando e insertando solo los que sobran o faltan. False si no se puede así.
+
+		Se puede cuando los hijos que siguen están en el mismo orden (lo normal:
+		el historial y la edición conservan el orden de las listas).
+		"""
+		nuevas = {hijo.clave for hijo in nodo.hijos}
+		viejas = {previo.clave: posicion for posicion, previo in enumerate(previos)}
+		ultimo = -1
+		for hijo in nodo.hijos:
+			posicion = viejas.get(hijo.clave)
+			if posicion is None:
+				continue
+			if posicion < ultimo:
+				return False
+			ultimo = posicion
+		arbol = self.arbol
+		quedan: list[tuple[operaciones.Nodo, wx.TreeItemId]] = []
+		for previo, existente in zip(previos, existentes, strict=True):
+			if previo.clave in nuevas:
+				quedan.append((previo, existente))
+			else:
+				self._olvidar_item(existente)
+				arbol.Delete(existente)
+		siguiente = 0
+		for posicion, hijo in enumerate(nodo.hijos):
+			if siguiente < len(quedan) and quedan[siguiente][0].clave == hijo.clave:
+				previo, existente = quedan[siguiente]
+				siguiente += 1
+				self._poner_nodo(existente, hijo, previo)
+			else:
+				self._poner_nuevo(arbol.InsertItem(item, posicion, hijo.texto), hijo)
+		return True
 
 	def _poner_nuevo(self, item: wx.TreeItemId, nodo: operaciones.Nodo) -> None:
 		"""Rellena un nodo nativo recién creado: no hay nada que leer ni que olvidar de él.
@@ -835,11 +955,30 @@ class VentanaPrincipal(wx.Frame):
 		else:
 			self.contexto.seleccionar(id_elemento)
 
-	def _rellenar_lista(self) -> None:
-		"""Pone en la lista los elementos del nodo elegido en el árbol, sin mover a la persona de fila si sigue existiendo."""
+	def _rellenar_lista(self, afectados: Afectados | None = None) -> None:
+		"""Pone en la lista los elementos del nodo elegido en el árbol, sin mover a la persona de fila si sigue existiendo.
+
+		Con ``afectados``, si la lista sigue teniendo los mismos elementos en el
+		mismo orden, solo se recomponen las filas de los que han cambiado (la
+		de una planta de un barrio tiene miles).
+		"""
 		entorno = self.contexto.entorno
 		anterior = self._ids[self.lista.fila_actual()] if 0 <= self.lista.fila_actual() < len(self._ids) else ""
 		elementos = operaciones.elementos_de_nodo(entorno, self._clave_nodo, self._arbol_logico) if entorno is not None else []
+		previos = self._filas.elementos
+		if afectados is not None and len(elementos) == len(previos) and all(map(operator.is_, elementos, previos, strict=True)):
+			cambiados = afectados.ids()
+			previo = self._sincronizando
+			self._sincronizando = True
+			try:
+				for fila, id_elemento in enumerate(self._ids):
+					if id_elemento in cambiados:
+						self._ids[fila] = elementos[fila].id
+						self._filas.olvidar(fila)
+						self.lista.actualizar_fila(fila, self._filas[fila].celdas())
+			finally:
+				self._sincronizando = previo
+			return
 		# Las filas se componen cuando la lista las pide (solo las visibles): una planta de un barrio tiene miles.
 		self._filas = operaciones.FilasPerezosas(elementos, self.contexto.catalogo)
 		self._ids = [elemento.id for elemento in elementos]

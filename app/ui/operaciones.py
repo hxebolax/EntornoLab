@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import logging
 import math
+import operator
 from collections.abc import Callable, Iterable, Sequence
 from dataclasses import dataclass, field
 from typing import Any, overload
@@ -27,6 +28,7 @@ from app.core.i18n import N_, _, _n
 from app.dominio import edicion, ejemplos
 from app.dominio import geometria as geo
 from app.dominio.catalogo import Catalogo, sin_acentos
+from app.dominio.diferencias import Afectados
 from app.dominio.edicion import ErrorEdicion
 from app.dominio.geometria import Punto
 from app.dominio.modelo import (
@@ -34,6 +36,7 @@ from app.dominio.modelo import (
 	TIPOS_CONECTOR,
 	TIPOS_ESPACIO,
 	TIPOS_REFERENCIA,
+	TOLERANCIA_PARED,
 	Abertura,
 	Conector,
 	Entorno,
@@ -169,16 +172,19 @@ class Nodo:
 			pendientes.extend(reversed(nodo.hijos))
 
 	def _indizar(self) -> None:
+		"""Los dos índices en UNA pasada en orden de lectura (el árbol cambia tras cada edición y se vuelve a indizar)."""
 		por_clave: dict[str, tuple[Nodo, Nodo | None]] = {self.clave: (self, None)}
 		por_id: dict[str, Nodo] = {}
-		if self.id:
-			por_id[self.id] = self
-		for nodo in self.recorrer():
-			for hijo in nodo.hijos:
-				por_clave.setdefault(hijo.clave, (hijo, nodo))
-		for nodo in self.recorrer():
+		pendientes: list[Nodo] = [self]
+		while pendientes:
+			nodo = pendientes.pop()
 			if nodo.id:
 				por_id.setdefault(nodo.id, nodo)
+			hijos = nodo.hijos
+			if hijos:
+				for hijo in hijos:
+					por_clave.setdefault(hijo.clave, (hijo, nodo))
+				pendientes.extend(reversed(hijos))
 		self._por_clave = por_clave
 		self._por_id = por_id
 
@@ -237,12 +243,19 @@ def contenido_de_planta(planta: Planta) -> dict[int, list[Any]]:
 	mismo orden que ``contenido_de_espacio``.
 	"""
 	indice = planta.indice_espacios()
-	# Lo calculado la última vez para esta planta, si los espacios no han cambiado desde entonces
-	# (mismo índice): al mover un mueble solo se vuelve a situar ese mueble, no los miles de elementos.
+	# Lo calculado la última vez para esta planta: al mover un mueble solo se vuelve a situar ese mueble,
+	# no los miles de elementos. Si desde entonces han cambiado espacios (otro índice), se olvida solo lo
+	# que cae cerca de los espacios cambiados: lo demás no puede haber cambiado de espacio.
 	cache = planta.__dict__.get("_cache_contenido")
-	if cache is None or cache[0] is not indice:
+	if cache is None:
 		cache = (indice, {}, {})
-		planta.__dict__["_cache_contenido"] = cache
+	elif cache[0] is not indice:
+		cajas = indice.cambios_desde(cache[0])
+		if cajas is None or len(cajas) > MAX_CAJAS_CAMBIADAS:
+			cache = (indice, {}, {})
+		else:
+			cache = (indice, *_olvidar_cerca(cache[1], cache[2], cajas))
+	planta.__dict__["_cache_contenido"] = cache
 	_indice, de_aberturas, de_elementos = cache
 	contenido: dict[int, list[Any]] = {id(espacio): [] for espacio in planta.espacios}
 	vistas: set[int] = set()
@@ -276,6 +289,50 @@ def contenido_de_planta(planta: Planta) -> dict[int, list[Any]]:
 	return contenido
 
 
+#: Más espacios cambiados que esto (importar una planta, duplicar medio barrio) y se sitúa todo de nuevo:
+#: mirar cada elemento contra cientos de cajas costaría más que volver a empezar.
+MAX_CAJAS_CAMBIADAS = 64
+# Holguras con que el índice espacial preselecciona: una abertura o un punto más lejos de la caja de un
+# espacio que esto no puede haber cambiado de espacio porque ese espacio cambie.
+_HOLGURA_ABERTURA = TOLERANCIA_PARED + 2e-5
+_HOLGURA_PUNTO = 4e-5
+
+
+def _toca(caja: tuple[float, float, float, float], cajas: list[tuple[float, float, float, float]], holgura: float) -> bool:
+	x0, y0, x1, y1 = caja
+	return any(x0 - holgura <= c[2] and c[0] <= x1 + holgura and y0 - holgura <= c[3] and c[1] <= y1 + holgura for c in cajas)
+
+
+def _olvidar_cerca(
+	de_aberturas: dict[int, Any], de_elementos: dict[int, Any], cajas: list[tuple[float, float, float, float]]
+) -> tuple[dict[int, Any], dict[int, Any]]:
+	"""Lo ya situado, sin lo que cae cerca de alguna caja cambiada (eso se vuelve a situar).
+
+	Primero se mira la caja que envuelve a todas las cambiadas, con
+	comparaciones sueltas: casi todo queda lejos y se descarta sin más.
+	"""
+	if not cajas:
+		return de_aberturas, de_elementos
+	holgura = max(_HOLGURA_ABERTURA, _HOLGURA_PUNTO)
+	ux0 = min(c[0] for c in cajas) - holgura
+	uy0 = min(c[1] for c in cajas) - holgura
+	ux1 = max(c[2] for c in cajas) + holgura
+	uy1 = max(c[3] for c in cajas) + holgura
+	aberturas: dict[int, Any] = {}
+	for clave, guardado in de_aberturas.items():
+		(ax, ay), (bx, by) = guardado[1]
+		if (ax < ux0 and bx < ux0) or (ax > ux1 and bx > ux1) or (ay < uy0 and by < uy0) or (ay > uy1 and by > uy1):
+			aberturas[clave] = guardado
+		elif not _toca(geo.caja(guardado[1]), cajas, _HOLGURA_ABERTURA):
+			aberturas[clave] = guardado
+	elementos: dict[int, Any] = {}
+	for clave, guardado in de_elementos.items():
+		x, y = guardado[1]
+		if x < ux0 or x > ux1 or y < uy0 or y > uy1 or not _toca((x, y, x, y), cajas, _HOLGURA_PUNTO):
+			elementos[clave] = guardado
+	return aberturas, elementos
+
+
 def _espacio_de(planta: Planta, elemento: Any) -> Espacio | None:
 	"""Espacio al que pertenece un elemento con posición (None si está fuera de todos)."""
 	try:
@@ -285,39 +342,93 @@ def _espacio_de(planta: Planta, elemento: Any) -> Espacio | None:
 	return planta.espacio_en(x, y)
 
 
-def arbol_de(entorno: Entorno, catalogo: Catalogo | None = None) -> Nodo:
-	"""El árbol del entorno: entorno → plantas → espacios → lo de cada espacio; paredes, vías y conectores."""
+def _mismos_hijos(previo: Nodo, elementos: list[Any], cambiados: set[str]) -> bool:
+	"""True si el nodo ya enseña esos elementos, en ese orden, y ninguno ha cambiado (su texto sigue valiendo)."""
+	hijos = previo.hijos
+	if len(hijos) != len(elementos):
+		return False
+	for nodo, elemento in zip(hijos, elementos, strict=True):
+		if nodo.id != elemento.id or elemento.id in cambiados:
+			return False
+	return True
+
+
+def _nodo_planta(planta: Planta, catalogo: Catalogo | None, previo: Nodo | None, cambiados: set[str] | None) -> Nodo:
+	"""El nodo de una planta. Con ``previo`` y ``cambiados``, reutiliza los nodos de lo que no ha cambiado.
+
+	Un espacio cuyo id no está en ``cambiados`` y cuyo contenido (calculado por
+	partes con ``contenido_de_planta``) sigue siendo el mismo conserva su nodo
+	tal cual: la ventana lo reconoce por identidad y no toca su nodo nativo.
+	"""
+	nodo_planta = Nodo(planta.id, _texto_nodo(planta, catalogo), planta.id)
+	previos = {hijo.clave: hijo for hijo in previo.hijos} if previo is not None and cambiados is not None else {}
+	cambiados = cambiados if cambiados is not None else set()
+	colocados: set[str] = set()
+	contenido = contenido_de_planta(planta)
+	for espacio in planta.espacios:
+		dentro = contenido[id(espacio)]
+		anterior = previos.get(espacio.id)
+		if anterior is not None and espacio.id not in cambiados and _mismos_hijos(anterior, dentro, cambiados):
+			nodo_espacio = anterior
+		else:
+			nodo_espacio = Nodo(espacio.id, _texto_nodo(espacio, catalogo), espacio.id)
+			nodo_espacio.hijos = [Nodo(f"{espacio.id}/{hijo.id}", _texto_nodo(hijo, catalogo), hijo.id) for hijo in dentro]
+		colocados.update(hijo.id for hijo in dentro)
+		nodo_planta.hijos.append(nodo_espacio)
+	grupos: list[tuple[str, str, list[Any]]] = [
+		("paredes", _("Paredes sueltas"), list(planta.paredes)),
+		("vias", _("Calles"), list(planta.vias)),
+		(
+			"sueltos",
+			_("Fuera de todo espacio"),
+			[e for e in [*planta.aberturas, *planta.objetos, *planta.fuentes, *planta.referencias, *planta.zonas] if e.id not in colocados],
+		),
+	]
+	for clave, titulo, elementos in grupos:
+		if not elementos:
+			continue
+		clave_grupo = f"{PREFIJO_GRUPO}{planta.id}:{clave}"
+		texto = _("{titulo}: {n}").format(titulo=titulo, n=len(elementos))
+		anterior = previos.get(clave_grupo)
+		if anterior is not None and anterior.texto == texto and _mismos_hijos(anterior, elementos, cambiados):
+			nodo_planta.hijos.append(anterior)
+			continue
+		grupo = Nodo(clave_grupo, texto)
+		grupo.hijos = [Nodo(f"{clave_grupo}/{e.id}", _texto_nodo(e, catalogo), e.id) for e in elementos]
+		nodo_planta.hijos.append(grupo)
+	if (
+		previo is not None
+		and previo.texto == nodo_planta.texto
+		and len(previo.hijos) == len(nodo_planta.hijos)
+		and all(map(operator.is_, previo.hijos, nodo_planta.hijos, strict=True))
+	):
+		return previo
+	return nodo_planta
+
+
+def arbol_de(entorno: Entorno, catalogo: Catalogo | None = None, anterior: Nodo | None = None, afectados: Afectados | None = None) -> Nodo:
+	"""El árbol del entorno: entorno → plantas → espacios → lo de cada espacio; paredes, vías y conectores.
+
+	Con ``anterior`` (el árbol del estado de justo antes) y ``afectados`` (lo
+	que dice el parche del historial que ha cambiado), el árbol nuevo
+	COMPARTE con el anterior los nodos de lo que no ha cambiado: las plantas no
+	tocadas son el mismo objeto y, en la planta tocada, también los espacios
+	cuyo contenido sigue igual. Así la ventana solo reescribe los nodos
+	nativos afectados (con 3.000 espacios, rehacer el árbol entero tras cada
+	edición era la mitad de lo que tardaba). El resultado es IGUAL (``==``) al
+	del árbol hecho desde cero. Si se añaden o quitan plantas, se hace entero.
+	"""
+	parcial = anterior is not None and afectados is not None and not afectados.estructura
+	previas = {hijo.clave: hijo for hijo in anterior.hijos} if parcial and anterior is not None else {}
 	raiz = Nodo(CLAVE_ENTORNO, _("{nombre} (entorno)").format(nombre=entorno.nombre or _("Entorno sin nombre")))
 	for planta in sorted(entorno.plantas, key=lambda p: p.nivel):
-		nodo_planta = Nodo(planta.id, _texto_nodo(planta, catalogo), planta.id)
-		colocados: set[str] = set()
-		contenido = contenido_de_planta(planta)
-		for espacio in planta.espacios:
-			nodo_espacio = Nodo(espacio.id, _texto_nodo(espacio, catalogo), espacio.id)
-			for hijo in contenido[id(espacio)]:
-				nodo_espacio.hijos.append(Nodo(f"{espacio.id}/{hijo.id}", _texto_nodo(hijo, catalogo), hijo.id))
-				colocados.add(hijo.id)
-			nodo_planta.hijos.append(nodo_espacio)
-		grupos: list[tuple[str, str, list[Any]]] = [
-			("paredes", _("Paredes sueltas"), list(planta.paredes)),
-			("vias", _("Calles"), list(planta.vias)),
-			(
-				"sueltos",
-				_("Fuera de todo espacio"),
-				[
-					e
-					for e in [*planta.aberturas, *planta.objetos, *planta.fuentes, *planta.referencias, *planta.zonas]
-					if e.id not in colocados
-				],
-			),
-		]
-		for clave, titulo, elementos in grupos:
-			if not elementos:
-				continue
-			grupo = Nodo(f"{PREFIJO_GRUPO}{planta.id}:{clave}", _("{titulo}: {n}").format(titulo=titulo, n=len(elementos)))
-			grupo.hijos = [Nodo(f"{grupo.clave}/{e.id}", _texto_nodo(e, catalogo), e.id) for e in elementos]
-			nodo_planta.hijos.append(grupo)
-		raiz.hijos.append(nodo_planta)
+		previa = previas.get(planta.id)
+		if previa is not None and afectados is not None and planta.id not in afectados.elementos and planta.id not in afectados.plantas:
+			# Nada de esta planta ha cambiado: el mismo nodo.
+			raiz.hijos.append(previa)
+			continue
+		cambiados = afectados.elementos.get(planta.id, set()) if previa is not None and afectados is not None else None
+		raiz.hijos.append(_nodo_planta(planta, catalogo, previa, cambiados))
 	if entorno.conectores:
 		grupo = Nodo(CLAVE_CONECTORES, _("Escaleras, rampas y ascensores: {n}").format(n=len(entorno.conectores)))
 		grupo.hijos = [Nodo(conector.id, _texto_nodo(conector, catalogo), conector.id) for conector in entorno.conectores]
@@ -348,14 +459,30 @@ def fila_de(elemento: Any, catalogo: Catalogo | None = None) -> Fila:
 	return Fila(elemento.id, nombre_de(elemento), nombre_tipo(elemento, catalogo), texto_medidas(elemento), texto_posicion(elemento))
 
 
-def _elementos_por_id(entorno: Entorno) -> dict[str, Any]:
-	"""Id → elemento de todo el entorno (el primero si un id se repitiera, como ``Entorno.elemento``)."""
+def _elementos_por_id(entorno: Entorno, planta: Planta | None = None) -> dict[str, Any]:
+	"""Id → elemento de todo el entorno, o solo de ``planta`` (el primero si un id se repitiera, como ``Entorno.elemento``)."""
 	por_id: dict[str, Any] = {}
-	for planta in entorno.plantas:
-		por_id.setdefault(planta.id, planta)
+	if planta is not None:
+		por_id[planta.id] = planta
+		for elemento in planta.elementos():
+			por_id.setdefault(elemento.id, elemento)
+		return por_id
+	for planta_entorno in entorno.plantas:
+		por_id.setdefault(planta_entorno.id, planta_entorno)
 	for _planta, elemento in entorno.elementos():
 		por_id.setdefault(elemento.id, elemento)
 	return por_id
+
+
+def _planta_del_nodo(entorno: Entorno, arbol: Nodo, clave: str) -> Planta | None:
+	"""La planta bajo la que cuelga un nodo del árbol (None si cuelga del entorno, como los conectores)."""
+	nodo = arbol.padre_de(clave)
+	while nodo is not None:
+		planta = entorno.planta(nodo.id) if nodo.id else None
+		if planta is not None:
+			return planta
+		nodo = arbol.padre_de(nodo.clave)
+	return None
 
 
 class FilasPerezosas(Sequence[Fila]):
@@ -373,6 +500,15 @@ class FilasPerezosas(Sequence[Fila]):
 
 	def __len__(self) -> int:
 		return len(self._elementos)
+
+	@property
+	def elementos(self) -> list[Any]:
+		"""Los elementos de las filas, en su orden (para saber si la lista sigue enseñando lo mismo)."""
+		return self._elementos
+
+	def olvidar(self, indice: int) -> None:
+		"""Olvida la fila ya compuesta de ``indice`` (su elemento ha cambiado): se compone otra vez al pedirla."""
+		self._hechas.pop(indice, None)
 
 	@overload
 	def __getitem__(self, indice: int) -> Fila: ...
@@ -419,7 +555,8 @@ def elementos_de_nodo(entorno: Entorno, clave: str, arbol: Nodo | None = None) -
 	if planta is not None:
 		return list(planta.elementos())
 	if nodo.hijos or clave.startswith(PREFIJO_GRUPO) and "/" not in clave:
-		por_id = _elementos_por_id(entorno)
+		# Solo los elementos de su planta: buscarlos en todo un barrio era lo que más tardaba la lista tras editar.
+		por_id = _elementos_por_id(entorno, _planta_del_nodo(entorno, arbol, clave))
 		return [elemento for elemento in (por_id.get(hijo.id) for hijo in nodo.hijos) if elemento is not None]
 	encontrado = entorno.buscar(nodo.id) if nodo.id else None
 	if encontrado is None:
@@ -434,7 +571,7 @@ def elementos_de_nodo(entorno: Entorno, clave: str, arbol: Nodo | None = None) -
 	if "/" in clave:
 		padre = arbol.buscar(clave.rsplit("/", 1)[0])
 		if padre is not None:
-			por_id = _elementos_por_id(entorno)
+			por_id = _elementos_por_id(entorno, _planta_del_nodo(entorno, arbol, clave))
 			return [e for e in (por_id.get(hijo.id) for hijo in padre.hijos) if e is not None]
 	return [elemento]
 

@@ -96,7 +96,7 @@ class DialogoRecorrido(DialogoFormulario):
 			return
 		entorno = getattr(self.contexto, "entorno", None)
 		if entorno is not None and str(getattr(entorno, "id", "")) == str(self.sesion.get("entorno_id") or ""):
-			self.plano.poner_planta(entorno, planta)
+			self.plano.poner_planta(entorno, planta, getattr(self.contexto, "version", 0))
 		self.plano.poner_recorrido(puntos)
 
 

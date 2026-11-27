@@ -42,9 +42,14 @@ class PlanoSimple(wx.Window):
 		"""Queda fuera del recorrido del tabulador."""
 		return False
 
-	def poner_planta(self, entorno: Any, planta_id: str) -> None:
-		"""Dibuja los espacios de esa planta (nada si no hay entorno o no tiene esa planta)."""
-		clave = (id(entorno), planta_id)
+	def poner_planta(self, entorno: Any, planta_id: str, version: int = 0) -> None:
+		"""Dibuja los espacios de esa planta (nada si no hay entorno o no tiene esa planta).
+
+		``version`` es la del documento (``contexto.version``): deshacer y
+		rehacer cambian el entorno en el sitio, sin cambiar de objeto, y sin
+		ella el plano no se enteraría.
+		"""
+		clave = (id(entorno), planta_id, version)
 		if clave == self._clave:
 			return
 		self._clave = clave

@@ -15,10 +15,17 @@ No importa wx: la ventana se le pasa ya hecha y solo se usa lo que tenga
 (``SetStatusText``, ``guardar_como``…), de modo que las pruebas pueden crear
 un contexto sin ventana.
 
-REGLA: el objeto ``entorno`` se SUSTITUYE por otro al deshacer, rehacer y
-abrir. Nadie debe guardarse una referencia al entorno, a una planta o a un
-elemento entre dos eventos: se guarda el ``id`` y se vuelve a buscar con
+Deshacer y rehacer cambian el entorno EN EL SITIO (el historial guarda
+diferencias, ver ``app.dominio.diferencias``): el objeto ``entorno`` solo se
+sustituye al abrir otro documento. Aun así, un elemento puede dejar de
+existir (borrarlo, deshacer su creación) o volver como un objeto nuevo
+(deshacer su borrado): nadie debe guardarse una referencia a una planta o a
+un elemento entre dos eventos; se guarda el ``id`` y se vuelve a buscar con
 ``contexto.entorno.buscar(id)``.
+
+Tras cada ``entorno_cambiado``, ``contexto.cambio`` dice qué cambió (el
+``Parche`` del historial): quien enseña el entorno puede poner al día solo
+esos elementos. Si vale None (no se sabe), hay que repintarlo todo.
 """
 
 from __future__ import annotations
@@ -31,6 +38,7 @@ from typing import Any
 
 from app.core.i18n import _
 from app.dominio.colocacion import PASO_MINIMO
+from app.dominio.diferencias import ErrorParche, Parche
 from app.dominio.edicion import Historial
 from app.dominio.formato import guardar_paquete
 from app.dominio.modelo import Entorno, Planta
@@ -48,16 +56,6 @@ EVENTOS = (
 	"documento_cambiado",  # ha cambiado el nombre, la ruta o el estado «modificado» (título de la ventana)
 	"catalogo_cambiado",  # se han instalado, quitado, activado o desactivado complementos
 )
-
-
-class _Instantanea:
-	"""Un estado del entorno ya convertido a diccionario, con la forma que espera ``Historial.anotar``."""
-
-	def __init__(self, estado: dict[str, Any]) -> None:
-		self._estado = estado
-
-	def a_dict(self) -> dict[str, Any]:
-		return self._estado
 
 
 class ContextoEstudio:
@@ -92,7 +90,10 @@ class ContextoEstudio:
 		self.modificado = False
 		#: Crece con cada cambio del entorno (abrir, editar, deshacer, rehacer). Lo que se calcula en
 		#: segundo plano (la descripción del entorno) lo compara al terminar para no enseñar algo viejo.
+		#: Cada cambio la sube en UNO: quien enseña ``version - 1`` puede ponerse al día solo con ``cambio``.
 		self.version = 0
+		#: Qué cambió en el último ``entorno_cambiado`` (el parche del historial); None: no se sabe, todo.
+		self.cambio: Parche | None = None
 		#: Id del elemento elegido en el árbol, la lista o el plano («» si no hay ninguno).
 		self.seleccion: str = ""
 		#: Id de la planta que se está viendo.
@@ -158,6 +159,7 @@ class ContextoEstudio:
 		self.planta_id = (
 			entorno.inicio.planta if entorno.planta(entorno.inicio.planta) else (entorno.plantas[0].id if entorno.plantas else "")
 		)
+		self.cambio = None
 		self.version += 1
 		self.emitir("entorno_abierto")
 		self.emitir("actividades_cambiadas")
@@ -174,6 +176,7 @@ class ContextoEstudio:
 		self.seleccion = ""
 		self.planta_id = ""
 		self.actividad_actual = None
+		self.cambio = None
 		self.version += 1
 		self.emitir("entorno_cerrado")
 		self.emitir("actividades_cambiadas")
@@ -190,12 +193,18 @@ class ContextoEstudio:
 	def ejecutar(self, nombre: str, operacion: Callable[[], Any], anuncio: str | None = None) -> Any:
 		"""Hace un cambio en el entorno que se podrá deshacer con su nombre.
 
-		Guarda antes el estado para el historial, llama a ``operacion()`` y, si
-		termina bien, marca el documento como modificado, avisa
-		(``entorno_cambiado``) y lo anuncia. Si la operación lanza una excepción
-		(``ErrorEdicion`` cuando lo pedido no se puede hacer), el entorno queda
-		como estaba, no se apunta nada en el historial y la excepción sigue su
-		camino para que quien llamó se la explique a la persona.
+		Abre la operación en el historial (una foto en huellas del entorno),
+		llama a ``operacion()`` y, si termina bien, guarda en el historial lo
+		que ha cambiado (el parche, que queda en ``cambio``), marca el
+		documento como modificado, avisa (``entorno_cambiado``) y lo anuncia.
+		Una operación compuesta (crear una calle con sus aceras, amueblar un
+		espacio, importar) es UNA entrada del historial, haga lo que haga dentro.
+		La operación no tiene que declarar lo que toca: el historial lo compara todo.
+
+		Si la operación lanza una excepción (``ErrorEdicion`` cuando lo pedido
+		no se puede hacer), el entorno queda como estaba (si llegó a tocar algo,
+		se devuelve a su estado y se avisa), no se apunta nada en el historial
+		y la excepción sigue su camino para que quien llamó se la explique a la persona.
 
 		:param nombre: nombre de la operación en minúsculas, como se leerá tras
 			«Deshacer: » («crear la habitación Cocina»).
@@ -204,17 +213,19 @@ class ContextoEstudio:
 		"""
 		if self.entorno is None:
 			raise ValueError(_("No hay ningún entorno abierto."))
-		estado = self.entorno.a_dict()
+		entorno = self.entorno
+		self.historial.anotar(entorno, nombre)
 		try:
 			resultado = operacion()
 		except Exception:
-			if self.entorno.a_dict() != estado:
-				# La operación dejó el entorno a medias: se devuelve a como estaba.
-				self.entorno = Entorno.de_dict(estado)
+			parche = self.historial.cancelar(entorno)
+			if parche is not None and not parche.vacio:
+				# La operación dejó el entorno a medias: ya está como estaba; se avisa para repintar lo tocado.
+				self.cambio = parche
 				self.version += 1
 				self.emitir("entorno_cambiado")
 			raise
-		self.historial.anotar(_Instantanea(estado), nombre)  # type: ignore[arg-type]
+		self.cambio = self.historial.cerrar(entorno)
 		self.modificado = True
 		self.version += 1
 		self.emitir("entorno_cambiado")
@@ -232,29 +243,49 @@ class ContextoEstudio:
 		return self._retroceder(deshacer=False)
 
 	def _retroceder(self, deshacer: bool) -> str | None:
-		if self.entorno is None:
+		"""Deshace o rehace EN EL SITIO y lleva la selección a lo afectado.
+
+		El entorno no se sustituye: el historial aplica el parche sobre él y
+		``cambio`` dice qué elementos hay que volver a enseñar. Después la
+		selección (y con ella el árbol, la lista, las propiedades y el plano)
+		va al elemento que ha cambiado o vuelto a aparecer, para que la persona
+		esté donde ha ocurrido lo que se anuncia.
+		"""
+		entorno = self.entorno
+		if entorno is None:
 			return None
 		if deshacer:
 			if not self.historial.puede_deshacer:
 				return None
 			nombre = self.historial.operaciones()[-1]
-			nuevo = self.historial.deshacer(self.entorno)
 		else:
 			if not self.historial.puede_rehacer:
 				return None
 			# «Rehacer: crear la habitación Cocina» → «crear la habitación Cocina».
 			nombre = self.historial.texto_rehacer().partition(": ")[2]
-			nuevo = self.historial.rehacer(self.entorno)
-		if nuevo is None:
+		try:
+			hecho = self.historial.deshacer(entorno) if deshacer else self.historial.rehacer(entorno)
+		except ErrorParche:
+			# Alguien cambió el entorno sin pasar por ``ejecutar``: el historial ya no encaja con él y no se toca nada.
+			log.exception("El historial no encaja con el entorno; se vacía")
+			self.historial.limpiar()
+			self.emitir("documento_cambiado")
+			self.anunciar(_("No se puede deshacer: el entorno cambió por otro camino. Se ha vaciado el historial."))
 			return None
-		self.entorno = nuevo
+		if hecho is None:
+			return None
+		parche = self.historial.ultimo_parche
+		self.cambio = parche
 		self.modificado = True
 		self.version += 1
-		if self.seleccion and nuevo.buscar(self.seleccion) is None and nuevo.planta(self.seleccion) is None:
+		if self.seleccion and entorno.buscar(self.seleccion) is None:
 			self.seleccion = ""
-		if nuevo.planta(self.planta_id) is None:
-			self.planta_id = nuevo.plantas[0].id if nuevo.plantas else ""
+		if entorno.planta(self.planta_id) is None:
+			self.planta_id = entorno.plantas[0].id if entorno.plantas else ""
 		self.emitir("entorno_cambiado")
+		destino = parche.foco(hacia_atras=deshacer) if parche is not None else ""
+		if destino and entorno.buscar(destino) is not None:
+			self.seleccionar(destino)
 		self.emitir("documento_cambiado")
 		return nombre
 
