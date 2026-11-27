@@ -902,6 +902,8 @@ class VentanaPrincipal(wx.Frame):
 	def _al_desplegar(self, evento: wx.TreeEvent) -> None:
 		"""Al desplegar un espacio o un grupo de un entorno grande se crean en ese momento sus hijos."""
 		evento.Skip()
+		if self._saliendo or not self.arbol:
+			return
 		item = evento.GetItem()
 		if not item.IsOk() or self._arbol_logico is None:
 			return
@@ -926,6 +928,8 @@ class VentanaPrincipal(wx.Frame):
 	def _al_plegar(self, evento: wx.TreeEvent) -> None:
 		"""Recuerda que la persona ha plegado el nodo (sus hijos nativos se conservan: volver a abrirlo es inmediato)."""
 		evento.Skip()
+		if self._saliendo or not self.arbol:
+			return
 		item = evento.GetItem()
 		clave = self.arbol.GetItemData(item) if item.IsOk() else None
 		if isinstance(clave, str):
@@ -939,7 +943,8 @@ class VentanaPrincipal(wx.Frame):
 
 	def _al_elegir_en_arbol(self, evento: wx.TreeEvent) -> None:
 		evento.Skip()
-		if self._sincronizando or self.contexto.entorno is None:
+		# Al cerrar, el árbol emite estos avisos mientras se destruye: no hay nada que mostrar.
+		if self._saliendo or not self.arbol or self._sincronizando or self.contexto.entorno is None:
 			return
 		item = evento.GetItem()
 		if not item.IsOk():
@@ -998,7 +1003,7 @@ class VentanaPrincipal(wx.Frame):
 
 	def _al_elegir_en_lista(self, evento: wx.ListEvent) -> None:
 		evento.Skip()
-		if self._sincronizando:
+		if self._saliendo or not self.lista or self._sincronizando:
 			return
 		fila = evento.GetIndex()
 		if not 0 <= fila < len(self._ids) or self._ids[fila] == self.contexto.seleccion:
@@ -1408,8 +1413,26 @@ class VentanaPrincipal(wx.Frame):
 		self._config.guardar_pendiente()
 		self._config.guardar()
 		self._quitar_bandeja()
+		self._desconectar_paneles()
 		log.info("Ventana principal cerrada.")
 		self.Destroy()
+
+	def _desconectar_paneles(self) -> None:
+		"""Deja el árbol y la lista sin manejadores antes de destruir la ventana.
+
+		Al destruirse, Windows borra los nodos del árbol uno a uno y, por cada
+		uno, envía «selección cambiada». Si el manejador sigue conectado, intenta
+		leer un árbol que wx ya ha destruido («wrapped C/C++ object of type
+		TreeCtrl has been deleted») y el cierre acaba en una cascada de errores.
+		"""
+		for control, eventos in (
+			(self.arbol, (wx.EVT_TREE_SEL_CHANGED, wx.EVT_TREE_ITEM_EXPANDING, wx.EVT_TREE_ITEM_COLLAPSED, wx.EVT_TREE_ITEM_ACTIVATED)),
+			(self.lista, (wx.EVT_LIST_ITEM_FOCUSED, wx.EVT_LIST_ITEM_SELECTED, wx.EVT_LIST_ITEM_ACTIVATED)),
+		):
+			if not control:
+				continue
+			for evento in eventos:
+				control.Unbind(evento)
 
 	# ── Segunda instancia ────────────────────────────────────────────────────
 
