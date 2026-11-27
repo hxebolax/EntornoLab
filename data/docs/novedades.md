@@ -1,5 +1,18 @@
 # Novedades de EntornoLab
 
+## Versión 0.1.1 - 2026-11-27
+
+Versión de mejoras de rapidez y de una corrección al cerrar el Estudio.
+
+### Mejoras
+
+- Deshacer y rehacer son mucho más rápidos y gastan muy poca memoria: cada cambio guarda solo lo que se ha modificado. Con un barrio grande, mover un espacio, cambiar una propiedad, deshacer o rehacer tarda una fracción de segundo, y cien pasos de deshacer ocupan unos pocos megas en lugar de cientos.
+- Tras deshacer o rehacer, la selección vuelve al elemento afectado y se anuncia qué se ha deshecho o rehecho.
+
+### Correcciones
+
+- Al cerrar el Estudio con un entorno abierto podía aparecer un aviso de error del árbol del entorno. Ya no ocurre; los entornos se guardaban bien igualmente.
+
 ## Versión 0.1.0 - 2026-11-26
 
 Primera versión pública de EntornoLab: una aplicación portable y sin conexión para aprender lugares antes de visitarlos.

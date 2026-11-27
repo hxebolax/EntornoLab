@@ -1,5 +1,18 @@
 # What's new in EntornoLab
 
+## Version 0.1.1 - 2026-11-27
+
+A version with speed improvements and a fix when closing the Studio.
+
+### Improvements
+
+- Undo and redo are much faster and use very little memory: each change stores only what was modified. With a large neighborhood, moving a space, changing a property, undoing or redoing takes a fraction of a second, and a hundred undo steps take a few megabytes instead of hundreds.
+- After undoing or redoing, the selection returns to the affected item and the Studio announces what was undone or redone.
+
+### Fixes
+
+- Closing the Studio with an environment open could show an error about the environment tree. This no longer happens; environments were saved correctly anyway.
+
 ## Version 0.1.0 - 2026-11-26
 
 First public version of EntornoLab: a portable, offline application for learning places before visiting them.

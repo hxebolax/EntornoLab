@@ -9,7 +9,7 @@ Para publicar una versión nueva solo se cambia ``APP_VERSION`` aquí.
 NOMBRE_APLICACION = "EntornoLab"
 # Identificador sin espacios: ejecutable, instancia única, carpeta de compilación.
 ID_APLICACION = "entornolab"
-APP_VERSION = "0.1.0"
+APP_VERSION = "0.1.1"
 # Nombres de los dos ejecutables de la versión compilada (los usan setup_cx.py,
 # las herramientas de tools/ y app/core/procesos.py para lanzar el reproductor).
 EJECUTABLE_ESTUDIO = "EntornoLab.exe"

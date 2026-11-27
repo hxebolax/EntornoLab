@@ -3,7 +3,7 @@
 [project]
 name = "entornolab"
 # Debe coincidir con APP_VERSION de app/core/version.py (lo comprueba una prueba).
-version = "0.1.0"
+version = "0.1.1"
 description = "EntornoLab: aplicación accesible de Windows, portable y sin conexión, para aprender lugares antes de visitarlos. Estudio del profesional (wxPython) y audiojuego del alumno con sonido 3D (pygame)."
 requires-python = ">=3.15"
 
